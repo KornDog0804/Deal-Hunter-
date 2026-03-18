@@ -2,6 +2,7 @@ name: Run Deal Hunter
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   run:
