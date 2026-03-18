@@ -19,6 +19,46 @@ SOURCES = [
         "name": "uDiscover Music",
         "source_type": "trusted_store",
         "url": "https://shop.udiscovermusic.com/collections/vinyl"
+    },
+    {
+        "name": "Walmart",
+        "source_type": "big_box",
+        "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"
+    },
+    {
+        "name": "Best Buy",
+        "source_type": "big_box",
+        "url": "https://www.bestbuy.com/site/searchpage.jsp?st=vinyl"
+    },
+    {
+        "name": "Deep Discount",
+        "source_type": "trusted_store",
+        "url": "https://www.deepdiscount.com/music/vinyl"
+    },
+    {
+        "name": "Acoustic Sounds",
+        "source_type": "audiophile_store",
+        "url": "https://store.acousticsounds.com/index.cfm?get=results&searchtext=vinyl"
+    },
+    {
+        "name": "Merchbar",
+        "source_type": "marketplace",
+        "url": "https://www.merchbar.com/vinyl-records"
+    },
+    {
+        "name": "Fearless Records",
+        "source_type": "label_store",
+        "url": "https://fearlessrecords.com/collections/music"
+    },
+    {
+        "name": "Rise Records",
+        "source_type": "label_store",
+        "url": "https://riserecords.com/collections/music"
+    },
+    {
+        "name": "Ride Records",
+        "source_type": "indie_store",
+        "url": "https://riderecords.com/collections/all"
     }
 ]
 
@@ -41,28 +81,124 @@ BANNED_KEYWORDS = [
     "bobby helms"
 ]
 
+SLUG_PATTERNS = [
+    (r"^the all american rejects move along", "The All-American Rejects", "Move Along"),
+    (r"^the all american rejects the all american rejects", "The All-American Rejects", "The All-American Rejects"),
+    (r"^sum 41 all killer no filler", "Sum 41", "All Killer No Filler"),
+    (r"^nelly furtado loose", "Nelly Furtado", "Loose"),
+    (r"^new found glory sticks and stones", "New Found Glory", "Sticks And Stones"),
+    (r"^beastie boys root down", "Beastie Boys", "Root Down"),
+    (r"^blink 182 dude ranch", "blink-182", "Dude Ranch"),
+    (r"^bob seger the silver bullet band night moves", "Bob Seger & The Silver Bullet Band", "Night Moves"),
+    (r"^stillwater stillwater", "Stillwater", "Stillwater"),
+    (r"^something corporate north", "Something Corporate", "North"),
+    (r"^thrice the artist in the ambulance", "Thrice", "The Artist In The Ambulance"),
+    (r"^the who sell out", "The Who", "Sell Out"),
+    (r"^tears for fears songs from the big chair", "Tears For Fears", "Songs From The Big Chair"),
+    (r"^spinal tap this is spinal tap", "Spinal Tap", "This Is Spinal Tap"),
+    (r"^spinal tap break like the wind", "Spinal Tap", "Break Like The Wind"),
+    (r"^joan osborne relish", "Joan Osborne", "Relish"),
+    (r"^phantogram voices", "Phantogram", "Voices"),
+    (r"^a perfect circle mer de noms", "A Perfect Circle", "Mer de Noms"),
+    (r"^hanson middle of nowhere", "Hanson", "Middle Of Nowhere"),
+    (r"^rush moving pictures", "Rush", "Moving Pictures"),
+    (r"^rihanna good girl gone bad", "Rihanna", "Good Girl Gone Bad"),
+    (r"^nirvana in utero", "Nirvana", "In Utero"),
+    (r"^mariah carey charmbracelet", "Mariah Carey", "Charmbracelet"),
+    (r"^paul mccartney new", "Paul McCartney", "NEW"),
+    (r"^yellowcard ocean avenue", "Yellowcard", "Ocean Avenue"),
+    (r"^wings wings at the speed of sound", "Wings", "Wings At The Speed Of Sound"),
+    (r"^styx circling from above", "Styx", "Circling From Above"),
+]
+
 def fetch(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=20) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
-def extract_product_links(html_text, base_url):
-    matches = re.findall(r'href="([^"]*/products/[^"]+)"', html_text, re.IGNORECASE)
-    full_links = []
-    for m in matches:
-        full = urljoin(base_url, m.split("?")[0])
-        if full not in full_links:
-            full_links.append(full)
-    return full_links[:20]
+def clean_text(text):
+    text = html.unescape(text or "")
+    text = text.replace("–", "-").replace("|", "-")
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+def is_banned(text):
+    text = (text or "").lower()
+    return any(bad in text for bad in BANNED_KEYWORDS)
+
+def keyword_hits(text):
+    text = (text or "").lower()
+    return [k for k in POSITIVE_KEYWORDS if k in text]
+
+def normalize_album_text(text):
+    text = clean_text(text)
+    text = re.sub(r"\s+-\s+uDiscover Music$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+-\s+The Sound of Vinyl$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+-\s+Walmart\.com$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+-\s+Best Buy$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bLimited Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bCollector'?s Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bCrystal Clear\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bColor Vinyl\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bColored\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bExclusive\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bVinyl Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bStereo Version\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s{2,}", " ", text).strip(" -")
+    return text
+
+def parse_from_link(link):
+    slug = link.rstrip("/").split("/")[-1]
+    slug = slug.replace("-", " ")
+    slug = clean_text(slug)
+    slug = re.sub(
+        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version)\b",
+        "",
+        slug,
+        flags=re.IGNORECASE
+    )
+    slug = re.sub(r"\s{2,}", " ", slug).strip()
+    return slug
+
+def infer_artist_title(raw_title, link):
+    title = normalize_album_text(raw_title)
+    slug = clean_text(parse_from_link(link))
+
+    for pattern, artist, album in SLUG_PATTERNS:
+      if re.search(pattern, slug, re.IGNORECASE):
+        return artist, album
+
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
+    if len(parts) >= 3:
+        if parts[0].lower() == parts[1].lower():
+            return parts[0], normalize_album_text(parts[2])
+
+        if any(store in parts[-1].lower() for store in [
+            "udiscover music", "the sound of vinyl", "walmart.com", "best buy"
+        ]):
+            return parts[0], normalize_album_text(parts[1])
+
+    if len(parts) >= 2 and parts[0].lower() != parts[1].lower():
+        return parts[0], normalize_album_text(parts[1])
+
+    if len(slug.split()) >= 2:
+        return "Unknown Artist", normalize_album_text(slug)
+
+    return "Unknown Artist", normalize_album_text(title)
 
 def extract_title(html_text):
-    og = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html_text, re.IGNORECASE)
-    if og:
-        return html.unescape(og.group(1).strip())
+    patterns = [
+        r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"',
+        r'<meta[^>]+name="twitter:title"[^>]+content="([^"]+)"',
+        r"<title>(.*?)</title>",
+        r'"name"\s*:\s*"([^"]+)"'
+    ]
 
-    title = re.search(r"<title>(.*?)</title>", html_text, re.IGNORECASE | re.DOTALL)
-    if title:
-        return html.unescape(re.sub(r"\s+", " ", title.group(1)).strip())
+    for pattern in patterns:
+        m = re.search(pattern, html_text, re.IGNORECASE | re.DOTALL)
+        if m:
+            return clean_text(m.group(1))
 
     return "Unknown Title"
 
@@ -72,6 +208,8 @@ def extract_price(html_text):
         r'"amount"\s*:\s*"?(\\d+\.\d{2})"?',
         r'content="(\d+\.\d{2})"\s*[^>]*property="product:price:amount"',
         r'property="product:price:amount"\s*content="(\d+\.\d{2})"',
+        r'"currentPrice"\s*:\s*\{"price"\s*:\s*(\d+\.\d{2}|\d+)',
+        r'"price"\s*:\s*(\d+\.\d{2}|\d+)',
         r'\$(\d+\.\d{2})',
         r'\$(\d+)'
     ]
@@ -86,112 +224,19 @@ def extract_price(html_text):
 
     return 0.0
 
-def keyword_hits(text):
-    text = text.lower()
-    return [k for k in POSITIVE_KEYWORDS if k in text]
+def extract_product_links(html_text, base_url):
+    raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
+    full_links = []
 
-def is_banned(text):
-    text = text.lower()
-    return any(bad in text for bad in BANNED_KEYWORDS)
+    for href in raw_links:
+        href = href.split("?")[0]
+        full = urljoin(base_url, href)
 
-def clean_text(text):
-    text = html.unescape(text)
-    text = text.replace("–", "-").replace("|", "-")
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+        if any(x in full for x in ["/products/", "/ip/", "/site/", "/p/"]):
+            if full not in full_links:
+                full_links.append(full)
 
-def parse_from_link(link):
-    slug = link.rstrip("/").split("/")[-1]
-    slug = slug.replace("-", " ")
-    slug = clean_text(slug)
-
-    # remove generic format fluff but keep core album words
-    slug = re.sub(
-        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version)\b",
-        "",
-        slug,
-        flags=re.IGNORECASE
-    )
-    slug = re.sub(r"\s{2,}", " ", slug).strip()
-
-    return slug
-
-def normalize_album_text(text):
-    text = clean_text(text)
-    text = re.sub(r"\s+-\s+uDiscover Music$", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s+-\s+The Sound of Vinyl$", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bLimited Edition\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bCollector'?s Edition\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bCrystal Clear\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bColor Vinyl\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bColored\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bExclusive\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bVinyl Edition\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bStereo Version\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s{2,}", " ", text).strip(" -")
-    return text
-
-def infer_artist_title(raw_title, link):
-    title = normalize_album_text(raw_title)
-    slug = clean_text(parse_from_link(link))
-
-    # Strong slug-based patterns first
-    slug_patterns = [
-        (r"^the all american rejects move along", "The All-American Rejects", "Move Along"),
-        (r"^the all american rejects the all american rejects", "The All-American Rejects", "The All-American Rejects"),
-        (r"^sum 41 all killer no filler", "Sum 41", "All Killer No Filler"),
-        (r"^nelly furtado loose", "Nelly Furtado", "Loose"),
-        (r"^new found glory sticks and stones", "New Found Glory", "Sticks And Stones"),
-        (r"^beastie boys root down", "Beastie Boys", "Root Down"),
-        (r"^blink 182 dude ranch", "blink-182", "Dude Ranch"),
-        (r"^bob seger the silver bullet band night moves", "Bob Seger & The Silver Bullet Band", "Night Moves"),
-        (r"^stillwater stillwater", "Stillwater", "Stillwater"),
-        (r"^something corporate north", "Something Corporate", "North"),
-        (r"^thrice the artist in the ambulance", "Thrice", "The Artist In The Ambulance"),
-        (r"^the who sell out", "The Who", "Sell Out"),
-        (r"^tears for fears songs from the big chair", "Tears For Fears", "Songs From The Big Chair"),
-        (r"^spinal tap this is spinal tap", "Spinal Tap", "This Is Spinal Tap"),
-        (r"^spinal tap break like the wind", "Spinal Tap", "Break Like The Wind"),
-        (r"^joan osborne relish", "Joan Osborne", "Relish"),
-        (r"^phantogram voices", "Phantogram", "Voices"),
-        (r"^a perfect circle mer de noms", "A Perfect Circle", "Mer de Noms"),
-        (r"^hanson middle of nowhere", "Hanson", "Middle Of Nowhere"),
-        (r"^rush moving pictures", "Rush", "Moving Pictures"),
-        (r"^rihanna good girl gone bad", "Rihanna", "Good Girl Gone Bad"),
-        (r"^nirvana in utero", "Nirvana", "In Utero"),
-        (r"^mariah carey charmbracelet", "Mariah Carey", "Charmbracelet"),
-        (r"^paul mccartney new", "Paul McCartney", "NEW"),
-        (r"^yellowcard ocean avenue", "Yellowcard", "Ocean Avenue"),
-        (r"^wings wings at the speed of sound", "Wings", "Wings At The Speed Of Sound"),
-        (r"^styx circling from above", "Styx", "Circling From Above"),
-    ]
-
-    for pattern, artist, album in slug_patterns:
-        if re.search(pattern, slug, re.IGNORECASE):
-            return artist, album
-
-    # Handle titles formatted like:
-    # "Artist - Artist - Album - uDiscover Music"
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-
-    if len(parts) >= 3:
-        # common uDiscover style: Artist - Artist - Album
-        if parts[0].lower() == parts[1].lower():
-            return parts[0], normalize_album_text(parts[2])
-
-        # sound of vinyl or generic: Artist - Album - Store
-        if "udiscover music" in parts[-1].lower() or "the sound of vinyl" in parts[-1].lower():
-            return parts[0], normalize_album_text(parts[1])
-
-    if len(parts) >= 2:
-        if parts[0].lower() != parts[1].lower():
-            return parts[0], normalize_album_text(parts[1])
-
-    # Last fallback from slug
-    if len(slug.split()) >= 2:
-        return "Unknown Artist", normalize_album_text(slug)
-
-    return "Unknown Artist", normalize_album_text(title)
+    return full_links[:30]
 
 def build_live_deals():
     deals = []
