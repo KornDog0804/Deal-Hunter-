@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import json
-from affiliate import build_amazon_link
 
 def hype_level(score):
     if score >= 9:
@@ -26,26 +25,36 @@ for d in deals:
 
     opener, vibe = hype_level(score)
 
-    price = d.get("price", 0)
-    price_text = f"${price:.2f}" if isinstance(price, (int, float)) and price > 0 else "Price not pulled yet"
-    source = d.get("source", "Unknown Source")
-    original_link = d.get("link", "Link coming soon")
-    amazon_link = build_amazon_link(d)
+    best_price = d.get("best_price", d.get("price", 0))
+    price_text = f"${best_price:.2f}" if isinstance(best_price, (int, float)) and best_price > 0 else "Price not pulled yet"
+
+    best_source = d.get("best_source", d.get("source", "Unknown Source"))
+    buy_link = d.get("buy_link", d.get("link", "Link coming soon"))
+    amazon_link = d.get("amazon_link", "Link coming soon")
+    label = d.get("best_label", "KORNDOG FIND")
+
+    if label == "KORNDOG FIND":
+        buy_line = f"💿 Best Buy: KornDog Find ({best_source})"
+    elif label == "AMAZON PICK":
+        buy_line = "🛒 Best Buy: Amazon"
+    elif label == "WALMART PICK":
+        buy_line = "🛍 Best Buy: Walmart"
+    else:
+        buy_line = f"📦 Best Buy: {best_source}"
 
     post = f"""{opener}
 
 {d.get('artist', 'Unknown Artist')} – {d.get('title', 'Unknown Title')}
 
-💰 Price: {price_text}
-📦 Source: {source}
+💰 Best Price: {price_text}
+{buy_line}
 
 🟢 {vibe}
 
+👉 {buy_link}
+
 🛒 Amazon Option:
 👉 {amazon_link}
-
-🔗 Original Listing:
-👉 {original_link}
 
 Vinyl Therapy never dies 🟣🟢"""
 
