@@ -24,6 +24,7 @@ for d in deals:
         vibe = "Niche find"
 
     price = d.get("price", 0)
+    price_text = f"${price:.2f}" if isinstance(price, (int, float)) and price > 0 else "Price not pulled yet"
     source = d.get("source", "Unknown Source")
     link = d.get("link", "Link coming soon")
 
@@ -32,7 +33,7 @@ for d in deals:
 {d['artist']} – {d['title']}
 🔥 Score: {score}
 
-💰 Price: ${price}
+💰 Price: {price_text}
 📦 Source: {source}
 
 🟢 {vibe}
