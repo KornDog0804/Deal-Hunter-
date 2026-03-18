@@ -9,6 +9,7 @@
       --bg: #0f0f14;
       --panel: #171824;
       --panel-2: #1f2130;
+      --panel-3: #11131b;
       --text: #f5f7fb;
       --muted: #b7bfd1;
       --green: #7CFC00;
@@ -17,6 +18,8 @@
       --yellow: #facc15;
       --blue: #60a5fa;
       --border: #2b2f45;
+      --shadow: 0 12px 30px rgba(0,0,0,0.28);
+      --radius: 18px;
     }
 
     * {
@@ -26,36 +29,64 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #11131b 0%, #0b0d13 100%);
+      background:
+        radial-gradient(circle at top right, rgba(168,85,247,0.14), transparent 25%),
+        radial-gradient(circle at top left, rgba(124,252,0,0.10), transparent 30%),
+        linear-gradient(180deg, #11131b 0%, #0b0d13 100%);
       color: var(--text);
     }
 
+    a {
+      color: inherit;
+    }
+
     header {
-      padding: 20px 16px 14px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(15, 15, 20, 0.95);
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(8px);
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 13, 19, 0.90);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 16px 16px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.1;
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.05;
     }
 
     .sub {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 14px;
+      line-height: 1.4;
+      max-width: 760px;
     }
 
     .controls {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      margin-top: 14px;
     }
 
     .controls input,
@@ -67,19 +98,72 @@
       border-radius: 12px;
       padding: 12px;
       font-size: 14px;
+      outline: none;
+    }
+
+    .chip-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .filter-chip {
+      background: var(--panel);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .filter-chip.active {
+      background: rgba(168,85,247,0.18);
+      color: white;
+      border-color: rgba(168,85,247,0.45);
     }
 
     main {
-      padding: 16px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 18px 16px 28px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(168,85,247,0.18) 0%, rgba(124,252,0,0.06) 100%);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
     }
 
     .summary {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin: 14px 0 20px;
     }
 
     .chip {
@@ -91,17 +175,49 @@
       font-size: 13px;
     }
 
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .featured-grid,
     .deal-list {
       display: grid;
       gap: 14px;
     }
 
+    .featured-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .deal-list {
+      grid-template-columns: 1fr;
+    }
+
     .deal-card {
       background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: var(--radius);
       padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      box-shadow: var(--shadow);
     }
 
     .deal-top {
@@ -113,47 +229,50 @@
     }
 
     .artist {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--green);
-      font-weight: 700;
-      margin-bottom: 4px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
 
     .title {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.15;
       margin: 0;
     }
 
-    .score-badge {
-      min-width: 96px;
+    .badge {
+      min-width: 104px;
       text-align: center;
       border-radius: 14px;
       padding: 10px 12px;
       font-weight: 800;
-      font-size: 14px;
+      font-size: 13px;
       border: 1px solid var(--border);
+      white-space: nowrap;
     }
 
-    .score-high {
+    .badge-high {
       background: rgba(124, 252, 0, 0.14);
       color: var(--green);
     }
 
-    .score-mid {
+    .badge-mid {
       background: rgba(250, 204, 21, 0.14);
       color: var(--yellow);
     }
 
-    .score-low {
+    .badge-low {
       background: rgba(96, 165, 250, 0.14);
       color: var(--blue);
     }
 
-    .meta {
+    .deal-meta {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 14px;
     }
@@ -162,7 +281,7 @@
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 10px 12px;
+      padding: 12px;
     }
 
     .label {
@@ -170,58 +289,51 @@
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .value {
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.2;
     }
 
-    .decision {
-      margin-bottom: 14px;
-      font-size: 14px;
+    .value small {
+      display: block;
+      font-size: 12px;
       color: var(--muted);
+      font-weight: 600;
+      margin-top: 4px;
     }
 
-    .post-box {
-      background: #0e1018;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-      white-space: pre-wrap;
-      font-size: 14px;
-      line-height: 1.45;
-      color: #ecf1ff;
-      margin-bottom: 12px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
+    .deal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
+      margin-bottom: 12px;
     }
 
     .btn {
       appearance: none;
       border: none;
-      border-radius: 12px;
-      padding: 12px 14px;
+      border-radius: 14px;
+      padding: 13px 14px;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
 
-    .btn-primary {
+    .btn-main {
       background: var(--purple);
       color: white;
     }
 
-    .btn-secondary {
+    .btn-alt {
       background: var(--green);
       color: #111;
     }
@@ -230,6 +342,55 @@
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
+    }
+
+    .mini-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .detail-toggle {
+      margin-top: 4px;
+    }
+
+    .detail-panel {
+      margin-top: 12px;
+      background: #0e1018;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      display: none;
+    }
+
+    .detail-panel.open {
+      display: block;
+    }
+
+    .post-box {
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #ecf1ff;
+      margin-bottom: 12px;
+    }
+
+    .sources-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .source-row {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     .empty {
@@ -242,50 +403,118 @@
     }
 
     .footer-note {
-      margin-top: 22px;
+      margin-top: 28px;
       color: var(--muted);
       font-size: 12px;
       text-align: center;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .deal-meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .deal-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .title {
+        font-size: 19px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Korndog Deal Board</h1>
-    <div class="sub">Live pulls, sorted by the hidden sauce, one-tap copy for Facebook.</div>
-    <div class="controls">
-      <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
-      <select id="scoreFilter">
-        <option value="0">All deals</option>
-        <option value="8">Top picks only</option>
-        <option value="6">Strong picks+</option>
-        <option value="4">Worth a look+</option>
-      </select>
+    <div class="header-wrap">
+      <div class="brand">
+        <div class="eyebrow">Korndog Records</div>
+        <h1>Korndog Deal Board</h1>
+        <div class="sub">
+          The best vinyl deals I’m seeing right now. Tap in for Grail Alerts, cheap heaters, and KornDog Finds worth chasing.
+        </div>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
+        <select id="scoreFilter">
+          <option value="0">All deals</option>
+          <option value="8">Top picks only</option>
+          <option value="6">Strong picks+</option>
+          <option value="4">Worth a look+</option>
+        </select>
+      </div>
+
+      <div class="chip-row">
+        <div class="filter-chip active" data-quick="all">All</div>
+        <div class="filter-chip" data-quick="grail">Grail Alerts</div>
+        <div class="filter-chip" data-quick="under30">Under $30</div>
+        <div class="filter-chip" data-quick="amazon">Amazon Picks</div>
+        <div class="filter-chip" data-quick="korndog">KornDog Finds</div>
+      </div>
     </div>
   </header>
 
   <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Vinyl Therapy Never Dies</h2>
+        <p>
+          This board is built to make Facebook posting easier and deal hunting faster. Best price up front, best buy button first, Amazon backup ready to go.
+        </p>
+      </div>
+    </section>
+
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
       <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
     </div>
 
-    <div id="dealList" class="deal-list"></div>
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Top Picks Today</h2>
+        <div class="section-note">The best stuff rises to the top.</div>
+      </div>
+      <div id="featuredList" class="featured-grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">All Live Deals</h2>
+        <div class="section-note">Tap a card to shop or reveal the post copy.</div>
+      </div>
+      <div id="dealList" class="deal-list"></div>
+    </section>
 
     <div class="footer-note">
       Disclosure: As an Amazon Associate, I earn from qualifying purchases.
       <br />
-      Vinyl Therapy never dies.
+      Korndog Deal Board is for music lovers, crate diggers, and impulse-buying legends.
     </div>
   </main>
 
   <script>
     let allDeals = [];
+    let activeQuickFilter = "all";
 
     function getScoreClass(score) {
-      if (score >= 8) return "score-high";
-      if (score >= 6) return "score-mid";
-      return "score-low";
+      if (score >= 8) return "badge-high";
+      if (score >= 6) return "badge-mid";
+      return "badge-low";
     }
 
     function getHypeLabel(score) {
@@ -314,6 +543,19 @@
       return `https://www.amazon.com/s?k=${query}&tag=${tag}`;
     }
 
+    function getBestPriceText(deal) {
+      if (Number(deal.best_price) > 0) return `$${Number(deal.best_price).toFixed(2)}`;
+      if (Number(deal.price) > 0) return `$${Number(deal.price).toFixed(2)}`;
+      return "Price not pulled yet";
+    }
+
+    function getBestBuyText(deal) {
+      if (deal.best_label === "KORNDOG FIND") return "KornDog Find";
+      if (deal.best_label === "AMAZON PICK") return "Amazon";
+      if (deal.best_label === "WALMART PICK") return "Walmart";
+      return deal.best_source || deal.source || "Unknown";
+    }
+
     function getPostText(deal) {
       const score = deal.total ?? 0;
       let opener = "👀 LOW KEY FIND 👀";
@@ -330,26 +572,17 @@
         vibe = "Worth a look";
       }
 
-      const bestPrice = Number(deal.best_price) > 0
-        ? `$${Number(deal.best_price).toFixed(2)}`
-        : (Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet");
-
+      const bestPrice = getBestPriceText(deal);
       const buyLink = deal.buy_link || deal.link || "Link coming soon";
       const amazonLink = deal.amazon_link || buildAmazonLink(deal);
-      const bestSource = deal.best_source || deal.source || "Unknown Source";
-      const label = deal.best_label || "KORNDOG FIND";
-
-      let buyLine = `📦 Best Buy: ${bestSource}`;
-      if (label === "KORNDOG FIND") buyLine = `💿 Best Buy: KornDog Find (${bestSource})`;
-      if (label === "AMAZON PICK") buyLine = `🛒 Best Buy: Amazon`;
-      if (label === "WALMART PICK") buyLine = `🛍 Best Buy: Walmart`;
+      const bestSource = getBestBuyText(deal);
 
       return `${opener}
 
 ${deal.artist} – ${deal.title}
 
 💰 Best Price: ${bestPrice}
-${buyLine}
+📦 Best Buy: ${bestSource}
 
 🟢 ${vibe}
 
@@ -370,6 +603,101 @@ Vinyl Therapy never dies 🟣🟢`;
       }
     }
 
+    function makeSourceRows(deal) {
+      const sources = Array.isArray(deal.all_sources) ? deal.all_sources : [];
+      if (!sources.length) return "";
+
+      return `
+        <div class="sources-list">
+          ${sources.map(s => `
+            <div class="source-row">
+              <span>${s.source || "Unknown"}${s.version ? ` · ${s.version}` : ""}</span>
+              <strong>${Number(s.price) > 0 ? `$${Number(s.price).toFixed(2)}` : "N/A"}</strong>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function createDealCard(deal, featured = false) {
+      const score = deal.total ?? 0;
+      const postText = getPostText(deal);
+      const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+      const bestPrice = getBestPriceText(deal);
+      const bestBuy = getBestBuyText(deal);
+      const buyLink = deal.buy_link || deal.link || "#";
+      const detailId = `detail-${Math.random().toString(36).slice(2, 10)}`;
+
+      const card = document.createElement("div");
+      card.className = "deal-card";
+      card.innerHTML = `
+        <div class="deal-top">
+          <div>
+            <div class="artist">${deal.artist || "Unknown Artist"}</div>
+            <h2 class="title">${deal.title || "Unknown Title"}</h2>
+          </div>
+          <div class="badge ${getScoreClass(score)}">${getHypeLabel(score)}</div>
+        </div>
+
+        <div class="deal-meta">
+          <div class="meta-box">
+            <div class="label">Best Price</div>
+            <div class="value">${bestPrice}</div>
+          </div>
+          <div class="meta-box">
+            <div class="label">Best Buy</div>
+            <div class="value">${bestBuy}<small>${deal.best_source || deal.source || "Unknown source"}</small></div>
+          </div>
+        </div>
+
+        <div class="deal-actions">
+          <a class="btn btn-main" href="${buyLink}" target="_blank" rel="noopener noreferrer">Shop Deal</a>
+          <a class="btn btn-alt" href="${amazonLink}" target="_blank" rel="noopener noreferrer">Amazon Option</a>
+        </div>
+
+        <div class="mini-actions">
+          <button class="btn btn-ghost copy-post-btn">Copy Facebook Post</button>
+          <button class="btn btn-ghost detail-toggle" data-target="${detailId}">Show Details</button>
+        </div>
+
+        <div id="${detailId}" class="detail-panel">
+          <div class="post-box">${postText}</div>
+          <div class="mini-actions">
+            <button class="btn btn-ghost copy-link-btn">Copy Amazon Link</button>
+            <button class="btn btn-ghost copy-best-btn">Copy Best Link</button>
+          </div>
+          ${makeSourceRows(deal)}
+        </div>
+      `;
+
+      card.querySelector(".copy-post-btn").addEventListener("click", () => copyText(postText));
+      card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(amazonLink));
+      card.querySelector(".copy-best-btn").addEventListener("click", () => copyText(buyLink));
+      card.querySelector(".detail-toggle").addEventListener("click", (e) => {
+        const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
+        const open = panel.classList.toggle("open");
+        e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
+      });
+
+      return card;
+    }
+
+    function renderFeatured(deals) {
+      const featuredList = document.getElementById("featuredList");
+      featuredList.innerHTML = "";
+
+      const picks = deals
+        .filter(d => (d.total ?? 0) >= 8)
+        .slice(0, 6);
+
+      if (!picks.length) {
+        featuredList.innerHTML = `<div class="empty">No top picks yet. The good stuff is probably loading in from the back room.</div>`;
+        return;
+      }
+
+      picks.forEach(deal => featuredList.appendChild(createDealCard(deal, true)));
+    }
+
     function renderDeals(deals) {
       const dealList = document.getElementById("dealList");
       dealList.innerHTML = "";
@@ -379,58 +707,19 @@ Vinyl Therapy never dies 🟣🟢`;
         return;
       }
 
-      deals.forEach(deal => {
-        const score = deal.total ?? 0;
-        const bestPrice = Number(deal.best_price) > 0
-          ? `$${Number(deal.best_price).toFixed(2)}`
-          : (Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet");
+      deals.forEach(deal => dealList.appendChild(createDealCard(deal, false)));
+    }
 
-        const postText = getPostText(deal);
-        const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+    function matchesQuickFilter(deal) {
+      const score = deal.total ?? 0;
+      const bestPrice = Number(deal.best_price || deal.price || 0);
+      const label = deal.best_label || "";
 
-        let bestBuyText = deal.best_source || deal.source || "Unknown";
-        if (deal.best_label === "KORNDOG FIND") bestBuyText = "KornDog Find";
-        if (deal.best_label === "AMAZON PICK") bestBuyText = "Amazon";
-        if (deal.best_label === "WALMART PICK") bestBuyText = "Walmart";
-
-        const card = document.createElement("div");
-        card.className = "deal-card";
-        card.innerHTML = `
-          <div class="deal-top">
-            <div>
-              <div class="artist">${deal.artist || "Unknown Artist"}</div>
-              <h2 class="title">${deal.title || "Unknown Title"}</h2>
-            </div>
-            <div class="score-badge ${getScoreClass(score)}">${getHypeLabel(score)}</div>
-          </div>
-
-          <div class="meta">
-            <div class="meta-box">
-              <div class="label">Best Price</div>
-              <div class="value">${bestPrice}</div>
-            </div>
-            <div class="meta-box">
-              <div class="label">Best Buy</div>
-              <div class="value">${bestBuyText}</div>
-            </div>
-          </div>
-
-          <div class="decision"><strong>${deal.decision || "UNKNOWN"}</strong></div>
-
-          <div class="post-box">${postText}</div>
-
-          <div class="actions">
-            <a class="btn btn-primary" href="${deal.buy_link || deal.link || "#"}" target="_blank" rel="noopener noreferrer">Open Deal</a>
-            <button class="btn btn-secondary copy-btn">Copy Post</button>
-            <button class="btn btn-ghost copy-link-btn">Copy Link</button>
-          </div>
-        `;
-
-        card.querySelector(".copy-btn").addEventListener("click", () => copyText(postText));
-        card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(amazonLink));
-
-        dealList.appendChild(card);
-      });
+      if (activeQuickFilter === "grail") return score >= 9;
+      if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
+      if (activeQuickFilter === "amazon") return label === "AMAZON PICK";
+      if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
+      return true;
     }
 
     function applyFilters() {
@@ -439,14 +728,27 @@ Vinyl Therapy never dies 🟣🟢`;
 
       const filtered = allDeals
         .filter(d => (d.total ?? 0) >= minScore)
+        .filter(matchesQuickFilter)
         .filter(d => {
-          const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""} ${d.best_source || ""}`.toLowerCase();
+          const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""} ${d.best_source || ""} ${d.best_label || ""}`.toLowerCase();
           return hay.includes(query);
         })
         .sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
 
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
+      renderFeatured(filtered);
       renderDeals(filtered);
+    }
+
+    function initQuickFilters() {
+      document.querySelectorAll(".filter-chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          activeQuickFilter = chip.dataset.quick;
+          applyFilters();
+        });
+      });
     }
 
     async function init() {
@@ -457,6 +759,8 @@ Vinyl Therapy never dies 🟣🟢`;
         document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
         applyFilters();
       } catch (err) {
+        document.getElementById("featuredList").innerHTML =
+          `<div class="empty">Could not load scored_deals.json. The front window is lit up, but the stock room is locked.</div>`;
         document.getElementById("dealList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. Netlify can see the front window, but the stock room is locked.</div>`;
       }
@@ -465,6 +769,7 @@ Vinyl Therapy never dies 🟣🟢`;
     document.getElementById("searchInput").addEventListener("input", applyFilters);
     document.getElementById("scoreFilter").addEventListener("change", applyFilters);
 
+    initQuickFilters();
     init();
   </script>
 </body>
