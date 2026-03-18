@@ -127,7 +127,7 @@
     }
 
     .score-badge {
-      min-width: 72px;
+      min-width: 96px;
       text-align: center;
       border-radius: 14px;
       padding: 10px 12px;
@@ -252,14 +252,14 @@
 <body>
   <header>
     <h1>Korndog Deal Board</h1>
-    <div class="sub">Live pulls, score-first sorting, one-tap copy for Facebook.</div>
+    <div class="sub">Live pulls, sorted by the hidden sauce, one-tap copy for Facebook.</div>
     <div class="controls">
       <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
       <select id="scoreFilter">
-        <option value="0">All scores</option>
-        <option value="8">8+ only</option>
-        <option value="6">6+ only</option>
-        <option value="4">4+ only</option>
+        <option value="0">All deals</option>
+        <option value="8">Top picks only</option>
+        <option value="6">Strong picks+</option>
+        <option value="4">Worth a look+</option>
       </select>
     </div>
   </header>
@@ -273,6 +273,8 @@
     <div id="dealList" class="deal-list"></div>
 
     <div class="footer-note">
+      Disclosure: As an Amazon Associate, I earn from qualifying purchases.
+      <br />
       Vinyl Therapy never dies.
     </div>
   </main>
@@ -286,36 +288,63 @@
       return "score-low";
     }
 
+    function getHypeLabel(score) {
+      if (score >= 9) return "Grail Alert";
+      if (score >= 7) return "Vinyl Heat";
+      if (score >= 5) return "Korndog Find";
+      return "Low Key";
+    }
+
+    function buildAmazonLink(deal) {
+      const artist = (deal.artist || "").trim();
+      const title = (deal.title || "").trim();
+      const sourceLink = (deal.link || "").trim();
+      const query = `${artist} ${title} vinyl`.trim().replace(/\s+/g, "+");
+      const tag = "korndog20-20";
+
+      if (sourceLink.includes("amazon.com")) {
+        if (sourceLink.includes("tag=")) return sourceLink;
+        const joiner = sourceLink.includes("?") ? "&" : "?";
+        return `${sourceLink}${joiner}tag=${tag}`;
+      }
+
+      return `https://www.amazon.com/s?k=${query}&tag=${tag}`;
+    }
+
     function getPostText(deal) {
       const score = deal.total ?? 0;
-      let opener = "👀 UNDERGROUND PICK 👀";
-      let vibe = "Niche find";
+      let opener = "👀 LOW KEY FIND 👀";
+      let vibe = "Niche pull";
 
-      if (score >= 8) {
+      if (score >= 9) {
         opener = "🚨 GRAIL ALERT 🚨";
         vibe = "MOVE FAST — this won’t sit";
-      } else if (score >= 6) {
+      } else if (score >= 7) {
         opener = "🔥 VINYL HEAT 🔥";
-        vibe = "High-priority pickup";
-      } else if (score >= 4) {
+        vibe = "Strong pickup";
+      } else if (score >= 5) {
         opener = "💿 KORNDOG FIND 💿";
-        vibe = "Solid grab";
+        vibe = "Worth a look";
       }
 
       const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
       const link = deal.link || "Link coming soon";
       const source = deal.source || "Unknown Source";
+      const amazonLink = buildAmazonLink(deal);
 
       return `${opener}
 
 ${deal.artist} – ${deal.title}
-🔥 Score: ${score}
 
 💰 Price: ${price}
 📦 Source: ${source}
 
 🟢 ${vibe}
 
+🛒 Amazon Option:
+👉 ${amazonLink}
+
+🔗 Original Listing:
 👉 ${link}
 
 Vinyl Therapy never dies 🟣🟢`;
@@ -324,7 +353,7 @@ Vinyl Therapy never dies 🟣🟢`;
     async function copyText(text) {
       try {
         await navigator.clipboard.writeText(text);
-        alert("Post copied.");
+        alert("Copied.");
       } catch (err) {
         alert("Copy failed. Long-press and copy manually.");
       }
@@ -343,6 +372,7 @@ Vinyl Therapy never dies 🟣🟢`;
         const score = deal.total ?? 0;
         const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
         const postText = getPostText(deal);
+        const amazonLink = buildAmazonLink(deal);
 
         const card = document.createElement("div");
         card.className = "deal-card";
@@ -352,7 +382,7 @@ Vinyl Therapy never dies 🟣🟢`;
               <div class="artist">${deal.artist || "Unknown Artist"}</div>
               <h2 class="title">${deal.title || "Unknown Title"}</h2>
             </div>
-            <div class="score-badge ${getScoreClass(score)}">Score ${score}</div>
+            <div class="score-badge ${getScoreClass(score)}">${getHypeLabel(score)}</div>
           </div>
 
           <div class="meta">
@@ -378,7 +408,7 @@ Vinyl Therapy never dies 🟣🟢`;
         `;
 
         card.querySelector(".copy-btn").addEventListener("click", () => copyText(postText));
-        card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(deal.link || "Link coming soon"));
+        card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(amazonLink));
 
         dealList.appendChild(card);
       });
