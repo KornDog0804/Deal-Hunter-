@@ -4,442 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Korndog Deal Board</title>
-  <style>
-    :root {
-      --bg: #0f0f14;
-      --panel: #171824;
-      --panel-2: #1f2130;
-      --panel-3: #11131b;
-      --text: #f5f7fb;
-      --muted: #b7bfd1;
-      --green: #7CFC00;
-      --purple: #a855f7;
-      --red: #ff4d4f;
-      --yellow: #facc15;
-      --blue: #60a5fa;
-      --border: #2b2f45;
-      --shadow: 0 12px 30px rgba(0,0,0,0.28);
-      --radius: 18px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(168,85,247,0.14), transparent 25%),
-        radial-gradient(circle at top left, rgba(124,252,0,0.10), transparent 30%),
-        linear-gradient(180deg, #11131b 0%, #0b0d13 100%);
-      color: var(--text);
-    }
-
-    a {
-      color: inherit;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 13, 19, 0.90);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px 16px 16px;
-    }
-
-    .brand {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .eyebrow {
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 30px;
-      line-height: 1.05;
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.4;
-      max-width: 760px;
-    }
-
-    .controls {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .controls input,
-    .controls select {
-      width: 100%;
-      background: var(--panel);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      font-size: 14px;
-      outline: none;
-    }
-
-    .chip-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .filter-chip {
-      background: var(--panel);
-      color: var(--muted);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .filter-chip.active {
-      background: rgba(168,85,247,0.18);
-      color: white;
-      border-color: rgba(168,85,247,0.45);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px 16px 28px;
-    }
-
-    .hero {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(168,85,247,0.18) 0%, rgba(124,252,0,0.06) 100%);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card h2 {
-      margin: 0 0 8px;
-      font-size: 24px;
-      line-height: 1.1;
-    }
-
-    .hero-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.45;
-      font-size: 14px;
-    }
-
-    .summary {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 14px 0 20px;
-    }
-
-    .chip {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 13px;
-    }
-
-    .section {
-      margin-bottom: 26px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: 21px;
-      line-height: 1.2;
-    }
-
-    .section-note {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .featured-grid,
-    .deal-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .featured-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .deal-list {
-      grid-template-columns: 1fr;
-    }
-
-    .deal-card {
-      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: var(--shadow);
-    }
-
-    .deal-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .artist {
-      font-size: 13px;
-      color: var(--green);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .title {
-      font-size: 21px;
-      font-weight: 800;
-      line-height: 1.15;
-      margin: 0;
-    }
-
-    .badge {
-      min-width: 104px;
-      text-align: center;
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-weight: 800;
-      font-size: 13px;
-      border: 1px solid var(--border);
-      white-space: nowrap;
-    }
-
-    .badge-high {
-      background: rgba(124, 252, 0, 0.14);
-      color: var(--green);
-    }
-
-    .badge-mid {
-      background: rgba(250, 204, 21, 0.14);
-      color: var(--yellow);
-    }
-
-    .badge-low {
-      background: rgba(96, 165, 250, 0.14);
-      color: var(--blue);
-    }
-
-    .deal-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .meta-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-    }
-
-    .label {
-      font-size: 11px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 6px;
-    }
-
-    .value {
-      font-size: 16px;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    .value small {
-      display: block;
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    .deal-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .btn {
-      appearance: none;
-      border: none;
-      border-radius: 14px;
-      padding: 13px 14px;
-      font-size: 14px;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .btn-main {
-      background: var(--purple);
-      color: white;
-    }
-
-    .btn-alt {
-      background: var(--green);
-      color: #111;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .mini-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .detail-toggle {
-      margin-top: 4px;
-    }
-
-    .detail-panel {
-      margin-top: 12px;
-      background: #0e1018;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px;
-      display: none;
-    }
-
-    .detail-panel.open {
-      display: block;
-    }
-
-    .post-box {
-      white-space: pre-wrap;
-      font-size: 14px;
-      line-height: 1.45;
-      color: #ecf1ff;
-      margin-bottom: 12px;
-    }
-
-    .sources-list {
-      display: grid;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .source-row {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 13px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .empty {
-      text-align: center;
-      padding: 30px 16px;
-      color: var(--muted);
-      background: var(--panel);
-      border-radius: 18px;
-      border: 1px solid var(--border);
-    }
-
-    .footer-note {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 12px;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 720px) {
-      .controls {
-        grid-template-columns: 1fr;
-      }
-
-      .deal-meta {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .deal-actions {
-        grid-template-columns: 1fr;
-      }
-
-      .title {
-        font-size: 19px;
-      }
-
-      h1 {
-        font-size: 27px;
-      }
-
-      .section-head {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header id="siteHeader">
     <div class="header-wrap">
       <div class="brand">
         <div class="eyebrow">Korndog Records</div>
@@ -619,7 +187,7 @@ Vinyl Therapy never dies 🟣🟢`;
       `;
     }
 
-    function createDealCard(deal, featured = false) {
+    function createDealCard(deal) {
       const score = deal.total ?? 0;
       const postText = getPostText(deal);
       const amazonLink = deal.amazon_link || buildAmazonLink(deal);
@@ -695,7 +263,7 @@ Vinyl Therapy never dies 🟣🟢`;
         return;
       }
 
-      picks.forEach(deal => featuredList.appendChild(createDealCard(deal, true)));
+      picks.forEach(deal => featuredList.appendChild(createDealCard(deal)));
     }
 
     function renderDeals(deals) {
@@ -707,7 +275,7 @@ Vinyl Therapy never dies 🟣🟢`;
         return;
       }
 
-      deals.forEach(deal => dealList.appendChild(createDealCard(deal, false)));
+      deals.forEach(deal => dealList.appendChild(createDealCard(deal)));
     }
 
     function matchesQuickFilter(deal) {
@@ -751,6 +319,31 @@ Vinyl Therapy never dies 🟣🟢`;
       });
     }
 
+    function initAutoHideHeader() {
+      const header = document.getElementById("siteHeader");
+      let lastY = window.scrollY;
+      let ticking = false;
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentY = window.scrollY;
+
+            if (currentY > lastY && currentY > 120) {
+              header.classList.add("header-hidden");
+            } else {
+              header.classList.remove("header-hidden");
+            }
+
+            lastY = currentY;
+            ticking = false;
+          });
+
+          ticking = true;
+        }
+      });
+    }
+
     async function init() {
       try {
         const res = await fetch("./scored_deals.json?_=" + Date.now());
@@ -770,6 +363,7 @@ Vinyl Therapy never dies 🟣🟢`;
     document.getElementById("scoreFilter").addEventListener("change", applyFilters);
 
     initQuickFilters();
+    initAutoHideHeader();
     init();
   </script>
 </body>
