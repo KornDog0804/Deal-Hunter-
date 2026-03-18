@@ -105,30 +105,40 @@ def parse_from_link(link):
     slug = slug.replace("-", " ")
     slug = clean_text(slug)
 
-    # Remove obvious store fluff
-    slug = re.sub(r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary)\b", "", slug, flags=re.IGNORECASE)
-    slug = re.sub(r"\s+", " ", slug).strip()
+    # remove generic format fluff but keep core album words
+    slug = re.sub(
+        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version)\b",
+        "",
+        slug,
+        flags=re.IGNORECASE
+    )
+    slug = re.sub(r"\s{2,}", " ", slug).strip()
 
     return slug
 
+def normalize_album_text(text):
+    text = clean_text(text)
+    text = re.sub(r"\s+-\s+uDiscover Music$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+-\s+The Sound of Vinyl$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bLimited Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bCollector'?s Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bCrystal Clear\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bColor Vinyl\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bColored\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bExclusive\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bVinyl Edition\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bStereo Version\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s{2,}", " ", text).strip(" -")
+    return text
+
 def infer_artist_title(raw_title, link):
-    title = clean_text(raw_title)
-    link_text = parse_from_link(link)
+    title = normalize_album_text(raw_title)
+    slug = clean_text(parse_from_link(link))
 
-    # Good pattern: Artist - Album
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-    if len(parts) >= 2:
-        artist = parts[0]
-        album = parts[1]
-
-        if artist.lower() != album.lower():
-            return artist, album
-
-    # Fallback to slug parsing for known bad cases
-    slug = clean_text(link_text)
-
-    patterns = [
+    # Strong slug-based patterns first
+    slug_patterns = [
         (r"^the all american rejects move along", "The All-American Rejects", "Move Along"),
+        (r"^the all american rejects the all american rejects", "The All-American Rejects", "The All-American Rejects"),
         (r"^sum 41 all killer no filler", "Sum 41", "All Killer No Filler"),
         (r"^nelly furtado loose", "Nelly Furtado", "Loose"),
         (r"^new found glory sticks and stones", "New Found Glory", "Sticks And Stones"),
@@ -142,15 +152,46 @@ def infer_artist_title(raw_title, link):
         (r"^tears for fears songs from the big chair", "Tears For Fears", "Songs From The Big Chair"),
         (r"^spinal tap this is spinal tap", "Spinal Tap", "This Is Spinal Tap"),
         (r"^spinal tap break like the wind", "Spinal Tap", "Break Like The Wind"),
-        (r"^joan osborne relish", "Joan Osborne", "Relish")
+        (r"^joan osborne relish", "Joan Osborne", "Relish"),
+        (r"^phantogram voices", "Phantogram", "Voices"),
+        (r"^a perfect circle mer de noms", "A Perfect Circle", "Mer de Noms"),
+        (r"^hanson middle of nowhere", "Hanson", "Middle Of Nowhere"),
+        (r"^rush moving pictures", "Rush", "Moving Pictures"),
+        (r"^rihanna good girl gone bad", "Rihanna", "Good Girl Gone Bad"),
+        (r"^nirvana in utero", "Nirvana", "In Utero"),
+        (r"^mariah carey charmbracelet", "Mariah Carey", "Charmbracelet"),
+        (r"^paul mccartney new", "Paul McCartney", "NEW"),
+        (r"^yellowcard ocean avenue", "Yellowcard", "Ocean Avenue"),
+        (r"^wings wings at the speed of sound", "Wings", "Wings At The Speed Of Sound"),
+        (r"^styx circling from above", "Styx", "Circling From Above"),
     ]
 
-    for pattern, artist, album in patterns:
+    for pattern, artist, album in slug_patterns:
         if re.search(pattern, slug, re.IGNORECASE):
             return artist, album
 
-    # Last fallback
-    return "Unknown Artist", title
+    # Handle titles formatted like:
+    # "Artist - Artist - Album - uDiscover Music"
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
+    if len(parts) >= 3:
+        # common uDiscover style: Artist - Artist - Album
+        if parts[0].lower() == parts[1].lower():
+            return parts[0], normalize_album_text(parts[2])
+
+        # sound of vinyl or generic: Artist - Album - Store
+        if "udiscover music" in parts[-1].lower() or "the sound of vinyl" in parts[-1].lower():
+            return parts[0], normalize_album_text(parts[1])
+
+    if len(parts) >= 2:
+        if parts[0].lower() != parts[1].lower():
+            return parts[0], normalize_album_text(parts[1])
+
+    # Last fallback from slug
+    if len(slug.split()) >= 2:
+        return "Unknown Artist", normalize_album_text(slug)
+
+    return "Unknown Artist", normalize_album_text(title)
 
 def build_live_deals():
     deals = []
@@ -173,7 +214,6 @@ def build_live_deals():
                     artist, title = infer_artist_title(raw_title, link)
                     keywords = keyword_hits(text_blob)
 
-                    # Use slug-enhanced version labeling
                     version_parts = keywords[:]
                     if "2lp" in link.lower() and "2lp" not in version_parts:
                         version_parts.append("2lp")
