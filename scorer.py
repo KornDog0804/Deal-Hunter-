@@ -50,7 +50,7 @@ def special_format_bonus(item):
     return 0
 
 def score_item(item):
-    if contains_ignore_keywords(item.get("title",""), item.get("version",""), item.get("keywords", [])):
+    if contains_ignore_keywords(item.get("title", ""), item.get("version", ""), item.get("keywords", [])):
         return {
             "total": 0,
             "decision": "IGNORE",
@@ -92,7 +92,11 @@ def score_item(item):
     }
 
 def main():
-    items = load_json("sample_deals.json")
+    if (BASE / "live_deals.json").exists():
+        items = load_json("live_deals.json")
+    else:
+        items = load_json("sample_deals.json")
+
     results = []
     for item in items:
         scored = score_item(item)
@@ -100,7 +104,7 @@ def main():
 
     out_path = BASE / "scored_deals.json"
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=2, ensure_ascii=False)
 
     print("Scored deals written to", out_path)
     for r in results:
