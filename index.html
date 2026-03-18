@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korndog Deal Board</title>
+  <style>
+    :root {
+      --bg: #0f0f14;
+      --panel: #171824;
+      --panel-2: #1f2130;
+      --text: #f5f7fb;
+      --muted: #b7bfd1;
+      --green: #7CFC00;
+      --purple: #a855f7;
+      --red: #ff4d4f;
+      --yellow: #facc15;
+      --blue: #60a5fa;
+      --border: #2b2f45;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #11131b 0%, #0b0d13 100%);
+      color: var(--text);
+    }
+
+    header {
+      padding: 20px 16px 14px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 15, 20, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .controls input,
+    .controls select {
+      width: 100%;
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .summary {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .deal-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .deal-card {
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .deal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .artist {
+      font-size: 14px;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .score-badge {
+      min-width: 72px;
+      text-align: center;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .score-high {
+      background: rgba(124, 252, 0, 0.14);
+      color: var(--green);
+    }
+
+    .score-mid {
+      background: rgba(250, 204, 21, 0.14);
+      color: var(--yellow);
+    }
+
+    .score-low {
+      background: rgba(96, 165, 250, 0.14);
+      color: var(--blue);
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .meta-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+
+    .label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .decision {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .post-box {
+      background: #0e1018;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #ecf1ff;
+      margin-bottom: 12px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--purple);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: var(--green);
+      color: #111;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .empty {
+      text-align: center;
+      padding: 30px 16px;
+      color: var(--muted);
+      background: var(--panel);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Korndog Deal Board</h1>
+    <div class="sub">Live pulls, score-first sorting, one-tap copy for Facebook.</div>
+    <div class="controls">
+      <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
+      <select id="scoreFilter">
+        <option value="0">All scores</option>
+        <option value="8">8+ only</option>
+        <option value="6">6+ only</option>
+        <option value="4">4+ only</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div class="summary">
+      <div class="chip" id="dealCount">Deals: 0</div>
+      <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
+    </div>
+
+    <div id="dealList" class="deal-list"></div>
+
+    <div class="footer-note">
+      Vinyl Therapy never dies.
+    </div>
+  </main>
+
+  <script>
+    let allDeals = [];
+
+    function getScoreClass(score) {
+      if (score >= 8) return "score-high";
+      if (score >= 6) return "score-mid";
+      return "score-low";
+    }
+
+    function getPostText(deal) {
+      const score = deal.total ?? 0;
+      let opener = "👀 UNDERGROUND PICK 👀";
+      let vibe = "Niche find";
+
+      if (score >= 8) {
+        opener = "🚨 GRAIL ALERT 🚨";
+        vibe = "MOVE FAST — this won’t sit";
+      } else if (score >= 6) {
+        opener = "🔥 VINYL HEAT 🔥";
+        vibe = "High-priority pickup";
+      } else if (score >= 4) {
+        opener = "💿 KORNDOG FIND 💿";
+        vibe = "Solid grab";
+      }
+
+      const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
+      const link = deal.link || "Link coming soon";
+      const source = deal.source || "Unknown Source";
+
+      return `${opener}
+
+${deal.artist} – ${deal.title}
+🔥 Score: ${score}
+
+💰 Price: ${price}
+📦 Source: ${source}
+
+🟢 ${vibe}
+
+👉 ${link}
+
+Vinyl Therapy never dies 🟣🟢`;
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        alert("Post copied.");
+      } catch (err) {
+        alert("Copy failed. Long-press and copy manually.");
+      }
+    }
+
+    function renderDeals(deals) {
+      const dealList = document.getElementById("dealList");
+      dealList.innerHTML = "";
+
+      if (!deals.length) {
+        dealList.innerHTML = `<div class="empty">No deals match your filter. The crate came up dust today.</div>`;
+        return;
+      }
+
+      deals.forEach(deal => {
+        const score = deal.total ?? 0;
+        const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
+        const postText = getPostText(deal);
+
+        const card = document.createElement("div");
+        card.className = "deal-card";
+        card.innerHTML = `
+          <div class="deal-top">
+            <div>
+              <div class="artist">${deal.artist || "Unknown Artist"}</div>
+              <h2 class="title">${deal.title || "Unknown Title"}</h2>
+            </div>
+            <div class="score-badge ${getScoreClass(score)}">Score ${score}</div>
+          </div>
+
+          <div class="meta">
+            <div class="meta-box">
+              <div class="label">Price</div>
+              <div class="value">${price}</div>
+            </div>
+            <div class="meta-box">
+              <div class="label">Source</div>
+              <div class="value">${deal.source || "Unknown"}</div>
+            </div>
+          </div>
+
+          <div class="decision"><strong>${deal.decision || "UNKNOWN"}</strong></div>
+
+          <div class="post-box">${postText}</div>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="${deal.link || "#"}" target="_blank" rel="noopener noreferrer">Open Deal</a>
+            <button class="btn btn-secondary copy-btn">Copy Post</button>
+            <button class="btn btn-ghost copy-link-btn">Copy Link</button>
+          </div>
+        `;
+
+        card.querySelector(".copy-btn").addEventListener("click", () => copyText(postText));
+        card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(deal.link || "Link coming soon"));
+
+        dealList.appendChild(card);
+      });
+    }
+
+    function applyFilters() {
+      const query = document.getElementById("searchInput").value.trim().toLowerCase();
+      const minScore = Number(document.getElementById("scoreFilter").value);
+
+      const filtered = allDeals
+        .filter(d => (d.total ?? 0) >= minScore)
+        .filter(d => {
+          const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""}`.toLowerCase();
+          return hay.includes(query);
+        })
+        .sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
+
+      document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
+      renderDeals(filtered);
+    }
+
+    async function init() {
+      try {
+        const res = await fetch("./scored_deals.json?_=" + Date.now());
+        const data = await res.json();
+        allDeals = Array.isArray(data) ? data : [];
+        document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
+        applyFilters();
+      } catch (err) {
+        document.getElementById("dealList").innerHTML =
+          `<div class="empty">Could not load scored_deals.json. Netlify can see the front window, but the stock room is locked.</div>`;
+      }
+    }
+
+    document.getElementById("searchInput").addEventListener("input", applyFilters);
+    document.getElementById("scoreFilter").addEventListener("change", applyFilters);
+
+    init();
+  </script>
+</body>
+</html>
