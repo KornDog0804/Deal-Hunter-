@@ -27,7 +27,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Break Like The Wind Blue &amp; Red Galaxy Color Vinyl",
+    "title": "Break Like The Wind Blue & Red Galaxy Color Vinyl",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -114,12 +114,13 @@
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-1lp-picture-dsc",
     "keywords": [
       "exclusive",
-      "picture disc"
+      "picture disc",
+      "1lp"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive picture disc",
+    "version": "exclusive picture disc 1lp",
     "total": 9,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -140,12 +141,13 @@
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
     "keywords": [
-      "exclusive"
+      "exclusive",
+      "1lp"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive",
+    "version": "exclusive 1lp",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -188,19 +190,20 @@
     }
   },
   {
-    "artist": "Bobby Helms",
-    "title": "Jingle Bell Rock (Apple Red 7” Vinyl)",
-    "price": 14.98,
+    "artist": "Voices 2LP Color",
+    "title": "The Sound of Vinyl",
+    "price": 37.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/bobby-helms-jingle-bell-rock-apple-red-7-vinyl",
+    "link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
     "keywords": [
-      "exclusive"
+      "exclusive",
+      "2lp"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive",
+    "version": "exclusive 2lp",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -214,104 +217,28 @@
     }
   },
   {
-    "artist": "Paul McCartney",
-    "title": "Wonderful Christmastime (Canary Yellow 7” Vinyl)",
-    "price": 14.98,
+    "artist": "A Perfect Circle Mer de Noms 2LP Zoetrope",
+    "title": "The Sound of Vinyl",
+    "price": 45.98,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/paul-mccartney-wonderful-christmastime-7in",
+    "link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
     "keywords": [
-      "exclusive"
+      "exclusive",
+      "zoetrope",
+      "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive",
-    "total": 10,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "tier_2_adjacent",
-      "artist_points": 2,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "John Lennon, Yoko Ono &amp; The Plastic Ono Band",
-    "title": "Happy Xmas (War Is Over) (Evergreen 7” Vinyl)",
-    "price": 14.98,
-    "source": "Sound of Vinyl",
-    "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/john-lennon-yoko-ono-the-plastic-ono-band-happy-xmas-war-is-over-evergreen-7-vinyl",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive",
-    "total": 8,
+    "version": "exclusive zoetrope 2lp",
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "The Jackson 5",
-    "title": "Santa Claus Is Coming To Town (Apple Red 7” Vinyl)",
-    "price": 14.98,
-    "source": "Sound of Vinyl",
-    "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-jackson-5-santa-claus-is-coming-to-town-apple-red-7-vinyl",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive",
-    "total": 8,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Dean Martin",
-    "title": "Let It Snow, Let It Snow, Let It Snow (Snow White 7” Vinyl)",
-    "price": 14.98,
-    "source": "Sound of Vinyl",
-    "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/dean-martin-let-it-snow-let-it-snow-let-it-snow-snow-white-7-vinyl",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive",
-    "total": 8,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -319,7 +246,7 @@
   },
   {
     "artist": "Something Corporate",
-    "title": "Something Corporate",
+    "title": "North",
     "price": 38.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -346,7 +273,7 @@
   },
   {
     "artist": "Thrice",
-    "title": "Thrice",
+    "title": "The Artist In The Ambulance",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -399,7 +326,7 @@
   },
   {
     "artist": "Sum 41",
-    "title": "Sum 41",
+    "title": "All Killer No Filler",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -425,7 +352,7 @@
   },
   {
     "artist": "Nelly Furtado",
-    "title": "Nelly Furtado",
+    "title": "Loose",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -452,7 +379,7 @@
   },
   {
     "artist": "New Found Glory",
-    "title": "New Found Glory",
+    "title": "Sticks And Stones",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -478,7 +405,7 @@
   },
   {
     "artist": "Beastie Boys",
-    "title": "Beastie Boys",
+    "title": "Root Down",
     "price": 29.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -502,7 +429,7 @@
   },
   {
     "artist": "blink-182",
-    "title": "Blink-182",
+    "title": "Dude Ranch",
     "price": 24.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -525,8 +452,8 @@
     }
   },
   {
-    "artist": "Hanson",
-    "title": "Hanson",
+    "artist": "Unknown Artist",
+    "title": "Hanson - Hanson - Middle Of Nowhere Limited Edition Colored 2LP - uDiscover Music",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -554,7 +481,7 @@
   },
   {
     "artist": "Bob Seger",
-    "title": "Bob Seger &amp;amp; the Silver Bullet Band",
+    "title": "Bob Seger & the Silver Bullet Band",
     "price": 29.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -577,8 +504,8 @@
     }
   },
   {
-    "artist": "The All-American Rejects",
-    "title": "The All-American Rejects",
+    "artist": "Unknown Artist",
+    "title": "The All-American Rejects - The All-American Rejects - The All-American Rejects Limited Edition LP + 7\" - uDiscover Music",
     "price": 34.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -616,6 +543,209 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Rush - Rush - Moving Pictures (40th Anniversary) Limited Edition LP - uDiscover Music",
+    "price": 39.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
+    "keywords": [
+      "limited",
+      "anniversary"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited anniversary",
+    "total": 8,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Styx",
+    "title": "Styx Circling From Above (LP)",
+    "price": 27.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Rihanna - Rihanna - Good Girl Gone Bad Crystal Clear Limited Edition 2LP - uDiscover Music",
+    "price": 39.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
+    "keywords": [
+      "limited",
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited 2lp",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Nirvana - Nirvana - In Utero (2013 Mix) Limited Edition 2LP - uDiscover Music",
+    "price": 37.99,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
+    "keywords": [
+      "limited",
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited 2lp",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Mariah Carey - Mariah Carey - Charmbracelet 2LP - uDiscover Music",
+    "price": 32.99,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Paul McCartney - Paul McCartney - NEW (Collector's Edition) LP - uDiscover Music",
+    "price": 27.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Yellowcard - Yellowcard - Ocean Avenue LP - uDiscover Music",
+    "price": 27.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Wings - Wings - Wings At The Speed Of Sound LP - uDiscover Music",
+    "price": 27.98,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
