@@ -13,6 +13,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive",
+    "best_price": 39.98,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
+    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+This+Is+Spinal+Tap+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 39.98,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
+        "version": "exclusive"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -39,6 +52,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive",
+    "best_price": 29.99,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
+    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+Break+Like+The+Wind+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 29.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
+        "version": "exclusive"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -66,61 +92,31 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited",
-    "total": 9,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "tier_3_watchlist",
-      "artist_points": 1,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Tears For Fears",
-    "title": "Songs From The Big Chair",
-    "price": 37.99,
-    "source": "Sound of Vinyl",
-    "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-2lp",
-    "keywords": [
-      "exclusive",
-      "2lp"
+    "best_price": 29.99,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Tears+For+Fears+Songs+From+The+Big+Chair+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 29.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
+        "version": "exclusive limited"
+      },
+      {
+        "source": "Sound of Vinyl",
+        "price": 35.98,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-1lp-picture-dsc",
+        "version": "exclusive picture disc 1lp"
+      },
+      {
+        "source": "Sound of Vinyl",
+        "price": 37.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-2lp",
+        "version": "exclusive 2lp"
+      }
     ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive 2lp",
-    "total": 9,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "tier_3_watchlist",
-      "artist_points": 1,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Tears For Fears",
-    "title": "Songs From The Big Chair",
-    "price": 35.98,
-    "source": "Sound of Vinyl",
-    "source_type": "trusted_store",
-    "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-1lp-picture-dsc",
-    "keywords": [
-      "exclusive",
-      "picture disc",
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive picture disc 1lp",
     "total": 9,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -148,6 +144,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 1lp",
+    "best_price": 29.99,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
+    "amazon_link": "https://www.amazon.com/s?k=The+All-American+Rejects+Move+Along+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 29.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
+        "version": "exclusive 1lp"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -177,6 +186,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited anniversary 2lp",
+    "best_price": 32.99,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
+    "amazon_link": "https://www.amazon.com/s?k=Joan+Osborne+Relish+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 32.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
+        "version": "exclusive limited anniversary 2lp"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -204,6 +226,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 2lp",
+    "best_price": 37.99,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
+    "amazon_link": "https://www.amazon.com/s?k=Phantogram+Voices+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 37.99,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
+        "version": "exclusive 2lp"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -232,6 +267,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive zoetrope 2lp",
+    "best_price": 45.98,
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
+    "amazon_link": "https://www.amazon.com/s?k=A+Perfect+Circle+Mer+de+Noms+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Sound of Vinyl",
+        "price": 45.98,
+        "link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
+        "version": "exclusive zoetrope 2lp"
+      }
+    ],
     "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -259,6 +307,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
+    "best_price": 38.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Something+Corporate+North+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 38.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -286,6 +347,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Thrice+The+Artist+In+The+Ambulance+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -312,6 +386,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
+    "amazon_link": "https://www.amazon.com/s?k=The+Who+Sell+Out+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
+        "version": "2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -338,6 +425,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
+    "best_price": 27.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Sum+41+All+Killer+No+Filler+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
+        "version": "limited"
+      }
+    ],
     "total": 9,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -365,6 +465,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Nelly+Furtado+Loose+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -391,6 +504,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=New+Found+Glory+Sticks+And+Stones+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
+        "version": "limited"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -415,6 +541,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 29.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Beastie+Boys+Root+Down+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 29.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
+        "version": "standard"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -439,6 +578,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 24.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
+    "amazon_link": "https://www.amazon.com/s?k=blink-182+Dude+Ranch+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 24.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
+        "version": "standard"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -467,6 +619,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "colored limited 2lp",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Hanson+Middle+Of+Nowhere+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
+        "version": "colored limited 2lp"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -491,6 +656,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 29.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Bob+Seger+&+The+Silver+Bullet+Band+Night+Moves+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 29.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
+        "version": "standard"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -517,6 +695,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
+    "best_price": 34.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
+    "amazon_link": "https://www.amazon.com/s?k=The+All-American+Rejects+The+All-American+Rejects+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 34.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
+        "version": "limited"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -543,6 +734,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
+    "best_price": 24.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
+    "amazon_link": "https://www.amazon.com/s?k=Stillwater+Stillwater+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 24.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
+        "version": "limited"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -570,6 +774,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited anniversary",
+    "best_price": 39.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Rush+Moving+Pictures+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 39.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
+        "version": "limited anniversary"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -594,6 +811,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 27.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Styx+Circling+From+Above+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
+        "version": "standard"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -621,6 +851,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
+    "best_price": 39.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Rihanna+Good+Girl+Gone+Bad+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 39.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -648,6 +891,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
+    "best_price": 37.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Nirvana+In+Utero+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 37.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -674,6 +930,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp",
+    "best_price": 32.99,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Mariah+Carey+Charmbracelet+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 32.99,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
+        "version": "2lp"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -698,6 +967,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 27.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Paul+McCartney+NEW+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
+        "version": "standard"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -722,6 +1004,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 27.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Yellowcard+Ocean+Avenue+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
+        "version": "standard"
+      }
+    ],
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -746,6 +1041,19 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
+    "best_price": 27.98,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Wings+Wings+At+The+Speed+Of+Sound+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
+        "version": "standard"
+      }
+    ],
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
