@@ -44,30 +44,48 @@ def extract_title(html):
     og = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html, re.IGNORECASE)
     if og:
         return og.group(1).strip()
+
     title = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
     if title:
         return re.sub(r"\s+", " ", title.group(1)).strip()
+
     return "Unknown Title"
 
 def extract_price(html):
     patterns = [
-        r'"price"\s*:\s*"?(\\d+\\.\\d{2})"?',
-        r'\$\\s?(\\d+\\.\\d{2})',
+        r'"price"\s*:\s*"?(\\d+\\.\\d{2})"?',  # harmless fallback if escaped weirdly
+        r'"price"\s*:\s*"?(\\d+)"?',           # integer fallback if escaped weirdly
+        r'"price"\s*:\s*"?(\\d+\\.\\d{1})"?',  # one-decimal fallback if escaped weirdly
+
+        r'"price"\s*:\s*"?(\\d+\\.\\d{2})"?',  # legacy duplicate-safe fallback
+
+        r'"price"\s*:\s*"?(\\d+\.\d{2})"?',    # real decimal
+        r'"price"\s*:\s*"?(\\d+)"?',           # real integer fallback
+        r'"amount"\s*:\s*"?(\\d+\.\d{2})"?',
+        r'"amount"\s*:\s*"?(\\d+)"?',
+        r'content="(\d+\.\d{2})"\s*[^>]*property="product:price:amount"',
+        r'property="product:price:amount"\s*content="(\d+\.\d{2})"',
+        r'\$(\d+\.\d{2})',
+        r'\$(\d+)'
     ]
+
     for pattern in patterns:
         m = re.search(pattern, html, re.IGNORECASE)
         if m:
             try:
                 return float(m.group(1))
-            except:
+            except Exception:
                 pass
+
     return 0.0
 
 def infer_artist_title(raw_title):
     cleaned = raw_title.replace("|", "-").replace("–", "-")
     parts = [p.strip() for p in cleaned.split(" - ") if p.strip()]
+
     if len(parts) >= 2:
         return parts[0], parts[1]
+
     return "Unknown Artist", cleaned
 
 def keyword_hits(text):
@@ -106,6 +124,7 @@ def build_live_deals():
                     }
 
                     deals.append(deal)
+
                 except Exception as e:
                     print(f"Skipping product {link}: {e}")
 
@@ -116,6 +135,7 @@ def build_live_deals():
 
 if __name__ == "__main__":
     deals = build_live_deals()
+
     with open("live_deals.json", "w", encoding="utf-8") as f:
         json.dump(deals, f, indent=2, ensure_ascii=False)
 
