@@ -1,0 +1,79 @@
+[
+  {
+    "artist": "Sleep Token",
+    "title": "Even In Arcadia",
+    "format": "Vinyl",
+    "version": "Colored Variant",
+    "price": 34.99,
+    "source": "Sound of Vinyl",
+    "source_type": "alert",
+    "market_note": "Strong fanbase, variant-friendly title",
+    "keywords": [
+      "colored",
+      "exclusive"
+    ],
+    "deal_quality": "good",
+    "demand": "hot",
+    "total": 12,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "tier_1_core",
+      "artist_points": 3,
+      "version_points": 2,
+      "deal_points": 1,
+      "demand_points": 2,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Marvin Gaye",
+    "title": "I Want You 2",
+    "format": "Vinyl",
+    "version": "First Time On Vinyl",
+    "price": 32.99,
+    "source": "Sound of Vinyl",
+    "source_type": "alert",
+    "market_note": "Interesting catalog drop, not core Korndog lane",
+    "keywords": [
+      "first time on vinyl"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 1,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "AC/DC",
+    "title": "Back In Black",
+    "format": "Vinyl",
+    "version": "Standard Black",
+    "price": 21.99,
+    "source": "Amazon",
+    "source_type": "trusted_store",
+    "market_note": "Recognizable evergreen title",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 1,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  }
+]

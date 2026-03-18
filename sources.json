@@ -1,0 +1,64 @@
+{
+  "stores": [
+    {
+      "name": "Amazon",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Walmart",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Target",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Best Buy",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "DeepDiscount",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Acoustic Sounds",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Merchbar",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "uDiscover Music",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Get On Down",
+      "enabled": true,
+      "type": "retailer"
+    },
+    {
+      "name": "Fearless Records",
+      "enabled": true,
+      "type": "label"
+    },
+    {
+      "name": "Rise Records",
+      "enabled": true,
+      "type": "label"
+    },
+    {
+      "name": "Sound of Vinyl",
+      "enabled": true,
+      "type": "alert_source"
+    }
+  ]
+}

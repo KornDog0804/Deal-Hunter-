@@ -1,0 +1,66 @@
+{
+  "positive_keywords": [
+    "colored",
+    "splatter",
+    "galaxy",
+    "marble",
+    "smush",
+    "exclusive",
+    "limited",
+    "anniversary",
+    "deluxe",
+    "box set",
+    "boxset",
+    "first time on vinyl",
+    "picture disc",
+    "numbered",
+    "indie exclusive",
+    "retail exclusive",
+    "gatefold",
+    "opaque",
+    "transparent",
+    "house veridian",
+    "eco mix"
+  ],
+  "cd_special_keywords": [
+    "box set",
+    "deluxe",
+    "expanded",
+    "anniversary",
+    "remastered",
+    "out of print",
+    "oop"
+  ],
+  "cassette_special_keywords": [
+    "limited",
+    "colored shell",
+    "exclusive",
+    "indie exclusive",
+    "numbered"
+  ],
+  "ignore_keywords": [
+    "kids",
+    "children",
+    "lullaby",
+    "spoken word",
+    "gospel",
+    "worship",
+    "easy listening",
+    "karaoke",
+    "cleaning vinyl",
+    "sleeves only",
+    "turntable mat",
+    "funko",
+    "shirt",
+    "poster",
+    "book only"
+  ],
+  "downrank_keywords": [
+    "standard black",
+    "import fees",
+    "used acceptable",
+    "damaged jacket",
+    "backorder",
+    "preorder only"
+  ]
+}

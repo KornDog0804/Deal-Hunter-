@@ -1,0 +1,62 @@
+{
+  "weights": {
+    "artist_fit": {
+      "tier_1_core": 3,
+      "tier_2_adjacent": 2,
+      "tier_3_watchlist": 1,
+      "other": 0
+    },
+    "pressing": {
+      "colored": 2,
+      "splatter": 2,
+      "galaxy": 2,
+      "smush": 2,
+      "exclusive": 2,
+      "anniversary": 2,
+      "deluxe": 2,
+      "box_set": 2,
+      "first_time_on_vinyl": 1,
+      "picture_disc": 1,
+      "standard_black": 0
+    },
+    "deal_quality": {
+      "great": 2,
+      "good": 1,
+      "normal": 0,
+      "bad": -1
+    },
+    "demand": {
+      "hot": 2,
+      "steady": 1,
+      "niche": 0,
+      "weak": -1
+    },
+    "source_boost": {
+      "alert": 1,
+      "trusted_store": 1,
+      "random": 0
+    }
+  },
+  "decision_thresholds": {
+    "post_buy_move_fast": 6,
+    "post_if_content_worthy": 4,
+    "personal_call": 3,
+    "ignore_max": 2
+  },
+  "preferred_formats": {
+    "vinyl": {
+      "enabled": true,
+      "base_priority": 3
+    },
+    "cd": {
+      "enabled": true,
+      "base_priority": 1,
+      "require_special_conditions": true
+    },
+    "cassette": {
+      "enabled": true,
+      "base_priority": 1,
+      "require_special_conditions": true
+    }
+  }
+}
