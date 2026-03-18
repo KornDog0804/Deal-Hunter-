@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 import json
 
-# Load scored deals
-with open("scored_deals.json", "r") as f:
+with open("scored_deals.json", "r", encoding="utf-8") as f:
     deals = json.load(f)
 
 posts = []
@@ -10,11 +10,9 @@ for d in deals:
     score = d["total"]
     decision = d["decision"]
 
-    # Skip junk
     if decision == "IGNORE":
         continue
 
-    # Style based on score
     if score >= 6:
         opener = "🚨 VINYL ALERT 🚨"
         vibe = "High-priority pickup"
@@ -25,24 +23,27 @@ for d in deals:
         opener = "👀 MAYBE WORTH A LOOK 👀"
         vibe = "Niche find"
 
+    price = d.get("price", 0)
+    source = d.get("source", "Unknown Source")
+    link = d.get("link", "Link coming soon")
+
     post = f"""{opener}
 
 {d['artist']} – {d['title']}
 🔥 Score: {score}
 
-💰 Price: ${d['price']}
-📦 Source: {d['source']}
+💰 Price: ${price}
+📦 Source: {source}
 
 🟢 {vibe}
 
-👉 Drop Link Here
+👉 {link}
 
 Vinyl Therapy never dies 🟣🟢"""
 
     posts.append(post)
 
-# Save output
-with open("facebook_posts.txt", "w") as f:
+with open("facebook_posts.txt", "w", encoding="utf-8") as f:
     f.write("\n\n----------------------------\n\n".join(posts))
 
 print("Facebook posts generated!")
