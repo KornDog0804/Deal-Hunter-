@@ -2,18 +2,18 @@
   {
     "artist": "Spinal Tap",
     "title": "This Is Spinal Tap",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
     "keywords": [
       "exclusive"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive",
-    "best_price": 39.98,
+    "best_price": 3998.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
     "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+This+Is+Spinal+Tap+vinyl&tag=korndog20-20",
@@ -21,18 +21,18 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 39.98,
+        "price": 3998.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
         "version": "exclusive"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -41,18 +41,18 @@
   {
     "artist": "Spinal Tap",
     "title": "Break Like The Wind",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
     "keywords": [
       "exclusive"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive",
-    "best_price": 29.99,
+    "best_price": 2999.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
     "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+Break+Like+The+Wind+vinyl&tag=korndog20-20",
@@ -60,18 +60,18 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 29.99,
+        "price": 2999.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
         "version": "exclusive"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -80,7 +80,7 @@
   {
     "artist": "Tears For Fears",
     "title": "Songs From The Big Chair",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
@@ -88,11 +88,11 @@
       "exclusive",
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited",
-    "best_price": 29.99,
+    "best_price": 2999.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
     "amazon_link": "https://www.amazon.com/s?k=Tears+For+Fears+Songs+From+The+Big+Chair+vinyl&tag=korndog20-20",
@@ -100,30 +100,30 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 29.99,
+        "price": 2999.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
         "version": "exclusive limited"
       },
       {
         "source": "Sound of Vinyl",
-        "price": 35.98,
+        "price": 3598.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-1lp-picture-dsc",
         "version": "exclusive picture disc 1lp"
       },
       {
         "source": "Sound of Vinyl",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-2lp",
         "version": "exclusive 2lp"
       }
     ],
-    "total": 9,
+    "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "tier_3_watchlist",
       "artist_points": 1,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -132,7 +132,7 @@
   {
     "artist": "The All-American Rejects",
     "title": "Move Along",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
@@ -140,11 +140,11 @@
       "exclusive",
       "1lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 1lp",
-    "best_price": 29.99,
+    "best_price": 2999.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
     "amazon_link": "https://www.amazon.com/s?k=The+All-American+Rejects+Move+Along+vinyl&tag=korndog20-20",
@@ -152,18 +152,18 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 29.99,
+        "price": 2999.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
         "version": "exclusive 1lp"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -172,7 +172,7 @@
   {
     "artist": "Joan Osborne",
     "title": "Relish",
-    "price": 32.99,
+    "price": 3299.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
@@ -182,11 +182,11 @@
       "anniversary",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited anniversary 2lp",
-    "best_price": 32.99,
+    "best_price": 3299.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
     "amazon_link": "https://www.amazon.com/s?k=Joan+Osborne+Relish+vinyl&tag=korndog20-20",
@@ -194,18 +194,18 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 32.99,
+        "price": 3299.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
         "version": "exclusive limited anniversary 2lp"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -214,7 +214,7 @@
   {
     "artist": "Phantogram",
     "title": "Voices",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
@@ -222,11 +222,11 @@
       "exclusive",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
     "amazon_link": "https://www.amazon.com/s?k=Phantogram+Voices+vinyl&tag=korndog20-20",
@@ -234,18 +234,18 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
         "version": "exclusive 2lp"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -254,7 +254,7 @@
   {
     "artist": "A Perfect Circle",
     "title": "Mer de Noms",
-    "price": 45.98,
+    "price": 4598.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
@@ -267,7 +267,7 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive zoetrope 2lp",
-    "best_price": 45.98,
+    "best_price": 4598.0,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
     "amazon_link": "https://www.amazon.com/s?k=A+Perfect+Circle+Mer+de+Noms+vinyl&tag=korndog20-20",
@@ -275,7 +275,7 @@
     "all_sources": [
       {
         "source": "Sound of Vinyl",
-        "price": 45.98,
+        "price": 4598.0,
         "link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
         "version": "exclusive zoetrope 2lp"
       }
@@ -295,7 +295,7 @@
   {
     "artist": "Something Corporate",
     "title": "North",
-    "price": 38.98,
+    "price": 3898.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
@@ -303,11 +303,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
-    "best_price": 38.98,
+    "best_price": 3898.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Something+Corporate+North+vinyl&tag=korndog20-20",
@@ -315,18 +315,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 38.98,
+        "price": 3898.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
         "version": "limited 2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -335,7 +335,7 @@
   {
     "artist": "Thrice",
     "title": "The Artist In The Ambulance",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
@@ -343,11 +343,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Thrice+The+Artist+In+The+Ambulance+vinyl&tag=korndog20-20",
@@ -355,18 +355,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
         "version": "limited 2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -375,18 +375,18 @@
   {
     "artist": "The Who",
     "title": "Sell Out",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
     "keywords": [
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
     "amazon_link": "https://www.amazon.com/s?k=The+Who+Sell+Out+vinyl&tag=korndog20-20",
@@ -394,18 +394,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
         "version": "2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -414,18 +414,18 @@
   {
     "artist": "Sum 41",
     "title": "All Killer No Filler",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
-    "best_price": 27.98,
+    "best_price": 2798.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
     "amazon_link": "https://www.amazon.com/s?k=Sum+41+All+Killer+No+Filler+vinyl&tag=korndog20-20",
@@ -433,18 +433,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 27.98,
+        "price": 2798.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
         "version": "limited"
       }
     ],
-    "total": 9,
+    "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "tier_1_core",
       "artist_points": 3,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -453,7 +453,7 @@
   {
     "artist": "Nelly Furtado",
     "title": "Loose",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
@@ -461,11 +461,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Nelly+Furtado+Loose+vinyl&tag=korndog20-20",
@@ -473,18 +473,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
         "version": "limited 2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -493,18 +493,18 @@
   {
     "artist": "New Found Glory",
     "title": "Sticks And Stones",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
     "amazon_link": "https://www.amazon.com/s?k=New+Found+Glory+Sticks+And+Stones+vinyl&tag=korndog20-20",
@@ -512,18 +512,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
         "version": "limited"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -532,16 +532,16 @@
   {
     "artist": "Beastie Boys",
     "title": "Root Down",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 29.99,
+    "best_price": 2999.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
     "amazon_link": "https://www.amazon.com/s?k=Beastie+Boys+Root+Down+vinyl&tag=korndog20-20",
@@ -549,18 +549,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 29.99,
+        "price": 2999.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
         "version": "standard"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -569,16 +569,16 @@
   {
     "artist": "blink-182",
     "title": "Dude Ranch",
-    "price": 24.98,
+    "price": 2498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 24.98,
+    "best_price": 2498.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
     "amazon_link": "https://www.amazon.com/s?k=blink-182+Dude+Ranch+vinyl&tag=korndog20-20",
@@ -586,18 +586,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 24.98,
+        "price": 2498.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
         "version": "standard"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -606,7 +606,7 @@
   {
     "artist": "Hanson",
     "title": "Middle Of Nowhere",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
@@ -615,11 +615,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "colored limited 2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Hanson+Middle+Of+Nowhere+vinyl&tag=korndog20-20",
@@ -627,18 +627,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
         "version": "colored limited 2lp"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -647,16 +647,16 @@
   {
     "artist": "Bob Seger & The Silver Bullet Band",
     "title": "Night Moves",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 29.99,
+    "best_price": 2999.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
     "amazon_link": "https://www.amazon.com/s?k=Bob+Seger+&+The+Silver+Bullet+Band+Night+Moves+vinyl&tag=korndog20-20",
@@ -664,18 +664,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 29.99,
+        "price": 2999.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
         "version": "standard"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -684,18 +684,18 @@
   {
     "artist": "The All-American Rejects",
     "title": "The All-American Rejects",
-    "price": 34.98,
+    "price": 3498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
-    "best_price": 34.98,
+    "best_price": 3498.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
     "amazon_link": "https://www.amazon.com/s?k=The+All-American+Rejects+The+All-American+Rejects+vinyl&tag=korndog20-20",
@@ -703,18 +703,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 34.98,
+        "price": 3498.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
         "version": "limited"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -723,18 +723,18 @@
   {
     "artist": "Stillwater",
     "title": "Stillwater",
-    "price": 24.98,
+    "price": 2498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited",
-    "best_price": 24.98,
+    "best_price": 2498.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
     "amazon_link": "https://www.amazon.com/s?k=Stillwater+Stillwater+vinyl&tag=korndog20-20",
@@ -742,18 +742,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 24.98,
+        "price": 2498.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
         "version": "limited"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -762,7 +762,7 @@
   {
     "artist": "Rush",
     "title": "Moving Pictures",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
@@ -770,11 +770,11 @@
       "limited",
       "anniversary"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited anniversary",
-    "best_price": 39.98,
+    "best_price": 3998.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
     "amazon_link": "https://www.amazon.com/s?k=Rush+Moving+Pictures+vinyl&tag=korndog20-20",
@@ -782,18 +782,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 39.98,
+        "price": 3998.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
         "version": "limited anniversary"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 2,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -802,16 +802,16 @@
   {
     "artist": "Styx",
     "title": "Circling From Above",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 27.98,
+    "best_price": 2798.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
     "amazon_link": "https://www.amazon.com/s?k=Styx+Circling+From+Above+vinyl&tag=korndog20-20",
@@ -819,18 +819,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 27.98,
+        "price": 2798.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
         "version": "standard"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -839,7 +839,7 @@
   {
     "artist": "Rihanna",
     "title": "Good Girl Gone Bad",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
@@ -847,11 +847,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
-    "best_price": 39.98,
+    "best_price": 3998.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Rihanna+Good+Girl+Gone+Bad+vinyl&tag=korndog20-20",
@@ -859,18 +859,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 39.98,
+        "price": 3998.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
         "version": "limited 2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -879,7 +879,7 @@
   {
     "artist": "Nirvana",
     "title": "In Utero",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
@@ -887,11 +887,11 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp",
-    "best_price": 37.99,
+    "best_price": 3799.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Nirvana+In+Utero+vinyl&tag=korndog20-20",
@@ -899,18 +899,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 37.99,
+        "price": 3799.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
         "version": "limited 2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -919,18 +919,18 @@
   {
     "artist": "Mariah Carey",
     "title": "Charmbracelet",
-    "price": 32.99,
+    "price": 3299.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
     "keywords": [
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp",
-    "best_price": 32.99,
+    "best_price": 3299.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
     "amazon_link": "https://www.amazon.com/s?k=Mariah+Carey+Charmbracelet+vinyl&tag=korndog20-20",
@@ -938,18 +938,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 32.99,
+        "price": 3299.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
         "version": "2lp"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -958,16 +958,16 @@
   {
     "artist": "Paul McCartney",
     "title": "NEW",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 27.98,
+    "best_price": 2798.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
     "amazon_link": "https://www.amazon.com/s?k=Paul+McCartney+NEW+vinyl&tag=korndog20-20",
@@ -975,18 +975,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 27.98,
+        "price": 2798.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
         "version": "standard"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "tier_2_adjacent",
       "artist_points": 2,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -995,16 +995,16 @@
   {
     "artist": "Yellowcard",
     "title": "Ocean Avenue",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 27.98,
+    "best_price": 2798.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
     "amazon_link": "https://www.amazon.com/s?k=Yellowcard+Ocean+Avenue+vinyl&tag=korndog20-20",
@@ -1012,18 +1012,18 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 27.98,
+        "price": 2798.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
         "version": "standard"
       }
     ],
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
       "artist_tier": "other",
       "artist_points": 0,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
       "format_points": 3
@@ -1032,16 +1032,16 @@
   {
     "artist": "Wings",
     "title": "Wings At The Speed Of Sound",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "best_price": 27.98,
+    "best_price": 2798.0,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
     "amazon_link": "https://www.amazon.com/s?k=Wings+Wings+At+The+Speed+Of+Sound+vinyl&tag=korndog20-20",
@@ -1049,20 +1049,1541 @@
     "all_sources": [
       {
         "source": "uDiscover Music",
-        "price": 27.98,
+        "price": 2798.0,
         "link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
         "version": "standard"
       }
     ],
-    "total": 8,
+    "total": 7,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
       "artist_tier": "tier_2_adjacent",
       "artist_points": 2,
       "version_points": 0,
-      "deal_points": 1,
+      "deal_points": 0,
       "demand_points": 1,
       "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "John Lennon",
+    "title": "Imagine 2LP",
+    "price": 3998.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-lennon-imagine-limited-edition-2lp",
+    "keywords": [
+      "limited",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited 2lp",
+    "best_price": 3998.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-lennon-imagine-limited-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=John+Lennon+Imagine+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 3998.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-lennon-imagine-limited-edition-2lp",
+        "version": "limited 2lp"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Paul McCartney & Paul McCartney and Wings",
+    "title": "Paul McCartney & Wings",
+    "price": 4998.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-wings-band-on-the-run-limited-50th-anniversary-edition-2lp",
+    "keywords": [
+      "limited",
+      "anniversary",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited anniversary 2lp",
+    "best_price": 4998.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-wings-band-on-the-run-limited-50th-anniversary-edition-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Paul+McCartney+&+Paul+McCartney+and+Wings+Paul+McCartney+&+Wings+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 4998.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-wings-band-on-the-run-limited-50th-anniversary-edition-2lp",
+        "version": "limited anniversary 2lp"
+      }
+    ],
+    "total": 7,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Paul McCartney",
+    "title": "CHOBA B CCCP LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-choba-b-cccp-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2999.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-choba-b-cccp-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Paul+McCartney+CHOBA+B+CCCP+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 2999.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-choba-b-cccp-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 7,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "tier_2_adjacent",
+      "artist_points": 2,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Bobby (Boris) Picket and The Crypt-Kickers",
+    "title": "Bobby (Boris) Pickett",
+    "price": 1498.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bobby-boris-pickett-monster-mash-limited-edition-7",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited",
+    "best_price": 1498.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/bobby-boris-pickett-monster-mash-limited-edition-7",
+    "amazon_link": "https://www.amazon.com/s?k=Bobby+(Boris)+Picket+and+The+Crypt-Kickers+Bobby+(Boris)+Pickett+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 1498.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bobby-boris-pickett-monster-mash-limited-edition-7",
+        "version": "limited"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Sum 41",
+    "title": "Does This Look Infected? LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-does-this-look-infected-limited-edition-lp",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited",
+    "best_price": 2999.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-does-this-look-infected-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Sum+41+Does+This+Look+Infected?+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 2999.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-does-this-look-infected-limited-edition-lp",
+        "version": "limited"
+      }
+    ],
+    "total": 8,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "tier_1_core",
+      "artist_points": 3,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Neil Diamond",
+    "title": "Hot August Night III 2LP",
+    "price": 3299.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/neil-diamond-hot-august-night-iii-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp",
+    "best_price": 3299.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/neil-diamond-hot-august-night-iii-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Neil+Diamond+Hot+August+Night+III+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 3299.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/neil-diamond-hot-august-night-iii-2lp",
+        "version": "2lp"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "PJ Harvey",
+    "title": "To Bring You My Love LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/pj-harvey-to-bring-you-my-love-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2999.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/pj-harvey-to-bring-you-my-love-lp",
+    "amazon_link": "https://www.amazon.com/s?k=PJ+Harvey+To+Bring+You+My+Love+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 2999.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/pj-harvey-to-bring-you-my-love-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Fall Out Boy",
+    "title": "Believers Never Die 2LP",
+    "price": 3299.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/fall-out-boy-believers-never-die-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp",
+    "best_price": 3299.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/fall-out-boy-believers-never-die-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=Fall+Out+Boy+Believers+Never+Die+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 3299.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/fall-out-boy-believers-never-die-2lp",
+        "version": "2lp"
+      }
+    ],
+    "total": 7,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "tier_2_adjacent",
+      "artist_points": 2,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Hanson",
+    "title": "Snowed In LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-snowed-in-limited-edition-lp",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited",
+    "best_price": 2999.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-snowed-in-limited-edition-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Hanson+Snowed+In+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 2999.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-snowed-in-limited-edition-lp",
+        "version": "limited"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "John Coltrane",
+    "title": "Blue Train The Complete Masters (Blue Note Tone Poet Series) 2LP",
+    "price": 5498.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-coltrane-blue-train-the-complete-masters-blue-note-tone-poet-series-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp",
+    "best_price": 5498.0,
+    "best_source": "uDiscover Music",
+    "buy_link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-coltrane-blue-train-the-complete-masters-blue-note-tone-poet-series-2lp",
+    "amazon_link": "https://www.amazon.com/s?k=John+Coltrane+Blue+Train+The+Complete+Masters+(Blue+Note+Tone+Poet+Series)+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "uDiscover Music",
+        "price": 5498.0,
+        "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-coltrane-blue-train-the-complete-masters-blue-note-tone-poet-series-2lp",
+        "version": "2lp"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 1,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "remember that you will die box set",
+    "price": 27999.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/remember-that-you-will-die-vinyl-box-set",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 27999.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/remember-that-you-will-die-vinyl-box-set",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+remember+that+you+will+die+box+set+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 27999.0,
+        "link": "https://riserecords.com/collections/music/products/remember-that-you-will-die-vinyl-box-set",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Who Will Look After The Dogs? Black Smoke w/ Black/Pink/Purple Splatter Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/pup0wwlabb-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 2800.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/pup0wwlabb-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Who+Will+Look+After+The+Dogs?+Black+Smoke+w/+Black/Pink/Purple+Splatter+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2800.0,
+        "link": "https://riserecords.com/collections/music/products/pup0wwlabb-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "iptwiptwwh cp",
+    "price": 1100.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/iptwiptwwh-cp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1100.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/iptwiptwwh-cp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+iptwiptwwh+cp+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1100.0,
+        "link": "https://riserecords.com/collections/music/products/iptwiptwwh-cp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "NEW WORLD KILLER Black Marble Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptenwk0bl-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2800.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sptenwk0bl-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+NEW+WORLD+KILLER+Black+Marble+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2800.0,
+        "link": "https://riserecords.com/collections/music/products/sptenwk0bl-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Megacity Madness: The Official Live Recordings \"Skittles\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/pup0mm00sk-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/pup0mm00sk-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Megacity+Madness:+The+Official+Live+Recordings+\"Skittles\"+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/pup0mm00sk-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cult Classic EP Aqua Vinyl",
+    "price": 2200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/hlywcc00aq-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2200.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/hlywcc00aq-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Cult+Classic+EP+Aqua+Vinyl+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2200.0,
+        "link": "https://riserecords.com/collections/music/products/hlywcc00aq-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cult Classic EP Tangerine & Aqua Smush Vinyl",
+    "price": 2200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/hlywcc00ta-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2200.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/hlywcc00ta-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Cult+Classic+EP+Tangerine+&+Aqua+Smush+Vinyl+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2200.0,
+        "link": "https://riserecords.com/collections/music/products/hlywcc00ta-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "iptwiptw00 cd",
+    "price": 1100.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/iptwiptw00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1100.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/iptwiptw00-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+iptwiptw00+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1100.0,
+        "link": "https://riserecords.com/collections/music/products/iptwiptw00-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Oblivion Evergreen 7inch Vinyl",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/alktoblieg-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1300.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/alktoblieg-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Oblivion+Evergreen+7inch+Vinyl+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1300.0,
+        "link": "https://riserecords.com/collections/music/products/alktoblieg-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Bleeding Out Bone 7Inch Vinyl",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/alktbo00bn-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1300.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/alktbo00bn-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Bleeding+Out+Bone+7Inch+Vinyl+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1300.0,
+        "link": "https://riserecords.com/collections/music/products/alktbo00bn-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sptbts00cb cp",
+    "price": 1698.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptbts00cb-cp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1698.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sptbts00cb-cp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+sptbts00cb+cp+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1698.0,
+        "link": "https://riserecords.com/collections/music/products/sptbts00cb-cp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Tsunami Sea Standard Black Vinyl LP",
+    "price": 2798.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptbts00bl-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2798.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sptbts00bl-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Tsunami+Sea+Standard+Black+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2798.0,
+        "link": "https://riserecords.com/collections/music/products/sptbts00bl-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sptenwk000 cd",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptenwk000-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1300.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sptenwk000-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+sptenwk000+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1300.0,
+        "link": "https://riserecords.com/collections/music/products/sptenwk000-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Super Vintendo\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfgsv-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/acs0ysfgsv-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+You+Are+Safe+From+God+Here+\"Super+Vintendo\"+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/acs0ysfgsv-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Griffstation\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfggs-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/acs0ysfggs-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+You+Are+Safe+From+God+Here+\"Griffstation\"+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/acs0ysfggs-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Hot Dog\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfghd-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/acs0ysfghd-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+You+Are+Safe+From+God+Here+\"Hot+Dog\"+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/acs0ysfghd-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "acs0ysfg00 cd",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfg00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1300.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/acs0ysfg00-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+acs0ysfg00+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1300.0,
+        "link": "https://riserecords.com/collections/music/products/acs0ysfg00-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "My Apologies To The Chef (Deluxe) Ruby & Sky Blue Quad w/ White Splatter Vinyl 2LP",
+    "price": 3600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/wf00madxrb-lp",
+    "keywords": [
+      "deluxe",
+      "splatter",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "deluxe splatter 2lp",
+    "best_price": 3600.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/wf00madxrb-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+My+Apologies+To+The+Chef+(Deluxe)+Ruby+&+Sky+Blue+Quad+w/+White+Splatter+Vinyl+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 3600.0,
+        "link": "https://riserecords.com/collections/music/products/wf00madxrb-lp",
+        "version": "deluxe splatter 2lp"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "My Apologies To The Chef (Deluxe) White & Violet Smush w/ Black Splatter Vinyl 2LP",
+    "price": 3600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/wf00madxwv-lp",
+    "keywords": [
+      "deluxe",
+      "splatter",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "deluxe splatter 2lp",
+    "best_price": 3600.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/wf00madxwv-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+My+Apologies+To+The+Chef+(Deluxe)+White+&+Violet+Smush+w/+Black+Splatter+Vinyl+2LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 3600.0,
+        "link": "https://riserecords.com/collections/music/products/wf00madxwv-lp",
+        "version": "deluxe splatter 2lp"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Afterburner Picture Disc",
+    "price": 3200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0abrnpd-lp",
+    "keywords": [
+      "picture disc"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "picture disc",
+    "best_price": 3200.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/dgd0abrnpd-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Afterburner+Picture+Disc+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 3200.0,
+        "link": "https://riserecords.com/collections/music/products/dgd0abrnpd-lp",
+        "version": "picture disc"
+      }
+    ],
+    "total": 5,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 1,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "GALLOWS Grey Marble Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gallgm-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/btf0gallgm-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+GALLOWS+Grey+Marble+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/btf0gallgm-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "GALLOWS Red, Black, & White Smush Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gallrb-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 2700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/btf0gallrb-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+GALLOWS+Red,+Black,+&+White+Smush+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2700.0,
+        "link": "https://riserecords.com/collections/music/products/btf0gallrb-lp",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "btf0gall00 cd",
+    "price": 1400.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gall00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1400.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/btf0gall00-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+btf0gall00+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1400.0,
+        "link": "https://riserecords.com/collections/music/products/btf0gall00-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Pantheon Ruby & White Smush w/ Spring Green & Aqua Splatter Double Vinyl LP",
+    "price": 3700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pantrw-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 3700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/dgd0pantrw-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Pantheon+Ruby+&+White+Smush+w/+Spring+Green+&+Aqua+Splatter+Double+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 3700.0,
+        "link": "https://riserecords.com/collections/music/products/dgd0pantrw-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "If You Were A Movie, This Would Be Your Soundtrack Opaque Violet with Aqua Splatter Vinyl LP",
+    "price": 2600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0iywapp-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 2600.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sws0iywapp-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+If+You+Were+A+Movie,+This+Would+Be+Your+Soundtrack+Opaque+Violet+with+Aqua+Splatter+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2600.0,
+        "link": "https://riserecords.com/collections/music/products/sws0iywapp-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "With Ears To See And Eyes To Hear Bone w/ Red & Black Splatter Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0withbr-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 2800.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sws0withbr-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+With+Ears+To+See+And+Eyes+To+Hear+Bone+w/+Red+&+Black+Splatter+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2800.0,
+        "link": "https://riserecords.com/collections/music/products/sws0withbr-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Let's Cheer To This Blue w/ Orange Splatter Vinyl LP",
+    "price": 2500.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0letsbu-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 2500.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sws0letsbu-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Let's+Cheer+To+This+Blue+w/+Orange+Splatter+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 2500.0,
+        "link": "https://riserecords.com/collections/music/products/sws0letsbu-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sws0lets00 cd",
+    "price": 1398.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0lets00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1398.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/sws0lets00-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+sws0lets00+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1398.0,
+        "link": "https://riserecords.com/collections/music/products/sws0lets00-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Pantheon White & Neon Green Smush w/ Black Splatter Double Vinyl LP",
+    "price": 3700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pantwn-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter",
+    "best_price": 3700.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/dgd0pantwn-lp",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+Pantheon+White+&+Neon+Green+Smush+w/+Black+Splatter+Double+Vinyl+LP+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 3700.0,
+        "link": "https://riserecords.com/collections/music/products/dgd0pantwn-lp",
+        "version": "splatter"
+      }
+    ],
+    "total": 6,
+    "decision": "POST / BUY / MOVE FAST",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 2,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
+      "format_points": 3
+    }
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "dgd0pant00 cd",
+    "price": 1400.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pant00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard",
+    "best_price": 1400.0,
+    "best_source": "Rise Records",
+    "buy_link": "https://riserecords.com/collections/music/products/dgd0pant00-cd",
+    "amazon_link": "https://www.amazon.com/s?k=Unknown+Artist+dgd0pant00+cd+vinyl&tag=korndog20-20",
+    "best_label": "KORNDOG FIND",
+    "all_sources": [
+      {
+        "source": "Rise Records",
+        "price": 1400.0,
+        "link": "https://riserecords.com/collections/music/products/dgd0pant00-cd",
+        "version": "standard"
+      }
+    ],
+    "total": 4,
+    "decision": "POST IF CONTENT-WORTHY",
+    "breakdown": {
+      "artist_tier": "other",
+      "artist_points": 0,
+      "version_points": 0,
+      "deal_points": 0,
+      "demand_points": 1,
+      "source_points": 0,
       "format_points": 3
     }
   }

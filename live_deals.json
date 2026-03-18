@@ -2,14 +2,14 @@
   {
     "artist": "Spinal Tap",
     "title": "This Is Spinal Tap",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
     "keywords": [
       "exclusive"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive"
@@ -17,14 +17,14 @@
   {
     "artist": "Spinal Tap",
     "title": "Break Like The Wind",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
     "keywords": [
       "exclusive"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive"
@@ -32,7 +32,7 @@
   {
     "artist": "Tears For Fears",
     "title": "Songs From The Big Chair",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-limited-edition-lp",
@@ -40,7 +40,7 @@
       "exclusive",
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited"
@@ -48,7 +48,7 @@
   {
     "artist": "Tears For Fears",
     "title": "Songs From The Big Chair",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-2lp",
@@ -56,7 +56,7 @@
       "exclusive",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 2lp"
@@ -64,7 +64,7 @@
   {
     "artist": "Tears For Fears",
     "title": "Songs From The Big Chair",
-    "price": 35.98,
+    "price": 3598.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/tears-for-fears-songs-from-the-big-chair-1lp-picture-dsc",
@@ -73,7 +73,7 @@
       "picture disc",
       "1lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive picture disc 1lp"
@@ -81,7 +81,7 @@
   {
     "artist": "The All-American Rejects",
     "title": "Move Along",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/the-all-american-rejects-move-along-translucent-grape-lp",
@@ -89,7 +89,7 @@
       "exclusive",
       "1lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 1lp"
@@ -97,7 +97,7 @@
   {
     "artist": "Joan Osborne",
     "title": "Relish",
-    "price": 32.99,
+    "price": 3299.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/joan-osborne-relish-30th-anniversary-2lp-limited-edition",
@@ -107,7 +107,7 @@
       "anniversary",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive limited anniversary 2lp"
@@ -115,7 +115,7 @@
   {
     "artist": "Phantogram",
     "title": "Voices",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/phantogram-voices-2lp-color",
@@ -123,7 +123,7 @@
       "exclusive",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive 2lp"
@@ -131,7 +131,7 @@
   {
     "artist": "A Perfect Circle",
     "title": "Mer de Noms",
-    "price": 45.98,
+    "price": 4598.0,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
     "link": "https://thesoundofvinyl.us/collections/exclusive/products/a-perfect-circle-mer-de-noms-2lp-zoetrope",
@@ -148,7 +148,7 @@
   {
     "artist": "Something Corporate",
     "title": "North",
-    "price": 38.98,
+    "price": 3898.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/something-corporate-north-limited-edition-2lp",
@@ -156,7 +156,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp"
@@ -164,7 +164,7 @@
   {
     "artist": "Thrice",
     "title": "The Artist In The Ambulance",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/thrice-the-artist-in-the-ambulance-limited-edition-2lp",
@@ -172,7 +172,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp"
@@ -180,14 +180,14 @@
   {
     "artist": "The Who",
     "title": "Sell Out",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-who-sell-out-2lp-stereo-version",
     "keywords": [
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp"
@@ -195,14 +195,14 @@
   {
     "artist": "Sum 41",
     "title": "All Killer No Filler",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-all-killer-no-filler-limited-edition-lp",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited"
@@ -210,7 +210,7 @@
   {
     "artist": "Nelly Furtado",
     "title": "Loose",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nelly-furtado-loose-limited-edition-2lp",
@@ -218,7 +218,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp"
@@ -226,14 +226,14 @@
   {
     "artist": "New Found Glory",
     "title": "Sticks And Stones",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/new-found-glory-sticks-and-stones-limited-edition-lp",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited"
@@ -241,12 +241,12 @@
   {
     "artist": "Beastie Boys",
     "title": "Root Down",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/beastie-boys-root-down-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -254,12 +254,12 @@
   {
     "artist": "blink-182",
     "title": "Dude Ranch",
-    "price": 24.98,
+    "price": 2498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -267,7 +267,7 @@
   {
     "artist": "Hanson",
     "title": "Middle Of Nowhere",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-middle-of-nowhere-limited-edition-colored-2lp",
@@ -276,7 +276,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "colored limited 2lp"
@@ -284,12 +284,12 @@
   {
     "artist": "Bob Seger & The Silver Bullet Band",
     "title": "Night Moves",
-    "price": 29.99,
+    "price": 2999.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bob-seger-the-silver-bullet-band-night-moves-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -297,14 +297,14 @@
   {
     "artist": "The All-American Rejects",
     "title": "The All-American Rejects",
-    "price": 34.98,
+    "price": 3498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/the-all-american-rejects-the-all-american-rejects-limited-edition-lp-7",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited"
@@ -312,14 +312,14 @@
   {
     "artist": "Stillwater",
     "title": "Stillwater",
-    "price": 24.98,
+    "price": 2498.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/stillwater-stillwater-limited-edition-ep",
     "keywords": [
       "limited"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited"
@@ -327,7 +327,7 @@
   {
     "artist": "Rush",
     "title": "Moving Pictures",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rush-moving-pictures-40th-anniversary-limited-edition-lp",
@@ -335,7 +335,7 @@
       "limited",
       "anniversary"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited anniversary"
@@ -343,12 +343,12 @@
   {
     "artist": "Styx",
     "title": "Circling From Above",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/styx-circling-from-above-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -356,7 +356,7 @@
   {
     "artist": "Rihanna",
     "title": "Good Girl Gone Bad",
-    "price": 39.98,
+    "price": 3998.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/rihanna-good-girl-gone-bad-crystal-clear-limited-edition-2lp",
@@ -364,7 +364,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp"
@@ -372,7 +372,7 @@
   {
     "artist": "Nirvana",
     "title": "In Utero",
-    "price": 37.99,
+    "price": 3799.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/nirvana-in-utero-2013-mix-limited-edition-2lp",
@@ -380,7 +380,7 @@
       "limited",
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "limited 2lp"
@@ -388,14 +388,14 @@
   {
     "artist": "Mariah Carey",
     "title": "Charmbracelet",
-    "price": 32.99,
+    "price": 3299.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/mariah-carey-charmbracelet-2lp",
     "keywords": [
       "2lp"
     ],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp"
@@ -403,12 +403,12 @@
   {
     "artist": "Paul McCartney",
     "title": "NEW",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-new-collectors-edition-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -416,12 +416,12 @@
   {
     "artist": "Yellowcard",
     "title": "Ocean Avenue",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/yellowcard-ocean-avenue-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -429,12 +429,573 @@
   {
     "artist": "Wings",
     "title": "Wings At The Speed Of Sound",
-    "price": 27.98,
+    "price": 2798.0,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
     "link": "https://shop.udiscovermusic.com/collections/vinyl/products/wings-wings-at-the-speed-of-sound-lp",
     "keywords": [],
-    "deal_quality": "good",
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "John Lennon",
+    "title": "Imagine 2LP",
+    "price": 3998.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-lennon-imagine-limited-edition-2lp",
+    "keywords": [
+      "limited",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited 2lp"
+  },
+  {
+    "artist": "Paul McCartney & Paul McCartney and Wings",
+    "title": "Paul McCartney & Wings",
+    "price": 4998.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-wings-band-on-the-run-limited-50th-anniversary-edition-2lp",
+    "keywords": [
+      "limited",
+      "anniversary",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited anniversary 2lp"
+  },
+  {
+    "artist": "Paul McCartney",
+    "title": "CHOBA B CCCP LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/paul-mccartney-choba-b-cccp-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Bobby (Boris) Picket and The Crypt-Kickers",
+    "title": "Bobby (Boris) Pickett",
+    "price": 1498.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/bobby-boris-pickett-monster-mash-limited-edition-7",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited"
+  },
+  {
+    "artist": "Sum 41",
+    "title": "Does This Look Infected? LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/sum-41-does-this-look-infected-limited-edition-lp",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited"
+  },
+  {
+    "artist": "Neil Diamond",
+    "title": "Hot August Night III 2LP",
+    "price": 3299.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/neil-diamond-hot-august-night-iii-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "PJ Harvey",
+    "title": "To Bring You My Love LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/pj-harvey-to-bring-you-my-love-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Fall Out Boy",
+    "title": "Believers Never Die 2LP",
+    "price": 3299.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/fall-out-boy-believers-never-die-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "Hanson",
+    "title": "Snowed In LP",
+    "price": 2999.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/hanson-snowed-in-limited-edition-lp",
+    "keywords": [
+      "limited"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "limited"
+  },
+  {
+    "artist": "John Coltrane",
+    "title": "Blue Train The Complete Masters (Blue Note Tone Poet Series) 2LP",
+    "price": 5498.0,
+    "source": "uDiscover Music",
+    "source_type": "trusted_store",
+    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/john-coltrane-blue-train-the-complete-masters-blue-note-tone-poet-series-2lp",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "remember that you will die box set",
+    "price": 27999.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/remember-that-you-will-die-vinyl-box-set",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Who Will Look After The Dogs? Black Smoke w/ Black/Pink/Purple Splatter Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/pup0wwlabb-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "iptwiptwwh cp",
+    "price": 1100.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/iptwiptwwh-cp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "NEW WORLD KILLER Black Marble Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptenwk0bl-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Megacity Madness: The Official Live Recordings \"Skittles\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/pup0mm00sk-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cult Classic EP Aqua Vinyl",
+    "price": 2200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/hlywcc00aq-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cult Classic EP Tangerine & Aqua Smush Vinyl",
+    "price": 2200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/hlywcc00ta-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "iptwiptw00 cd",
+    "price": 1100.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/iptwiptw00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Oblivion Evergreen 7inch Vinyl",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/alktoblieg-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Bleeding Out Bone 7Inch Vinyl",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/alktbo00bn-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sptbts00cb cp",
+    "price": 1698.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptbts00cb-cp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Tsunami Sea Standard Black Vinyl LP",
+    "price": 2798.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptbts00bl-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sptenwk000 cd",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sptenwk000-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Super Vintendo\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfgsv-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Griffstation\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfggs-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "You Are Safe From God Here \"Hot Dog\" Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfghd-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "acs0ysfg00 cd",
+    "price": 1300.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/acs0ysfg00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "My Apologies To The Chef (Deluxe) Ruby & Sky Blue Quad w/ White Splatter Vinyl 2LP",
+    "price": 3600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/wf00madxrb-lp",
+    "keywords": [
+      "deluxe",
+      "splatter",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "deluxe splatter 2lp"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "My Apologies To The Chef (Deluxe) White & Violet Smush w/ Black Splatter Vinyl 2LP",
+    "price": 3600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/wf00madxwv-lp",
+    "keywords": [
+      "deluxe",
+      "splatter",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "deluxe splatter 2lp"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Afterburner Picture Disc",
+    "price": 3200.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0abrnpd-lp",
+    "keywords": [
+      "picture disc"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "picture disc"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "GALLOWS Grey Marble Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gallgm-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "GALLOWS Red, Black, & White Smush Vinyl LP",
+    "price": 2700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gallrb-lp",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "btf0gall00 cd",
+    "price": 1400.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/btf0gall00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Pantheon Ruby & White Smush w/ Spring Green & Aqua Splatter Double Vinyl LP",
+    "price": 3700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pantrw-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "If You Were A Movie, This Would Be Your Soundtrack Opaque Violet with Aqua Splatter Vinyl LP",
+    "price": 2600.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0iywapp-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "With Ears To See And Eyes To Hear Bone w/ Red & Black Splatter Vinyl LP",
+    "price": 2800.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0withbr-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Let's Cheer To This Blue w/ Orange Splatter Vinyl LP",
+    "price": 2500.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0letsbu-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "sws0lets00 cd",
+    "price": 1398.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/sws0lets00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Pantheon White & Neon Green Smush w/ Black Splatter Double Vinyl LP",
+    "price": 3700.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pantwn-lp",
+    "keywords": [
+      "splatter"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "splatter"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "dgd0pant00 cd",
+    "price": 1400.0,
+    "source": "Rise Records",
+    "source_type": "label_store",
+    "link": "https://riserecords.com/collections/music/products/dgd0pant00-cd",
+    "keywords": [],
+    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
