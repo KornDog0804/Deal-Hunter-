@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Pull live deals
+        run: python live_pull.py
+
       - name: Run scorer
         run: python scorer.py
 
@@ -28,5 +31,6 @@ jobs:
         with:
           name: deal-hunter-output
           path: |
+            live_deals.json
             scored_deals.json
             facebook_posts.txt
