@@ -27,7 +27,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Break Like The Wind Blue & Red Galaxy Color Vinyl",
+    "title": "Break Like The Wind",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -53,7 +53,7 @@
   },
   {
     "artist": "Tears For Fears",
-    "title": "Songs From The Big Chair (Limited Edition LP)",
+    "title": "Songs From The Big Chair",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -80,7 +80,7 @@
   },
   {
     "artist": "Tears For Fears",
-    "title": "Songs From The Big Chair (2LP)",
+    "title": "Songs From The Big Chair",
     "price": 37.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -107,7 +107,7 @@
   },
   {
     "artist": "Tears For Fears",
-    "title": "Songs From The Big Chair (1LP Picture Disc)",
+    "title": "Songs From The Big Chair",
     "price": 35.98,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -134,8 +134,8 @@
     }
   },
   {
-    "artist": "Move Along (Translucent Grape) 1LP",
-    "title": "The Sound of Vinyl",
+    "artist": "The All-American Rejects",
+    "title": "Move Along",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -162,7 +162,7 @@
   },
   {
     "artist": "Joan Osborne",
-    "title": "Relish 30th Anniversary 2LP Limited Edition",
+    "title": "Relish",
     "price": 32.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -190,8 +190,8 @@
     }
   },
   {
-    "artist": "Voices 2LP Color",
-    "title": "The Sound of Vinyl",
+    "artist": "Phantogram",
+    "title": "Voices",
     "price": 37.99,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -217,8 +217,8 @@
     }
   },
   {
-    "artist": "A Perfect Circle Mer de Noms 2LP Zoetrope",
-    "title": "The Sound of Vinyl",
+    "artist": "A Perfect Circle",
+    "title": "Mer de Noms",
     "price": 45.98,
     "source": "Sound of Vinyl",
     "source_type": "trusted_store",
@@ -300,7 +300,7 @@
   },
   {
     "artist": "The Who",
-    "title": "The Who Sell Out 2LP Stereo Version",
+    "title": "Sell Out",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -428,32 +428,8 @@
     }
   },
   {
-    "artist": "blink-182",
-    "title": "Dude Ranch",
-    "price": 24.98,
-    "source": "uDiscover Music",
-    "source_type": "trusted_store",
-    "link": "https://shop.udiscovermusic.com/collections/vinyl/products/blink-182-dude-ranch-lp",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "total": 6,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 1,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Hanson - Hanson - Middle Of Nowhere Limited Edition Colored 2LP - uDiscover Music",
+    "artist": "Hanson",
+    "title": "Middle Of Nowhere",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -480,8 +456,8 @@
     }
   },
   {
-    "artist": "Bob Seger",
-    "title": "Bob Seger & the Silver Bullet Band",
+    "artist": "Bob Seger & The Silver Bullet Band",
+    "title": "Night Moves",
     "price": 29.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -504,8 +480,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "The All-American Rejects - The All-American Rejects - The All-American Rejects Limited Edition LP + 7\" - uDiscover Music",
+    "artist": "The All-American Rejects",
+    "title": "The All-American Rejects",
     "price": 34.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -556,8 +532,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Rush - Rush - Moving Pictures (40th Anniversary) Limited Edition LP - uDiscover Music",
+    "artist": "Rush",
+    "title": "Moving Pictures",
     "price": 39.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -584,7 +560,7 @@
   },
   {
     "artist": "Styx",
-    "title": "Styx Circling From Above (LP)",
+    "title": "Circling From Above",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -607,8 +583,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Rihanna - Rihanna - Good Girl Gone Bad Crystal Clear Limited Edition 2LP - uDiscover Music",
+    "artist": "Rihanna",
+    "title": "Good Girl Gone Bad",
     "price": 39.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -634,8 +610,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Nirvana - Nirvana - In Utero (2013 Mix) Limited Edition 2LP - uDiscover Music",
+    "artist": "Nirvana",
+    "title": "In Utero",
     "price": 37.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -661,8 +637,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Mariah Carey - Mariah Carey - Charmbracelet 2LP - uDiscover Music",
+    "artist": "Mariah Carey",
+    "title": "Charmbracelet",
     "price": 32.99,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -687,8 +663,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Paul McCartney - Paul McCartney - NEW (Collector's Edition) LP - uDiscover Music",
+    "artist": "Paul McCartney",
+    "title": "NEW",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -698,11 +674,11 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "total": 6,
+    "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
+      "artist_tier": "tier_2_adjacent",
+      "artist_points": 2,
       "version_points": 0,
       "deal_points": 1,
       "demand_points": 1,
@@ -711,8 +687,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Yellowcard - Yellowcard - Ocean Avenue LP - uDiscover Music",
+    "artist": "Yellowcard",
+    "title": "Ocean Avenue",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -735,8 +711,8 @@
     }
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Wings - Wings - Wings At The Speed Of Sound LP - uDiscover Music",
+    "artist": "Wings",
+    "title": "Wings At The Speed Of Sound",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "trusted_store",
@@ -746,11 +722,11 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
-    "total": 6,
+    "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
+      "artist_tier": "tier_2_adjacent",
+      "artist_points": 2,
       "version_points": 0,
       "deal_points": 1,
       "demand_points": 1,
