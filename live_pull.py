@@ -32,7 +32,6 @@ def fetch(url):
         return resp.read().decode("utf-8", errors="ignore")
 
 def extract_product_links(html, base_url):
-    # Pull /products/... links
     matches = re.findall(r'href="([^"]*/products/[^"]+)"', html, re.IGNORECASE)
     full_links = []
     for m in matches:
@@ -51,7 +50,6 @@ def extract_title(html):
     return "Unknown Title"
 
 def extract_price(html):
-    # Try common patterns
     patterns = [
         r'"price"\s*:\s*"?(\\d+\\.\\d{2})"?',
         r'\$\\s?(\\d+\\.\\d{2})',
@@ -102,7 +100,9 @@ def build_live_deals():
                         "link": link,
                         "keywords": keywords,
                         "deal_quality": "good" if price and price < 40 else "normal",
-                        "demand": "steady"
+                        "demand": "steady",
+                        "format": "vinyl",
+                        "version": " ".join(keywords) if keywords else "standard"
                     }
 
                     deals.append(deal)
