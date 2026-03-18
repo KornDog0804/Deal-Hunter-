@@ -296,10 +296,13 @@
     }
 
     function buildAmazonLink(deal) {
+      if (deal.amazon_link) return deal.amazon_link;
+
       const artist = (deal.artist || "").trim();
       const title = (deal.title || "").trim();
       const sourceLink = (deal.link || "").trim();
-      const query = `${artist} ${title} vinyl`.trim().replace(/\s+/g, "+");
+      const cleanTitle = title.replace(/\([^)]*\)/g, "").replace(/\[[^\]]*\]/g, "").trim();
+      const query = `${artist} ${cleanTitle} vinyl`.trim().replace(/\s+/g, "+");
       const tag = "korndog20-20";
 
       if (sourceLink.includes("amazon.com")) {
@@ -327,25 +330,33 @@
         vibe = "Worth a look";
       }
 
-      const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
-      const link = deal.link || "Link coming soon";
-      const source = deal.source || "Unknown Source";
-      const amazonLink = buildAmazonLink(deal);
+      const bestPrice = Number(deal.best_price) > 0
+        ? `$${Number(deal.best_price).toFixed(2)}`
+        : (Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet");
+
+      const buyLink = deal.buy_link || deal.link || "Link coming soon";
+      const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+      const bestSource = deal.best_source || deal.source || "Unknown Source";
+      const label = deal.best_label || "KORNDOG FIND";
+
+      let buyLine = `📦 Best Buy: ${bestSource}`;
+      if (label === "KORNDOG FIND") buyLine = `💿 Best Buy: KornDog Find (${bestSource})`;
+      if (label === "AMAZON PICK") buyLine = `🛒 Best Buy: Amazon`;
+      if (label === "WALMART PICK") buyLine = `🛍 Best Buy: Walmart`;
 
       return `${opener}
 
 ${deal.artist} – ${deal.title}
 
-💰 Price: ${price}
-📦 Source: ${source}
+💰 Best Price: ${bestPrice}
+${buyLine}
 
 🟢 ${vibe}
 
+👉 ${buyLink}
+
 🛒 Amazon Option:
 👉 ${amazonLink}
-
-🔗 Original Listing:
-👉 ${link}
 
 Vinyl Therapy never dies 🟣🟢`;
     }
@@ -370,9 +381,17 @@ Vinyl Therapy never dies 🟣🟢`;
 
       deals.forEach(deal => {
         const score = deal.total ?? 0;
-        const price = Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet";
+        const bestPrice = Number(deal.best_price) > 0
+          ? `$${Number(deal.best_price).toFixed(2)}`
+          : (Number(deal.price) > 0 ? `$${Number(deal.price).toFixed(2)}` : "Price not pulled yet");
+
         const postText = getPostText(deal);
-        const amazonLink = buildAmazonLink(deal);
+        const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+
+        let bestBuyText = deal.best_source || deal.source || "Unknown";
+        if (deal.best_label === "KORNDOG FIND") bestBuyText = "KornDog Find";
+        if (deal.best_label === "AMAZON PICK") bestBuyText = "Amazon";
+        if (deal.best_label === "WALMART PICK") bestBuyText = "Walmart";
 
         const card = document.createElement("div");
         card.className = "deal-card";
@@ -387,12 +406,12 @@ Vinyl Therapy never dies 🟣🟢`;
 
           <div class="meta">
             <div class="meta-box">
-              <div class="label">Price</div>
-              <div class="value">${price}</div>
+              <div class="label">Best Price</div>
+              <div class="value">${bestPrice}</div>
             </div>
             <div class="meta-box">
-              <div class="label">Source</div>
-              <div class="value">${deal.source || "Unknown"}</div>
+              <div class="label">Best Buy</div>
+              <div class="value">${bestBuyText}</div>
             </div>
           </div>
 
@@ -401,7 +420,7 @@ Vinyl Therapy never dies 🟣🟢`;
           <div class="post-box">${postText}</div>
 
           <div class="actions">
-            <a class="btn btn-primary" href="${deal.link || "#"}" target="_blank" rel="noopener noreferrer">Open Deal</a>
+            <a class="btn btn-primary" href="${deal.buy_link || deal.link || "#"}" target="_blank" rel="noopener noreferrer">Open Deal</a>
             <button class="btn btn-secondary copy-btn">Copy Post</button>
             <button class="btn btn-ghost copy-link-btn">Copy Link</button>
           </div>
@@ -421,7 +440,7 @@ Vinyl Therapy never dies 🟣🟢`;
       const filtered = allDeals
         .filter(d => (d.total ?? 0) >= minScore)
         .filter(d => {
-          const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""}`.toLowerCase();
+          const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""} ${d.best_source || ""}`.toLowerCase();
           return hay.includes(query);
         })
         .sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
