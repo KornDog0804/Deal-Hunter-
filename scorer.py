@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from deal_selector import apply_best_links
 
 BASE = Path(__file__).resolve().parent
 
@@ -93,9 +94,11 @@ def score_item(item):
 
 def main():
     if (BASE / "live_deals.json").exists():
-        items = load_json("live_deals.json")
+        raw_items = load_json("live_deals.json")
     else:
-        items = load_json("sample_deals.json")
+        raw_items = load_json("sample_deals.json")
+
+    items = apply_best_links(raw_items)
 
     results = []
     for item in items:
@@ -108,7 +111,10 @@ def main():
 
     print("Scored deals written to", out_path)
     for r in results:
-        print(f"{r['artist']} - {r['title']}: {r['total']} => {r['decision']}")
+        print(
+            f"{r['artist']} - {r['title']}: {r['total']} => {r['decision']} | "
+            f"Best: {r.get('best_source', 'Unknown')} @ {r.get('best_price', 0)}"
+        )
 
 if __name__ == "__main__":
     main()
