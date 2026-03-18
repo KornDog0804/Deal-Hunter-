@@ -1,0 +1,31 @@
+name: Run Deal Hunter
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run scorer
+        run: python scorer.py
+
+      - name: Run post generator
+        run: python post_generator.py
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: deal-hunter-output
+          path: |
+            scored_deals.json
+            facebook_posts.txt
