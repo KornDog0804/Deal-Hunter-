@@ -13,14 +13,22 @@ HEADERS = {
 }
 
 SOURCES = [
-    {"name": "Rollin Records", "source_type": "indie_store", "url": "https://rollinrecs.com/collections/vinyl-records"},
-    {"name": "Sound of Vinyl", "source_type": "trusted_store", "url": "https://thesoundofvinyl.us/collections/exclusive"},
-    {"name": "uDiscover Music", "source_type": "trusted_store", "url": "https://shop.udiscovermusic.com/collections/vinyl"},
-    {"name": "Deep Discount", "source_type": "trusted_store", "url": "https://www.deepdiscount.com/music/vinyl"},
-    {"name": "Fearless Records", "source_type": "label_store", "url": "https://fearlessrecords.com/collections/music"},
-    {"name": "Rise Records", "source_type": "label_store", "url": "https://riserecords.com/collections/music"},
-    {"name": "Ride Records", "source_type": "indie_store", "url": "https://riderecords.com/collections/all"},
-    {"name": "Merchbar", "source_type": "marketplace", "url": "https://www.merchbar.com/vinyl-records"}
+    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/vinyl-records"},
+    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us/collections/exclusive"},
+    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com/collections/vinyl"},
+    {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
+    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
+    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://fearlessrecords.com/collections/music"},
+    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com/collections/music"},
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"},
+    {"name": "Hopeless Records", "source_type": "shopify_store", "url": "https://hopelessrecords.myshopify.com/collections/music"},
+    {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com/collections/music"},
+    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com/collections/exclusive-vinyl"},
+    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com/collections/exclusive-lps"},
+    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/exclusive-vinyl"},
+    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com/collections/vinyl"},
+    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com/collections/music"},
+    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com/collections/music"}
 ]
 
 POSITIVE_KEYWORDS = [
@@ -64,15 +72,21 @@ def clean(text):
     text = html.unescape(text or "")
     text = text.replace("–", "-").replace("|", "-")
     text = text.replace("’", "'").replace("“", '"').replace("”", '"')
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+    return re.sub(r"\s+", " ", text).strip()
 
-def normalize_name(text):
-    text = clean(text).lower()
-    text = text.replace("&", "and")
-    text = re.sub(r"[^a-z0-9\s-]", "", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+def normalize_price(value):
+    try:
+        value = float(value)
+    except Exception:
+        return 0.0
+
+    if value <= 0:
+        return 0.0
+
+    if value >= 1000:
+        value = value / 100.0
+
+    return round(value, 2)
 
 def is_banned(text):
     t = (text or "").lower()
@@ -93,33 +107,9 @@ def keyword_hits(text):
     t = (text or "").lower()
     return [k for k in POSITIVE_KEYWORDS if k in t]
 
-def normalize_price(value):
-    try:
-        value = float(value)
-    except Exception:
-        return 0.0
-
-    if value <= 0:
-        return 0.0
-
-    if value >= 1000:
-        value = value / 100.0
-
-    return round(value, 2)
-
-def extract_links(html_text, base):
+def extract_links(html_text, base, source_type="shopify_store"):
     raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
-    found = []
-
-    valid_markers = [
-        "/products/",
-        "/product/",
-        "/p/",
-        "/item/",
-        "/records/",
-        "/vinyl/",
-        "/music/"
-    ]
+    links = []
 
     blocked_markers = [
         "/collections/",
@@ -127,8 +117,16 @@ def extract_links(html_text, base):
         "/cart",
         "/account",
         "/pages/",
-        "#"
+        "#",
+        "javascript:"
     ]
+
+    if source_type in {"shopify_store", "merchnow_store"}:
+        valid_markers = ["/products/"]
+    elif source_type == "catalog_store":
+        valid_markers = ["/product/", "/products/", "/p/", "/item/"]
+    else:
+        valid_markers = ["/products/", "/product/", "/p/", "/item/"]
 
     for href in raw_links:
         href = href.split("?")[0].strip()
@@ -141,10 +139,10 @@ def extract_links(html_text, base):
             continue
 
         if any(v in full for v in valid_markers):
-            if full not in found:
-                found.append(full)
+            if full not in links:
+                links.append(full)
 
-    return found[:80]
+    return links[:100]
 
 def extract_title(html_text):
     patterns = [
@@ -198,9 +196,7 @@ def extract_image(html_text, base):
         matches = re.findall(p, html_text, re.I | re.S)
         for img in matches:
             img = clean(img)
-            if not img:
-                continue
-            if any(x in img.lower() for x in [".jpg", ".jpeg", ".png", ".webp", "cdn", "images"]):
+            if img and any(x in img.lower() for x in [".jpg", ".jpeg", ".png", ".webp", "cdn", "images"]):
                 return urljoin(base, img)
 
     return ""
@@ -221,8 +217,7 @@ def looks_like_garbage(text):
 
 def parse_from_slug(link):
     slug = link.rstrip("/").split("/")[-1]
-    slug = slug.replace("-", " ")
-    slug = clean(slug).lower()
+    slug = clean(slug.replace("-", " ")).lower()
     slug = re.sub(
         r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version|black|standard|record|records)\b",
         "",
@@ -236,40 +231,42 @@ def infer_artist_title(raw_title, link):
     title = clean(raw_title)
     slug = parse_from_slug(link)
 
+    # First try your custom slug patterns
     for pattern, artist, album in SLUG_PATTERNS:
         if re.search(pattern, slug, re.I):
             return artist, album
 
+    # Common case: "Artist - Album"
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
-
     if len(parts) >= 2:
         return parts[0], parts[1]
 
-    if len(parts) == 1 and parts[0]:
-        words = parts[0].split()
-        if len(words) >= 4:
-            return "Unknown Artist", parts[0]
+    # Fallback: use cleaned slug as title
+    if len(slug.split()) >= 3:
+        return "Unknown Artist", slug.title()
 
     return "Unknown Artist", title
 
-def should_skip_link(link):
-    ll = (link or "").lower()
-    if " cd" in ll or "-cd" in ll or ll.endswith("/cd"):
+def should_skip(title, link):
+    blob = f"{title} {link}".lower()
+
+    if is_banned(blob):
         return True
+
+    if " cd" in blob or "-cd" in blob or "/cd" in blob:
+        return True
+
     return False
 
 def dedupe_deals(deals):
     seen = {}
     for d in deals:
-        key = f'{normalize_name(d["artist"])}::{normalize_name(d["title"])}::{normalize_name(d["source"])}'
+        key = f'{(d["artist"] or "").lower()}::{(d["title"] or "").lower()}::{(d["source"] or "").lower()}'
         if key not in seen:
             seen[key] = d
-            continue
-
-        old = seen[key]
-        if (d.get("price", 0) or 0) < (old.get("price", 999999) or 999999):
-            seen[key] = d
-
+        else:
+            if d["price"] < seen[key]["price"]:
+                seen[key] = d
     return list(seen.values())
 
 def build():
@@ -278,19 +275,15 @@ def build():
     for source in SOURCES:
         try:
             html_text = fetch(source["url"])
-            links = extract_links(html_text, source["url"])
+            links = extract_links(html_text, source["url"], source.get("source_type", "shopify_store"))
             print(f'{source["name"]}: found {len(links)} links')
 
             for link in links:
                 try:
-                    if should_skip_link(link):
-                        continue
-
                     page = fetch(link)
                     raw_title = extract_title(page)
-                    image = extract_image(page, link)
 
-                    if is_banned(f"{raw_title} {link}"):
+                    if should_skip(raw_title, link):
                         continue
 
                     price = extract_price(page)
@@ -302,15 +295,13 @@ def build():
                     if looks_like_garbage(album):
                         continue
 
-                    if re.search(r"\bcd\b", f"{artist} {album} {link}", re.I):
-                        continue
-
                     if not artist_allowed(artist, album):
                         continue
 
+                    image = extract_image(page, link)
                     keywords = keyword_hits(f"{raw_title} {link}")
-                    version_parts = keywords[:]
 
+                    version_parts = keywords[:]
                     if "2lp" in link.lower() and "2lp" not in version_parts:
                         version_parts.append("2lp")
                     if "1lp" in link.lower() and "1lp" not in version_parts:
