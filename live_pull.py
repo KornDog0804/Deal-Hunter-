@@ -17,51 +17,27 @@ SOURCES = [
     {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us/collections/exclusive"},
     {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com/collections/vinyl"},
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
-    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
     {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://fearlessrecords.com/collections/music"},
     {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com/collections/music"},
-    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"},
-    {"name": "Hopeless Records", "source_type": "shopify_store", "url": "https://hopelessrecords.myshopify.com/collections/music"},
-    {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com/collections/music"},
-    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com/collections/exclusive-vinyl"},
-    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com/collections/exclusive-lps"},
-    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/exclusive-vinyl"},
-    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com/collections/vinyl"},
-    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com/collections/music"},
-    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com/collections/music"}
+    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"}
 ]
 
 POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
-    "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp",
-    "marble", "smush", "quad", "opaque", "clear"
+    "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp"
 ]
 
 BANNED_KEYWORDS = [
-    "christmas",
-    "xmas",
-    "holiday",
-    "jingle",
-    "santa",
-    "let it snow",
-    "wonderful christmastime",
-    "war is over",
-    "dean martin",
-    "jackson 5",
-    "bobby helms",
-    "snowed in"
+    "christmas", "xmas", "holiday", "jingle", "santa",
+    "let it snow", "wonderful christmastime", "war is over",
+    "dean martin", "jackson 5", "bobby helms"
 ]
 
-def load_json(name):
-    with open(BASE / name, "r", encoding="utf-8") as f:
-        return json.load(f)
+DEBUG = []
 
-ARTIST_CONFIG = load_json("artist_whitelist.json")
-SLUG_PATTERNS = load_json("slug_patterns.json")
-
-ENFORCE_ARTIST_WHITELIST = ARTIST_CONFIG.get("enforce_artist_whitelist", True)
-ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
-BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
+def log(msg):
+    print(msg)
+    DEBUG.append(msg)
 
 def fetch(url):
     req = urllib.request.Request(url, headers=HEADERS)
@@ -91,17 +67,6 @@ def normalize_price(value):
 def is_banned(text):
     t = (text or "").lower()
     return any(b in t for b in BANNED_KEYWORDS)
-
-def artist_allowed(artist, title=""):
-    hay = f"{artist} {title}".lower()
-
-    if any(b in hay for b in BLOCKED):
-        return False
-
-    if not ENFORCE_ARTIST_WHITELIST:
-        return True
-
-    return any(a in hay for a in ALLOWED)
 
 def keyword_hits(text):
     t = (text or "").lower()
@@ -229,19 +194,12 @@ def parse_from_slug(link):
 
 def infer_artist_title(raw_title, link):
     title = clean(raw_title)
-    slug = parse_from_slug(link)
-
-    # First try your custom slug patterns
-    for pattern, artist, album in SLUG_PATTERNS:
-        if re.search(pattern, slug, re.I):
-            return artist, album
-
-    # Common case: "Artist - Album"
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
     if len(parts) >= 2:
         return parts[0], parts[1]
 
-    # Fallback: use cleaned slug as title
+    slug = parse_from_slug(link)
     if len(slug.split()) >= 3:
         return "Unknown Artist", slug.title()
 
@@ -273,15 +231,18 @@ def build():
     deals = []
 
     for source in SOURCES:
+        source_found = 0
+        source_saved = 0
         try:
             html_text = fetch(source["url"])
             links = extract_links(html_text, source["url"], source.get("source_type", "shopify_store"))
-            print(f'{source["name"]}: found {len(links)} links')
+            log(f'{source["name"]}: found {len(links)} links')
 
             for link in links:
                 try:
                     page = fetch(link)
                     raw_title = extract_title(page)
+                    source_found += 1
 
                     if should_skip(raw_title, link):
                         continue
@@ -293,9 +254,6 @@ def build():
                     artist, album = infer_artist_title(raw_title, link)
 
                     if looks_like_garbage(album):
-                        continue
-
-                    if not artist_allowed(artist, album):
                         continue
 
                     image = extract_image(page, link)
@@ -321,17 +279,25 @@ def build():
                         "format": "vinyl",
                         "version": " ".join(version_parts) if version_parts else "standard"
                     })
+                    source_saved += 1
 
                 except Exception as e:
-                    print(f"Skipping product {link}: {e}")
+                    log(f'Skipping product {link}: {e}')
+
+            log(f'{source["name"]}: kept {source_saved} items')
 
         except Exception as e:
-            print(f'Skipping source {source["name"]}: {e}')
+            log(f'Skipping source {source["name"]}: {e}')
 
     return dedupe_deals(deals)
 
 if __name__ == "__main__":
     data = build()
+
     with open(BASE / "live_deals.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"Wrote {len(data)} live deals to live_deals.json")
+
+    with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(DEBUG))
+
+    log(f"Wrote {len(data)} deals to live_deals.json")
