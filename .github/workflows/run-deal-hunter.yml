@@ -29,12 +29,24 @@ jobs:
       - name: Run post generator
         run: python post_generator.py
 
+      - name: Show generated files
+        run: |
+          ls -lah
+          echo "----- live_deals.json -----"
+          cat live_deals.json || true
+          echo "----- scored_deals.json -----"
+          cat scored_deals.json || true
+          echo "----- facebook_posts.txt -----"
+          cat facebook_posts.txt || true
+          echo "----- debug_live_pull.txt -----"
+          cat debug_live_pull.txt || true
+
       - name: Commit updated outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add live_deals.json scored_deals.json facebook_posts.txt
-          git commit -m "Update live deal outputs" || echo "No changes to commit"
+          git add live_deals.json scored_deals.json facebook_posts.txt debug_live_pull.txt
+          git diff --cached --quiet || git commit -m "Update live deal outputs"
           git push
 
       - name: Upload outputs
@@ -45,3 +57,4 @@ jobs:
             live_deals.json
             scored_deals.json
             facebook_posts.txt
+            debug_live_pull.txt
