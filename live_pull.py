@@ -27,13 +27,16 @@ SOURCES = [
 
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
-    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"}
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"},
+
+    # Walmart is here now
+    {"name": "Walmart", "source_type": "catalog_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"}
 ]
 
 POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
     "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp",
-    "marble", "smush", "quad", "opaque", "clear"
+    "marble", "smush", "quad", "opaque", "clear", "smoke", "translucent"
 ]
 
 BANNED_KEYWORDS = [
@@ -49,6 +52,12 @@ BANNED_KEYWORDS = [
     "jackson 5",
     "bobby helms",
     "snowed in"
+]
+
+BAD_PRODUCT_TERMS = [
+    "shirt", "hoodie", "tank top", "tee", "poster", "slipmat", "cassette",
+    "cd", "compact disc", "beanie", "hat", "jacket", "bundle", "book",
+    "kindle", "blu-ray", "dvd", "toy", "figure", "funko"
 ]
 
 DEBUG = []
@@ -126,22 +135,50 @@ def looks_like_garbage(text):
 
     return False
 
+def contains_bad_product_terms(text):
+    t = (text or "").lower()
+    return any(term in t for term in BAD_PRODUCT_TERMS)
+
 def should_skip(title, link):
     blob = f"{title} {link}".lower()
 
     if is_banned(blob):
         return True
 
-    if " cd" in blob or "-cd" in blob or "/cd" in blob:
+    if contains_bad_product_terms(blob):
         return True
 
     return False
+
+def clean_store_title(title):
+    text = clean(title)
+
+    junk_patterns = [
+        r"\s*-\s*Music\s*&\s*Performance\s*-\s*Vinyl\s*$",
+        r"\s*-\s*Vinyl\s*$",
+        r"\s*-\s*Walmart\.com\s*$",
+        r"\s*-\s*Shopify\s*$",
+        r"\s*-\s*Newbury Comics\s*$",
+        r"\s*-\s*Brooklyn Vegan\s*$",
+        r"\s*-\s*Revolver\s*$",
+        r"\s*-\s*Rise Records\s*$",
+        r"\s*-\s*Fearless Records\s*$",
+        r"\s*-\s*Sound of Vinyl\s*$",
+        r"\s*-\s*uDiscover Music\s*$",
+        r"\s*-\s*DeepDiscount\.com\s*$"
+    ]
+
+    for pattern in junk_patterns:
+        text = re.sub(pattern, "", text, flags=re.I)
+
+    text = re.sub(r"\s+", " ", text).strip(" -")
+    return text
 
 def parse_from_slug(link):
     slug = link.rstrip("/").split("/")[-1]
     slug = clean(slug.replace("-", " ")).lower()
     slug = re.sub(
-        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version|black|standard|record|records)\b",
+        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version|black|standard|record|records|performance|music|translucent|clear|smoke|splatter|etched|zoetrope)\b",
         "",
         slug,
         flags=re.I
@@ -149,20 +186,33 @@ def parse_from_slug(link):
     slug = re.sub(r"\s+", " ", slug).strip()
     return slug
 
-def infer_artist_title(raw_title, link, vendor=""):
-    title = clean(raw_title)
+def split_artist_album_from_title(title):
+    title = clean_store_title(title)
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
+    if len(parts) >= 2:
+        return parts[0], parts[1]
+
+    return "", title
+
+def infer_artist_title(raw_title, link, vendor="", source_name=""):
+    title = clean_store_title(raw_title)
     slug = parse_from_slug(link)
+    vendor = clean(vendor)
 
     for pattern, artist, album in SLUG_PATTERNS:
         if re.search(pattern, slug, re.I):
             return artist, album
 
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-    if len(parts) >= 2:
-        return parts[0], parts[1]
+    split_artist, split_album = split_artist_album_from_title(title)
 
-    if vendor:
-        return clean(vendor), title
+    if split_artist and split_album:
+        if not contains_bad_product_terms(split_artist) and not looks_like_garbage(split_album):
+            return split_artist, split_album
+
+    if vendor and vendor.lower() not in {"vinyl", "music", "records"}:
+        if not contains_bad_product_terms(vendor) and not looks_like_garbage(title):
+            return vendor, title
 
     if len(slug.split()) >= 3:
         return "Unknown Artist", slug.title()
@@ -186,12 +236,12 @@ def extract_links(html_text, base, source_type="shopify_store"):
     if source_type in {"shopify_store", "merchnow_store"}:
         valid_markers = ["/products/"]
     elif source_type == "catalog_store":
-        valid_markers = ["/product/", "/products/", "/p/", "/item/"]
+        valid_markers = ["/product/", "/products/", "/p/", "/item/", "/ip/"]
     else:
-        valid_markers = ["/products/", "/product/", "/p/", "/item/"]
+        valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/"]
 
     for href in raw_links:
-        href = href.split("?")[0].strip()
+        href = href.strip()
         if not href:
             continue
 
@@ -204,7 +254,7 @@ def extract_links(html_text, base, source_type="shopify_store"):
             if full not in links:
                 links.append(full)
 
-    return links[:120]
+    return links[:150]
 
 def extract_title(html_text):
     patterns = [
@@ -221,7 +271,7 @@ def extract_title(html_text):
         if m:
             title = clean(m.group(1))
             if title and len(title) > 2:
-                return title
+                return clean_store_title(title)
 
     return "Unknown Title"
 
@@ -273,6 +323,18 @@ def fetch_shopify_products(store_root):
         log(f"Shopify fetch failed: {store_root} | {e}")
         return []
 
+def build_version_parts(text_blob, title_lower="", link_lower=""):
+    keywords = keyword_hits(text_blob)
+    version_parts = keywords[:]
+
+    for token in ["2lp", "1lp"]:
+        if token in title_lower and token not in version_parts:
+            version_parts.append(token)
+        if token in link_lower and token not in version_parts:
+            version_parts.append(token)
+
+    return keywords, version_parts
+
 def build_shopify_deals(source):
     deals = []
     products = fetch_shopify_products(source["url"])
@@ -293,12 +355,8 @@ def build_shopify_deals(source):
             if should_skip(title, ""):
                 continue
 
-            if "cd" in title_lower or "cassette" in title_lower:
+            if product_type and any(x in product_type for x in BAD_PRODUCT_TERMS):
                 continue
-
-            if product_type and all(x not in product_type for x in ["vinyl", "record", "lp"]):
-                if any(x in product_type for x in ["shirt", "hoodie", "poster", "hat", "slipmat", "bundle"]):
-                    continue
 
             variants = p.get("variants", []) or []
             if not variants:
@@ -308,7 +366,7 @@ def build_shopify_deals(source):
             for v in variants:
                 price = normalize_price(v.get("price", 0))
                 vtitle = clean(v.get("title", "")).lower()
-                if price > 0 and "cd" not in vtitle and "cassette" not in vtitle:
+                if price > 0 and not contains_bad_product_terms(vtitle):
                     valid_variant = v
                     break
 
@@ -324,9 +382,12 @@ def build_shopify_deals(source):
                 continue
 
             link = f'{source["url"].rstrip("/")}/products/{handle}'
-            artist, album = infer_artist_title(title, link, vendor=vendor)
+            artist, album = infer_artist_title(title, link, vendor=vendor, source_name=source["name"])
 
             if looks_like_garbage(album):
+                continue
+
+            if contains_bad_product_terms(f"{artist} {album}"):
                 continue
 
             if not artist_allowed(artist, album):
@@ -337,13 +398,11 @@ def build_shopify_deals(source):
             if imgs:
                 image = imgs[0].get("src", "")
 
-            keywords = keyword_hits(f"{title} {link}")
-
-            version_parts = keywords[:]
-            if "2lp" in title_lower and "2lp" not in version_parts:
-                version_parts.append("2lp")
-            if "1lp" in title_lower and "1lp" not in version_parts:
-                version_parts.append("1lp")
+            keywords, version_parts = build_version_parts(
+                f"{title} {link}",
+                title_lower=title_lower,
+                link_lower=link.lower()
+            )
 
             deals.append({
                 "artist": artist,
@@ -388,22 +447,23 @@ def build_html_deals(source):
                 if price <= 0:
                     continue
 
-                artist, album = infer_artist_title(raw_title, link)
+                artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
 
                 if looks_like_garbage(album):
+                    continue
+
+                if contains_bad_product_terms(f"{artist} {album}"):
                     continue
 
                 if not artist_allowed(artist, album):
                     continue
 
                 image = extract_image(page, link)
-                keywords = keyword_hits(f"{raw_title} {link}")
-
-                version_parts = keywords[:]
-                if "2lp" in link.lower() and "2lp" not in version_parts:
-                    version_parts.append("2lp")
-                if "1lp" in link.lower() and "1lp" not in version_parts:
-                    version_parts.append("1lp")
+                keywords, version_parts = build_version_parts(
+                    f"{raw_title} {link}",
+                    title_lower=raw_title.lower(),
+                    link_lower=link.lower()
+                )
 
                 deals.append({
                     "artist": artist,
@@ -433,13 +493,15 @@ def build_html_deals(source):
 
 def dedupe_deals(deals):
     seen = {}
+
     for d in deals:
-        key = f'{(d["artist"] or "").lower()}::{(d["title"] or "").lower()}::{(d["source"] or "").lower()}'
+        key = f'{(d["artist"] or "").lower().strip()}::{(d["title"] or "").lower().strip()}::{(d["source"] or "").lower().strip()}'
         if key not in seen:
             seen[key] = d
         else:
             if d["price"] < seen[key]["price"]:
                 seen[key] = d
+
     return list(seen.values())
 
 def build():
