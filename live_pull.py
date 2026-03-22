@@ -13,17 +13,17 @@ HEADERS = {
 }
 
 SOURCES = [
-    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/vinyl-records"},
-    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us/collections/exclusive"},
-    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com/collections/vinyl"},
-    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://fearlessrecords.com/collections/music"},
-    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com/collections/music"},
-    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com/collections/exclusive-vinyl"},
-    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com/collections/exclusive-lps"},
-    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/exclusive-vinyl"},
-    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com/collections/vinyl"},
-    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com/collections/music"},
-    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com/collections/music"},
+    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com"},
+    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us"},
+    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com"},
+    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://fearlessrecords.com"},
+    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com"},
+    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com"},
+    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com"},
+    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com"},
+    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com"},
+    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
+    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com"},
 
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
@@ -77,8 +77,7 @@ def clean(text):
     text = html.unescape(text or "")
     text = text.replace("–", "-").replace("|", "-")
     text = text.replace("’", "'").replace("“", '"').replace("”", '"')
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+    return re.sub(r"\s+", " ", text).strip()
 
 def normalize_price(value):
     try:
@@ -150,7 +149,7 @@ def parse_from_slug(link):
     slug = re.sub(r"\s+", " ", slug).strip()
     return slug
 
-def infer_artist_title(raw_title, link):
+def infer_artist_title(raw_title, link, vendor=""):
     title = clean(raw_title)
     slug = parse_from_slug(link)
 
@@ -161,6 +160,9 @@ def infer_artist_title(raw_title, link):
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
     if len(parts) >= 2:
         return parts[0], parts[1]
+
+    if vendor:
+        return clean(vendor), title
 
     if len(slug.split()) >= 3:
         return "Unknown Artist", slug.title()
@@ -261,21 +263,22 @@ def extract_image(html_text, base):
 
     return ""
 
-def fetch_shopify_products(collection_url):
+def fetch_shopify_products(store_root):
     try:
-        store_root = collection_url.split("/collections/")[0]
         url = store_root.rstrip("/") + "/products.json?limit=250"
         data = fetch(url)
         parsed = json.loads(data)
         return parsed.get("products", [])
     except Exception as e:
-        log(f"Shopify fetch failed: {collection_url} | {e}")
+        log(f"Shopify fetch failed: {store_root} | {e}")
         return []
 
 def build_shopify_deals(source):
     deals = []
     products = fetch_shopify_products(source["url"])
     log(f'{source["name"]}: {len(products)} products via Shopify JSON')
+
+    kept = 0
 
     for p in products:
         try:
@@ -284,11 +287,35 @@ def build_shopify_deals(source):
                 continue
 
             vendor = clean(p.get("vendor", ""))
+            product_type = clean(p.get("product_type", "")).lower()
+            title_lower = title.lower()
+
+            if should_skip(title, ""):
+                continue
+
+            if "cd" in title_lower or "cassette" in title_lower:
+                continue
+
+            if product_type and all(x not in product_type for x in ["vinyl", "record", "lp"]):
+                if any(x in product_type for x in ["shirt", "hoodie", "poster", "hat", "slipmat", "bundle"]):
+                    continue
+
             variants = p.get("variants", []) or []
             if not variants:
                 continue
 
-            price = normalize_price(variants[0].get("price", 0))
+            valid_variant = None
+            for v in variants:
+                price = normalize_price(v.get("price", 0))
+                vtitle = clean(v.get("title", "")).lower()
+                if price > 0 and "cd" not in vtitle and "cassette" not in vtitle:
+                    valid_variant = v
+                    break
+
+            if not valid_variant:
+                continue
+
+            price = normalize_price(valid_variant.get("price", 0))
             if price <= 0:
                 continue
 
@@ -296,16 +323,8 @@ def build_shopify_deals(source):
             if not handle:
                 continue
 
-            store_root = source["url"].split("/collections/")[0]
-            link = f"{store_root}/products/{handle}"
-
-            if should_skip(title, link):
-                continue
-
-            artist, album = infer_artist_title(title, link)
-
-            if artist == "Unknown Artist" and vendor:
-                artist = vendor
+            link = f'{source["url"].rstrip("/")}/products/{handle}'
+            artist, album = infer_artist_title(title, link, vendor=vendor)
 
             if looks_like_garbage(album):
                 continue
@@ -321,10 +340,9 @@ def build_shopify_deals(source):
             keywords = keyword_hits(f"{title} {link}")
 
             version_parts = keywords[:]
-            lowered_title = title.lower()
-            if "2lp" in lowered_title and "2lp" not in version_parts:
+            if "2lp" in title_lower and "2lp" not in version_parts:
                 version_parts.append("2lp")
-            if "1lp" in lowered_title and "1lp" not in version_parts:
+            if "1lp" in title_lower and "1lp" not in version_parts:
                 version_parts.append("1lp")
 
             deals.append({
@@ -341,11 +359,12 @@ def build_shopify_deals(source):
                 "format": "vinyl",
                 "version": " ".join(version_parts) if version_parts else "standard"
             })
+            kept += 1
 
         except Exception as e:
             log(f'{source["name"]}: skipped Shopify product | {e}')
 
-    log(f'{source["name"]}: kept {len(deals)} Shopify items')
+    log(f'{source["name"]}: kept {kept} Shopify items')
     return deals
 
 def build_html_deals(source):
