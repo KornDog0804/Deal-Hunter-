@@ -616,50 +616,16 @@
         "source": "Rise Records",
         "price": 28.0,
         "link": "https://riserecords.com/products/dgd0abrn18-dl"
-      }
-    ],
-    "best_price": 28.0,
-    "best_source": "Rise Records",
-    "buy_link": "https://riserecords.com/products/dgd0abrn18-dl",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Dance+Gavin+Dance+Afterburner+Picture+Disc+vinyl&tag=korndog20-20",
-    "total": 9,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "tier_1_core",
-      "artist_points": 3,
-      "version_points": 1,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "Afterburner Picture Disc",
-    "price": 32.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0abrnpd-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Afterburner-PictureDisc-1.jpg?v=1761027460",
-    "keywords": [
-      "picture disc"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "picture disc",
-    "all_store_options": [
+      },
       {
         "source": "Rise Records",
         "price": 32.0,
         "link": "https://riserecords.com/products/dgd0abrnpd-lp"
       }
     ],
-    "best_price": 32.0,
+    "best_price": 28.0,
     "best_source": "Rise Records",
-    "buy_link": "https://riserecords.com/products/dgd0abrnpd-lp",
+    "buy_link": "https://riserecords.com/products/dgd0abrn18-dl",
     "best_label": "KORNDOG FIND",
     "amazon_link": "https://www.amazon.com/s?k=Dance+Gavin+Dance+Afterburner+Picture+Disc+vinyl&tag=korndog20-20",
     "total": 9,
@@ -1191,7 +1157,7 @@
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/dgd0tcls01-lp",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Dance+Gavin+Dance+Tree+City+Sessions+2+Blue+Purple+vinyl&tag=korndog20-20",
+    "amazon_link": "https://www.amazon.com/s?k=Dance+Gavin+Dance+Tree+City+Sessions+2+vinyl&tag=korndog20-20",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -1265,7 +1231,7 @@
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/dgd0abrnob-lp",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Dance+Gavin+Dance+Afterburner+Orange+Red+Tri+Stripe+vinyl&tag=korndog20-20",
+    "amazon_link": "",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -1494,7 +1460,7 @@
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/sm41hxh0tp-lp",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Sum+41+Heaven+:x:+Hell+Blue+Red+Tri+Pie+Double+vinyl&tag=korndog20-20",
+    "amazon_link": "",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -1531,7 +1497,7 @@
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/sm41hxh0sr-lp",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Sum+41+Heaven+:x:+Hell+Solid+Red+Double+vinyl&tag=korndog20-20",
+    "amazon_link": "https://www.amazon.com/s?k=Sum+41+Heaven+:x:+Hell+Solid+Double+vinyl&tag=korndog20-20",
     "total": 8,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -5004,45 +4970,6 @@
     }
   },
   {
-    "artist": "The Best of Creed (\"Sunspot\" LP",
-    "title": "Exclusive)",
-    "price": 26.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/creed-the-best-of-creed-sunspot-lp-craft-exclusive",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Creed_TheBestOf_LPMock_MD26_Craft.png?v=1758142298",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 26.0,
-        "link": "https://craftrecordings.com/products/creed-the-best-of-creed-sunspot-lp-craft-exclusive"
-      }
-    ],
-    "best_price": 26.0,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/creed-the-best-of-creed-sunspot-lp-craft-exclusive",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Eagles",
     "title": "Hotel California",
     "price": 26.99,
@@ -5194,45 +5121,6 @@
     "best_price": 26.99,
     "best_source": "Rollin Records",
     "buy_link": "https://rollinrecs.com/products/the-nothing-a-short-history-of-decay-indie-exclusive-orange-yellow-vinyl",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Bayou Country (Bayou Blue LP",
-    "title": "Exclusive)",
-    "price": 27.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bayou-country-bayou-blue-lp-exclusive",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00829CCRBayouCountryPackShotTidalWave.png?v=1746718694",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 27.0,
-        "link": "https://craftrecordings.com/products/bayou-country-bayou-blue-lp-exclusive"
-      }
-    ],
-    "best_price": 27.0,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/bayou-country-bayou-blue-lp-exclusive",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 7,
@@ -6443,6 +6331,11 @@
         "source": "MNRK Heavy",
         "price": 28.98,
         "link": "https://mnrkheavy.com/products/the-callous-daoboys-celebrity-therapist-splatter-vinyl-pre-order"
+      },
+      {
+        "source": "MNRK Heavy",
+        "price": 28.98,
+        "link": "https://mnrkheavy.com/products/callous-daoboys-celebrity-therapist-bone-olive-green-swirl"
       }
     ],
     "best_price": 28.98,
@@ -7206,6 +7099,16 @@
         "source": "uDiscover Music",
         "price": 29.99,
         "link": "https://shop.udiscovermusic.com/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-1lp"
+      },
+      {
+        "source": "Sound of Vinyl",
+        "price": 39.98,
+        "link": "https://thesoundofvinyl.us/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp"
+      },
+      {
+        "source": "uDiscover Music",
+        "price": 39.98,
+        "link": "https://shop.udiscovermusic.com/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp"
       }
     ],
     "best_price": 29.99,
@@ -8508,87 +8411,6 @@
     "best_price": 30.0,
     "best_source": "Equal Vision",
     "buy_link": "https://equalvision.com/products/resibat0ow-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "El Malo (60th Anniversary, Rojo Malo LP",
-    "title": "Exclusive)",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/willie-colon-el-malo-fania-exclusive-60th-anniversary-opaque-red-lp-remastered-2024",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00776WillieColon-ElMaloPackShotAppleRed.png?v=1765905463",
-    "keywords": [
-      "exclusive",
-      "anniversary",
-      "opaque"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive anniversary opaque",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 30.0,
-        "link": "https://craftrecordings.com/products/willie-colon-el-malo-fania-exclusive-60th-anniversary-opaque-red-lp-remastered-2024"
-      }
-    ],
-    "best_price": 30.0,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/willie-colon-el-malo-fania-exclusive-60th-anniversary-opaque-red-lp-remastered-2024",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Singin' Some Soul (Soulful Deep Red LP",
-    "title": "Exclusive)",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/joe-bataan-singin-some-soul-exclusive-colored-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00777JoeBataan-Singin_SomeSoulPackShotAppleRed.png?v=1765905877",
-    "keywords": [
-      "colored",
-      "exclusive"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "colored exclusive",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 30.0,
-        "link": "https://craftrecordings.com/products/joe-bataan-singin-some-soul-exclusive-colored-lp"
-      }
-    ],
-    "best_price": 30.0,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/joe-bataan-singin-some-soul-exclusive-colored-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 7,
@@ -11291,47 +11113,6 @@
     }
   },
   {
-    "artist": "Caracal (10th Anniversary Edition)",
-    "title": "2LP Zoetrope",
-    "price": 37.99,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/disclosure-caracal-10th-anniversary-edition-2lp-zoetrope",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/caracal_b8283aaf-a3ce-4e8a-a484-9d80543450fd.png?v=1770228643",
-    "keywords": [
-      "anniversary",
-      "zoetrope",
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "anniversary zoetrope 2lp",
-    "all_store_options": [
-      {
-        "source": "uDiscover Music",
-        "price": 37.99,
-        "link": "https://shop.udiscovermusic.com/products/disclosure-caracal-10th-anniversary-edition-2lp-zoetrope"
-      }
-    ],
-    "best_price": 37.99,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/disclosure-caracal-10th-anniversary-edition-2lp-zoetrope",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Chicago",
     "title": "Chicago IV (Silver Anniversary Edition)",
     "price": 37.99,
@@ -11836,51 +11617,6 @@
     "best_price": 39.98,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/erykah-badu-mamas-gun-25th-anniversary-gold-black-ice-2lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 7,
-    "decision": "POST / BUY / MOVE FAST",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 2,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Frank Zappa",
-    "title": "Bongo Fury 50th Anniversary (2LP)",
-    "price": 39.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/2LP_Gatefold_Booklet_ProductShot.png?v=1769459756",
-    "keywords": [
-      "anniversary",
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "anniversary 2lp",
-    "all_store_options": [
-      {
-        "source": "Sound of Vinyl",
-        "price": 39.98,
-        "link": "https://thesoundofvinyl.us/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp"
-      },
-      {
-        "source": "uDiscover Music",
-        "price": 39.98,
-        "link": "https://shop.udiscovermusic.com/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp"
-      }
-    ],
-    "best_price": 39.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/frank-zappa-captain-beefheart-mothers-of-invention-bongo-fury-50th-anniversary-2lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 7,
@@ -17186,7 +16922,7 @@
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/rush-grace-under-pressure-super-deluxe-5lp-blu-ray",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Rush+Grace+Under+Pressure+5LP+++Blu+Ray+vinyl&tag=korndog20-20",
+    "amazon_link": "",
     "total": 6,
     "decision": "POST / BUY / MOVE FAST",
     "breakdown": {
@@ -20412,6 +20148,11 @@
         "source": "uDiscover Music",
         "price": 13.98,
         "link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram"
+      },
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram-lp"
       }
     ],
     "best_price": 13.98,
@@ -23181,43 +22922,6 @@
     }
   },
   {
-    "artist": "Pins And Needles",
-    "title": "Black Vinyl",
-    "price": 19.98,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/natalie-hemby-pins-and-needles-black-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/NH__VINYLproductshot_black.png?v=1758127883",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 19.98,
-        "link": "https://craftrecordings.com/products/natalie-hemby-pins-and-needles-black-vinyl"
-      }
-    ],
-    "best_price": 19.98,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/natalie-hemby-pins-and-needles-black-vinyl",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Simon & Garfunkel",
     "title": "Greatest Hits",
     "price": 19.98,
@@ -24999,43 +24703,6 @@
     "best_price": 22.0,
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/hlywcc00aq-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Always Tomorrow",
-    "title": "Black Vinyl",
-    "price": 22.98,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/best-coast-always-tomorrow-black-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/blackvinyl.png?v=1758126052",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 22.98,
-        "link": "https://craftrecordings.com/products/best-coast-always-tomorrow-black-vinyl"
-      }
-    ],
-    "best_price": 22.98,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/best-coast-always-tomorrow-black-vinyl",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -30984,43 +30651,6 @@
     }
   },
   {
-    "artist": "The Prodigal Son",
-    "title": "Black Vinyl",
-    "price": 25.99,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/ry-cooder-the-prodigal-son-black-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/RyCooder_ProdSon_LP_1080.jpg?v=1758128810",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Craft Recordings",
-        "price": 25.99,
-        "link": "https://craftrecordings.com/products/ry-cooder-the-prodigal-son-black-vinyl"
-      }
-    ],
-    "best_price": 25.99,
-    "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/ry-cooder-the-prodigal-son-black-vinyl",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Universal",
     "title": "CASTLE RAT ‘THE BESTIARY' LP (Darkest Depths Vinyl)",
     "price": 25.99,
@@ -31523,6 +31153,11 @@
         "source": "Brooklyn Vegan",
         "price": 26.0,
         "link": "https://shop.brooklynvegan.com/products/all-them-witches-lightning-at-the-door-color-lp"
+      },
+      {
+        "source": "Brooklyn Vegan",
+        "price": 28.0,
+        "link": "https://shop.brooklynvegan.com/products/all-them-witches-lightning-at-the-door-lp"
       }
     ],
     "best_price": 26.0,
@@ -33307,45 +32942,6 @@
     }
   },
   {
-    "artist": "Charley Crockett",
-    "title": "Age of the Ram 1LP",
-    "price": 27.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/st.png?v=1772036942",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
-      {
-        "source": "uDiscover Music",
-        "price": 27.98,
-        "link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram-lp"
-      }
-    ],
-    "best_price": 27.98,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Concord Records",
     "title": "WARREN HAYNES 'MILLION VOICES WHISPER' 2LP (Black Vinyl)",
     "price": 27.98,
@@ -34092,41 +33688,7 @@
         "source": "Sound of Vinyl",
         "price": 27.98,
         "link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-lp"
-      }
-    ],
-    "best_price": 27.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Ringo Starr",
-    "title": "Long Long Road 1LP",
-    "price": 27.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/ringo-starr-long-long-road-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Ringo_LongLongRoad_1LP_Black_199957008297_ProductShot_v1.png?v=1772470698",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
+      },
       {
         "source": "uDiscover Music",
         "price": 27.98,
@@ -34134,8 +33696,8 @@
       }
     ],
     "best_price": 27.98,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/ringo-starr-long-long-road-lp",
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -34653,45 +34215,6 @@
   },
   {
     "artist": "The Wood Brothers",
-    "title": "Ways Not To Lose 1LP",
-    "price": 27.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/the-wood-brothers-ways-not-to-lose-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/wood_brothers.png?v=1772469081",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
-      {
-        "source": "uDiscover Music",
-        "price": 27.98,
-        "link": "https://shop.udiscovermusic.com/products/the-wood-brothers-ways-not-to-lose-lp"
-      }
-    ],
-    "best_price": 27.98,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/the-wood-brothers-ways-not-to-lose-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "The Wood Brothers",
     "title": "Ways Not To Lose LP",
     "price": 27.98,
     "source": "Sound of Vinyl",
@@ -34708,6 +34231,11 @@
         "source": "Sound of Vinyl",
         "price": 27.98,
         "link": "https://thesoundofvinyl.us/products/the-wood-brothers-ways-not-to-lose-lp"
+      },
+      {
+        "source": "uDiscover Music",
+        "price": 27.98,
+        "link": "https://shop.udiscovermusic.com/products/the-wood-brothers-ways-not-to-lose-lp"
       }
     ],
     "best_price": 27.98,
@@ -36227,43 +35755,6 @@
     "best_price": 28.0,
     "best_source": "Rise Records",
     "buy_link": "https://riserecords.com/products/mtcakd00bw-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Redeye",
-    "title": "ALL THEM WITCHES 'LIGHTNING AT THE DOOR' LP",
-    "price": 28.0,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/all-them-witches-lightning-at-the-door-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/201374742123.jpg?v=1773414901",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 28.0,
-        "link": "https://shop.brooklynvegan.com/products/all-them-witches-lightning-at-the-door-lp"
-      }
-    ],
-    "best_price": 28.0,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/all-them-witches-lightning-at-the-door-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -37841,43 +37332,6 @@
     "best_price": 28.98,
     "best_source": "MNRK Heavy",
     "buy_link": "https://mnrkheavy.com/products/the-blue-stones-pretty-monster-tiger-marble-vinyl",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "The Callous Daoboys",
-    "title": "Celebrity Therapist",
-    "price": 28.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/callous-daoboys-celebrity-therapist-bone-olive-green-swirl",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/TheCallousDaoboysOliveBoneSwirlVinylLP.png?v=1690317489",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "MNRK Heavy",
-        "price": 28.98,
-        "link": "https://mnrkheavy.com/products/callous-daoboys-celebrity-therapist-bone-olive-green-swirl"
-      }
-    ],
-    "best_price": 28.98,
-    "best_source": "MNRK Heavy",
-    "buy_link": "https://mnrkheavy.com/products/callous-daoboys-celebrity-therapist-bone-olive-green-swirl",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -41774,41 +41228,7 @@
         "source": "Sound of Vinyl",
         "price": 29.99,
         "link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-ultraviolet-dream-color-lp"
-      }
-    ],
-    "best_price": 29.99,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-ultraviolet-dream-color-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Ringo Starr",
-    "title": "Long Long Road (Ultraviolet Dream) 1LP",
-    "price": 29.99,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/ringo-starr-long-long-road-ultraviolet-dream-color-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Ringo_LongLongRoad_1LP_Color_LithoInsert_199957084772_ProductShot.png?v=1772470107",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
+      },
       {
         "source": "uDiscover Music",
         "price": 29.99,
@@ -41816,8 +41236,8 @@
       }
     ],
     "best_price": 29.99,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/ringo-starr-long-long-road-ultraviolet-dream-color-lp",
+    "best_source": "Sound of Vinyl",
+    "buy_link": "https://thesoundofvinyl.us/products/ringo-starr-long-long-road-ultraviolet-dream-color-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -41924,41 +41344,7 @@
         "source": "Rollin Records",
         "price": 29.99,
         "link": "https://rollinrecs.com/products/rush-2112"
-      }
-    ],
-    "best_price": 29.99,
-    "best_source": "Rollin Records",
-    "buy_link": "https://rollinrecs.com/products/rush-2112",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Rush",
-    "title": "2112 1LP",
-    "price": 29.99,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/rush-2112-1lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Rush-2112-1LP-602547116178.png?v=1772657811",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
+      },
       {
         "source": "uDiscover Music",
         "price": 29.99,
@@ -41966,8 +41352,8 @@
       }
     ],
     "best_price": 29.99,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/rush-2112-1lp",
+    "best_source": "Rollin Records",
+    "buy_link": "https://rollinrecs.com/products/rush-2112",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -42148,41 +41534,7 @@
         "source": "Rollin Records",
         "price": 29.99,
         "link": "https://rollinrecs.com/products/rush-rush"
-      }
-    ],
-    "best_price": 29.99,
-    "best_source": "Rollin Records",
-    "buy_link": "https://rollinrecs.com/products/rush-rush",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Rush+Rush+vinyl&tag=korndog20-20",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Rush",
-    "title": "Rush 1LP",
-    "price": 29.99,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/rush-rush-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/Rush_1LP.png?v=1767976342",
-    "keywords": [
-      "1lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "1lp",
-    "all_store_options": [
+      },
       {
         "source": "Sound of Vinyl",
         "price": 29.99,
@@ -42190,10 +41542,10 @@
       }
     ],
     "best_price": 29.99,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/rush-rush-lp",
+    "best_source": "Rollin Records",
+    "buy_link": "https://rollinrecs.com/products/rush-rush",
     "best_label": "KORNDOG FIND",
-    "amazon_link": "https://www.amazon.com/s?k=Rush+Rush+vinyl&tag=korndog20-20",
+    "amazon_link": "",
     "total": 5,
     "decision": "POST IF CONTENT-WORTHY",
     "breakdown": {
@@ -51863,48 +51215,6 @@
     }
   },
   {
-    "artist": "Bach Arrangements",
-    "title": "Vinyl Edition LP",
-    "price": 38.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/angela-hewitt-bach-arrangements-vinyl-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/Bach_Arrangements_-_Vinyl_Edition_LP.png?v=1771870190",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Sound of Vinyl",
-        "price": 38.98,
-        "link": "https://thesoundofvinyl.us/products/angela-hewitt-bach-arrangements-vinyl-edition-lp"
-      },
-      {
-        "source": "uDiscover Music",
-        "price": 38.98,
-        "link": "https://shop.udiscovermusic.com/products/angela-hewitt-bach-arrangements-vinyl-edition-lp"
-      }
-    ],
-    "best_price": 38.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/angela-hewitt-bach-arrangements-vinyl-edition-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
     "artist": "Bennie Green",
     "title": "Back On The Scene (Blue Note Tone Poet Series) LP",
     "price": 38.98,
@@ -52160,48 +51470,6 @@
     "best_price": 38.98,
     "best_source": "uDiscover Music",
     "buy_link": "https://shop.udiscovermusic.com/products/etta-james-tell-mama-chess-acoustic-sounds-series-180g-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Fading",
-    "title": "Vinyl Edition (LP)",
-    "price": 38.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/the-gesualdo-six-owain-park-fading-vinyl-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/LPA68285.png?v=1770409985",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Sound of Vinyl",
-        "price": 38.98,
-        "link": "https://thesoundofvinyl.us/products/the-gesualdo-six-owain-park-fading-vinyl-edition-lp"
-      },
-      {
-        "source": "uDiscover Music",
-        "price": 38.98,
-        "link": "https://shop.udiscovermusic.com/products/the-gesualdo-six-owain-park-fading-vinyl-edition-lp"
-      }
-    ],
-    "best_price": 38.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/the-gesualdo-six-owain-park-fading-vinyl-edition-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -52498,48 +51766,6 @@
     "best_price": 38.98,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/jonathan-blake-homeward-bound-tone-poet-vinyl-series-lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Kapustin: Piano Music",
-    "title": "Vinyl Edition (LP)",
-    "price": 38.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/marc-andre-hamelin-kapustin-piano-music-vinyl-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/LPA67433_8a158b45-ec3f-4abe-8661-322090f29aff.png?v=1770399436",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "all_store_options": [
-      {
-        "source": "Sound of Vinyl",
-        "price": 38.98,
-        "link": "https://thesoundofvinyl.us/products/marc-andre-hamelin-kapustin-piano-music-vinyl-edition-lp"
-      },
-      {
-        "source": "uDiscover Music",
-        "price": 38.98,
-        "link": "https://shop.udiscovermusic.com/products/marc-andre-hamelin-kapustin-piano-music-vinyl-edition-lp"
-      }
-    ],
-    "best_price": 38.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/marc-andre-hamelin-kapustin-piano-music-vinyl-edition-lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 5,
@@ -60776,50 +60002,6 @@
     "best_price": 54.98,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/james-horner-london-symphony-orchestra-braveheart-ost-2lp",
-    "best_label": "KORNDOG FIND",
-    "amazon_link": "",
-    "total": 4,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 0,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Shostakovich: Violin Concertos 1 & 2",
-    "title": "Vinyl Edition (2LP)",
-    "price": 54.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/alina-ibragimova-shostakovich-violin-concertos-1-2-vinyl-edition-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/LPA68313.png?v=1770667900",
-    "keywords": [
-      "2lp"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "2lp",
-    "all_store_options": [
-      {
-        "source": "Sound of Vinyl",
-        "price": 54.98,
-        "link": "https://thesoundofvinyl.us/products/alina-ibragimova-shostakovich-violin-concertos-1-2-vinyl-edition-2lp"
-      },
-      {
-        "source": "uDiscover Music",
-        "price": 54.98,
-        "link": "https://shop.udiscovermusic.com/products/alina-ibragimova-shostakovich-violin-concertos-1-2-vinyl-edition-2lp"
-      }
-    ],
-    "best_price": 54.98,
-    "best_source": "Sound of Vinyl",
-    "buy_link": "https://thesoundofvinyl.us/products/alina-ibragimova-shostakovich-violin-concertos-1-2-vinyl-edition-2lp",
     "best_label": "KORNDOG FIND",
     "amazon_link": "",
     "total": 4,
