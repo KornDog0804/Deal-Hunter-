@@ -3,16 +3,15 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 
-def load_json(filename: str):
-    with open(BASE / filename, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-# Optional helper
 try:
     from deal_selector import apply_best_links
 except Exception:
     def apply_best_links(items):
         return items
+
+def load_json(filename: str):
+    with open(BASE / filename, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 artists = load_json("artists.json")
 rules = load_json("rules.json")
@@ -43,7 +42,7 @@ def contains_ignore_keywords(title, version_text, keywords):
     haystack = " ".join([
         title or "",
         version_text or "",
-        * (keywords or [])
+        *(keywords or [])
     ]).lower()
 
     return any(k.lower() in haystack for k in filters.get("ignore_keywords", []))
@@ -136,7 +135,6 @@ def main():
 
     print(f"Loaded {len(raw_items)} raw items from {source_file}")
 
-    # Pick best links / best prices first if helper exists
     items = apply_best_links(raw_items)
 
     results = []
@@ -147,7 +145,6 @@ def main():
         scored = score_item(item)
         merged = {**item, **scored}
 
-        # Skip useless rows that still sneak through
         if merged.get("decision") == "IGNORE":
             continue
 
@@ -162,7 +159,6 @@ def main():
 
         results.append(merged)
 
-    # Best stuff first
     results.sort(
         key=lambda r: (
             -(r.get("total", 0) or 0),
