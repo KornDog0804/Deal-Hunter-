@@ -1,5 +1,5 @@
 {
-  "enforce_artist_whitelist": true,
+  "enforce_artist_whitelist": false,
   "allowed_artists": [
     "A Day To Remember",
     "A Perfect Circle",
