@@ -448,3 +448,83 @@ main {
   display: block;
   border: 1px solid var(--border);
 }
+.compact-header {
+  padding-bottom: 10px;
+}
+
+.compact-brand {
+  margin-bottom: 10px;
+}
+
+.compact-brand .sub {
+  max-width: 100%;
+  font-size: 13px;
+}
+
+.compact-controls {
+  margin-top: 10px;
+}
+
+.chip-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-top: 10px;
+}
+
+.chip-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nowrap-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  min-width: max-content;
+  padding-bottom: 2px;
+}
+
+.tight-main {
+  padding-top: 14px;
+}
+
+#siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.deal-cover-wrap {
+  margin-bottom: 14px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.deal-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
+.single-action {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 720px) {
+  .deal-cover {
+    max-height: none;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .chip-row {
+    flex-wrap: nowrap;
+  }
+}
