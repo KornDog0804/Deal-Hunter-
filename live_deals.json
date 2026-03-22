@@ -189,7 +189,7 @@
   },
   {
     "artist": "Paul Mccartney",
-    "title": "Paul Mccartney Flowers In The Dirt",
+    "title": "Flowers In The Dirt (LP)",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -203,7 +203,7 @@
   },
   {
     "artist": "Beastie Boys",
-    "title": "Beastie Boys To The 5 Boroughs 3Lp Deluxe",
+    "title": "To The 5 Boroughs 3LP Deluxe Edition",
     "price": 124.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -219,7 +219,7 @@
   },
   {
     "artist": "Paul Mccartney & Wings",
-    "title": "Paul Mccartney And Wings Man On The Run",
+    "title": "Man On The Run (LP)",
     "price": 29.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -233,7 +233,7 @@
   },
   {
     "artist": "Rush",
-    "title": "Rush Grace Under Pressure Super Deluxe 5Lp Blu Ray",
+    "title": "Grace Under Pressure (Super Deluxe) 5LP + Blu-Ray",
     "price": 374.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -263,7 +263,7 @@
   },
   {
     "artist": "System of a Down",
-    "title": "System Of A Down",
+    "title": "System of a Down",
     "price": 19.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -293,7 +293,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Spinal Tap This Is Spinal Tap Smell The Glove",
+    "title": "This Is Spinal Tap (Smell The Glove: Vinyl Edition) 1LP",
     "price": 39.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -309,7 +309,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Spinal Tap Break Like The Wind Blue Red Galaxy",
+    "title": "Break Like The Wind (Blue & Red Galaxy Color Vinyl) 1LP",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -325,7 +325,7 @@
   },
   {
     "artist": "Yellowcard",
-    "title": "Yellowcard Better Days Blue",
+    "title": "Better Days (Blue) 1LP",
     "price": 29.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -355,7 +355,7 @@
   },
   {
     "artist": "Red Hot Chili Peppers",
-    "title": "Red Hot Chili Peppers Freaky Styley",
+    "title": "Freaky Styley 1LP",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -371,7 +371,7 @@
   },
   {
     "artist": "Red Hot Chili Peppers",
-    "title": "Red Hot Chili Peppers Uplift Mofo Party Plan",
+    "title": "Uplift Mofo Party Plan 1LP",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -387,7 +387,7 @@
   },
   {
     "artist": "Rush",
-    "title": "Rush Hold Your Fire 180G",
+    "title": "Hold Your Fire (180g) LP",
     "price": 27.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -449,7 +449,7 @@
   },
   {
     "artist": "Red Hot Chili Peppers",
-    "title": "Red Hot Chili Peppers Mothers Milk",
+    "title": "Mother's Milk 1LP",
     "price": 29.99,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -464,36 +464,8 @@
     "version": "1lp"
   },
   {
-    "artist": "Phantogram",
-    "title": "Phantogram Voices 1Cd",
-    "price": 13.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/phantogram-voices-1cd",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Phantogram-Voices-1CD-602537664597.png?v=1772656745",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Red Hot Chili Peppers",
-    "title": "Mothers Milk 2003 Reissue 1Cd",
-    "price": 13.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/mothers-milk-2003-reissue-1cd",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/mothers-milk-cd.png?v=1772655854",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Paul McCartney",
-    "title": "Paul Mccartney Flowers In The Dirt",
+    "title": "Flowers In The Dirt (LP)",
     "price": 29.99,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -506,22 +478,8 @@
     "version": "standard"
   },
   {
-    "artist": "Paul McCartney",
-    "title": "Paul Mccartney Flaming Pie 1Cd",
-    "price": 13.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/paul-mccartney-flaming-pie-1cd",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/00602478967245_PM_FP_Visual.png?v=1772485186",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Beastie Boys",
-    "title": "Beastie Boys To The 5 Boroughs 3Lp Deluxe",
+    "title": "To The 5 Boroughs (Deluxe Edition) 3LP",
     "price": 124.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -536,38 +494,8 @@
     "version": "deluxe"
   },
   {
-    "artist": "Beastie Boys",
-    "title": "Beastie Boys To The 5 Boroughs 2Cd Deluxe",
-    "price": 24.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/beastie-boys-to-the-5-boroughs-2cd-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/beastieboys2cd.png?v=1771942878",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "Aerosmith",
-    "title": "Green Wings Hoodie",
-    "price": 55.0,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/green-wings-hoodie",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/AERO22-09-STPADDY-HOOD.png?v=1770745739",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Spinal Tap",
-    "title": "Stonehenge Die Cut 7",
+    "title": "Stonehenge Die Cut Picture Disc 7\"",
     "price": 19.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -583,7 +511,7 @@
   },
   {
     "artist": "Paul McCartney & Wings",
-    "title": "Paul Mccartney And Wings Man On The Run",
+    "title": "Man On The Run (LP)",
     "price": 29.98,
     "source": "uDiscover Music",
     "source_type": "shopify_store",
@@ -620,34 +548,6 @@
     "source_type": "shopify_store",
     "link": "https://riserecords.com/products/sm41hxh0tp-lp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/a4f6a03f5e264a85a405e80360dd205d-121783.jpg?v=1702388896",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "Tree City Black T-Shirt",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0treebl-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/89fcf7a70cb04e5eae9583b2696747bc.jpg?v=1556911760",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "Pantheon Crystal Black T-Shirt",
-    "price": 30.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0pnthcb-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Both.jpg?v=1762197677",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -703,20 +603,6 @@
     "version": "smush"
   },
   {
-    "artist": "blessthefall",
-    "title": "GALLOWS Album Art Black T-Shirt",
-    "price": 30.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/btf0gllwbl-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/BTF_ALBUMBASED.jpg?v=1759934307",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Dance Gavin Dance",
     "title": "Pantheon Ruby & White Smush w/ Spring Green & Aqua Splatter Double Vinyl LP",
     "price": 37.0,
@@ -741,34 +627,6 @@
     "source_type": "shopify_store",
     "link": "https://riserecords.com/products/kt00eib0gb-lp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/32a0f25de48346bdbba53f132b154f41.jpg?v=1704912027",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Sevendust",
-    "title": "All I See Is War Black T-Shirt",
-    "price": 12.5,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/7dstaisibl-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/0dff82952fd04ca39aef7dffcd5d6411.jpg?v=1556909453",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Sleeping With Sirens",
-    "title": "Guitar Tie Dye T-Shirt",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/sws0guittd-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/990ce716d1cc433bbfe80d8f7f831e66.jpg?v=1556906432",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -843,48 +701,6 @@
   },
   {
     "artist": "Dance Gavin Dance",
-    "title": "Pantheon Black T-Shirt",
-    "price": 30.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0pnthbl-ts",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/DGD_PANTHEON-TEE_BOTH.jpg?v=1762197345",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "FunkNBump White Long Sleeve",
-    "price": 40.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0funkwh-ls",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/9db3785c7507480ab3392bd09ee67a5b.jpg?v=1746638072",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "Strawberry's Daughters Heavy Faded Black Long Sleeve",
-    "price": 40.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0strafb-ls",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/DGD_STRAWBERRY-BOTH.jpg?v=1746639504",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
     "title": "Strawberry's Daughters Black Pullover",
     "price": 60.0,
     "source": "Rise Records",
@@ -898,20 +714,6 @@
     "version": "standard"
   },
   {
-    "artist": "Dance Gavin Dance",
-    "title": "Jackpot Juicer Black Mesh Trucker Hat",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0jj00bl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/b18179d1b5c047198be31b89996077d5.jpg?v=1709832557",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Sleeping With Sirens",
     "title": "Rectangle Text Red Sticker",
     "price": 1.0,
@@ -919,20 +721,6 @@
     "source_type": "shopify_store",
     "link": "https://riserecords.com/products/sws0rectrd-st",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/76e77e6f9b554aa7afd45b2c36b6a554-814311.jpg?v=1735627570",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
-    "title": "Afterburner Blue Cassette",
-    "price": 8.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0aftbbu-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/698996880ae349d3881da46a9fc26a7e.jpg?v=1649354136",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -999,20 +787,6 @@
   },
   {
     "artist": "Dance Gavin Dance",
-    "title": "Patch Corduroy Natural Bucket Hat",
-    "price": 30.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/dgd0ptchcn-fh",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/35d7571ab7944f36ad4fa91a73fe170f.jpg?v=1709309524",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Dance Gavin Dance",
     "title": "Summertime Gladness / Pussy Vultures Violet & Pink Smush 7\" Vinyl",
     "price": 9.0,
     "source": "Rise Records",
@@ -1045,8 +819,177 @@
     "version": "splatter clear"
   },
   {
+    "artist": "MATADOR DIRECT",
+    "title": "WATER FROM YOUR EYES 'EVERYONE'S CRUSHED' LP",
+    "price": 22.99,
+    "source": "Brooklyn Vegan",
+    "source_type": "shopify_store",
+    "link": "https://shop.brooklynvegan.com/products/water-from-your-eyes-everyones-crushed-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/191401193016-CoverArtImage1.jpg?v=1773427022",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "SUPER7",
+    "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
+    "price": 72.99,
+    "source": "Brooklyn Vegan",
+    "source_type": "shopify_store",
+    "link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773179633",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "ROCKSAX",
+    "title": "AC/DC LOGO AIR FRESHENER",
+    "price": 6.99,
+    "source": "Brooklyn Vegan",
+    "source_type": "shopify_store",
+    "link": "https://shop.brooklynvegan.com/products/ac-dc-logo-air-freshener",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/ACDCAIR.png?v=1773088652",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Concord Records",
+    "title": "TEARS FOR FEARS 'SONGS FOR A NERVOUS PLANET' 2LP (Black Vinyl)",
+    "price": 29.0,
+    "source": "Brooklyn Vegan",
+    "source_type": "shopify_store",
+    "link": "https://shop.brooklynvegan.com/products/songs-for-a-nervous-planet-black-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/TearsForFears_NervousPlanet_2LP_Wide_Black.png?v=1773087159",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "Universal",
+    "title": "PAUL MCCARTNEY 'FLOWERS IN THE DIRT' LP",
+    "price": 30.99,
+    "source": "Brooklyn Vegan",
+    "source_type": "shopify_store",
+    "link": "https://shop.brooklynvegan.com/products/paul-mccartney-flowers-in-the-dirt-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/83_76f9148f-d7a3-4218-aa29-6b3d47d88565.webp?v=1772806506",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'ORDER OF THE BLACK' 2LP (Black Ice Vinyl)",
+    "price": 33.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-order-of-the-black-on-black-ice-double-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/634164437152-1.jpg?v=1773762790",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'GRIMMEST HITS' 2LP (Forest Green Vinyl)",
+    "price": 33.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-grimmest-hits-on-forest-green-double-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/BLS_MNK-LP-443494_GrimmestHits_LP_Mockup_FRONT.png?v=1773762790",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'CATACOMBS OF THE BLACK' 2LP (Gold Vinyl)",
+    "price": 33.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-catacombs-of-the-black-vatican-on-gold-double-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/634164437145-1.jpg?v=1773762790",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'SHOT TO HELL' 2LP (Yellow Canary Vinyl)",
+    "price": 28.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-shot-to-hell-on-canary-yellow-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/634164434885-1.jpg?v=1773762789",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'DOOM CREW INC.' DELUXE 2LP",
+    "price": 99.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-doom-crew-inc-deluxe-edition",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/BlackLabelSocietyDoomCrewIncDeluxeBox2048x2048_2c23edb3-4224-4c46-a878-c3bb0afc5d86.jpg?v=1773762790",
+    "keywords": [
+      "deluxe",
+      "2lp"
+    ],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "deluxe 2lp"
+  },
+  {
+    "artist": "MNRK Heavy",
+    "title": "BLACK LABEL SOCIETY 'STRONGER THAN DEATH' 2LP (Magenta Vinyl)",
+    "price": 33.98,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/black-label-society-stronger-than-death-magenta-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/634164434878-1.jpg?v=1773762789",
+    "keywords": [
+      "2lp"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "2lp"
+  },
+  {
     "artist": "NMR Distribution",
-    "title": "Ghost Prequelle Jigsaw Puzzle",
+    "title": "GHOST 'PREQUELLE' JIGSAW PUZZLE",
     "price": 16.99,
     "source": "Revolver",
     "source_type": "shopify_store",
@@ -1060,7 +1003,7 @@
   },
   {
     "artist": "NMR Distribution",
-    "title": "Ghost Opus Eponymous Jigsaw Puzzle",
+    "title": "GHOST 'OPUS EPONYMOUS' JIGSAW PUZZLE",
     "price": 16.99,
     "source": "Revolver",
     "source_type": "shopify_store",
@@ -1074,7 +1017,7 @@
   },
   {
     "artist": "NMR Distribution",
-    "title": "Ghost Infestissumam Jigsaw Puzzle",
+    "title": "GHOST 'INFESTISSUMAM' JIGSAW PUZZLE",
     "price": 16.99,
     "source": "Revolver",
     "source_type": "shopify_store",
@@ -1088,7 +1031,7 @@
   },
   {
     "artist": "SUPER7",
-    "title": "Ghost Papa V Perpetua Bat Wings Ultimates Figure",
+    "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
     "price": 72.99,
     "source": "Revolver",
     "source_type": "shopify_store",
@@ -1101,15 +1044,15 @@
     "version": "standard"
   },
   {
-    "artist": "DANCE GAVIN DANCE: NIGHT OF THE FRUIT MAFIA//DANCE OF THE ROBOT GRAPHIC NOVEL",
-    "title": "SIGNED PLATINUM EDITION",
-    "price": 199.99,
+    "artist": "ROCKSAX",
+    "title": "AC/DC LOGO AIR FRESHENER",
+    "price": 6.99,
     "source": "Revolver",
     "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dance-gavin-dance-night-of-the-fruit-mafia-dance-of-the-robot-graphic-novel-signed-platinum-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/bigger.png?v=1772647307",
+    "link": "https://shop.revolvermag.com/products/ac-dc-logo-air-freshener",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/ACDCAIR.png?v=1773088610",
     "keywords": [],
-    "deal_quality": "normal",
+    "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -1130,7 +1073,7 @@
   },
   {
     "artist": "Z2 Comics",
-    "title": "Dance Gavin Dance Pantheon Double",
+    "title": "DANCE GAVIN DANCE 'PANTHEON' 2LP (Limited Edition, Sea Blue & Baby Blue Smush w/ Canary Yellow & Lemon Splatter Vinyl)",
     "price": 37.0,
     "source": "Revolver",
     "source_type": "shopify_store",
@@ -1146,22 +1089,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited splatter 2lp smush"
-  },
-  {
-    "artist": "DANCE GAVIN DANCE: NIGHT OF THE FRUIT MAFIA//DANCE OF THE ROBOT GRAPHIC NOVEL",
-    "title": "DELUXE VINYL EDITION",
-    "price": 129.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dance-gavin-dance-night-of-the-fruit-mafia-dance-of-the-robot-graphic-novel-deluxe-vinyl-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DGD2-ECOMM_MOCK-SlipcaseandVinyl_b09adedb-d297-443f-8ac4-8b6760a2c06c.png?v=1772647307",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
   },
   {
     "artist": "MÖTLEY CRÜE: THE DIRT: DECLASSIFIED GRAPHIC NOVEL",
@@ -1303,7 +1230,7 @@
   },
   {
     "artist": "Pierce The Veil",
-    "title": "Selfish Machines Swirl",
+    "title": "Selfish Machines Exclusive LP (Swirl)",
     "price": 129.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1336,7 +1263,7 @@
   },
   {
     "artist": "Sleep Token",
-    "title": "Even In Arcadia Indie Blended Lapis Lazuli",
+    "title": "Even In Arcadia 2LP (Indie Exclusive Blended Lapis Lazuli)",
     "price": 49.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1353,7 +1280,7 @@
   },
   {
     "artist": "I Prevail",
-    "title": "Violent Nature Indie Clear Smoke",
+    "title": "Violent Nature LP (Indie Exclusive Clear Smoke Vinyl)",
     "price": 33.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1370,7 +1297,7 @@
   },
   {
     "artist": "Sleep Token",
-    "title": "This Place Will Become Your Tomb",
+    "title": "This Place Will Become Your Tomb 2LP",
     "price": 47.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1404,7 +1331,7 @@
   },
   {
     "artist": "Ghost",
-    "title": "Meliora Green Smoke",
+    "title": "Meliora 2LP (Green Smoke Vinyl)",
     "price": 59.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1420,7 +1347,7 @@
   },
   {
     "artist": "Various Artists",
-    "title": "Hazbin Hotel Original Soundtrack Grape Ghost",
+    "title": "Hazbin Hotel Original Soundtrack LP (Grape Ghost)",
     "price": 37.99,
     "source": "Newbury Comics",
     "source_type": "shopify_store",
@@ -1434,7 +1361,7 @@
   },
   {
     "artist": "A Day To Remember",
-    "title": "A Day To Remember What Separates Me From You 15Th",
+    "title": "What Separates Me From You (15th Anniversary Edition) (LP)",
     "price": 28.0,
     "source": "Craft Recordings",
     "source_type": "shopify_store",
@@ -1550,20 +1477,6 @@
   },
   {
     "artist": "Black Label Society",
-    "title": "Engines of Demolition Orange Cassette",
-    "price": 9.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/black-label-society-engines-of-demolition-orange-cassette",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Cassette_Mockup.png?v=1765821671",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Black Label Society",
     "title": "Engines of Demolition Custard Zoetrope Vinyl",
     "price": 48.98,
     "source": "MNRK Heavy",
@@ -1641,22 +1554,6 @@
     "version": "standard"
   },
   {
-    "artist": "Black Label Society",
-    "title": "Engines of Demolition Orange Crush Clear Vinyl + 7\" Bonus Track Bundle",
-    "price": 49.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/black-label-society-engines-of-demolition-on-orange-crush-clear-vinyl-7-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/7Inch_443810_Bundle_804c6ec0-42c2-478d-95ea-6c8c7c1388b9.png?v=1767898512",
-    "keywords": [
-      "clear"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "clear"
-  },
-  {
     "artist": "Enterprise Earth",
     "title": "The Chosen Ghostly 2LP",
     "price": 33.98,
@@ -1719,36 +1616,6 @@
     "version": "variant"
   },
   {
-    "artist": "Judas Priest",
-    "title": "Sad Wings of Destiny Black T-Shirt",
-    "price": 30.0,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/judas-priest-sad-wings-of-destiny-black-t-shirt",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/JudasPriestSadWingsofDestinyShirtRockandRollMerch.png?v=1678391821",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Black Label Society",
-    "title": "Mafia Smog Vinyl + Patch",
-    "price": 33.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/black-label-society-mafia-smog-vinyl-spotify-fans-first-variant-patch-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/BLS_Mafia_SMOG_PATCH_Combo_5bbd97ef-cdea-4a99-a300-cd6e27a29aab.png?v=1741701960",
-    "keywords": [
-      "variant"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "variant"
-  },
-  {
     "artist": "Pierce The Veil",
     "title": "A Flair For The Dramatic Pink",
     "price": 11.0,
@@ -1756,6 +1623,20 @@
     "source_type": "shopify_store",
     "link": "https://equalvision.com/products/ptv0flaipk-cp",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/7f4b7b36b0af4aa2850901a5c0456f20.jpg?v=1738167722",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Pierce The Veil",
+    "title": "DO NOT MAKE THIS ITEM LIVE FOR SALE",
+    "price": 10.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/ptv0e16100-cd",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/b0b67aa9e647428da2b892b5cc02d953.jpg?v=1716305060",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
