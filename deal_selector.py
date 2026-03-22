@@ -1,7 +1,13 @@
 import re
 from collections import defaultdict
+from urllib.parse import quote
 
 AMAZON_TAG = "korndog20-20"
+
+# Put your real Walmart affiliate base here
+# Example style:
+# https://goto.walmart.com/c/2189748/565706/9383?veh=aff&sourceid=imp_XXXXXXXXXXXXXXX&u=
+WALMART_AFFILIATE_BASE = "https://goto.walmart.com/c/2189748/565706/9383?veh=aff&sourceid=imp_placeholder&u="
 
 COMMON_WORDS_TO_STRIP = [
     "exclusive",
@@ -45,7 +51,12 @@ COMMON_WORDS_TO_STRIP = [
     "silver",
     "gold",
     "moonlight",
-    "pale"
+    "pale",
+    "transparent",
+    "translucent",
+    "smoke",
+    "solid",
+    "indie"
 ]
 
 AMAZON_FRIENDLY_ARTISTS = {
@@ -64,6 +75,7 @@ AMAZON_FRIENDLY_ARTISTS = {
     "hanson",
     "john lennon",
     "mariah carey",
+    "metallica",
     "nelly furtado",
     "new found glory",
     "nirvana",
@@ -76,6 +88,7 @@ AMAZON_FRIENDLY_ARTISTS = {
     "sleep token",
     "slipknot",
     "something corporate",
+    "soundgarden",
     "spinal tap",
     "styx",
     "sum 41",
@@ -86,7 +99,10 @@ AMAZON_FRIENDLY_ARTISTS = {
     "thrice",
     "white lion",
     "wings",
-    "yellowcard"
+    "yellowcard",
+    "alice in chains",
+    "balance and composure",
+    "kyuss"
 }
 
 STRICT_NICHE_TERMS = [
@@ -130,7 +146,11 @@ SAFE_AMAZON_TITLE_EXTRAS = {
     "root down",
     "north",
     "the artist in the ambulance",
-    "sticks and stones"
+    "sticks and stones",
+    "metallica",
+    "jar of flies",
+    "louder than love",
+    "blues for the red sun"
 }
 
 def normalize_key(text):
@@ -162,7 +182,11 @@ def clean_album_for_amazon(title: str) -> str:
 
 def normalize_group_title(title: str) -> str:
     text = normalize_key(title)
-    text = re.sub(r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|variant|splatter|zoetrope|etched|etching|black|clear|opaque|marble|smush|starburst)\b", " ", text)
+    text = re.sub(
+        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|variant|splatter|zoetrope|etched|etching|black|clear|opaque|marble|smush|starburst|transparent|translucent|smoke|solid|indie)\b",
+        " ",
+        text
+    )
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
@@ -191,10 +215,10 @@ def artist_is_amazon_friendly(artist: str) -> bool:
 
 def title_is_safe_for_amazon(title: str) -> bool:
     title_key = normalize_group_title(title)
+
     if title_key in SAFE_AMAZON_TITLE_EXTRAS:
         return True
 
-    # Safer default for cleaner, normal album names
     if len(title_key.split()) >= 2 and len(title_key) <= 40:
         return True
 
@@ -244,8 +268,32 @@ def build_amazon_link(item: dict) -> str:
 
     return f"https://www.amazon.com/s?k={query}&tag={AMAZON_TAG}"
 
+def build_walmart_affiliate_link(url: str) -> str:
+    url = (url or "").strip()
+    if not url:
+        return ""
+
+    if "goto.walmart.com" in url:
+        return url
+
+    if "walmart.com" not in url:
+        return url
+
+    return f"{WALMART_AFFILIATE_BASE}{quote(url, safe='')}"
+
+def build_buy_link(item: dict) -> str:
+    original = (item.get("link", "") or "").strip()
+    source = normalize_key(item.get("source", ""))
+
+    if not original:
+        return ""
+
+    if "walmart.com" in original or source == "walmart":
+        return build_walmart_affiliate_link(original)
+
+    return original
+
 def choose_best_group_item(items):
-    # Lowest price wins. If tied, prefer trusted non-marketplace type first.
     source_rank = {
         "trusted_store": 0,
         "shopify_store": 0,
@@ -281,19 +329,24 @@ def build_store_options(items):
     )
 
     for item in sorted_items:
+        original_link = (item.get("link", "") or "").strip()
+        source = item.get("source", "Unknown")
+        wrapped_link = build_buy_link(item)
+
         key = (
-            (item.get("source", "") or "").lower().strip(),
+            source.lower().strip(),
             safe_float(item.get("price", 999999)),
-            (item.get("link", "") or "").strip()
+            original_link
         )
         if key in seen:
             continue
         seen.add(key)
 
         rows.append({
-            "source": item.get("source", "Unknown"),
+            "source": source,
             "price": safe_float(item.get("price", 0), 0),
-            "link": item.get("link", "")
+            "link": wrapped_link,
+            "original_link": original_link
         })
 
     return rows
@@ -319,13 +372,13 @@ def apply_best_links(raw_items):
         best = choose_best_group_item(items)
         best_price = safe_float(best.get("price", 0), 0)
         best_source = best.get("source", "Unknown")
-        buy_link = best.get("link", "")
+        buy_link = build_buy_link(best)
         amazon_link = build_amazon_link(best)
 
         label = "KORNDOG FIND"
         if "amazon.com" in buy_link.lower():
             label = "AMAZON PICK"
-        elif "walmart.com" in buy_link.lower():
+        elif "walmart.com" in buy_link.lower() or "goto.walmart.com" in buy_link.lower():
             label = "WALMART PICK"
 
         merged = dict(best)
@@ -340,8 +393,9 @@ def apply_best_links(raw_items):
 
     final_items.sort(
         key=lambda x: (
-            -safe_float(x.get("total", 0), 0),
-            safe_float(x.get("best_price", 999999))
+            safe_float(x.get("best_price", 999999)),
+            normalize_key(x.get("artist", "")),
+            normalize_key(x.get("title", ""))
         )
     )
 
