@@ -139,6 +139,9 @@
       if (source.includes("merchbar")) return "merchbar";
       if (source.includes("acoustic sounds")) return "acoustic sounds";
       if (source.includes("ride records")) return "ride records";
+      if (source.includes("craft recordings")) return "craft recordings";
+      if (source.includes("mnrk")) return "mnrk heavy";
+      if (source.includes("revolver")) return "revolver";
 
       return source;
     }
@@ -161,7 +164,10 @@
         "deep discount": "Deep Discount",
         "merchbar": "Merchbar",
         "acoustic sounds": "Acoustic Sounds",
-        "ride records": "Ride Records"
+        "ride records": "Ride Records",
+        "craft recordings": "Craft Recordings",
+        "mnrk heavy": "MNRK Heavy",
+        "revolver": "Revolver"
       };
 
       return map[key] || String(value || "").trim();
@@ -358,37 +364,64 @@ Vinyl Therapy never dies 🟣🟢`;
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
 
-      const picks = deals.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
+      const picks = deals
+        .filter(d => (d.total ?? 0) >= 8)
+        .slice(0, 6);
 
       if (!picks.length) {
-        featuredList.innerHTML = `<div class="empty">No top picks yet. The good stuff is probably loading in from the back room.</div>`;
-        return;
+        featuredList.innerHTML = `
+          <div class="empty">
+            No top picks yet. The good stuff is probably loading in from the back room.
+          </div>
+        `;
+        return picks;
       }
 
-      picks.forEach(deal => featuredList.appendChild(createDealCard(deal)));
+      picks.forEach(deal => {
+        featuredList.appendChild(createDealCard(deal));
+      });
+
+      return picks;
     }
 
-    function renderDeals(deals) {
+    function renderDeals(deals, featuredDeals = []) {
       const dealList = document.getElementById("dealList");
       const pager = document.getElementById("pager");
       const pageStatus = document.getElementById("pageStatus");
+
       dealList.innerHTML = "";
 
-      if (!deals.length) {
-        dealList.innerHTML = `<div class="empty">No deals match your filter. The crate came up dust today.</div>`;
+      const featuredKeys = new Set(
+        featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+      );
+
+      const remainingDeals = deals.filter(d => {
+        const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+        return !featuredKeys.has(key);
+      });
+
+      if (!remainingDeals.length) {
+        dealList.innerHTML = `
+          <div class="empty">
+            No extra deals beyond the featured picks right now.
+          </div>
+        `;
         pager.style.display = "none";
         pageStatus.textContent = "Page 0";
         return;
       }
 
-      const totalPages = Math.max(1, Math.ceil(deals.length / DEALS_PER_PAGE));
+      const totalPages = Math.max(1, Math.ceil(remainingDeals.length / DEALS_PER_PAGE));
+
       if (currentPage > totalPages) currentPage = 1;
 
       const start = (currentPage - 1) * DEALS_PER_PAGE;
       const end = start + DEALS_PER_PAGE;
-      const pageDeals = deals.slice(start, end);
+      const pageDeals = remainingDeals.slice(start, end);
 
-      pageDeals.forEach(deal => dealList.appendChild(createDealCard(deal)));
+      pageDeals.forEach(deal => {
+        dealList.appendChild(createDealCard(deal));
+      });
 
       pager.style.display = totalPages > 1 ? "flex" : "none";
       pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
@@ -461,10 +494,12 @@ Vinyl Therapy never dies 🟣🟢`;
 
     function applyFilters(resetPage = true) {
       if (resetPage) currentPage = 1;
+
       const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
-      renderFeatured(filtered);
-      renderDeals(filtered);
+
+      const featuredDeals = renderFeatured(filtered);
+      renderDeals(filtered, featuredDeals);
     }
 
     function initQuickFilters() {
@@ -488,7 +523,18 @@ Vinyl Therapy never dies 🟣🟢`;
       });
 
       document.getElementById("nextPageBtn").addEventListener("click", () => {
-        const total = Math.max(1, Math.ceil(getFilteredDeals().length / DEALS_PER_PAGE));
+        const totalFiltered = getFilteredDeals();
+        const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
+        const featuredKeys = new Set(
+          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+        );
+        const remainingDeals = totalFiltered.filter(d => {
+          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+          return !featuredKeys.has(key);
+        });
+
+        const total = Math.max(1, Math.ceil(remainingDeals.length / DEALS_PER_PAGE));
+
         if (currentPage < total) {
           currentPage += 1;
           applyFilters(false);
