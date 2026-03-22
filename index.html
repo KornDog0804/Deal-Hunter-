@@ -8,16 +8,16 @@
 </head>
 <body>
   <header id="siteHeader">
-    <div class="header-wrap">
-      <div class="brand">
+    <div class="header-wrap compact-header">
+      <div class="brand compact-brand">
         <div class="eyebrow">Korndog Records</div>
         <h1>Korndog Deal Board</h1>
         <div class="sub">
-          The best vinyl deals I’m seeing right now. Tap in for Grail Alerts, cheap heaters, and KornDog Finds worth chasing.
+          Best vinyl deals, best buy link first, clean post copy fast.
         </div>
       </div>
 
-      <div class="controls">
+      <div class="controls compact-controls">
         <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
         <select id="scoreFilter">
           <option value="0">All deals</option>
@@ -27,26 +27,19 @@
         </select>
       </div>
 
-      <div class="chip-row">
-        <div class="filter-chip active" data-quick="all">All</div>
-        <div class="filter-chip" data-quick="grail">Grail Alerts</div>
-        <div class="filter-chip" data-quick="under30">Under $30</div>
-        <div class="filter-chip" data-quick="amazon">Amazon Picks</div>
-        <div class="filter-chip" data-quick="korndog">KornDog Finds</div>
+      <div class="chip-scroll">
+        <div class="chip-row nowrap-row">
+          <div class="filter-chip active" data-quick="all">All</div>
+          <div class="filter-chip" data-quick="grail">Grail Alerts</div>
+          <div class="filter-chip" data-quick="under30">Under $30</div>
+          <div class="filter-chip" data-quick="amazon">Amazon Picks</div>
+          <div class="filter-chip" data-quick="korndog">KornDog Finds</div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-card">
-        <h2>Vinyl Therapy Never Dies</h2>
-        <p>
-          This board is built to make Facebook posting easier and deal hunting faster. Best price up front, best buy button first, Amazon backup only when it actually makes sense.
-        </p>
-      </div>
-    </section>
-
+  <main class="tight-main">
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
       <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
@@ -116,6 +109,12 @@
 
     function getAmazonLink(deal) {
       const link = (deal.amazon_link || "").trim();
+
+      if (!link) return "";
+      if (!link.includes("amazon.com")) return "";
+      if (!link.includes("tag=korndog20-20")) return "";
+      if (link.includes("s?k=") && link.length > 220) return "";
+
       return link;
     }
 
@@ -234,7 +233,7 @@ Vinyl Therapy never dies 🟣🟢`;
           </div>
         </div>
 
-        <div class="deal-actions">
+        <div class="deal-actions ${amazonLink ? "" : "single-action"}">
           <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Shop Deal</a>
           ${amazonButtonHtml}
         </div>
@@ -303,10 +302,11 @@ Vinyl Therapy never dies 🟣🟢`;
       const score = deal.total ?? 0;
       const bestPrice = Number(deal.best_price || deal.price || 0);
       const label = deal.best_label || "";
+      const amazonLink = getAmazonLink(deal);
 
       if (activeQuickFilter === "grail") return score >= 9;
       if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
-      if (activeQuickFilter === "amazon") return label === "AMAZON PICK" || !!getAmazonLink(deal);
+      if (activeQuickFilter === "amazon") return !!amazonLink;
       if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
       return true;
     }
@@ -347,31 +347,6 @@ Vinyl Therapy never dies 🟣🟢`;
       });
     }
 
-    function initAutoHideHeader() {
-      const header = document.getElementById("siteHeader");
-      let lastY = window.scrollY;
-      let ticking = false;
-
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const currentY = window.scrollY;
-
-            if (currentY > lastY && currentY > 120) {
-              header.classList.add("header-hidden");
-            } else {
-              header.classList.remove("header-hidden");
-            }
-
-            lastY = currentY;
-            ticking = false;
-          });
-
-          ticking = true;
-        }
-      });
-    }
-
     async function init() {
       try {
         const res = await fetch("./scored_deals.json?_=" + Date.now());
@@ -391,7 +366,6 @@ Vinyl Therapy never dies 🟣🟢`;
     document.getElementById("scoreFilter").addEventListener("change", applyFilters);
 
     initQuickFilters();
-    initAutoHideHeader();
     init();
   </script>
 </body>
