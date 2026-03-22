@@ -1280,30 +1280,31 @@
   },
   {
     "artist": "A Day To Remember",
-    "title": "What Separates Me From You (15th Anniversary Edition) (LP)",
+    "title": "What Separates Me From You",
     "price": 28.0,
     "source": "Craft Recordings",
     "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/ADTR_WHATSEPARATESMEFROMYOU_ALTCOVERPACKSHOT-WIDE-T09.png?v=1759159043",
+    "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-electric-smoke-craft-recordings-exclusive-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/ADTR_WHATSEPARATESMEFROMYOU_ALTCOVERPACKSHOT-WIDE-SB06.png?v=1759159017",
     "keywords": [
+      "exclusive",
       "anniversary"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "anniversary",
+    "version": "exclusive anniversary",
     "best_price": 28.0,
     "best_source": "Craft Recordings",
-    "buy_link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-lp",
-    "amazon_link": "https://www.amazon.com/s?k=A+Day+To+Remember+What+Separates+Me+From+You+(15th+Anniversary+Edition)+(LP)+vinyl&tag=korndog20-20",
+    "buy_link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-electric-smoke-craft-recordings-exclusive-lp",
+    "amazon_link": "https://www.amazon.com/s?k=A+Day+To+Remember+What+Separates+Me+From+You+vinyl&tag=korndog20-20",
     "best_label": "KORNDOG FIND",
     "all_sources": [
       {
         "source": "Craft Recordings",
         "price": 28.0,
-        "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-lp",
-        "version": "anniversary"
+        "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-electric-smoke-craft-recordings-exclusive-lp",
+        "version": "exclusive anniversary"
       }
     ],
     "total": 7,
@@ -2131,27 +2132,21 @@
     "artist": "ROCKSAX",
     "title": "AC/DC LOGO AIR FRESHENER",
     "price": 6.99,
-    "source": "Brooklyn Vegan",
+    "source": "Revolver",
     "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/ac-dc-logo-air-freshener",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/ACDCAIR.png?v=1773088652",
+    "link": "https://shop.revolvermag.com/products/ac-dc-logo-air-freshener",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/ACDCAIR.png?v=1773088610",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
     "best_price": 6.99,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/ac-dc-logo-air-freshener",
+    "best_source": "Revolver",
+    "buy_link": "https://shop.revolvermag.com/products/ac-dc-logo-air-freshener",
     "amazon_link": "https://www.amazon.com/s?k=ROCKSAX+AC/DC+LOGO+AIR+FRESHENER+vinyl&tag=korndog20-20",
     "best_label": "KORNDOG FIND",
     "all_sources": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 6.99,
-        "link": "https://shop.brooklynvegan.com/products/ac-dc-logo-air-freshener",
-        "version": "standard"
-      },
       {
         "source": "Revolver",
         "price": 6.99,
@@ -2308,44 +2303,6 @@
         "source": "Sound of Vinyl",
         "price": 19.98,
         "link": "https://thesoundofvinyl.us/products/system-of-a-down",
-        "version": "standard"
-      }
-    ],
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "MATADOR DIRECT",
-    "title": "WATER FROM YOUR EYES 'EVERYONE'S CRUSHED' LP",
-    "price": 22.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/water-from-your-eyes-everyones-crushed-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/191401193016-CoverArtImage1.jpg?v=1773427022",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "best_price": 22.99,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/water-from-your-eyes-everyones-crushed-lp",
-    "amazon_link": "https://www.amazon.com/s?k=MATADOR+DIRECT+WATER+FROM+YOUR+EYES+'EVERYONE'S+CRUSHED'+LP+vinyl&tag=korndog20-20",
-    "best_label": "KORNDOG FIND",
-    "all_sources": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 22.99,
-        "link": "https://shop.brooklynvegan.com/products/water-from-your-eyes-everyones-crushed-lp",
         "version": "standard"
       }
     ],
@@ -2858,46 +2815,6 @@
         "source": "Revolver",
         "price": 28.98,
         "link": "https://shop.revolvermag.com/products/black-label-society-shot-to-hell-on-canary-yellow-vinyl",
-        "version": "2lp"
-      }
-    ],
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Concord Records",
-    "title": "TEARS FOR FEARS 'SONGS FOR A NERVOUS PLANET' 2LP (Black Vinyl)",
-    "price": 29.0,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/songs-for-a-nervous-planet-black-vinyl-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/TearsForFears_NervousPlanet_2LP_Wide_Black.png?v=1773087159",
-    "keywords": [
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "2lp",
-    "best_price": 29.0,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/songs-for-a-nervous-planet-black-vinyl-2lp",
-    "amazon_link": "https://www.amazon.com/s?k=Concord+Records+TEARS+FOR+FEARS+'SONGS+FOR+A+NERVOUS+PLANET'+2LP+(Black+Vinyl)+vinyl&tag=korndog20-20",
-    "best_label": "KORNDOG FIND",
-    "all_sources": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 29.0,
-        "link": "https://shop.brooklynvegan.com/products/songs-for-a-nervous-planet-black-vinyl-2lp",
         "version": "2lp"
       }
     ],
@@ -3435,7 +3352,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Break Like The Wind (Blue & Red Galaxy Color Vinyl) 1LP",
+    "title": "Break Like The Wind",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -3451,7 +3368,7 @@
     "best_price": 29.99,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
-    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+Break+Like+The+Wind+(Blue+&+Red+Galaxy+Color+Vinyl)+1LP+vinyl&tag=korndog20-20",
+    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+Break+Like+The+Wind+vinyl&tag=korndog20-20",
     "best_label": "KORNDOG FIND",
     "all_sources": [
       {
@@ -3459,84 +3376,6 @@
         "price": 29.99,
         "link": "https://thesoundofvinyl.us/products/spinal-tap-break-like-the-wind-blue-red-galaxy-color-vinyl",
         "version": "1lp"
-      }
-    ],
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Universal",
-    "title": "PAUL MCCARTNEY 'FLOWERS IN THE DIRT' LP",
-    "price": 30.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/paul-mccartney-flowers-in-the-dirt-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/83_76f9148f-d7a3-4218-aa29-6b3d47d88565.webp?v=1772806506",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard",
-    "best_price": 30.99,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/paul-mccartney-flowers-in-the-dirt-lp",
-    "amazon_link": "https://www.amazon.com/s?k=Universal+PAUL+MCCARTNEY+'FLOWERS+IN+THE+DIRT'+LP+vinyl&tag=korndog20-20",
-    "best_label": "KORNDOG FIND",
-    "all_sources": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 30.99,
-        "link": "https://shop.brooklynvegan.com/products/paul-mccartney-flowers-in-the-dirt-lp",
-        "version": "standard"
-      }
-    ],
-    "total": 5,
-    "decision": "POST IF CONTENT-WORTHY",
-    "breakdown": {
-      "artist_tier": "other",
-      "artist_points": 0,
-      "version_points": 0,
-      "deal_points": 1,
-      "demand_points": 1,
-      "source_points": 0,
-      "format_points": 3
-    }
-  },
-  {
-    "artist": "Phantogram",
-    "title": "Voices 2LP",
-    "price": 32.99,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/phantogram-voices-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Phantogram-Voices2LP.png?v=1772657609",
-    "keywords": [
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "2lp",
-    "best_price": 32.99,
-    "best_source": "uDiscover Music",
-    "buy_link": "https://shop.udiscovermusic.com/products/phantogram-voices-2lp",
-    "amazon_link": "https://www.amazon.com/s?k=Phantogram+Voices+2LP+vinyl&tag=korndog20-20",
-    "best_label": "KORNDOG FIND",
-    "all_sources": [
-      {
-        "source": "uDiscover Music",
-        "price": 32.99,
-        "link": "https://shop.udiscovermusic.com/products/phantogram-voices-2lp",
-        "version": "2lp"
       }
     ],
     "total": 5,
@@ -4137,7 +3976,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "This Is Spinal Tap (Smell The Glove: Vinyl Edition) 1LP",
+    "title": "This Is Spinal Tap",
     "price": 39.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -4153,7 +3992,7 @@
     "best_price": 39.98,
     "best_source": "Sound of Vinyl",
     "buy_link": "https://thesoundofvinyl.us/products/spinal-tap-this-is-spinal-tap-smell-the-glove-vinyl-edition",
-    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+This+Is+Spinal+Tap+(Smell+The+Glove:+Vinyl+Edition)+1LP+vinyl&tag=korndog20-20",
+    "amazon_link": "https://www.amazon.com/s?k=Spinal+Tap+This+Is+Spinal+Tap+vinyl&tag=korndog20-20",
     "best_label": "KORNDOG FIND",
     "all_sources": [
       {
@@ -4533,27 +4372,21 @@
     "artist": "SUPER7",
     "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
     "price": 72.99,
-    "source": "Brooklyn Vegan",
+    "source": "Revolver",
     "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773179633",
+    "link": "https://shop.revolvermag.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773177830",
     "keywords": [],
     "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard",
     "best_price": 72.99,
-    "best_source": "Brooklyn Vegan",
-    "buy_link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
+    "best_source": "Revolver",
+    "buy_link": "https://shop.revolvermag.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
     "amazon_link": "https://www.amazon.com/s?k=SUPER7+GHOST+PAPA+V+PERPETUA+(BAT+WINGS)+ULTIMATES!+FIGURE+w/Revolver+Alternate+Bat+Cover+Issue+vinyl&tag=korndog20-20",
     "best_label": "KORNDOG FIND",
     "all_sources": [
-      {
-        "source": "Brooklyn Vegan",
-        "price": 72.99,
-        "link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
-        "version": "standard"
-      },
       {
         "source": "Revolver",
         "price": 72.99,

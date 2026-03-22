@@ -293,7 +293,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "This Is Spinal Tap (Smell The Glove: Vinyl Edition) 1LP",
+    "title": "This Is Spinal Tap",
     "price": 39.98,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -309,7 +309,7 @@
   },
   {
     "artist": "Spinal Tap",
-    "title": "Break Like The Wind (Blue & Red Galaxy Color Vinyl) 1LP",
+    "title": "Break Like The Wind",
     "price": 29.99,
     "source": "Sound of Vinyl",
     "source_type": "shopify_store",
@@ -430,22 +430,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "1lp"
-  },
-  {
-    "artist": "Phantogram",
-    "title": "Voices 2LP",
-    "price": 32.99,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/phantogram-voices-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Phantogram-Voices2LP.png?v=1772657609",
-    "keywords": [
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "2lp"
   },
   {
     "artist": "Red Hot Chili Peppers",
@@ -817,78 +801,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "splatter clear"
-  },
-  {
-    "artist": "MATADOR DIRECT",
-    "title": "WATER FROM YOUR EYES 'EVERYONE'S CRUSHED' LP",
-    "price": 22.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/water-from-your-eyes-everyones-crushed-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/191401193016-CoverArtImage1.jpg?v=1773427022",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "SUPER7",
-    "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
-    "price": 72.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773179633",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "ROCKSAX",
-    "title": "AC/DC LOGO AIR FRESHENER",
-    "price": 6.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/ac-dc-logo-air-freshener",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/ACDCAIR.png?v=1773088652",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Concord Records",
-    "title": "TEARS FOR FEARS 'SONGS FOR A NERVOUS PLANET' 2LP (Black Vinyl)",
-    "price": 29.0,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/songs-for-a-nervous-planet-black-vinyl-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/TearsForFears_NervousPlanet_2LP_Wide_Black.png?v=1773087159",
-    "keywords": [
-      "2lp"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "2lp"
-  },
-  {
-    "artist": "Universal",
-    "title": "PAUL MCCARTNEY 'FLOWERS IN THE DIRT' LP",
-    "price": 30.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/paul-mccartney-flowers-in-the-dirt-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/83_76f9148f-d7a3-4218-aa29-6b3d47d88565.webp?v=1772806506",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "MNRK Heavy",
@@ -1361,19 +1273,20 @@
   },
   {
     "artist": "A Day To Remember",
-    "title": "What Separates Me From You (15th Anniversary Edition) (LP)",
+    "title": "What Separates Me From You",
     "price": 28.0,
     "source": "Craft Recordings",
     "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/ADTR_WHATSEPARATESMEFROMYOU_ALTCOVERPACKSHOT-WIDE-T09.png?v=1759159043",
+    "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-electric-smoke-craft-recordings-exclusive-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/ADTR_WHATSEPARATESMEFROMYOU_ALTCOVERPACKSHOT-WIDE-SB06.png?v=1759159017",
     "keywords": [
+      "exclusive",
       "anniversary"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "anniversary"
+    "version": "exclusive anniversary"
   },
   {
     "artist": "Black Label Society",
