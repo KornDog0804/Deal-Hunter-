@@ -376,6 +376,20 @@
     "version": "colored"
   },
   {
+    "artist": "Mac Demarco",
+    "title": "Mac Demarco - 2",
+    "price": 22.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/mac-demarco-2",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_9119-_W.jpg?v=1696534381",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "Taylor Swift",
     "title": "Beautiful Eyes",
     "price": 29.99,
@@ -446,6 +460,20 @@
     "version": "standard"
   },
   {
+    "artist": "Khruangbin",
+    "title": "Khruangbin - Mordechai",
+    "price": 25.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/khruangbin-mordechai",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_8834-_W_34093758-5059-46b0-a7bc-23b1c6575e25.jpg?v=1663880945",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "Crumb",
     "title": "Crumb/Locket",
     "price": 19.99,
@@ -481,6 +509,20 @@
     "source_type": "shopify_store",
     "link": "https://rollinrecs.com/products/mac-demarco-salad-days",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5086-_W_41ca8caf-849a-404d-a830-af277bfd4c9c.jpg?v=1708464127",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Interpol",
+    "title": "Interpol - Antics",
+    "price": 28.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/interpol-antics",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_69382.jpg?v=1774025944",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -647,20 +689,6 @@
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7578.jpg?v=1749831476",
     "keywords": [],
     "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Chat Pile",
-    "title": "In The Earth Again",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/chat-pile-in-the-earth-again",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6747.jpg?v=1773420128",
-    "keywords": [],
-    "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -934,14 +962,14 @@
   },
   {
     "artist": "Elliott Smith",
-    "title": "Figure 8",
-    "price": 40.99,
+    "title": "Elliott Smith - XO",
+    "price": 27.98,
     "source": "Rollin Records",
     "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/elliott-smith-figure-8",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6753.jpg?v=1773420195",
+    "link": "https://rollinrecs.com/products/elliott-smith-xo",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6755.jpg?v=1773420224",
     "keywords": [],
-    "deal_quality": "normal",
+    "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -1429,11 +1457,13 @@
     "source_type": "shopify_store",
     "link": "https://rollinrecs.com/products/mac-miller-k-i-d-s-translucent-yellow-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6177.jpg?v=1725038569",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Mac Miller",
@@ -1891,12 +1921,13 @@
     "link": "https://rollinrecs.com/products/pre-order-02-27-bruno-mars-the-romantic-indie-exclusive-translucent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6345.jpg?v=1772138536",
     "keywords": [
-      "exclusive"
+      "exclusive",
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive"
+    "version": "exclusive translucent"
   },
   {
     "artist": "Rosalia",
@@ -2089,6 +2120,20 @@
     "version": "standard"
   },
   {
+    "artist": "Gorillaz",
+    "title": "Gorillaz - Gorillaz",
+    "price": 35.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/gorillaz-gorillaz",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3522-_W_0582b54f-9126-4dce-9ee9-c89d228518e9.jpg?v=1706132828",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "My Chemical Romance",
     "title": "I Brought You Bullets, You Brought Me Your Love",
     "price": 25.99,
@@ -2208,20 +2253,6 @@
     "source_type": "shopify_store",
     "link": "https://rollinrecs.com/products/clipse-lord-willin-1",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_61632.jpg?v=1771616914",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Clipse",
-    "title": "Hell Hath No Fury (Gold Vinyl)",
-    "price": 30.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/clipse-hell-hath-no-fury-1",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_61652.jpg?v=1771616893",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -2387,20 +2418,6 @@
     "version": "standard"
   },
   {
-    "artist": "All That Jazz",
-    "title": "Ghibli Jazz 2",
-    "price": 48.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/all-that-jazz-ghibli-jazz-3",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6187_a4d6a742-fa16-41d5-bb96-db93e65db077.jpg?v=1771616830",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Danny Brown",
     "title": "Stardust (White Vinyl)",
     "price": 34.99,
@@ -2452,6 +2469,20 @@
     "source_type": "shopify_store",
     "link": "https://rollinrecs.com/products/pre-order-08-23-sabrina-carpenter-short-n-sweet-light-blue-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5812.jpg?v=1724383762",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Dominic Fike",
+    "title": "Dominic Fike - Sunburn",
+    "price": 35.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/pre-order-12-15-dominic-fike-sunburn",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2579-_W.jpg?v=1703192487",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -2700,6 +2731,20 @@
     "version": "standard"
   },
   {
+    "artist": "Lorde",
+    "title": "Lorde - Melodrama",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/lorde-melodrama",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6142-_W_a28d5314-95c8-49c1-8431-fc95ba9c2208.jpg?v=1710440213",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "Harry Styles",
     "title": "Harry Styles",
     "price": 29.99,
@@ -2821,20 +2866,6 @@
     "source_type": "shopify_store",
     "link": "https://rollinrecs.com/products/kanye-west-presents-good-music-cruel-summer",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2084.jpg?v=1759439209",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "David Bowie",
-    "title": "Manhattan Man",
-    "price": 54.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/david-bowie-manhattan-man",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6085.jpg?v=1771545546",
     "keywords": [],
     "deal_quality": "normal",
     "demand": "steady",
@@ -3140,20 +3171,6 @@
     "version": "standard"
   },
   {
-    "artist": "The Cure",
-    "title": "We Hate Rock 'N' Roll",
-    "price": 54.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/the-cure-we-hate-rock-n-roll",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_61302.jpg?v=1771546420",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Liam Gallagher",
     "title": "Down By The River Thames",
     "price": 29.99,
@@ -3266,22 +3283,6 @@
     "version": "standard"
   },
   {
-    "artist": "Bruce Springsteen",
-    "title": "4th of July: The Wild Sessions (Marbled Gray Vinyl)",
-    "price": 124.99,
-    "source": "Rollin Records",
-    "source_type": "shopify_store",
-    "link": "https://rollinrecs.com/products/bruce-springsteen-4th-of-july-the-wild-sessions-marbled-gray-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_0829-_W.jpg?v=1632352723",
-    "keywords": [
-      "marble"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "marble"
-  },
-  {
     "artist": "Liam Gallagher",
     "title": "You Can't Beat Glasgow",
     "price": 69.99,
@@ -3384,6 +3385,20 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "colored"
+  },
+  {
+    "artist": "Radiohead",
+    "title": "Radiohead - Radioshow",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "source_type": "shopify_store",
+    "link": "https://rollinrecs.com/products/radiohead-radioshow",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_1483-_W_d8f1e1b7-9dd8-4ec4-926b-ac8b8e6a02e3.jpg?v=1700604741",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
   },
   {
     "artist": "Marilyn Manson",
@@ -3977,22 +3992,6 @@
     "version": "standard"
   },
   {
-    "artist": "Weezer",
-    "title": "Coloring Book Box Set (Limited Edition)",
-    "price": 249.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/weezer-coloring-book-box-set-limited-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/BoxSetUncolored-09-02-202611-27-48.png?v=1771004894",
-    "keywords": [
-      "limited"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited"
-  },
-  {
     "artist": "Bach Arrangements",
     "title": "Vinyl Edition LP",
     "price": 38.98,
@@ -4377,12 +4376,13 @@
     "link": "https://thesoundofvinyl.us/products/aerosmith-aerosmith-limited-edition-translucent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/1_1LPColour_Packshot_3K_v31.jpg?v=1769190404",
     "keywords": [
-      "limited"
+      "limited",
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "limited"
+    "version": "limited translucent"
   },
   {
     "artist": "Aerosmith",
@@ -4523,22 +4523,6 @@
     "version": "2lp"
   },
   {
-    "artist": "Rush",
-    "title": "Grace Under Pressure (Super Deluxe) 5LP + Blu-Ray",
-    "price": 374.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/rush-grace-under-pressure-super-deluxe-5lp-blu-ray",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/Grace_Under_Pressure_Super_Deluxe_5LP_Blu-Ray.png?v=1772208456",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
     "artist": "Pharoah Sanders",
     "title": "Elevation (Verve Vault Series) LP",
     "price": 27.98,
@@ -4672,6 +4656,20 @@
     "source_type": "shopify_store",
     "link": "https://thesoundofvinyl.us/products/travis-scott-birds-in-the-trap-sing-mcknight",
     "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/3492652.jpg?v=1583658152",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Travis Scott Astroworld",
+    "price": 30.98,
+    "source": "Sound of Vinyl",
+    "source_type": "shopify_store",
+    "link": "https://thesoundofvinyl.us/products/travis-scott-astroworld",
+    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/3818042.jpg?v=1583573777",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -5072,12 +5070,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/4085301-2819233.png?v=1657734373",
     "keywords": [
       "limited",
-      "opaque"
+      "opaque",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "limited opaque"
+    "version": "limited opaque smoke"
   },
   {
     "artist": "Tesla",
@@ -5253,20 +5252,6 @@
   },
   {
     "artist": "Sam Cooke",
-    "title": "Ain't That Good News",
-    "price": 23.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/sam-cooke-aint-that-good-news",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/3785120-2538218.jpg?v=1595672980",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Sam Cooke",
     "title": "At the Copa",
     "price": 23.98,
     "source": "Sound of Vinyl",
@@ -5427,20 +5412,6 @@
     "source_type": "shopify_store",
     "link": "https://thesoundofvinyl.us/products/sylvan-esso-1",
     "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/4163679-2940554.jpg?v=1674385276",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Sylvan Esso",
-    "title": "What Now",
-    "price": 21.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/what-now",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/products/3574254.jpg?v=1583548161",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -6037,20 +6008,6 @@
     "version": "standard"
   },
   {
-    "artist": "Dinah Washington",
-    "title": "What A Diff'rence A Day Makes (Verve Vault Series) LP",
-    "price": 27.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/dinah-washington-what-a-diffrence-a-day-makes-verve-vault-series-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/DinahWashington-WhatADifferenceADayMakes_1LP-Cvr_RGB_jpg_df601cce-93f3-4dd6-be2b-bc3ac854c4e5.png?v=1762466448",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Blossom Dearie",
     "title": "Give Him The Ooh La La (Verve Vault Series) LP",
     "price": 27.98,
@@ -6286,20 +6243,6 @@
     "version": "1lp"
   },
   {
-    "artist": "Foals",
-    "title": "What Went Down",
-    "price": 31.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/foals-what-went-down",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/Foals_WWD_10th_Anniversary_UPDATED_GreenBlackVinyl_Product_Shot.png?v=1760653028",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "The Antlers",
     "title": "Blight (Pink) 1LP",
     "price": 29.98,
@@ -6349,20 +6292,6 @@
     "version": "1lp opaque"
   },
   {
-    "artist": "Oasis",
-    "title": "(What's The Story) Morning Glory?",
-    "price": 74.98,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/oasis-whats-the-story-morning-glory",
-    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/oasis-whats-the-story.png?v=1760656255",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Halloween",
     "title": "Expanded Art Edition (Original Soundtrack)",
     "price": 35.98,
@@ -6400,6 +6329,20 @@
     "source_type": "shopify_store",
     "link": "https://thesoundofvinyl.us/products/larry-june-until-night-comes-green-blue-orange",
     "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/LARRYJUNE_CARDO-UNTILNIGHTCOMESLIMITEDEDITIONVINYL_1200x1200_copy.png?v=1760656702",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Tame Impala Deadbeat",
+    "price": 38.98,
+    "source": "Sound of Vinyl",
+    "source_type": "shopify_store",
+    "link": "https://thesoundofvinyl.us/products/tame-impala-deadbeat",
+    "image": "https://cdn.shopify.com/s/files/1/0287/4323/7725/files/tame-impala-deadbeat.png?v=1760675090",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -6837,12 +6780,13 @@
     "link": "https://shop.udiscovermusic.com/products/imagine-dragons-smoke-mirrors-super-deluxe-2-lp",
     "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/int-20a799ff0f0b21ed222485424b488d3c-eljqmq0v-1.png?v=1773345103",
     "keywords": [
-      "deluxe"
+      "deluxe",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "deluxe"
+    "version": "deluxe smoke"
   },
   {
     "artist": "Mauricio Kagel",
@@ -7602,20 +7546,6 @@
   },
   {
     "artist": "YUNGBLUD",
-    "title": "Idols (Complete)",
-    "price": 13.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/yungblud-idols-complete",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/cd-and-disc.png?v=1772036967",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "YUNGBLUD",
     "title": "Idols II [Clear LP]",
     "price": 25.99,
     "source": "uDiscover Music",
@@ -7629,20 +7559,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "clear"
-  },
-  {
-    "artist": "Charley Crockett",
-    "title": "Age of the Ram",
-    "price": 13.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/charley-crockett-age-of-the-ram",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/cd_d01eef84-e6bf-4d49-b433-507fb170955f.png?v=1772036944",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Charley Crockett",
@@ -7853,20 +7769,6 @@
     "version": "2lp"
   },
   {
-    "artist": "Bob Marley",
-    "title": "Exodus Crewneck Sweatshirt",
-    "price": 45.0,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/exodus-crewneck-sweatshirt",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/BOBMARLEYCREW_FRONT.png?v=1770746069",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Aerosmith",
     "title": "76' Rocks Raglan",
     "price": 45.0,
@@ -7949,22 +7851,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
-  },
-  {
-    "artist": "Weezer",
-    "title": "Coloring Book Box Set (Limited Edition)",
-    "price": 249.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/weezer-coloring-book-box-set-limited-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Weezer-Jan2026_e0337e68-9c4c-4e87-8b32-687b76218776.webp?v=1771005895",
-    "keywords": [
-      "limited"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited"
   },
   {
     "artist": "YUNGBLUD/The Smashing Pumpkins",
@@ -8596,34 +8482,6 @@
     "version": "standard"
   },
   {
-    "artist": "Jeff Beck",
-    "title": "Performing This Week... Live At Ronnie Scott's Blu Ray",
-    "price": 19.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/jeff-beck-performing-this-week-live-at-ronnie-scotts-blu-ray",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/JB_002_002.jpg?v=1769536452",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Van Morrison",
-    "title": "In Concert Blu Ray",
-    "price": 21.98,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/van-morrison-in-concert-blu-ray",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/VAN_002_002.jpg?v=1769536481",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Aerosmith",
     "title": "Aerosmith (Legendary Deluxe Edition) 4LP",
     "price": 149.88,
@@ -8713,12 +8571,13 @@
     "link": "https://shop.udiscovermusic.com/products/aerosmith-aerosmith-limited-edition-translucent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/Aerosmith_-_Limited_Edition_Translucent_Red_Vinyl.png?v=1769523452",
     "keywords": [
-      "limited"
+      "limited",
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "limited"
+    "version": "limited translucent"
   },
   {
     "artist": "Aerosmith",
@@ -8765,20 +8624,6 @@
     "version": "splatter"
   },
   {
-    "artist": "Polyphia",
-    "title": "Remember That You Will Die Vinyl Box Set",
-    "price": 279.99,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/remember-that-you-will-die-vinyl-box-set",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/polyphia-rtywd-BS-69.jpg?v=1773151209",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "PUP",
     "title": "Who Will Look After The Dogs? Black Smoke w/ Black/Pink/Purple Splatter Vinyl LP",
     "price": 28.0,
@@ -8787,12 +8632,13 @@
     "link": "https://riserecords.com/products/pup0wwlabb-lp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/de49c3a92abf48cab2945a9ac585c060.jpg?v=1772473753",
     "keywords": [
-      "splatter"
+      "splatter",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "splatter"
+    "version": "splatter smoke"
   },
   {
     "artist": "Sum 41",
@@ -8957,34 +8803,6 @@
   },
   {
     "artist": "Spiritbox",
-    "title": "Tsunami Sea Branded Custom Anorak Windbreaker",
-    "price": 100.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/sptbtsb0cs-jk",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Tsunami_Sea_Branded_Custom_Anorak_Windbreaker.png?v=1761193221",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Spiritbox",
-    "title": "Tsunami Sea Branded Black & Grey Varsity Jacket",
-    "price": 250.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/sptbtsb0bg-jk",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Sb_TS-VarsityJacket_F.jpg?v=1762792584",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Spiritbox",
     "title": "Zodiac Vintage Black Zip Up",
     "price": 90.0,
     "source": "Rise Records",
@@ -9021,34 +8839,6 @@
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Sb_DMAlbumBranded-Hoodie_VintageBlack.jpg?v=1762793457",
     "keywords": [],
     "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Spiritbox",
-    "title": "Tsunami Sea Icon Black Beanie",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/sptbtsi0bl-wc",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Sb_TSIcon-Beanie_Black.jpg?v=1762793565",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Spiritbox",
-    "title": "Tsunami Sea Icon Heather Beanie",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/sptbtsi0hg-wc",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/Sb_TSIcon-Beanie_HeatherGrey.jpg?v=1762793588",
-    "keywords": [],
-    "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -9285,48 +9075,6 @@
     "version": "standard"
   },
   {
-    "artist": "MerchNow",
-    "title": "Poster Tube",
-    "price": 2.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/mcn0post00-ps00",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/b11832e4ccf24c1d84992ca30249f1dc_3a4436a6-6fea-4bd2-87d2-7f2df20cd69a-620927.jpg?v=1675792550",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Matty Mullins",
-    "title": "Logo Black Snapback Hat",
-    "price": 25.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/matylogobl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/0a3dfbfa33394dbd8e8971c1ce6156e7-189159.jpg?v=1695309948",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Matty Mullins",
-    "title": "Logo Journal",
-    "price": 15.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/matylogo00-nv",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/a220973d6db44a4a9dd62002ec3b684d-649892.jpg?v=1695309948",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Ashland - Rise",
     "title": "Something In Your Eyes White Pullover",
     "price": 25.0,
@@ -9484,20 +9232,6 @@
     "source_type": "shopify_store",
     "link": "https://riserecords.com/products/mmi0rosebl-zp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/c94fba6db5c544309e00b31e48300431.jpg?v=1556905928",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Attack Attack",
-    "title": "Mobster Black Tank Top",
-    "price": 20.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/attamobsbl-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/4972d9d22ab34447bcc4c62e2d858a3b.jpg?v=1557147356",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -9731,20 +9465,6 @@
     "version": "standard"
   },
   {
-    "artist": "ShipAid",
-    "title": "ShipAid Delivery Guarantee",
-    "price": 1.49,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/shipaid-protection",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/shipaid-logo_5ae7a982-2df1-470a-9d35-9535696fe7c5.jpg?v=1753520777",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Haunted Mouths",
     "title": "A Collection Of Greetings Blue Marble Vinyl LP",
     "price": 26.0,
@@ -9782,20 +9502,6 @@
     "source_type": "shopify_store",
     "link": "https://riserecords.com/products/ocgrog0000-ap",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/73c58917ad6d4cd4986400ed885622c4.jpg?v=1556904078",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Memphis May Fire",
-    "title": "Remade In Misery",
-    "price": 11.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/mmf0rmim00-cd",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/b0c3b38c9d5a49b0a1f41378f2d3b74a.jpg?v=1645108493",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -10033,38 +9739,6 @@
     "version": "standard"
   },
   {
-    "artist": "Polyphia",
-    "title": "Remember That You Will Die Black & Violet Smush Vinyl LP",
-    "price": 35.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/polyrtywbv-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/b94deade40874a96aa04a166778ee03d.jpg?v=1726507034",
-    "keywords": [
-      "smush"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "smush"
-  },
-  {
-    "artist": "Polyphia",
-    "title": "Remember That You Will Die Black & White Smush Vinyl LP",
-    "price": 35.0,
-    "source": "Rise Records",
-    "source_type": "shopify_store",
-    "link": "https://riserecords.com/products/polyrtywbw-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/1a695289c8d7483398cf314ea155cce0.jpg?v=1726506961",
-    "keywords": [
-      "smush"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "smush"
-  },
-  {
     "artist": "Memphis May Fire",
     "title": "Shapeshifter Black Pullover",
     "price": 45.0,
@@ -10145,12 +9819,13 @@
     "link": "https://riserecords.com/products/dh00kickbc-lp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/files/21e52b3f1eff44f8a9027cac75456ada-521159.jpg?v=1728673674",
     "keywords": [
-      "clear"
+      "clear",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "clear"
+    "version": "clear smoke"
   },
   {
     "artist": "The Movielife",
@@ -10797,20 +10472,6 @@
     "version": "standard"
   },
   {
-    "artist": "Ingram Books",
-    "title": "EMO REVIVAL: COMMUNITY, DIY, AND REBIRTH IN POST-HARDCORE AND EMO (BOOK)",
-    "price": 24.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/emo-revival-community-diy-and-rebirth-in-post-hardcore-and-emo-book",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/81iyMaV8wtL._SL1500.jpg?v=1774020543",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "WARNER",
     "title": "MUSE 'THE WOW! SIGNAL' LP (Red Vinyl)",
     "price": 29.99,
@@ -11327,20 +10988,6 @@
   },
   {
     "artist": "Heavys",
-    "title": "HEAVYS GAMING HEADSET BUNDLE",
-    "price": 279.0,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/heavys-gaming-headset-bundle-save-up-to-20",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/HEAVYS_20241202_057_1.png?v=1773695767",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Heavys",
     "title": "MOTIONLESS IN WHITE SHELLS",
     "price": 39.0,
     "source": "Brooklyn Vegan",
@@ -11603,20 +11250,6 @@
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/8916b00f-070a-4b4a-bb7f-ac0d1f32c839.png?v=1773695767",
     "keywords": [],
     "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Heavys",
-    "title": "HEAVYS H1H HEADPHONES + EARBUDS BUNDLE (SAVE 20%+)",
-    "price": 398.0,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/heavys-h1h-headphones-earbuds-bundle-save-20",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/L1021182_1_de3576ed-2c58-4acd-87b9-c5606c0082b4.png?v=1773695767",
-    "keywords": [],
-    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -12152,11 +11785,13 @@
     "source_type": "shopify_store",
     "link": "https://shop.brooklynvegan.com/products/all-them-witches-dying-surfer-meets-his-maker-pink-and-black-smoke-lp",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/607396555819-2_1024x_2b32c79c-43e7-4e93-b96a-ab135df58273.jpg?v=1773414888",
-    "keywords": [],
+    "keywords": [
+      "smoke"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "smoke"
   },
   {
     "artist": "Do Not Restock",
@@ -12538,20 +12173,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp"
-  },
-  {
-    "artist": "SUPER7",
-    "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
-    "price": 72.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773179633",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "AEC",
@@ -13267,12 +12888,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/NathanielRateliffNightSweats_10th_2LP_Packshot_TranslucentBlack.png?v=1773087153",
     "keywords": [
       "anniversary",
-      "2lp"
+      "2lp",
+      "translucent"
     ],
     "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
-    "version": "anniversary 2lp"
+    "version": "anniversary 2lp translucent"
   },
   {
     "artist": "Concord Records",
@@ -13342,11 +12964,13 @@
     "source_type": "shopify_store",
     "link": "https://shop.brooklynvegan.com/products/past-lives-bloodshot-translucent-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/L.S.Dunes_PastLives_LP_Bloodshot.png?v=1773087160",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Concord Records",
@@ -13503,11 +13127,13 @@
     "source_type": "shopify_store",
     "link": "https://shop.brooklynvegan.com/products/out-of-the-blues-tiger-s-eye-translucent-vinyl-7",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/BOZ_SKAGS_TE_VNL_REV__002.jpg?v=1773087158",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Concord Records",
@@ -13665,20 +13291,6 @@
     "source_type": "shopify_store",
     "link": "https://shop.brooklynvegan.com/products/long-time-coming-black-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/SierraFerrellBlackLP.png?v=1773087550",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Rounder Records",
-    "title": "DAWES 'GOOD LUCK WITH WHATEVER' LP (Black Vinyl)",
-    "price": 17.23,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/good-luck-with-whatever-black-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/LP_-_Black.png?v=1773087550",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -14259,20 +13871,6 @@
     "version": "standard"
   },
   {
-    "artist": "Ingram Books",
-    "title": "EMO REVIVAL: COMMUNITY, DIY, AND REBIRTH IN POST-HARDCORE AND EMO (BOOK)",
-    "price": 24.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/emo-revival-community-diy-and-rebirth-in-post-hardcore-and-emo-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/81iyMaV8wtL._SL1500.jpg?v=1774024560",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Universal",
     "title": "MOTORHEAD 'ACE OF SPADES' LP",
     "price": 26.99,
@@ -14842,20 +14440,6 @@
   },
   {
     "artist": "Heavys",
-    "title": "HEAVYS GAMING HEADSET BUNDLE",
-    "price": 279.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/heavys-gaming-headset-bundle-save-up-to-20",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/HEAVYS_20241202_057_1.png?v=1773688748",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Heavys",
     "title": "MOTIONLESS IN WHITE SHELLS",
     "price": 39.0,
     "source": "Revolver",
@@ -15118,20 +14702,6 @@
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/8916b00f-070a-4b4a-bb7f-ac0d1f32c839.png?v=1773688749",
     "keywords": [],
     "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Heavys",
-    "title": "HEAVYS H1H HEADPHONES + EARBUDS BUNDLE (SAVE 20%+)",
-    "price": 398.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/heavys-h1h-headphones-earbuds-bundle-save-20",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/L1021182_1_de3576ed-2c58-4acd-87b9-c5606c0082b4.png?v=1773688741",
-    "keywords": [],
-    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -15532,12 +15102,13 @@
     "keywords": [
       "exclusive",
       "limited",
-      "2lp"
+      "2lp",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive limited 2lp"
+    "version": "exclusive limited 2lp smoke"
   },
   {
     "artist": "SONY",
@@ -15789,11 +15360,13 @@
     "source_type": "shopify_store",
     "link": "https://shop.revolvermag.com/products/between-the-buried-and-me-colors-ii-lp",
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4231339-3017901.jpg?v=1773256582",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "AEC",
@@ -15866,20 +15439,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp"
-  },
-  {
-    "artist": "SUPER7",
-    "title": "GHOST PAPA V PERPETUA (BAT WINGS) ULTIMATES! FIGURE w/Revolver Alternate Bat Cover Issue",
-    "price": 72.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/ghost-papa-v-perpetua-bat-wings-ultimates-figure",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/GHOTS_bundle_0036eab6-6fe3-44c6-90ad-c7accb21a361.png?v=1773177830",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "AEC",
@@ -16176,20 +15735,6 @@
     "version": "standard"
   },
   {
-    "artist": "DANCE GAVIN DANCE: NIGHT OF THE FRUIT MAFIA//DANCE OF THE ROBOT GRAPHIC NOVEL",
-    "title": "STANDARD EDITION",
-    "price": 34.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dance-gavin-dance-night-of-the-fruit-mafia-dance-of-the-robot-graphic-novel-standard-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DGD2ECOMM_MOCK-BellybandFRONT.png?v=1772647306",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Z2 Comics",
     "title": "CYPRESS HILL: TRES EQUIS LIMITED EDITION FIGURING SET",
     "price": 59.99,
@@ -16225,59 +15770,13 @@
     "version": "limited splatter 2lp smush"
   },
   {
-    "artist": "CHEECH & CHONG'S CHRONICLES: THE GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 90.0,
+    "artist": "Z2 Comics",
+    "title": "ALTER BRIDGE: TOUR OF HORRORS - BANDANA",
+    "price": 8.0,
     "source": "Revolver",
     "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/cheech-chongs-chronicles-the-graphic-novel-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/cheech_chong_product_mockups-cover2-explicit-white_61838d82-4842-4cfc-841f-25c82ff49cb2.png?v=1772647307",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "CHEECH & CHONG'S CHRONICLES: THE GRAPHIC NOVEL",
-    "title": "SIGNED PLATINUM EDITION",
-    "price": 250.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/cheech-chongs-chronicles-the-graphic-novel-platinum-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DeluxeBundle-1080x1080_0d3ae1bd-04ed-4e63-992a-5c6284ffa5c7.png?v=1772647307",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "CYPRESS HILL: BLACK SUNDAY GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 99.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/cypress-hill-black-sunday-graphic-novel-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/chdlx.png?v=1772647307",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "CZARFACE: A CZAR IS BORN GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 25.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/czarface-a-czar-is-born-graphic-novel-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Z2-PP-_Czarface-FRONT_0ae4dd79-7818-478b-adaa-d69aa5ce472d.png?v=1772647307",
+    "link": "https://shop.revolvermag.com/products/alter-bridge-tour-of-horrors-bandana",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/AlterBridge_Bandana_362ecb74-9899-4981-80f7-f01d98f4ac33.png?v=1772647307",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -16301,36 +15800,6 @@
     "version": "limited"
   },
   {
-    "artist": "AMON AMARTH: THE GREAT HEATHEN ARMY GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 100.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/amon-amarth-the-great-heathen-army-deluxe-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/AMON_AMARTH_DELUXE-SLIPCASE-MOCKUP_6675db9c-9ac8-47cc-825b-6ce372dda5f4.png?v=1772647307",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "CHEECH & CHONG'S CHRONICLES: THE GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 40.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/cheech-chongs-chronicles-the-graphic-novel-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Untitled-1_1769edbe-4233-4dd6-b16f-0437819b90a4.png?v=1772647308",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Z2 Comics",
     "title": "CYPRESS HILL 'CYPRESS HILL' 30TH ANNIVERSARY LP (Limited Edition, Translucent Green Vinyl)",
     "price": 39.0,
@@ -16340,12 +15809,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/ECOMMVINYL_CypressHill.png?v=1772647307",
     "keywords": [
       "limited",
-      "anniversary"
+      "anniversary",
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "limited anniversary"
+    "version": "limited anniversary translucent"
   },
   {
     "artist": "Z2 Comics",
@@ -16369,66 +15839,6 @@
     "source_type": "shopify_store",
     "link": "https://shop.revolvermag.com/products/gwar-the-return-of-gor-gor-transparent-green-vinyl-lp",
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/LPStoreMock_GorGor_Green_Hero.png?v=1772656492",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "ETERNAL BLUE: A SPIRITBOX GRAPHIC NOVEL",
-    "title": "DELUXE EDITION BUNDLE",
-    "price": 100.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/eternal-blue-a-spiritbox-graphic-novel-deluxe-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/spiritbox_ecomm_SLIPCASE_WHITE_888214b6-320d-4908-8349-a8feef67cc79.png?v=1772656493",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "POPPY: POPPY'S INFERNO GRAPHIC NOVEL",
-    "title": "PINK HARDCOVER EDITITON",
-    "price": 30.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/poppy-poppys-inferno-hardcover-pink-variant",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/PoppysInfernoStandardEdition_0daa107a-057a-4ea9-b193-41106e26637b.png?v=1772656529",
-    "keywords": [
-      "variant"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "variant"
-  },
-  {
-    "artist": "TYPE O NEGATIVE: TRADING CARD SET",
-    "title": "NUMBERED TO 199",
-    "price": 100.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/type-o-negative-trading-card-set-numbered-to-199",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/TypeONegativeProductPhotosTRANSPARENTBG1080x1080_TradingCardSET.png?v=1772656567",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "IRON MAIDEN X Z2 \"THE TROOPER\" TRADING CARDS",
-    "title": "NUMBERED TO 666",
-    "price": 35.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/iron-maiden-x-z2-the-trooper-trading-card-numbered-to-666",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/IronMaidenProductPhotos_TradingCardSingle_60b2d9cc-d8a0-43ad-967f-e3d98a6683b8.png?v=1772656636",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -16478,124 +15888,6 @@
     "version": "standard"
   },
   {
-    "artist": "DEE SNIDER: HE'S NOT GONNA TAKE IT GRAPHIC NOVEL",
-    "title": "SIGNED DELUXE BUNDLE",
-    "price": 100.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dee-snider-hes-not-gonna-take-it-signed-deluxe-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DEESNiDER_ECOMM_slipcase_white_ec970be3-0dc4-4074-927c-ddf25d1c49b2.png?v=1772656528",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "YUNGBLUD: THE FUNERAL GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 70.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/yungblud-the-funeral-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/YUNGBLUD3_ECOMM_HARDCOVER_WHITE_758f1181-7d82-4525-9ea1-fbd3e80a080b.png?v=1772656637",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "YUNGBLUD 2: WEIRD TIMES AT QUARRY BANK UNIVERSITY GRAPHIC NOVEL",
-    "title": "SOFTCOVER EDITION",
-    "price": 20.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/yungblud-2-weird-times-at-quarry-bank-university-softcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/YungBlud-2-Cover-Product_834e41c9-6854-44ed-a2fa-b1b7bcde8046.png?v=1772656637",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "MÖTLEY CRÜE: THE DIRT: DECLASSIFIED GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 40.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/motley-crue-the-dirt-declassified-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/MotleyCrue_bundle_softcover_white_864a90e5-2062-4767-94d4-1702b9e1f911.png?v=1772656637",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "JOAN JETT & THE BLACKHEARTS",
-    "title": "40x40: BAD REPUTATION/I LOVE ROCK 'N' ROLL",
-    "price": 40.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/joan-jett-the-blackhearts-40x40-bad-reputation-i-love-rock-n-roll-hardcover-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/JoanJett_Deluxe_Hardcover_FandB_3D_v3_18c2d8a8-1915-41cb-8781-29ba4cc539a8.png?v=1772656637",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Z2 Comics",
-    "title": "GWAR: 'THE RETURN OF GOR GOR' FLOPPY COMIC BOOK",
-    "price": 19.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/gwar-the-return-of-gor-gor-floppy-comic-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/GWAR2-Mockups_Floppy_2a9f290c-4428-4791-9bb2-126febbaf697.png?v=1772656637",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "TWIZTID: MAYHEM MANOR GRAPHIC NOVEL",
-    "title": "STANDARD EDITION",
-    "price": 24.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/twiztid-mayhem-manor-graphic-novel-standard-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/TwiztidECOMM_Standard2.png?v=1772656732",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "HALESTORM: HYDE MANOR GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 59.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/halestorm-hyde-manor-deluxe-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/HALESTORM_ECOMM_slipcase_white_v2_03fffbc5-3879-42c2-bcc9-7cc3721d0bf2.png?v=1772656834",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
     "artist": "Z2 Comics",
     "title": "KING DIAMOND \"ABIGAIL\" MASK (Limited Edition)",
     "price": 60.0,
@@ -16612,34 +15904,6 @@
     "version": "limited"
   },
   {
-    "artist": "NOTHING MORE: SPIRITS VOL. I GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 30.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/nothing-more-spirits-vol-i-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/NOTHINGMORE_ECOMM_HARDCOVER_WHITE_13295b2f-a99d-4c27-b486-16950bb65d60.png?v=1772656835",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "IN FLAMES PRESENTS: THE JESTER'S CURSE GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 40.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/in-flames-presents-the-jesters-curse-graphic-novel-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Z2-PP-_InFlames-FRONT.png?v=1772656835",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Z2 Comics",
     "title": "KING DIAMOND 'ABIGAIL' 18TH CENTURY HEARSE",
     "price": 165.0,
@@ -16654,22 +15918,6 @@
     "version": "standard"
   },
   {
-    "artist": "GWAR: IN THE DUOVERSE OF ABSURDITY GRAPHIC NOVEL",
-    "title": "DELUXE HARDCOVER",
-    "price": 59.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/gwar-in-the-duoverse-of-absurdity-deluxe-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/GWAR-DLXBOOK.png?v=1772656835",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
     "artist": "Z2 Comics",
     "title": "JOAN JETT & THE BLACKHEARTS 'I LOVE ROCK 'N' ROLL / BAD REPUTATION' 7\" (Black Vinyl)",
     "price": 17.0,
@@ -16679,52 +15927,6 @@
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/JoanJett7inch.png?v=1772656834",
     "keywords": [],
     "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "ANTHRAX: AMONG THE LIVING GRAPHIC NOVEL",
-    "title": "DELUXE BOOK",
-    "price": 60.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/anthrax-among-the-living-graphic-novel-deluxe-book",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Anthrax_deluxe_02_9410f550-c8db-4000-87b1-f6abf789f0c2.jpg?v=1772657253",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "DIO: HOLY DIVER GRAPHIC NOVEL",
-    "title": "DELUXE EDITION",
-    "price": 79.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dio-holy-diver-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DIO_SLipcase_3DMock_a88da922-f4c3-4c27-a397-7bb1db6890af.png?v=1772657500",
-    "keywords": [
-      "deluxe"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "deluxe"
-  },
-  {
-    "artist": "Z2 Comics",
-    "title": "POPPY: ALTAR STATUE",
-    "price": 69.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/poppy-altar-statue",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/5_8073fc3f-1b21-48cf-bb56-bc5a076d72e0.png?v=1772660462",
-    "keywords": [],
-    "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
@@ -16744,20 +15946,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "picture disc"
-  },
-  {
-    "artist": "DEE SNIDER: HE'S NOT GONNA TAKE IT GRAPHIC NOVEL",
-    "title": "HARDCOVER EDITION",
-    "price": 30.0,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/dee-snider-hes-not-gonna-take-it-hardcover",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/DEESNiDER_ECOMM_hardcoverangled_v2_white_bf8a4f92-4b7e-4065-93c2-fead9acdd5f0.png?v=1772660849",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Z2 Comics",
@@ -16788,34 +15976,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "2lp"
-  },
-  {
-    "artist": "FRANCHISE CLUB",
-    "title": "TYPE O NEGATIVE \"BLOODY KISSES\" T-SHIRT",
-    "price": 15.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/type-o-negative-bloody-kisses-tee-tshirt",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/18TON008.jpg?v=1731970803",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "SUPER7",
-    "title": "TYPE O NEGATIVE PETER STEELE (WORLD COMING DOWN) REACTION FIGURE *Blemished Packaging*",
-    "price": 29.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/type-o-negative-peter-steele-world-coming-down-reaction-figure-blemished-packaging",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/IMG_6521.heic?v=1772900427",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Universal",
@@ -16965,6 +16125,20 @@
     "version": "standard"
   },
   {
+    "artist": "Rocksax - USA",
+    "title": "Rocksax Bring Me The Horizon Skate Bag - Sempiternal",
+    "price": 59.99,
+    "source": "Revolver",
+    "source_type": "shopify_store",
+    "link": "https://shop.revolvermag.com/products/rocksax-bring-me-the-horizon-skate-bag-sempiternal",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/SBBMTHSEM01BringMeTheHorizonSempiternalRocksaxSkateBag_306dced9-2246-4f7f-8ba8-de043a2eee92.png?v=1772766190",
+    "keywords": [],
+    "deal_quality": "normal",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "Rocksax Ice Nine Kills Wallet",
     "title": "Welcome Nightmare",
     "price": 22.99,
@@ -17002,12 +16176,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Venom_2LPPS.jpg?v=1772807478",
     "keywords": [
       "2lp",
-      "clear"
+      "clear",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "2lp clear"
+    "version": "2lp clear smoke"
   },
   {
     "artist": "AXE HEAVEN® STORE - Mini Guitar Replica Collectibles & Custom Record Awards",
@@ -18977,22 +18152,6 @@
     "version": "exclusive"
   },
   {
-    "artist": "Avatar: The Last Airbender",
-    "title": "Book 1: Water (Music From The Animated Series) 2 x LP (RSD Exclusive)",
-    "price": 54.99,
-    "source": "Newbury Comics",
-    "source_type": "shopify_store",
-    "link": "https://www.newburycomics.com/products/jeremy_zuckerman_avatar_the_last_airbender__book_1_water_music_from_the_animated_series_2_x_lp_rsd_exclusive",
-    "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2811572.jpg?v=1764081283",
-    "keywords": [
-      "exclusive"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive"
-  },
-  {
     "artist": "Alan Silvestri",
     "title": "The Back To The Future Trilogy LP (RSD Exclusive)",
     "price": 32.99,
@@ -19300,22 +18459,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "exclusive"
-  },
-  {
-    "artist": "Various Artists",
-    "title": "What's This World Coming To: Garage Rock From The Sun Records Vault Zoetrope LP (RSD First)",
-    "price": 29.99,
-    "source": "Newbury Comics",
-    "source_type": "shopify_store",
-    "link": "https://www.newburycomics.com/products/various_artists_whats_this_world_coming_to_garage_rock_from_the_sun_records_vault_zoetrope_lp_rsd_first",
-    "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2811024.jpg?v=1764081334",
-    "keywords": [
-      "zoetrope"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "zoetrope"
   },
   {
     "artist": "Van Halen",
@@ -19796,12 +18939,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/IPrevail-ViolentNature.jpg?v=1758049407",
     "keywords": [
       "exclusive",
-      "clear"
+      "clear",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive clear"
+    "version": "exclusive clear smoke"
   },
   {
     "artist": "Alex G",
@@ -20112,12 +19256,13 @@
     "link": "https://www.newburycomics.com/products/meliora-2lp-green-smoke-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/Ghost-Meliora-Exclusive-Color-Vinyl-LP-2802255.jpg?v=1755714089",
     "keywords": [
-      "2lp"
+      "2lp",
+      "smoke"
     ],
     "deal_quality": "normal",
     "demand": "steady",
     "format": "vinyl",
-    "version": "2lp"
+    "version": "2lp smoke"
   },
   {
     "artist": "Deftones",
@@ -20361,12 +19506,13 @@
     "link": "https://craftrecordings.com/products/human-clay-25th-anniversary-edition-gray-smoke-2-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Wide.png?v=1718037191",
     "keywords": [
-      "anniversary"
+      "anniversary",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "anniversary"
+    "version": "anniversary smoke"
   },
   {
     "artist": "Tell All Your Friends: 20th Anniversary Edition (Fog Vinyl LP + 10\"",
@@ -20557,20 +19703,6 @@
   },
   {
     "artist": "Hector Lavoe",
-    "title": "Comedia Album Tee",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/hector-lavoe-comedia-album-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/HL_COMEDIA_MERCH.png?v=1770243017",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Hector Lavoe",
     "title": "Comedia (Digital Album)",
     "price": 18.0,
     "source": "Craft Recordings",
@@ -20607,12 +19739,13 @@
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00991HectorLavoe-ComediaPackShotClearSmoke.png?v=1770142607",
     "keywords": [
       "exclusive",
-      "clear"
+      "clear",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "exclusive clear"
+    "version": "exclusive clear smoke"
   },
   {
     "artist": "Daddy Yankee",
@@ -20715,48 +19848,6 @@
     "version": "standard"
   },
   {
-    "artist": "John Lee Hooker",
-    "title": "That's My Story: John Lee Hooker Sings the Blues (Bluesville Series) (Digital Album)",
-    "price": 10.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/john-lee-hooker-thats-my-story-john-lee-hooker-sings-the-blues-bluesville-series-digital-album",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/That_s_My_Story-_John_Lee_Hooker_Sings_The_Blues_Dig.png?v=1769816031",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "John Lee Hooker",
-    "title": "That's My Story: John Lee Hooker Sings the Blues (Bluesville Series) (180g LP)",
-    "price": 33.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/john-lee-hooker-thats-my-story-john-lee-hooker-sings-the-blues-bluesville-series-180g-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/John_Lee_Hooker_Thats_My_Story_Pack_Shot_w_obi_LP.png?v=1769789144",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Raffi",
-    "title": "Penny Penguin Board Book",
-    "price": 8.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/raffi-penny-penguin-board-book",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/penny.png?v=1769015114",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "The Record Company",
     "title": "Give It Back To You (Deluxe Edition) (Digital Album)",
     "price": 15.0,
@@ -20824,78 +19915,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/miles-davis-the-best-of-miles-davis-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/MILESDAVID-THEBESTOF-MOCKUP_1_30856695-20a8-4ed8-a5f7-990272f693b3.png?v=1769012940",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "\"Tetragon Rainbow\" Zoetrope Slipmat",
-    "price": 15.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-tetragon-rainbow-zoetrope-slipmat",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/TetragonSlipmat-01.png?v=1768517488",
-    "keywords": [
-      "zoetrope"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "zoetrope"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "Legalize Jazz Knit Beanie",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-legalize-jazz-knit-beanie",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Untitleddesign-2026-01-22T111543.962.png?v=1769109720",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "New Spiritual Jazz Hat",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-new-spiritual-jazz-hat",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Untitleddesign-2026-01-22T111508.724.png?v=1769109640",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "Home Grown Tee",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-home-grown-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/JazzDispensary_EvergreenTee_Mock_62ae86d7-4750-4178-828c-c6a6200288ad.png?v=1768940465",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "Varsity Logo Tee",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-varsity-logo-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/JazzDispensary_VarsityTee_8042d992-d3c7-4fd8-8e24-8ad0cb119eb7.png?v=1768940426",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -21043,34 +20062,6 @@
     "version": "standard"
   },
   {
-    "artist": "Fania",
-    "title": "Fania Raíces Crewneck Sweatshirt",
-    "price": 55.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/fania-raices-crewneck-sweatshirt",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Fania_2.png?v=1771979267",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Fania",
-    "title": "Fania Raíces T-shirt",
-    "price": 28.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/fania-raices-t-shirt",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/Fanie_PR_Shirt_WTag.png?v=1765313961",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Lorin Maazel & The Cleveland Orchestra",
     "title": "Mussorgsky: Pictures at an Exhibition / Night on Bald Mountain (180g LP)",
     "price": 29.99,
@@ -21204,20 +20195,6 @@
     "version": "standard"
   },
   {
-    "artist": "Pete Rodriguez",
-    "title": "I Like It Like That (180g LP)",
-    "price": 29.98,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/pete-rodriguez-i-like-it-like-that-180g-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/products/PETE_RODRIGUEZ_ILILT_FRONT_VINYL.jpg?v=1591225286",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "The Traveling Wilburys",
     "title": "The Traveling Wilburys, Vol. 3 (LP)",
     "price": 29.99,
@@ -21288,21 +20265,7 @@
     "version": "standard"
   },
   {
-    "artist": "Fania",
-    "title": "Fania Logo Old School Baseball Hat (Black)",
-    "price": 25.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/fania-logo-old-school-baseball-hat-black",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/products/oldschool_fania.png?v=1631301000",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Booker T. & The M.G.'s",
+    "artist": "Unknown Artist",
     "title": "McLemore Avenue (LP)",
     "price": 25.98,
     "source": "Craft Recordings",
@@ -21379,20 +20342,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/the-bill-evans-trio-on-a-monday-evening-180g-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/products/mondayevening_digi_4f02663c-8db2-4972-87d3-699c623d3c4a.png?v=1620175741",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "Jazz Fusion Hat",
-    "price": 25.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-fusion-hat",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/jazzfusionhat-01.png?v=1704748636",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -21505,23 +20454,6 @@
     "version": "standard"
   },
   {
-    "artist": "A Day To Remember",
-    "title": "What Separates Me From You",
-    "price": 28.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/a-day-to-remember-what-separates-me-from-you-15th-anniversary-edition-electric-smoke-craft-recordings-exclusive-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/ADTR_WHATSEPARATESMEFROMYOU_ALTCOVERPACKSHOT-WIDE-SB06.png?v=1759159017",
-    "keywords": [
-      "exclusive",
-      "anniversary"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "exclusive anniversary"
-  },
-  {
     "artist": "O.A.R.",
     "title": "Stories Of A Stranger (20th Anniversary Edition) (2-LP)",
     "price": 40.0,
@@ -21599,50 +20531,6 @@
   },
   {
     "artist": "Bill Evans Trio",
-    "title": "Haunted Heart Screen Print Poster (Limited Edition)",
-    "price": 40.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bill-evans-trio-haunted-heart-poster",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/BEPosterpack.png?v=1756929560",
-    "keywords": [
-      "limited"
-    ],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited"
-  },
-  {
-    "artist": "Haunted Heart Geometrics",
-    "title": "Midnight Blue Tee",
-    "price": 35.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bill-evans-geometrics-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/BillEvansTrio_Triangle_TShirt_MidnightBlue.png?v=1756928951",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Haunted Heart",
-    "title": "Ivory Tee",
-    "price": 35.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bill-evans-trio-haunted-heart-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/BillEvansTrio_Photo_TShirt_Ivory_4c767508-d3c8-4e97-a61e-92e110a7c2a1.png?v=1756928999",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Bill Evans Trio",
     "title": "Haunted Heart: The Legendary Riverside Studio Recordings (Digital)",
     "price": 30.0,
     "source": "Craft Recordings",
@@ -21691,20 +20579,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/tulare-dust-a-songwriters-tribute-to-merle-haggard-digital-album",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/TulareDustDig.png?v=1756422046",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Stax Records",
-    "title": "Stax Steel Bottle Opener",
-    "price": 12.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/stax-steel-bottle-opener",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/products/stax_opener.png?v=1562027415",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -21775,34 +20649,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/celia-cruz-the-queen-of-salsa-180g-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CC_THEQUEENOFSALSA_PACKSHOT-black-STICKER.png?v=1756242909",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Yusef Lateef",
-    "title": "Jazz Mood (Original Jazz Classics Series) (Digital Album)",
-    "price": 18.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/yusef-lateef-jazz-mood-original-jazz-classics-series-digital-album",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/JazzMoodDig.png?v=1756239022",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Yusef Lateef",
-    "title": "Jazz Mood (Original Jazz Classics Series) (180g LP)",
-    "price": 39.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/yusef-lateef-jazz-mood-original-jazz-classics-series-180g-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00866YusefLateef-JazzMoodPackShotwobi.png?v=1756238564",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -21964,20 +20810,6 @@
     "version": "standard"
   },
   {
-    "artist": "Jazz Dispensary",
-    "title": "Legalize Jazz Tee",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-dispensary-legalize-jazz-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/LegalizeJazz_TeeMock_Wine_61.png?v=1756148652",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Catalyst",
     "title": "Perception (Jazz Dispensary Top Shelf Series) (Digital Album)",
     "price": 10.0,
@@ -22041,34 +20873,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/pink-anderson-carolina-blues-man-volume-1-bluesville-series-180g-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00843PinkAnderson-CarolinaBluesManPackShotwobi.png?v=1756331930",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Willie Colón",
-    "title": "Asalto Navideño Hoodie",
-    "price": 55.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/asalto-navideno-hoodie",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/WillieColon_AsaltoNaviden_ao_Hoodie_Front.png?v=1755029877",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Willie Colón",
-    "title": "Asalto Navideño T-Shirt",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/asalto-navideno-t-shirt",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/WillieColon_AsaltoNavideno_TShirt_2.png?v=1755029441",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -22279,6 +21083,20 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/ray-barretto-barretto-power-180g-lp",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/products/barretto.png?v=1660078745",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Johnnie Taylor",
+    "title": "One Step From The Blues - LP",
+    "price": 25.0,
+    "source": "Craft Recordings",
+    "source_type": "shopify_store",
+    "link": "https://craftrecordings.com/products/one-step-from-the-blues-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00803JohnnieTaylor-OneStepFromtheBluesPackShot.png?v=1724177530",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -22518,34 +21336,6 @@
     "version": "standard"
   },
   {
-    "artist": "Jazz Dispensary",
-    "title": "Groove Quest T-Shirt",
-    "price": 35.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/groove-quest-t-shirt",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/JazzDispensary_GroozeQuest_Merch_IvoryTee.png?v=1750090813",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Jazz Dispensary",
-    "title": "Jazz Wizards T-Shirt",
-    "price": 35.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/jazz-wizards-t-shirt",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/JazzDispensary_GroozeQuest_Merch_YamTee.png?v=1749658215",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Bayou Country (Bayou Blue LP",
     "title": "Exclusive)",
     "price": 27.0,
@@ -22660,20 +21450,6 @@
     "version": "standard"
   },
   {
-    "artist": "Bluesville Records",
-    "title": "Bluesville Logo Hoodie",
-    "price": 55.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bluesville-logo-hoodie",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/blueshoodie.png?v=1749503182",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Furry Lewis",
     "title": "Back On My Feet Again (Bluesville Series) (Digital Album)",
     "price": 10.0,
@@ -22681,20 +21457,6 @@
     "source_type": "shopify_store",
     "link": "https://craftrecordings.com/products/back-on-my-feet-again-bluesville-series-hi-res-digital-album",
     "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/BackOnMyFeetAgainDig.png?v=1749244935",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Bluesville Records",
-    "title": "Bluesville Logo T-Shirt",
-    "price": 30.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/bluesville-logo-tee",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/BluesvilleTee.png?v=1756219018",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -22784,22 +21546,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "standard"
-  },
-  {
-    "artist": "Stax Records",
-    "title": "Stax Finger Snap Zoetrope Slipmat",
-    "price": 15.0,
-    "source": "Craft Recordings",
-    "source_type": "shopify_store",
-    "link": "https://craftrecordings.com/products/finger-snap-zoetrope-slipmat",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/slip.png?v=1756146915",
-    "keywords": [
-      "zoetrope"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "zoetrope"
   },
   {
     "artist": "Sam Cooke",
@@ -23095,20 +21841,6 @@
     "version": "clear"
   },
   {
-    "artist": "Pop Evil",
-    "title": "What Remains",
-    "price": 24.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/pop-evil-what-remains-spotify-fans-first",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/PopEvil_WhatRemains_Color-In-Color-_2-Color_-O7_T3-_-O4_O24-_SPT__Mockup_FRONT.png?v=1737731037",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Held.",
     "title": "GREY on New You Anthem Vinyl",
     "price": 28.98,
@@ -23353,22 +22085,6 @@
     "version": "standard"
   },
   {
-    "artist": "I AM",
-    "title": "Eternal Steel Marble Bone Red Vinyl",
-    "price": 24.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/i-am-eternal-steel-marble-bone-red-vinyl-pre-order",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/IAMEternalSteelMarbleBoneandRedVinyl2048x2048.png?v=1678391404",
-    "keywords": [
-      "marble"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "marble"
-  },
-  {
     "artist": "Bodysnatcher",
     "title": "Bleed-Abide Opaque Orchid Vinyl",
     "price": 24.98,
@@ -23392,11 +22108,13 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/dogma-dogma-translucent-galaxy-vinyl-pre-order",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Dogma_Dogma_TransGalaxy_LP_Mockup_FRONT.png?v=1717013769",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Kittie",
@@ -23459,20 +22177,6 @@
     "version": "marble"
   },
   {
-    "artist": "Fit For an Autopsy",
-    "title": "The Great Collapse",
-    "price": 9.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/fit-for-an-autopsy-the-great-collapse",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/FFAA_Digi_Mockup.png?v=1763650165",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Fair To Midland",
     "title": "Arrows & Anchors Vinyl LP",
     "price": 33.98,
@@ -23508,20 +22212,6 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/the-contortionist-clairvoyant-color-in-color-vinyl-2xlp",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/TheContortionistClairvoyantBlackandSilverAsideBsideVinyl.png?v=1678391675",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Hidden",
-    "title": "Underoath 12x12 Poster Flat",
-    "price": 2.0,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/underoath-12x12-poster-flat",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Underoath_Unsigned_Flat.png?v=1746823102",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -23659,20 +22349,6 @@
     "version": "splatter"
   },
   {
-    "artist": "Darkest Hour",
-    "title": "Purple Rider Long Sleeve Shirt",
-    "price": 38.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/darkest-hour-purple-rider-long-sleeve",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/246b1b33-b304-4c4b-8f83-9ef57a110003_7eb78263-a550-4ad3-901d-873229038c2d.png?v=1759353155",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Ace Frehley",
     "title": "Anomaly (Deluxe) Clear & Neon Green Vinyl",
     "price": 33.98,
@@ -23688,20 +22364,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "deluxe clear"
-  },
-  {
-    "artist": "Enterprise Earth",
-    "title": "The Chosen Hand Written Lyric Cards",
-    "price": 9.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/enterprise-earth-the-chosen-hand-written-lyric-cards",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/EnterpriseEarthTheChosenDanWatsonHandDrawnLyricCards2048x2048_b0bef424-93b8-4c22-93f3-fc3ae155d202.jpg?v=1675972144",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "MNRK Heavy",
@@ -23995,27 +22657,13 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/cold-years-paradise-translucent-purple-lp-pre-order",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/ColdYearsVinyl-1_b361081a-42ba-4e8d-b4bf-1b3ef75acde4.png?v=1632759173",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Zakk Wylde",
-    "title": "\"Book of Shadows II\" Opaque Purple Double Vinyl LP",
-    "price": 29.98,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/copy-of-zakk-wylde-book-of-shadows-ii",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/ZakkWylde_BOS2_LP_Mockup_b736ac8c-d544-4def-8ea2-090150aba670.png?v=1632759545",
     "keywords": [
-      "opaque"
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "opaque"
+    "version": "translucent"
   },
   {
     "artist": "CKY",
@@ -24267,11 +22915,13 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/high-on-fire-electric-messiah-red-w-black-smoke-vinyl-lp",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/products/Untitleddesign_6d45a4c8-d62f-4b74-bc91-0880d2d87f2c.png?v=1752586725",
-    "keywords": [],
+    "keywords": [
+      "smoke"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "smoke"
   },
   {
     "artist": "The Callous Daoboys",
@@ -24384,12 +23034,13 @@
     "link": "https://mnrkheavy.com/products/slomosa-tundra-rock-clear-smoke-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Slomosa_LP_Mockup_Mettalic_Silver_FRONT_97bf8345-405d-4ba4-bbc9-e716a528d911.png?v=1750700475",
     "keywords": [
-      "clear"
+      "clear",
+      "smoke"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "clear"
+    "version": "clear smoke"
   },
   {
     "artist": "Guide",
@@ -24539,20 +23190,6 @@
     "version": "standard"
   },
   {
-    "artist": "Screaming For Vengeance",
-    "title": "Hardcover Graphic Novel",
-    "price": 35.0,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/screaming-for-vengeance-hardcover-graphic-novel",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/ScreamingForVengence_Book.png?v=1746822897",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Dark Chapel",
     "title": "‘Spirit In The Glass' Galaxy Apple Vinyl",
     "price": 28.98,
@@ -24591,12 +23228,13 @@
     "keywords": [
       "splatter",
       "opaque",
-      "clear"
+      "clear",
+      "translucent"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "splatter opaque clear"
+    "version": "splatter opaque clear translucent"
   },
   {
     "artist": "Creeping Death",
@@ -24688,20 +23326,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "splatter variant"
-  },
-  {
-    "artist": "Hidden",
-    "title": "Misfire Signed Poster Flat",
-    "price": 2.0,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/isfire-signed-poster-flat",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Misfire_PosterFlat_Mock_1.png?v=1741281703",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Misfire",
@@ -24841,11 +23465,13 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/your-spirit-dies-my-gnawing-pains-will-never-rest",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/YSD_MGPWNR_Digi_Mockup_FRONT.png?v=1738359669",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Somnuri",
@@ -24876,13 +23502,13 @@
     "version": "standard"
   },
   {
-    "artist": "Pop Evil",
-    "title": "What Remains on Galaxy Translucent Vinyl",
-    "price": 24.98,
+    "artist": "Somnuri",
+    "title": "Somnuri - Desiderium - Seaglass Blue Vinyl",
+    "price": 19.98,
     "source": "MNRK Heavy",
     "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/pop-evil-what-remains-on-galaxy-translucent-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/PopEvil_WhatRemains_Galaxy-2-Color-T5_BK-_Mockup_FRONT.png?v=1735925889",
+    "link": "https://mnrkheavy.com/products/somnuri-desiderium-seaglass-blue",
+    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/Somnuri_LP_SeaglassBlue_FRONT.png?v=1733868990",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -24897,6 +23523,22 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/ace-frehley-space-invader-clear-tangerine",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/634164698119_Mockup_FRONT.png?v=1733868646",
+    "keywords": [
+      "clear"
+    ],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "clear"
+  },
+  {
+    "artist": "Ace Frehley",
+    "title": "Ace Frehley - Spaceman - Clear & Grape Vinyl",
+    "price": 33.98,
+    "source": "MNRK Heavy",
+    "source_type": "shopify_store",
+    "link": "https://mnrkheavy.com/products/ace-frehley-spaceman-clear-grape",
+    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/634164697914_Mockup_FRONT.png?v=1733867369",
     "keywords": [
       "clear"
     ],
@@ -24955,11 +23597,13 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/a-killer-s-confession-victim-1-bleach-mix-013-translucent-lp",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/AKiller_sConfession_Victim1BlackMix013Translucent_Mockup_FRONT.png?v=1733939403",
-    "keywords": [],
+    "keywords": [
+      "translucent"
+    ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "standard"
+    "version": "translucent"
   },
   {
     "artist": "Crowbar",
@@ -25103,20 +23747,6 @@
     "source_type": "shopify_store",
     "link": "https://mnrkheavy.com/products/mouth-for-war-bleed-yourself-pre-order",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/MFW_BY_CreamsicleMarble_Mock.png?v=1695235620",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Slomosa",
-    "title": "Tundra Rock Album Poster",
-    "price": 2.0,
-    "source": "MNRK Heavy",
-    "source_type": "shopify_store",
-    "link": "https://mnrkheavy.com/products/slomosa-11x17-tundra-rock-album-poster",
-    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/SLOMOSA_TR_SHOPIFY_2048PX.jpg?v=1726844428",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -25389,6 +24019,20 @@
     "version": "standard"
   },
   {
+    "artist": "Nightmare Of You",
+    "title": "When The Flowers Grow - Candle",
+    "price": 15.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/noy0wtfg00-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/9592831883ba4127a61519dcee4d549a.jpg?v=1771528379",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
     "artist": "Clam",
     "title": "Black Pullover",
     "price": 55.0,
@@ -25418,20 +24062,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited splatter"
-  },
-  {
-    "artist": "Tour",
-    "title": "18\" x 24\" Poster with Tube",
-    "price": 35.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/tour-18-x-24-poster-with-tube",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/NOY_Poster.jpg?v=1771596622",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "I Am The Avalanche",
@@ -25539,13 +24169,41 @@
     "version": "standard"
   },
   {
-    "artist": "Rose",
-    "title": "Black Dad Hat",
-    "price": 25.0,
+    "artist": "bearvsshark",
+    "title": "Ship - Sticker",
+    "price": 1.0,
     "source": "Equal Vision",
     "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/iatarosebl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/4e6fe680a5b24f82887112d53a527f0b.jpg?v=1770903327",
+    "link": "https://equalvision.com/products/bvs0ship00-st",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/7a7b3d852b49461d8c46af229d5b3486.jpg?v=1771256968",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "bearvsshark",
+    "title": "Terrorhawk - Sticker",
+    "price": 1.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/bvs0terr00-st",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/8ed186f9c5d2460d9047c45df67e1ebe.jpg?v=1771256860",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "bearvsshark",
+    "title": "Deer - Sticker",
+    "price": 1.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/bvs0deer00-st",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/7596b4a61c8244c4b336bd2e946c056e.jpg?v=1771256367",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -25802,23 +24460,6 @@
     "version": "standard"
   },
   {
-    "artist": "Armor For Sleep",
-    "title": "What To Do When You Are Dead • Opaque Purple • Limited to 1,000",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/afs0wtdwop-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/8f8dff6997ca482ba02db670d4c0ae24.jpg?v=1765228795",
-    "keywords": [
-      "limited",
-      "opaque"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited opaque"
-  },
-  {
     "artist": "Anberlin",
     "title": "Silverline • Half Clear / Half Opaque Violet • Limited to 125",
     "price": 25.0,
@@ -25886,20 +24527,6 @@
     "version": "limited opaque"
   },
   {
-    "artist": "MIRRORLESS",
-    "title": "MIRRORLESS Purple",
-    "price": 12.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/mirlmirlpp-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/27e35a50f03b4a5092c4afd4ea544dae.jpg?v=1764015582",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Hail The Sun",
     "title": "Wake • Transparent Orange & Black Marble • Limited to 500",
     "price": 25.0,
@@ -25963,20 +24590,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited splatter"
-  },
-  {
-    "artist": "Hail The Sun",
-    "title": "Divine Inner Tension • Black • Pullover Hoodie",
-    "price": 50.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/hts0dit0bl-hs",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/28a68098baa143038ff6ed4683426083.jpg?v=1684441654",
-    "keywords": [],
-    "deal_quality": "normal",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Fear Before",
@@ -26063,20 +24676,6 @@
     "version": "clear"
   },
   {
-    "artist": "The End Of The Ocean",
-    "title": "Logo • Black • Pullover Hoodie",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/teoologobl-hs",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/7407201d1bbb41a7bfaae6165154f513.jpg?v=1693415474",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "IDGAFII / Just A Man",
     "title": "Blue Vinyl 7\"",
     "price": 17.0,
@@ -26084,20 +24683,6 @@
     "source_type": "shopify_store",
     "link": "https://equalvision.com/products/dwllidjmbu-lp",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/c28e3af7144b496791fcd96b7c65ea82.jpg?v=1761156948",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "House Parties",
-    "title": "Side Effects • Neon Green • Winter Hat",
-    "price": 15.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/hprtsdefng-bn",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/0e6c8ff5c0104ffea64925b01023d609.jpg?v=1761231200",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -26444,20 +25029,6 @@
     "version": "limited"
   },
   {
-    "artist": "Kurt Travis",
-    "title": "Self Titled EP",
-    "price": 5.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/kt00st0000-cd",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/1b8fb55cb9e74f4ca0bf8010fbed0062.jpg?v=1733772576",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Naive Thieves",
     "title": "Vamonos 180g Black LP",
     "price": 20.0,
@@ -26537,22 +25108,34 @@
     "version": "standard"
   },
   {
-    "artist": "Chiodos",
-    "title": "All's Well That Ends Well • Clear Turquoise W/ Yellow & Green Splatter • Limited to 500",
+    "artist": "Battery",
+    "title": "Until The End White & Purple Swirl - LP",
     "price": 25.0,
     "source": "Equal Vision",
     "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/cho0awewcs-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/647616180131475e9d043c1e9b2f7a90.jpg?v=1749582336",
+    "link": "https://equalvision.com/products/btryute0wp-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/battery_Until_The_End_White_Purple_Swirl_-_LP.jpg?v=1749139481",
+    "keywords": [],
+    "deal_quality": "good",
+    "demand": "steady",
+    "format": "vinyl",
+    "version": "standard"
+  },
+  {
+    "artist": "Battery",
+    "title": "Until The End Transparent Black W/ Purple & White Splatter - LP",
+    "price": 25.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/btryute0tb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/battery_Until_The_End_Transparent_Black_W_Purple_White_Splatter_-_LP.jpg?v=1749139449",
     "keywords": [
-      "limited",
-      "splatter",
-      "clear"
+      "splatter"
     ],
     "deal_quality": "good",
     "demand": "steady",
     "format": "vinyl",
-    "version": "limited splatter clear"
+    "version": "splatter"
   },
   {
     "artist": "Polyphia",
@@ -26601,34 +25184,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "opaque"
-  },
-  {
-    "artist": "Pierce The Veil",
-    "title": "A Flair For The Dramatic Pink",
-    "price": 11.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/ptv0flaipk-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/7f4b7b36b0af4aa2850901a5c0456f20.jpg?v=1738167722",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Pierce The Veil",
-    "title": "DO NOT MAKE THIS ITEM LIVE FOR SALE",
-    "price": 10.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/ptv0e16100-cd",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/b0b67aa9e647428da2b892b5cc02d953.jpg?v=1716305060",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "Circa Survive",
@@ -26825,48 +25380,6 @@
     "version": "standard"
   },
   {
-    "artist": "We Came As Romans",
-    "title": "Custom Grey Tank Top",
-    "price": 20.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/wcarcustgr-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/4a18877bbaed4d30aebfadbd473a7ffb.jpg?v=1693416332",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "We Came As Romans",
-    "title": "Just Keep Breathing Tri-Indigo Tank Top",
-    "price": 20.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/wcarjkb0ti-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/9a1feabaaeb94a24ace6b5b9bacbbe26.jpg?v=1693416331",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "We Came As Romans",
-    "title": "Scratchy Text Heather Gray Tank Top",
-    "price": 20.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/wcarscrahg-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/0a548f6aad7c4183a18d9b67cc92c44e.jpg?v=1693416328",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "Vinnie Caruana",
     "title": "Survivor's Guilt • Opaque Light Yellow • Limited to 500",
     "price": 20.0,
@@ -26898,34 +25411,6 @@
     "version": "standard"
   },
   {
-    "artist": "The Sound Of Animals Fighting",
-    "title": "We Must Become...DVD",
-    "price": 12.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/saf0144000-dv",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/70c51666d89841ffac990cb44b616928.jpg?v=1693415505",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "The End Of The Ocean",
-    "title": "Logo Black Winter",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/teoologobl-bn",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/7c4bbcd066684659af3b8c63d04b7ead.jpg?v=1693415464",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "The End Of The Ocean",
     "title": "Logo Black Embroidered",
     "price": 10.0,
@@ -26947,20 +25432,6 @@
     "source_type": "shopify_store",
     "link": "https://equalvision.com/products/th00drpsdh-zp",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/3fa10b881cef49b3a44be8c8dfaec919.jpg?v=1693415447",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Stolas",
-    "title": "Flower Black Zip-Up Sweatshirt",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/stlsflwrbl-zp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/d3814d0da0084b5b9d09bce21a06a2a5.jpg?v=1693414513",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -27015,20 +25486,6 @@
   },
   {
     "artist": "Pierce The Veil",
-    "title": "Stitches Heather Blue Tank Top",
-    "price": 20.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/ptv0stchhb-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/949cda9180354e56b656df022bd13925.jpg?v=1693413586",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Pierce The Veil",
     "title": "Seal Navy TankTop",
     "price": 20.0,
     "source": "Equal Vision",
@@ -27049,20 +25506,6 @@
     "source_type": "shopify_store",
     "link": "https://equalvision.com/products/nf00logobl-zp",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/18406febb2c14e84a4f0072d43967df0.jpg?v=1693413557",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Northern Faces",
-    "title": "Fingers Crossed •Pigment Dyed • Black Dad Hat",
-    "price": 25.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/nf00crosbl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/0f9a05f0f54547368d3b8b0b11b16230.jpg?v=1693413549",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -27115,20 +25558,6 @@
     "version": "limited splatter"
   },
   {
-    "artist": "Life On Repeat",
-    "title": "As I Grew EP",
-    "price": 5.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/lor0e18000-cd",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/70f685758e304a618476ea7af7697f43.jpg?v=1693412408",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "I The Mighty",
     "title": "Album Art Mug",
     "price": 10.0,
@@ -27157,34 +25586,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited"
-  },
-  {
-    "artist": "Gatherers",
-    "title": "Custom Tank Top",
-    "price": 17.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/gthrcust00-tt",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/08539744b88442748f76e6d0beb82586.jpg?v=1693411640",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Gameface",
-    "title": "Now Black Zip-Up Sweatshirt",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/gamenow0bl-zp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/29f026dd0ce544dc892d1b35e0cf5845.jpg?v=1693411608",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
   },
   {
     "artist": "For All I Am",
@@ -27239,34 +25640,6 @@
     "source_type": "shopify_store",
     "link": "https://equalvision.com/products/cnv0razr00-pn",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/6208b8dbffec4554addc1d2d758963fc.jpg?v=1693410301",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Converge",
-    "title": "When Forever Comes Crashing Enhanced Remastered",
-    "price": 10.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/cnv0e11000-cd",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/627aaf11aa5542ccacdc0e9f0d33e1fe.jpg?v=1693410282",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
-    "artist": "Brent Walsh",
-    "title": "Black Winter Beanie",
-    "price": 15.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/brwabrwabl-bn",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/0e247390699e48778e8f370f67af4861.jpg?v=1693409510",
     "keywords": [],
     "deal_quality": "good",
     "demand": "steady",
@@ -27525,38 +25898,6 @@
     "version": "limited splatter clear"
   },
   {
-    "artist": "Circa Survive",
-    "title": "Juturna • Transparent Deep Red • Limited to 200",
-    "price": 12.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/csv0jtrndr-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/f8e109e1a9bb45d4aaab4bb8be2cabb2.jpg?v=1681231126",
-    "keywords": [
-      "limited"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited"
-  },
-  {
-    "artist": "Circa Survive",
-    "title": "On Letting Go • Transparent Dark Blue • Limited to 200",
-    "price": 12.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/csv0lettdb-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/fd2facb6e6a34343919b97466d9cec6b.jpg?v=1681231126",
-    "keywords": [
-      "limited"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited"
-  },
-  {
     "artist": "Coheed and Cambria",
     "title": "Second Stage Turbine Blade • Green W/ Yellow & White Splatter",
     "price": 29.0,
@@ -27604,20 +25945,6 @@
     "version": "standard"
   },
   {
-    "artist": "Coheed and Cambria",
-    "title": "C&C SSTB CSTT",
-    "price": 12.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/cac0sstbst-cp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/e2428a80c74b4ce08ffa4e18813338de.jpg?v=1679949845",
-    "keywords": [],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "standard"
-  },
-  {
     "artist": "The Sound Of Animals Fighting",
     "title": "Tiger & The Duke • Opaque Gold • Limited to 250",
     "price": 25.0,
@@ -27633,23 +25960,6 @@
     "demand": "steady",
     "format": "vinyl",
     "version": "limited opaque"
-  },
-  {
-    "artist": "We Came As Romans",
-    "title": "Understanding What We've Grown To Be • White/Purple Mix W/ Black Splatter • Limited to 500",
-    "price": 25.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/wcarundewp-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/b46a8d8dbe0b4b7184249a557d9a4ee3.jpg?v=1678134464",
-    "keywords": [
-      "limited",
-      "splatter"
-    ],
-    "deal_quality": "good",
-    "demand": "steady",
-    "format": "vinyl",
-    "version": "limited splatter"
   },
   {
     "artist": "Pierce The Veil",
