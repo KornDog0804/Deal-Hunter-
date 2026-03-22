@@ -16,21 +16,39 @@ SOURCES = [
     {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/vinyl-records"},
     {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us/collections/exclusive"},
     {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com/collections/vinyl"},
-    {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://fearlessrecords.com/collections/music"},
     {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com/collections/music"},
-    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"}
+    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com/collections/exclusive-vinyl"},
+    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com/collections/exclusive-lps"},
+    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/exclusive-vinyl"},
+    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com/collections/vinyl"},
+    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com/collections/music"},
+    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com/collections/music"},
+
+    {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
+    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"}
 ]
 
 POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
-    "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp"
+    "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp",
+    "marble", "smush", "quad", "opaque", "clear"
 ]
 
 BANNED_KEYWORDS = [
-    "christmas", "xmas", "holiday", "jingle", "santa",
-    "let it snow", "wonderful christmastime", "war is over",
-    "dean martin", "jackson 5", "bobby helms"
+    "christmas",
+    "xmas",
+    "holiday",
+    "jingle",
+    "santa",
+    "let it snow",
+    "wonderful christmastime",
+    "war is over",
+    "dean martin",
+    "jackson 5",
+    "bobby helms",
+    "snowed in"
 ]
 
 DEBUG = []
@@ -39,16 +57,28 @@ def log(msg):
     print(msg)
     DEBUG.append(msg)
 
+def load_json(name):
+    with open(BASE / name, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+ARTIST_CONFIG = load_json("artist_whitelist.json")
+SLUG_PATTERNS = load_json("slug_patterns.json")
+
+ENFORCE_ARTIST_WHITELIST = ARTIST_CONFIG.get("enforce_artist_whitelist", True)
+ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
+BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
+
 def fetch(url):
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=25) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", "ignore")
 
 def clean(text):
     text = html.unescape(text or "")
     text = text.replace("–", "-").replace("|", "-")
     text = text.replace("’", "'").replace("“", '"').replace("”", '"')
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 def normalize_price(value):
     try:
@@ -68,9 +98,74 @@ def is_banned(text):
     t = (text or "").lower()
     return any(b in t for b in BANNED_KEYWORDS)
 
+def artist_allowed(artist, title=""):
+    hay = f"{artist} {title}".lower()
+
+    if any(b in hay for b in BLOCKED):
+        return False
+
+    if not ENFORCE_ARTIST_WHITELIST:
+        return True
+
+    return any(a in hay for a in ALLOWED)
+
 def keyword_hits(text):
     t = (text or "").lower()
     return [k for k in POSITIVE_KEYWORDS if k in t]
+
+def looks_like_garbage(text):
+    t = (text or "").strip().lower()
+
+    if len(t) < 3:
+        return True
+
+    if t in {"unknown title", "product", "vinyl"}:
+        return True
+
+    if re.fullmatch(r"[a-z0-9]{6,}", t):
+        return True
+
+    return False
+
+def should_skip(title, link):
+    blob = f"{title} {link}".lower()
+
+    if is_banned(blob):
+        return True
+
+    if " cd" in blob or "-cd" in blob or "/cd" in blob:
+        return True
+
+    return False
+
+def parse_from_slug(link):
+    slug = link.rstrip("/").split("/")[-1]
+    slug = clean(slug.replace("-", " ")).lower()
+    slug = re.sub(
+        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version|black|standard|record|records)\b",
+        "",
+        slug,
+        flags=re.I
+    )
+    slug = re.sub(r"\s+", " ", slug).strip()
+    return slug
+
+def infer_artist_title(raw_title, link):
+    title = clean(raw_title)
+    slug = parse_from_slug(link)
+
+    for pattern, artist, album in SLUG_PATTERNS:
+        if re.search(pattern, slug, re.I):
+            return artist, album
+
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+    if len(parts) >= 2:
+        return parts[0], parts[1]
+
+    if len(slug.split()) >= 3:
+        return "Unknown Artist", slug.title()
+
+    return "Unknown Artist", title
 
 def extract_links(html_text, base, source_type="shopify_store"):
     raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
@@ -107,7 +202,7 @@ def extract_links(html_text, base, source_type="shopify_store"):
             if full not in links:
                 links.append(full)
 
-    return links[:100]
+    return links[:120]
 
 def extract_title(html_text):
     patterns = [
@@ -166,55 +261,156 @@ def extract_image(html_text, base):
 
     return ""
 
-def looks_like_garbage(text):
-    t = (text or "").strip().lower()
+def fetch_shopify_products(collection_url):
+    try:
+        store_root = collection_url.split("/collections/")[0]
+        url = store_root.rstrip("/") + "/products.json?limit=250"
+        data = fetch(url)
+        parsed = json.loads(data)
+        return parsed.get("products", [])
+    except Exception as e:
+        log(f"Shopify fetch failed: {collection_url} | {e}")
+        return []
 
-    if len(t) < 4:
-        return True
+def build_shopify_deals(source):
+    deals = []
+    products = fetch_shopify_products(source["url"])
+    log(f'{source["name"]}: {len(products)} products via Shopify JSON')
 
-    if re.fullmatch(r"[a-z0-9]{6,}", t):
-        return True
+    for p in products:
+        try:
+            title = clean(p.get("title", ""))
+            if not title:
+                continue
 
-    if t in {"unknown title", "product", "vinyl"}:
-        return True
+            vendor = clean(p.get("vendor", ""))
+            variants = p.get("variants", []) or []
+            if not variants:
+                continue
 
-    return False
+            price = normalize_price(variants[0].get("price", 0))
+            if price <= 0:
+                continue
 
-def parse_from_slug(link):
-    slug = link.rstrip("/").split("/")[-1]
-    slug = clean(slug.replace("-", " ")).lower()
-    slug = re.sub(
-        r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collector'?s|stereo|version|black|standard|record|records)\b",
-        "",
-        slug,
-        flags=re.I
-    )
-    slug = re.sub(r"\s+", " ", slug).strip()
-    return slug
+            handle = p.get("handle", "")
+            if not handle:
+                continue
 
-def infer_artist_title(raw_title, link):
-    title = clean(raw_title)
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+            store_root = source["url"].split("/collections/")[0]
+            link = f"{store_root}/products/{handle}"
 
-    if len(parts) >= 2:
-        return parts[0], parts[1]
+            if should_skip(title, link):
+                continue
 
-    slug = parse_from_slug(link)
-    if len(slug.split()) >= 3:
-        return "Unknown Artist", slug.title()
+            artist, album = infer_artist_title(title, link)
 
-    return "Unknown Artist", title
+            if artist == "Unknown Artist" and vendor:
+                artist = vendor
 
-def should_skip(title, link):
-    blob = f"{title} {link}".lower()
+            if looks_like_garbage(album):
+                continue
 
-    if is_banned(blob):
-        return True
+            if not artist_allowed(artist, album):
+                continue
 
-    if " cd" in blob or "-cd" in blob or "/cd" in blob:
-        return True
+            image = ""
+            imgs = p.get("images", []) or []
+            if imgs:
+                image = imgs[0].get("src", "")
 
-    return False
+            keywords = keyword_hits(f"{title} {link}")
+
+            version_parts = keywords[:]
+            lowered_title = title.lower()
+            if "2lp" in lowered_title and "2lp" not in version_parts:
+                version_parts.append("2lp")
+            if "1lp" in lowered_title and "1lp" not in version_parts:
+                version_parts.append("1lp")
+
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "price": price,
+                "source": source["name"],
+                "source_type": source["source_type"],
+                "link": link,
+                "image": image,
+                "keywords": keywords,
+                "deal_quality": "good" if price < 40 else "normal",
+                "demand": "steady",
+                "format": "vinyl",
+                "version": " ".join(version_parts) if version_parts else "standard"
+            })
+
+        except Exception as e:
+            log(f'{source["name"]}: skipped Shopify product | {e}')
+
+    log(f'{source["name"]}: kept {len(deals)} Shopify items')
+    return deals
+
+def build_html_deals(source):
+    deals = []
+
+    try:
+        html_text = fetch(source["url"])
+        links = extract_links(html_text, source["url"], source.get("source_type", "catalog_store"))
+        log(f'{source["name"]}: found {len(links)} HTML links')
+
+        kept = 0
+        for link in links:
+            try:
+                page = fetch(link)
+                raw_title = extract_title(page)
+
+                if should_skip(raw_title, link):
+                    continue
+
+                price = extract_price(page)
+                if price <= 0:
+                    continue
+
+                artist, album = infer_artist_title(raw_title, link)
+
+                if looks_like_garbage(album):
+                    continue
+
+                if not artist_allowed(artist, album):
+                    continue
+
+                image = extract_image(page, link)
+                keywords = keyword_hits(f"{raw_title} {link}")
+
+                version_parts = keywords[:]
+                if "2lp" in link.lower() and "2lp" not in version_parts:
+                    version_parts.append("2lp")
+                if "1lp" in link.lower() and "1lp" not in version_parts:
+                    version_parts.append("1lp")
+
+                deals.append({
+                    "artist": artist,
+                    "title": album,
+                    "price": price,
+                    "source": source["name"],
+                    "source_type": source["source_type"],
+                    "link": link,
+                    "image": image,
+                    "keywords": keywords,
+                    "deal_quality": "good" if price < 40 else "normal",
+                    "demand": "steady",
+                    "format": "vinyl",
+                    "version": " ".join(version_parts) if version_parts else "standard"
+                })
+                kept += 1
+
+            except Exception as e:
+                log(f'{source["name"]}: skipping product {link} | {e}')
+
+        log(f'{source["name"]}: kept {kept} HTML items')
+
+    except Exception as e:
+        log(f'{source["name"]}: HTML source failed | {e}')
+
+    return deals
 
 def dedupe_deals(deals):
     seen = {}
@@ -231,63 +427,10 @@ def build():
     deals = []
 
     for source in SOURCES:
-        source_found = 0
-        source_saved = 0
-        try:
-            html_text = fetch(source["url"])
-            links = extract_links(html_text, source["url"], source.get("source_type", "shopify_store"))
-            log(f'{source["name"]}: found {len(links)} links')
-
-            for link in links:
-                try:
-                    page = fetch(link)
-                    raw_title = extract_title(page)
-                    source_found += 1
-
-                    if should_skip(raw_title, link):
-                        continue
-
-                    price = extract_price(page)
-                    if price <= 0:
-                        continue
-
-                    artist, album = infer_artist_title(raw_title, link)
-
-                    if looks_like_garbage(album):
-                        continue
-
-                    image = extract_image(page, link)
-                    keywords = keyword_hits(f"{raw_title} {link}")
-
-                    version_parts = keywords[:]
-                    if "2lp" in link.lower() and "2lp" not in version_parts:
-                        version_parts.append("2lp")
-                    if "1lp" in link.lower() and "1lp" not in version_parts:
-                        version_parts.append("1lp")
-
-                    deals.append({
-                        "artist": artist,
-                        "title": album,
-                        "price": price,
-                        "source": source["name"],
-                        "source_type": source["source_type"],
-                        "link": link,
-                        "image": image,
-                        "keywords": keywords,
-                        "deal_quality": "good" if price < 40 else "normal",
-                        "demand": "steady",
-                        "format": "vinyl",
-                        "version": " ".join(version_parts) if version_parts else "standard"
-                    })
-                    source_saved += 1
-
-                except Exception as e:
-                    log(f'Skipping product {link}: {e}')
-
-            log(f'{source["name"]}: kept {source_saved} items')
-
-        except Exception as e:
-            log(f'Skipping source {source["name"]}: {e}')
+        if source["source_type"] == "shopify_store":
+            deals.extend(build_shopify_deals(source))
+        else:
+            deals.extend(build_html_deals(source))
 
     return dedupe_deals(deals)
 
