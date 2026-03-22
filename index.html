@@ -7,17 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header id="siteHeader">
-    <div class="header-wrap compact-header">
-      <div class="brand compact-brand">
+  <header id="siteHeader" class="site-header">
+    <div class="header-wrap header-compact">
+      <div class="brand brand-compact">
         <div class="eyebrow">Korndog Records</div>
         <h1>Korndog Deal Board</h1>
-        <div class="sub">
-          Best vinyl deals, best buy link first, clean post copy fast.
-        </div>
       </div>
 
-      <div class="controls compact-controls">
+      <div class="controls controls-compact">
         <input id="searchInput" type="text" placeholder="Search artist, title, source..." />
         <select id="scoreFilter">
           <option value="0">All deals</option>
@@ -27,22 +24,23 @@
         </select>
       </div>
 
-      <div class="chip-scroll">
-        <div class="chip-row nowrap-row">
-          <div class="filter-chip active" data-quick="all">All</div>
-          <div class="filter-chip" data-quick="grail">Grail Alerts</div>
-          <div class="filter-chip" data-quick="under30">Under $30</div>
-          <div class="filter-chip" data-quick="amazon">Amazon Picks</div>
-          <div class="filter-chip" data-quick="korndog">KornDog Finds</div>
+      <div class="chip-scroll" id="chipScroll">
+        <div class="chip-row chip-row-nowrap">
+          <button class="filter-chip active" data-quick="all">All</button>
+          <button class="filter-chip" data-quick="grail">Grail Alerts</button>
+          <button class="filter-chip" data-quick="under30">Under $30</button>
+          <button class="filter-chip" data-quick="amazon">Amazon Picks</button>
+          <button class="filter-chip" data-quick="korndog">KornDog Finds</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="tight-main">
+  <main class="main-tight">
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
       <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
+      <div class="chip" id="pageStatus">Page 1</div>
     </div>
 
     <section class="section">
@@ -58,7 +56,13 @@
         <h2 class="section-title">All Live Deals</h2>
         <div class="section-note">Tap a card to shop or reveal the post copy.</div>
       </div>
+
       <div id="dealList" class="deal-list"></div>
+
+      <div class="pager" id="pager">
+        <button class="btn btn-ghost" id="prevPageBtn">Previous</button>
+        <button class="btn btn-ghost" id="nextPageBtn">Next</button>
+      </div>
     </section>
 
     <div class="footer-note">
@@ -71,6 +75,8 @@
   <script>
     let allDeals = [];
     let activeQuickFilter = "all";
+    let currentPage = 1;
+    const DEALS_PER_PAGE = 24;
 
     function escapeHtml(value) {
       return String(value ?? "")
@@ -109,12 +115,10 @@
 
     function getAmazonLink(deal) {
       const link = (deal.amazon_link || "").trim();
-
       if (!link) return "";
       if (!link.includes("amazon.com")) return "";
       if (!link.includes("tag=korndog20-20")) return "";
       if (link.includes("s?k=") && link.length > 220) return "";
-
       return link;
     }
 
@@ -274,9 +278,7 @@ Vinyl Therapy never dies 🟣🟢`;
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
 
-      const picks = deals
-        .filter(d => (d.total ?? 0) >= 8)
-        .slice(0, 6);
+      const picks = deals.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
 
       if (!picks.length) {
         featuredList.innerHTML = `<div class="empty">No top picks yet. The good stuff is probably loading in from the back room.</div>`;
@@ -288,14 +290,31 @@ Vinyl Therapy never dies 🟣🟢`;
 
     function renderDeals(deals) {
       const dealList = document.getElementById("dealList");
+      const pager = document.getElementById("pager");
+      const pageStatus = document.getElementById("pageStatus");
       dealList.innerHTML = "";
 
       if (!deals.length) {
         dealList.innerHTML = `<div class="empty">No deals match your filter. The crate came up dust today.</div>`;
+        pager.style.display = "none";
+        pageStatus.textContent = "Page 0";
         return;
       }
 
-      deals.forEach(deal => dealList.appendChild(createDealCard(deal)));
+      const totalPages = Math.max(1, Math.ceil(deals.length / DEALS_PER_PAGE));
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * DEALS_PER_PAGE;
+      const end = start + DEALS_PER_PAGE;
+      const pageDeals = deals.slice(start, end);
+
+      pageDeals.forEach(deal => dealList.appendChild(createDealCard(deal)));
+
+      pager.style.display = totalPages > 1 ? "flex" : "none";
+      pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
+
+      document.getElementById("prevPageBtn").disabled = currentPage === 1;
+      document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
     }
 
     function matchesQuickFilter(deal) {
@@ -311,11 +330,11 @@ Vinyl Therapy never dies 🟣🟢`;
       return true;
     }
 
-    function applyFilters() {
+    function getFilteredDeals() {
       const query = document.getElementById("searchInput").value.trim().toLowerCase();
       const minScore = Number(document.getElementById("scoreFilter").value);
 
-      const filtered = allDeals
+      return allDeals
         .filter(d => (d.total ?? 0) >= minScore)
         .filter(matchesQuickFilter)
         .filter(d => {
@@ -325,12 +344,15 @@ Vinyl Therapy never dies 🟣🟢`;
         .sort((a, b) => {
           const scoreDiff = (b.total ?? 0) - (a.total ?? 0);
           if (scoreDiff !== 0) return scoreDiff;
-
           const priceA = Number(a.best_price || a.price || 999999);
           const priceB = Number(b.best_price || b.price || 999999);
           return priceA - priceB;
         });
+    }
 
+    function applyFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
+      const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
       renderFeatured(filtered);
       renderDeals(filtered);
@@ -342,8 +364,27 @@ Vinyl Therapy never dies 🟣🟢`;
           document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
           chip.classList.add("active");
           activeQuickFilter = chip.dataset.quick;
-          applyFilters();
+          applyFilters(true);
         });
+      });
+    }
+
+    function initPager() {
+      document.getElementById("prevPageBtn").addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage -= 1;
+          applyFilters(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      document.getElementById("nextPageBtn").addEventListener("click", () => {
+        const total = Math.max(1, Math.ceil(getFilteredDeals().length / DEALS_PER_PAGE));
+        if (currentPage < total) {
+          currentPage += 1;
+          applyFilters(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
       });
     }
 
@@ -353,7 +394,7 @@ Vinyl Therapy never dies 🟣🟢`;
         const data = await res.json();
         allDeals = Array.isArray(data) ? data : [];
         document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
-        applyFilters();
+        applyFilters(true);
       } catch (err) {
         document.getElementById("featuredList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. The front window is lit up, but the stock room is locked.</div>`;
@@ -362,10 +403,11 @@ Vinyl Therapy never dies 🟣🟢`;
       }
     }
 
-    document.getElementById("searchInput").addEventListener("input", applyFilters);
-    document.getElementById("scoreFilter").addEventListener("change", applyFilters);
+    document.getElementById("searchInput").addEventListener("input", () => applyFilters(true));
+    document.getElementById("scoreFilter").addEventListener("change", () => applyFilters(true));
 
     initQuickFilters();
+    initPager();
     init();
   </script>
 </body>
