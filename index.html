@@ -27,9 +27,9 @@
     </div>
 
     <div class="menu-block">
-      <label class="menu-label" for="artistFilter">Artist</label>
-      <select id="artistFilter" class="menu-select">
-        <option value="">All artists</option>
+      <label class="menu-label" for="sourceFilter">Source</label>
+      <select id="sourceFilter" class="menu-select">
+        <option value="">All sources</option>
       </select>
     </div>
 
@@ -119,113 +119,52 @@
         .trim();
     }
 
-    function looksLikeFakeArtist(name) {
-      const text = String(name || "").trim();
-      if (!text) return true;
+    function normalizeSourceKey(value) {
+      const source = String(value || "").trim().toLowerCase();
 
-      const lower = text.toLowerCase();
+      if (!source) return "";
 
-      const badBits = [
-        "exclusive",
-        "vinyl",
-        "lp",
-        "2lp",
-        "1lp",
-        "splatter",
-        "zoetrope",
-        "etched",
-        "variant",
-        "limited",
-        "color",
-        "colored",
-        "tank top",
-        "hoodie",
-        "shirt",
-        "tee",
-        "slipmat",
-        "cassette",
-        "cd",
-        "7\"",
-        "12\"",
-        "poster",
-        "crewneck",
-        "longsleeve",
-        "beanie",
-        "hat",
-        "jacket",
-        "bundle"
-      ];
+      if (source.includes("amazon")) return "amazon";
+      if (source.includes("walmart")) return "walmart";
+      if (source.includes("target")) return "target";
+      if (source.includes("newbury")) return "newbury comics";
+      if (source.includes("udiscover")) return "udiscover music";
+      if (source.includes("sound of vinyl")) return "sound of vinyl";
+      if (source.includes("rise records")) return "rise records";
+      if (source.includes("fearless")) return "fearless records";
+      if (source.includes("brooklyn vegan")) return "brooklyn vegan";
+      if (source.includes("equal vision")) return "equal vision";
+      if (source.includes("rollin")) return "rollin records";
+      if (source.includes("deep discount")) return "deep discount";
+      if (source.includes("merchbar")) return "merchbar";
+      if (source.includes("acoustic sounds")) return "acoustic sounds";
+      if (source.includes("ride records")) return "ride records";
 
-      if (badBits.some(bit => lower.includes(bit))) return true;
-      if (text.length > 34) return true;
-      if (/\d/.test(text) && text.split(" ").length > 3) return true;
-
-      return false;
+      return source;
     }
 
-    function normalizeArtistKey(name) {
-      return String(name || "")
-        .toLowerCase()
-        .replace(/&/g, "and")
-        .replace(/’/g, "'")
-        .replace(/[^a-z0-9\s$\/-]/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
-    }
+    function prettifySourceName(value) {
+      const key = normalizeSourceKey(value);
 
-    function prettifyArtistName(name) {
-      const raw = String(name || "").trim();
-      const key = normalizeArtistKey(raw);
-
-      const specialMap = {
-        "ac/dc": "AC/DC",
-        "blink-182": "blink-182",
-        "$uicideboy$": "$uicideboy$",
-        "sleep token": "Sleep Token",
-        "dance gavin dance": "Dance Gavin Dance",
-        "a perfect circle": "A Perfect Circle",
-        "bullet for my valentine": "Bullet For My Valentine",
-        "the all-american rejects": "The All-American Rejects",
-        "new found glory": "New Found Glory",
-        "red hot chili peppers": "Red Hot Chili Peppers",
-        "bob seger and the silver bullet band": "Bob Seger & The Silver Bullet Band",
-        "tears for fears": "Tears For Fears",
-        "sum 41": "Sum 41",
-        "sevendust": "Sevendust",
-        "sleeping with sirens": "Sleeping With Sirens",
-        "pierce the veil": "Pierce The Veil",
-        "fall out boy": "Fall Out Boy",
-        "foo fighters": "Foo Fighters",
-        "ghost": "Ghost",
-        "nirvana": "Nirvana",
-        "rihanna": "Rihanna",
-        "rush": "Rush",
-        "styx": "Styx",
-        "yellowcard": "Yellowcard",
-        "thrice": "Thrice",
-        "wings": "Wings",
-        "spiritbox": "Spiritbox",
-        "dayseeker": "Dayseeker",
-        "kublai khan tx": "Kublai Khan TX",
-        "suicideboys": "$uicideboy$",
-        "suicide boy": "$uicideboy$",
-        "suicideboys$": "$uicideboy$",
-        "knocked loose": "Knocked Loose",
-        "bring me the horizon": "Bring Me The Horizon",
-        "bad omens": "Bad Omens",
-        "deftones": "Deftones",
-        "slipknot": "Slipknot",
-        "pantera": "Pantera",
-        "white lion": "White Lion"
+      const map = {
+        "amazon": "Amazon",
+        "walmart": "Walmart",
+        "target": "Target",
+        "newbury comics": "Newbury Comics",
+        "udiscover music": "uDiscover Music",
+        "sound of vinyl": "Sound of Vinyl",
+        "rise records": "Rise Records",
+        "fearless records": "Fearless Records",
+        "brooklyn vegan": "Brooklyn Vegan",
+        "equal vision": "Equal Vision",
+        "rollin records": "Rollin Records",
+        "deep discount": "Deep Discount",
+        "merchbar": "Merchbar",
+        "acoustic sounds": "Acoustic Sounds",
+        "ride records": "Ride Records"
       };
 
-      if (specialMap[key]) return specialMap[key];
-
-      return raw
-        .toLowerCase()
-        .split(" ")
-        .map(word => word ? word.charAt(0).toUpperCase() + word.slice(1) : "")
-        .join(" ");
+      return map[key] || String(value || "").trim();
     }
 
     function getScoreClass(score) {
@@ -251,7 +190,7 @@
       if (deal.best_label === "KORNDOG FIND") return "KornDog Find";
       if (deal.best_label === "AMAZON PICK") return "Amazon";
       if (deal.best_label === "WALMART PICK") return "Walmart";
-      return deal.best_source || deal.source || "Unknown";
+      return prettifySourceName(deal.best_source || deal.source || "Unknown");
     }
 
     function getAmazonLink(deal) {
@@ -322,7 +261,7 @@ Vinyl Therapy never dies 🟣🟢`;
         <div class="sources-list">
           ${sources.map(s => `
             <div class="source-row">
-              <span>${escapeHtml(s.source || "Unknown")}</span>
+              <span>${escapeHtml(prettifySourceName(s.source || "Unknown"))}</span>
               <strong>${Number(s.price) > 0 ? `$${Number(s.price).toFixed(2)}` : "N/A"}</strong>
             </div>
           `).join("")}
@@ -373,7 +312,7 @@ Vinyl Therapy never dies 🟣🟢`;
             <div class="label">Best Buy</div>
             <div class="value">
               ${escapeHtml(bestBuy)}
-              <small>${escapeHtml(deal.best_source || deal.source || "Unknown source")}</small>
+              <small>${escapeHtml(prettifySourceName(deal.best_source || deal.source || "Unknown source"))}</small>
             </div>
           </div>
         </div>
@@ -472,15 +411,16 @@ Vinyl Therapy never dies 🟣🟢`;
     }
 
     function getFilteredDeals() {
-      const artistValue = normalizeArtistKey(document.getElementById("artistFilter").value);
+      const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
       const minScore = Number(document.getElementById("scoreFilter").value);
 
       return allDeals
         .filter(d => (d.total ?? 0) >= minScore)
         .filter(matchesQuickFilter)
         .filter(d => {
-          if (!artistValue) return true;
-          return normalizeArtistKey(d.artist || "") === artistValue;
+          if (!sourceValue) return true;
+          const dealSource = normalizeSourceKey(d.best_source || d.source || "");
+          return dealSource === sourceValue;
         })
         .sort((a, b) => {
           const scoreDiff = (b.total ?? 0) - (a.total ?? 0);
@@ -491,51 +431,31 @@ Vinyl Therapy never dies 🟣🟢`;
         });
     }
 
-    function populateArtistFilter() {
-      const select = document.getElementById("artistFilter");
-
-      const counts = new Map();
-      const labels = new Map();
+    function populateSourceFilter() {
+      const select = document.getElementById("sourceFilter");
+      const sources = new Map();
 
       allDeals.forEach(deal => {
-        const rawArtist = String(deal.artist || "").trim();
-        if (!rawArtist) return;
-        if (looksLikeFakeArtist(rawArtist)) return;
+        const rawSource = (deal.best_source || deal.source || "").trim();
+        if (!rawSource) return;
 
-        const key = normalizeArtistKey(rawArtist);
+        const key = normalizeSourceKey(rawSource);
+        const label = prettifySourceName(rawSource);
+
         if (!key) return;
-
-        counts.set(key, (counts.get(key) || 0) + 1);
-
-        if (!labels.has(key)) {
-          labels.set(key, prettifyArtistName(rawArtist));
-        } else {
-          const existing = labels.get(key);
-          const prettier = prettifyArtistName(rawArtist);
-
-          if (existing === existing.toUpperCase() && prettier !== prettier.toUpperCase()) {
-            labels.set(key, prettier);
-          }
+        if (!sources.has(key)) {
+          sources.set(key, label);
         }
       });
 
-      const artists = [...counts.entries()]
-        .filter(([key, count]) => {
-          if (!key) return false;
-          if (count >= 2) return true;
-          if (key.split(" ").length <= 3 && key.length <= 24) return true;
-          return false;
-        })
-        .map(([key]) => ({
-          value: key,
-          label: labels.get(key) || prettifyArtistName(key)
-        }))
+      const sorted = [...sources.entries()]
+        .map(([value, label]) => ({ value, label }))
         .sort((a, b) => a.label.localeCompare(b.label));
 
       select.innerHTML =
-        `<option value="">All artists</option>` +
-        artists.map(artist =>
-          `<option value="${escapeHtml(artist.value)}">${escapeHtml(artist.label)}</option>`
+        `<option value="">All sources</option>` +
+        sorted.map(src =>
+          `<option value="${escapeHtml(src.value)}">${escapeHtml(src.label)}</option>`
         ).join("");
     }
 
@@ -600,7 +520,7 @@ Vinyl Therapy never dies 🟣🟢`;
         const res = await fetch("./scored_deals.json?_=" + Date.now());
         const data = await res.json();
         allDeals = Array.isArray(data) ? data : [];
-        populateArtistFilter();
+        populateSourceFilter();
         document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
         applyFilters(true);
       } catch (err) {
@@ -611,7 +531,7 @@ Vinyl Therapy never dies 🟣🟢`;
       }
     }
 
-    document.getElementById("artistFilter").addEventListener("change", () => {
+    document.getElementById("sourceFilter").addEventListener("change", () => {
       applyFilters(true);
       closeMenu();
     });
