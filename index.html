@@ -42,7 +42,7 @@
       <div class="hero-card">
         <h2>Vinyl Therapy Never Dies</h2>
         <p>
-          This board is built to make Facebook posting easier and deal hunting faster. Best price up front, best buy button first, Amazon backup ready to go.
+          This board is built to make Facebook posting easier and deal hunting faster. Best price up front, best buy button first, Amazon backup only when it actually makes sense.
         </p>
       </div>
     </section>
@@ -79,6 +79,15 @@
     let allDeals = [];
     let activeQuickFilter = "all";
 
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
     function getScoreClass(score) {
       if (score >= 8) return "badge-high";
       if (score >= 6) return "badge-mid";
@@ -88,27 +97,8 @@
     function getHypeLabel(score) {
       if (score >= 9) return "Grail Alert";
       if (score >= 7) return "Vinyl Heat";
-      if (score >= 5) return "Korndog Find";
+      if (score >= 5) return "KornDog Find";
       return "Low Key";
-    }
-
-    function buildAmazonLink(deal) {
-      if (deal.amazon_link) return deal.amazon_link;
-
-      const artist = (deal.artist || "").trim();
-      const title = (deal.title || "").trim();
-      const sourceLink = (deal.link || "").trim();
-      const cleanTitle = title.replace(/\([^)]*\)/g, "").replace(/\[[^\]]*\]/g, "").trim();
-      const query = `${artist} ${cleanTitle} vinyl`.trim().replace(/\s+/g, "+");
-      const tag = "korndog20-20";
-
-      if (sourceLink.includes("amazon.com")) {
-        if (sourceLink.includes("tag=")) return sourceLink;
-        const joiner = sourceLink.includes("?") ? "&" : "?";
-        return `${sourceLink}${joiner}tag=${tag}`;
-      }
-
-      return `https://www.amazon.com/s?k=${query}&tag=${tag}`;
     }
 
     function getBestPriceText(deal) {
@@ -122,6 +112,11 @@
       if (deal.best_label === "AMAZON PICK") return "Amazon";
       if (deal.best_label === "WALMART PICK") return "Walmart";
       return deal.best_source || deal.source || "Unknown";
+    }
+
+    function getAmazonLink(deal) {
+      const link = (deal.amazon_link || "").trim();
+      return link;
     }
 
     function getPostText(deal) {
@@ -142,8 +137,15 @@
 
       const bestPrice = getBestPriceText(deal);
       const buyLink = deal.buy_link || deal.link || "Link coming soon";
-      const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+      const amazonLink = getAmazonLink(deal);
       const bestSource = getBestBuyText(deal);
+
+      const amazonPart = amazonLink
+        ? `
+
+🛒 Amazon Option:
+👉 ${amazonLink}`
+        : "";
 
       return `${opener}
 
@@ -154,10 +156,7 @@ ${deal.artist} – ${deal.title}
 
 🟢 ${vibe}
 
-👉 ${buyLink}
-
-🛒 Amazon Option:
-👉 ${amazonLink}
+👉 ${buyLink}${amazonPart}
 
 Vinyl Therapy never dies 🟣🟢`;
     }
@@ -172,14 +171,14 @@ Vinyl Therapy never dies 🟣🟢`;
     }
 
     function makeSourceRows(deal) {
-      const sources = Array.isArray(deal.all_sources) ? deal.all_sources : [];
+      const sources = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
       if (!sources.length) return "";
 
       return `
         <div class="sources-list">
           ${sources.map(s => `
             <div class="source-row">
-              <span>${s.source || "Unknown"}${s.version ? ` · ${s.version}` : ""}</span>
+              <span>${escapeHtml(s.source || "Unknown")}</span>
               <strong>${Number(s.price) > 0 ? `$${Number(s.price).toFixed(2)}` : "N/A"}</strong>
             </div>
           `).join("")}
@@ -190,37 +189,54 @@ Vinyl Therapy never dies 🟣🟢`;
     function createDealCard(deal) {
       const score = deal.total ?? 0;
       const postText = getPostText(deal);
-      const amazonLink = deal.amazon_link || buildAmazonLink(deal);
+      const amazonLink = getAmazonLink(deal);
       const bestPrice = getBestPriceText(deal);
       const bestBuy = getBestBuyText(deal);
       const buyLink = deal.buy_link || deal.link || "#";
       const detailId = `detail-${Math.random().toString(36).slice(2, 10)}`;
 
+      const amazonButtonHtml = amazonLink
+        ? `<a class="btn btn-alt" href="${escapeHtml(amazonLink)}" target="_blank" rel="noopener noreferrer">Amazon Option</a>`
+        : "";
+
+      const copyAmazonButtonHtml = amazonLink
+        ? `<button class="btn btn-ghost copy-link-btn">Copy Amazon Link</button>`
+        : "";
+
+      const imageHtml = deal.image
+        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
+        : "";
+
       const card = document.createElement("div");
       card.className = "deal-card";
       card.innerHTML = `
+        ${imageHtml}
+
         <div class="deal-top">
           <div>
-            <div class="artist">${deal.artist || "Unknown Artist"}</div>
-            <h2 class="title">${deal.title || "Unknown Title"}</h2>
+            <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
+            <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
           </div>
-          <div class="badge ${getScoreClass(score)}">${getHypeLabel(score)}</div>
+          <div class="badge ${getScoreClass(score)}">${escapeHtml(getHypeLabel(score))}</div>
         </div>
 
         <div class="deal-meta">
           <div class="meta-box">
             <div class="label">Best Price</div>
-            <div class="value">${bestPrice}</div>
+            <div class="value">${escapeHtml(bestPrice)}</div>
           </div>
           <div class="meta-box">
             <div class="label">Best Buy</div>
-            <div class="value">${bestBuy}<small>${deal.best_source || deal.source || "Unknown source"}</small></div>
+            <div class="value">
+              ${escapeHtml(bestBuy)}
+              <small>${escapeHtml(deal.best_source || deal.source || "Unknown source")}</small>
+            </div>
           </div>
         </div>
 
         <div class="deal-actions">
-          <a class="btn btn-main" href="${buyLink}" target="_blank" rel="noopener noreferrer">Shop Deal</a>
-          <a class="btn btn-alt" href="${amazonLink}" target="_blank" rel="noopener noreferrer">Amazon Option</a>
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Shop Deal</a>
+          ${amazonButtonHtml}
         </div>
 
         <div class="mini-actions">
@@ -229,9 +245,9 @@ Vinyl Therapy never dies 🟣🟢`;
         </div>
 
         <div id="${detailId}" class="detail-panel">
-          <div class="post-box">${postText}</div>
+          <div class="post-box">${escapeHtml(postText)}</div>
           <div class="mini-actions">
-            <button class="btn btn-ghost copy-link-btn">Copy Amazon Link</button>
+            ${copyAmazonButtonHtml}
             <button class="btn btn-ghost copy-best-btn">Copy Best Link</button>
           </div>
           ${makeSourceRows(deal)}
@@ -239,7 +255,12 @@ Vinyl Therapy never dies 🟣🟢`;
       `;
 
       card.querySelector(".copy-post-btn").addEventListener("click", () => copyText(postText));
-      card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(amazonLink));
+
+      const copyAmazonBtn = card.querySelector(".copy-link-btn");
+      if (copyAmazonBtn) {
+        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
+      }
+
       card.querySelector(".copy-best-btn").addEventListener("click", () => copyText(buyLink));
       card.querySelector(".detail-toggle").addEventListener("click", (e) => {
         const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
@@ -285,7 +306,7 @@ Vinyl Therapy never dies 🟣🟢`;
 
       if (activeQuickFilter === "grail") return score >= 9;
       if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
-      if (activeQuickFilter === "amazon") return label === "AMAZON PICK";
+      if (activeQuickFilter === "amazon") return label === "AMAZON PICK" || !!getAmazonLink(deal);
       if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
       return true;
     }
@@ -301,7 +322,14 @@ Vinyl Therapy never dies 🟣🟢`;
           const hay = `${d.artist || ""} ${d.title || ""} ${d.source || ""} ${d.best_source || ""} ${d.best_label || ""}`.toLowerCase();
           return hay.includes(query);
         })
-        .sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
+        .sort((a, b) => {
+          const scoreDiff = (b.total ?? 0) - (a.total ?? 0);
+          if (scoreDiff !== 0) return scoreDiff;
+
+          const priceA = Number(a.best_price || a.price || 999999);
+          const priceB = Number(b.best_price || b.price || 999999);
+          return priceA - priceB;
+        });
 
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
       renderFeatured(filtered);
