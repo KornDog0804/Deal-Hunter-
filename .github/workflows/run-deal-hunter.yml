@@ -26,6 +26,9 @@ jobs:
       - name: Run scorer
         run: python scorer.py
 
+      - name: Run preorder hunter
+        run: python run_preorders.py
+
       - name: Run post generator
         run: python post_generator.py
 
@@ -36,6 +39,8 @@ jobs:
           cat live_deals.json || true
           echo "----- scored_deals.json -----"
           cat scored_deals.json || true
+          echo "----- preorders.json -----"
+          cat preorders.json || true
           echo "----- facebook_posts.txt -----"
           cat facebook_posts.txt || true
           echo "----- debug_live_pull.txt -----"
@@ -45,7 +50,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add live_deals.json scored_deals.json facebook_posts.txt debug_live_pull.txt
+          git add live_deals.json scored_deals.json preorders.json facebook_posts.txt debug_live_pull.txt
           git diff --cached --quiet || git commit -m "Update live deal outputs"
           git push
 
@@ -56,5 +61,6 @@ jobs:
           path: |
             live_deals.json
             scored_deals.json
+            preorders.json
             facebook_posts.txt
             debug_live_pull.txt
