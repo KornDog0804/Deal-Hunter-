@@ -1,0 +1,36 @@
+name: Run Preorder Hunter
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # every 4 hours
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Pull live deals
+        run: python live_pull.py
+
+      - name: Run preorder hunter
+        run: python run_preorders.py
+
+      - name: Commit preorder output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add preorders.json
+          git diff --cached --quiet || git commit -m "Update preorders"
+          git push
