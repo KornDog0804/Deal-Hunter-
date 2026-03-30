@@ -1,30 +1,36 @@
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 240 Shopify items
+Rollin Records: kept 240 Shopify items | preorders flagged: 27
+Rollin Preorders: 18 products via Shopify JSON
+Rollin Preorders: kept 17 Shopify items | preorders flagged: 17
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 221 Shopify items
+Sound of Vinyl: kept 221 Shopify items | preorders flagged: 11
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 117 Shopify items
-Shopify fetch failed: https://fearlessrecords.com | HTTP Error 404: Not Found
+uDiscover Music: kept 117 Shopify items | preorders flagged: 7
+Shopify fetch failed: https://fearlessrecords.com | tried: ['https://fearlessrecords.com/products.json?limit=250', 'https://fearlessrecords.com/collections/all/products.json?limit=250']
 Fearless Records: 0 products via Shopify JSON
-Fearless Records: kept 0 Shopify items
+Fearless Records: kept 0 Shopify items | preorders flagged: 0
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 110 Shopify items
+Rise Records: kept 110 Shopify items | preorders flagged: 28
+Rise All: 250 products via Shopify JSON
+Rise All: kept 79 Shopify items | preorders flagged: 3
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 232 Shopify items
+Brooklyn Vegan: kept 172 Shopify items | preorders flagged: 126
 Revolver: 250 products via Shopify JSON
-Revolver: kept 190 Shopify items
+Revolver: kept 185 Shopify items | preorders flagged: 91
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 199 Shopify items
+Newbury Comics: kept 199 Shopify items | preorders flagged: 9
+Newbury Preorders: 5 products via Shopify JSON
+Newbury Preorders: kept 0 Shopify items | preorders flagged: 0
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 145 Shopify items
+Craft Recordings: kept 145 Shopify items | preorders flagged: 29
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 152 Shopify items
+MNRK Heavy: kept 133 Shopify items | preorders flagged: 40
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 134 Shopify items
+Equal Vision: kept 134 Shopify items | preorders flagged: 81
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 Merchbar: found 0 HTML links
-Merchbar: kept 0 HTML items
+Merchbar: kept 0 HTML items | preorders flagged: 0
 Pure Noise Records: found 0 HTML links
-Pure Noise Records: kept 0 HTML items
+Pure Noise Records: kept 0 HTML items | preorders flagged: 0
 Walmart: found 0 HTML links
-Walmart: kept 0 HTML items
+Walmart: kept 0 HTML items | preorders flagged: 0
