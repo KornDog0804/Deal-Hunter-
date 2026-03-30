@@ -49,6 +49,7 @@
         <div class="chip-row chip-row-nowrap">
           <button class="filter-chip active" data-quick="all">All</button>
           <button class="filter-chip" data-quick="grail">Grail Alerts</button>
+          <button class="filter-chip" data-quick="preorders">Preorders</button>
           <button class="filter-chip" data-quick="under30">Under $30</button>
           <button class="filter-chip" data-quick="amazon">Amazon Picks</button>
           <button class="filter-chip" data-quick="korndog">KornDog Finds</button>
@@ -74,6 +75,14 @@
       <div id="featuredList" class="featured-grid"></div>
     </section>
 
+    <section class="section" id="preordersSection">
+      <div class="section-head">
+        <h2 class="section-title">Preorder Alerts</h2>
+        <div class="section-note" id="preorderUpdatedAt">Watching for grails before the sharks smell blood.</div>
+      </div>
+      <div id="preorderList" class="featured-grid"></div>
+    </section>
+
     <section class="section">
       <div class="section-head">
         <h2 class="section-title">All Live Deals</h2>
@@ -97,6 +106,7 @@
 
   <script>
     let allDeals = [];
+    let allPreorders = [];
     let activeQuickFilter = "all";
     let currentPage = 1;
     const DEALS_PER_PAGE = 24;
@@ -186,6 +196,13 @@
       return "Low Key";
     }
 
+    function getPreorderBadge(score, badgeText) {
+      if (badgeText) return badgeText;
+      if (score >= 85) return "GRAIL ALERT";
+      if (score >= 70) return "HOT PREORDER";
+      return "WATCHLIST";
+    }
+
     function getBestPriceText(deal) {
       if (Number(deal.best_price) > 0) return `$${Number(deal.best_price).toFixed(2)}`;
       if (Number(deal.price) > 0) return `$${Number(deal.price).toFixed(2)}`;
@@ -248,6 +265,28 @@ ${deal.artist} – ${deal.title}
 👉 ${buyLink}${amazonPart}
 
 Vinyl Therapy never dies 🟣🟢`;
+    }
+
+    function getPreorderPostText(deal) {
+      const score = Number(deal.score || 0);
+      const badge = getPreorderBadge(score, deal.badge || "");
+      const bestPrice = getBestPriceText(deal);
+      const buyLink = deal.buy_link || deal.link || "Link coming soon";
+      const source = prettifySourceName(deal.best_source || deal.source || "Unknown");
+      const version = deal.version || "Standard";
+
+      return `🚨 ${badge} 🚨
+
+${deal.artist || "Unknown Artist"} – ${deal.title || "Unknown Title"}
+
+💰 Preorder Price: ${bestPrice}
+📦 Store: ${source}
+🎨 Version: ${version}
+🎯 Score: ${score}/100
+
+👉 ${buyLink}
+
+Korndog preorder radar is on the hunt 💿🔥`;
     }
 
     async function copyText(text) {
@@ -360,6 +399,108 @@ Vinyl Therapy never dies 🟣🟢`;
       return card;
     }
 
+    function createPreorderCard(deal) {
+      const score = Number(deal.score || 0);
+      const badgeText = getPreorderBadge(score, deal.badge || "");
+      const postText = getPreorderPostText(deal);
+      const bestPrice = getBestPriceText(deal);
+      const bestBuy = prettifySourceName(deal.best_source || deal.source || "Unknown");
+      const buyLink = deal.buy_link || deal.link || "#";
+      const amazonLink = getAmazonLink(deal);
+      const detailId = `predetail-${Math.random().toString(36).slice(2, 10)}`;
+
+      const imageHtml = deal.image
+        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
+        : "";
+
+      const amazonButtonHtml = amazonLink
+        ? `<a class="btn btn-alt" href="${escapeHtml(amazonLink)}" target="_blank" rel="noopener noreferrer">Amazon Option</a>`
+        : "";
+
+      const copyAmazonButtonHtml = amazonLink
+        ? `<button class="btn btn-ghost preorder-copy-link-btn">Copy Amazon Link</button>`
+        : "";
+
+      const badgeClass =
+        score >= 85 ? "badge-high" :
+        score >= 70 ? "badge-mid" :
+        "badge-low";
+
+      const card = document.createElement("div");
+      card.className = "deal-card";
+      card.innerHTML = `
+        ${imageHtml}
+
+        <div class="deal-top">
+          <div>
+            <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
+            <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
+          </div>
+          <div class="badge ${badgeClass}">${escapeHtml(badgeText)}</div>
+        </div>
+
+        <div class="deal-meta">
+          <div class="meta-box">
+            <div class="label">Preorder Price</div>
+            <div class="value">${escapeHtml(bestPrice)}</div>
+          </div>
+          <div class="meta-box">
+            <div class="label">Store</div>
+            <div class="value">
+              ${escapeHtml(bestBuy)}
+              <small>${escapeHtml(deal.version || "Standard")}</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="deal-meta">
+          <div class="meta-box">
+            <div class="label">Score</div>
+            <div class="value">${escapeHtml(String(score))}/100</div>
+          </div>
+          <div class="meta-box">
+            <div class="label">Status</div>
+            <div class="value">${escapeHtml((deal.status || "preorder").toUpperCase())}</div>
+          </div>
+        </div>
+
+        <div class="deal-actions ${amazonLink ? "" : "single-action"}">
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">View Preorder</a>
+          ${amazonButtonHtml}
+        </div>
+
+        <div class="mini-actions">
+          <button class="btn btn-ghost preorder-copy-post-btn">Copy Preorder Post</button>
+          <button class="btn btn-ghost preorder-detail-toggle" data-target="${detailId}">Show Details</button>
+        </div>
+
+        <div id="${detailId}" class="detail-panel">
+          <div class="post-box">${escapeHtml(postText)}</div>
+          <div class="mini-actions">
+            ${copyAmazonButtonHtml}
+            <button class="btn btn-ghost preorder-copy-best-btn">Copy Best Link</button>
+          </div>
+          ${makeSourceRows(deal)}
+        </div>
+      `;
+
+      card.querySelector(".preorder-copy-post-btn").addEventListener("click", () => copyText(postText));
+
+      const copyAmazonBtn = card.querySelector(".preorder-copy-link-btn");
+      if (copyAmazonBtn) {
+        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
+      }
+
+      card.querySelector(".preorder-copy-best-btn").addEventListener("click", () => copyText(buyLink));
+      card.querySelector(".preorder-detail-toggle").addEventListener("click", (e) => {
+        const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
+        const open = panel.classList.toggle("open");
+        e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
+      });
+
+      return card;
+    }
+
     function renderFeatured(deals) {
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
@@ -382,6 +523,29 @@ Vinyl Therapy never dies 🟣🟢`;
       });
 
       return picks;
+    }
+
+    function renderPreorders(preorders) {
+      const preorderList = document.getElementById("preorderList");
+      const preorderUpdatedAt = document.getElementById("preorderUpdatedAt");
+
+      preorderList.innerHTML = "";
+
+      if (!preorders.length) {
+        preorderUpdatedAt.textContent = "Watching for grails before the sharks smell blood.";
+        preorderList.innerHTML = `
+          <div class="empty">
+            No preorder alerts right now. The radar is quiet... for now.
+          </div>
+        `;
+        return;
+      }
+
+      preorderUpdatedAt.textContent = `Loaded ${preorders.length} preorder alerts from preorders.json`;
+
+      preorders.slice(0, 6).forEach(deal => {
+        preorderList.appendChild(createPreorderCard(deal));
+      });
     }
 
     function renderDeals(deals, featuredDeals = []) {
@@ -440,6 +604,7 @@ Vinyl Therapy never dies 🟣🟢`;
       if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
       if (activeQuickFilter === "amazon") return !!amazonLink;
       if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
+      if (activeQuickFilter === "preorders") return false;
       return true;
     }
 
@@ -464,11 +629,29 @@ Vinyl Therapy never dies 🟣🟢`;
         });
     }
 
+    function getFilteredPreorders() {
+      const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
+
+      return allPreorders
+        .filter(d => {
+          if (!sourceValue) return true;
+          const preorderSource = normalizeSourceKey(d.best_source || d.source || "");
+          return preorderSource === sourceValue;
+        })
+        .sort((a, b) => {
+          const scoreDiff = Number(b.score || 0) - Number(a.score || 0);
+          if (scoreDiff !== 0) return scoreDiff;
+          const priceA = Number(a.best_price || a.price || 999999);
+          const priceB = Number(b.best_price || b.price || 999999);
+          return priceA - priceB;
+        });
+    }
+
     function populateSourceFilter() {
       const select = document.getElementById("sourceFilter");
       const sources = new Map();
 
-      allDeals.forEach(deal => {
+      [...allDeals, ...allPreorders].forEach(deal => {
         const rawSource = (deal.best_source || deal.source || "").trim();
         if (!rawSource) return;
 
@@ -494,6 +677,26 @@ Vinyl Therapy never dies 🟣🟢`;
 
     function applyFilters(resetPage = true) {
       if (resetPage) currentPage = 1;
+
+      const filteredPreorders = getFilteredPreorders();
+      renderPreorders(filteredPreorders);
+
+      if (activeQuickFilter === "preorders") {
+        document.getElementById("dealCount").textContent = `Preorders: ${filteredPreorders.length}`;
+        document.getElementById("featuredList").innerHTML = `
+          <div class="empty">
+            Preorder mode is on. Fresh blood only. 🔥
+          </div>
+        `;
+        document.getElementById("dealList").innerHTML = `
+          <div class="empty">
+            Use the Preorder Alerts section above to browse the current preorder radar.
+          </div>
+        `;
+        document.getElementById("pager").style.display = "none";
+        document.getElementById("pageStatus").textContent = "Preorders";
+        return;
+      }
 
       const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
@@ -563,15 +766,33 @@ Vinyl Therapy never dies 🟣🟢`;
 
     async function init() {
       try {
-        const res = await fetch("./scored_deals.json?_=" + Date.now());
-        const data = await res.json();
-        allDeals = Array.isArray(data) ? data : [];
+        const [dealsRes, preordersRes] = await Promise.all([
+          fetch("./scored_deals.json?_=" + Date.now()),
+          fetch("./preorders.json?_=" + Date.now()).catch(() => null)
+        ]);
+
+        const dealsData = dealsRes ? await dealsRes.json() : [];
+        allDeals = Array.isArray(dealsData) ? dealsData : [];
+
+        if (preordersRes && preordersRes.ok) {
+          const preorderData = await preordersRes.json();
+          allPreorders = Array.isArray(preorderData.items) ? preorderData.items : [];
+          if (preorderData.generated_at) {
+            document.getElementById("preorderUpdatedAt").textContent =
+              `Loaded ${allPreorders.length} preorder alerts • Updated ${new Date(preorderData.generated_at).toLocaleString()}`;
+          }
+        } else {
+          allPreorders = [];
+        }
+
         populateSourceFilter();
-        document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
+        document.getElementById("updatedAt").textContent = "Live from scored_deals.json + preorders.json";
         applyFilters(true);
       } catch (err) {
         document.getElementById("featuredList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. The front window is lit up, but the stock room is locked.</div>`;
+        document.getElementById("preorderList").innerHTML =
+          `<div class="empty">Could not load preorders.json. The preorder radar is asleep.</div>`;
         document.getElementById("dealList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. Netlify can see the front window, but the stock room is locked.</div>`;
       }
