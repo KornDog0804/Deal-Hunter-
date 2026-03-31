@@ -62,7 +62,7 @@
   <main class="main-tight">
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
-      <div class="chip" id="updatedAt">Loading deal board...</div>
+      <button class="chip chip-button" id="dataToggleBtn" type="button">Loading...</button>
       <button class="chip chip-button" id="pageStatus" type="button">Page 1</button>
     </div>
 
@@ -128,7 +128,7 @@
     let allDeals = [];
     let activeQuickFilter = "all";
     let currentPage = 1;
-    let loadedFileName = "";
+    let activeDataFile = "scored_deals.json";
     const DEALS_PER_PAGE = 24;
 
     function escapeHtml(value) {
@@ -147,6 +147,15 @@
         .replace(/[^a-z0-9\s]/g, "")
         .replace(/\s+/g, " ")
         .trim();
+    }
+
+    function safeNumber(value, fallback = 0) {
+      const num = Number(value);
+      return Number.isFinite(num) ? num : fallback;
+    }
+
+    function getDealScore(deal) {
+      return safeNumber(deal?.total, safeNumber(deal?.score, 0));
     }
 
     function normalizeSourceKey(value) {
@@ -225,15 +234,6 @@
       };
 
       return map[key] || String(value || "").trim();
-    }
-
-    function safeNumber(value, fallback = 0) {
-      const num = Number(value);
-      return Number.isFinite(num) ? num : fallback;
-    }
-
-    function getDealScore(deal) {
-      return safeNumber(deal?.total, safeNumber(deal?.score, 0));
     }
 
     function getScoreClass(score) {
@@ -406,19 +406,13 @@ Vinyl Therapy never dies 🟣🟢`;
       `;
 
       const copyPostBtn = card.querySelector(".copy-post-btn");
-      if (copyPostBtn) {
-        copyPostBtn.addEventListener("click", () => copyText(postText));
-      }
+      if (copyPostBtn) copyPostBtn.addEventListener("click", () => copyText(postText));
 
       const copyAmazonBtn = card.querySelector(".copy-link-btn");
-      if (copyAmazonBtn) {
-        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
-      }
+      if (copyAmazonBtn) copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
 
       const copyBestBtn = card.querySelector(".copy-best-btn");
-      if (copyBestBtn) {
-        copyBestBtn.addEventListener("click", () => copyText(buyLink));
-      }
+      if (copyBestBtn) copyBestBtn.addEventListener("click", () => copyText(buyLink));
 
       const toggleBtn = card.querySelector(".detail-toggle");
       if (toggleBtn) {
@@ -455,9 +449,7 @@ Vinyl Therapy never dies 🟣🟢`;
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
 
-      if (currentPage !== 1) {
-        return [];
-      }
+      if (currentPage !== 1) return [];
 
       const picks = deals
         .filter(d => getDealScore(d) >= 8)
@@ -488,7 +480,6 @@ Vinyl Therapy never dies 🟣🟢`;
       if (!container) return;
 
       container.innerHTML = "";
-
       if (totalPages <= 1) return;
 
       const pages = new Set();
@@ -496,9 +487,7 @@ Vinyl Therapy never dies 🟣🟢`;
       pages.add(totalPages);
 
       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-        if (i > 1 && i < totalPages) {
-          pages.add(i);
-        }
+        if (i > 1 && i < totalPages) pages.add(i);
       }
 
       const sortedPages = [...pages].sort((a, b) => a - b);
@@ -572,7 +561,6 @@ Vinyl Therapy never dies 🟣🟢`;
       }
 
       const totalPages = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
-
       if (currentPage > totalPages) currentPage = 1;
 
       const start = (currentPage - 1) * DEALS_PER_PAGE;
@@ -610,6 +598,16 @@ Vinyl Therapy never dies 🟣🟢`;
       return true;
     }
 
+    function dealMatchesSource(deal, sourceValue) {
+      if (!sourceValue) return true;
+
+      const primarySource = normalizeSourceKey(deal.best_source || deal.source || "");
+      if (primarySource === sourceValue) return true;
+
+      const allOptions = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
+      return allOptions.some(opt => normalizeSourceKey(opt.source || "") === sourceValue);
+    }
+
     function getFilteredDeals() {
       const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
       const minScore = safeNumber(document.getElementById("scoreFilter").value, 0);
@@ -617,11 +615,7 @@ Vinyl Therapy never dies 🟣🟢`;
       return allDeals
         .filter(d => getDealScore(d) >= minScore)
         .filter(matchesQuickFilter)
-        .filter(d => {
-          if (!sourceValue) return true;
-          const dealSource = normalizeSourceKey(d.best_source || d.source || "");
-          return dealSource === sourceValue;
-        })
+        .filter(d => dealMatchesSource(d, sourceValue))
         .sort((a, b) => {
           const scoreDiff = getDealScore(b) - getDealScore(a);
           if (scoreDiff !== 0) return scoreDiff;
@@ -667,22 +661,30 @@ Vinyl Therapy never dies 🟣🟢`;
         ["indiemerchstore", "IndieMerchstore"]
       ];
 
-      seededSources.forEach(([value, label]) => {
-        sources.set(value, label);
-      });
+      seededSources.forEach(([value, label]) => sources.set(value, label));
 
       allDeals.forEach(deal => {
-        const rawSource = String(deal.best_source || deal.source || "").trim();
-        if (!rawSource) return;
+        const rawSources = [];
 
-        const key = normalizeSourceKey(rawSource);
-        const label = prettifySourceName(rawSource);
-
-        if (!key) return;
-        if (!sources.has(key)) {
-          sources.set(key, label);
+        if (deal.best_source || deal.source) {
+          rawSources.push(String(deal.best_source || deal.source).trim());
         }
+
+        const allOptions = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
+        allOptions.forEach(opt => {
+          if (opt?.source) rawSources.push(String(opt.source).trim());
+        });
+
+        rawSources.forEach(rawSource => {
+          if (!rawSource) return;
+          const key = normalizeSourceKey(rawSource);
+          const label = prettifySourceName(rawSource);
+          if (!key) return;
+          if (!sources.has(key)) sources.set(key, label);
+        });
       });
+
+      const currentValue = select.value || "";
 
       const sorted = [...sources.entries()]
         .map(([value, label]) => ({ value, label }))
@@ -693,6 +695,14 @@ Vinyl Therapy never dies 🟣🟢`;
         sorted.map(src =>
           `<option value="${escapeHtml(src.value)}">${escapeHtml(src.label)}</option>`
         ).join("");
+
+      select.value = currentValue;
+    }
+
+    function updateDataToggleButton() {
+      const btn = document.getElementById("dataToggleBtn");
+      if (!btn) return;
+      btn.textContent = `Live from ${activeDataFile}`;
     }
 
     function applyFilters(resetPage = true) {
@@ -702,6 +712,7 @@ Vinyl Therapy never dies 🟣🟢`;
 
       const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
+      updateDataToggleButton();
 
       const featuredDeals = renderFeatured(filtered);
       renderDeals(filtered, featuredDeals);
@@ -764,7 +775,6 @@ Vinyl Therapy never dies 🟣🟢`;
 
       document.getElementById("nextPageBtn").addEventListener("click", () => {
         const total = getTotalPageCountForCurrentView();
-
         if (currentPage < total) {
           currentPage += 1;
           applyFilters(false);
@@ -823,37 +833,65 @@ Vinyl Therapy never dies 🟣🟢`;
       return data;
     }
 
-    async function loadDeals() {
+    async function loadDealsFromFile(fileName) {
+      const deals = await fetchJsonArray(`./${fileName}`);
+      allDeals = deals;
+      activeDataFile = fileName;
+      console.log("Loaded deals:", allDeals.length, "from", activeDataFile);
+      if (allDeals.length) {
+        console.log("First deal sample:", allDeals[0]);
+      }
+      populateSourceFilter();
+      applyFilters(true);
+    }
+
+    async function autoLoadBestData() {
       try {
         const scoredDeals = await fetchJsonArray("./scored_deals.json");
         if (scoredDeals.length) {
-          loadedFileName = "scored_deals.json";
-          return scoredDeals;
+          allDeals = scoredDeals;
+          activeDataFile = "scored_deals.json";
+          populateSourceFilter();
+          applyFilters(true);
+          return;
         }
       } catch (err) {
         console.warn("Could not load scored_deals.json:", err);
       }
 
       const liveDeals = await fetchJsonArray("./live_deals.json");
-      loadedFileName = "live_deals.json";
-      return liveDeals;
+      allDeals = liveDeals;
+      activeDataFile = "live_deals.json";
+      populateSourceFilter();
+      applyFilters(true);
+    }
+
+    function initDataToggle() {
+      const btn = document.getElementById("dataToggleBtn");
+      if (!btn) return;
+
+      btn.addEventListener("click", async () => {
+        try {
+          const nextFile = activeDataFile === "scored_deals.json"
+            ? "live_deals.json"
+            : "scored_deals.json";
+
+          btn.textContent = `Loading ${nextFile}...`;
+          await loadDealsFromFile(nextFile);
+        } catch (err) {
+          console.error("Data toggle failed:", err);
+          updateDataToggleButton();
+          alert(`Could not load ${activeDataFile === "scored_deals.json" ? "live_deals.json" : "scored_deals.json"}.`);
+        }
+      });
     }
 
     async function init() {
       try {
-        allDeals = await loadDeals();
-
-        console.log("Loaded deals:", allDeals.length, "from", loadedFileName);
-        if (allDeals.length) {
-          console.log("First deal sample:", allDeals[0]);
-        }
-
-        populateSourceFilter();
-        document.getElementById("updatedAt").textContent = `Live from ${loadedFileName}`;
-        applyFilters(true);
+        await autoLoadBestData();
       } catch (err) {
         console.error("Deal board init failed:", err);
-        document.getElementById("updatedAt").textContent = "Could not load deal data";
+        document.getElementById("dataToggleBtn").textContent = "Could not load deal data";
         document.getElementById("featuredList").innerHTML =
           `<div class="empty">Could not load deal data. The front window is lit up, but the stock room is locked.</div>`;
         document.getElementById("dealList").innerHTML =
@@ -875,6 +913,7 @@ Vinyl Therapy never dies 🟣🟢`;
     initQuickFilters();
     initPager();
     initMenu();
+    initDataToggle();
     init();
   </script>
 </body>
