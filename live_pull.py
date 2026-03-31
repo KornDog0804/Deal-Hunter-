@@ -29,6 +29,7 @@ DEEPDISCOUNT_SEARCH_URLS = [
     "https://www.deepdiscount.com/featured-vinyl/b141496",
 ]
 
+
 def next_ua():
     global _ua_index
     ua = USER_AGENTS[_ua_index % len(USER_AGENTS)]
@@ -105,13 +106,16 @@ BAD_PRODUCT_TERMS = [
 DEBUG = []
 SOURCE_STATUS = {}
 
+
 def log(msg):
     print(msg)
     DEBUG.append(msg)
 
+
 def load_json(name):
     with open(BASE / name, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 ARTIST_CONFIG = load_json("artist_whitelist.json")
 SLUG_PATTERNS = load_json("slug_patterns.json")
@@ -119,6 +123,7 @@ SLUG_PATTERNS = load_json("slug_patterns.json")
 ENFORCE_ARTIST_WHITELIST = ARTIST_CONFIG.get("enforce_artist_whitelist", True)
 ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
 BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
+
 
 def fetch(url, retries=2, delay=2, extra_headers=None):
     extra_headers = extra_headers or {}
@@ -142,12 +147,14 @@ def fetch(url, retries=2, delay=2, extra_headers=None):
             else:
                 raise
 
+
 def clean(text):
     text = html.unescape(text or "")
     text = re.sub(r"<[^>]+>", " ", text)
     text = text.replace("–", "-").replace("|", "-")
     text = text.replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"')
     return re.sub(r"\s+", " ", text).strip()
+
 
 def normalize_price(value):
     try:
@@ -160,9 +167,11 @@ def normalize_price(value):
         value = value / 100.0
     return round(value, 2)
 
+
 def is_banned(text):
     t = (text or "").lower()
     return any(b in t for b in BANNED_KEYWORDS)
+
 
 def is_sold_out(text):
     t = (text or "").lower()
@@ -175,9 +184,11 @@ def is_sold_out(text):
         "not available",
     ])
 
+
 def looks_like_amazon_link(url):
     u = (url or "").lower()
     return "amazon.com" in u or "amzn.to" in u
+
 
 def artist_allowed(artist, title=""):
     hay = f"{artist} {title}".lower()
@@ -187,9 +198,11 @@ def artist_allowed(artist, title=""):
         return True
     return any(a in hay for a in ALLOWED)
 
+
 def keyword_hits(text):
     t = (text or "").lower()
     return [k for k in POSITIVE_KEYWORDS if k in t]
+
 
 def looks_like_garbage(text):
     t = (text or "").strip().lower()
@@ -201,9 +214,11 @@ def looks_like_garbage(text):
         return True
     return False
 
+
 def contains_bad_product_terms(text):
     t = (text or "").lower()
     return any(term in t for term in BAD_PRODUCT_TERMS)
+
 
 def should_skip(title, link):
     blob = f"{title} {link}".lower()
@@ -212,6 +227,7 @@ def should_skip(title, link):
     if contains_bad_product_terms(blob):
         return True
     return False
+
 
 def clean_store_title(title):
     text = clean(title)
@@ -252,6 +268,7 @@ def clean_store_title(title):
     text = re.sub(r"\s+", " ", text).strip(" -")
     return text
 
+
 def parse_from_slug(link):
     slug = link.rstrip("/").split("/")[-1]
     slug = clean(slug.replace("-", " ")).lower()
@@ -263,12 +280,14 @@ def parse_from_slug(link):
     )
     return re.sub(r"\s+", " ", slug).strip()
 
+
 def split_artist_album_from_title(title):
     title = clean_store_title(title)
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
     if len(parts) >= 2:
         return parts[0], parts[1]
     return "", title
+
 
 def infer_artist_title(raw_title, link, vendor="", source_name=""):
     title = clean_store_title(raw_title)
@@ -292,6 +311,7 @@ def infer_artist_title(raw_title, link, vendor="", source_name=""):
         return "Unknown Artist", slug.title()
 
     return "Unknown Artist", title
+
 
 def detect_format(title="", product_type="", page_text=""):
     title_l = (title or "").lower()
@@ -327,6 +347,7 @@ def detect_format(title="", product_type="", page_text=""):
 
     return "other"
 
+
 def extract_links(html_text, base, source_type="shopify_store"):
     raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
     links = []
@@ -359,6 +380,7 @@ def extract_links(html_text, base, source_type="shopify_store"):
 
     return links[:800]
 
+
 def extract_title(html_text):
     patterns = [
         r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"',
@@ -377,6 +399,7 @@ def extract_title(html_text):
             if title and len(title) > 2:
                 return clean_store_title(title)
     return "Unknown Title"
+
 
 def extract_price(html_text):
     patterns = [
@@ -398,6 +421,7 @@ def extract_price(html_text):
             return normalize_price(raw)
     return 0.0
 
+
 def extract_image(html_text, base):
     patterns = [
         r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"',
@@ -414,6 +438,7 @@ def extract_image(html_text, base):
                 return urljoin(base, img)
     return ""
 
+
 def build_version_parts(text_blob, title_lower="", link_lower=""):
     keywords = keyword_hits(text_blob)
     version_parts = keywords[:]
@@ -423,6 +448,7 @@ def build_version_parts(text_blob, title_lower="", link_lower=""):
         if token in link_lower and token not in version_parts:
             version_parts.append(token)
     return keywords, version_parts
+
 
 def fetch_shopify_products(source_url):
     url = source_url.rstrip("/")
@@ -463,6 +489,7 @@ def fetch_shopify_products(source_url):
             log(f"  ✗ {endpoint} -> {e}")
 
     return [], ""
+
 
 def build_shopify_deals(source):
     deals = []
@@ -575,8 +602,8 @@ def build_shopify_deals(source):
     log(f'{source["name"]}: kept {kept}')
     return deals
 
+
 def source_specific_links(page_html, source):
-    source_name = (source.get("name") or "").lower()
     source_type = source.get("source_type", "")
 
     if source_type == "merchbar_store":
@@ -633,6 +660,7 @@ def source_specific_links(page_html, source):
         return links[:500]
 
     return extract_links(page_html, source.get("url", ""), source_type=source_type)
+
 
 def build_html_deals(source):
     deals = []
@@ -717,6 +745,7 @@ def build_html_deals(source):
 
     return deals
 
+
 def build_unfd(source):
     deals = build_shopify_deals({
         "name": source["name"],
@@ -730,6 +759,7 @@ def build_unfd(source):
     log(f'{source["name"]}: Shopify path empty, trying HTML fallback')
     return build_html_deals(source)
 
+
 def build_millions(source):
     deals = build_shopify_deals({
         "name": source["name"],
@@ -742,6 +772,7 @@ def build_millions(source):
 
     log(f'{source["name"]}: Shopify path empty, trying HTML fallback')
     return build_html_deals(source)
+
 
 def build_deepdiscount(source):
     deals = []
@@ -762,7 +793,7 @@ def build_deepdiscount(source):
     ]
 
     def dd_sleep():
-        time.sleep(random.uniform(1.0, 2.2))
+        time.sleep(random.uniform(0.8, 1.8))
 
     def dd_fetch(url, retries=3):
         nonlocal opener
@@ -777,6 +808,25 @@ def build_deepdiscount(source):
                 dd_sleep()
         return ""
 
+    def is_real_dd_product_url(url):
+        low = url.lower().split("?", 1)[0].rstrip("/")
+
+        if not low.startswith("https://www.deepdiscount.com/"):
+            return False
+
+        path = re.sub(r"^https?://[^/]+", "", low).strip("/")
+        parts = [p for p in path.split("/") if p]
+
+        if len(parts) < 2:
+            return False
+
+        last = parts[-1]
+
+        if re.fullmatch(r"\d{8,14}", last):
+            return True
+
+        return False
+
     def extract_dd_links(page_html):
         links = set()
         hrefs = re.findall(r'href="([^"]+)"', page_html, re.I)
@@ -786,50 +836,42 @@ def build_deepdiscount(source):
             low = full.lower()
 
             if any(bad in low for bad in [
-                "/search",
-                "/cart",
-                "/account",
-                "/help",
                 "javascript:",
                 "mailto:",
                 "tel:",
                 "#",
+                "/cart",
+                "/account",
+                "/help",
             ]):
                 continue
 
-            path = re.sub(r"^https?://[^/]+", "", low)
-            if low.endswith((".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".css", ".js")):
-                continue
-
-            if (
-                "/product/" in low
-                or "/p/" in low
-                or "/item/" in low
-                or "/ip/" in low
-                or len([x for x in path.split("/") if x]) >= 2
-            ):
+            if is_real_dd_product_url(full):
                 links.add(full)
 
-        return list(links)[:1000]
+        return list(links)[:1200]
 
-    warmup_urls = [
-        "https://www.deepdiscount.com/",
+    seed_pages = [
+        "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
         "https://www.deepdiscount.com/music/vinyl",
+        "https://www.deepdiscount.com/music/vinyl/new-releases",
+        "https://www.deepdiscount.com/featured-vinyl/b141496",
     ]
 
-    for warm in warmup_urls:
-        _ = dd_fetch(warm)
-        dd_sleep()
+    _ = dd_fetch("https://www.deepdiscount.com/")
+    dd_sleep()
+    _ = dd_fetch("https://www.deepdiscount.com/music/vinyl")
+    dd_sleep()
 
     kept = 0
 
-    for page_url in DEEPDISCOUNT_SEARCH_URLS:
+    for page_url in seed_pages:
         page_html = dd_fetch(page_url)
         if not page_html:
             continue
 
         links = extract_dd_links(page_html)
-        log(f'{source["name"]}: found {len(links)} candidate links from {page_url}')
+        log(f'{source["name"]}: found {len(links)} product links from {page_url}')
 
         for link in links:
             if link in seen_links:
@@ -897,6 +939,7 @@ def build_deepdiscount(source):
     log(f'{source["name"]}: kept {len(deduped)}')
     return deduped
 
+
 def derive_amazon_walmart(deals):
     derived = []
     seen = set()
@@ -962,6 +1005,7 @@ def derive_amazon_walmart(deals):
     SOURCE_STATUS["Walmart"] = f"{sum(1 for d in derived if d['source'] == 'Walmart')} derived deals"
     return derived
 
+
 def dedupe_source_items(items):
     seen = {}
     for item in items:
@@ -977,6 +1021,7 @@ def dedupe_source_items(items):
             seen[key] = item
 
     return list(seen.values())
+
 
 def scrape_source(source):
     stype = source.get("source_type", "")
@@ -1030,6 +1075,7 @@ def scrape_source(source):
     SOURCE_STATUS[source["name"]] = f'SKIPPED (unknown type: {stype})'
     return []
 
+
 def dedupe_deals(deals):
     seen = {}
     for d in deals:
@@ -1041,6 +1087,7 @@ def dedupe_deals(deals):
             if d["price"] < current["price"]:
                 seen[key] = d
     return list(seen.values())
+
 
 def build():
     deals = []
@@ -1060,6 +1107,7 @@ def build():
     deals.extend(derived)
 
     return dedupe_deals(deals)
+
 
 if __name__ == "__main__":
     data = build()
