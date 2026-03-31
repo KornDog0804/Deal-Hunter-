@@ -93,6 +93,18 @@
 
       <div class="pager" id="pager">
         <button class="btn btn-ghost" id="prevPageBtn">Previous</button>
+        <div id="pageNumbers" class="page-numbers"></div>
+        <div class="page-jump-wrap">
+          <input
+            id="pageJumpInput"
+            class="page-jump-input"
+            type="number"
+            min="1"
+            placeholder="Page"
+            inputmode="numeric"
+          />
+          <button class="btn btn-ghost" id="pageJumpBtn">Go</button>
+        </div>
         <button class="btn btn-ghost" id="nextPageBtn">Next</button>
       </div>
     </section>
@@ -140,6 +152,7 @@
       if (source.includes("newbury")) return "newbury comics";
       if (source.includes("udiscover")) return "udiscover music";
       if (source.includes("sound of vinyl")) return "sound of vinyl";
+      if (source.includes("rise all")) return "rise all";
       if (source.includes("rise records")) return "rise records";
       if (source.includes("fearless")) return "fearless records";
       if (source.includes("brooklyn vegan")) return "brooklyn vegan";
@@ -152,6 +165,11 @@
       if (source.includes("craft recordings")) return "craft recordings";
       if (source.includes("mnrk")) return "mnrk heavy";
       if (source.includes("revolver")) return "revolver";
+      if (source.includes("sharptone")) return "sharptone records";
+      if (source.includes("rock metal fan nation")) return "rock metal fan nation";
+      if (source.includes("unfd")) return "unfd";
+      if (source.includes("sumerian")) return "sumerian records";
+      if (source.includes("solid state")) return "solid state records";
 
       return source;
     }
@@ -166,6 +184,7 @@
         "newbury comics": "Newbury Comics",
         "udiscover music": "uDiscover Music",
         "sound of vinyl": "Sound of Vinyl",
+        "rise all": "Rise All",
         "rise records": "Rise Records",
         "fearless records": "Fearless Records",
         "brooklyn vegan": "Brooklyn Vegan",
@@ -177,7 +196,12 @@
         "ride records": "Ride Records",
         "craft recordings": "Craft Recordings",
         "mnrk heavy": "MNRK Heavy",
-        "revolver": "Revolver"
+        "revolver": "Revolver",
+        "sharptone records": "SharpTone Records",
+        "rock metal fan nation": "Rock Metal Fan Nation",
+        "unfd": "UNFD",
+        "sumerian records": "Sumerian Records",
+        "solid state records": "Solid State Records"
       };
 
       return map[key] || String(value || "").trim();
@@ -575,10 +599,54 @@ Korndog preorder radar is on the hunt 💿🔥`;
       return picks;
     }
 
+    function renderPageNumbers(totalPages) {
+      const pageNumbers = document.getElementById("pageNumbers");
+      if (!pageNumbers) return;
+
+      pageNumbers.innerHTML = "";
+
+      if (totalPages <= 1) return;
+
+      const pages = new Set();
+      pages.add(1);
+      pages.add(totalPages);
+
+      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+        if (i > 1 && i < totalPages) {
+          pages.add(i);
+        }
+      }
+
+      const sortedPages = [...pages].sort((a, b) => a - b);
+      let lastPage = 0;
+
+      sortedPages.forEach(page => {
+        if (page - lastPage > 1) {
+          const ellipsis = document.createElement("span");
+          ellipsis.className = "page-ellipsis";
+          ellipsis.textContent = "...";
+          pageNumbers.appendChild(ellipsis);
+        }
+
+        const btn = document.createElement("button");
+        btn.className = `page-number-btn ${page === currentPage ? "active" : ""}`;
+        btn.textContent = page;
+        btn.addEventListener("click", () => {
+          currentPage = page;
+          applyFilters(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        pageNumbers.appendChild(btn);
+        lastPage = page;
+      });
+    }
+
     function renderDeals(deals, featuredDeals = []) {
       const dealList = document.getElementById("dealList");
       const pager = document.getElementById("pager");
       const pageStatus = document.getElementById("pageStatus");
+      const pageNumbers = document.getElementById("pageNumbers");
 
       dealList.innerHTML = "";
 
@@ -603,6 +671,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
         `;
         pager.style.display = "none";
         pageStatus.textContent = "Page 0";
+        if (pageNumbers) pageNumbers.innerHTML = "";
         return;
       }
 
@@ -623,6 +692,8 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       document.getElementById("prevPageBtn").disabled = currentPage === 1;
       document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
+
+      renderPageNumbers(totalPages);
     }
 
     function matchesQuickFilter(deal) {
@@ -682,6 +753,34 @@ Korndog preorder radar is on the hunt 💿🔥`;
       const select = document.getElementById("sourceFilter");
       const sources = new Map();
 
+      const seededSources = [
+        ["brooklyn vegan", "Brooklyn Vegan"],
+        ["craft recordings", "Craft Recordings"],
+        ["equal vision", "Equal Vision"],
+        ["mnrk heavy", "MNRK Heavy"],
+        ["newbury comics", "Newbury Comics"],
+        ["revolver", "Revolver"],
+        ["rise all", "Rise All"],
+        ["rise records", "Rise Records"],
+        ["rollin records", "Rollin Records"],
+        ["sound of vinyl", "Sound of Vinyl"],
+        ["udiscover music", "uDiscover Music"],
+        ["fearless records", "Fearless Records"],
+        ["deep discount", "Deep Discount"],
+        ["merchbar", "Merchbar"],
+        ["walmart", "Walmart"],
+        ["target", "Target"],
+        ["sharptone records", "SharpTone Records"],
+        ["rock metal fan nation", "Rock Metal Fan Nation"],
+        ["unfd", "UNFD"],
+        ["sumerian records", "Sumerian Records"],
+        ["solid state records", "Solid State Records"]
+      ];
+
+      seededSources.forEach(([value, label]) => {
+        sources.set(value, label);
+      });
+
       [...allDeals, ...allPreorders].forEach(deal => {
         const rawSource = (deal.best_source || deal.source || "").trim();
         if (!rawSource) return;
@@ -728,6 +827,8 @@ Korndog preorder radar is on the hunt 💿🔥`;
         `;
         document.getElementById("pager").style.display = "none";
         document.getElementById("pageStatus").textContent = "Preorders";
+        const pageNumbers = document.getElementById("pageNumbers");
+        if (pageNumbers) pageNumbers.innerHTML = "";
         return;
       }
 
@@ -784,6 +885,50 @@ Korndog preorder radar is on the hunt 💿🔥`;
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
       });
+
+      const pageJumpBtn = document.getElementById("pageJumpBtn");
+      const pageJumpInput = document.getElementById("pageJumpInput");
+
+      pageJumpBtn.addEventListener("click", () => {
+        jumpToPage();
+      });
+
+      pageJumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          jumpToPage();
+        }
+      });
+    }
+
+    function jumpToPage() {
+      if (activeQuickFilter === "preorders") return;
+
+      const input = document.getElementById("pageJumpInput");
+      let page = Number(input.value || 0);
+      if (!page || page < 1) return;
+
+      const totalFiltered = getFilteredDeals();
+
+      let workingDeals = totalFiltered;
+      if (page === 1) {
+        const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
+        const featuredKeys = new Set(
+          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+        );
+
+        workingDeals = totalFiltered.filter(d => {
+          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+          return !featuredKeys.has(key);
+        });
+      }
+
+      const totalPages = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
+      if (page > totalPages) page = totalPages;
+
+      currentPage = page;
+      applyFilters(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      input.value = "";
     }
 
     function openMenu() {
