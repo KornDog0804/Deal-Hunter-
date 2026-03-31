@@ -139,6 +139,7 @@
     let activeQuickFilter = "all";
     let currentPage = 1;
     const DEALS_PER_PAGE = 24;
+    const PREORDERS_PER_PAGE = 24;
 
     function escapeHtml(value) {
       return String(value ?? "")
@@ -580,7 +581,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
 
-      if (currentPage !== 1) {
+      if (currentPage !== 1 || activeQuickFilter === "preorders") {
         return [];
       }
 
@@ -610,7 +611,33 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       preorderList.innerHTML = "";
 
-      if (currentPage !== 1 && activeQuickFilter !== "preorders") {
+      if (activeQuickFilter === "preorders") {
+        const totalPages = Math.max(1, Math.ceil(preorders.length / PREORDERS_PER_PAGE));
+        if (currentPage > totalPages) currentPage = 1;
+
+        const start = (currentPage - 1) * PREORDERS_PER_PAGE;
+        const end = start + PREORDERS_PER_PAGE;
+        const pagePreorders = preorders.slice(start, end);
+
+        preorderUpdatedAt.textContent = `Loaded ${preorders.length} preorder alerts from preorders.json`;
+
+        if (!pagePreorders.length) {
+          preorderList.innerHTML = `
+            <div class="empty">
+              No preorder alerts right now. The radar is quiet... for now.
+            </div>
+          `;
+          return [];
+        }
+
+        pagePreorders.forEach(deal => {
+          preorderList.appendChild(createPreorderCard(deal));
+        });
+
+        return pagePreorders;
+      }
+
+      if (currentPage !== 1) {
         return [];
       }
 
@@ -695,6 +722,25 @@ Korndog preorder radar is on the hunt 💿🔥`;
       const topPageNumbers = document.getElementById("topPageNumbers");
 
       dealList.innerHTML = "";
+
+      if (activeQuickFilter === "preorders") {
+        dealList.innerHTML = `
+          <div class="empty">
+            Preorder mode is on. Browse the preorder cards above.
+          </div>
+        `;
+
+        const totalPages = Math.max(1, Math.ceil(getFilteredPreorders().length / PREORDERS_PER_PAGE));
+        pager.style.display = totalPages > 1 ? "flex" : "none";
+        pageStatus.textContent = `Preorders ${currentPage} / ${totalPages}`;
+
+        document.getElementById("prevPageBtn").disabled = currentPage === 1;
+        document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
+
+        renderPageNumbers(totalPages);
+        renderTopPageNumbers(totalPages);
+        return;
+      }
 
       let workingDeals = deals;
 
@@ -866,25 +912,10 @@ Korndog preorder radar is on the hunt 💿🔥`;
       toggleHeroSections();
 
       if (activeQuickFilter === "preorders") {
+        renderFeatured([]);
         renderPreorders(filteredPreorders);
         document.getElementById("dealCount").textContent = `Preorders: ${filteredPreorders.length}`;
-        document.getElementById("featuredList").innerHTML = `
-          <div class="empty">
-            Preorder mode is on. Fresh blood only. 🔥
-          </div>
-        `;
-        document.getElementById("dealList").innerHTML = `
-          <div class="empty">
-            Use the Preorder Alerts section above to browse the current preorder radar.
-          </div>
-        `;
-        document.getElementById("pager").style.display = "none";
-        document.getElementById("pageStatus").textContent = "Preorders";
-        const pageNumbers = document.getElementById("pageNumbers");
-        const topPageNumbers = document.getElementById("topPageNumbers");
-        if (pageNumbers) pageNumbers.innerHTML = "";
-        if (topPageNumbers) topPageNumbers.innerHTML = "";
-        toggleTopPageNav(false);
+        renderDeals([], []);
         return;
       }
 
@@ -909,6 +940,10 @@ Korndog preorder radar is on the hunt 💿🔥`;
     }
 
     function getTotalPageCountForCurrentView() {
+      if (activeQuickFilter === "preorders") {
+        return Math.max(1, Math.ceil(getFilteredPreorders().length / PREORDERS_PER_PAGE));
+      }
+
       const totalFiltered = getFilteredDeals();
 
       let workingDeals = totalFiltered;
@@ -928,28 +963,11 @@ Korndog preorder radar is on the hunt 💿🔥`;
     }
 
     function jumpToPage(inputId = "pageJumpInput") {
-      if (activeQuickFilter === "preorders") return;
-
       const input = document.getElementById(inputId);
       let page = Number(input.value || 0);
       if (!page || page < 1) return;
 
-      const totalFiltered = getFilteredDeals();
-
-      let workingDeals = totalFiltered;
-      if (page === 1) {
-        const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
-        const featuredKeys = new Set(
-          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-        );
-
-        workingDeals = totalFiltered.filter(d => {
-          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-          return !featuredKeys.has(key);
-        });
-      }
-
-      const totalPages = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
+      const totalPages = getTotalPageCountForCurrentView();
       if (page > totalPages) page = totalPages;
 
       currentPage = page;
@@ -1006,7 +1024,6 @@ Korndog preorder radar is on the hunt 💿🔥`;
       });
 
       document.getElementById("pageStatus").addEventListener("click", () => {
-        if (activeQuickFilter === "preorders") return;
         toggleTopPageNav();
       });
     }
