@@ -17,57 +17,67 @@ USER_AGENTS = [
 ]
 _ua_index = 0
 
+
 def next_ua():
     global _ua_index
     ua = USER_AGENTS[_ua_index % len(USER_AGENTS)]
     _ua_index += 1
     return ua
 
-# ── SOURCES ──────────────────────────────────────────────────────────────────
+
 # source_type options:
-#   shopify_store   → hits /products.json (fast, reliable)
-#   merchnow_store  → Merchnow-hosted Shopify (same endpoint, different base)
-#   catalog_store   → HTML scrape fallback
-#   js_store        → JS-rendered, skipped until we have an API
-# ─────────────────────────────────────────────────────────────────────────────
+#   shopify_store  -> hits /products.json
+#   merchnow_store -> same idea, but custom storefronts
+#   catalog_store  -> HTML scrape fallback
+#   js_store       -> skipped until API or headless path exists
+#   target_api     -> placeholder for future
+#   walmart_api    -> placeholder for future
+#   amazon_api     -> placeholder for future
 SOURCES = [
-    # ── Shopify Stores ────────────────────────────────────────────────────────
-    {"name": "Rollin Records",        "source_type": "shopify_store", "url": "https://rollinrecs.com"},
-    {"name": "Rollin Preorders",      "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/pre-orders"},
-    {"name": "Sound of Vinyl",        "source_type": "shopify_store", "url": "https://thesoundofvinyl.us"},
-    {"name": "uDiscover Music",       "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com"},
-    {"name": "Fearless Records",      "source_type": "shopify_store", "url": "https://fearlessrecords.com"},
-    {"name": "Rise Records",          "source_type": "shopify_store", "url": "https://riserecords.com"},
-    {"name": "Rise All",              "source_type": "shopify_store", "url": "https://riserecords.com/collections/all"},
-    {"name": "Brooklyn Vegan",        "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com"},
-    {"name": "Revolver",              "source_type": "shopify_store", "url": "https://shop.revolvermag.com"},
-    {"name": "Newbury Comics",        "source_type": "shopify_store", "url": "https://www.newburycomics.com"},
-    {"name": "Newbury Preorders",     "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/pre-orders"},
-    {"name": "Craft Recordings",      "source_type": "shopify_store", "url": "https://craftrecordings.com"},
-    {"name": "MNRK Heavy",            "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
-    {"name": "Equal Vision",          "source_type": "shopify_store", "url": "https://equalvision.com"},
-    {"name": "Rhino",                 "source_type": "shopify_store", "url": "https://store.rhino.com"},
-    {"name": "Interscope Records",    "source_type": "shopify_store", "url": "https://interscope.com"},
-    {"name": "SharpTone Records",     "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
-    {"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rockmetalfannation.com"},
-    {"name": "Sumerian Records",      "source_type": "shopify_store", "url": "https://sumerianrecords.com"},
-    {"name": "Solid State Records",   "source_type": "shopify_store", "url": "https://solidstaterecords.com"},
-    {"name": "UNFD",                  "source_type": "shopify_store", "url": "https://store.unfd.com.au"},
+    # Shopify / Shopify-like
+    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com"},
+    {"name": "Rollin Preorders", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/pre-orders"},
+    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us"},
+    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com"},
 
-    # ── Merchnow Stores (Shopify under the hood) ──────────────────────────────
-    {"name": "Pure Noise Records",    "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
+    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com"},
+    {"name": "Fearless Vinyl", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com/collections/vinyl"},
 
-    # ── HTML Catalog Stores ───────────────────────────────────────────────────
-    {"name": "Deep Discount",         "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
-    {"name": "Merchbar",              "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
+    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com"},
+    {"name": "Rise All", "source_type": "shopify_store", "url": "https://riserecords.com/collections/all"},
+    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com"},
+    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com"},
+    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com"},
+    {"name": "Newbury Preorders", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/pre-orders"},
+    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com"},
+    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
+    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com"},
+    {"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com"},
+    {"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com"},
+    {"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
 
-    # ── JS-Rendered (skipped until affiliate/open API is ready) ──────────────
-    {"name": "Walmart",               "source_type": "js_store",      "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"},
-    {"name": "Target",                "source_type": "js_store",      "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
-    {"name": "Hot Topic",             "source_type": "js_store",      "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
+    {"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rmfnvinyl.com"},
+    {"name": "RMFN All", "source_type": "shopify_store", "url": "https://rmfnvinyl.com/collections/all"},
+
+    {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com"},
+    {"name": "Solid State Records", "source_type": "shopify_store", "url": "https://solidstaterecords.store"},
+
+    # UNFD moved to catalog fallback because old store root was dead
+    {"name": "UNFD", "source_type": "catalog_store", "url": "https://usa.24hundred.net/collections/unfd"},
+
+    # Merchnow / custom
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
+
+    # HTML catalog
+    {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
+    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
+    {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
+
+    # Future API lanes
+    {"name": "Walmart", "source_type": "js_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"},
+    {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
 ]
 
-# ── KEYWORDS ─────────────────────────────────────────────────────────────────
 POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
     "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp",
@@ -92,14 +102,14 @@ BAD_PRODUCT_TERMS = [
     "shirt", "hoodie", "tank top", "tee", "poster", "slipmat", "cassette",
     "cd", "compact disc", "beanie", "hat", "jacket", "bundle", "book",
     "kindle", "blu-ray", "dvd", "toy", "figure", "funko",
-    "digital", "digital album", "digital download", "mp3", "download"
+    "digital", "digital album", "digital download", "mp3", "download",
+    "earbuds", "headphones", "airpods", "sticker", "patch", "pin"
 ]
 
 DEBUG = []
 SOURCE_STATUS = {}
 
 
-# ── LOGGING ──────────────────────────────────────────────────────────────────
 def log(msg):
     print(msg)
     DEBUG.append(msg)
@@ -118,7 +128,6 @@ ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
 BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
 
 
-# ── FETCH WITH RETRY ─────────────────────────────────────────────────────────
 def fetch(url, retries=2, delay=2):
     for attempt in range(retries + 1):
         try:
@@ -133,13 +142,12 @@ def fetch(url, retries=2, delay=2):
                 return resp.read().decode("utf-8", "ignore")
         except Exception as e:
             if attempt < retries:
-                log(f"  → retry {attempt + 1}/{retries} for {url} | {e}")
+                log(f"  -> retry {attempt + 1}/{retries} for {url} | {e}")
                 time.sleep(delay)
             else:
                 raise
 
 
-# ── TEXT HELPERS ─────────────────────────────────────────────────────────────
 def clean(text):
     text = html.unescape(text or "")
     text = re.sub(r"<[^>]+>", " ", text)
@@ -168,8 +176,12 @@ def is_banned(text):
 def is_sold_out(text):
     t = (text or "").lower()
     return any(term in t for term in [
-        "sold out", "sorry sold out", "out of stock",
-        "currently unavailable", "unavailable", "not available"
+        "sold out",
+        "sorry sold out",
+        "out of stock",
+        "currently unavailable",
+        "unavailable",
+        "not available",
     ])
 
 
@@ -217,7 +229,6 @@ def should_skip(title, link):
     return False
 
 
-# ── TITLE CLEANING ────────────────────────────────────────────────────────────
 def clean_store_title(title):
     text = clean(title)
     junk_patterns = [
@@ -245,6 +256,7 @@ def clean_store_title(title):
         r"\s*-\s*Pure Noise Records?\s*$",
         r"\s*-\s*Rollin Records\s*$",
         r"\s*-\s*MNRK Heavy\s*$",
+        r"\s*-\s*Rock Metal Fan Nation\s*$",
     ]
     for pattern in junk_patterns:
         text = re.sub(pattern, "", text, flags=re.I)
@@ -257,7 +269,9 @@ def parse_from_slug(link):
     slug = clean(slug.replace("-", " ")).lower()
     slug = re.sub(
         r"\b(vinyl|lp|2lp|1lp|edition|limited|exclusive|colored|color|disc|picture|anniversary|collectors?|stereo|version|black|standard|record|records|performance|music|translucent|clear|smoke|splatter|etched|zoetrope)\b",
-        "", slug, flags=re.I
+        "",
+        slug,
+        flags=re.I
     )
     return re.sub(r"\s+", " ", slug).strip()
 
@@ -294,10 +308,46 @@ def infer_artist_title(raw_title, link, vendor="", source_name=""):
     return "Unknown Artist", title
 
 
-# ── PREORDER + RELEASE DATE ───────────────────────────────────────────────────
+def detect_format(title="", product_type="", page_text=""):
+    blob = f"{title} {product_type} {page_text}".lower()
+
+    vinyl_markers = [
+        " vinyl", "vinyl ", " vinyl ", " lp", "lp ", "2lp", "1lp",
+        '12"', '7"', "record", "records"
+    ]
+
+    if any(x in blob for x in ["cassette", "cd", "compact disc"]):
+        if not any(v in blob for v in vinyl_markers):
+            return "other"
+
+    if any(x in blob for x in vinyl_markers):
+        return "vinyl"
+
+    if "cassette" in blob:
+        return "cassette"
+
+    if "cd" in blob or "compact disc" in blob:
+        return "cd"
+
+    return "other"
+
+
 def detect_preorder_signals(text):
     t = (text or "").lower()
+
+    negative_terms = [
+        "in stock",
+        "shipping now",
+        "ready to ship",
+        "ships immediately",
+        "available now",
+        "add to cart now"
+    ]
+    if any(term in t for term in negative_terms):
+        return {"is_preorder": False, "preorder_terms": []}
+
     hits = [term for term in PREORDER_TERMS if term in t]
+
     date_patterns = [
         r"release date[:\s]*[a-z]+\s+\d{1,2},\s+\d{4}",
         r"releases on[:\s]*[a-z]+\s+\d{1,2},\s+\d{4}",
@@ -308,6 +358,7 @@ def detect_preorder_signals(text):
     if any(re.search(p, t) for p in date_patterns):
         if "release date" not in hits:
             hits.append("release date pattern")
+
     return {"is_preorder": bool(hits), "preorder_terms": hits}
 
 
@@ -325,18 +376,23 @@ def extract_release_date(text):
     return ""
 
 
-# ── HTML EXTRACTION ───────────────────────────────────────────────────────────
 def extract_links(html_text, base, source_type="shopify_store"):
     raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
     links = []
     blocked_markers = [
         "/collections/", "/search", "/cart", "/account",
-        "/pages/", "/policies/", "/blogs/", "#", "javascript:"
+        "/pages/", "/policies/", "/blogs/", "#",
+        "javascript:", "mailto:", "tel:"
     ]
+
     if source_type in {"shopify_store", "merchnow_store"}:
-        valid_markers = ["/products/"]
+        valid_markers = ["/products/", "/product/"]
     elif source_type == "catalog_store":
-        valid_markers = ["/product/", "/products/", "/p/", "/item/", "/ip/", "/dp/", "/music/vinyl", "/vinyl", "/album"]
+        valid_markers = [
+            "/product/", "/products/", "/p/", "/item/",
+            "/ip/", "/dp/", "/music/vinyl", "/vinyl",
+            "/album", "/record"
+        ]
     else:
         valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/"]
 
@@ -347,16 +403,18 @@ def extract_links(html_text, base, source_type="shopify_store"):
         full = urljoin(base, href)
         if any(b in full for b in blocked_markers):
             continue
-        if any(v in full for v in valid_markers):
+        if any(v in full.lower() for v in valid_markers):
             if full not in links:
                 links.append(full)
-    return links[:300]
+
+    return links[:500]
 
 
 def extract_title(html_text):
     patterns = [
         r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"',
         r'<meta[^>]+name="twitter:title"[^>]+content="([^"]+)"',
+        r'<meta[^>]+property="product:title"[^>]+content="([^"]+)"',
         r'<h1[^>]*>(.*?)</h1>',
         r'"product_title"\s*:\s*"([^"]+)"',
         r'"name"\s*:\s*"([^"]+)"',
@@ -421,28 +479,19 @@ def build_version_parts(text_blob, title_lower="", link_lower=""):
     return keywords, version_parts
 
 
-# ── SHOPIFY FETCH ─────────────────────────────────────────────────────────────
 def fetch_shopify_products(source_url):
-    """
-    Smart Shopify endpoint resolver.
-    Handles both base store URLs and collection-specific URLs.
-    """
     url = source_url.rstrip("/")
 
-    # Extract base domain
     base_match = re.match(r'(https?://[^/]+)', url)
     if not base_match:
         return []
     base = base_match.group(1)
 
-    # Build ordered list of endpoints to try
     endpoints = []
 
     if "/collections/" in url:
-        # Collection-specific: try that collection's JSON first
         endpoints.append(url + "/products.json?limit=250")
 
-    # Always try base store endpoints as fallback
     endpoints += [
         base + "/products.json?limit=250",
         base + "/collections/all/products.json?limit=250",
@@ -451,7 +500,6 @@ def fetch_shopify_products(source_url):
         base + "/collections/records/products.json?limit=250",
     ]
 
-    # Dedupe
     seen = set()
     deduped = []
     for e in endpoints:
@@ -465,22 +513,21 @@ def fetch_shopify_products(source_url):
             parsed = json.loads(data)
             products = parsed.get("products", [])
             if products:
-                log(f"  ✓ {endpoint} → {len(products)} products")
+                log(f"  ✓ {endpoint} -> {len(products)} products")
                 return products
         except Exception as e:
-            log(f"  ✗ {endpoint} → {e}")
+            log(f"  ✗ {endpoint} -> {e}")
 
     return []
 
 
-# ── SHOPIFY DEAL BUILDER ──────────────────────────────────────────────────────
 def build_shopify_deals(source):
     deals = []
     products = fetch_shopify_products(source["url"])
     log(f'{source["name"]}: {len(products)} products via Shopify JSON')
 
     if not products:
-        SOURCE_STATUS[source["name"]] = "0 products — endpoint may have changed"
+        SOURCE_STATUS[source["name"]] = "0 products - endpoint may have changed"
         return []
 
     kept = 0
@@ -525,7 +572,6 @@ def build_shopify_deals(source):
             if not handle:
                 continue
 
-            # Always build product link from base domain
             base_match = re.match(r'(https?://[^/]+)', source["url"])
             base_url = base_match.group(1) if base_match else source["url"]
             link = base_url + "/products/" + handle
@@ -547,14 +593,23 @@ def build_shopify_deals(source):
             body_html = p.get("body_html", "") or ""
             variant_title = clean(valid_variant.get("title", "") or "")
             combined_blob = " ".join([
-                title, vendor, body_html, variant_title, handle,
+                title,
+                vendor,
+                product_type,
+                body_html,
+                variant_title,
+                handle,
                 str(valid_variant.get("inventory_policy", "")),
                 str(valid_variant.get("option1", "")),
                 str(valid_variant.get("option2", "")),
-                str(valid_variant.get("option3", ""))
+                str(valid_variant.get("option3", "")),
             ])
 
             if is_sold_out(combined_blob):
+                continue
+
+            fmt = detect_format(title=title, product_type=product_type, page_text=body_html)
+            if fmt != "vinyl":
                 continue
 
             preorder_info = detect_preorder_signals(combined_blob)
@@ -578,13 +633,13 @@ def build_shopify_deals(source):
                 "keywords": keywords,
                 "deal_quality": "good" if price < 40 else "normal",
                 "demand": "steady",
-                "format": "vinyl",
+                "format": fmt,
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": variant_title,
                 "page_text_snippet": clean(body_html)[:1000],
                 "release_date": release_date,
                 "is_preorder": preorder_info["is_preorder"],
-                "preorder_terms": preorder_info["preorder_terms"]
+                "preorder_terms": preorder_info["preorder_terms"],
             })
             kept += 1
             if preorder_info["is_preorder"]:
@@ -598,7 +653,6 @@ def build_shopify_deals(source):
     return deals
 
 
-# ── HTML DEAL BUILDER ─────────────────────────────────────────────────────────
 def build_html_deals(source):
     deals = []
     try:
@@ -608,6 +662,7 @@ def build_html_deals(source):
 
         kept = 0
         preorder_kept = 0
+        source_name = (source.get("name") or "").lower()
 
         for link in links:
             try:
@@ -622,6 +677,15 @@ def build_html_deals(source):
                 if should_skip(raw_title, link):
                     continue
 
+                if "merchbar" in source_name and "vinyl records" in raw_title.lower():
+                    continue
+
+                if "walmart" in source_name and not any(x in page.lower() for x in ["price", "currentprice", "$"]):
+                    continue
+
+                if "target" in source_name and not any(x in page.lower() for x in ["price", "ship", "sold out", "$"]):
+                    continue
+
                 price = extract_price(page)
                 if price <= 0:
                     continue
@@ -632,6 +696,10 @@ def build_html_deals(source):
                 if contains_bad_product_terms(f"{artist} {album}"):
                     continue
                 if not artist_allowed(artist, album):
+                    continue
+
+                fmt = detect_format(title=raw_title, product_type="", page_text=page[:2000])
+                if fmt != "vinyl":
                     continue
 
                 image = extract_image(page, link)
@@ -656,13 +724,13 @@ def build_html_deals(source):
                     "keywords": keywords,
                     "deal_quality": "good" if price < 40 else "normal",
                     "demand": "steady",
-                    "format": "vinyl",
+                    "format": fmt,
                     "version": " ".join(version_parts) if version_parts else "standard",
                     "availability_text": "",
                     "page_text_snippet": clean(page)[:1000],
                     "release_date": release_date,
                     "is_preorder": preorder_info["is_preorder"],
-                    "preorder_terms": preorder_info["preorder_terms"]
+                    "preorder_terms": preorder_info["preorder_terms"],
                 })
                 kept += 1
                 if preorder_info["is_preorder"]:
@@ -681,35 +749,41 @@ def build_html_deals(source):
     return deals
 
 
-# ── SOURCE ROUTER ─────────────────────────────────────────────────────────────
 def scrape_source(source):
-    name = (source.get("name") or "").lower().strip()
     stype = source.get("source_type", "")
 
-    # Skip JS-rendered stores — can't scrape without headless browser
     if stype == "js_store":
-        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered — needs affiliate API)"
+        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs affiliate/API path)"
         log(f'{source["name"]}: SKIPPED (JS-rendered)')
         return []
 
-    # Merchnow stores are Shopify under the hood
     if stype == "merchnow_store":
-        return build_shopify_deals(source)
+        deals = build_shopify_deals(source)
+        if not deals:
+            log(f'{source["name"]}: Merchnow JSON empty, trying HTML fallback')
+            deals = build_html_deals(source)
+        return deals
 
-    # Standard Shopify stores
     if stype == "shopify_store":
-        return build_shopify_deals(source)
+        deals = build_shopify_deals(source)
+        if not deals:
+            log(f'{source["name"]}: Shopify JSON empty, trying HTML fallback')
+            deals = build_html_deals(source)
+        return deals
 
-    # HTML/catalog fallback
     if stype == "catalog_store":
         return build_html_deals(source)
 
-    log(f'{source["name"]}: unknown source_type "{stype}" — skipping')
-    SOURCE_STATUS[source["name"]] = f"SKIPPED (unknown type: {stype})"
+    if stype in {"amazon_api", "walmart_api", "target_api"}:
+        SOURCE_STATUS[source["name"]] = "SKIPPED (API lane not wired yet)"
+        log(f'{source["name"]}: SKIPPED (API lane not wired yet)')
+        return []
+
+    log(f'{source["name"]}: unknown source_type "{stype}" - skipping')
+    SOURCE_STATUS[source["name"]] = f'SKIPPED (unknown type: {stype})'
     return []
 
 
-# ── DEDUPE ────────────────────────────────────────────────────────────────────
 def dedupe_deals(deals):
     seen = {}
     for d in deals:
@@ -725,7 +799,6 @@ def dedupe_deals(deals):
     return list(seen.values())
 
 
-# ── MAIN BUILD ────────────────────────────────────────────────────────────────
 def build():
     deals = []
     for source in SOURCES:
@@ -742,16 +815,24 @@ if __name__ == "__main__":
     with open(BASE / "live_deals.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    # Source status summary
-    log("\n" + "="*50)
+    log("\n" + "=" * 50)
     log("SOURCE STATUS SUMMARY")
-    log("="*50)
+    log("=" * 50)
     for source_name, status in SOURCE_STATUS.items():
         log(f"  {source_name}: {status}")
+
+    source_summary = {}
+    for item in data:
+        src = item.get("source", "Unknown")
+        source_summary[src] = source_summary.get(src, 0) + 1
+
+    log("----- SOURCE SUMMARY -----")
+    for src, count in sorted(source_summary.items(), key=lambda x: x[0].lower()):
+        log(f"{src}: {count}")
 
     with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(DEBUG))
 
     preorder_count = sum(1 for item in data if item.get("is_preorder"))
     live_count = sum(1 for item in data if not item.get("is_preorder"))
-    log(f"\nWrote {len(data)} total deals → {live_count} live | {preorder_count} preorders")
+    log(f"\nWrote {len(data)} total deals -> {live_count} live | {preorder_count} preorders")
