@@ -56,7 +56,10 @@ SOURCES = [
 
     {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
 
-    {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
+    {"name": "Deep Discount", "source_type": "deepdiscount_store", "url": "https://www.deepdiscount.com"},
+    {"name": "Millions of Records", "source_type": "shopify_store", "url": "https://www.millionsofrecords.com"},
+    {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
+    {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
     {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
 
@@ -268,6 +271,9 @@ def clean_store_title(title):
         r"\s*-\s*Rollin Records\s*$",
         r"\s*-\s*MNRK Heavy\s*$",
         r"\s*-\s*Rock Metal Fan Nation\s*$",
+        r"\s*-\s*Millions of Records\s*$",
+        r"\s*-\s*IndieMerchstore\s*$",
+        r"\s*-\s*Deep Discount\s*$",
     ]
     for pattern in junk_patterns:
         text = re.sub(pattern, "", text, flags=re.I)
@@ -781,8 +787,103 @@ def build_html_deals(source):
     return deals
 
 
+def build_deepdiscount(source):
+    """
+    Deep Discount blocks their browse page with 403, but their search
+    endpoint is more permissive. Hit that instead.
+    """
+    deals = []
+    search_url = "https://www.deepdiscount.com/search?mod=AP&cr=vinyl"
+
+    try:
+        page = fetch(search_url)
+        # Deep Discount uses relative /product/ links
+        raw_links = re.findall(r'href="(/product/[^"]+)"', page)
+        links = []
+        for href in raw_links:
+            full = "https://www.deepdiscount.com" + href
+            if full not in links:
+                links.append(full)
+
+        log(f'Deep Discount: found {len(links)} product links via search')
+        kept = 0
+
+        for link in links[:60]:
+            try:
+                p = fetch(link)
+
+                if is_sold_out(p):
+                    continue
+
+                raw_title = extract_title(p)
+                if should_skip(raw_title, link):
+                    continue
+
+                price = extract_price(p)
+                if price <= 0:
+                    continue
+
+                artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
+                if looks_like_garbage(album):
+                    continue
+                if contains_bad_product_terms(f"{artist} {album}"):
+                    continue
+                if not artist_allowed(artist, album):
+                    continue
+
+                fmt = detect_format(title=raw_title, product_type="", page_text=p[:3000])
+                if fmt != "vinyl":
+                    continue
+
+                image = extract_image(p, link)
+                preorder_info = detect_preorder_signals(p, source_name=source["name"], source_url=link, collection_endpoint_used=False)
+                release_date = extract_release_date(p)
+                keywords, version_parts = build_version_parts(
+                    f"{raw_title} {link} {p[:3000]}",
+                    title_lower=raw_title.lower(),
+                    link_lower=link.lower()
+                )
+
+                deals.append({
+                    "artist": artist,
+                    "title": album,
+                    "raw_title": raw_title,
+                    "price": price,
+                    "source": source["name"],
+                    "source_type": source["source_type"],
+                    "link": link,
+                    "image": image,
+                    "keywords": keywords,
+                    "deal_quality": "good" if price < 40 else "normal",
+                    "demand": "steady",
+                    "format": fmt,
+                    "version": " ".join(version_parts) if version_parts else "standard",
+                    "availability_text": "",
+                    "page_text_snippet": clean(p)[:1000],
+                    "release_date": release_date,
+                    "is_preorder": preorder_info["is_preorder"],
+                    "preorder_terms": preorder_info["preorder_terms"],
+                })
+                kept += 1
+
+            except Exception as e:
+                log(f'Deep Discount: skipping {link} | {e}')
+
+        SOURCE_STATUS[source["name"]] = f"{kept} deals"
+        log(f'Deep Discount: kept {kept}')
+
+    except Exception as e:
+        SOURCE_STATUS[source["name"]] = f"FAILED: {e}"
+        log(f'Deep Discount: failed | {e}')
+
+    return deals
+
+
 def scrape_source(source):
     stype = source.get("source_type", "")
+
+    if stype == "deepdiscount_store":
+        return build_deepdiscount(source)
 
     if stype == "js_store":
         SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs API/headless lane)"
