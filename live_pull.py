@@ -3,7 +3,9 @@ import json
 import re
 import html
 import time
+import random
 import urllib.request
+import http.cookiejar
 from urllib.parse import urljoin
 from pathlib import Path
 
@@ -51,6 +53,7 @@ SOURCES = [
 
     {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com"},
     {"name": "Solid State Records", "source_type": "shopify_store", "url": "https://solidstaterecords.store"},
+    {"name": "Solid State Vinyl", "source_type": "shopify_store", "url": "https://solidstaterecords.store/collections/vinyl"},
 
     {"name": "UNFD", "source_type": "catalog_store", "url": "https://usa.24hundred.net/collections/unfd"},
 
@@ -387,19 +390,15 @@ def detect_preorder_signals(text, source_name="", source_url="", collection_endp
         or collection_endpoint_used
     )
 
-    # Real preorder proof
     if strong_hits and release_date:
         return {"is_preorder": True, "preorder_terms": strong_hits + (["release date"] if release_date else [])}
 
-    # Explicit preorder collection source can count, but only with at least one strong hint
     if source_hint_preorder and strong_hits:
         return {"is_preorder": True, "preorder_terms": strong_hits}
 
-    # Weak terms alone are junk
     if weak_hits and not strong_hits and not release_date:
         return {"is_preorder": False, "preorder_terms": []}
 
-    # Date alone is not enough anymore
     return {"is_preorder": False, "preorder_terms": []}
 
 
@@ -789,94 +788,207 @@ def build_html_deals(source):
 
 def build_deepdiscount(source):
     """
-    Deep Discount blocks their browse page with 403, but their search
-    endpoint is more permissive. Hit that instead.
+    Deep Discount needs a browser-like cookie session.
+    We warm the session, crawl real vinyl pages, and then hit product pages.
     """
     deals = []
-    search_url = "https://www.deepdiscount.com/search?mod=AP&cr=vinyl"
+    seen_links = set()
 
-    try:
-        page = fetch(search_url)
-        # Deep Discount uses relative /product/ links
-        raw_links = re.findall(r'href="(/product/[^"]+)"', page)
-        links = []
-        for href in raw_links:
-            full = "https://www.deepdiscount.com" + href
-            if full not in links:
-                links.append(full)
+    cj = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    opener.addheaders = [
+        ("User-Agent", random.choice(USER_AGENTS)),
+        ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"),
+        ("Accept-Language", "en-US,en;q=0.9"),
+        ("Cache-Control", "no-cache"),
+        ("Pragma", "no-cache"),
+        ("Upgrade-Insecure-Requests", "1"),
+        ("Referer", "https://www.deepdiscount.com/"),
+        ("DNT", "1"),
+        ("Connection", "keep-alive"),
+    ]
 
-        log(f'Deep Discount: found {len(links)} product links via search')
-        kept = 0
+    def dd_sleep():
+        time.sleep(random.uniform(1.1, 2.4))
 
-        for link in links[:60]:
+    def dd_fetch(url, retries=3):
+        nonlocal opener
+        for attempt in range(retries):
             try:
-                p = fetch(link)
-
-                if is_sold_out(p):
-                    continue
-
-                raw_title = extract_title(p)
-                if should_skip(raw_title, link):
-                    continue
-
-                price = extract_price(p)
-                if price <= 0:
-                    continue
-
-                artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
-                if looks_like_garbage(album):
-                    continue
-                if contains_bad_product_terms(f"{artist} {album}"):
-                    continue
-                if not artist_allowed(artist, album):
-                    continue
-
-                fmt = detect_format(title=raw_title, product_type="", page_text=p[:3000])
-                if fmt != "vinyl":
-                    continue
-
-                image = extract_image(p, link)
-                preorder_info = detect_preorder_signals(p, source_name=source["name"], source_url=link, collection_endpoint_used=False)
-                release_date = extract_release_date(p)
-                keywords, version_parts = build_version_parts(
-                    f"{raw_title} {link} {p[:3000]}",
-                    title_lower=raw_title.lower(),
-                    link_lower=link.lower()
-                )
-
-                deals.append({
-                    "artist": artist,
-                    "title": album,
-                    "raw_title": raw_title,
-                    "price": price,
-                    "source": source["name"],
-                    "source_type": source["source_type"],
-                    "link": link,
-                    "image": image,
-                    "keywords": keywords,
-                    "deal_quality": "good" if price < 40 else "normal",
-                    "demand": "steady",
-                    "format": fmt,
-                    "version": " ".join(version_parts) if version_parts else "standard",
-                    "availability_text": "",
-                    "page_text_snippet": clean(p)[:1000],
-                    "release_date": release_date,
-                    "is_preorder": preorder_info["is_preorder"],
-                    "preorder_terms": preorder_info["preorder_terms"],
-                })
-                kept += 1
-
+                with opener.open(url, timeout=25) as resp:
+                    code = getattr(resp, "status", 200)
+                    html_text = resp.read().decode("utf-8", "ignore")
+                    log(f"Deep Discount fetch: {url} -> {code}")
+                    return html_text
             except Exception as e:
-                log(f'Deep Discount: skipping {link} | {e}')
+                log(f"Deep Discount fetch error: {url} | {e}")
+                opener.addheaders = [
+                    ("User-Agent", random.choice(USER_AGENTS)),
+                    ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"),
+                    ("Accept-Language", "en-US,en;q=0.9"),
+                    ("Cache-Control", "no-cache"),
+                    ("Pragma", "no-cache"),
+                    ("Upgrade-Insecure-Requests", "1"),
+                    ("Referer", "https://www.deepdiscount.com/"),
+                    ("DNT", "1"),
+                    ("Connection", "keep-alive"),
+                ]
+                dd_sleep()
+        return ""
 
-        SOURCE_STATUS[source["name"]] = f"{kept} deals"
-        log(f'Deep Discount: kept {kept}')
+    def extract_dd_links(page_html):
+        links = set()
+        patterns = [
+            r'href="(/[^"]+?/p/\d+)"',
+            r'href="(/[^"]+?/product/\d+)"',
+            r'href="(/[^"]+?/item/\d+)"',
+            r'href="(/[^"]+?/ip/\d+)"',
+        ]
+        for pattern in patterns:
+            for href in re.findall(pattern, page_html, re.I):
+                full = urljoin("https://www.deepdiscount.com", href)
+                low = full.lower()
+                if any(bad in low for bad in [
+                    "/search",
+                    "/cart",
+                    "/account",
+                    "/help",
+                    "javascript:",
+                    "mailto:",
+                    "tel:",
+                    "#",
+                ]):
+                    continue
+                links.add(full)
+        return list(links)
 
-    except Exception as e:
-        SOURCE_STATUS[source["name"]] = f"FAILED: {e}"
-        log(f'Deep Discount: failed | {e}')
+    warmup_urls = [
+        "https://www.deepdiscount.com/",
+        "https://www.deepdiscount.com/help",
+        "https://www.deepdiscount.com/music/vinyl",
+        "https://www.deepdiscount.com/music/vinyl/new-releases",
+        "https://www.deepdiscount.com/featured-vinyl/b141496",
+    ]
 
-    return deals
+    seed_pages = [
+        "https://www.deepdiscount.com/music/vinyl",
+        "https://www.deepdiscount.com/music/vinyl/new-releases",
+        "https://www.deepdiscount.com/featured-vinyl/b141496",
+        "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
+    ]
+
+    for warm in warmup_urls:
+        _ = dd_fetch(warm)
+        dd_sleep()
+
+    kept = 0
+    preorder_kept = 0
+
+    for page_url in seed_pages:
+        page_html = dd_fetch(page_url)
+        if not page_html:
+            continue
+
+        links = extract_dd_links(page_html)
+        log(f'{source["name"]}: found {len(links)} candidate links from {page_url}')
+
+        for link in links:
+            if link in seen_links:
+                continue
+            seen_links.add(link)
+
+            dd_sleep()
+            product_html = dd_fetch(link)
+            if not product_html:
+                continue
+
+            if is_sold_out(product_html):
+                continue
+
+            raw_title = extract_title(product_html)
+            if not raw_title:
+                continue
+
+            if should_skip(raw_title, link):
+                continue
+
+            price = extract_price(product_html)
+            if price <= 0:
+                continue
+
+            fmt = detect_format(title=raw_title, product_type="", page_text=product_html[:3000])
+            if fmt != "vinyl":
+                continue
+
+            artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
+
+            if looks_like_garbage(album):
+                continue
+            if contains_bad_product_terms(f"{artist} {album}"):
+                continue
+            if not artist_allowed(artist, album):
+                continue
+
+            image = extract_image(product_html, link)
+            preorder_info = detect_preorder_signals(
+                product_html,
+                source_name=source["name"],
+                source_url=link,
+                collection_endpoint_used=False
+            )
+            release_date = extract_release_date(product_html)
+
+            keywords, version_parts = build_version_parts(
+                f"{raw_title} {link} {product_html[:3000]}",
+                title_lower=raw_title.lower(),
+                link_lower=link.lower()
+            )
+
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "raw_title": raw_title,
+                "price": price,
+                "source": source["name"],
+                "source_type": source["source_type"],
+                "link": link,
+                "image": image,
+                "keywords": keywords,
+                "deal_quality": "good" if price < 40 else "normal",
+                "demand": "steady",
+                "format": fmt,
+                "version": " ".join(version_parts) if version_parts else "standard",
+                "availability_text": "",
+                "page_text_snippet": clean(product_html)[:1000],
+                "release_date": release_date,
+                "is_preorder": preorder_info["is_preorder"],
+                "preorder_terms": preorder_info["preorder_terms"],
+            })
+            kept += 1
+            if preorder_info["is_preorder"]:
+                preorder_kept += 1
+
+    deduped = dedupe_source_items(deals)
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals (preorders: {preorder_kept})"
+    log(f'{source["name"]}: kept {len(deduped)} | preorders: {preorder_kept}')
+    return deduped
+
+
+def dedupe_source_items(items):
+    seen = {}
+    for item in items:
+        key = f'{(item.get("artist", "") or "").lower().strip()}::{(item.get("title", "") or "").lower().strip()}::{(item.get("source", "") or "").lower().strip()}'
+        current = seen.get(key)
+        if not current:
+            seen[key] = item
+            continue
+
+        old_price = normalize_price(current.get("price", 0))
+        new_price = normalize_price(item.get("price", 0))
+        if new_price > 0 and (old_price <= 0 or new_price < old_price):
+            seen[key] = item
+
+    return list(seen.values())
 
 
 def scrape_source(source):
