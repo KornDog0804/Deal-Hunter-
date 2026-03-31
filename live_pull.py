@@ -27,6 +27,16 @@ SOURCES = [
     {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com"},
     {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
     {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com"},
+    {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
+{"name": "Pure Noise Records", "source_type": "shopify_store", "url": "https://purenoise.merchnow.com/collections/music"},
+{"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com"},
+{"name": "Rhino Music", "source_type": "shopify_store", "url": "https://store.rhino.com/en/rhino-store/music/"},
+{"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com"},
+{"name": "Interscope Music", "source_type": "shopify_store", "url": "https://interscope.com/collections/music"},
+{"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
+{"name": "SharpTone Music", "source_type": "shopify_store", "url": "https://sharptonerecords.co/collections/music"},
+{"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rockmetalfannation.com"},
+{"name": "Rock Metal Fan Nation Music", "source_type": "shopify_store", "url": "https://rockmetalfannation.com/collections/music"}
 
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
