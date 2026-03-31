@@ -30,7 +30,6 @@ SOURCES = [
 
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
-    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"},
     {"name": "Walmart", "source_type": "catalog_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"}
 ]
 
@@ -81,7 +80,8 @@ BANNED_KEYWORDS = [
 BAD_PRODUCT_TERMS = [
     "shirt", "hoodie", "tank top", "tee", "poster", "slipmat", "cassette",
     "cd", "compact disc", "beanie", "hat", "jacket", "bundle", "book",
-    "kindle", "blu-ray", "dvd", "toy", "figure", "funko"
+    "kindle", "blu-ray", "dvd", "toy", "figure", "funko",
+    "digital", "digital album", "digital download", "mp3", "download"
 ]
 
 DEBUG = []
@@ -137,6 +137,24 @@ def normalize_price(value):
 def is_banned(text):
     t = (text or "").lower()
     return any(b in t for b in BANNED_KEYWORDS)
+
+
+def is_sold_out(text):
+    t = (text or "").lower()
+    sold_terms = [
+        "sold out",
+        "sorry sold out",
+        "out of stock",
+        "currently unavailable",
+        "unavailable",
+        "not available"
+    ]
+    return any(term in t for term in sold_terms)
+
+
+def looks_like_amazon_link(url):
+    u = (url or "").lower()
+    return "amazon.com" in u or "amzn.to" in u
 
 
 def artist_allowed(artist, title=""):
@@ -203,7 +221,8 @@ def clean_store_title(title):
         r"\s*-\s*Fearless Records\s*$",
         r"\s*-\s*Sound of Vinyl\s*$",
         r"\s*-\s*uDiscover Music\s*$",
-        r"\s*-\s*DeepDiscount\.com\s*$"
+        r"\s*-\s*DeepDiscount\.com\s*$",
+        r"\s*-\s*Merchbar\s*$"
     ]
 
     for pattern in junk_patterns:
@@ -271,6 +290,8 @@ def extract_links(html_text, base, source_type="shopify_store"):
         "/cart",
         "/account",
         "/pages/",
+        "/policies/",
+        "/blogs/",
         "#",
         "javascript:"
     ]
@@ -278,7 +299,14 @@ def extract_links(html_text, base, source_type="shopify_store"):
     if source_type in {"shopify_store", "merchnow_store"}:
         valid_markers = ["/products/"]
     elif source_type == "catalog_store":
-        valid_markers = ["/product/", "/products/", "/p/", "/item/", "/ip/"]
+        valid_markers = [
+            "/product/",
+            "/products/",
+            "/p/",
+            "/item/",
+            "/ip/",
+            "/music/vinyl"
+        ]
     else:
         valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/"]
 
@@ -296,16 +324,18 @@ def extract_links(html_text, base, source_type="shopify_store"):
             if full not in links:
                 links.append(full)
 
-    return links[:200]
+    return links[:300]
 
 
 def extract_title(html_text):
     patterns = [
         r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"',
         r'<meta[^>]+name="twitter:title"[^>]+content="([^"]+)"',
+        r'<meta[^>]+property="product:title"[^>]+content="([^"]+)"',
         r'<h1[^>]*>(.*?)</h1>',
         r'"product_title"\s*:\s*"([^"]+)"',
         r'"name"\s*:\s*"([^"]+)"',
+        r'"title"\s*:\s*"([^"]+)"',
         r"<title>(.*?)</title>"
     ]
 
@@ -326,6 +356,8 @@ def extract_price(html_text):
         r'"price"\s*:\s*"?(\\?\d+\.\d{2})"?',
         r'"amount"\s*:\s*"?(\\?\d+\.\d{2})"?',
         r'"currentPrice"\s*:\s*\{"price"\s*:\s*(\d+\.\d{2}|\d+)',
+        r'"salePrice"\s*:\s*"?(\\?\d+\.\d{2})"?',
+        r'"offerPrice"\s*:\s*"?(\\?\d+\.\d{2})"?',
         r'"price"\s*:\s*(\d+\.\d{2}|\d+)',
         r'\$(\d+\.\d{2})',
         r'\$(\d+)'
@@ -512,6 +544,9 @@ def build_shopify_deals(source):
                 str(valid_variant.get("option3", ""))
             ])
 
+            if is_sold_out(combined_blob):
+                continue
+
             preorder_info = detect_preorder_signals(combined_blob)
             release_date = extract_release_date(combined_blob)
 
@@ -568,6 +603,13 @@ def build_html_deals(source):
         for link in links:
             try:
                 page = fetch(link)
+
+                if looks_like_amazon_link(link):
+                    continue
+
+                if is_sold_out(page):
+                    continue
+
                 raw_title = extract_title(page)
 
                 if should_skip(raw_title, link):
