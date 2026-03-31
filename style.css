@@ -921,3 +921,24 @@ header p {
 .page-jump-input::placeholder {
   color: rgba(255,255,255,0.55);
 }
+.chip-button {
+  cursor: pointer;
+  border: none;
+}
+
+.top-page-nav {
+  margin: 10px 0 18px;
+}
+
+.top-page-nav-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.top-page-nav.open {
+  display: block;
+}
