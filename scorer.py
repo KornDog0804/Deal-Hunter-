@@ -5,7 +5,9 @@ BASE = Path(__file__).resolve().parent
 
 try:
     from deal_selector import apply_best_links
-except Exception:
+except Exception as e:
+    print(f"⚠️ deal_selector import failed: {e}")
+
     def apply_best_links(items):
         return items
 
@@ -13,23 +15,34 @@ except Exception:
 def load_json(filename: str, default=None):
     path = BASE / filename
     if not path.exists():
+        print(f"⚠️ Missing file: {filename} | using default")
         return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"⚠️ Failed loading {filename}: {e} | using default")
+        return default
 
 
-# pull in your real repo files
-artists = load_json("artists.json", {})
-filters = load_json("filters.json", {})
-taste_profile = load_json("taste_profile.json", {
+artists = load_json("artists.json", {}) or {}
+filters = load_json("filters.json", {}) or {}
+taste_profile = load_json(
+    "taste_profile.json",
+    {
+        "core_buckets": {},
+        "collector_keywords": [],
+        "resale_priority_keywords": []
+    }
+) or {
     "core_buckets": {},
     "collector_keywords": [],
     "resale_priority_keywords": []
-})
+}
 
 
-def normalize_text(value: str) -> str:
-    return (value or "").lower().strip()
+def normalize_text(value):
+    return str(value or "").lower().strip()
 
 
 def safe_price(value):
@@ -39,17 +52,31 @@ def safe_price(value):
         return 0.0
 
 
+def ensure_list(value):
+    if isinstance(value, list):
+        return value
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value]
+    try:
+        return list(value)
+    except Exception:
+        return []
+
+
 def contains_ignore_keywords(title, version_text, keywords):
+    keyword_list = ensure_list(keywords)
     haystack = " ".join([
-        title or "",
-        version_text or "",
-        *(keywords or [])
+        str(title or ""),
+        str(version_text or ""),
+        *[str(k) for k in keyword_list]
     ]).lower()
 
-    return any(k.lower() in haystack for k in filters.get("ignore_keywords", []))
+    return any(str(k).lower() in haystack for k in filters.get("ignore_keywords", []))
 
 
-def artist_tier_points(artist_name: str) -> tuple[str, int]:
+def artist_tier_points(artist_name):
     artist_name = normalize_text(artist_name)
 
     tier_1 = [normalize_text(n) for n in artists.get("tier_1_core", [])]
@@ -66,16 +93,18 @@ def artist_tier_points(artist_name: str) -> tuple[str, int]:
     return "other", 5
 
 
-def bucket_match(item) -> tuple[str, int]:
+def bucket_match(item):
     artist = normalize_text(item.get("artist", ""))
+    keyword_list = ensure_list(item.get("keywords", []))
+
     text = " ".join([
-        item.get("artist", ""),
-        item.get("title", ""),
-        item.get("raw_title", ""),
-        item.get("version", ""),
-        item.get("availability_text", ""),
-        item.get("page_text_snippet", ""),
-        " ".join(item.get("keywords", []) or [])
+        str(item.get("artist", "")),
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", "")),
+        str(item.get("availability_text", "")),
+        str(item.get("page_text_snippet", "")),
+        " ".join(str(k) for k in keyword_list)
     ]).lower()
 
     best_bucket = "none"
@@ -89,7 +118,7 @@ def bucket_match(item) -> tuple[str, int]:
                 score += 20
 
         for keyword in bucket_data.get("keywords", []):
-            if keyword.lower() in text:
+            if normalize_text(keyword) in text:
                 score += 3
 
         if score > best_score:
@@ -99,7 +128,7 @@ def bucket_match(item) -> tuple[str, int]:
     return best_bucket, best_score
 
 
-def positive_keyword_points(item) -> int:
+def positive_keyword_points(item):
     title = normalize_text(item.get("title", ""))
     raw_title = normalize_text(item.get("raw_title", ""))
     version = normalize_text(item.get("version", ""))
@@ -110,62 +139,66 @@ def positive_keyword_points(item) -> int:
     score = 0
 
     for kw in positives:
-        if kw.lower() in joined:
+        if normalize_text(kw) in joined:
             score += 6
 
     return min(score, 24)
 
 
-def downrank_points(item) -> int:
+def downrank_points(item):
     text = " ".join([
-        item.get("title", ""),
-        item.get("raw_title", ""),
-        item.get("version", ""),
-        item.get("availability_text", ""),
-        item.get("page_text_snippet", "")
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", "")),
+        str(item.get("availability_text", "")),
+        str(item.get("page_text_snippet", ""))
     ]).lower()
 
     score = 0
     for kw in filters.get("downrank_keywords", []):
-        if kw.lower() in text:
+        if normalize_text(kw) in text:
             score -= 8
 
     return score
 
 
-def collector_points(item) -> int:
+def collector_points(item):
+    keyword_list = ensure_list(item.get("keywords", []))
+
     text = " ".join([
-        item.get("title", ""),
-        item.get("raw_title", ""),
-        item.get("version", ""),
-        item.get("availability_text", ""),
-        item.get("page_text_snippet", ""),
-        " ".join(item.get("keywords", []) or [])
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", "")),
+        str(item.get("availability_text", "")),
+        str(item.get("page_text_snippet", "")),
+        " ".join(str(k) for k in keyword_list)
     ]).lower()
 
     score = 0
     for word in taste_profile.get("collector_keywords", []):
-        if word.lower() in text:
+        if normalize_text(word) in text:
             score += 4
 
     return min(score, 20)
 
 
-def resale_points(item) -> int:
+def resale_points(item):
+    preorder_terms = ensure_list(item.get("preorder_terms", []))
+
     text = " ".join([
-        item.get("title", ""),
-        item.get("raw_title", ""),
-        item.get("version", ""),
-        item.get("availability_text", ""),
-        item.get("page_text_snippet", ""),
-        item.get("release_date", ""),
-        " ".join(item.get("preorder_terms", []) or [])
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", "")),
+        str(item.get("availability_text", "")),
+        str(item.get("page_text_snippet", "")),
+        str(item.get("release_date", "")),
+        " ".join(str(k) for k in preorder_terms)
     ]).lower()
 
     score = 0
 
     for word in taste_profile.get("resale_priority_keywords", []):
-        if word.lower() in text:
+        if normalize_text(word) in text:
             score += 4
 
     if item.get("is_preorder"):
@@ -182,11 +215,11 @@ def resale_points(item) -> int:
     return min(score, 30)
 
 
-def format_points(item) -> int:
+def format_points(item):
     text = " ".join([
-        item.get("title", ""),
-        item.get("raw_title", ""),
-        item.get("version", "")
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", ""))
     ]).lower()
 
     score = 0
@@ -203,13 +236,13 @@ def format_points(item) -> int:
     if "preorder" in text or "pre-order" in text:
         score += 8
 
-    if item.get("format", "").lower() == "vinyl":
+    if normalize_text(item.get("format", "")) == "vinyl":
         score += 5
 
     return score
 
 
-def source_points(item) -> int:
+def source_points(item):
     source_type = normalize_text(item.get("source_type", ""))
     if source_type == "shopify_store":
         return 5
@@ -221,119 +254,145 @@ def source_points(item) -> int:
 
 
 def score_item(item):
-    title = item.get("title", "") or ""
-    version = item.get("version", "") or ""
-    keywords = item.get("keywords", []) or []
+    try:
+        title = item.get("title", "") or ""
+        version = item.get("version", "") or ""
+        keywords = ensure_list(item.get("keywords", []))
 
-    if contains_ignore_keywords(title, version, keywords):
+        if contains_ignore_keywords(title, version, keywords):
+            return None
+
+        tier_name, tier_score = artist_tier_points(item.get("artist", ""))
+        bucket_name, bucket_score = bucket_match(item)
+
+        pos_points = positive_keyword_points(item)
+        coll_points = collector_points(item)
+        res_points = resale_points(item)
+        fmt_points = format_points(item)
+        src_points = source_points(item)
+        dr_points = downrank_points(item)
+
+        total = (
+            tier_score
+            + bucket_score
+            + pos_points
+            + coll_points
+            + res_points
+            + fmt_points
+            + src_points
+            + dr_points
+        )
+
+        if total < 10:
+            return None
+
+        decision = "LOW KEY"
+        if total >= 85:
+            decision = "POST / BUY / MOVE FAST"
+        elif total >= 60:
+            decision = "POST IF CONTENT-WORTHY"
+        elif total >= 35:
+            decision = "PERSONAL CALL"
+
+        merged = dict(item)
+        merged["total"] = total
+        merged["score"] = total
+        merged["decision"] = decision
+        merged["breakdown"] = {
+            "artist_tier": tier_name,
+            "artist_points": tier_score,
+            "bucket_name": bucket_name,
+            "bucket_points": bucket_score,
+            "positive_points": pos_points,
+            "collector_points": coll_points,
+            "resale_points": res_points,
+            "format_points": fmt_points,
+            "source_points": src_points,
+            "downrank_points": dr_points
+        }
+
+        return merged
+    except Exception as e:
+        print(f"💥 score_item crash on item: {item.get('artist', 'Unknown')} - {item.get('title', 'Unknown')} | {e}")
         return None
-
-    tier_name, tier_score = artist_tier_points(item.get("artist", ""))
-    bucket_name, bucket_score = bucket_match(item)
-
-    total = (
-        tier_score
-        + bucket_score
-        + positive_keyword_points(item)
-        + collector_points(item)
-        + resale_points(item)
-        + format_points(item)
-        + source_points(item)
-        + downrank_points(item)
-    )
-
-    if total < 10:
-        return None
-
-    decision = "LOW KEY"
-    if total >= 85:
-        decision = "POST / BUY / MOVE FAST"
-    elif total >= 60:
-        decision = "POST IF CONTENT-WORTHY"
-    elif total >= 35:
-        decision = "PERSONAL CALL"
-
-    merged = dict(item)
-    merged["total"] = total
-    merged["score"] = total
-    merged["decision"] = decision
-    merged["breakdown"] = {
-        "artist_tier": tier_name,
-        "artist_points": tier_score,
-        "bucket_name": bucket_name,
-        "bucket_points": bucket_score,
-        "positive_points": positive_keyword_points(item),
-        "collector_points": collector_points(item),
-        "resale_points": resale_points(item),
-        "format_points": format_points(item),
-        "source_points": source_points(item),
-        "downrank_points": downrank_points(item)
-    }
-
-    return merged
 
 
 def main():
-    live_path = BASE / "live_deals.json"
+    try:
+        live_path = BASE / "live_deals.json"
 
-    if not live_path.exists():
-        print("❌ live_deals.json not found")
-        raise SystemExit(1)
+        if not live_path.exists():
+            print("❌ live_deals.json not found")
+            raise SystemExit(1)
 
-    raw_items = load_json("live_deals.json", [])
+        raw_items = load_json("live_deals.json", [])
 
-    # your live_pull writes a LIST, not {"items": [...]}
-    if not isinstance(raw_items, list):
-        print("❌ live_deals.json is not a list")
-        raise SystemExit(1)
+        if not isinstance(raw_items, list):
+            print(f"❌ live_deals.json is not a list | type={type(raw_items)}")
+            raise SystemExit(1)
 
-    print(f"Loaded {len(raw_items)} raw items from live_deals.json")
+        print(f"Loaded {len(raw_items)} raw items from live_deals.json")
 
-    # apply your existing link/grouping logic
-    items = apply_best_links(raw_items)
+        try:
+            items = apply_best_links(raw_items)
+            print(f"After apply_best_links: {len(items)} items")
+        except Exception as e:
+            print(f"⚠️ apply_best_links failed: {e} | falling back to raw_items")
+            items = raw_items
 
-    results = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
+        results = []
+        skipped_non_dict = 0
+        skipped_empty = 0
 
-        scored = score_item(item)
-        if not scored:
-            continue
+        for item in items:
+            if not isinstance(item, dict):
+                skipped_non_dict += 1
+                continue
 
-        title = normalize_text(scored.get("title", ""))
-        artist = normalize_text(scored.get("artist", ""))
+            scored = score_item(item)
+            if not scored:
+                skipped_empty += 1
+                continue
 
-        if not title or title in {"unknown title", "vinyl", "product"}:
-            continue
+            title = normalize_text(scored.get("title", ""))
+            artist = normalize_text(scored.get("artist", ""))
 
-        if artist in {"", "unknown"} and len(title) < 4:
-            continue
+            if not title or title in {"unknown title", "vinyl", "product"}:
+                continue
 
-        results.append(scored)
+            if artist in {"", "unknown"} and len(title) < 4:
+                continue
 
-    results.sort(
-        key=lambda r: (
-            -(r.get("total", 0) or 0),
-            -int(bool(r.get("is_preorder"))),
-            safe_price(r.get("best_price", r.get("price", 0))),
-            normalize_text(r.get("artist", "")),
-            normalize_text(r.get("title", ""))
+            results.append(scored)
+
+        results.sort(
+            key=lambda r: (
+                -(r.get("total", 0) or 0),
+                -int(bool(r.get("is_preorder"))),
+                safe_price(r.get("best_price", r.get("price", 0))),
+                normalize_text(r.get("artist", "")),
+                normalize_text(r.get("title", ""))
+            )
         )
-    )
 
-    with open(BASE / "scored_deals.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+        with open(BASE / "scored_deals.json", "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
 
-    print(f"🔥 Scored Deals: {len(results)}")
+        print(f"🔥 Scored Deals: {len(results)}")
+        print(f"Skipped non-dict: {skipped_non_dict}")
+        print(f"Skipped low/ignored/bad: {skipped_empty}")
 
-    for r in results[:20]:
-        print(
-            f"{r.get('artist', 'Unknown')} - {r.get('title', 'Unknown')}: "
-            f"{r.get('total', 0)} | {r.get('decision', 'UNKNOWN')} | "
-            f"{r.get('best_source', r.get('source', 'Unknown'))} @ "
-            f"{r.get('best_price', r.get('price', 0))}"
-        )
+        for r in results[:20]:
+            print(
+                f"{r.get('artist', 'Unknown')} - {r.get('title', 'Unknown')}: "
+                f"{r.get('total', 0)} | {r.get('decision', 'UNKNOWN')} | "
+                f"{r.get('best_source', r.get('source', 'Unknown'))} @ "
+                f"{r.get('best_price', r.get('price', 0))}"
+            )
+
+    except Exception as e:
+        print(f"💀 MAIN CRASH: {e}")
+        raise
 
 
 if __name__ == "__main__":
