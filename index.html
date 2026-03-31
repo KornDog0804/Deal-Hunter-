@@ -67,7 +67,7 @@
       <div class="chip" id="pageStatus">Page 1</div>
     </div>
 
-    <section class="section">
+    <section class="section" id="topPicksSection">
       <div class="section-head">
         <h2 class="section-title">Top Picks Today</h2>
         <div class="section-note">The best stuff rises to the top.</div>
@@ -501,9 +501,28 @@ Korndog preorder radar is on the hunt 💿🔥`;
       return card;
     }
 
+    function toggleHeroSections() {
+      const topPicksSection = document.getElementById("topPicksSection");
+      const preordersSection = document.getElementById("preordersSection");
+
+      const showHeroSections = currentPage === 1 || activeQuickFilter === "preorders";
+
+      if (topPicksSection) {
+        topPicksSection.style.display = showHeroSections ? "" : "none";
+      }
+
+      if (preordersSection) {
+        preordersSection.style.display = showHeroSections ? "" : "none";
+      }
+    }
+
     function renderFeatured(deals) {
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
+
+      if (currentPage !== 1) {
+        return [];
+      }
 
       const picks = deals
         .filter(d => (d.total ?? 0) >= 8)
@@ -515,7 +534,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
             No top picks yet. The good stuff is probably loading in from the back room.
           </div>
         `;
-        return picks;
+        return [];
       }
 
       picks.forEach(deal => {
@@ -531,6 +550,10 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       preorderList.innerHTML = "";
 
+      if (currentPage !== 1 && activeQuickFilter !== "preorders") {
+        return [];
+      }
+
       if (!preorders.length) {
         preorderUpdatedAt.textContent = "Watching for grails before the sharks smell blood.";
         preorderList.innerHTML = `
@@ -538,14 +561,18 @@ Korndog preorder radar is on the hunt 💿🔥`;
             No preorder alerts right now. The radar is quiet... for now.
           </div>
         `;
-        return;
+        return [];
       }
 
       preorderUpdatedAt.textContent = `Loaded ${preorders.length} preorder alerts from preorders.json`;
 
-      preorders.slice(0, 6).forEach(deal => {
+      const picks = preorders.slice(0, 6);
+
+      picks.forEach(deal => {
         preorderList.appendChild(createPreorderCard(deal));
       });
+
+      return picks;
     }
 
     function renderDeals(deals, featuredDeals = []) {
@@ -555,19 +582,23 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       dealList.innerHTML = "";
 
-      const featuredKeys = new Set(
-        featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-      );
+      let workingDeals = deals;
 
-      const remainingDeals = deals.filter(d => {
-        const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-        return !featuredKeys.has(key);
-      });
+      if (currentPage === 1 && featuredDeals.length) {
+        const featuredKeys = new Set(
+          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+        );
 
-      if (!remainingDeals.length) {
+        workingDeals = deals.filter(d => {
+          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+          return !featuredKeys.has(key);
+        });
+      }
+
+      if (!workingDeals.length) {
         dealList.innerHTML = `
           <div class="empty">
-            No extra deals beyond the featured picks right now.
+            No deals found for this page.
           </div>
         `;
         pager.style.display = "none";
@@ -575,13 +606,13 @@ Korndog preorder radar is on the hunt 💿🔥`;
         return;
       }
 
-      const totalPages = Math.max(1, Math.ceil(remainingDeals.length / DEALS_PER_PAGE));
+      const totalPages = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
 
       if (currentPage > totalPages) currentPage = 1;
 
       const start = (currentPage - 1) * DEALS_PER_PAGE;
       const end = start + DEALS_PER_PAGE;
-      const pageDeals = remainingDeals.slice(start, end);
+      const pageDeals = workingDeals.slice(start, end);
 
       pageDeals.forEach(deal => {
         dealList.appendChild(createDealCard(deal));
@@ -679,9 +710,11 @@ Korndog preorder radar is on the hunt 💿🔥`;
       if (resetPage) currentPage = 1;
 
       const filteredPreorders = getFilteredPreorders();
-      renderPreorders(filteredPreorders);
+
+      toggleHeroSections();
 
       if (activeQuickFilter === "preorders") {
+        renderPreorders(filteredPreorders);
         document.getElementById("dealCount").textContent = `Preorders: ${filteredPreorders.length}`;
         document.getElementById("featuredList").innerHTML = `
           <div class="empty">
@@ -697,6 +730,8 @@ Korndog preorder radar is on the hunt 💿🔥`;
         document.getElementById("pageStatus").textContent = "Preorders";
         return;
       }
+
+      renderPreorders(filteredPreorders);
 
       const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
@@ -727,16 +762,21 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       document.getElementById("nextPageBtn").addEventListener("click", () => {
         const totalFiltered = getFilteredDeals();
-        const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
-        const featuredKeys = new Set(
-          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-        );
-        const remainingDeals = totalFiltered.filter(d => {
-          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-          return !featuredKeys.has(key);
-        });
 
-        const total = Math.max(1, Math.ceil(remainingDeals.length / DEALS_PER_PAGE));
+        let workingDeals = totalFiltered;
+        if (currentPage === 1) {
+          const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
+          const featuredKeys = new Set(
+            featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+          );
+
+          workingDeals = totalFiltered.filter(d => {
+            const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+            return !featuredKeys.has(key);
+          });
+        }
+
+        const total = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
 
         if (currentPage < total) {
           currentPage += 1;
