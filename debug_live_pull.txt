@@ -9,7 +9,6 @@ Rollin Records: kept 233
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
 ==================================================
-  -> retry 1/2 for https://rollinrecs.com/collections/pre-orders/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://rollinrecs.com/collections/pre-orders/products.json?limit=250 -> 18 products
 Rollin Preorders: 18 products via Shopify JSON
 Rollin Preorders: kept 17
@@ -59,7 +58,6 @@ Rise All: kept 60
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
-  -> retry 1/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
 Brooklyn Vegan: kept 190
@@ -85,7 +83,6 @@ Scraping: Newbury Preorders (shopify_store)
 Newbury Preorders: 5 products via Shopify JSON
 Newbury Preorders: kept 0
 Newbury Preorders: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://www.newburycomics.com/collections/pre-orders | HTTP Error 503: Service Unavailable
 Newbury Preorders: found 0 HTML links
 Newbury Preorders: kept 0
 
@@ -99,8 +96,6 @@ Craft Recordings: kept 89
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 131
@@ -115,7 +110,6 @@ Equal Vision: kept 103
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  -> retry 1/2 for https://store.rhino.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
 Rhino: kept 136
@@ -132,14 +126,14 @@ Scraping: SharpTone Records (shopify_store)
 ==================================================
   ✓ https://sharptonerecords.co/products.json?limit=250 -> 250 products
 SharpTone Records: 250 products via Shopify JSON
-SharpTone Records: kept 98
+SharpTone Records: kept 97
 
 ==================================================
 Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 201
+Rock Metal Fan Nation: kept 200
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -151,7 +145,6 @@ RMFN All: kept 206
 ==================================================
 Scraping: Sumerian Records (shopify_store)
 ==================================================
-  -> retry 1/2 for https://sumerianrecords.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
 Sumerian Records: kept 73
@@ -230,7 +223,6 @@ IndieMerchstore: kept 63
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
-  -> retry 1/2 for https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 -> 250 products
 IndieMerchstore Preorders: 250 products via Shopify JSON
 IndieMerchstore Preorders: kept 113
@@ -265,8 +257,8 @@ SOURCE STATUS SUMMARY
   Equal Vision: 103 deals
   Rhino: 136 deals
   Interscope Records: 163 deals
-  SharpTone Records: 98 deals
-  Rock Metal Fan Nation: 201 deals
+  SharpTone Records: 97 deals
+  Rock Metal Fan Nation: 200 deals
   RMFN All: 206 deals
   Sumerian Records: 73 deals
   Solid State Records: 50 deals
@@ -299,10 +291,10 @@ Rhino: 136
 Rise All: 60
 Rise Records: 75
 RMFN All: 205
-Rock Metal Fan Nation: 201
+Rock Metal Fan Nation: 200
 Rollin Preorders: 17
 Rollin Records: 233
-SharpTone Records: 97
+SharpTone Records: 96
 Solid State Records: 46
 Solid State Vinyl: 42
 Sound of Vinyl: 209
