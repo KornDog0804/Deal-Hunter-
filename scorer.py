@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import re
 
 BASE = Path(__file__).resolve().parent
 
@@ -41,6 +42,39 @@ taste_profile = load_json(
 }
 
 
+HARD_BLOCK_TERMS = [
+    "digital album",
+    "digital download",
+    "mp3",
+    "streaming",
+    "sold out",
+    "sorry sold out",
+    "out of stock",
+    "unavailable",
+    "cassette",
+    "cd",
+    "compact disc",
+    "shirt",
+    "hoodie",
+    "tee",
+    "poster",
+    "slipmat",
+    "book",
+    "blu-ray",
+    "dvd",
+    "funko",
+    "toy",
+    "figure"
+]
+
+SOFT_DOWNRANK_TERMS = [
+    "backorder",
+    "preorder only",
+    "mockups are not actual representations",
+    "ship dates may change"
+]
+
+
 def normalize_text(value):
     return str(value or "").lower().strip()
 
@@ -63,6 +97,40 @@ def ensure_list(value):
         return list(value)
     except Exception:
         return []
+
+
+def joined_text(item):
+    return " ".join([
+        str(item.get("artist", "")),
+        str(item.get("title", "")),
+        str(item.get("raw_title", "")),
+        str(item.get("version", "")),
+        str(item.get("availability_text", "")),
+        str(item.get("page_text_snippet", "")),
+        str(item.get("release_date", "")),
+        " ".join(str(x) for x in ensure_list(item.get("keywords", []))),
+        " ".join(str(x) for x in ensure_list(item.get("preorder_terms", [])))
+    ]).lower()
+
+
+def hard_block(item):
+    text = joined_text(item)
+
+    for term in HARD_BLOCK_TERMS:
+        if term in text:
+            return True
+
+    # force vinyl-only
+    fmt = normalize_text(item.get("format", ""))
+    if fmt and fmt != "vinyl":
+        return True
+
+    # weird zero-price junk
+    price = safe_price(item.get("best_price", item.get("price", 0)))
+    if price <= 0:
+        return True
+
+    return False
 
 
 def contains_ignore_keywords(title, version_text, keywords):
@@ -98,17 +166,7 @@ def artist_tier_points(artist_name):
 
 def bucket_match(item):
     artist = normalize_text(item.get("artist", ""))
-    keyword_list = ensure_list(item.get("keywords", []))
-
-    text = " ".join([
-        str(item.get("artist", "")),
-        str(item.get("title", "")),
-        str(item.get("raw_title", "")),
-        str(item.get("version", "")),
-        str(item.get("availability_text", "")),
-        str(item.get("page_text_snippet", "")),
-        " ".join(str(k) for k in keyword_list)
-    ]).lower()
+    text = joined_text(item)
 
     best_bucket = "none"
     best_score = 0
@@ -134,52 +192,36 @@ def bucket_match(item):
 
 
 def positive_keyword_points(item):
-    title = normalize_text(item.get("title", ""))
-    raw_title = normalize_text(item.get("raw_title", ""))
-    version = normalize_text(item.get("version", ""))
-    page = normalize_text(item.get("page_text_snippet", ""))
-    joined = " ".join([title, raw_title, version, page])
-
+    text = joined_text(item)
     positives = filters.get("positive_keywords", [])
     score = 0
 
     for kw in positives:
-        if normalize_text(kw) in joined:
+        if normalize_text(kw) in text:
             score += 6
 
     return min(score, 24)
 
 
 def downrank_points(item):
-    text = " ".join([
-        str(item.get("title", "")),
-        str(item.get("raw_title", "")),
-        str(item.get("version", "")),
-        str(item.get("availability_text", "")),
-        str(item.get("page_text_snippet", ""))
-    ]).lower()
-
+    text = joined_text(item)
     score = 0
+
     for kw in filters.get("downrank_keywords", []):
         if normalize_text(kw) in text:
             score -= 8
+
+    for kw in SOFT_DOWNRANK_TERMS:
+        if kw in text:
+            score -= 6
 
     return score
 
 
 def collector_points(item):
-    keyword_list = ensure_list(item.get("keywords", []))
-
-    text = " ".join([
-        str(item.get("title", "")),
-        str(item.get("raw_title", "")),
-        str(item.get("version", "")),
-        str(item.get("availability_text", "")),
-        str(item.get("page_text_snippet", "")),
-        " ".join(str(k) for k in keyword_list)
-    ]).lower()
-
+    text = joined_text(item)
     score = 0
+
     for word in taste_profile.get("collector_keywords", []):
         if normalize_text(word) in text:
             score += 4
@@ -188,18 +230,7 @@ def collector_points(item):
 
 
 def resale_points(item):
-    preorder_terms = ensure_list(item.get("preorder_terms", []))
-
-    text = " ".join([
-        str(item.get("title", "")),
-        str(item.get("raw_title", "")),
-        str(item.get("version", "")),
-        str(item.get("availability_text", "")),
-        str(item.get("page_text_snippet", "")),
-        str(item.get("release_date", "")),
-        " ".join(str(k) for k in preorder_terms)
-    ]).lower()
-
+    text = joined_text(item)
     score = 0
 
     for word in taste_profile.get("resale_priority_keywords", []):
@@ -221,12 +252,7 @@ def resale_points(item):
 
 
 def format_points(item):
-    text = " ".join([
-        str(item.get("title", "")),
-        str(item.get("raw_title", "")),
-        str(item.get("version", ""))
-    ]).lower()
-
+    text = joined_text(item)
     score = 0
 
     if "vinyl" in text:
@@ -254,11 +280,36 @@ def source_points(item):
     return 0
 
 
+def clean_item(item):
+    item = dict(item)
+
+    artist = str(item.get("artist", "") or "").strip()
+    title = str(item.get("title", "") or "").strip()
+    raw_title = str(item.get("raw_title", "") or "").strip()
+
+    # if parser created junk artist/title pairs, fall back harder
+    if not title or title.lower() in {"vinyl", "product"}:
+        item["title"] = raw_title or "Unknown Title"
+
+    if not artist or len(artist) > 120:
+        item["artist"] = "Unknown Artist"
+
+    item["price"] = safe_price(item.get("price", 0))
+    item["best_price"] = safe_price(item.get("best_price", item["price"]))
+
+    return item
+
+
 def score_item(item):
     try:
+        item = clean_item(item)
+
         title = item.get("title", "") or ""
         version = item.get("version", "") or ""
         keywords = ensure_list(item.get("keywords", []))
+
+        if hard_block(item):
+            return None
 
         if contains_ignore_keywords(title, version, keywords):
             return None
@@ -284,7 +335,11 @@ def score_item(item):
             + dr_points
         )
 
-        if total < 10:
+        # force preorders upward, but not if blocked
+        if item.get("is_preorder"):
+            total += 15
+
+        if total < 15:
             return None
 
         if total >= 90:
@@ -349,85 +404,63 @@ def dedupe_best_variants(results):
 
 
 def main():
+    live_path = BASE / "live_deals.json"
+
+    if not live_path.exists():
+        print("❌ live_deals.json not found")
+        raise SystemExit(1)
+
+    raw_items = load_json("live_deals.json", [])
+
+    if not isinstance(raw_items, list):
+        print(f"❌ live_deals.json is not a list | type={type(raw_items)}")
+        raise SystemExit(1)
+
+    print(f"Loaded {len(raw_items)} raw items from live_deals.json")
+
     try:
-        live_path = BASE / "live_deals.json"
-
-        if not live_path.exists():
-            print("❌ live_deals.json not found")
-            raise SystemExit(1)
-
-        raw_items = load_json("live_deals.json", [])
-
-        if not isinstance(raw_items, list):
-            print(f"❌ live_deals.json is not a list | type={type(raw_items)}")
-            raise SystemExit(1)
-
-        print(f"Loaded {len(raw_items)} raw items from live_deals.json")
-
-        try:
-            items = apply_best_links(raw_items)
-            print(f"After apply_best_links: {len(items)} items")
-        except Exception as e:
-            print(f"⚠️ apply_best_links failed: {e} | falling back to raw_items")
-            items = raw_items
-
-        results = []
-        skipped_non_dict = 0
-        skipped_empty = 0
-
-        for item in items:
-            if not isinstance(item, dict):
-                skipped_non_dict += 1
-                continue
-
-            scored = score_item(item)
-            if not scored:
-                skipped_empty += 1
-                continue
-
-            title = normalize_text(scored.get("title", ""))
-            artist = normalize_text(scored.get("artist", ""))
-
-            if not title or title in {"unknown title", "vinyl", "product"}:
-                continue
-
-            if artist in {"", "unknown"} and len(title) < 4:
-                continue
-
-            results.append(scored)
-
-        print(f"Before dedupe: {len(results)}")
-        results = dedupe_best_variants(results)
-        print(f"After dedupe: {len(results)}")
-
-        results.sort(
-            key=lambda r: (
-                -(r.get("total", 0) or 0),
-                -int(bool(r.get("is_preorder"))),
-                safe_price(r.get("best_price", r.get("price", 0))),
-                normalize_text(r.get("artist", "")),
-                normalize_text(r.get("title", ""))
-            )
-        )
-
-        with open(BASE / "scored_deals.json", "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-
-        print(f"🔥 Scored Deals: {len(results)}")
-        print(f"Skipped non-dict: {skipped_non_dict}")
-        print(f"Skipped low/ignored/bad: {skipped_empty}")
-
-        for r in results[:20]:
-            print(
-                f"{r.get('artist', 'Unknown')} - {r.get('title', 'Unknown')}: "
-                f"{r.get('total', 0)} | {r.get('decision', 'UNKNOWN')} | "
-                f"{r.get('best_source', r.get('source', 'Unknown'))} @ "
-                f"{r.get('best_price', r.get('price', 0))}"
-            )
-
+        items = apply_best_links(raw_items)
+        print(f"After apply_best_links: {len(items)} items")
     except Exception as e:
-        print(f"💀 MAIN CRASH: {e}")
-        raise
+        print(f"⚠️ apply_best_links failed: {e} | falling back to raw_items")
+        items = raw_items
+
+    results = []
+    blocked = 0
+
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+
+        if hard_block(item):
+            blocked += 1
+            continue
+
+        scored = score_item(item)
+        if not scored:
+            continue
+
+        results.append(scored)
+
+    print(f"Before dedupe: {len(results)}")
+    results = dedupe_best_variants(results)
+    print(f"After dedupe: {len(results)}")
+    print(f"Hard blocked: {blocked}")
+
+    results.sort(
+        key=lambda r: (
+            -int(bool(r.get("is_preorder"))),
+            -(r.get("total", 0) or 0),
+            safe_price(r.get("best_price", r.get("price", 0))),
+            normalize_text(r.get("artist", "")),
+            normalize_text(r.get("title", ""))
+        )
+    )
+
+    with open(BASE / "scored_deals.json", "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+    print(f"🔥 Scored Deals: {len(results)}")
 
 
 if __name__ == "__main__":
