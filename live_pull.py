@@ -27,20 +27,22 @@ SOURCES = [
     {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com"},
     {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
     {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com"},
+
     {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
-{"name": "Pure Noise Records", "source_type": "shopify_store", "url": "https://purenoise.merchnow.com/collections/music"},
-{"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com"},
-{"name": "Rhino Music", "source_type": "shopify_store", "url": "https://store.rhino.com/en/rhino-store/music/"},
-{"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com"},
-{"name": "Interscope Music", "source_type": "shopify_store", "url": "https://interscope.com/collections/music"},
-{"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
-{"name": "SharpTone Music", "source_type": "shopify_store", "url": "https://sharptonerecords.co/collections/music"},
-{"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rockmetalfannation.com"},
-{"name": "Rock Metal Fan Nation Music", "source_type": "shopify_store", "url": "https://rockmetalfannation.com/collections/music"}
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/collections/music"},
+    {"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com"},
+    {"name": "Rhino Music", "source_type": "shopify_store", "url": "https://store.rhino.com/en/rhino-store/music/"},
+    {"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com"},
+    {"name": "Interscope Music", "source_type": "shopify_store", "url": "https://interscope.com/collections/music"},
+    {"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
+    {"name": "SharpTone Music", "source_type": "shopify_store", "url": "https://sharptonerecords.co/collections/music"},
+    {"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rockmetalfannation.com"},
+    {"name": "Rock Metal Fan Nation Music", "source_type": "shopify_store", "url": "https://rockmetalfannation.com/collections/music"},
 
     {"name": "Deep Discount", "source_type": "catalog_store", "url": "https://www.deepdiscount.com/music/vinyl"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
-    {"name": "Walmart", "source_type": "catalog_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"}
+    {"name": "Walmart", "source_type": "catalog_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"},
+    {"name": "Target", "source_type": "catalog_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"}
 ]
 
 POSITIVE_KEYWORDS = [
@@ -232,7 +234,11 @@ def clean_store_title(title):
         r"\s*-\s*Sound of Vinyl\s*$",
         r"\s*-\s*uDiscover Music\s*$",
         r"\s*-\s*DeepDiscount\.com\s*$",
-        r"\s*-\s*Merchbar\s*$"
+        r"\s*-\s*Merchbar\s*$",
+        r"\s*-\s*Target\s*$",
+        r"\s*-\s*Hot Topic\s*$",
+        r"\s*-\s*Rhino\s*$",
+        r"\s*-\s*Interscope Records\s*$"
     ]
 
     for pattern in junk_patterns:
@@ -315,7 +321,10 @@ def extract_links(html_text, base, source_type="shopify_store"):
             "/p/",
             "/item/",
             "/ip/",
-            "/music/vinyl"
+            "/dp/",
+            "/music/vinyl",
+            "/vinyl",
+            "/album"
         ]
     else:
         valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/"]
@@ -726,4 +735,4 @@ if __name__ == "__main__":
         f.write("\n".join(DEBUG))
 
     preorder_count = sum(1 for item in data if item.get("is_preorder"))
-    log(f"Wrote {len(data)} deals to live_deals.json | preorder flagged: {preorder_count}")
+    log(f"Wrote {len(data)} deals to live_deals.json | preorder flagged: {preorder_count}") fix and update please
