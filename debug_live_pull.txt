@@ -46,7 +46,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 95 | preorders: 3
+Rise Records: kept 94 | preorders: 3
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -60,14 +60,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 191 | preorders: 152
+Brooklyn Vegan: kept 190 | preorders: 154
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 144 | preorders: 106
+Revolver: kept 146 | preorders: 109
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -170,11 +170,48 @@ Pure Noise Records: 250 products via Shopify JSON
 Pure Noise Records: kept 98 | preorders: 2
 
 ==================================================
-Scraping: Deep Discount (catalog_store)
+Scraping: Deep Discount (deepdiscount_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/search?mod=AP&cr=vinyl | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/search?mod=AP&cr=vinyl | HTTP Error 403: Forbidden
+Deep Discount: failed | HTTP Error 403: Forbidden
+
+==================================================
+Scraping: Millions of Records (shopify_store)
+==================================================
+  -> retry 1/2 for https://www.millionsofrecords.com/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.millionsofrecords.com/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.millionsofrecords.com/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.millionsofrecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.millionsofrecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.millionsofrecords.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.millionsofrecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.millionsofrecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.millionsofrecords.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.millionsofrecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.millionsofrecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.millionsofrecords.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.millionsofrecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.millionsofrecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.millionsofrecords.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
+Millions of Records: 0 products via Shopify JSON
+Millions of Records: Shopify JSON empty, trying HTML fallback
+Millions of Records: found 0 HTML links
+Millions of Records: kept 0 | preorders: 0
+
+==================================================
+Scraping: IndieMerchstore (shopify_store)
+==================================================
+  ✓ https://www.indiemerchstore.com/products.json?limit=250 -> 250 products
+IndieMerchstore: 250 products via Shopify JSON
+IndieMerchstore: kept 58 | preorders: 6
+
+==================================================
+Scraping: IndieMerchstore Preorders (shopify_store)
+==================================================
+  ✓ https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 -> 250 products
+IndieMerchstore Preorders: 250 products via Shopify JSON
+IndieMerchstore Preorders: kept 115 | preorders: 115
 
 ==================================================
 Scraping: Merchbar (catalog_store)
@@ -208,10 +245,10 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 115 deals (preorders: 6)
   Fearless Records: 89 deals (preorders: 0)
   Fearless Vinyl: 178 deals (preorders: 12)
-  Rise Records: 95 deals (preorders: 3)
+  Rise Records: 94 deals (preorders: 3)
   Rise All: 76 deals (preorders: 21)
-  Brooklyn Vegan: 191 deals (preorders: 152)
-  Revolver: 144 deals (preorders: 106)
+  Brooklyn Vegan: 190 deals (preorders: 154)
+  Revolver: 146 deals (preorders: 109)
   Newbury Comics: 193 deals (preorders: 18)
   Newbury Preorders: 0 deals (preorders: 0)
   Craft Recordings: 90 deals (preorders: 16)
@@ -227,24 +264,29 @@ SOURCE STATUS SUMMARY
   UNFD: 0 deals (preorders: 0)
   Pure Noise Records: 98 deals (preorders: 2)
   Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Millions of Records: 0 deals (preorders: 0)
+  IndieMerchstore: 58 deals (preorders: 6)
+  IndieMerchstore Preorders: 115 deals (preorders: 115)
   Merchbar: 0 deals (preorders: 0)
   Hot Topic: FAILED: HTTP Error 404: Not Found
   Walmart: SKIPPED (JS-rendered - needs API/headless lane)
   Target: SKIPPED (JS-rendered - needs API/headless lane)
 ----- SOURCE SUMMARY -----
-Brooklyn Vegan: 191
+Brooklyn Vegan: 190
 Craft Recordings: 90
 Equal Vision: 113
 Fearless Records: 89
 Fearless Vinyl: 177
+IndieMerchstore: 56
+IndieMerchstore Preorders: 107
 Interscope Records: 164
 MNRK Heavy: 131
 Newbury Comics: 193
 Pure Noise Records: 98
-Revolver: 144
+Revolver: 146
 Rhino: 136
 Rise All: 76
-Rise Records: 95
+Rise Records: 94
 RMFN All: 212
 Rock Metal Fan Nation: 205
 Rollin Preorders: 17
