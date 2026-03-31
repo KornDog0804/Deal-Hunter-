@@ -157,6 +157,13 @@ Solid State Records: 126 products via Shopify JSON
 Solid State Records: kept 50 | preorders: 5
 
 ==================================================
+Scraping: Solid State Vinyl (shopify_store)
+==================================================
+  ✓ https://solidstaterecords.store/collections/vinyl/products.json?limit=250 -> 48 products
+Solid State Vinyl: 48 products via Shopify JSON
+Solid State Vinyl: kept 46 | preorders: 10
+
+==================================================
 Scraping: UNFD (catalog_store)
 ==================================================
 UNFD: found 1 HTML links
@@ -172,9 +179,20 @@ Pure Noise Records: kept 98 | preorders: 2
 ==================================================
 Scraping: Deep Discount (deepdiscount_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/search?mod=AP&cr=vinyl | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/search?mod=AP&cr=vinyl | HTTP Error 403: Forbidden
-Deep Discount: failed | HTTP Error 403: Forbidden
+Deep Discount fetch: https://www.deepdiscount.com/ -> 200
+Deep Discount fetch: https://www.deepdiscount.com/help -> 200
+Deep Discount fetch: https://www.deepdiscount.com/music/vinyl -> 200
+Deep Discount fetch: https://www.deepdiscount.com/music/vinyl/new-releases -> 200
+Deep Discount fetch: https://www.deepdiscount.com/featured-vinyl/b141496 -> 200
+Deep Discount fetch: https://www.deepdiscount.com/music/vinyl -> 200
+Deep Discount: found 0 candidate links from https://www.deepdiscount.com/music/vinyl
+Deep Discount fetch: https://www.deepdiscount.com/music/vinyl/new-releases -> 200
+Deep Discount: found 0 candidate links from https://www.deepdiscount.com/music/vinyl/new-releases
+Deep Discount fetch: https://www.deepdiscount.com/featured-vinyl/b141496 -> 200
+Deep Discount: found 0 candidate links from https://www.deepdiscount.com/featured-vinyl/b141496
+Deep Discount fetch: https://www.deepdiscount.com/search?mod=AP&cr=vinyl -> 200
+Deep Discount: found 0 candidate links from https://www.deepdiscount.com/search?mod=AP&cr=vinyl
+Deep Discount: kept 0 | preorders: 0
 
 ==================================================
 Scraping: Millions of Records (shopify_store)
@@ -261,9 +279,10 @@ SOURCE STATUS SUMMARY
   RMFN All: 213 deals (preorders: 32)
   Sumerian Records: 74 deals (preorders: 1)
   Solid State Records: 50 deals (preorders: 5)
+  Solid State Vinyl: 46 deals (preorders: 10)
   UNFD: 0 deals (preorders: 0)
   Pure Noise Records: 98 deals (preorders: 2)
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: 0 deals (preorders: 0)
   Millions of Records: 0 deals (preorders: 0)
   IndieMerchstore: 58 deals (preorders: 6)
   IndieMerchstore Preorders: 115 deals (preorders: 115)
@@ -293,6 +312,7 @@ Rollin Preorders: 17
 Rollin Records: 233
 SharpTone Records: 99
 Solid State Records: 46
+Solid State Vinyl: 42
 Sound of Vinyl: 212
 Sumerian Records: 72
 uDiscover Music: 115
