@@ -2,214 +2,178 @@
 ==================================================
 Scraping: Rollin Records (shopify_store)
 ==================================================
-  ✓ https://rollinrecs.com/products.json?limit=250 → 250 products
+  ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 239 | preorders: 27
+Rollin Records: kept 232 | preorders: 27
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
 ==================================================
-  ✓ https://rollinrecs.com/collections/pre-orders/products.json?limit=250 → 18 products
+  ✓ https://rollinrecs.com/collections/pre-orders/products.json?limit=250 -> 18 products
 Rollin Preorders: 18 products via Shopify JSON
 Rollin Preorders: kept 17 | preorders: 17
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
 ==================================================
-  ✓ https://thesoundofvinyl.us/products.json?limit=250 → 250 products
+  ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 220 | preorders: 11
+Sound of Vinyl: kept 214 | preorders: 10
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
 ==================================================
-  ✓ https://shop.udiscovermusic.com/products.json?limit=250 → 250 products
+  ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 116 | preorders: 7
+uDiscover Music: kept 114 | preorders: 7
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
 ==================================================
-  → retry 1/2 for https://fearlessrecords.com/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://fearlessrecords.com/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://fearlessrecords.com/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://fearlessrecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://fearlessrecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://fearlessrecords.com/collections/all/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://fearlessrecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://fearlessrecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://fearlessrecords.com/collections/vinyl/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://fearlessrecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://fearlessrecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://fearlessrecords.com/collections/music/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://fearlessrecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://fearlessrecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://fearlessrecords.com/collections/records/products.json?limit=250 → HTTP Error 404: Not Found
-Fearless Records: 0 products via Shopify JSON
+  ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
+Fearless Records: 250 products via Shopify JSON
+Fearless Records: kept 89 | preorders: 0
+
+==================================================
+Scraping: Fearless Vinyl (shopify_store)
+==================================================
+  ✓ https://store.fearlessrecords.com/collections/vinyl/products.json?limit=250 -> 199 products
+Fearless Vinyl: 199 products via Shopify JSON
+Fearless Vinyl: kept 178 | preorders: 12
 
 ==================================================
 Scraping: Rise Records (shopify_store)
 ==================================================
-  ✓ https://riserecords.com/products.json?limit=250 → 250 products
+  ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 110 | preorders: 28
+Rise Records: kept 69 | preorders: 22
 
 ==================================================
 Scraping: Rise All (shopify_store)
 ==================================================
-  ✓ https://riserecords.com/collections/all/products.json?limit=250 → 250 products
+  ✓ https://riserecords.com/collections/all/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 79 | preorders: 3
+Rise All: kept 38 | preorders: 1
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
-  ✓ https://shop.brooklynvegan.com/products.json?limit=250 → 250 products
+  ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 230 | preorders: 162
+Brooklyn Vegan: kept 191 | preorders: 157
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
-  ✓ https://shop.revolvermag.com/products.json?limit=250 → 250 products
+  ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 188 | preorders: 116
+Revolver: kept 141 | preorders: 113
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
-  ✓ https://www.newburycomics.com/products.json?limit=250 → 250 products
+  ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 195 | preorders: 8
+Newbury Comics: kept 193 | preorders: 8
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
 ==================================================
-  ✓ https://www.newburycomics.com/collections/pre-orders/products.json?limit=250 → 5 products
+  ✓ https://www.newburycomics.com/collections/pre-orders/products.json?limit=250 -> 5 products
 Newbury Preorders: 5 products via Shopify JSON
+Newbury Preorders: kept 0 | preorders: 0
+Newbury Preorders: Shopify JSON empty, trying HTML fallback
+Newbury Preorders: found 0 HTML links
 Newbury Preorders: kept 0 | preorders: 0
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
 ==================================================
-  ✓ https://craftrecordings.com/products.json?limit=250 → 250 products
+  ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 96 | preorders: 22
+Craft Recordings: kept 90 | preorders: 20
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  ✓ https://mnrkheavy.com/products.json?limit=250 → 250 products
+  ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 149 | preorders: 53
+MNRK Heavy: kept 130 | preorders: 45
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
 ==================================================
-  ✓ https://equalvision.com/products.json?limit=250 → 250 products
+  ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 134 | preorders: 81
+Equal Vision: kept 92 | preorders: 22
 
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 → 250 products
+  ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 144 | preorders: 5
+Rhino: kept 136 | preorders: 5
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
-  ✓ https://interscope.com/products.json?limit=250 → 250 products
+  ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 178 | preorders: 10
+Interscope Records: kept 162 | preorders: 10
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
 ==================================================
-  ✓ https://sharptonerecords.co/products.json?limit=250 → 250 products
+  ✓ https://sharptonerecords.co/products.json?limit=250 -> 250 products
 SharpTone Records: 250 products via Shopify JSON
-SharpTone Records: kept 119 | preorders: 65
+SharpTone Records: kept 100 | preorders: 55
 
 ==================================================
 Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
-  → retry 1/2 for https://rockmetalfannation.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://rockmetalfannation.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://rockmetalfannation.com/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://rockmetalfannation.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://rockmetalfannation.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://rockmetalfannation.com/collections/all/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://rockmetalfannation.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://rockmetalfannation.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://rockmetalfannation.com/collections/vinyl/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://rockmetalfannation.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://rockmetalfannation.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://rockmetalfannation.com/collections/music/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://rockmetalfannation.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://rockmetalfannation.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://rockmetalfannation.com/collections/records/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-Rock Metal Fan Nation: 0 products via Shopify JSON
+  ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
+Rock Metal Fan Nation: 250 products via Shopify JSON
+Rock Metal Fan Nation: kept 206 | preorders: 52
+
+==================================================
+Scraping: RMFN All (shopify_store)
+==================================================
+  ✓ https://rmfnvinyl.com/collections/all/products.json?limit=250 -> 250 products
+RMFN All: 250 products via Shopify JSON
+RMFN All: kept 214 | preorders: 37
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
 ==================================================
-  ✓ https://sumerianrecords.com/products.json?limit=250 → 250 products
+  ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 116 | preorders: 13
+Sumerian Records: kept 73 | preorders: 11
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  → retry 1/2 for https://solidstaterecords.com/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://solidstaterecords.com/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.com/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://solidstaterecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://solidstaterecords.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.com/collections/all/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://solidstaterecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://solidstaterecords.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.com/collections/vinyl/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://solidstaterecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://solidstaterecords.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.com/collections/music/products.json?limit=250 → HTTP Error 404: Not Found
-  → retry 1/2 for https://solidstaterecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  → retry 2/2 for https://solidstaterecords.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.com/collections/records/products.json?limit=250 → HTTP Error 404: Not Found
-Solid State Records: 0 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 126 products
+Solid State Records: 126 products via Shopify JSON
+Solid State Records: kept 47 | preorders: 10
 
 ==================================================
-Scraping: UNFD (shopify_store)
+Scraping: UNFD (catalog_store)
 ==================================================
-  → retry 1/2 for https://store.unfd.com.au/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://store.unfd.com.au/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://store.unfd.com.au/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://store.unfd.com.au/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://store.unfd.com.au/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://store.unfd.com.au/collections/all/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://store.unfd.com.au/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://store.unfd.com.au/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://store.unfd.com.au/collections/vinyl/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://store.unfd.com.au/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://store.unfd.com.au/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://store.unfd.com.au/collections/music/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-  → retry 1/2 for https://store.unfd.com.au/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  → retry 2/2 for https://store.unfd.com.au/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://store.unfd.com.au/collections/records/products.json?limit=250 → <urlopen error [Errno -2] Name or service not known>
-UNFD: 0 products via Shopify JSON
+UNFD: found 1 HTML links
+UNFD: kept 0 | preorders: 0
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
-  ✓ https://purenoise.merchnow.com/products.json?limit=250 → 250 products
+  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
 Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 118 | preorders: 52
+Pure Noise Records: kept 58 | preorders: 12
 
 ==================================================
 Scraping: Deep Discount (catalog_store)
 ==================================================
-  → retry 1/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
-  → retry 2/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/music/vinyl | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -217,6 +181,13 @@ Scraping: Merchbar (catalog_store)
 ==================================================
 Merchbar: found 46 HTML links
 Merchbar: kept 0 | preorders: 0
+
+==================================================
+Scraping: Hot Topic (catalog_store)
+==================================================
+  -> retry 1/2 for https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/ | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/ | HTTP Error 404: Not Found
+Hot Topic: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Walmart (js_store)
@@ -229,37 +200,57 @@ Scraping: Target (js_store)
 Target: SKIPPED (JS-rendered)
 
 ==================================================
-Scraping: Hot Topic (js_store)
-==================================================
-Hot Topic: SKIPPED (JS-rendered)
-
-==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 239 deals (preorders: 27)
+  Rollin Records: 232 deals (preorders: 27)
   Rollin Preorders: 17 deals (preorders: 17)
-  Sound of Vinyl: 220 deals (preorders: 11)
-  uDiscover Music: 116 deals (preorders: 7)
-  Fearless Records: 0 products — endpoint may have changed
-  Rise Records: 110 deals (preorders: 28)
-  Rise All: 79 deals (preorders: 3)
-  Brooklyn Vegan: 230 deals (preorders: 162)
-  Revolver: 188 deals (preorders: 116)
-  Newbury Comics: 195 deals (preorders: 8)
+  Sound of Vinyl: 214 deals (preorders: 10)
+  uDiscover Music: 114 deals (preorders: 7)
+  Fearless Records: 89 deals (preorders: 0)
+  Fearless Vinyl: 178 deals (preorders: 12)
+  Rise Records: 69 deals (preorders: 22)
+  Rise All: 38 deals (preorders: 1)
+  Brooklyn Vegan: 191 deals (preorders: 157)
+  Revolver: 141 deals (preorders: 113)
+  Newbury Comics: 193 deals (preorders: 8)
   Newbury Preorders: 0 deals (preorders: 0)
-  Craft Recordings: 96 deals (preorders: 22)
-  MNRK Heavy: 149 deals (preorders: 53)
-  Equal Vision: 134 deals (preorders: 81)
-  Rhino: 144 deals (preorders: 5)
-  Interscope Records: 178 deals (preorders: 10)
-  SharpTone Records: 119 deals (preorders: 65)
-  Rock Metal Fan Nation: 0 products — endpoint may have changed
-  Sumerian Records: 116 deals (preorders: 13)
-  Solid State Records: 0 products — endpoint may have changed
-  UNFD: 0 products — endpoint may have changed
-  Pure Noise Records: 118 deals (preorders: 52)
+  Craft Recordings: 90 deals (preorders: 20)
+  MNRK Heavy: 130 deals (preorders: 45)
+  Equal Vision: 92 deals (preorders: 22)
+  Rhino: 136 deals (preorders: 5)
+  Interscope Records: 162 deals (preorders: 10)
+  SharpTone Records: 100 deals (preorders: 55)
+  Rock Metal Fan Nation: 206 deals (preorders: 52)
+  RMFN All: 214 deals (preorders: 37)
+  Sumerian Records: 73 deals (preorders: 11)
+  Solid State Records: 47 deals (preorders: 10)
+  UNFD: 0 deals (preorders: 0)
+  Pure Noise Records: 58 deals (preorders: 12)
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Merchbar: 0 deals (preorders: 0)
-  Walmart: SKIPPED (JS-rendered — needs affiliate API)
-  Target: SKIPPED (JS-rendered — needs affiliate API)
-  Hot Topic: SKIPPED (JS-rendered — needs affiliate API)
+  Hot Topic: FAILED: HTTP Error 404: Not Found
+  Walmart: SKIPPED (JS-rendered - needs affiliate/API path)
+  Target: SKIPPED (JS-rendered - needs affiliate/API path)
+----- SOURCE SUMMARY -----
+Brooklyn Vegan: 191
+Craft Recordings: 90
+Equal Vision: 92
+Fearless Records: 89
+Fearless Vinyl: 177
+Interscope Records: 162
+MNRK Heavy: 130
+Newbury Comics: 193
+Pure Noise Records: 58
+Revolver: 141
+Rhino: 136
+Rise All: 38
+Rise Records: 69
+RMFN All: 213
+Rock Metal Fan Nation: 206
+Rollin Preorders: 17
+Rollin Records: 232
+SharpTone Records: 98
+Solid State Records: 43
+Sound of Vinyl: 212
+Sumerian Records: 71
+uDiscover Music: 114
