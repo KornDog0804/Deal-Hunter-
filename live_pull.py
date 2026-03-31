@@ -528,4 +528,230 @@ def build_shopify_deals(source):
             # Always build product link from base domain
             base_match = re.match(r'(https?://[^/]+)', source["url"])
             base_url = base_match.group(1) if base_match else source["url"]
-            link = f'{base_url}/products/{
+            link = base_url + "/products/" + handle
+
+            artist, album = infer_artist_title(title, link, vendor=vendor, source_name=source["name"])
+
+            if looks_like_garbage(album):
+                continue
+            if contains_bad_product_terms(f"{artist} {album}"):
+                continue
+            if not artist_allowed(artist, album):
+                continue
+
+            image = ""
+            imgs = p.get("images", []) or []
+            if imgs:
+                image = imgs[0].get("src", "")
+
+            body_html = p.get("body_html", "") or ""
+            variant_title = clean(valid_variant.get("title", "") or "")
+            combined_blob = " ".join([
+                title, vendor, body_html, variant_title, handle,
+                str(valid_variant.get("inventory_policy", "")),
+                str(valid_variant.get("option1", "")),
+                str(valid_variant.get("option2", "")),
+                str(valid_variant.get("option3", ""))
+            ])
+
+            if is_sold_out(combined_blob):
+                continue
+
+            preorder_info = detect_preorder_signals(combined_blob)
+            release_date = extract_release_date(combined_blob)
+
+            keywords, version_parts = build_version_parts(
+                f"{title} {link} {variant_title} {body_html}",
+                title_lower=title_lower,
+                link_lower=link.lower()
+            )
+
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "raw_title": title,
+                "price": price,
+                "source": source["name"],
+                "source_type": source["source_type"],
+                "link": link,
+                "image": image,
+                "keywords": keywords,
+                "deal_quality": "good" if price < 40 else "normal",
+                "demand": "steady",
+                "format": "vinyl",
+                "version": " ".join(version_parts) if version_parts else "standard",
+                "availability_text": variant_title,
+                "page_text_snippet": clean(body_html)[:1000],
+                "release_date": release_date,
+                "is_preorder": preorder_info["is_preorder"],
+                "preorder_terms": preorder_info["preorder_terms"]
+            })
+            kept += 1
+            if preorder_info["is_preorder"]:
+                preorder_kept += 1
+
+        except Exception as e:
+            log(f'{source["name"]}: skipped Shopify product | {e}')
+
+    SOURCE_STATUS[source["name"]] = f"{kept} deals (preorders: {preorder_kept})"
+    log(f'{source["name"]}: kept {kept} | preorders: {preorder_kept}')
+    return deals
+
+
+# ── HTML DEAL BUILDER ─────────────────────────────────────────────────────────
+def build_html_deals(source):
+    deals = []
+    try:
+        html_text = fetch(source["url"])
+        links = extract_links(html_text, source["url"], source.get("source_type", "catalog_store"))
+        log(f'{source["name"]}: found {len(links)} HTML links')
+
+        kept = 0
+        preorder_kept = 0
+
+        for link in links:
+            try:
+                page = fetch(link)
+
+                if looks_like_amazon_link(link):
+                    continue
+                if is_sold_out(page):
+                    continue
+
+                raw_title = extract_title(page)
+                if should_skip(raw_title, link):
+                    continue
+
+                price = extract_price(page)
+                if price <= 0:
+                    continue
+
+                artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
+                if looks_like_garbage(album):
+                    continue
+                if contains_bad_product_terms(f"{artist} {album}"):
+                    continue
+                if not artist_allowed(artist, album):
+                    continue
+
+                image = extract_image(page, link)
+                preorder_info = detect_preorder_signals(page)
+                release_date = extract_release_date(page)
+
+                keywords, version_parts = build_version_parts(
+                    f"{raw_title} {link} {page[:3000]}",
+                    title_lower=raw_title.lower(),
+                    link_lower=link.lower()
+                )
+
+                deals.append({
+                    "artist": artist,
+                    "title": album,
+                    "raw_title": raw_title,
+                    "price": price,
+                    "source": source["name"],
+                    "source_type": source["source_type"],
+                    "link": link,
+                    "image": image,
+                    "keywords": keywords,
+                    "deal_quality": "good" if price < 40 else "normal",
+                    "demand": "steady",
+                    "format": "vinyl",
+                    "version": " ".join(version_parts) if version_parts else "standard",
+                    "availability_text": "",
+                    "page_text_snippet": clean(page)[:1000],
+                    "release_date": release_date,
+                    "is_preorder": preorder_info["is_preorder"],
+                    "preorder_terms": preorder_info["preorder_terms"]
+                })
+                kept += 1
+                if preorder_info["is_preorder"]:
+                    preorder_kept += 1
+
+            except Exception as e:
+                log(f'{source["name"]}: skipping product {link} | {e}')
+
+        SOURCE_STATUS[source["name"]] = f"{kept} deals (preorders: {preorder_kept})"
+        log(f'{source["name"]}: kept {kept} | preorders: {preorder_kept}')
+
+    except Exception as e:
+        SOURCE_STATUS[source["name"]] = f"FAILED: {e}"
+        log(f'{source["name"]}: HTML source failed | {e}')
+
+    return deals
+
+
+# ── SOURCE ROUTER ─────────────────────────────────────────────────────────────
+def scrape_source(source):
+    name = (source.get("name") or "").lower().strip()
+    stype = source.get("source_type", "")
+
+    # Skip JS-rendered stores — can't scrape without headless browser
+    if stype == "js_store":
+        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered — needs affiliate API)"
+        log(f'{source["name"]}: SKIPPED (JS-rendered)')
+        return []
+
+    # Merchnow stores are Shopify under the hood
+    if stype == "merchnow_store":
+        return build_shopify_deals(source)
+
+    # Standard Shopify stores
+    if stype == "shopify_store":
+        return build_shopify_deals(source)
+
+    # HTML/catalog fallback
+    if stype == "catalog_store":
+        return build_html_deals(source)
+
+    log(f'{source["name"]}: unknown source_type "{stype}" — skipping')
+    SOURCE_STATUS[source["name"]] = f"SKIPPED (unknown type: {stype})"
+    return []
+
+
+# ── DEDUPE ────────────────────────────────────────────────────────────────────
+def dedupe_deals(deals):
+    seen = {}
+    for d in deals:
+        key = f'{(d["artist"] or "").lower().strip()}::{(d["title"] or "").lower().strip()}::{(d["source"] or "").lower().strip()}'
+        if key not in seen:
+            seen[key] = d
+        else:
+            current = seen[key]
+            if d["price"] < current["price"]:
+                seen[key] = d
+            elif not current.get("is_preorder") and d.get("is_preorder"):
+                seen[key] = d
+    return list(seen.values())
+
+
+# ── MAIN BUILD ────────────────────────────────────────────────────────────────
+def build():
+    deals = []
+    for source in SOURCES:
+        log(f"\n{'='*50}")
+        log(f"Scraping: {source['name']} ({source['source_type']})")
+        log(f"{'='*50}")
+        deals.extend(scrape_source(source))
+    return dedupe_deals(deals)
+
+
+if __name__ == "__main__":
+    data = build()
+
+    with open(BASE / "live_deals.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    # Source status summary
+    log("\n" + "="*50)
+    log("SOURCE STATUS SUMMARY")
+    log("="*50)
+    for source_name, status in SOURCE_STATUS.items():
+        log(f"  {source_name}: {status}")
+
+    with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(DEBUG))
+
+    preorder_count = sum(1 for item in data if item.get("is_preorder"))
+    live_count = sum(1 for item in data if not item.get("is_preorder"))
+    log(f"\nWrote {len(data)} total deals → {live_count} live | {preorder_count} preorders")
