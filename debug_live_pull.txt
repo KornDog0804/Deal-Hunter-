@@ -9,6 +9,7 @@ Rollin Records: kept 233
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
 ==================================================
+  -> retry 1/2 for https://rollinrecs.com/collections/pre-orders/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://rollinrecs.com/collections/pre-orders/products.json?limit=250 -> 18 products
 Rollin Preorders: 18 products via Shopify JSON
 Rollin Preorders: kept 17
@@ -58,7 +59,7 @@ Rise All: kept 60
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
-  -> retry 1/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  -> retry 1/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
 Brooklyn Vegan: kept 190
@@ -84,6 +85,7 @@ Scraping: Newbury Preorders (shopify_store)
 Newbury Preorders: 5 products via Shopify JSON
 Newbury Preorders: kept 0
 Newbury Preorders: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://www.newburycomics.com/collections/pre-orders | HTTP Error 503: Service Unavailable
 Newbury Preorders: found 0 HTML links
 Newbury Preorders: kept 0
 
@@ -97,6 +99,8 @@ Craft Recordings: kept 89
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 131
@@ -111,6 +115,7 @@ Equal Vision: kept 103
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
+  -> retry 1/2 for https://store.rhino.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
 Rhino: kept 136
@@ -146,6 +151,7 @@ RMFN All: kept 206
 ==================================================
 Scraping: Sumerian Records (shopify_store)
 ==================================================
+  -> retry 1/2 for https://sumerianrecords.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
 Sumerian Records: kept 73
@@ -224,6 +230,7 @@ IndieMerchstore: kept 63
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
+  -> retry 1/2 for https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 -> 250 products
 IndieMerchstore Preorders: 250 products via Shopify JSON
 IndieMerchstore Preorders: kept 113
