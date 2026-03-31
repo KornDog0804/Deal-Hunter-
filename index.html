@@ -49,7 +49,6 @@
         <div class="chip-row chip-row-nowrap">
           <button class="filter-chip active" data-quick="all">All</button>
           <button class="filter-chip" data-quick="grail">Grail Alerts</button>
-          <button class="filter-chip" data-quick="preorders">Preorders</button>
           <button class="filter-chip" data-quick="under30">Under $30</button>
           <button class="filter-chip" data-quick="amazon">Amazon Picks</button>
           <button class="filter-chip" data-quick="korndog">KornDog Finds</button>
@@ -63,7 +62,7 @@
   <main class="main-tight">
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
-      <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
+      <div class="chip" id="updatedAt">Live from scored_deals.json</div>
       <button class="chip chip-button" id="pageStatus" type="button">Page 1</button>
     </div>
 
@@ -90,14 +89,6 @@
         <div class="section-note">The best stuff rises to the top.</div>
       </div>
       <div id="featuredList" class="featured-grid"></div>
-    </section>
-
-    <section class="section" id="preordersSection">
-      <div class="section-head">
-        <h2 class="section-title">Preorder Alerts</h2>
-        <div class="section-note" id="preorderUpdatedAt">Watching for grails before the sharks smell blood.</div>
-      </div>
-      <div id="preorderList" class="featured-grid"></div>
     </section>
 
     <section class="section">
@@ -135,11 +126,9 @@
 
   <script>
     let allDeals = [];
-    let allPreorders = [];
     let activeQuickFilter = "all";
     let currentPage = 1;
     const DEALS_PER_PAGE = 24;
-    const PREORDERS_PER_PAGE = 24;
 
     function escapeHtml(value) {
       return String(value ?? "")
@@ -167,6 +156,7 @@
       if (source.includes("amazon")) return "amazon";
       if (source.includes("walmart")) return "walmart";
       if (source.includes("target")) return "target";
+      if (source.includes("deep discount")) return "deep discount";
       if (source.includes("newbury")) return "newbury comics";
       if (source.includes("udiscover")) return "udiscover music";
       if (source.includes("sound of vinyl")) return "sound of vinyl";
@@ -176,23 +166,23 @@
       if (source.includes("brooklyn vegan")) return "brooklyn vegan";
       if (source.includes("equal vision")) return "equal vision";
       if (source.includes("rollin")) return "rollin records";
-      if (source.includes("deep discount")) return "deep discount";
       if (source.includes("merchbar")) return "merchbar";
-      if (source.includes("acoustic sounds")) return "acoustic sounds";
-      if (source.includes("ride records")) return "ride records";
       if (source.includes("craft recordings")) return "craft recordings";
       if (source.includes("mnrk")) return "mnrk heavy";
       if (source.includes("revolver")) return "revolver";
       if (source.includes("sharptone")) return "sharptone records";
       if (source.includes("rock metal fan nation")) return "rock metal fan nation";
-      if (source.includes("rmfn")) return "rock metal fan nation";
+      if (source.includes("rmfn")) return "rmfn all";
       if (source.includes("unfd")) return "unfd";
       if (source.includes("sumerian")) return "sumerian records";
+      if (source.includes("solid state vinyl")) return "solid state vinyl";
       if (source.includes("solid state")) return "solid state records";
       if (source.includes("hot topic")) return "hot topic";
       if (source.includes("pure noise")) return "pure noise records";
       if (source.includes("rhino")) return "rhino";
       if (source.includes("interscope")) return "interscope records";
+      if (source.includes("millions of records")) return "millions of records";
+      if (source.includes("indiemerchstore")) return "indiemerchstore";
 
       return source;
     }
@@ -204,6 +194,7 @@
         "amazon": "Amazon",
         "walmart": "Walmart",
         "target": "Target",
+        "deep discount": "Deep Discount",
         "newbury comics": "Newbury Comics",
         "udiscover music": "uDiscover Music",
         "sound of vinyl": "Sound of Vinyl",
@@ -213,22 +204,23 @@
         "brooklyn vegan": "Brooklyn Vegan",
         "equal vision": "Equal Vision",
         "rollin records": "Rollin Records",
-        "deep discount": "Deep Discount",
         "merchbar": "Merchbar",
-        "acoustic sounds": "Acoustic Sounds",
-        "ride records": "Ride Records",
         "craft recordings": "Craft Recordings",
         "mnrk heavy": "MNRK Heavy",
         "revolver": "Revolver",
         "sharptone records": "SharpTone Records",
         "rock metal fan nation": "Rock Metal Fan Nation",
+        "rmfn all": "RMFN All",
         "unfd": "UNFD",
         "sumerian records": "Sumerian Records",
         "solid state records": "Solid State Records",
+        "solid state vinyl": "Solid State Vinyl",
         "hot topic": "Hot Topic",
         "pure noise records": "Pure Noise Records",
         "rhino": "Rhino",
-        "interscope records": "Interscope Records"
+        "interscope records": "Interscope Records",
+        "millions of records": "Millions of Records",
+        "indiemerchstore": "IndieMerchstore"
       };
 
       return map[key] || String(value || "").trim();
@@ -245,13 +237,6 @@
       if (score >= 7) return "Vinyl Heat";
       if (score >= 5) return "KornDog Find";
       return "Low Key";
-    }
-
-    function getPreorderBadge(score, badgeText) {
-      if (badgeText) return badgeText;
-      if (score >= 85) return "GRAIL ALERT";
-      if (score >= 70) return "HOT PREORDER";
-      return "WATCHLIST";
     }
 
     function getBestPriceText(deal) {
@@ -316,28 +301,6 @@ ${deal.artist} – ${deal.title}
 👉 ${buyLink}${amazonPart}
 
 Vinyl Therapy never dies 🟣🟢`;
-    }
-
-    function getPreorderPostText(deal) {
-      const score = Number(deal.score || 0);
-      const badge = getPreorderBadge(score, deal.badge || "");
-      const bestPrice = getBestPriceText(deal);
-      const buyLink = deal.buy_link || deal.link || "Link coming soon";
-      const source = prettifySourceName(deal.best_source || deal.source || "Unknown");
-      const version = deal.version || "Standard";
-
-      return `🚨 ${badge} 🚨
-
-${deal.artist || "Unknown Artist"} – ${deal.title || "Unknown Title"}
-
-💰 Preorder Price: ${bestPrice}
-📦 Store: ${source}
-🎨 Version: ${version}
-🎯 Score: ${score}/100
-
-👉 ${buyLink}
-
-Korndog preorder radar is on the hunt 💿🔥`;
     }
 
     async function copyText(text) {
@@ -450,120 +413,10 @@ Korndog preorder radar is on the hunt 💿🔥`;
       return card;
     }
 
-    function createPreorderCard(deal) {
-      const score = Number(deal.score || 0);
-      const badgeText = getPreorderBadge(score, deal.badge || "");
-      const postText = getPreorderPostText(deal);
-      const bestPrice = getBestPriceText(deal);
-      const bestBuy = prettifySourceName(deal.best_source || deal.source || "Unknown");
-      const buyLink = deal.buy_link || deal.link || "#";
-      const amazonLink = getAmazonLink(deal);
-      const detailId = `predetail-${Math.random().toString(36).slice(2, 10)}`;
-
-      const imageHtml = deal.image
-        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
-        : "";
-
-      const amazonButtonHtml = amazonLink
-        ? `<a class="btn btn-alt" href="${escapeHtml(amazonLink)}" target="_blank" rel="noopener noreferrer">Amazon Option</a>`
-        : "";
-
-      const copyAmazonButtonHtml = amazonLink
-        ? `<button class="btn btn-ghost preorder-copy-link-btn">Copy Amazon Link</button>`
-        : "";
-
-      const badgeClass =
-        score >= 85 ? "badge-high" :
-        score >= 70 ? "badge-mid" :
-        "badge-low";
-
-      const card = document.createElement("div");
-      card.className = "deal-card";
-      card.innerHTML = `
-        ${imageHtml}
-
-        <div class="deal-top">
-          <div>
-            <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
-            <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
-          </div>
-          <div class="badge ${badgeClass}">${escapeHtml(badgeText)}</div>
-        </div>
-
-        <div class="deal-meta">
-          <div class="meta-box">
-            <div class="label">Preorder Price</div>
-            <div class="value">${escapeHtml(bestPrice)}</div>
-          </div>
-          <div class="meta-box">
-            <div class="label">Store</div>
-            <div class="value">
-              ${escapeHtml(bestBuy)}
-              <small>${escapeHtml(deal.version || "Standard")}</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="deal-meta">
-          <div class="meta-box">
-            <div class="label">Score</div>
-            <div class="value">${escapeHtml(String(score))}/100</div>
-          </div>
-          <div class="meta-box">
-            <div class="label">Status</div>
-            <div class="value">${escapeHtml((deal.status || "preorder").toUpperCase())}</div>
-          </div>
-        </div>
-
-        <div class="deal-actions ${amazonLink ? "" : "single-action"}">
-          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">View Preorder</a>
-          ${amazonButtonHtml}
-        </div>
-
-        <div class="mini-actions">
-          <button class="btn btn-ghost preorder-copy-post-btn">Copy Preorder Post</button>
-          <button class="btn btn-ghost preorder-detail-toggle" data-target="${detailId}">Show Details</button>
-        </div>
-
-        <div id="${detailId}" class="detail-panel">
-          <div class="post-box">${escapeHtml(postText)}</div>
-          <div class="mini-actions">
-            ${copyAmazonButtonHtml}
-            <button class="btn btn-ghost preorder-copy-best-btn">Copy Best Link</button>
-          </div>
-          ${makeSourceRows(deal)}
-        </div>
-      `;
-
-      card.querySelector(".preorder-copy-post-btn").addEventListener("click", () => copyText(postText));
-
-      const copyAmazonBtn = card.querySelector(".preorder-copy-link-btn");
-      if (copyAmazonBtn) {
-        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
-      }
-
-      card.querySelector(".preorder-copy-best-btn").addEventListener("click", () => copyText(buyLink));
-      card.querySelector(".preorder-detail-toggle").addEventListener("click", (e) => {
-        const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
-        const open = panel.classList.toggle("open");
-        e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
-      });
-
-      return card;
-    }
-
     function toggleHeroSections() {
       const topPicksSection = document.getElementById("topPicksSection");
-      const preordersSection = document.getElementById("preordersSection");
-
-      const showHeroSections = currentPage === 1 || activeQuickFilter === "preorders";
-
       if (topPicksSection) {
-        topPicksSection.style.display = showHeroSections ? "" : "none";
-      }
-
-      if (preordersSection) {
-        preordersSection.style.display = showHeroSections ? "" : "none";
+        topPicksSection.style.display = currentPage === 1 ? "" : "none";
       }
     }
 
@@ -582,7 +435,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
 
-      if (currentPage !== 1 || activeQuickFilter === "preorders") {
+      if (currentPage !== 1) {
         return [];
       }
 
@@ -601,63 +454,6 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       picks.forEach(deal => {
         featuredList.appendChild(createDealCard(deal));
-      });
-
-      return picks;
-    }
-
-    function renderPreorders(preorders) {
-      const preorderList = document.getElementById("preorderList");
-      const preorderUpdatedAt = document.getElementById("preorderUpdatedAt");
-
-      preorderList.innerHTML = "";
-
-      if (activeQuickFilter === "preorders") {
-        const totalPages = Math.max(1, Math.ceil(preorders.length / PREORDERS_PER_PAGE));
-        if (currentPage > totalPages) currentPage = 1;
-
-        const start = (currentPage - 1) * PREORDERS_PER_PAGE;
-        const end = start + PREORDERS_PER_PAGE;
-        const pagePreorders = preorders.slice(start, end);
-
-        preorderUpdatedAt.textContent = `Loaded ${preorders.length} preorder alerts from preorders.json`;
-
-        if (!pagePreorders.length) {
-          preorderList.innerHTML = `
-            <div class="empty">
-              No preorder alerts right now. The radar is quiet... for now.
-            </div>
-          `;
-          return [];
-        }
-
-        pagePreorders.forEach(deal => {
-          preorderList.appendChild(createPreorderCard(deal));
-        });
-
-        return pagePreorders;
-      }
-
-      if (currentPage !== 1) {
-        return [];
-      }
-
-      if (!preorders.length) {
-        preorderUpdatedAt.textContent = "Watching for grails before the sharks smell blood.";
-        preorderList.innerHTML = `
-          <div class="empty">
-            No preorder alerts right now. The radar is quiet... for now.
-          </div>
-        `;
-        return [];
-      }
-
-      preorderUpdatedAt.textContent = `Loaded ${preorders.length} preorder alerts from preorders.json`;
-
-      const picks = preorders.slice(0, 6);
-
-      picks.forEach(deal => {
-        preorderList.appendChild(createPreorderCard(deal));
       });
 
       return picks;
@@ -724,25 +520,6 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       dealList.innerHTML = "";
 
-      if (activeQuickFilter === "preorders") {
-        dealList.innerHTML = `
-          <div class="empty">
-            Preorder mode is on. Browse the preorder cards above.
-          </div>
-        `;
-
-        const totalPages = Math.max(1, Math.ceil(getFilteredPreorders().length / PREORDERS_PER_PAGE));
-        pager.style.display = totalPages > 1 ? "flex" : "none";
-        pageStatus.textContent = `Preorders ${currentPage} / ${totalPages}`;
-
-        document.getElementById("prevPageBtn").disabled = currentPage === 1;
-        document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
-
-        renderPageNumbers(totalPages);
-        renderTopPageNumbers(totalPages);
-        return;
-      }
-
       let workingDeals = deals;
 
       if (currentPage === 1 && featuredDeals.length) {
@@ -802,7 +579,6 @@ Korndog preorder radar is on the hunt 💿🔥`;
       if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
       if (activeQuickFilter === "amazon") return !!amazonLink;
       if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
-      if (activeQuickFilter === "preorders") return false;
       return true;
     }
 
@@ -827,29 +603,14 @@ Korndog preorder radar is on the hunt 💿🔥`;
         });
     }
 
-    function getFilteredPreorders() {
-      const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
-
-      return allPreorders
-        .filter(d => {
-          if (!sourceValue) return true;
-          const preorderSource = normalizeSourceKey(d.best_source || d.source || "");
-          return preorderSource === sourceValue;
-        })
-        .sort((a, b) => {
-          const scoreDiff = Number(b.score || 0) - Number(a.score || 0);
-          if (scoreDiff !== 0) return scoreDiff;
-          const priceA = Number(a.best_price || a.price || 999999);
-          const priceB = Number(b.best_price || b.price || 999999);
-          return priceA - priceB;
-        });
-    }
-
     function populateSourceFilter() {
       const select = document.getElementById("sourceFilter");
       const sources = new Map();
 
       const seededSources = [
+        ["amazon", "Amazon"],
+        ["walmart", "Walmart"],
+        ["deep discount", "Deep Discount"],
         ["brooklyn vegan", "Brooklyn Vegan"],
         ["craft recordings", "Craft Recordings"],
         ["equal vision", "Equal Vision"],
@@ -862,26 +623,27 @@ Korndog preorder radar is on the hunt 💿🔥`;
         ["sound of vinyl", "Sound of Vinyl"],
         ["udiscover music", "uDiscover Music"],
         ["fearless records", "Fearless Records"],
-        ["deep discount", "Deep Discount"],
         ["merchbar", "Merchbar"],
-        ["walmart", "Walmart"],
-        ["target", "Target"],
         ["sharptone records", "SharpTone Records"],
         ["rock metal fan nation", "Rock Metal Fan Nation"],
+        ["rmfn all", "RMFN All"],
         ["unfd", "UNFD"],
         ["sumerian records", "Sumerian Records"],
         ["solid state records", "Solid State Records"],
+        ["solid state vinyl", "Solid State Vinyl"],
         ["hot topic", "Hot Topic"],
         ["pure noise records", "Pure Noise Records"],
         ["rhino", "Rhino"],
-        ["interscope records", "Interscope Records"]
+        ["interscope records", "Interscope Records"],
+        ["millions of records", "Millions of Records"],
+        ["indiemerchstore", "IndieMerchstore"]
       ];
 
       seededSources.forEach(([value, label]) => {
         sources.set(value, label);
       });
 
-      [...allDeals, ...allPreorders].forEach(deal => {
+      allDeals.forEach(deal => {
         const rawSource = (deal.best_source || deal.source || "").trim();
         if (!rawSource) return;
 
@@ -908,19 +670,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
     function applyFilters(resetPage = true) {
       if (resetPage) currentPage = 1;
 
-      const filteredPreorders = getFilteredPreorders();
-
       toggleHeroSections();
-
-      if (activeQuickFilter === "preorders") {
-        renderFeatured([]);
-        renderPreorders(filteredPreorders);
-        document.getElementById("dealCount").textContent = `Preorders: ${filteredPreorders.length}`;
-        renderDeals([], []);
-        return;
-      }
-
-      renderPreorders(filteredPreorders);
 
       const filtered = getFilteredDeals();
       document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
@@ -941,10 +691,6 @@ Korndog preorder radar is on the hunt 💿🔥`;
     }
 
     function getTotalPageCountForCurrentView() {
-      if (activeQuickFilter === "preorders") {
-        return Math.max(1, Math.ceil(getFilteredPreorders().length / PREORDERS_PER_PAGE));
-      }
-
       const totalFiltered = getFilteredDeals();
 
       let workingDeals = totalFiltered;
@@ -1049,33 +795,16 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
     async function init() {
       try {
-        const [dealsRes, preordersRes] = await Promise.all([
-          fetch("./scored_deals.json?_=" + Date.now()),
-          fetch("./preorders.json?_=" + Date.now()).catch(() => null)
-        ]);
-
+        const dealsRes = await fetch("./scored_deals.json?_=" + Date.now());
         const dealsData = dealsRes ? await dealsRes.json() : [];
         allDeals = Array.isArray(dealsData) ? dealsData : [];
 
-        if (preordersRes && preordersRes.ok) {
-          const preorderData = await preordersRes.json();
-          allPreorders = Array.isArray(preorderData.items) ? preorderData.items : [];
-          if (preorderData.generated_at) {
-            document.getElementById("preorderUpdatedAt").textContent =
-              `Loaded ${allPreorders.length} preorder alerts • Updated ${new Date(preorderData.generated_at).toLocaleString()}`;
-          }
-        } else {
-          allPreorders = [];
-        }
-
         populateSourceFilter();
-        document.getElementById("updatedAt").textContent = "Live from scored_deals.json + preorders.json";
+        document.getElementById("updatedAt").textContent = "Live from scored_deals.json";
         applyFilters(true);
       } catch (err) {
         document.getElementById("featuredList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. The front window is lit up, but the stock room is locked.</div>`;
-        document.getElementById("preorderList").innerHTML =
-          `<div class="empty">Could not load preorders.json. The preorder radar is asleep.</div>`;
         document.getElementById("dealList").innerHTML =
           `<div class="empty">Could not load scored_deals.json. Netlify can see the front window, but the stock room is locked.</div>`;
       }
