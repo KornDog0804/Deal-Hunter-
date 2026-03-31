@@ -55,16 +55,16 @@ SOURCES = [
     {"name": "Solid State Records", "source_type": "shopify_store", "url": "https://solidstaterecords.store"},
     {"name": "Solid State Vinyl", "source_type": "shopify_store", "url": "https://solidstaterecords.store/collections/vinyl"},
 
-    {"name": "UNFD", "source_type": "catalog_store", "url": "https://usa.24hundred.net/collections/unfd"},
-
     {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
 
-    {"name": "Deep Discount", "source_type": "deepdiscount_store", "url": "https://www.deepdiscount.com"},
-    {"name": "Millions of Records", "source_type": "shopify_store", "url": "https://www.millionsofrecords.com"},
-    {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
-    {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
+    {"name": "UNFD", "source_type": "catalog_store", "url": "https://usa.24hundred.net/collections/unfd"},
     {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
     {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
+
+    {"name": "Deep Discount", "source_type": "deepdiscount_store", "url": "https://www.deepdiscount.com"},
+    {"name": "Millions of Records", "source_type": "catalog_store", "url": "https://www.millionsofrecords.com"},
+    {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
+    {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
 
     {"name": "Walmart", "source_type": "js_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"},
     {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
@@ -74,39 +74,6 @@ POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
     "zoetrope", "picture disc", "splatter", "variant", "2lp", "1lp",
     "marble", "smush", "quad", "opaque", "clear", "smoke", "translucent"
-]
-
-PREORDER_STRONG_TERMS = [
-    "preorder", "pre-order", "pre order",
-    "presale", "pre-sale", "pre sale",
-    "expected to ship",
-    "ships on",
-    "ships by",
-    "releases on",
-    "release date",
-    "street date",
-    "available on",
-    "available beginning",
-    "ready to ship on",
-    "will ship"
-]
-
-PREORDER_WEAK_TERMS = [
-    "coming soon",
-    "inventory_policy\":\"continue",
-    "data-preorder",
-    "product-template-preorder"
-]
-
-PREORDER_NEGATIVE_TERMS = [
-    "in stock",
-    "shipping now",
-    "ready to ship",
-    "ships immediately",
-    "available now",
-    "add to cart now",
-    "buy now",
-    "now available"
 ]
 
 BANNED_KEYWORDS = [
@@ -120,7 +87,8 @@ BAD_PRODUCT_TERMS = [
     "cd", "compact disc", "beanie", "hat", "jacket", "bundle", "book",
     "kindle", "blu-ray", "dvd", "toy", "figure", "funko",
     "digital", "digital album", "digital download", "mp3", "download",
-    "earbuds", "headphones", "airpods", "sticker", "patch", "pin"
+    "earbuds", "headphones", "airpods", "sticker", "patch", "pin",
+    "pullover", "crewneck", "long sleeve", "t-shirt", "shorts", "socks"
 ]
 
 DEBUG = []
@@ -329,77 +297,39 @@ def infer_artist_title(raw_title, link, vendor="", source_name=""):
 
 
 def detect_format(title="", product_type="", page_text=""):
-    blob = f"{title} {product_type} {page_text}".lower()
+    title_l = (title or "").lower()
+    product_type_l = (product_type or "").lower()
+    page_text_l = (page_text or "").lower()
 
-    if any(x in blob for x in ["cassette", "cd", "compact disc"]):
-        if "vinyl" not in blob and " lp" not in blob and "record" not in blob:
+    hard_bad_blob = f"{title_l} {product_type_l}"
+    if contains_bad_product_terms(hard_bad_blob):
+        return "other"
+
+    if any(x in hard_bad_blob for x in ["cassette", "cd", "compact disc"]):
+        if "vinyl" not in hard_bad_blob and " lp" not in hard_bad_blob and "record" not in hard_bad_blob:
             return "other"
+
+    strong_blob = f"{title_l} {product_type_l}"
+    page_blob = f"{strong_blob} {page_text_l[:1000]}"
 
     vinyl_markers = [
         " vinyl", "vinyl ", " vinyl ",
         " lp", "lp ", "2lp", "1lp",
         '12"', '7"', "record", "records"
     ]
-    if any(x in blob for x in vinyl_markers):
+
+    if any(x in strong_blob for x in vinyl_markers):
         return "vinyl"
 
-    if "cassette" in blob:
+    if any(x in page_blob for x in vinyl_markers):
+        return "vinyl"
+
+    if "cassette" in page_blob:
         return "cassette"
-    if "cd" in blob or "compact disc" in blob:
+    if "cd" in page_blob or "compact disc" in page_blob:
         return "cd"
 
     return "other"
-
-
-def extract_release_date(text):
-    text = clean(text)
-
-    patterns = [
-        r"(?:release date|releases on|ships on|ships by|available on|street date)\s*:?\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})",
-        r"(?:release date|releases on|ships on|ships by|available on|street date)\s*:?\s*(\d{1,2}/\d{1,2}/\d{2,4})",
-        r"(?:release date|releases on|ships on|ships by|available on|street date)\s*:?\s*(\d{4}-\d{2}-\d{2})",
-        r"\b([A-Za-z]+\s+\d{1,2},\s+\d{4})\b",
-        r"\b(\d{4}-\d{2}-\d{2})\b",
-    ]
-
-    for pattern in patterns:
-        m = re.search(pattern, text, re.I)
-        if m:
-            return clean(m.group(1))
-
-    return ""
-
-
-def detect_preorder_signals(text, source_name="", source_url="", collection_endpoint_used=False):
-    t = (text or "").lower()
-
-    if any(term in t for term in PREORDER_NEGATIVE_TERMS):
-        return {"is_preorder": False, "preorder_terms": []}
-
-    strong_hits = [term for term in PREORDER_STRONG_TERMS if term in t]
-    weak_hits = [term for term in PREORDER_WEAK_TERMS if term in t]
-    release_date = extract_release_date(t)
-
-    source_name_l = (source_name or "").lower()
-    source_url_l = (source_url or "").lower()
-    source_hint_preorder = (
-        "preorder" in source_name_l
-        or "pre-order" in source_name_l
-        or "/pre-order" in source_url_l
-        or "/preorder" in source_url_l
-        or collection_endpoint_used
-    )
-
-    if strong_hits and release_date:
-        return {"is_preorder": True, "preorder_terms": strong_hits + (["release date"] if release_date else [])}
-
-    if source_hint_preorder and strong_hits:
-        return {"is_preorder": True, "preorder_terms": strong_hits}
-
-    if weak_hits and not strong_hits and not release_date:
-        return {"is_preorder": False, "preorder_terms": []}
-
-    return {"is_preorder": False, "preorder_terms": []}
 
 
 def extract_links(html_text, base, source_type="shopify_store"):
@@ -508,46 +438,46 @@ def fetch_shopify_products(source_url):
     url = source_url.rstrip("/")
     base_match = re.match(r'(https?://[^/]+)', url)
     if not base_match:
-        return [], "", False
+        return [], ""
 
     base = base_match.group(1)
     endpoints = []
 
     if "/collections/" in url:
-        endpoints.append((url + "/products.json?limit=250", True))
+        endpoints.append(url + "/products.json?limit=250")
 
     endpoints += [
-        (base + "/products.json?limit=250", False),
-        (base + "/collections/all/products.json?limit=250", False),
-        (base + "/collections/vinyl/products.json?limit=250", False),
-        (base + "/collections/music/products.json?limit=250", False),
-        (base + "/collections/records/products.json?limit=250", False),
+        base + "/products.json?limit=250",
+        base + "/collections/all/products.json?limit=250",
+        base + "/collections/vinyl/products.json?limit=250",
+        base + "/collections/music/products.json?limit=250",
+        base + "/collections/records/products.json?limit=250",
     ]
 
     seen = set()
     deduped = []
-    for endpoint, is_collection in endpoints:
+    for endpoint in endpoints:
         if endpoint not in seen:
             seen.add(endpoint)
-            deduped.append((endpoint, is_collection))
+            deduped.append(endpoint)
 
-    for endpoint, is_collection in deduped:
+    for endpoint in deduped:
         try:
             data = fetch(endpoint)
             parsed = json.loads(data)
             products = parsed.get("products", [])
             if products:
                 log(f"  ✓ {endpoint} -> {len(products)} products")
-                return products, endpoint, is_collection
+                return products, endpoint
         except Exception as e:
             log(f"  ✗ {endpoint} -> {e}")
 
-    return [], "", False
+    return [], ""
 
 
 def build_shopify_deals(source):
     deals = []
-    products, endpoint_used, collection_endpoint_used = fetch_shopify_products(source["url"])
+    products, endpoint_used = fetch_shopify_products(source["url"])
     log(f'{source["name"]}: {len(products)} products via Shopify JSON')
 
     if not products:
@@ -555,7 +485,6 @@ def build_shopify_deals(source):
         return []
 
     kept = 0
-    preorder_kept = 0
 
     for p in products:
         try:
@@ -572,7 +501,7 @@ def build_shopify_deals(source):
             if should_skip(title, ""):
                 continue
 
-            if product_type and any(x in product_type for x in BAD_PRODUCT_TERMS):
+            if contains_bad_product_terms(f"{title} {product_type} {tags_text}"):
                 continue
 
             variants = p.get("variants", []) or []
@@ -619,34 +548,12 @@ def build_shopify_deals(source):
             body_html = p.get("body_html", "") or ""
             variant_title = clean(valid_variant.get("title", "") or "")
 
-            combined_blob = " ".join([
-                title,
-                vendor,
-                product_type,
-                body_html,
-                variant_title,
-                handle,
-                tags_text,
-                str(valid_variant.get("inventory_policy", "")),
-                str(valid_variant.get("option1", "")),
-                str(valid_variant.get("option2", "")),
-                str(valid_variant.get("option3", "")),
-            ])
-
-            if is_sold_out(combined_blob):
+            if is_sold_out(f"{title} {body_html} {variant_title}"):
                 continue
 
             fmt = detect_format(title=title, product_type=product_type, page_text=f"{body_html} {tags_text}")
             if fmt != "vinyl":
                 continue
-
-            preorder_info = detect_preorder_signals(
-                combined_blob,
-                source_name=source["name"],
-                source_url=source["url"],
-                collection_endpoint_used=collection_endpoint_used
-            )
-            release_date = extract_release_date(combined_blob)
 
             keywords, version_parts = build_version_parts(
                 f"{title} {link} {variant_title} {body_html} {tags_text}",
@@ -670,20 +577,15 @@ def build_shopify_deals(source):
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": variant_title,
                 "page_text_snippet": clean(body_html)[:1000],
-                "release_date": release_date,
-                "is_preorder": preorder_info["is_preorder"],
-                "preorder_terms": preorder_info["preorder_terms"],
                 "endpoint_used": endpoint_used,
             })
             kept += 1
-            if preorder_info["is_preorder"]:
-                preorder_kept += 1
 
         except Exception as e:
             log(f'{source["name"]}: skipped Shopify product | {e}')
 
-    SOURCE_STATUS[source["name"]] = f"{kept} deals (preorders: {preorder_kept})"
-    log(f'{source["name"]}: kept {kept} | preorders: {preorder_kept}')
+    SOURCE_STATUS[source["name"]] = f"{kept} deals"
+    log(f'{source["name"]}: kept {kept}')
     return deals
 
 
@@ -695,7 +597,6 @@ def build_html_deals(source):
         log(f'{source["name"]}: found {len(links)} HTML links')
 
         kept = 0
-        preorder_kept = 0
         source_name = (source.get("name") or "").lower()
 
         for link in links:
@@ -715,8 +616,6 @@ def build_html_deals(source):
                     continue
                 if "hot topic" in source_name and "music & vinyl" in raw_title.lower():
                     continue
-                if "deep discount" in source_name and raw_title.lower() in {"vinyl", "music"}:
-                    continue
 
                 price = extract_price(page)
                 if price <= 0:
@@ -735,13 +634,6 @@ def build_html_deals(source):
                     continue
 
                 image = extract_image(page, link)
-                preorder_info = detect_preorder_signals(
-                    page,
-                    source_name=source["name"],
-                    source_url=link,
-                    collection_endpoint_used=False
-                )
-                release_date = extract_release_date(page)
 
                 keywords, version_parts = build_version_parts(
                     f"{raw_title} {link} {page[:3000]}",
@@ -765,19 +657,14 @@ def build_html_deals(source):
                     "version": " ".join(version_parts) if version_parts else "standard",
                     "availability_text": "",
                     "page_text_snippet": clean(page)[:1000],
-                    "release_date": release_date,
-                    "is_preorder": preorder_info["is_preorder"],
-                    "preorder_terms": preorder_info["preorder_terms"],
                 })
                 kept += 1
-                if preorder_info["is_preorder"]:
-                    preorder_kept += 1
 
             except Exception as e:
                 log(f'{source["name"]}: skipping product {link} | {e}')
 
-        SOURCE_STATUS[source["name"]] = f"{kept} deals (preorders: {preorder_kept})"
-        log(f'{source["name"]}: kept {kept} | preorders: {preorder_kept}')
+        SOURCE_STATUS[source["name"]] = f"{kept} deals"
+        log(f'{source["name"]}: kept {kept}')
 
     except Exception as e:
         SOURCE_STATUS[source["name"]] = f"FAILED: {e}"
@@ -787,10 +674,6 @@ def build_html_deals(source):
 
 
 def build_deepdiscount(source):
-    """
-    Deep Discount needs a browser-like cookie session.
-    We warm the session, crawl real vinyl pages, and then hit product pages.
-    """
     deals = []
     seen_links = set()
 
@@ -838,28 +721,27 @@ def build_deepdiscount(source):
 
     def extract_dd_links(page_html):
         links = set()
-        patterns = [
-            r'href="(/[^"]+?/p/\d+)"',
-            r'href="(/[^"]+?/product/\d+)"',
-            r'href="(/[^"]+?/item/\d+)"',
-            r'href="(/[^"]+?/ip/\d+)"',
-        ]
-        for pattern in patterns:
-            for href in re.findall(pattern, page_html, re.I):
-                full = urljoin("https://www.deepdiscount.com", href)
-                low = full.lower()
-                if any(bad in low for bad in [
-                    "/search",
-                    "/cart",
-                    "/account",
-                    "/help",
-                    "javascript:",
-                    "mailto:",
-                    "tel:",
-                    "#",
-                ]):
-                    continue
+
+        hrefs = re.findall(r'href="([^"]+)"', page_html, re.I)
+        for href in hrefs:
+            full = urljoin("https://www.deepdiscount.com", href)
+            low = full.lower()
+
+            if any(bad in low for bad in [
+                "/search",
+                "/cart",
+                "/account",
+                "/help",
+                "javascript:",
+                "mailto:",
+                "tel:",
+                "#",
+            ]):
+                continue
+
+            if "/product/" in low or "/p/" in low or "/item/" in low or "/ip/" in low:
                 links.add(full)
+
         return list(links)
 
     warmup_urls = [
@@ -882,7 +764,6 @@ def build_deepdiscount(source):
         dd_sleep()
 
     kept = 0
-    preorder_kept = 0
 
     for page_url in seed_pages:
         page_html = dd_fetch(page_url)
@@ -930,13 +811,6 @@ def build_deepdiscount(source):
                 continue
 
             image = extract_image(product_html, link)
-            preorder_info = detect_preorder_signals(
-                product_html,
-                source_name=source["name"],
-                source_url=link,
-                collection_endpoint_used=False
-            )
-            release_date = extract_release_date(product_html)
 
             keywords, version_parts = build_version_parts(
                 f"{raw_title} {link} {product_html[:3000]}",
@@ -960,17 +834,12 @@ def build_deepdiscount(source):
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": "",
                 "page_text_snippet": clean(product_html)[:1000],
-                "release_date": release_date,
-                "is_preorder": preorder_info["is_preorder"],
-                "preorder_terms": preorder_info["preorder_terms"],
             })
             kept += 1
-            if preorder_info["is_preorder"]:
-                preorder_kept += 1
 
     deduped = dedupe_source_items(deals)
-    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals (preorders: {preorder_kept})"
-    log(f'{source["name"]}: kept {len(deduped)} | preorders: {preorder_kept}')
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals"
+    log(f'{source["name"]}: kept {len(deduped)}')
     return deduped
 
 
@@ -1034,8 +903,6 @@ def dedupe_deals(deals):
             current = seen[key]
             if d["price"] < current["price"]:
                 seen[key] = d
-            elif not current.get("is_preorder") and d.get("is_preorder"):
-                seen[key] = d
     return list(seen.values())
 
 
@@ -1073,6 +940,4 @@ if __name__ == "__main__":
     with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(DEBUG))
 
-    preorder_count = sum(1 for item in data if item.get("is_preorder"))
-    live_count = sum(1 for item in data if not item.get("is_preorder"))
-    log(f"\nWrote {len(data)} total deals -> {live_count} live | {preorder_count} preorders")
+    log(f"\nWrote {len(data)} total live deals")
