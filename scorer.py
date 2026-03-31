@@ -83,11 +83,14 @@ def artist_tier_points(artist_name):
     tier_2 = [normalize_text(n) for n in artists.get("tier_2_adjacent", [])]
     tier_3 = [normalize_text(n) for n in artists.get("tier_3_watchlist", [])]
 
-    if artist_name in tier_1:
+    def match(pool):
+        return any(name in artist_name or artist_name in name for name in pool if name)
+
+    if match(tier_1):
         return "tier_1_core", 50
-    if artist_name in tier_2:
+    if match(tier_2):
         return "tier_2_adjacent", 25
-    if artist_name in tier_3:
+    if match(tier_3):
         return "tier_3_watchlist", 10
 
     return "other", 5
@@ -114,11 +117,13 @@ def bucket_match(item):
         score = 0
 
         for bucket_artist in bucket_data.get("artists", []):
-            if normalize_text(bucket_artist) == artist:
+            bucket_artist_norm = normalize_text(bucket_artist)
+            if bucket_artist_norm and (bucket_artist_norm == artist or bucket_artist_norm in artist):
                 score += 20
 
         for keyword in bucket_data.get("keywords", []):
-            if normalize_text(keyword) in text:
+            keyword_norm = normalize_text(keyword)
+            if keyword_norm and keyword_norm in text:
                 score += 3
 
         if score > best_score:
@@ -226,16 +231,12 @@ def format_points(item):
 
     if "vinyl" in text:
         score += 5
-
     if "limited" in text:
         score += 15
-
     if "exclusive" in text:
         score += 12
-
     if "preorder" in text or "pre-order" in text:
         score += 8
-
     if normalize_text(item.get("format", "")) == "vinyl":
         score += 5
 
@@ -286,13 +287,16 @@ def score_item(item):
         if total < 10:
             return None
 
-        decision = "LOW KEY"
-        if total >= 85:
-            decision = "POST / BUY / MOVE FAST"
-        elif total >= 60:
-            decision = "POST IF CONTENT-WORTHY"
+        if total >= 90:
+            decision = "🚨 GRAIL / AUTO BUY"
+        elif total >= 70:
+            decision = "🔥 STRONG FLIP"
+        elif total >= 50:
+            decision = "👀 WATCH / CONTENT"
         elif total >= 35:
-            decision = "PERSONAL CALL"
+            decision = "🧠 PERSONAL PICK"
+        else:
+            decision = "LOW KEY"
 
         merged = dict(item)
         merged["total"] = total
@@ -315,6 +319,33 @@ def score_item(item):
     except Exception as e:
         print(f"💥 score_item crash on item: {item.get('artist', 'Unknown')} - {item.get('title', 'Unknown')} | {e}")
         return None
+
+
+def dedupe_best_variants(results):
+    unique = {}
+
+    for r in results:
+        artist = normalize_text(r.get("artist", ""))
+        title = normalize_text(r.get("title", ""))
+        key = f"{artist}__{title}"
+
+        if key not in unique:
+            unique[key] = r
+            continue
+
+        current = unique[key]
+        current_score = current.get("total", 0)
+        new_score = r.get("total", 0)
+
+        if new_score > current_score:
+            unique[key] = r
+        elif new_score == current_score:
+            current_price = safe_price(current.get("best_price", current.get("price", 999999)))
+            new_price = safe_price(r.get("best_price", r.get("price", 999999)))
+            if new_price < current_price:
+                unique[key] = r
+
+    return list(unique.values())
 
 
 def main():
@@ -364,6 +395,10 @@ def main():
                 continue
 
             results.append(scored)
+
+        print(f"Before dedupe: {len(results)}")
+        results = dedupe_best_variants(results)
+        print(f"After dedupe: {len(results)}")
 
         results.sort(
             key=lambda r: (
