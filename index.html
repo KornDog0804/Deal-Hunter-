@@ -64,7 +64,24 @@
     <div class="summary">
       <div class="chip" id="dealCount">Deals: 0</div>
       <div class="chip" id="updatedAt">Updated from scored_deals.json</div>
-      <div class="chip" id="pageStatus">Page 1</div>
+      <button class="chip chip-button" id="pageStatus" type="button">Page 1</button>
+    </div>
+
+    <div id="topPageNav" class="top-page-nav" style="display:none;">
+      <div class="top-page-nav-inner">
+        <div id="topPageNumbers" class="page-numbers"></div>
+        <div class="page-jump-wrap">
+          <input
+            id="topPageJumpInput"
+            class="page-jump-input"
+            type="number"
+            min="1"
+            placeholder="Page"
+            inputmode="numeric"
+          />
+          <button class="btn btn-ghost" id="topPageJumpBtn">Go</button>
+        </div>
+      </div>
     </div>
 
     <section class="section" id="topPicksSection">
@@ -170,6 +187,10 @@
       if (source.includes("unfd")) return "unfd";
       if (source.includes("sumerian")) return "sumerian records";
       if (source.includes("solid state")) return "solid state records";
+      if (source.includes("hot topic")) return "hot topic";
+      if (source.includes("pure noise")) return "pure noise records";
+      if (source.includes("rhino")) return "rhino";
+      if (source.includes("interscope")) return "interscope records";
 
       return source;
     }
@@ -201,7 +222,11 @@
         "rock metal fan nation": "Rock Metal Fan Nation",
         "unfd": "UNFD",
         "sumerian records": "Sumerian Records",
-        "solid state records": "Solid State Records"
+        "solid state records": "Solid State Records",
+        "hot topic": "Hot Topic",
+        "pure noise records": "Pure Noise Records",
+        "rhino": "Rhino",
+        "interscope records": "Interscope Records"
       };
 
       return map[key] || String(value || "").trim();
@@ -540,6 +565,17 @@ Korndog preorder radar is on the hunt 💿🔥`;
       }
     }
 
+    function toggleTopPageNav(forceOpen = null) {
+      const topNav = document.getElementById("topPageNav");
+      if (!topNav) return;
+
+      const shouldOpen = forceOpen === null
+        ? topNav.style.display === "none"
+        : !!forceOpen;
+
+      topNav.style.display = shouldOpen ? "block" : "none";
+    }
+
     function renderFeatured(deals) {
       const featuredList = document.getElementById("featuredList");
       featuredList.innerHTML = "";
@@ -599,11 +635,11 @@ Korndog preorder radar is on the hunt 💿🔥`;
       return picks;
     }
 
-    function renderPageNumbers(totalPages) {
-      const pageNumbers = document.getElementById("pageNumbers");
-      if (!pageNumbers) return;
+    function renderPageNumberSet(containerId, totalPages) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
 
-      pageNumbers.innerHTML = "";
+      container.innerHTML = "";
 
       if (totalPages <= 1) return;
 
@@ -625,7 +661,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
           const ellipsis = document.createElement("span");
           ellipsis.className = "page-ellipsis";
           ellipsis.textContent = "...";
-          pageNumbers.appendChild(ellipsis);
+          container.appendChild(ellipsis);
         }
 
         const btn = document.createElement("button");
@@ -634,12 +670,21 @@ Korndog preorder radar is on the hunt 💿🔥`;
         btn.addEventListener("click", () => {
           currentPage = page;
           applyFilters(false);
+          toggleTopPageNav(false);
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-        pageNumbers.appendChild(btn);
+        container.appendChild(btn);
         lastPage = page;
       });
+    }
+
+    function renderPageNumbers(totalPages) {
+      renderPageNumberSet("pageNumbers", totalPages);
+    }
+
+    function renderTopPageNumbers(totalPages) {
+      renderPageNumberSet("topPageNumbers", totalPages);
     }
 
     function renderDeals(deals, featuredDeals = []) {
@@ -647,6 +692,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
       const pager = document.getElementById("pager");
       const pageStatus = document.getElementById("pageStatus");
       const pageNumbers = document.getElementById("pageNumbers");
+      const topPageNumbers = document.getElementById("topPageNumbers");
 
       dealList.innerHTML = "";
 
@@ -672,6 +718,8 @@ Korndog preorder radar is on the hunt 💿🔥`;
         pager.style.display = "none";
         pageStatus.textContent = "Page 0";
         if (pageNumbers) pageNumbers.innerHTML = "";
+        if (topPageNumbers) topPageNumbers.innerHTML = "";
+        toggleTopPageNav(false);
         return;
       }
 
@@ -694,6 +742,7 @@ Korndog preorder radar is on the hunt 💿🔥`;
       document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
 
       renderPageNumbers(totalPages);
+      renderTopPageNumbers(totalPages);
     }
 
     function matchesQuickFilter(deal) {
@@ -774,7 +823,11 @@ Korndog preorder radar is on the hunt 💿🔥`;
         ["rock metal fan nation", "Rock Metal Fan Nation"],
         ["unfd", "UNFD"],
         ["sumerian records", "Sumerian Records"],
-        ["solid state records", "Solid State Records"]
+        ["solid state records", "Solid State Records"],
+        ["hot topic", "Hot Topic"],
+        ["pure noise records", "Pure Noise Records"],
+        ["rhino", "Rhino"],
+        ["interscope records", "Interscope Records"]
       ];
 
       seededSources.forEach(([value, label]) => {
@@ -828,7 +881,10 @@ Korndog preorder radar is on the hunt 💿🔥`;
         document.getElementById("pager").style.display = "none";
         document.getElementById("pageStatus").textContent = "Preorders";
         const pageNumbers = document.getElementById("pageNumbers");
+        const topPageNumbers = document.getElementById("topPageNumbers");
         if (pageNumbers) pageNumbers.innerHTML = "";
+        if (topPageNumbers) topPageNumbers.innerHTML = "";
+        toggleTopPageNav(false);
         return;
       }
 
@@ -852,58 +908,29 @@ Korndog preorder radar is on the hunt 💿🔥`;
       });
     }
 
-    function initPager() {
-      document.getElementById("prevPageBtn").addEventListener("click", () => {
-        if (currentPage > 1) {
-          currentPage -= 1;
-          applyFilters(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
+    function getTotalPageCountForCurrentView() {
+      const totalFiltered = getFilteredDeals();
 
-      document.getElementById("nextPageBtn").addEventListener("click", () => {
-        const totalFiltered = getFilteredDeals();
+      let workingDeals = totalFiltered;
+      if (currentPage === 1) {
+        const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
+        const featuredKeys = new Set(
+          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
+        );
 
-        let workingDeals = totalFiltered;
-        if (currentPage === 1) {
-          const featuredDeals = totalFiltered.filter(d => (d.total ?? 0) >= 8).slice(0, 6);
-          const featuredKeys = new Set(
-            featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-          );
+        workingDeals = totalFiltered.filter(d => {
+          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
+          return !featuredKeys.has(key);
+        });
+      }
 
-          workingDeals = totalFiltered.filter(d => {
-            const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-            return !featuredKeys.has(key);
-          });
-        }
-
-        const total = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
-
-        if (currentPage < total) {
-          currentPage += 1;
-          applyFilters(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-
-      const pageJumpBtn = document.getElementById("pageJumpBtn");
-      const pageJumpInput = document.getElementById("pageJumpInput");
-
-      pageJumpBtn.addEventListener("click", () => {
-        jumpToPage();
-      });
-
-      pageJumpInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          jumpToPage();
-        }
-      });
+      return Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
     }
 
-    function jumpToPage() {
+    function jumpToPage(inputId = "pageJumpInput") {
       if (activeQuickFilter === "preorders") return;
 
-      const input = document.getElementById("pageJumpInput");
+      const input = document.getElementById(inputId);
       let page = Number(input.value || 0);
       if (!page || page < 1) return;
 
@@ -927,8 +954,61 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
       currentPage = page;
       applyFilters(false);
+      toggleTopPageNav(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
       input.value = "";
+    }
+
+    function initPager() {
+      document.getElementById("prevPageBtn").addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage -= 1;
+          applyFilters(false);
+          toggleTopPageNav(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      document.getElementById("nextPageBtn").addEventListener("click", () => {
+        const total = getTotalPageCountForCurrentView();
+
+        if (currentPage < total) {
+          currentPage += 1;
+          applyFilters(false);
+          toggleTopPageNav(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      const pageJumpBtn = document.getElementById("pageJumpBtn");
+      const pageJumpInput = document.getElementById("pageJumpInput");
+      const topPageJumpBtn = document.getElementById("topPageJumpBtn");
+      const topPageJumpInput = document.getElementById("topPageJumpInput");
+
+      pageJumpBtn.addEventListener("click", () => {
+        jumpToPage("pageJumpInput");
+      });
+
+      pageJumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          jumpToPage("pageJumpInput");
+        }
+      });
+
+      topPageJumpBtn.addEventListener("click", () => {
+        jumpToPage("topPageJumpInput");
+      });
+
+      topPageJumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          jumpToPage("topPageJumpInput");
+        }
+      });
+
+      document.getElementById("pageStatus").addEventListener("click", () => {
+        if (activeQuickFilter === "preorders") return;
+        toggleTopPageNav();
+      });
     }
 
     function openMenu() {
@@ -985,10 +1065,14 @@ Korndog preorder radar is on the hunt 💿🔥`;
 
     document.getElementById("sourceFilter").addEventListener("change", () => {
       applyFilters(true);
+      toggleTopPageNav(false);
       closeMenu();
     });
 
-    document.getElementById("scoreFilter").addEventListener("change", () => applyFilters(true));
+    document.getElementById("scoreFilter").addEventListener("change", () => {
+      applyFilters(true);
+      toggleTopPageNav(false);
+    });
 
     initQuickFilters();
     initPager();
