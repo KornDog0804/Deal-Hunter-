@@ -1,0 +1,186 @@
+{
+  "core_buckets": {
+    "heavy_emotion_modern_heavy": {
+      "artists": [
+        "Sleep Token",
+        "ERRA",
+        "Polaris",
+        "Currents",
+        "Wage War",
+        "Dayseeker",
+        "Memphis May Fire",
+        "The Ghost Inside",
+        "Boundaries",
+        "Palisades",
+        "Bleed From Within",
+        "Thornhill",
+        "Eidola",
+        "Dance Gavin Dance",
+        "If Not For Me",
+        "Wind Walkers",
+        "Awaken I Am",
+        "Nerv",
+        "Make Them Suffer",
+        "Bad Omens",
+        "Spiritbox",
+        "Architects",
+        "Rain City Drive",
+        "Slaves"
+      ],
+      "keywords": [
+        "metalcore",
+        "post-hardcore",
+        "melodic hardcore",
+        "alt metal",
+        "progressive metalcore",
+        "atmospheric",
+        "emotional heavy",
+        "clean vocals",
+        "screamed vocals",
+        "djenty",
+        "ambient heavy"
+      ]
+    },
+    "aggressive_nostalgia": {
+      "artists": [
+        "Korn",
+        "Slipknot",
+        "Limp Bizkit",
+        "System Of A Down",
+        "Pantera",
+        "Deftones",
+        "TOOL",
+        "Linkin Park",
+        "Breaking Benjamin",
+        "Three Days Grace",
+        "Incubus",
+        "Seether",
+        "Atreyu",
+        "All That Remains",
+        "Killswitch Engage",
+        "A Day To Remember",
+        "Attack Attack!",
+        "Fire From The Gods",
+        "Nothing More",
+        "Disturbed",
+        "Sevendust",
+        "Papa Roach",
+        "Staind",
+        "Godsmack"
+      ],
+      "keywords": [
+        "nu metal",
+        "rap metal",
+        "alt metal",
+        "post-grunge",
+        "hard rock",
+        "2000s rock",
+        "aggressive",
+        "radio rock"
+      ]
+    },
+    "southern_rap_gold": {
+      "artists": [
+        "8Ball & MJG",
+        "UGK",
+        "Three 6 Mafia",
+        "Project Pat",
+        "Juicy J",
+        "Pimp C",
+        "Bun B",
+        "Trick Daddy",
+        "Plies",
+        "Chingy",
+        "Lil Jon & The East Side Boyz"
+      ],
+      "keywords": [
+        "southern rap",
+        "dirty south",
+        "memphis rap",
+        "underground southern rap",
+        "southern hip-hop"
+      ]
+    },
+    "smooth_rnb_soul": {
+      "artists": [
+        "Usher",
+        "Joe",
+        "Tyrese",
+        "LSG",
+        "Xscape",
+        "The Isley Brothers",
+        "Earth, Wind & Fire",
+        "Bill Withers",
+        "Tony! Toni! Toné!",
+        "Lenny Williams",
+        "Michael Jackson",
+        "Twista",
+        "Chris Brown",
+        "T-Pain"
+      ],
+      "keywords": [
+        "r&b",
+        "soul",
+        "slow jams",
+        "neo soul",
+        "quiet storm"
+      ]
+    },
+    "classic_rock_staples": {
+      "artists": [
+        "Journey",
+        "Foreigner",
+        "Boston",
+        "Heart",
+        "REO Speedwagon",
+        "Styx",
+        "Eagles",
+        "Billy Squier",
+        "The Doobie Brothers",
+        "Steve Miller Band",
+        "Toto",
+        "Tommy Tutone",
+        "Ozzy Osbourne",
+        "Judas Priest",
+        "Monster Magnet"
+      ],
+      "keywords": [
+        "classic rock",
+        "arena rock",
+        "southern rock",
+        "70s rock",
+        "80s rock",
+        "radio rock"
+      ]
+    }
+  },
+  "collector_keywords": [
+    "limited",
+    "exclusive",
+    "numbered",
+    "splatter",
+    "marble",
+    "colored",
+    "variant",
+    "box set",
+    "deluxe",
+    "anniversary",
+    "picture disc",
+    "zoetrope",
+    "sealed",
+    "import",
+    "first pressing",
+    "first time on vinyl"
+  ],
+  "resale_priority_keywords": [
+    "sold out",
+    "exclusive",
+    "limited to",
+    "numbered",
+    "first pressing",
+    "preorder",
+    "pre-order",
+    "indie exclusive",
+    "retail exclusive"
+  ]
+}
