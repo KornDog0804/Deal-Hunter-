@@ -6,7 +6,7 @@ import time
 import random
 import urllib.request
 import http.cookiejar
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote_plus
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
@@ -18,6 +18,16 @@ USER_AGENTS = [
 ]
 _ua_index = 0
 
+AMAZON_TAG = "korndog20-20"
+WALMART_SEARCH_BASE = "https://www.walmart.com/search?q="
+HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/search?q=vinyl"
+MERCHBAR_SEARCH_URL = "https://www.merchbar.com/vinyl-records"
+DEEPDISCOUNT_SEARCH_URLS = [
+    "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
+    "https://www.deepdiscount.com/music/vinyl",
+    "https://www.deepdiscount.com/music/vinyl/new-releases",
+    "https://www.deepdiscount.com/featured-vinyl/b141496",
+]
 
 def next_ua():
     global _ua_index
@@ -57,16 +67,17 @@ SOURCES = [
 
     {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
 
-    {"name": "UNFD", "source_type": "catalog_store", "url": "https://usa.24hundred.net/collections/unfd"},
-    {"name": "Merchbar", "source_type": "catalog_store", "url": "https://www.merchbar.com/vinyl-records"},
-    {"name": "Hot Topic", "source_type": "catalog_store", "url": "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"},
+    {"name": "UNFD", "source_type": "unfd_store", "url": "https://usa.24hundred.net/collections/unfd"},
+    {"name": "Merchbar", "source_type": "merchbar_store", "url": MERCHBAR_SEARCH_URL},
+    {"name": "Hot Topic", "source_type": "hottopic_store", "url": HOT_TOPIC_SEARCH_URL},
 
     {"name": "Deep Discount", "source_type": "deepdiscount_store", "url": "https://www.deepdiscount.com"},
-    {"name": "Millions of Records", "source_type": "catalog_store", "url": "https://www.millionsofrecords.com"},
+    {"name": "Millions of Records", "source_type": "millions_store", "url": "https://www.millionsofrecords.com"},
     {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
     {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
 
-    {"name": "Walmart", "source_type": "js_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481_4104_1044819"},
+    {"name": "Amazon", "source_type": "amazon_affiliate_source", "url": ""},
+    {"name": "Walmart", "source_type": "walmart_search_source", "url": ""},
     {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
 ]
 
@@ -94,16 +105,13 @@ BAD_PRODUCT_TERMS = [
 DEBUG = []
 SOURCE_STATUS = {}
 
-
 def log(msg):
     print(msg)
     DEBUG.append(msg)
 
-
 def load_json(name):
     with open(BASE / name, "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 ARTIST_CONFIG = load_json("artist_whitelist.json")
 SLUG_PATTERNS = load_json("slug_patterns.json")
@@ -112,17 +120,19 @@ ENFORCE_ARTIST_WHITELIST = ARTIST_CONFIG.get("enforce_artist_whitelist", True)
 ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
 BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
 
-
-def fetch(url, retries=2, delay=2):
+def fetch(url, retries=2, delay=2, extra_headers=None):
+    extra_headers = extra_headers or {}
     for attempt in range(retries + 1):
         try:
-            req = urllib.request.Request(url, headers={
+            headers = {
                 "User-Agent": next_ua(),
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                 "Accept-Language": "en-US,en;q=0.5",
                 "Accept-Encoding": "identity",
                 "Connection": "keep-alive",
-            })
+            }
+            headers.update(extra_headers)
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return resp.read().decode("utf-8", "ignore")
         except Exception as e:
@@ -132,14 +142,12 @@ def fetch(url, retries=2, delay=2):
             else:
                 raise
 
-
 def clean(text):
     text = html.unescape(text or "")
     text = re.sub(r"<[^>]+>", " ", text)
     text = text.replace("–", "-").replace("|", "-")
     text = text.replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"')
     return re.sub(r"\s+", " ", text).strip()
-
 
 def normalize_price(value):
     try:
@@ -152,11 +160,9 @@ def normalize_price(value):
         value = value / 100.0
     return round(value, 2)
 
-
 def is_banned(text):
     t = (text or "").lower()
     return any(b in t for b in BANNED_KEYWORDS)
-
 
 def is_sold_out(text):
     t = (text or "").lower()
@@ -169,11 +175,9 @@ def is_sold_out(text):
         "not available",
     ])
 
-
 def looks_like_amazon_link(url):
     u = (url or "").lower()
     return "amazon.com" in u or "amzn.to" in u
-
 
 def artist_allowed(artist, title=""):
     hay = f"{artist} {title}".lower()
@@ -183,11 +187,9 @@ def artist_allowed(artist, title=""):
         return True
     return any(a in hay for a in ALLOWED)
 
-
 def keyword_hits(text):
     t = (text or "").lower()
     return [k for k in POSITIVE_KEYWORDS if k in t]
-
 
 def looks_like_garbage(text):
     t = (text or "").strip().lower()
@@ -199,11 +201,9 @@ def looks_like_garbage(text):
         return True
     return False
 
-
 def contains_bad_product_terms(text):
     t = (text or "").lower()
     return any(term in t for term in BAD_PRODUCT_TERMS)
-
 
 def should_skip(title, link):
     blob = f"{title} {link}".lower()
@@ -212,7 +212,6 @@ def should_skip(title, link):
     if contains_bad_product_terms(blob):
         return True
     return False
-
 
 def clean_store_title(title):
     text = clean(title)
@@ -245,12 +244,13 @@ def clean_store_title(title):
         r"\s*-\s*Millions of Records\s*$",
         r"\s*-\s*IndieMerchstore\s*$",
         r"\s*-\s*Deep Discount\s*$",
+        r"\s*-\s*Amazon\s*$",
+        r"\s*-\s*Walmart\s*$",
     ]
     for pattern in junk_patterns:
         text = re.sub(pattern, "", text, flags=re.I)
     text = re.sub(r"\s+", " ", text).strip(" -")
     return text
-
 
 def parse_from_slug(link):
     slug = link.rstrip("/").split("/")[-1]
@@ -263,14 +263,12 @@ def parse_from_slug(link):
     )
     return re.sub(r"\s+", " ", slug).strip()
 
-
 def split_artist_album_from_title(title):
     title = clean_store_title(title)
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
     if len(parts) >= 2:
         return parts[0], parts[1]
     return "", title
-
 
 def infer_artist_title(raw_title, link, vendor="", source_name=""):
     title = clean_store_title(raw_title)
@@ -295,7 +293,6 @@ def infer_artist_title(raw_title, link, vendor="", source_name=""):
 
     return "Unknown Artist", title
 
-
 def detect_format(title="", product_type="", page_text=""):
     title_l = (title or "").lower()
     product_type_l = (product_type or "").lower()
@@ -310,7 +307,7 @@ def detect_format(title="", product_type="", page_text=""):
             return "other"
 
     strong_blob = f"{title_l} {product_type_l}"
-    page_blob = f"{strong_blob} {page_text_l[:1000]}"
+    page_blob = f"{strong_blob} {page_text_l[:1200]}"
 
     vinyl_markers = [
         " vinyl", "vinyl ", " vinyl ",
@@ -320,7 +317,6 @@ def detect_format(title="", product_type="", page_text=""):
 
     if any(x in strong_blob for x in vinyl_markers):
         return "vinyl"
-
     if any(x in page_blob for x in vinyl_markers):
         return "vinyl"
 
@@ -331,7 +327,6 @@ def detect_format(title="", product_type="", page_text=""):
 
     return "other"
 
-
 def extract_links(html_text, base, source_type="shopify_store"):
     raw_links = re.findall(r'href="([^"]+)"', html_text, re.IGNORECASE)
     links = []
@@ -341,15 +336,15 @@ def extract_links(html_text, base, source_type="shopify_store"):
         "javascript:", "mailto:", "tel:"
     ]
 
-    if source_type in {"shopify_store", "merchnow_store"}:
+    if source_type in {"shopify_store", "merchnow_store", "unfd_store"}:
         valid_markers = ["/products/", "/product/"]
-    elif source_type == "catalog_store":
+    elif source_type in {"catalog_store", "merchbar_store", "hottopic_store", "millions_store"}:
         valid_markers = [
             "/product/", "/products/", "/p/", "/item/",
-            "/ip/", "/dp/", "/vinyl", "/album", "/record"
+            "/ip/", "/dp/", "/vinyl", "/album", "/record", "/albums/"
         ]
     else:
-        valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/"]
+        valid_markers = ["/products/", "/product/", "/p/", "/item/", "/ip/", "/albums/"]
 
     for href in raw_links:
         href = href.strip()
@@ -362,8 +357,7 @@ def extract_links(html_text, base, source_type="shopify_store"):
             if full not in links:
                 links.append(full)
 
-    return links[:500]
-
+    return links[:800]
 
 def extract_title(html_text):
     patterns = [
@@ -383,7 +377,6 @@ def extract_title(html_text):
             if title and len(title) > 2:
                 return clean_store_title(title)
     return "Unknown Title"
-
 
 def extract_price(html_text):
     patterns = [
@@ -405,7 +398,6 @@ def extract_price(html_text):
             return normalize_price(raw)
     return 0.0
 
-
 def extract_image(html_text, base):
     patterns = [
         r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"',
@@ -422,7 +414,6 @@ def extract_image(html_text, base):
                 return urljoin(base, img)
     return ""
 
-
 def build_version_parts(text_blob, title_lower="", link_lower=""):
     keywords = keyword_hits(text_blob)
     version_parts = keywords[:]
@@ -432,7 +423,6 @@ def build_version_parts(text_blob, title_lower="", link_lower=""):
         if token in link_lower and token not in version_parts:
             version_parts.append(token)
     return keywords, version_parts
-
 
 def fetch_shopify_products(source_url):
     url = source_url.rstrip("/")
@@ -474,7 +464,6 @@ def fetch_shopify_products(source_url):
 
     return [], ""
 
-
 def build_shopify_deals(source):
     deals = []
     products, endpoint_used = fetch_shopify_products(source["url"])
@@ -500,7 +489,6 @@ def build_shopify_deals(source):
 
             if should_skip(title, ""):
                 continue
-
             if contains_bad_product_terms(f"{title} {product_type} {tags_text}"):
                 continue
 
@@ -532,7 +520,6 @@ def build_shopify_deals(source):
             link = base_url + "/products/" + handle
 
             artist, album = infer_artist_title(title, link, vendor=vendor, source_name=source["name"])
-
             if looks_like_garbage(album):
                 continue
             if contains_bad_product_terms(f"{artist} {album}"):
@@ -588,12 +575,70 @@ def build_shopify_deals(source):
     log(f'{source["name"]}: kept {kept}')
     return deals
 
+def source_specific_links(page_html, source):
+    source_name = (source.get("name") or "").lower()
+    source_type = source.get("source_type", "")
+
+    if source_type == "merchbar_store":
+        patterns = [
+            r'href="(/albums/[^"]+)"',
+            r'href="(/vinyl-records/[^"]+)"',
+            r'href="(/product/[^"]+)"',
+        ]
+        links = []
+        for pattern in patterns:
+            for href in re.findall(pattern, page_html, re.I):
+                full = urljoin("https://www.merchbar.com", href)
+                if full not in links:
+                    links.append(full)
+        return links[:600]
+
+    if source_type == "hottopic_store":
+        patterns = [
+            r'href="([^"]+/product/[^"]+)"',
+            r'href="(/product/[^"]+)"',
+        ]
+        links = []
+        for pattern in patterns:
+            for href in re.findall(pattern, page_html, re.I):
+                full = urljoin("https://www.hottopic.com", href)
+                if "/product/" in full.lower() and full not in links:
+                    links.append(full)
+        return links[:400]
+
+    if source_type == "millions_store":
+        patterns = [
+            r'href="(/products/[^"]+)"',
+            r'href="([^"]+/products/[^"]+)"',
+        ]
+        links = []
+        for pattern in patterns:
+            for href in re.findall(pattern, page_html, re.I):
+                full = urljoin("https://www.millionsofrecords.com", href)
+                if full not in links:
+                    links.append(full)
+        return links[:500]
+
+    if source_type == "unfd_store":
+        patterns = [
+            r'href="(/products/[^"]+)"',
+            r'href="([^"]+/products/[^"]+)"',
+        ]
+        links = []
+        for pattern in patterns:
+            for href in re.findall(pattern, page_html, re.I):
+                full = urljoin("https://usa.24hundred.net", href)
+                if full not in links:
+                    links.append(full)
+        return links[:500]
+
+    return extract_links(page_html, source.get("url", ""), source_type=source_type)
 
 def build_html_deals(source):
     deals = []
     try:
         html_text = fetch(source["url"])
-        links = extract_links(html_text, source["url"], source.get("source_type", "catalog_store"))
+        links = source_specific_links(html_text, source)
         log(f'{source["name"]}: found {len(links)} HTML links')
 
         kept = 0
@@ -629,7 +674,7 @@ def build_html_deals(source):
                 if not artist_allowed(artist, album):
                     continue
 
-                fmt = detect_format(title=raw_title, product_type="", page_text=page[:3000])
+                fmt = detect_format(title=raw_title, product_type="", page_text=page[:3500])
                 if fmt != "vinyl":
                     continue
 
@@ -672,6 +717,31 @@ def build_html_deals(source):
 
     return deals
 
+def build_unfd(source):
+    deals = build_shopify_deals({
+        "name": source["name"],
+        "source_type": "shopify_store",
+        "url": source["url"],
+    })
+    if deals:
+        SOURCE_STATUS[source["name"]] = f"{len(deals)} deals"
+        return deals
+
+    log(f'{source["name"]}: Shopify path empty, trying HTML fallback')
+    return build_html_deals(source)
+
+def build_millions(source):
+    deals = build_shopify_deals({
+        "name": source["name"],
+        "source_type": "shopify_store",
+        "url": source["url"],
+    })
+    if deals:
+        SOURCE_STATUS[source["name"]] = f"{len(deals)} deals"
+        return deals
+
+    log(f'{source["name"]}: Shopify path empty, trying HTML fallback')
+    return build_html_deals(source)
 
 def build_deepdiscount(source):
     deals = []
@@ -692,37 +762,25 @@ def build_deepdiscount(source):
     ]
 
     def dd_sleep():
-        time.sleep(random.uniform(1.1, 2.4))
+        time.sleep(random.uniform(1.0, 2.2))
 
     def dd_fetch(url, retries=3):
         nonlocal opener
-        for attempt in range(retries):
+        for _ in range(retries):
             try:
                 with opener.open(url, timeout=25) as resp:
-                    code = getattr(resp, "status", 200)
                     html_text = resp.read().decode("utf-8", "ignore")
-                    log(f"Deep Discount fetch: {url} -> {code}")
+                    log(f"Deep Discount fetch: {url}")
                     return html_text
             except Exception as e:
                 log(f"Deep Discount fetch error: {url} | {e}")
-                opener.addheaders = [
-                    ("User-Agent", random.choice(USER_AGENTS)),
-                    ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"),
-                    ("Accept-Language", "en-US,en;q=0.9"),
-                    ("Cache-Control", "no-cache"),
-                    ("Pragma", "no-cache"),
-                    ("Upgrade-Insecure-Requests", "1"),
-                    ("Referer", "https://www.deepdiscount.com/"),
-                    ("DNT", "1"),
-                    ("Connection", "keep-alive"),
-                ]
                 dd_sleep()
         return ""
 
     def extract_dd_links(page_html):
         links = set()
-
         hrefs = re.findall(r'href="([^"]+)"', page_html, re.I)
+
         for href in hrefs:
             full = urljoin("https://www.deepdiscount.com", href)
             low = full.lower()
@@ -739,24 +797,24 @@ def build_deepdiscount(source):
             ]):
                 continue
 
-            if "/product/" in low or "/p/" in low or "/item/" in low or "/ip/" in low:
+            path = re.sub(r"^https?://[^/]+", "", low)
+            if low.endswith((".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".css", ".js")):
+                continue
+
+            if (
+                "/product/" in low
+                or "/p/" in low
+                or "/item/" in low
+                or "/ip/" in low
+                or len([x for x in path.split("/") if x]) >= 2
+            ):
                 links.add(full)
 
-        return list(links)
+        return list(links)[:1000]
 
     warmup_urls = [
         "https://www.deepdiscount.com/",
-        "https://www.deepdiscount.com/help",
         "https://www.deepdiscount.com/music/vinyl",
-        "https://www.deepdiscount.com/music/vinyl/new-releases",
-        "https://www.deepdiscount.com/featured-vinyl/b141496",
-    ]
-
-    seed_pages = [
-        "https://www.deepdiscount.com/music/vinyl",
-        "https://www.deepdiscount.com/music/vinyl/new-releases",
-        "https://www.deepdiscount.com/featured-vinyl/b141496",
-        "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
     ]
 
     for warm in warmup_urls:
@@ -765,7 +823,7 @@ def build_deepdiscount(source):
 
     kept = 0
 
-    for page_url in seed_pages:
+    for page_url in DEEPDISCOUNT_SEARCH_URLS:
         page_html = dd_fetch(page_url)
         if not page_html:
             continue
@@ -782,14 +840,12 @@ def build_deepdiscount(source):
             product_html = dd_fetch(link)
             if not product_html:
                 continue
-
             if is_sold_out(product_html):
                 continue
 
             raw_title = extract_title(product_html)
             if not raw_title:
                 continue
-
             if should_skip(raw_title, link):
                 continue
 
@@ -797,12 +853,11 @@ def build_deepdiscount(source):
             if price <= 0:
                 continue
 
-            fmt = detect_format(title=raw_title, product_type="", page_text=product_html[:3000])
+            fmt = detect_format(title=raw_title, product_type="", page_text=product_html[:3500])
             if fmt != "vinyl":
                 continue
 
             artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
-
             if looks_like_garbage(album):
                 continue
             if contains_bad_product_terms(f"{artist} {album}"):
@@ -842,6 +897,70 @@ def build_deepdiscount(source):
     log(f'{source["name"]}: kept {len(deduped)}')
     return deduped
 
+def derive_amazon_walmart(deals):
+    derived = []
+    seen = set()
+
+    for item in deals:
+        artist = clean(item.get("artist", ""))
+        title = clean(item.get("title", ""))
+        if not artist or not title:
+            continue
+        if looks_like_garbage(title):
+            continue
+        if contains_bad_product_terms(f"{artist} {title}"):
+            continue
+
+        query = f"{artist} {title} vinyl".strip()
+        key = f"{artist.lower()}::{title.lower()}"
+
+        if key not in seen:
+            seen.add(key)
+
+            amazon_link = f"https://www.amazon.com/s?k={quote_plus(query)}&tag={AMAZON_TAG}"
+            walmart_link = f"{WALMART_SEARCH_BASE}{quote_plus(query)}"
+
+            base_price = normalize_price(item.get("price", 0))
+
+            derived.append({
+                "artist": artist,
+                "title": title,
+                "raw_title": f"{artist} - {title}",
+                "price": base_price if base_price > 0 else 29.99,
+                "source": "Amazon",
+                "source_type": "affiliate_search_source",
+                "link": amazon_link,
+                "image": item.get("image", ""),
+                "keywords": item.get("keywords", []),
+                "deal_quality": item.get("deal_quality", "normal"),
+                "demand": item.get("demand", "steady"),
+                "format": "vinyl",
+                "version": item.get("version", "standard"),
+                "availability_text": "",
+                "page_text_snippet": "Amazon affiliate search result derived from live catalog match.",
+            })
+
+            derived.append({
+                "artist": artist,
+                "title": title,
+                "raw_title": f"{artist} - {title}",
+                "price": base_price if base_price > 0 else 29.99,
+                "source": "Walmart",
+                "source_type": "affiliate_search_source",
+                "link": walmart_link,
+                "image": item.get("image", ""),
+                "keywords": item.get("keywords", []),
+                "deal_quality": item.get("deal_quality", "normal"),
+                "demand": item.get("demand", "steady"),
+                "format": "vinyl",
+                "version": item.get("version", "standard"),
+                "availability_text": "",
+                "page_text_snippet": "Walmart search result derived from live catalog match.",
+            })
+
+    SOURCE_STATUS["Amazon"] = f"{sum(1 for d in derived if d['source'] == 'Amazon')} derived deals"
+    SOURCE_STATUS["Walmart"] = f"{sum(1 for d in derived if d['source'] == 'Walmart')} derived deals"
+    return derived
 
 def dedupe_source_items(items):
     seen = {}
@@ -859,16 +978,35 @@ def dedupe_source_items(items):
 
     return list(seen.values())
 
-
 def scrape_source(source):
     stype = source.get("source_type", "")
 
     if stype == "deepdiscount_store":
         return build_deepdiscount(source)
 
+    if stype == "unfd_store":
+        return build_unfd(source)
+
+    if stype == "millions_store":
+        return build_millions(source)
+
+    if stype == "merchbar_store":
+        return build_html_deals(source)
+
+    if stype == "hottopic_store":
+        return build_html_deals(source)
+
+    if stype == "amazon_affiliate_source":
+        SOURCE_STATUS[source["name"]] = "Derived after main scrape"
+        return []
+
+    if stype == "walmart_search_source":
+        SOURCE_STATUS[source["name"]] = "Derived after main scrape"
+        return []
+
     if stype == "js_store":
-        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs API/headless lane)"
-        log(f'{source["name"]}: SKIPPED (JS-rendered - needs API/headless lane)')
+        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs full API/headless lane)"
+        log(f'{source["name"]}: SKIPPED (JS-rendered - needs full API/headless lane)')
         return []
 
     if stype == "merchnow_store":
@@ -892,7 +1030,6 @@ def scrape_source(source):
     SOURCE_STATUS[source["name"]] = f'SKIPPED (unknown type: {stype})'
     return []
 
-
 def dedupe_deals(deals):
     seen = {}
     for d in deals:
@@ -905,16 +1042,24 @@ def dedupe_deals(deals):
                 seen[key] = d
     return list(seen.values())
 
-
 def build():
     deals = []
+    real_source_deals = []
+
     for source in SOURCES:
+        if source["source_type"] in {"amazon_affiliate_source", "walmart_search_source"}:
+            continue
         log(f"\n{'=' * 50}")
         log(f"Scraping: {source['name']} ({source['source_type']})")
         log(f"{'=' * 50}")
-        deals.extend(scrape_source(source))
-    return dedupe_deals(deals)
+        pulled = scrape_source(source)
+        deals.extend(pulled)
+        real_source_deals.extend(pulled)
 
+    derived = derive_amazon_walmart(real_source_deals)
+    deals.extend(derived)
+
+    return dedupe_deals(deals)
 
 if __name__ == "__main__":
     data = build()
