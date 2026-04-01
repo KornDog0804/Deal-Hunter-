@@ -20,22 +20,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install requests
+      - name: Reset to latest main
+        run: |
+          git fetch origin
+          git reset --hard origin/main
 
       - name: Pull live deals
         run: python live_pull.py
-
-      - name: Run scorer
-        run: python scorer.py
 
       - name: Show generated files
         run: |
           ls -lah
           echo "----- live_deals.json -----"
           cat live_deals.json || true
-          echo "----- scored_deals.json -----"
-          cat scored_deals.json || true
           echo "----- debug_live_pull.txt -----"
           cat debug_live_pull.txt || true
 
@@ -43,12 +40,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add live_deals.json scored_deals.json debug_live_pull.txt
-
+          git add live_deals.json debug_live_pull.txt
           git diff --cached --quiet || git commit -m "Update live deal outputs"
-
-          git pull --rebase origin main
           git push
 
       - name: Upload outputs
@@ -57,5 +50,4 @@ jobs:
           name: deal-hunter-output
           path: |
             live_deals.json
-            scored_deals.json
             debug_live_pull.txt
