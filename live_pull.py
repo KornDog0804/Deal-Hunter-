@@ -33,8 +33,13 @@ WALMART_BROWSE_URLS = [
     "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=4",
 ]
 
-HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/music/vinyl/"
-MERCHBAR_SEARCH_URL = "https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl"
+HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/pop-culture/shop-by-license/music/vinyl/"
+MERCHBAR_VINYL_URLS = [
+    "https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl",
+    "https://www.merchbar.com/hard-rock-metal?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl",
+    "https://www.merchbar.com/rock-alternative?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl",
+]
+MERCHBAR_SEARCH_URL = MERCHBAR_VINYL_URLS[0]
 DEEPDISCOUNT_SEARCH_URLS = [
     "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
     "https://www.deepdiscount.com/music/vinyl",
@@ -1196,7 +1201,16 @@ def scrape_source(source):
         return build_millions(source)
 
     if stype == "merchbar_store":
-        return build_html_deals(source)
+        # Merchbar rate limits aggressively — sleep before hitting and try multiple URLs
+        time.sleep(random.uniform(3.0, 5.0))
+        for mb_url in MERCHBAR_VINYL_URLS:
+            source_copy = dict(source)
+            source_copy["url"] = mb_url
+            deals = build_html_deals(source_copy)
+            if deals:
+                return deals
+            time.sleep(random.uniform(4.0, 7.0))
+        return []
 
     if stype == "hottopic_store":
         return build_html_deals(source)
