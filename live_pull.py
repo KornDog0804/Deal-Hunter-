@@ -19,12 +19,7 @@ USER_AGENTS = [
 _ua_index = 0
 
 AMAZON_TAG = "korndog20-20"
-WALMART_VINYL_URLS = [
-    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
-    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=2",
-    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=3",
-    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=4",
-]
+WALMART_BROWSE_URL = "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"
 HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/search?q=vinyl"
 MERCHBAR_SEARCH_URL = "https://www.merchbar.com/vinyl-records"
 DEEPDISCOUNT_SEARCH_URLS = [
@@ -83,7 +78,7 @@ SOURCES = [
     {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
 
     {"name": "Amazon", "source_type": "amazon_affiliate_source", "url": ""},
-    {"name": "Walmart", "source_type": "walmart_vinyl_store", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"},
+    {"name": "Walmart", "source_type": "walmart_catalog_source", "url": WALMART_BROWSE_URL},
     {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
 ]
 
@@ -152,21 +147,6 @@ def fetch(url, retries=2, delay=2, extra_headers=None):
                 time.sleep(delay)
             else:
                 raise
-
-
-def walmart_fetch(url, retries=3, delay=2):
-    mobile_headers = {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "identity",
-        "Cache-Control": "no-cache",
-        "Pragma": "no-cache",
-        "Upgrade-Insecure-Requests": "1",
-        "Referer": "https://www.walmart.com/",
-        "Connection": "keep-alive",
-    }
-    return fetch(url, retries=retries, delay=delay, extra_headers=mobile_headers)
 
 
 def clean(text):
@@ -863,12 +843,7 @@ def build_deepdiscount(source):
 
         return list(links)[:1200]
 
-    seed_pages = [
-        "https://www.deepdiscount.com/search?mod=AP&cr=vinyl",
-        "https://www.deepdiscount.com/music/vinyl",
-        "https://www.deepdiscount.com/music/vinyl/new-releases",
-        "https://www.deepdiscount.com/featured-vinyl/b141496",
-    ]
+    seed_pages = DEEPDISCOUNT_SEARCH_URLS
 
     _ = dd_fetch("https://www.deepdiscount.com/")
     time.sleep(random.uniform(0.8, 1.8))
@@ -949,140 +924,43 @@ def build_deepdiscount(source):
     return deduped
 
 
-def build_walmart_vinyl(source):
-    deals = []
-    seen = set()
-    robot_walls = 0
-
-    def walmart_sleep():
-        time.sleep(random.uniform(0.8, 1.6))
-
-    def clean_walmart_title(text):
-        text = clean(text)
-        text = re.sub(r"\s+\$[\d\.,]+.*$", "", text).strip()
-        return text
-
-    def is_junk_walmart_item(text):
-        t = (text or "").lower()
-        return any(bad in t for bad in [
-            "cleaner", "cleaning", "lint", "roller", "brush",
-            "slipmat", "turntable", "record player", "speaker",
-            "cassette", "cd", "compact disc",
-            "book", "kindle", "audiobook",
-            "poster", "shirt", "toy", "funko",
-            "mermaid", "supplement", "vitamin",
-            "cat food", "gravy", "paper towels", "detergent"
-        ])
-
-    def looks_like_real_vinyl(text):
-        t = (text or "").lower()
-        if is_junk_walmart_item(t):
-            return False
-        return any(marker in t for marker in [
-            "vinyl", "1lp", "2lp", " lp", "lp ", "record"
-        ])
-
-    def extract_candidates(page_html):
-        candidates = []
-
-        patterns = [
-            r'"name":"([^"]+)"',
-            r'"title":"([^"]+)"',
-            r'"productName":"([^"]+)"',
-            r'"imageAlt":"([^"]+)"',
-            r'aria-label="([^"]+)"',
-            r'<img[^>]+alt="([^"]+)"',
-        ]
-
-        found = []
-        for pattern in patterns:
-            found.extend(re.findall(pattern, page_html, re.I))
-
-        for raw in found:
-            title = clean_walmart_title(raw)
-            if not title or len(title) < 5:
-                continue
-            if not looks_like_real_vinyl(title):
-                continue
-            if is_banned(title):
-                continue
-            candidates.append(title)
-
-        deduped = []
-        seen_local = set()
-        for t in candidates:
-            key = t.lower().strip()
-            if key in seen_local:
-                continue
-            seen_local.add(key)
-            deduped.append(t)
-
-        return deduped
-
-    for url in WALMART_VINYL_URLS:
-        try:
-            walmart_sleep()
-            page_html = walmart_fetch(url)
-        except Exception as e:
-            log(f'Walmart: failed {url} | {e}')
-            continue
-
-        if not page_html:
-            continue
-
-        if "Robot or human" in page_html or "/blocked?" in page_html:
-            robot_walls += 1
-            log(f'Walmart: robot wall on {url}')
-            continue
-
-        titles = extract_candidates(page_html)
-        log(f'Walmart: found {len(titles)} candidate vinyl items from {url}')
-
-        for raw_title in titles:
-            key = raw_title.lower().strip()
-            if key in seen:
-                continue
-            seen.add(key)
-
-            link = f"https://www.walmart.com/search?q={quote_plus(raw_title)}"
-
-            keywords, version_parts = build_version_parts(
-                raw_title,
-                title_lower=raw_title.lower(),
-                link_lower=link.lower()
-            )
-
-            deals.append({
-                "artist": "Walmart Vinyl",
-                "title": raw_title,
-                "raw_title": raw_title,
-                "price": 0.0,
-                "source": "Walmart",
-                "source_type": source["source_type"],
-                "link": link,
-                "image": "",
-                "keywords": keywords,
-                "deal_quality": "catalog",
-                "demand": "broad",
-                "format": "vinyl",
-                "version": " ".join(version_parts) if version_parts else "standard",
-                "availability_text": "",
-                "page_text_snippet": raw_title,
-            })
-
-    deduped = dedupe_source_items(deals)
-    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | robot walls: {robot_walls}"
-    log(f'Walmart: kept {len(deduped)}')
-    return deduped
+def build_walmart_catalog(source):
+    deals = [
+        {
+            "artist": "Walmart",
+            "title": "Vinyl Records Catalog (1000+)",
+            "raw_title": "Walmart Vinyl Records Catalog (1000+)",
+            "price": 0.01,
+            "source": "Walmart",
+            "source_type": source["source_type"],
+            "link": WALMART_BROWSE_URL,
+            "image": "",
+            "keywords": ["vinyl", "catalog"],
+            "deal_quality": "catalog",
+            "demand": "broad",
+            "format": "vinyl",
+            "version": "catalog",
+            "availability_text": "",
+            "page_text_snippet": "Direct Walmart vinyl browse catalog entry. Use this to open Walmart's full vinyl aisle instead of a blocked scrape.",
+        }
+    ]
+    SOURCE_STATUS[source["name"]] = "1 catalog entry"
+    log("Walmart: added stable catalog entry")
+    return deals
 
 
-def derive_amazon_only(deals):
+def derive_amazon_and_walmart(deals):
     derived = []
     seen = set()
 
     for item in deals:
         artist = clean(item.get("artist", ""))
         title = clean(item.get("title", ""))
+        source = clean(item.get("source", ""))
+
+        if source.lower() == "walmart":
+            continue
+
         if not artist or not title:
             continue
         if looks_like_garbage(title):
@@ -1098,6 +976,7 @@ def derive_amazon_only(deals):
         seen.add(key)
 
         amazon_link = f"https://www.amazon.com/s?k={quote_plus(query)}&tag={AMAZON_TAG}"
+        walmart_link = f"{WALMART_BROWSE_URL}?facet=query%3A{quote_plus(query)}"
         base_price = normalize_price(item.get("price", 0))
 
         derived.append({
@@ -1118,7 +997,28 @@ def derive_amazon_only(deals):
             "page_text_snippet": "Amazon affiliate search result derived from live catalog match.",
         })
 
-    SOURCE_STATUS["Amazon"] = f"{len(derived)} derived deals"
+        derived.append({
+            "artist": artist,
+            "title": title,
+            "raw_title": f"{artist} - {title}",
+            "price": base_price if base_price > 0 else 29.99,
+            "source": "Walmart",
+            "source_type": "affiliate_search_source",
+            "link": f"https://www.walmart.com/search?q={quote_plus(query)}",
+            "image": item.get("image", ""),
+            "keywords": item.get("keywords", []),
+            "deal_quality": "search",
+            "demand": item.get("demand", "steady"),
+            "format": "vinyl",
+            "version": item.get("version", "standard"),
+            "availability_text": "",
+            "page_text_snippet": "Walmart search result derived from live catalog match.",
+        })
+
+    amazon_count = sum(1 for d in derived if d["source"] == "Amazon")
+    walmart_count = sum(1 for d in derived if d["source"] == "Walmart")
+    SOURCE_STATUS["Amazon"] = f"{amazon_count} derived deals"
+    SOURCE_STATUS["Walmart Derived"] = f"{walmart_count} derived deals"
     return derived
 
 
@@ -1145,8 +1045,8 @@ def scrape_source(source):
     if stype == "deepdiscount_store":
         return build_deepdiscount(source)
 
-    if stype == "walmart_vinyl_store":
-        return build_walmart_vinyl(source)
+    if stype == "walmart_catalog_source":
+        return build_walmart_catalog(source)
 
     if stype == "unfd_store":
         return build_unfd(source)
@@ -1218,7 +1118,7 @@ def build():
         deals.extend(pulled)
         real_source_deals.extend(pulled)
 
-    derived = derive_amazon_only(real_source_deals)
+    derived = derive_amazon_and_walmart(real_source_deals)
     deals.extend(derived)
 
     return dedupe_deals(deals)
