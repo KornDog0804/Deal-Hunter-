@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korndog Deal Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="siteHeader" class="site-header">
+    <div class="topbar">
+      <button id="menuToggle" class="icon-btn" aria-label="Open menu">☰</button>
+      <div class="topbar-brand">
+        <div class="eyebrow">Korndog Records</div>
+        <h1>Korndog Deal Board</h1>
+      </div>
+    </div>
+  </header>
+
+  <aside id="sideMenu" class="side-menu" aria-hidden="true">
+    <div class="side-menu-header">
+      <div>
+        <div class="eyebrow">Korndog Records</div>
+        <h2 class="menu-title">Browse Records</h2>
+      </div>
+      <button id="menuClose" class="icon-btn" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="menu-block">
+      <label class="menu-label" for="searchInput">Search</label>
+      <input id="searchInput" class="menu-select" type="text" placeholder="Artist, title, source..." />
+    </div>
+
+    <div class="menu-block">
+      <label class="menu-label" for="sourceFilter">Source</label>
+      <select id="sourceFilter" class="menu-select">
+        <option value="">All sources</option>
+      </select>
+    </div>
+
+    <div class="menu-block">
+      <div class="menu-label">Quick Filters</div>
+      <div class="chip-scroll">
+        <div class="chip-row chip-row-nowrap">
+          <button class="filter-chip active" data-quick="all">All</button>
+          <button class="filter-chip" data-quick="under30">Under $30</button>
+          <button class="filter-chip" data-quick="amazon">Amazon</button>
+          <button class="filter-chip" data-quick="walmart">Walmart</button>
+          <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="menuBackdrop" class="menu-backdrop"></div>
+
+  <main class="main-tight">
+    <div class="summary">
+      <div class="chip" id="dealCount">Records: 0</div>
+      <div class="chip">Live from live_deals.json</div>
+      <button class="chip chip-button" id="pageStatus" type="button">Page 1</button>
+    </div>
+
+    <div id="topPageNav" class="top-page-nav" style="display:none;">
+      <div class="top-page-nav-inner">
+        <div id="topPageNumbers" class="page-numbers"></div>
+        <div class="page-jump-wrap">
+          <input
+            id="topPageJumpInput"
+            class="page-jump-input"
+            type="number"
+            min="1"
+            placeholder="Page"
+            inputmode="numeric"
+          />
+          <button class="btn btn-ghost" id="topPageJumpBtn">Go</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">All Live Records</h2>
+        <div class="section-note">Raw vinyl wall. Search it, filter it, dig through it.</div>
+      </div>
+
+      <div id="dealList" class="deal-list"></div>
+
+      <div class="pager" id="pager">
+        <button class="btn btn-ghost" id="prevPageBtn">Previous</button>
+        <div id="pageNumbers" class="page-numbers"></div>
+        <div class="page-jump-wrap">
+          <input
+            id="pageJumpInput"
+            class="page-jump-input"
+            type="number"
+            min="1"
+            placeholder="Page"
+            inputmode="numeric"
+          />
+          <button class="btn btn-ghost" id="pageJumpBtn">Go</button>
+        </div>
+        <button class="btn btn-ghost" id="nextPageBtn">Next</button>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      Disclosure: As an Amazon Associate, I earn from qualifying purchases.
+      <br />
+      Korndog Deal Board is now a raw vinyl catalog lane. No scoring. Just digging.
+    </div>
+  </main>
+
+  <script>
+    let allDeals = [];
+    let activeQuickFilter = "all";
+    let currentPage = 1;
+    const DEALS_PER_PAGE = 24;
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function safeNumber(value, fallback = 0) {
+      const num = Number(value);
+      return Number.isFinite(num) ? num : fallback;
+    }
+
+    function normalizeText(value) {
+      return String(value ?? "")
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function normalizeSourceKey(value) {
+      const source = String(value || "").trim().toLowerCase();
+      if (!source) return "";
+
+      if (source.includes("amazon")) return "amazon";
+      if (source.includes("walmart")) return "walmart";
+      if (source.includes("deep discount")) return "deep discount";
+      if (source.includes("newbury")) return "newbury comics";
+      if (source.includes("udiscover")) return "udiscover music";
+      if (source.includes("sound of vinyl")) return "sound of vinyl";
+      if (source.includes("rise all")) return "rise all";
+      if (source.includes("rise records")) return "rise records";
+      if (source.includes("fearless")) return "fearless records";
+      if (source.includes("brooklyn vegan")) return "brooklyn vegan";
+      if (source.includes("equal vision")) return "equal vision";
+      if (source.includes("rollin")) return "rollin records";
+      if (source.includes("merchbar")) return "merchbar";
+      if (source.includes("craft recordings")) return "craft recordings";
+      if (source.includes("mnrk")) return "mnrk heavy";
+      if (source.includes("revolver")) return "revolver";
+      if (source.includes("sharptone")) return "sharptone records";
+      if (source.includes("rock metal fan nation")) return "rock metal fan nation";
+      if (source.includes("rmfn")) return "rmfn all";
+      if (source.includes("unfd")) return "unfd";
+      if (source.includes("sumerian")) return "sumerian records";
+      if (source.includes("solid state vinyl")) return "solid state vinyl";
+      if (source.includes("solid state")) return "solid state records";
+      if (source.includes("hot topic")) return "hot topic";
+      if (source.includes("pure noise")) return "pure noise records";
+      if (source.includes("rhino")) return "rhino";
+      if (source.includes("interscope")) return "interscope records";
+      if (source.includes("millions of records")) return "millions of records";
+      if (source.includes("indiemerchstore")) return "indiemerchstore";
+
+      return source;
+    }
+
+    function prettifySourceName(value) {
+      const key = normalizeSourceKey(value);
+      const map = {
+        "amazon": "Amazon",
+        "walmart": "Walmart",
+        "deep discount": "Deep Discount",
+        "newbury comics": "Newbury Comics",
+        "udiscover music": "uDiscover Music",
+        "sound of vinyl": "Sound of Vinyl",
+        "rise all": "Rise All",
+        "rise records": "Rise Records",
+        "fearless records": "Fearless Records",
+        "brooklyn vegan": "Brooklyn Vegan",
+        "equal vision": "Equal Vision",
+        "rollin records": "Rollin Records",
+        "merchbar": "Merchbar",
+        "craft recordings": "Craft Recordings",
+        "mnrk heavy": "MNRK Heavy",
+        "revolver": "Revolver",
+        "sharptone records": "SharpTone Records",
+        "rock metal fan nation": "Rock Metal Fan Nation",
+        "rmfn all": "RMFN All",
+        "unfd": "UNFD",
+        "sumerian records": "Sumerian Records",
+        "solid state records": "Solid State Records",
+        "solid state vinyl": "Solid State Vinyl",
+        "hot topic": "Hot Topic",
+        "pure noise records": "Pure Noise Records",
+        "rhino": "Rhino",
+        "interscope records": "Interscope Records",
+        "millions of records": "Millions of Records",
+        "indiemerchstore": "IndieMerchstore"
+      };
+      return map[key] || String(value || "").trim();
+    }
+
+    function getPriceText(deal) {
+      const price = safeNumber(deal.price);
+      if (price > 0) return `$${price.toFixed(2)}`;
+      return "Browse / search link";
+    }
+
+    function getSearchBlob(deal) {
+      return normalizeText([
+        deal.artist,
+        deal.title,
+        deal.raw_title,
+        deal.source,
+        deal.version,
+        deal.page_text_snippet
+      ].join(" "));
+    }
+
+    function getAmazonLink(deal) {
+      const link = String(deal.link || "").trim();
+      if (!link.includes("amazon.com")) return "";
+      if (!link.includes("tag=korndog20-20")) return "";
+      return link;
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        alert("Copied.");
+      } catch (err) {
+        alert("Copy failed. Long-press and copy manually.");
+      }
+    }
+
+    function createDealCard(deal) {
+      const buyLink = deal.link || "#";
+      const amazonLink = getAmazonLink(deal);
+      const detailId = `detail-${Math.random().toString(36).slice(2, 10)}`;
+
+      const imageHtml = deal.image
+        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
+        : "";
+
+      const sourceName = prettifySourceName(deal.source || "Unknown");
+
+      const card = document.createElement("div");
+      card.className = "deal-card";
+      card.innerHTML = `
+        ${imageHtml}
+
+        <div class="deal-top">
+          <div>
+            <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
+            <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
+          </div>
+          <div class="badge badge-mid">${escapeHtml(sourceName)}</div>
+        </div>
+
+        <div class="deal-meta">
+          <div class="meta-box">
+            <div class="label">Price</div>
+            <div class="value">${escapeHtml(getPriceText(deal))}</div>
+          </div>
+          <div class="meta-box">
+            <div class="label">Version</div>
+            <div class="value">${escapeHtml(deal.version || "standard")}</div>
+          </div>
+        </div>
+
+        <div class="deal-actions ${amazonLink ? "" : "single-action"}">
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Open Link</a>
+          ${amazonLink ? `<button class="btn btn-alt copy-amazon-btn">Copy Amazon Link</button>` : ""}
+        </div>
+
+        <div class="mini-actions">
+          <button class="btn btn-ghost detail-toggle" data-target="${detailId}">Show Details</button>
+        </div>
+
+        <div id="${detailId}" class="detail-panel">
+          <div class="post-box">${escapeHtml([
+            `Artist: ${deal.artist || "Unknown Artist"}`,
+            `Title: ${deal.title || "Unknown Title"}`,
+            `Source: ${sourceName}`,
+            `Price: ${getPriceText(deal)}`,
+            `Version: ${deal.version || "standard"}`,
+            `Link: ${buyLink}`
+          ].join("\n"))}</div>
+          <div class="mini-actions">
+            <button class="btn btn-ghost copy-link-btn">Copy Link</button>
+          </div>
+        </div>
+      `;
+
+      const copyAmazonBtn = card.querySelector(".copy-amazon-btn");
+      if (copyAmazonBtn) {
+        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
+      }
+
+      card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(buyLink));
+      card.querySelector(".detail-toggle").addEventListener("click", (e) => {
+        const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
+        const open = panel.classList.toggle("open");
+        e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
+      });
+
+      return card;
+    }
+
+    function renderPageNumberSet(containerId, totalPages) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      container.innerHTML = "";
+      if (totalPages <= 1) return;
+
+      const pages = new Set([1, totalPages]);
+      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+        if (i > 1 && i < totalPages) pages.add(i);
+      }
+
+      const sortedPages = [...pages].sort((a, b) => a - b);
+      let lastPage = 0;
+
+      sortedPages.forEach(page => {
+        if (page - lastPage > 1) {
+          const ellipsis = document.createElement("span");
+          ellipsis.className = "page-ellipsis";
+          ellipsis.textContent = "...";
+          container.appendChild(ellipsis);
+        }
+
+        const btn = document.createElement("button");
+        btn.className = `page-number-btn ${page === currentPage ? "active" : ""}`;
+        btn.textContent = page;
+        btn.addEventListener("click", () => {
+          currentPage = page;
+          applyFilters(false);
+          toggleTopPageNav(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        container.appendChild(btn);
+        lastPage = page;
+      });
+    }
+
+    function renderPageNumbers(totalPages) {
+      renderPageNumberSet("pageNumbers", totalPages);
+      renderPageNumberSet("topPageNumbers", totalPages);
+    }
+
+    function getFilteredDeals() {
+      const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
+      const searchValue = normalizeText(document.getElementById("searchInput").value);
+
+      return allDeals
+        .filter(d => normalizeText(d.format || "vinyl") === "vinyl")
+        .filter(d => {
+          if (!sourceValue) return true;
+          return normalizeSourceKey(d.source || "") === sourceValue;
+        })
+        .filter(d => {
+          if (activeQuickFilter === "under30") {
+            return safeNumber(d.price) > 0 && safeNumber(d.price) < 30;
+          }
+          if (activeQuickFilter === "amazon") {
+            return normalizeSourceKey(d.source || "") === "amazon";
+          }
+          if (activeQuickFilter === "walmart") {
+            return normalizeSourceKey(d.source || "") === "walmart";
+          }
+          if (activeQuickFilter === "deepdiscount") {
+            return normalizeSourceKey(d.source || "") === "deep discount";
+          }
+          return true;
+        })
+        .filter(d => {
+          if (!searchValue) return true;
+          return getSearchBlob(d).includes(searchValue);
+        })
+        .sort((a, b) => {
+          const sourceA = normalizeText(a.source || "");
+          const sourceB = normalizeText(b.source || "");
+          if (sourceA !== sourceB) return sourceA.localeCompare(sourceB);
+
+          const artistA = normalizeText(a.artist || "");
+          const artistB = normalizeText(b.artist || "");
+          if (artistA !== artistB) return artistA.localeCompare(artistB);
+
+          return normalizeText(a.title || "").localeCompare(normalizeText(b.title || ""));
+        });
+    }
+
+    function populateSourceFilter() {
+      const select = document.getElementById("sourceFilter");
+      const sources = new Map();
+
+      allDeals.forEach(deal => {
+        const rawSource = (deal.source || "").trim();
+        if (!rawSource) return;
+
+        const key = normalizeSourceKey(rawSource);
+        const label = prettifySourceName(rawSource);
+
+        if (!key) return;
+        if (!sources.has(key)) sources.set(key, label);
+      });
+
+      const sorted = [...sources.entries()]
+        .map(([value, label]) => ({ value, label }))
+        .sort((a, b) => a.label.localeCompare(b.label));
+
+      select.innerHTML =
+        `<option value="">All sources</option>` +
+        sorted.map(src =>
+          `<option value="${escapeHtml(src.value)}">${escapeHtml(src.label)}</option>`
+        ).join("");
+    }
+
+    function renderDeals(deals) {
+      const dealList = document.getElementById("dealList");
+      const pager = document.getElementById("pager");
+      const pageStatus = document.getElementById("pageStatus");
+
+      dealList.innerHTML = "";
+
+      if (!deals.length) {
+        dealList.innerHTML = `<div class="empty">No records found. Try another artist, title, or source.</div>`;
+        pager.style.display = "none";
+        pageStatus.textContent = "Page 0";
+        renderPageNumbers(0);
+        toggleTopPageNav(false);
+        return;
+      }
+
+      const totalPages = Math.max(1, Math.ceil(deals.length / DEALS_PER_PAGE));
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * DEALS_PER_PAGE;
+      const end = start + DEALS_PER_PAGE;
+      const pageDeals = deals.slice(start, end);
+
+      pageDeals.forEach(deal => dealList.appendChild(createDealCard(deal)));
+
+      pager.style.display = totalPages > 1 ? "flex" : "none";
+      pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
+      document.getElementById("prevPageBtn").disabled = currentPage === 1;
+      document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
+
+      renderPageNumbers(totalPages);
+    }
+
+    function toggleTopPageNav(forceOpen = null) {
+      const topNav = document.getElementById("topPageNav");
+      if (!topNav) return;
+      const shouldOpen = forceOpen === null ? topNav.style.display === "none" : !!forceOpen;
+      topNav.style.display = shouldOpen ? "block" : "none";
+    }
+
+    function applyFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
+      const filtered = getFilteredDeals();
+      document.getElementById("dealCount").textContent = `Records: ${filtered.length}`;
+      renderDeals(filtered);
+    }
+
+    function initQuickFilters() {
+      document.querySelectorAll(".filter-chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          activeQuickFilter = chip.dataset.quick;
+          applyFilters(true);
+        });
+      });
+    }
+
+    function getTotalPageCountForCurrentView() {
+      return Math.max(1, Math.ceil(getFilteredDeals().length / DEALS_PER_PAGE));
+    }
+
+    function jumpToPage(inputId = "pageJumpInput") {
+      const input = document.getElementById(inputId);
+      let page = Number(input.value || 0);
+      if (!page || page < 1) return;
+
+      const totalPages = getTotalPageCountForCurrentView();
+      if (page > totalPages) page = totalPages;
+
+      currentPage = page;
+      applyFilters(false);
+      toggleTopPageNav(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      input.value = "";
+    }
+
+    function initPager() {
+      document.getElementById("prevPageBtn").addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage -= 1;
+          applyFilters(false);
+          toggleTopPageNav(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      document.getElementById("nextPageBtn").addEventListener("click", () => {
+        const total = getTotalPageCountForCurrentView();
+        if (currentPage < total) {
+          currentPage += 1;
+          applyFilters(false);
+          toggleTopPageNav(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      document.getElementById("pageJumpBtn").addEventListener("click", () => jumpToPage("pageJumpInput"));
+      document.getElementById("topPageJumpBtn").addEventListener("click", () => jumpToPage("topPageJumpInput"));
+
+      document.getElementById("pageJumpInput").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") jumpToPage("pageJumpInput");
+      });
+
+      document.getElementById("topPageJumpInput").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") jumpToPage("topPageJumpInput");
+      });
+
+      document.getElementById("pageStatus").addEventListener("click", () => toggleTopPageNav());
+    }
+
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("open");
+      document.getElementById("menuBackdrop").classList.add("open");
+      document.getElementById("sideMenu").setAttribute("aria-hidden", "false");
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("open");
+      document.getElementById("menuBackdrop").classList.remove("open");
+      document.getElementById("sideMenu").setAttribute("aria-hidden", "true");
+    }
+
+    function initMenu() {
+      document.getElementById("menuToggle").addEventListener("click", openMenu);
+      document.getElementById("menuClose").addEventListener("click", closeMenu);
+      document.getElementById("menuBackdrop").addEventListener("click", closeMenu);
+    }
+
+    async function init() {
+      try {
+        const res = await fetch("./live_deals.json?_=" + Date.now(), { cache: "no-store" });
+        const data = await res.json();
+        allDeals = Array.isArray(data) ? data : [];
+        populateSourceFilter();
+        applyFilters(true);
+      } catch (err) {
+        document.getElementById("dealList").innerHTML =
+          `<div class="empty">Could not load live_deals.json. The rack is empty because the loader fell down the stairs.</div>`;
+      }
+    }
+
+    document.getElementById("sourceFilter").addEventListener("change", () => {
+      applyFilters(true);
+      toggleTopPageNav(false);
+      closeMenu();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", () => {
+      applyFilters(true);
+    });
+
+    initQuickFilters();
+    initPager();
+    initMenu();
+    init();
+  </script>
+</body>
+</html>
