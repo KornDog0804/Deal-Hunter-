@@ -21,9 +21,14 @@
     <div class="side-menu-header">
       <div>
         <div class="eyebrow">Korndog Records</div>
-        <h2 class="menu-title">Browse Deals</h2>
+        <h2 class="menu-title">Browse Records</h2>
       </div>
       <button id="menuClose" class="icon-btn" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="menu-block">
+      <label class="menu-label" for="searchInput">Search</label>
+      <input id="searchInput" class="menu-select" type="text" placeholder="Artist, title, source..." />
     </div>
 
     <div class="menu-block">
@@ -34,24 +39,14 @@
     </div>
 
     <div class="menu-block">
-      <label class="menu-label" for="scoreFilter">Score</label>
-      <select id="scoreFilter" class="menu-select">
-        <option value="0">All deals</option>
-        <option value="8">Top picks only</option>
-        <option value="6">Strong picks+</option>
-        <option value="4">Worth a look+</option>
-      </select>
-    </div>
-
-    <div class="menu-block">
       <div class="menu-label">Quick Filters</div>
       <div class="chip-scroll">
         <div class="chip-row chip-row-nowrap">
           <button class="filter-chip active" data-quick="all">All</button>
-          <button class="filter-chip" data-quick="grail">Grail Alerts</button>
           <button class="filter-chip" data-quick="under30">Under $30</button>
-          <button class="filter-chip" data-quick="amazon">Amazon Picks</button>
-          <button class="filter-chip" data-quick="korndog">KornDog Finds</button>
+          <button class="filter-chip" data-quick="amazon">Amazon</button>
+          <button class="filter-chip" data-quick="walmart">Walmart</button>
+          <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
         </div>
       </div>
     </div>
@@ -61,8 +56,8 @@
 
   <main class="main-tight">
     <div class="summary">
-      <div class="chip" id="dealCount">Deals: 0</div>
-      <button class="chip chip-button" id="dataToggleBtn" type="button">Loading...</button>
+      <div class="chip" id="dealCount">Records: 0</div>
+      <div class="chip">Live from live_deals.json</div>
       <button class="chip chip-button" id="pageStatus" type="button">Page 1</button>
     </div>
 
@@ -83,18 +78,10 @@
       </div>
     </div>
 
-    <section class="section" id="topPicksSection">
-      <div class="section-head">
-        <h2 class="section-title">Top Picks Today</h2>
-        <div class="section-note">The best stuff rises to the top.</div>
-      </div>
-      <div id="featuredList" class="featured-grid"></div>
-    </section>
-
     <section class="section">
       <div class="section-head">
-        <h2 class="section-title">All Live Deals</h2>
-        <div class="section-note">Tap a card to shop or reveal the post copy.</div>
+        <h2 class="section-title">All Live Records</h2>
+        <div class="section-note">Raw vinyl wall. Search it, filter it, dig through it.</div>
       </div>
 
       <div id="dealList" class="deal-list"></div>
@@ -120,7 +107,7 @@
     <div class="footer-note">
       Disclosure: As an Amazon Associate, I earn from qualifying purchases.
       <br />
-      Korndog Deal Board is for music lovers, crate diggers, and impulse-buying legends.
+      Korndog Deal Board is now a raw vinyl catalog lane. No scoring. Just digging.
     </div>
   </main>
 
@@ -128,7 +115,6 @@
     let allDeals = [];
     let activeQuickFilter = "all";
     let currentPage = 1;
-    let activeDataFile = "scored_deals.json";
     const DEALS_PER_PAGE = 24;
 
     function escapeHtml(value) {
@@ -140,32 +126,26 @@
         .replace(/'/g, "&#39;");
     }
 
-    function normalizeText(value) {
-      return String(value ?? "")
-        .toLowerCase()
-        .replace(/&/g, "and")
-        .replace(/[^a-z0-9\s]/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
-    }
-
     function safeNumber(value, fallback = 0) {
       const num = Number(value);
       return Number.isFinite(num) ? num : fallback;
     }
 
-    function getDealScore(deal) {
-      return safeNumber(deal?.total, safeNumber(deal?.score, 0));
+    function normalizeText(value) {
+      return String(value ?? "")
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
     }
 
     function normalizeSourceKey(value) {
       const source = String(value || "").trim().toLowerCase();
-
       if (!source) return "";
 
       if (source.includes("amazon")) return "amazon";
       if (source.includes("walmart")) return "walmart";
-      if (source.includes("target")) return "target";
       if (source.includes("deep discount")) return "deep discount";
       if (source.includes("newbury")) return "newbury comics";
       if (source.includes("udiscover")) return "udiscover music";
@@ -199,11 +179,9 @@
 
     function prettifySourceName(value) {
       const key = normalizeSourceKey(value);
-
       const map = {
         "amazon": "Amazon",
         "walmart": "Walmart",
-        "target": "Target",
         "deep discount": "Deep Discount",
         "newbury comics": "Newbury Comics",
         "udiscover music": "uDiscover Music",
@@ -232,84 +210,31 @@
         "millions of records": "Millions of Records",
         "indiemerchstore": "IndieMerchstore"
       };
-
       return map[key] || String(value || "").trim();
     }
 
-    function getScoreClass(score) {
-      if (score >= 8) return "badge-high";
-      if (score >= 6) return "badge-mid";
-      return "badge-low";
+    function getPriceText(deal) {
+      const price = safeNumber(deal.price);
+      if (price > 0) return `$${price.toFixed(2)}`;
+      return "Browse / search link";
     }
 
-    function getHypeLabel(score) {
-      if (score >= 9) return "Grail Alert";
-      if (score >= 7) return "Vinyl Heat";
-      if (score >= 5) return "KornDog Find";
-      return "Low Key";
-    }
-
-    function getBestPriceText(deal) {
-      if (safeNumber(deal.best_price) > 0) return `$${safeNumber(deal.best_price).toFixed(2)}`;
-      if (safeNumber(deal.price) > 0) return `$${safeNumber(deal.price).toFixed(2)}`;
-      return "Price not pulled yet";
-    }
-
-    function getBestBuyText(deal) {
-      if (deal.best_label === "KORNDOG FIND") return "KornDog Find";
-      if (deal.best_label === "AMAZON PICK") return "Amazon";
-      if (deal.best_label === "WALMART PICK") return "Walmart";
-      return prettifySourceName(deal.best_source || deal.source || "Unknown");
+    function getSearchBlob(deal) {
+      return normalizeText([
+        deal.artist,
+        deal.title,
+        deal.raw_title,
+        deal.source,
+        deal.version,
+        deal.page_text_snippet
+      ].join(" "));
     }
 
     function getAmazonLink(deal) {
-      const link = String(deal.amazon_link || "").trim();
-      if (!link) return "";
+      const link = String(deal.link || "").trim();
       if (!link.includes("amazon.com")) return "";
       if (!link.includes("tag=korndog20-20")) return "";
       return link;
-    }
-
-    function getPostText(deal) {
-      const score = getDealScore(deal);
-      let opener = "👀 LOW KEY FIND 👀";
-      let vibe = "Niche pull";
-
-      if (score >= 9) {
-        opener = "🚨 GRAIL ALERT 🚨";
-        vibe = "MOVE FAST — this won’t sit";
-      } else if (score >= 7) {
-        opener = "🔥 VINYL HEAT 🔥";
-        vibe = "Strong pickup";
-      } else if (score >= 5) {
-        opener = "💿 KORNDOG FIND 💿";
-        vibe = "Worth a look";
-      }
-
-      const bestPrice = getBestPriceText(deal);
-      const buyLink = deal.buy_link || deal.link || "Link coming soon";
-      const amazonLink = getAmazonLink(deal);
-      const bestSource = getBestBuyText(deal);
-
-      const amazonPart = amazonLink
-        ? `
-
-🛒 Amazon Option:
-👉 ${amazonLink}`
-        : "";
-
-      return `${opener}
-
-${deal.artist || "Unknown Artist"} – ${deal.title || "Unknown Title"}
-
-💰 Best Price: ${bestPrice}
-📦 Best Buy: ${bestSource}
-
-🟢 ${vibe}
-
-👉 ${buyLink}${amazonPart}
-
-Vinyl Therapy never dies 🟣🟢`;
     }
 
     async function copyText(text) {
@@ -321,42 +246,16 @@ Vinyl Therapy never dies 🟣🟢`;
       }
     }
 
-    function makeSourceRows(deal) {
-      const sources = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
-      if (!sources.length) return "";
-
-      return `
-        <div class="sources-list">
-          ${sources.map(s => `
-            <div class="source-row">
-              <span>${escapeHtml(prettifySourceName(s.source || "Unknown"))}</span>
-              <strong>${safeNumber(s.price) > 0 ? `$${safeNumber(s.price).toFixed(2)}` : "N/A"}</strong>
-            </div>
-          `).join("")}
-        </div>
-      `;
-    }
-
     function createDealCard(deal) {
-      const score = getDealScore(deal);
-      const postText = getPostText(deal);
+      const buyLink = deal.link || "#";
       const amazonLink = getAmazonLink(deal);
-      const bestPrice = getBestPriceText(deal);
-      const bestBuy = getBestBuyText(deal);
-      const buyLink = deal.buy_link || deal.link || "#";
       const detailId = `detail-${Math.random().toString(36).slice(2, 10)}`;
-
-      const amazonButtonHtml = amazonLink
-        ? `<a class="btn btn-alt" href="${escapeHtml(amazonLink)}" target="_blank" rel="noopener noreferrer">Amazon Option</a>`
-        : "";
-
-      const copyAmazonButtonHtml = amazonLink
-        ? `<button class="btn btn-ghost copy-link-btn">Copy Amazon Link</button>`
-        : "";
 
       const imageHtml = deal.image
         ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
         : "";
+
+      const sourceName = prettifySourceName(deal.source || "Unknown");
 
       const card = document.createElement("div");
       card.className = "deal-card";
@@ -368,111 +267,57 @@ Vinyl Therapy never dies 🟣🟢`;
             <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
             <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
           </div>
-          <div class="badge ${getScoreClass(score)}">${escapeHtml(getHypeLabel(score))}</div>
+          <div class="badge badge-mid">${escapeHtml(sourceName)}</div>
         </div>
 
         <div class="deal-meta">
           <div class="meta-box">
-            <div class="label">Best Price</div>
-            <div class="value">${escapeHtml(bestPrice)}</div>
+            <div class="label">Price</div>
+            <div class="value">${escapeHtml(getPriceText(deal))}</div>
           </div>
           <div class="meta-box">
-            <div class="label">Best Buy</div>
-            <div class="value">
-              ${escapeHtml(bestBuy)}
-              <small>${escapeHtml(prettifySourceName(deal.best_source || deal.source || "Unknown source"))}</small>
-            </div>
+            <div class="label">Version</div>
+            <div class="value">${escapeHtml(deal.version || "standard")}</div>
           </div>
         </div>
 
         <div class="deal-actions ${amazonLink ? "" : "single-action"}">
-          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Shop Deal</a>
-          ${amazonButtonHtml}
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Open Link</a>
+          ${amazonLink ? `<button class="btn btn-alt copy-amazon-btn">Copy Amazon Link</button>` : ""}
         </div>
 
         <div class="mini-actions">
-          <button class="btn btn-ghost copy-post-btn">Copy Facebook Post</button>
           <button class="btn btn-ghost detail-toggle" data-target="${detailId}">Show Details</button>
         </div>
 
         <div id="${detailId}" class="detail-panel">
-          <div class="post-box">${escapeHtml(postText)}</div>
+          <div class="post-box">${escapeHtml([
+            `Artist: ${deal.artist || "Unknown Artist"}`,
+            `Title: ${deal.title || "Unknown Title"}`,
+            `Source: ${sourceName}`,
+            `Price: ${getPriceText(deal)}`,
+            `Version: ${deal.version || "standard"}`,
+            `Link: ${buyLink}`
+          ].join("\n"))}</div>
           <div class="mini-actions">
-            ${copyAmazonButtonHtml}
-            <button class="btn btn-ghost copy-best-btn">Copy Best Link</button>
+            <button class="btn btn-ghost copy-link-btn">Copy Link</button>
           </div>
-          ${makeSourceRows(deal)}
         </div>
       `;
 
-      const copyPostBtn = card.querySelector(".copy-post-btn");
-      if (copyPostBtn) copyPostBtn.addEventListener("click", () => copyText(postText));
-
-      const copyAmazonBtn = card.querySelector(".copy-link-btn");
-      if (copyAmazonBtn) copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
-
-      const copyBestBtn = card.querySelector(".copy-best-btn");
-      if (copyBestBtn) copyBestBtn.addEventListener("click", () => copyText(buyLink));
-
-      const toggleBtn = card.querySelector(".detail-toggle");
-      if (toggleBtn) {
-        toggleBtn.addEventListener("click", (e) => {
-          const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
-          if (!panel) return;
-          const open = panel.classList.toggle("open");
-          e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
-        });
+      const copyAmazonBtn = card.querySelector(".copy-amazon-btn");
+      if (copyAmazonBtn) {
+        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
       }
 
-      return card;
-    }
-
-    function toggleHeroSections() {
-      const topPicksSection = document.getElementById("topPicksSection");
-      if (topPicksSection) {
-        topPicksSection.style.display = currentPage === 1 ? "" : "none";
-      }
-    }
-
-    function toggleTopPageNav(forceOpen = null) {
-      const topNav = document.getElementById("topPageNav");
-      if (!topNav) return;
-
-      const shouldOpen = forceOpen === null
-        ? topNav.style.display === "none"
-        : !!forceOpen;
-
-      topNav.style.display = shouldOpen ? "block" : "none";
-    }
-
-    function renderFeatured(deals) {
-      const featuredList = document.getElementById("featuredList");
-      featuredList.innerHTML = "";
-
-      if (currentPage !== 1) return [];
-
-      const picks = deals
-        .filter(d => getDealScore(d) >= 8)
-        .slice(0, 6);
-
-      if (!picks.length) {
-        featuredList.innerHTML = `
-          <div class="empty">
-            No top picks yet. The good stuff is probably loading in from the back room.
-          </div>
-        `;
-        return [];
-      }
-
-      picks.forEach(deal => {
-        try {
-          featuredList.appendChild(createDealCard(deal));
-        } catch (err) {
-          console.error("Featured render failed for deal:", deal, err);
-        }
+      card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(buyLink));
+      card.querySelector(".detail-toggle").addEventListener("click", (e) => {
+        const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
+        const open = panel.classList.toggle("open");
+        e.currentTarget.textContent = open ? "Hide Details" : "Show Details";
       });
 
-      return picks;
+      return card;
     }
 
     function renderPageNumberSet(containerId, totalPages) {
@@ -482,10 +327,7 @@ Vinyl Therapy never dies 🟣🟢`;
       container.innerHTML = "";
       if (totalPages <= 1) return;
 
-      const pages = new Set();
-      pages.add(1);
-      pages.add(totalPages);
-
+      const pages = new Set([1, totalPages]);
       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
         if (i > 1 && i < totalPages) pages.add(i);
       }
@@ -518,110 +360,48 @@ Vinyl Therapy never dies 🟣🟢`;
 
     function renderPageNumbers(totalPages) {
       renderPageNumberSet("pageNumbers", totalPages);
-    }
-
-    function renderTopPageNumbers(totalPages) {
       renderPageNumberSet("topPageNumbers", totalPages);
-    }
-
-    function renderDeals(deals, featuredDeals = []) {
-      const dealList = document.getElementById("dealList");
-      const pager = document.getElementById("pager");
-      const pageStatus = document.getElementById("pageStatus");
-      const pageNumbers = document.getElementById("pageNumbers");
-      const topPageNumbers = document.getElementById("topPageNumbers");
-
-      dealList.innerHTML = "";
-
-      let workingDeals = deals;
-
-      if (currentPage === 1 && featuredDeals.length) {
-        const featuredKeys = new Set(
-          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-        );
-
-        workingDeals = deals.filter(d => {
-          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-          return !featuredKeys.has(key);
-        });
-      }
-
-      if (!workingDeals.length) {
-        dealList.innerHTML = `
-          <div class="empty">
-            No deals found for this page.
-          </div>
-        `;
-        pager.style.display = "none";
-        pageStatus.textContent = "Page 0";
-        if (pageNumbers) pageNumbers.innerHTML = "";
-        if (topPageNumbers) topPageNumbers.innerHTML = "";
-        toggleTopPageNav(false);
-        return;
-      }
-
-      const totalPages = Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
-      if (currentPage > totalPages) currentPage = 1;
-
-      const start = (currentPage - 1) * DEALS_PER_PAGE;
-      const end = start + DEALS_PER_PAGE;
-      const pageDeals = workingDeals.slice(start, end);
-
-      pageDeals.forEach(deal => {
-        try {
-          dealList.appendChild(createDealCard(deal));
-        } catch (err) {
-          console.error("Deal render failed for deal:", deal, err);
-        }
-      });
-
-      pager.style.display = totalPages > 1 ? "flex" : "none";
-      pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
-
-      document.getElementById("prevPageBtn").disabled = currentPage === 1;
-      document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
-
-      renderPageNumbers(totalPages);
-      renderTopPageNumbers(totalPages);
-    }
-
-    function matchesQuickFilter(deal) {
-      const score = getDealScore(deal);
-      const bestPrice = safeNumber(deal.best_price || deal.price || 0);
-      const label = deal.best_label || "";
-      const amazonLink = getAmazonLink(deal);
-
-      if (activeQuickFilter === "grail") return score >= 9;
-      if (activeQuickFilter === "under30") return bestPrice > 0 && bestPrice < 30;
-      if (activeQuickFilter === "amazon") return !!amazonLink;
-      if (activeQuickFilter === "korndog") return label === "KORNDOG FIND";
-      return true;
-    }
-
-    function dealMatchesSource(deal, sourceValue) {
-      if (!sourceValue) return true;
-
-      const primarySource = normalizeSourceKey(deal.best_source || deal.source || "");
-      if (primarySource === sourceValue) return true;
-
-      const allOptions = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
-      return allOptions.some(opt => normalizeSourceKey(opt.source || "") === sourceValue);
     }
 
     function getFilteredDeals() {
       const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
-      const minScore = safeNumber(document.getElementById("scoreFilter").value, 0);
+      const searchValue = normalizeText(document.getElementById("searchInput").value);
 
       return allDeals
-        .filter(d => getDealScore(d) >= minScore)
-        .filter(matchesQuickFilter)
-        .filter(d => dealMatchesSource(d, sourceValue))
+        .filter(d => normalizeText(d.format || "vinyl") === "vinyl")
+        .filter(d => {
+          if (!sourceValue) return true;
+          return normalizeSourceKey(d.source || "") === sourceValue;
+        })
+        .filter(d => {
+          if (activeQuickFilter === "under30") {
+            return safeNumber(d.price) > 0 && safeNumber(d.price) < 30;
+          }
+          if (activeQuickFilter === "amazon") {
+            return normalizeSourceKey(d.source || "") === "amazon";
+          }
+          if (activeQuickFilter === "walmart") {
+            return normalizeSourceKey(d.source || "") === "walmart";
+          }
+          if (activeQuickFilter === "deepdiscount") {
+            return normalizeSourceKey(d.source || "") === "deep discount";
+          }
+          return true;
+        })
+        .filter(d => {
+          if (!searchValue) return true;
+          return getSearchBlob(d).includes(searchValue);
+        })
         .sort((a, b) => {
-          const scoreDiff = getDealScore(b) - getDealScore(a);
-          if (scoreDiff !== 0) return scoreDiff;
-          const priceA = safeNumber(a.best_price || a.price || 999999, 999999);
-          const priceB = safeNumber(b.best_price || b.price || 999999, 999999);
-          return priceA - priceB;
+          const sourceA = normalizeText(a.source || "");
+          const sourceB = normalizeText(b.source || "");
+          if (sourceA !== sourceB) return sourceA.localeCompare(sourceB);
+
+          const artistA = normalizeText(a.artist || "");
+          const artistB = normalizeText(b.artist || "");
+          if (artistA !== artistB) return artistA.localeCompare(artistB);
+
+          return normalizeText(a.title || "").localeCompare(normalizeText(b.title || ""));
         });
     }
 
@@ -629,62 +409,16 @@ Vinyl Therapy never dies 🟣🟢`;
       const select = document.getElementById("sourceFilter");
       const sources = new Map();
 
-      const seededSources = [
-        ["amazon", "Amazon"],
-        ["walmart", "Walmart"],
-        ["deep discount", "Deep Discount"],
-        ["brooklyn vegan", "Brooklyn Vegan"],
-        ["craft recordings", "Craft Recordings"],
-        ["equal vision", "Equal Vision"],
-        ["mnrk heavy", "MNRK Heavy"],
-        ["newbury comics", "Newbury Comics"],
-        ["revolver", "Revolver"],
-        ["rise all", "Rise All"],
-        ["rise records", "Rise Records"],
-        ["rollin records", "Rollin Records"],
-        ["sound of vinyl", "Sound of Vinyl"],
-        ["udiscover music", "uDiscover Music"],
-        ["fearless records", "Fearless Records"],
-        ["merchbar", "Merchbar"],
-        ["sharptone records", "SharpTone Records"],
-        ["rock metal fan nation", "Rock Metal Fan Nation"],
-        ["rmfn all", "RMFN All"],
-        ["unfd", "UNFD"],
-        ["sumerian records", "Sumerian Records"],
-        ["solid state records", "Solid State Records"],
-        ["solid state vinyl", "Solid State Vinyl"],
-        ["hot topic", "Hot Topic"],
-        ["pure noise records", "Pure Noise Records"],
-        ["rhino", "Rhino"],
-        ["interscope records", "Interscope Records"],
-        ["millions of records", "Millions of Records"],
-        ["indiemerchstore", "IndieMerchstore"]
-      ];
-
-      seededSources.forEach(([value, label]) => sources.set(value, label));
-
       allDeals.forEach(deal => {
-        const rawSources = [];
+        const rawSource = (deal.source || "").trim();
+        if (!rawSource) return;
 
-        if (deal.best_source || deal.source) {
-          rawSources.push(String(deal.best_source || deal.source).trim());
-        }
+        const key = normalizeSourceKey(rawSource);
+        const label = prettifySourceName(rawSource);
 
-        const allOptions = Array.isArray(deal.all_store_options) ? deal.all_store_options : [];
-        allOptions.forEach(opt => {
-          if (opt?.source) rawSources.push(String(opt.source).trim());
-        });
-
-        rawSources.forEach(rawSource => {
-          if (!rawSource) return;
-          const key = normalizeSourceKey(rawSource);
-          const label = prettifySourceName(rawSource);
-          if (!key) return;
-          if (!sources.has(key)) sources.set(key, label);
-        });
+        if (!key) return;
+        if (!sources.has(key)) sources.set(key, label);
       });
-
-      const currentValue = select.value || "";
 
       const sorted = [...sources.entries()]
         .map(([value, label]) => ({ value, label }))
@@ -695,27 +429,53 @@ Vinyl Therapy never dies 🟣🟢`;
         sorted.map(src =>
           `<option value="${escapeHtml(src.value)}">${escapeHtml(src.label)}</option>`
         ).join("");
-
-      select.value = currentValue;
     }
 
-    function updateDataToggleButton() {
-      const btn = document.getElementById("dataToggleBtn");
-      if (!btn) return;
-      btn.textContent = `Live from ${activeDataFile}`;
+    function renderDeals(deals) {
+      const dealList = document.getElementById("dealList");
+      const pager = document.getElementById("pager");
+      const pageStatus = document.getElementById("pageStatus");
+
+      dealList.innerHTML = "";
+
+      if (!deals.length) {
+        dealList.innerHTML = `<div class="empty">No records found. Try another artist, title, or source.</div>`;
+        pager.style.display = "none";
+        pageStatus.textContent = "Page 0";
+        renderPageNumbers(0);
+        toggleTopPageNav(false);
+        return;
+      }
+
+      const totalPages = Math.max(1, Math.ceil(deals.length / DEALS_PER_PAGE));
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * DEALS_PER_PAGE;
+      const end = start + DEALS_PER_PAGE;
+      const pageDeals = deals.slice(start, end);
+
+      pageDeals.forEach(deal => dealList.appendChild(createDealCard(deal)));
+
+      pager.style.display = totalPages > 1 ? "flex" : "none";
+      pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
+      document.getElementById("prevPageBtn").disabled = currentPage === 1;
+      document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
+
+      renderPageNumbers(totalPages);
+    }
+
+    function toggleTopPageNav(forceOpen = null) {
+      const topNav = document.getElementById("topPageNav");
+      if (!topNav) return;
+      const shouldOpen = forceOpen === null ? topNav.style.display === "none" : !!forceOpen;
+      topNav.style.display = shouldOpen ? "block" : "none";
     }
 
     function applyFilters(resetPage = true) {
       if (resetPage) currentPage = 1;
-
-      toggleHeroSections();
-
       const filtered = getFilteredDeals();
-      document.getElementById("dealCount").textContent = `Deals: ${filtered.length}`;
-      updateDataToggleButton();
-
-      const featuredDeals = renderFeatured(filtered);
-      renderDeals(filtered, featuredDeals);
+      document.getElementById("dealCount").textContent = `Records: ${filtered.length}`;
+      renderDeals(filtered);
     }
 
     function initQuickFilters() {
@@ -730,27 +490,12 @@ Vinyl Therapy never dies 🟣🟢`;
     }
 
     function getTotalPageCountForCurrentView() {
-      const totalFiltered = getFilteredDeals();
-
-      let workingDeals = totalFiltered;
-      if (currentPage === 1) {
-        const featuredDeals = totalFiltered.filter(d => getDealScore(d) >= 8).slice(0, 6);
-        const featuredKeys = new Set(
-          featuredDeals.map(d => `${normalizeText(d.artist)}|||${normalizeText(d.title)}`)
-        );
-
-        workingDeals = totalFiltered.filter(d => {
-          const key = `${normalizeText(d.artist)}|||${normalizeText(d.title)}`;
-          return !featuredKeys.has(key);
-        });
-      }
-
-      return Math.max(1, Math.ceil(workingDeals.length / DEALS_PER_PAGE));
+      return Math.max(1, Math.ceil(getFilteredDeals().length / DEALS_PER_PAGE));
     }
 
     function jumpToPage(inputId = "pageJumpInput") {
       const input = document.getElementById(inputId);
-      let page = safeNumber(input.value, 0);
+      let page = Number(input.value || 0);
       if (!page || page < 1) return;
 
       const totalPages = getTotalPageCountForCurrentView();
@@ -783,24 +528,18 @@ Vinyl Therapy never dies 🟣🟢`;
         }
       });
 
-      const pageJumpBtn = document.getElementById("pageJumpBtn");
-      const pageJumpInput = document.getElementById("pageJumpInput");
-      const topPageJumpBtn = document.getElementById("topPageJumpBtn");
-      const topPageJumpInput = document.getElementById("topPageJumpInput");
+      document.getElementById("pageJumpBtn").addEventListener("click", () => jumpToPage("pageJumpInput"));
+      document.getElementById("topPageJumpBtn").addEventListener("click", () => jumpToPage("topPageJumpInput"));
 
-      pageJumpBtn.addEventListener("click", () => jumpToPage("pageJumpInput"));
-      pageJumpInput.addEventListener("keydown", (e) => {
+      document.getElementById("pageJumpInput").addEventListener("keydown", (e) => {
         if (e.key === "Enter") jumpToPage("pageJumpInput");
       });
 
-      topPageJumpBtn.addEventListener("click", () => jumpToPage("topPageJumpInput"));
-      topPageJumpInput.addEventListener("keydown", (e) => {
+      document.getElementById("topPageJumpInput").addEventListener("keydown", (e) => {
         if (e.key === "Enter") jumpToPage("topPageJumpInput");
       });
 
-      document.getElementById("pageStatus").addEventListener("click", () => {
-        toggleTopPageNav();
-      });
+      document.getElementById("pageStatus").addEventListener("click", () => toggleTopPageNav());
     }
 
     function openMenu() {
@@ -821,81 +560,16 @@ Vinyl Therapy never dies 🟣🟢`;
       document.getElementById("menuBackdrop").addEventListener("click", closeMenu);
     }
 
-    async function fetchJsonArray(path) {
-      const res = await fetch(`${path}?_=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error(`${path} returned ${res.status}`);
-      }
-      const data = await res.json();
-      if (!Array.isArray(data)) {
-        throw new Error(`${path} is not an array`);
-      }
-      return data;
-    }
-
-    async function loadDealsFromFile(fileName) {
-      const deals = await fetchJsonArray(`./${fileName}`);
-      allDeals = deals;
-      activeDataFile = fileName;
-      console.log("Loaded deals:", allDeals.length, "from", activeDataFile);
-      if (allDeals.length) {
-        console.log("First deal sample:", allDeals[0]);
-      }
-      populateSourceFilter();
-      applyFilters(true);
-    }
-
-    async function autoLoadBestData() {
-      try {
-        const scoredDeals = await fetchJsonArray("./scored_deals.json");
-        if (scoredDeals.length) {
-          allDeals = scoredDeals;
-          activeDataFile = "scored_deals.json";
-          populateSourceFilter();
-          applyFilters(true);
-          return;
-        }
-      } catch (err) {
-        console.warn("Could not load scored_deals.json:", err);
-      }
-
-      const liveDeals = await fetchJsonArray("./live_deals.json");
-      allDeals = liveDeals;
-      activeDataFile = "live_deals.json";
-      populateSourceFilter();
-      applyFilters(true);
-    }
-
-    function initDataToggle() {
-      const btn = document.getElementById("dataToggleBtn");
-      if (!btn) return;
-
-      btn.addEventListener("click", async () => {
-        try {
-          const nextFile = activeDataFile === "scored_deals.json"
-            ? "live_deals.json"
-            : "scored_deals.json";
-
-          btn.textContent = `Loading ${nextFile}...`;
-          await loadDealsFromFile(nextFile);
-        } catch (err) {
-          console.error("Data toggle failed:", err);
-          updateDataToggleButton();
-          alert(`Could not load ${activeDataFile === "scored_deals.json" ? "live_deals.json" : "scored_deals.json"}.`);
-        }
-      });
-    }
-
     async function init() {
       try {
-        await autoLoadBestData();
+        const res = await fetch("./live_deals.json?_=" + Date.now(), { cache: "no-store" });
+        const data = await res.json();
+        allDeals = Array.isArray(data) ? data : [];
+        populateSourceFilter();
+        applyFilters(true);
       } catch (err) {
-        console.error("Deal board init failed:", err);
-        document.getElementById("dataToggleBtn").textContent = "Could not load deal data";
-        document.getElementById("featuredList").innerHTML =
-          `<div class="empty">Could not load deal data. The front window is lit up, but the stock room is locked.</div>`;
         document.getElementById("dealList").innerHTML =
-          `<div class="empty">Could not load deal data. Check scored_deals.json and live_deals.json on Netlify.</div>`;
+          `<div class="empty">Could not load live_deals.json. The rack is empty because the loader fell down the stairs.</div>`;
       }
     }
 
@@ -905,15 +579,13 @@ Vinyl Therapy never dies 🟣🟢`;
       closeMenu();
     });
 
-    document.getElementById("scoreFilter").addEventListener("change", () => {
+    document.getElementById("searchInput").addEventListener("input", () => {
       applyFilters(true);
-      toggleTopPageNav(false);
     });
 
     initQuickFilters();
     initPager();
     initMenu();
-    initDataToggle();
     init();
   </script>
 </body>
