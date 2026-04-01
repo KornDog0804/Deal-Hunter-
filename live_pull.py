@@ -5,8 +5,8 @@ import html
 import time
 import random
 import urllib.request
-import http.cookiejar
-from urllib.parse import urljoin, quote_plus
+import urllib.parse
+from urllib.parse import urljoin
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
@@ -15,11 +15,24 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
     "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
 ]
 _ua_index = 0
 
 AMAZON_TAG = "korndog20-20"
-WALMART_BROWSE_URL = "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"
+
+WALMART_BROWSE_URLS = [
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=2",
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=3",
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=4",
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=5",
+    "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118",
+    "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=2",
+    "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=3",
+    "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=4",
+]
+
 HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/search?q=vinyl"
 MERCHBAR_SEARCH_URL = "https://www.merchbar.com/vinyl-records"
 DEEPDISCOUNT_SEARCH_URLS = [
@@ -28,14 +41,6 @@ DEEPDISCOUNT_SEARCH_URLS = [
     "https://www.deepdiscount.com/music/vinyl/new-releases",
     "https://www.deepdiscount.com/featured-vinyl/b141496",
 ]
-
-
-def next_ua():
-    global _ua_index
-    ua = USER_AGENTS[_ua_index % len(USER_AGENTS)]
-    _ua_index += 1
-    return ua
-
 
 SOURCES = [
     {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com"},
@@ -78,7 +83,7 @@ SOURCES = [
     {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
 
     {"name": "Amazon", "source_type": "amazon_affiliate_source", "url": ""},
-    {"name": "Walmart", "source_type": "walmart_catalog_source", "url": WALMART_BROWSE_URL},
+    {"name": "Walmart", "source_type": "walmart_catalog_source", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"},
     {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
 ]
 
@@ -101,11 +106,26 @@ BAD_PRODUCT_TERMS = [
     "digital", "digital album", "digital download", "mp3", "download",
     "earbuds", "headphones", "airpods", "sticker", "patch", "pin",
     "pullover", "crewneck", "long sleeve", "t-shirt", "shorts", "socks",
-    "turntable", "record player", "cleaner", "cleaning kit"
+    "turntable", "record player", "cleaner", "cleaning kit",
+    "speaker", "stylus", "needle", "receiver"
 ]
 
 DEBUG = []
 SOURCE_STATUS = {}
+
+# Optional legacy files. If absent, no problem.
+ARTIST_CONFIG = {}
+SLUG_PATTERNS = []
+if (BASE / "artist_whitelist.json").exists():
+    try:
+        ARTIST_CONFIG = json.loads((BASE / "artist_whitelist.json").read_text(encoding="utf-8"))
+    except Exception:
+        ARTIST_CONFIG = {}
+if (BASE / "slug_patterns.json").exists():
+    try:
+        SLUG_PATTERNS = json.loads((BASE / "slug_patterns.json").read_text(encoding="utf-8"))
+    except Exception:
+        SLUG_PATTERNS = []
 
 
 def log(msg):
@@ -113,17 +133,11 @@ def log(msg):
     DEBUG.append(msg)
 
 
-def load_json(name):
-    with open(BASE / name, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-ARTIST_CONFIG = load_json("artist_whitelist.json")
-SLUG_PATTERNS = load_json("slug_patterns.json")
-
-ENFORCE_ARTIST_WHITELIST = ARTIST_CONFIG.get("enforce_artist_whitelist", True)
-ALLOWED = [a.lower().strip() for a in ARTIST_CONFIG.get("allowed_artists", [])]
-BLOCKED = [a.lower().strip() for a in ARTIST_CONFIG.get("blocked_artists", [])]
+def next_ua():
+    global _ua_index
+    ua = USER_AGENTS[_ua_index % len(USER_AGENTS)]
+    _ua_index += 1
+    return ua
 
 
 def fetch(url, retries=2, delay=2, extra_headers=None):
@@ -133,9 +147,11 @@ def fetch(url, retries=2, delay=2, extra_headers=None):
             headers = {
                 "User-Agent": next_ua(),
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.5",
+                "Accept-Language": "en-US,en;q=0.9",
                 "Accept-Encoding": "identity",
                 "Connection": "keep-alive",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
             }
             headers.update(extra_headers)
             req = urllib.request.Request(url, headers=headers)
@@ -147,6 +163,18 @@ def fetch(url, retries=2, delay=2, extra_headers=None):
                 time.sleep(delay)
             else:
                 raise
+
+
+def walmart_fetch(url, retries=3, delay=2):
+    mobile_headers = {
+        "User-Agent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "identity",
+        "Upgrade-Insecure-Requests": "1",
+        "Referer": "https://www.walmart.com/",
+    }
+    return fetch(url, retries=retries, delay=delay, extra_headers=mobile_headers)
 
 
 def clean(text):
@@ -174,6 +202,11 @@ def is_banned(text):
     return any(b in t for b in BANNED_KEYWORDS)
 
 
+def contains_bad_product_terms(text):
+    t = (text or "").lower()
+    return any(term in t for term in BAD_PRODUCT_TERMS)
+
+
 def is_sold_out(text):
     t = (text or "").lower()
     return any(term in t for term in [
@@ -186,18 +219,13 @@ def is_sold_out(text):
     ])
 
 
-def looks_like_amazon_link(url):
-    u = (url or "").lower()
-    return "amazon.com" in u or "amzn.to" in u
-
-
 def artist_allowed(artist, title=""):
+    # Lane change: no taste filtering anymore.
     hay = f"{artist} {title}".lower()
-    if any(b in hay for b in BLOCKED):
+    blocked = [str(b).lower().strip() for b in ARTIST_CONFIG.get("blocked_artists", [])]
+    if any(b in hay for b in blocked if b):
         return False
-    if not ENFORCE_ARTIST_WHITELIST:
-        return True
-    return any(a in hay for a in ALLOWED)
+    return True
 
 
 def keyword_hits(text):
@@ -209,16 +237,9 @@ def looks_like_garbage(text):
     t = (text or "").strip().lower()
     if len(t) < 3:
         return True
-    if t in {"unknown title", "product", "vinyl"}:
-        return True
-    if re.fullmatch(r"[a-z0-9]{6,}", t):
+    if t in {"unknown title", "product"}:
         return True
     return False
-
-
-def contains_bad_product_terms(text):
-    t = (text or "").lower()
-    return any(term in t for term in BAD_PRODUCT_TERMS)
 
 
 def should_skip(title, link):
@@ -266,8 +287,7 @@ def clean_store_title(title):
     ]
     for pattern in junk_patterns:
         text = re.sub(pattern, "", text, flags=re.I)
-    text = re.sub(r"\s+", " ", text).strip(" -")
-    return text
+    return re.sub(r"\s+", " ", text).strip(" -")
 
 
 def parse_from_slug(link):
@@ -295,18 +315,20 @@ def infer_artist_title(raw_title, link, vendor="", source_name=""):
     slug = parse_from_slug(link)
     vendor = clean(vendor)
 
-    for pattern, artist, album in SLUG_PATTERNS:
-        if re.search(pattern, slug, re.I):
-            return artist, album
+    for pattern_row in SLUG_PATTERNS:
+        try:
+            pattern, artist, album = pattern_row
+            if re.search(pattern, slug, re.I):
+                return artist, album
+        except Exception:
+            pass
 
     split_artist, split_album = split_artist_album_from_title(title)
     if split_artist and split_album:
-        if not contains_bad_product_terms(split_artist) and not looks_like_garbage(split_album):
-            return split_artist, split_album
+        return split_artist, split_album
 
-    if vendor and vendor.lower() not in {"vinyl", "music", "records"}:
-        if not contains_bad_product_terms(vendor) and not looks_like_garbage(title):
-            return vendor, title
+    if vendor and vendor.lower() not in {"vinyl", "music", "records"} and len(title) > 2:
+        return vendor, title
 
     if len(slug.split()) >= 3:
         return "Unknown Artist", slug.title()
@@ -327,25 +349,19 @@ def detect_format(title="", product_type="", page_text=""):
         if "vinyl" not in hard_bad_blob and " lp" not in hard_bad_blob and "record" not in hard_bad_blob:
             return "other"
 
-    strong_blob = f"{title_l} {product_type_l}"
-    page_blob = f"{strong_blob} {page_text_l[:1200]}"
-
+    blob = f"{title_l} {product_type_l} {page_text_l[:1500]}"
     vinyl_markers = [
         " vinyl", "vinyl ", " vinyl ",
         " lp", "lp ", "2lp", "1lp",
         '12"', '7"', "record", "records"
     ]
 
-    if any(x in strong_blob for x in vinyl_markers):
+    if any(x in blob for x in vinyl_markers):
         return "vinyl"
-    if any(x in page_blob for x in vinyl_markers):
-        return "vinyl"
-
-    if "cassette" in page_blob:
+    if "cassette" in blob:
         return "cassette"
-    if "cd" in page_blob or "compact disc" in page_blob:
+    if "cd" in blob or "compact disc" in blob:
         return "cd"
-
     return "other"
 
 
@@ -528,7 +544,7 @@ def build_shopify_deals(source):
             for v in variants:
                 price = normalize_price(v.get("price", 0))
                 vtitle = clean(v.get("title", "")).lower()
-                if price > 0 and not contains_bad_product_terms(vtitle):
+                if not contains_bad_product_terms(vtitle):
                     valid_variant = v
                     break
 
@@ -536,8 +552,6 @@ def build_shopify_deals(source):
                 continue
 
             price = normalize_price(valid_variant.get("price", 0))
-            if price <= 0:
-                continue
 
             handle = p.get("handle", "")
             if not handle:
@@ -548,6 +562,7 @@ def build_shopify_deals(source):
             link = base_url + "/products/" + handle
 
             artist, album = infer_artist_title(title, link, vendor=vendor, source_name=source["name"])
+
             if looks_like_garbage(album):
                 continue
             if contains_bad_product_terms(f"{artist} {album}"):
@@ -555,10 +570,8 @@ def build_shopify_deals(source):
             if not artist_allowed(artist, album):
                 continue
 
-            image = ""
             imgs = p.get("images", []) or []
-            if imgs:
-                image = imgs[0].get("src", "")
+            image = imgs[0].get("src", "") if imgs else ""
 
             body_html = p.get("body_html", "") or ""
             variant_title = clean(valid_variant.get("title", "") or "")
@@ -586,8 +599,8 @@ def build_shopify_deals(source):
                 "link": link,
                 "image": image,
                 "keywords": keywords,
-                "deal_quality": "good" if price < 40 else "normal",
-                "demand": "steady",
+                "deal_quality": "catalog",
+                "demand": "broad",
                 "format": fmt,
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": variant_title,
@@ -692,10 +705,8 @@ def build_html_deals(source):
                     continue
 
                 price = extract_price(page)
-                if price <= 0:
-                    continue
-
                 artist, album = infer_artist_title(raw_title, link, source_name=source["name"])
+
                 if looks_like_garbage(album):
                     continue
                 if contains_bad_product_terms(f"{artist} {album}"):
@@ -725,8 +736,8 @@ def build_html_deals(source):
                     "link": link,
                     "image": image,
                     "keywords": keywords,
-                    "deal_quality": "good" if price < 40 else "normal",
-                    "demand": "steady",
+                    "deal_quality": "catalog",
+                    "demand": "broad",
                     "format": fmt,
                     "version": " ".join(version_parts) if version_parts else "standard",
                     "availability_text": "",
@@ -771,8 +782,7 @@ def build_deepdiscount(source):
     deals = []
     seen_links = set()
 
-    cj = http.cookiejar.CookieJar()
-    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
     opener.addheaders = [
         ("User-Agent", random.choice(USER_AGENTS)),
         ("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"),
@@ -803,54 +813,35 @@ def build_deepdiscount(source):
 
     def is_real_dd_product_url(url):
         low = url.lower().split("?", 1)[0].rstrip("/")
-
         if not low.startswith("https://www.deepdiscount.com/"):
             return False
-
         path = re.sub(r"^https?://[^/]+", "", low).strip("/")
         parts = [p for p in path.split("/") if p]
-
         if len(parts) < 2:
             return False
-
         last = parts[-1]
-        if re.fullmatch(r"\d{8,14}", last):
-            return True
-
-        return False
+        return bool(re.fullmatch(r"\d{8,14}", last))
 
     def extract_dd_links(page_html):
         links = set()
         hrefs = re.findall(r'href="([^"]+)"', page_html, re.I)
-
         for href in hrefs:
             full = urljoin("https://www.deepdiscount.com", href)
             low = full.lower()
-
             if any(bad in low for bad in [
-                "javascript:",
-                "mailto:",
-                "tel:",
-                "#",
-                "/cart",
-                "/account",
-                "/help",
+                "javascript:", "mailto:", "tel:", "#", "/cart", "/account", "/help"
             ]):
                 continue
-
             if is_real_dd_product_url(full):
                 links.add(full)
-
         return list(links)[:1200]
-
-    seed_pages = DEEPDISCOUNT_SEARCH_URLS
 
     _ = dd_fetch("https://www.deepdiscount.com/")
     time.sleep(random.uniform(0.8, 1.8))
     _ = dd_fetch("https://www.deepdiscount.com/music/vinyl")
     time.sleep(random.uniform(0.8, 1.8))
 
-    for page_url in seed_pages:
+    for page_url in DEEPDISCOUNT_SEARCH_URLS:
         page_html = dd_fetch(page_url)
         if not page_html:
             continue
@@ -871,15 +862,10 @@ def build_deepdiscount(source):
                 continue
 
             raw_title = extract_title(product_html)
-            if not raw_title:
-                continue
-            if should_skip(raw_title, link):
+            if not raw_title or should_skip(raw_title, link):
                 continue
 
             price = extract_price(product_html)
-            if price <= 0:
-                continue
-
             fmt = detect_format(title=raw_title, product_type="", page_text=product_html[:3500])
             if fmt != "vinyl":
                 continue
@@ -893,7 +879,6 @@ def build_deepdiscount(source):
                 continue
 
             image = extract_image(product_html, link)
-
             keywords, version_parts = build_version_parts(
                 f"{raw_title} {link} {product_html[:3000]}",
                 title_lower=raw_title.lower(),
@@ -910,8 +895,8 @@ def build_deepdiscount(source):
                 "link": link,
                 "image": image,
                 "keywords": keywords,
-                "deal_quality": "good" if price < 40 else "normal",
-                "demand": "steady",
+                "deal_quality": "catalog",
+                "demand": "broad",
                 "format": fmt,
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": "",
@@ -924,16 +909,163 @@ def build_deepdiscount(source):
     return deduped
 
 
+def walmart_robot_wall(page_html):
+    t = (page_html or "").lower()
+    return any(marker in t for marker in [
+        "robot or human",
+        "/blocked?",
+        "press & hold",
+        "verify you are human",
+        "perimeterx",
+        "px-captcha"
+    ])
+
+
+def looks_like_real_walmart_vinyl(text):
+    t = (text or "").lower()
+    if any(bad in t for bad in [
+        "compact disc", "cassette", "turntable", "record player", "cleaner",
+        "cleaning kit", "slipmat", "speaker", "book", "kindle", "audiobook",
+        "poster", "shirt", "toy", "funko", "earbuds", "headphones",
+        "vinyl gloves", "vinyl flooring"
+    ]):
+        return False
+    return any(good in t for good in [
+        "vinyl", " 1lp", " 2lp", " lp", "record"
+    ])
+
+
+def clean_walmart_title(text):
+    text = clean(text)
+    text = re.sub(r"\s+\$[\d\.,]+.*$", "", text).strip()
+    return text
+
+
+def extract_walmart_candidates_from_json_blob(blob_text):
+    results = []
+
+    # 1. name + canonical url + image + price style objects
+    pattern_objects = re.findall(
+        r'"name":"([^"]{4,250})".{0,800}?"canonicalUrl":"([^"]+)".{0,800}?(?:"price":(?:(?:\{"price":)?(\d+(?:\.\d+)?)))?',
+        blob_text,
+        re.I | re.S
+    )
+    for name, canonical, price in pattern_objects:
+        title = clean_walmart_title(name)
+        if not title or not looks_like_real_walmart_vinyl(title):
+            continue
+        results.append({
+            "title": title,
+            "link": urljoin("https://www.walmart.com", canonical),
+            "price": normalize_price(price or 0),
+            "image": ""
+        })
+
+    # 2. productName + usItemId + image + price
+    pattern_objects_2 = re.findall(
+        r'"productName":"([^"]{4,250})".{0,600}?"usItemId":"?(\d{5,20})"?',
+        blob_text,
+        re.I | re.S
+    )
+    for name, item_id in pattern_objects_2:
+        title = clean_walmart_title(name)
+        if not title or not looks_like_real_walmart_vinyl(title):
+            continue
+        results.append({
+            "title": title,
+            "link": f"https://www.walmart.com/ip/{item_id}",
+            "price": 0.0,
+            "image": ""
+        })
+
+    # 3. image alts and aria labels fallback
+    fallback_patterns = [
+        r'"imageAlt":"([^"]{4,250})"',
+        r'aria-label="([^"]{4,250})"',
+        r'<img[^>]+alt="([^"]{4,250})"',
+        r'"title":"([^"]{4,250})"',
+        r'"name":"([^"]{4,250})"',
+    ]
+    for pat in fallback_patterns:
+        for match in re.findall(pat, blob_text, re.I):
+            title = clean_walmart_title(match)
+            if not title or not looks_like_real_walmart_vinyl(title):
+                continue
+            results.append({
+                "title": title,
+                "link": f"https://www.walmart.com/search?q={urllib.parse.quote_plus(title)}",
+                "price": 0.0,
+                "image": ""
+            })
+
+    return results
+
+
 def build_walmart_catalog(source):
-    deals = [
-        {
+    deals = []
+    seen = set()
+    robot_walls = 0
+    pages_hit = 0
+
+    for url in WALMART_BROWSE_URLS:
+        try:
+            time.sleep(random.uniform(0.8, 1.6))
+            page_html = walmart_fetch(url)
+            pages_hit += 1
+        except Exception as e:
+            log(f'Walmart: failed {url} | {e}')
+            continue
+
+        if not page_html:
+            continue
+
+        if walmart_robot_wall(page_html):
+            robot_walls += 1
+            log(f'Walmart: robot wall on {url}')
+            continue
+
+        candidates = extract_walmart_candidates_from_json_blob(page_html)
+        log(f'Walmart: found {len(candidates)} candidate vinyl items from {url}')
+
+        for c in candidates:
+            raw_title = c["title"]
+            if should_skip(raw_title, c["link"]):
+                continue
+
+            key = raw_title.lower().strip()
+            if key in seen:
+                continue
+            seen.add(key)
+
+            deals.append({
+                "artist": "Walmart Vinyl",
+                "title": raw_title,
+                "raw_title": raw_title,
+                "price": normalize_price(c.get("price", 0)),
+                "source": "Walmart",
+                "source_type": source["source_type"],
+                "link": c.get("link") or f"https://www.walmart.com/search?q={urllib.parse.quote_plus(raw_title)}",
+                "image": c.get("image", ""),
+                "keywords": keyword_hits(raw_title),
+                "deal_quality": "catalog",
+                "demand": "broad",
+                "format": "vinyl",
+                "version": "standard",
+                "availability_text": "",
+                "page_text_snippet": raw_title,
+            })
+
+    # Hard fallback if every page got blocked
+    if not deals and robot_walls >= max(1, pages_hit // 2):
+        log("Walmart: browse pages were blocked, adding hard catalog portal fallback")
+        deals.append({
             "artist": "Walmart",
-            "title": "Vinyl Records Catalog (1000+)",
-            "raw_title": "Walmart Vinyl Records Catalog (1000+)",
+            "title": "Walmart Vinyl Records Catalog",
+            "raw_title": "Walmart Vinyl Records Catalog",
             "price": 0.01,
             "source": "Walmart",
             "source_type": source["source_type"],
-            "link": WALMART_BROWSE_URL,
+            "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
             "image": "",
             "keywords": ["vinyl", "catalog"],
             "deal_quality": "catalog",
@@ -941,15 +1073,16 @@ def build_walmart_catalog(source):
             "format": "vinyl",
             "version": "catalog",
             "availability_text": "",
-            "page_text_snippet": "Direct Walmart vinyl browse catalog entry. Use this to open Walmart's full vinyl aisle instead of a blocked scrape.",
-        }
-    ]
-    SOURCE_STATUS[source["name"]] = "1 catalog entry"
-    log("Walmart: added stable catalog entry")
-    return deals
+            "page_text_snippet": "Fallback Walmart vinyl catalog portal because browse pages hit robot walls on runner.",
+        })
+
+    deduped = dedupe_source_items(deals)
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | pages: {pages_hit} | robot walls: {robot_walls}"
+    log(f'Walmart: kept {len(deduped)}')
+    return deduped
 
 
-def derive_amazon_and_walmart(deals):
+def derive_amazon_only(deals):
     derived = []
     seen = set()
 
@@ -958,12 +1091,10 @@ def derive_amazon_and_walmart(deals):
         title = clean(item.get("title", ""))
         source = clean(item.get("source", ""))
 
-        if source.lower() == "walmart":
+        if source.lower() == "amazon":
             continue
 
-        if not artist or not title:
-            continue
-        if looks_like_garbage(title):
+        if not title or looks_like_garbage(title):
             continue
         if contains_bad_product_terms(f"{artist} {title}"):
             continue
@@ -975,50 +1106,28 @@ def derive_amazon_and_walmart(deals):
             continue
         seen.add(key)
 
-        amazon_link = f"https://www.amazon.com/s?k={quote_plus(query)}&tag={AMAZON_TAG}"
-        walmart_link = f"{WALMART_BROWSE_URL}?facet=query%3A{quote_plus(query)}"
+        amazon_link = f"https://www.amazon.com/s?k={urllib.parse.quote_plus(query)}&tag={AMAZON_TAG}"
         base_price = normalize_price(item.get("price", 0))
 
         derived.append({
-            "artist": artist,
+            "artist": artist or "Unknown Artist",
             "title": title,
-            "raw_title": f"{artist} - {title}",
-            "price": base_price if base_price > 0 else 29.99,
+            "raw_title": f"{artist} - {title}".strip(" -"),
+            "price": base_price if base_price > 0 else 0.0,
             "source": "Amazon",
             "source_type": "affiliate_search_source",
             "link": amazon_link,
             "image": item.get("image", ""),
             "keywords": item.get("keywords", []),
-            "deal_quality": item.get("deal_quality", "normal"),
-            "demand": item.get("demand", "steady"),
+            "deal_quality": "catalog",
+            "demand": "broad",
             "format": "vinyl",
             "version": item.get("version", "standard"),
             "availability_text": "",
             "page_text_snippet": "Amazon affiliate search result derived from live catalog match.",
         })
 
-        derived.append({
-            "artist": artist,
-            "title": title,
-            "raw_title": f"{artist} - {title}",
-            "price": base_price if base_price > 0 else 29.99,
-            "source": "Walmart",
-            "source_type": "affiliate_search_source",
-            "link": f"https://www.walmart.com/search?q={quote_plus(query)}",
-            "image": item.get("image", ""),
-            "keywords": item.get("keywords", []),
-            "deal_quality": "search",
-            "demand": item.get("demand", "steady"),
-            "format": "vinyl",
-            "version": item.get("version", "standard"),
-            "availability_text": "",
-            "page_text_snippet": "Walmart search result derived from live catalog match.",
-        })
-
-    amazon_count = sum(1 for d in derived if d["source"] == "Amazon")
-    walmart_count = sum(1 for d in derived if d["source"] == "Walmart")
-    SOURCE_STATUS["Amazon"] = f"{amazon_count} derived deals"
-    SOURCE_STATUS["Walmart Derived"] = f"{walmart_count} derived deals"
+    SOURCE_STATUS["Amazon"] = f"{len(derived)} derived deals"
     return derived
 
 
@@ -1033,6 +1142,17 @@ def dedupe_source_items(items):
 
         old_price = normalize_price(current.get("price", 0))
         new_price = normalize_price(item.get("price", 0))
+
+        # Prefer real product page over search page
+        current_link = str(current.get("link", ""))
+        new_link = str(item.get("link", ""))
+        current_is_search = "/search?" in current_link
+        new_is_search = "/search?" in new_link
+
+        if current_is_search and not new_is_search:
+            seen[key] = item
+            continue
+
         if new_price > 0 and (old_price <= 0 or new_price < old_price):
             seen[key] = item
 
@@ -1065,8 +1185,8 @@ def scrape_source(source):
         return []
 
     if stype == "js_store":
-        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs full API/headless lane)"
-        log(f'{source["name"]}: SKIPPED (JS-rendered - needs full API/headless lane)')
+        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs browser lane)"
+        log(f'{source["name"]}: SKIPPED (JS-rendered - needs browser lane)')
         return []
 
     if stype == "merchnow_store":
@@ -1094,12 +1214,14 @@ def scrape_source(source):
 def dedupe_deals(deals):
     seen = {}
     for d in deals:
-        key = f'{(d["artist"] or "").lower().strip()}::{(d["title"] or "").lower().strip()}::{(d["source"] or "").lower().strip()}'
+        key = f'{(d.get("artist", "") or "").lower().strip()}::{(d.get("title", "") or "").lower().strip()}::{(d.get("source", "") or "").lower().strip()}'
         if key not in seen:
             seen[key] = d
         else:
             current = seen[key]
-            if d["price"] < current["price"]:
+            if normalize_price(d.get("price", 0)) > 0 and (
+                normalize_price(current.get("price", 0)) <= 0 or normalize_price(d.get("price", 0)) < normalize_price(current.get("price", 0))
+            ):
                 seen[key] = d
     return list(seen.values())
 
@@ -1111,14 +1233,16 @@ def build():
     for source in SOURCES:
         if source["source_type"] == "amazon_affiliate_source":
             continue
+
         log(f"\n{'=' * 50}")
         log(f"Scraping: {source['name']} ({source['source_type']})")
         log(f"{'=' * 50}")
+
         pulled = scrape_source(source)
         deals.extend(pulled)
         real_source_deals.extend(pulled)
 
-    derived = derive_amazon_and_walmart(real_source_deals)
+    derived = derive_amazon_only(real_source_deals)
     deals.extend(derived)
 
     return dedupe_deals(deals)
