@@ -46,7 +46,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 75
+Rise Records: kept 76
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -60,14 +60,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 189
+Brooklyn Vegan: kept 191
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 149
+Revolver: kept 151
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -79,12 +79,9 @@ Newbury Comics: kept 142
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
 ==================================================
-  ✓ https://www.newburycomics.com/collections/pre-orders/products.json?limit=250 -> 5 products
-Newbury Preorders: 5 products via Shopify JSON
-Newbury Preorders: kept 0
-Newbury Preorders: Shopify JSON empty, trying HTML fallback
-Newbury Preorders: found 0 HTML links
-Newbury Preorders: kept 0
+  ✓ https://www.newburycomics.com/collections/pre-orders/products.json?limit=250 -> 8 products
+Newbury Preorders: 8 products via Shopify JSON
+Newbury Preorders: kept 1
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -112,7 +109,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 133
+Rhino: kept 137
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -180,61 +177,16 @@ UNFD: kept 56
 ==================================================
 Scraping: Merchbar (merchbar_store)
 ==================================================
-  -> retry 1/2 for https://www.merchbar.com/vinyl-records | HTTP Error 429: Too Many Requests
-  -> retry 2/2 for https://www.merchbar.com/vinyl-records | HTTP Error 429: Too Many Requests
+  -> retry 1/2 for https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl | HTTP Error 429: Too Many Requests
+  -> retry 2/2 for https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl | HTTP Error 429: Too Many Requests
 Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 
 ==================================================
 Scraping: Hot Topic (hottopic_store)
 ==================================================
-Hot Topic: found 46 HTML links
-Hot Topic: skipping product https://www.hottopic.com/product/the-amazing-digital-circus-pomni-scuba-shortalls/35261107.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/my-little-pony-pinkie-pie-rhinestone-girls-hoodie/35517804.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/murder-drones-uzi-girls-twofer-hoodie-plus-size/35261124.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/my-little-pony-celestia-luna-split-girls-cardigan-plus-size/35119416.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/ghost-face-sherpa-jacket/34966503.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/iron-lung-bold-title-t-shirt/36122941.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/my-little-pony-mane-six-metal-hoodie/35495522.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/murder-drones-uzi-girls-cold-shoulder-top/35650504.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/kpop-demon-hunters-huntr-x-golden-foil-t-shirt/35846856.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/iron-lung-blood-ocean-t-shirt/36122942.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/ghost-face-blood-splatter-mini-backpack/35350290.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/loungefly-kpop-demon-hunters-huntr-x-cardholder-mini-backpack/35613673.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/kuromi-purple-butterfly-garden-ribbon-messenger-bag/35426563.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/loungefly-disney-mickey-mouse-minnie-mouse-treats-mini-backpack/35013427.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-twilight-saga-edward-bella-perfume/32313567.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-nightmare-before-christmas-rag-doll-fragrance/34342964.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-amazing-digital-circus-blind-box-mini-mug/35299784.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/ghost-face-collectors-edition-wireless-headphones-hot-topic-exclusive/35533910.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-amazing-digital-circus-animiniz-beach-vacation-series-blind-box-figure/35500420.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/monchhichi-pink-candy-girl-doll/35424725.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/culturefly-ghost-face-blind-box-figure/35500419.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/s/hottopic/product/hot-topic-foundation-donation/33725136.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/melanie-martinez-hades-moon-milk-white-double-vinyl-lp-hot-topic-exclusive/36199745.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/super-sometimes-show-the-world-whats-underneath-eco-blue-vinyl-lp/36431060.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/panic-at-the-disco-a-fever-you-cant-sweat-out-20th-anniversary-ruby-black-wave-double-vinyl-lp-hot-topic-exclusive/35656529.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/korn-see-you-on-the-other-side-orange-violet-blend-vinyl-lp-hot-topic-exclusive/35456452.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/gorillaz-the-mountain-black-vinyl-lp/35501420.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-used-in-love-and-death-milky-white-vinyl-lp-hot-topic-exclusive/33883215.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/i-prevail-violent-nature-rain-vinyl-lp-hot-topic-exclusive/35121617.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-used-the-used-red-vinyl-lp-hot-topic-exclusive/33866626.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-academy-is...-almost-there-yellow-vinyl-lp-hot-topic-exclusive/36149552.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/mgk-lost-americana-white-vinyl-lp-hot-topic-exclusive/34924072.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/megan-thee-stallion-megan-cloud-vinyl-lp-hot-topic-exclusive/33628505.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/5-seconds-of-summer-everyone%E2%80%99s-a-star-neon-pink-glitter-vinyl-lp/35530495.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/linkin-park-from-zero-translucent-emerald-green-deluxe-edition-double-vinyl-lp/34718070.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/slaughter-to-prevail-grizzly-bone-color-with-black-burgundy-splatter-vinyl-lp/34917040.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/bruno-mars-the-romantic-vinyl-lp/36100840.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/turnstile-never-enough-milky-clear-vinyl-lp-hot-topic-exclusive/34586856.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/dance-gavin-dance-pantheon-baby-blue-lemon-smush-with-white-splatter-double-vinyl-lp-hot-topic-exclusive/34874629.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/the-used-lies-for-the-liars-sea-blue-vinyl-lp-hot-topic-exclusive/33883217.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/taylor-swift-the-life-of-a-showgirl-sweat-and-vanilla-perfume-portofino-orange-glitter-vinyl-lp/35515029.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/all-time-low-everyones-talking-white-blue-splatter-vinyl-lp-hot-topic-exclusive/35117651.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/bloodywood-nu-delhi-opaque-tangerine-vinyl-lp-hot-topic-exclusive/34265531.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/karol-g-tropicoqueta-tropical-blue-vinyl-lp/34968809.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/state-champs-state-champs-black-white-split-vinyl-lp-hot-topic-exclusive/33350716.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/yellowcard-better-days-orange-vinyl-lp-hot-topic-exclusive/34874627.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: kept 0
+  -> retry 1/2 for https://www.hottopic.com/music/vinyl/ | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.hottopic.com/music/vinyl/ | HTTP Error 404: Not Found
+Hot Topic: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Deep Discount (deepdiscount_store)
@@ -245,54 +197,54 @@ Deep Discount fetch: https://www.deepdiscount.com/search?mod=AP&cr=vinyl
 Deep Discount: found 0 product links from https://www.deepdiscount.com/search?mod=AP&cr=vinyl
 Deep Discount fetch: https://www.deepdiscount.com/music/vinyl
 Deep Discount: found 31 product links from https://www.deepdiscount.com/music/vinyl
-Deep Discount fetch: https://www.deepdiscount.com/frankenstein-original-soundtrack/810155841416
-Deep Discount fetch: https://www.deepdiscount.com/the-astonishing/603497807765
-Deep Discount fetch: https://www.deepdiscount.com/sex-packets-35th-anniversary-pop-up-version/016998557013
-Deep Discount fetch: https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810
-Deep Discount fetch: https://www.deepdiscount.com/northern-lights-southern-cross/602478343117
-Deep Discount fetch: https://www.deepdiscount.com/love-is-not-enough/641956287635
-Deep Discount fetch: https://www.deepdiscount.com/folk-singer-chess-acoustic-sounds-series/602488332415
-Deep Discount fetch: https://www.deepdiscount.com/bully/9120005656048
-Deep Discount fetch: https://www.deepdiscount.com/-/5054429208375
-Deep Discount fetch: https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104
-Deep Discount fetch: https://www.deepdiscount.com/sexistential/889030046710
-Deep Discount fetch: https://www.deepdiscount.com/with-heaven-on-top/093624827078
-Deep Discount fetch: https://www.deepdiscount.com/chicago-vi-aqua/829421889335
-Deep Discount fetch: https://www.deepdiscount.com/aerosmith-legendary-edition/602465844641
-Deep Discount fetch: https://www.deepdiscount.com/hades/075678589928
-Deep Discount fetch: https://www.deepdiscount.com/creature-of-habit/810090098340
-Deep Discount fetch: https://www.deepdiscount.com/light-as-a-feather/8435395505328
-Deep Discount fetch: https://www.deepdiscount.com/kiss-all-the-time-disco-occasionally/199584177113
-Deep Discount fetch: https://www.deepdiscount.com/live-in-europe/8717931354738
-Deep Discount fetch: https://www.deepdiscount.com/confessions-on-a-dance-floor/603497808120
-Deep Discount fetch: https://www.deepdiscount.com/axis-bold-as-love-stereo-version/198029892819
-Deep Discount fetch: https://www.deepdiscount.com/whatevers-clever/075678591754
-Deep Discount fetch: https://www.deepdiscount.com/irreversible/880882681913
-Deep Discount fetch: https://www.deepdiscount.com/trying-times/198704834592
-Deep Discount fetch: https://www.deepdiscount.com/soul-to-soul-music-from-the-original-soundtrack-various-artists/810177219224
-Deep Discount fetch: https://www.deepdiscount.com/up-here-140-gram-translucent-blue-colored-vinyl/5014797913486
 Deep Discount fetch: https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947
+Deep Discount fetch: https://www.deepdiscount.com/love-is-not-enough/641956287635
+Deep Discount fetch: https://www.deepdiscount.com/irreversible/880882681913
+Deep Discount fetch: https://www.deepdiscount.com/folk-singer-chess-acoustic-sounds-series/602488332415
+Deep Discount fetch: https://www.deepdiscount.com/hades/075678589928
+Deep Discount fetch: https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810
+Deep Discount fetch: https://www.deepdiscount.com/chicago-vi-aqua/829421889335
+Deep Discount fetch: https://www.deepdiscount.com/trying-times/198704834592
+Deep Discount fetch: https://www.deepdiscount.com/sexistential/889030046710
+Deep Discount fetch: https://www.deepdiscount.com/soul-to-soul-music-from-the-original-soundtrack-various-artists/810177219224
+Deep Discount fetch: https://www.deepdiscount.com/northern-lights-southern-cross/602478343117
+Deep Discount fetch: https://www.deepdiscount.com/creature-of-habit/810090098340
+Deep Discount fetch: https://www.deepdiscount.com/sex-packets-35th-anniversary-pop-up-version/016998557013
+Deep Discount fetch: https://www.deepdiscount.com/aerosmith-legendary-edition/602465844641
+Deep Discount fetch: https://www.deepdiscount.com/-/5054429208375
+Deep Discount fetch: https://www.deepdiscount.com/whatevers-clever/075678591754
+Deep Discount fetch: https://www.deepdiscount.com/up-here-140-gram-translucent-blue-colored-vinyl/5014797913486
 Deep Discount fetch: https://www.deepdiscount.com/make-up-is-a-lie-blue/093624829799
+Deep Discount fetch: https://www.deepdiscount.com/frankenstein-original-soundtrack/810155841416
+Deep Discount fetch: https://www.deepdiscount.com/live-in-europe/8717931354738
+Deep Discount fetch: https://www.deepdiscount.com/kiss-all-the-time-disco-occasionally/199584177113
+Deep Discount fetch: https://www.deepdiscount.com/axis-bold-as-love-stereo-version/198029892819
+Deep Discount fetch: https://www.deepdiscount.com/confessions-on-a-dance-floor/603497808120
 Deep Discount fetch: https://www.deepdiscount.com/into-oblivion/199584033914
-Deep Discount fetch: https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412
+Deep Discount fetch: https://www.deepdiscount.com/light-as-a-feather/8435395505328
+Deep Discount fetch: https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104
 Deep Discount fetch: https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104
+Deep Discount fetch: https://www.deepdiscount.com/with-heaven-on-top/093624827078
+Deep Discount fetch: https://www.deepdiscount.com/the-astonishing/603497807765
+Deep Discount fetch: https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412
+Deep Discount fetch: https://www.deepdiscount.com/bully/9120005656048
 Deep Discount fetch: https://www.deepdiscount.com/music/vinyl/new-releases
 Deep Discount: found 25 product links from https://www.deepdiscount.com/music/vinyl/new-releases
-Deep Discount fetch: https://www.deepdiscount.com/queen-ii-collectors-edition-5-cd180g-2-lp-box-set/050087593612
-Deep Discount fetch: https://www.deepdiscount.com/the-devils-door/5063176101815
-Deep Discount fetch: https://www.deepdiscount.com/morning-star/843563197905
+Deep Discount fetch: https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597
+Deep Discount fetch: https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427
 Deep Discount fetch: https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696
-Deep Discount fetch: https://www.deepdiscount.com/how-sad-how-lovely/810074425452
 Deep Discount fetch: https://www.deepdiscount.com/thats-the-way-it-is-limited-180-gram-crystal-clear-vinyl/8719262040540
+Deep Discount fetch: https://www.deepdiscount.com/release-of-an-oath-limited/8435395505250
+Deep Discount fetch: https://www.deepdiscount.com/5150-expanded-edition/603497809264
+Deep Discount fetch: https://www.deepdiscount.com/age-of-the-ram/602488221238
+Deep Discount fetch: https://www.deepdiscount.com/how-sad-how-lovely/810074425452
+Deep Discount fetch: https://www.deepdiscount.com/the-bestiary/840526504794
+Deep Discount fetch: https://www.deepdiscount.com/morning-star/843563197905
 Deep Discount fetch: https://www.deepdiscount.com/bo-diddley-chess-acoustic-sounds-series/602488372954
+Deep Discount fetch: https://www.deepdiscount.com/the-devils-door/5063176101815
+Deep Discount fetch: https://www.deepdiscount.com/queen-ii-collectors-edition-5-cd180g-2-lp-box-set/050087593612
 Deep Discount fetch: https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498
 Deep Discount fetch: https://www.deepdiscount.com/souls-of-black/4065629753412
-Deep Discount fetch: https://www.deepdiscount.com/5150-expanded-edition/603497809264
-Deep Discount fetch: https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427
-Deep Discount fetch: https://www.deepdiscount.com/release-of-an-oath-limited/8435395505250
-Deep Discount fetch: https://www.deepdiscount.com/age-of-the-ram/602488221238
-Deep Discount fetch: https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597
-Deep Discount fetch: https://www.deepdiscount.com/the-bestiary/840526504794
 Deep Discount fetch: https://www.deepdiscount.com/morning-star/843563197912
 Deep Discount fetch: https://www.deepdiscount.com/featured-vinyl/b141496
 Deep Discount: found 16 product links from https://www.deepdiscount.com/featured-vinyl/b141496
@@ -347,16 +299,16 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 110 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 178 deals
-  Rise Records: 75 deals
+  Rise Records: 76 deals
   Rise All: 60 deals
-  Brooklyn Vegan: 189 deals
-  Revolver: 149 deals
+  Brooklyn Vegan: 191 deals
+  Revolver: 151 deals
   Newbury Comics: 142 deals
-  Newbury Preorders: 0 deals
+  Newbury Preorders: 1 deals
   Craft Recordings: 88 deals
   MNRK Heavy: 131 deals
   Equal Vision: 101 deals
-  Rhino: 133 deals
+  Rhino: 137 deals
   Interscope Records: 163 deals
   SharpTone Records: 97 deals
   Rock Metal Fan Nation: 202 deals
@@ -367,17 +319,17 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 79 deals
   UNFD: 56 deals
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 0 deals
+  Hot Topic: FAILED: HTTP Error 404: Not Found
   Deep Discount: 42 deals
   Millions of Records: 0 deals
   IndieMerchstore: 63 deals
   IndieMerchstore Preorders: 113 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
   Target: SKIPPED (JS-rendered - needs browser lane)
-  Amazon: 2694 derived deals
+  Amazon: 2701 derived deals
 ----- SOURCE SUMMARY -----
-Amazon: 2694
-Brooklyn Vegan: 189
+Amazon: 2701
+Brooklyn Vegan: 191
 Craft Recordings: 88
 Deep Discount: 42
 Equal Vision: 101
@@ -388,11 +340,12 @@ IndieMerchstore Preorders: 105
 Interscope Records: 163
 MNRK Heavy: 131
 Newbury Comics: 142
+Newbury Preorders: 1
 Pure Noise Records: 79
-Revolver: 149
-Rhino: 133
+Revolver: 151
+Rhino: 137
 Rise All: 60
-Rise Records: 75
+Rise Records: 76
 RMFN All: 205
 Rock Metal Fan Nation: 202
 Rollin Preorders: 17
