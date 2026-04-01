@@ -23,6 +23,7 @@ WALMART_VINYL_URLS = [
     "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
     "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=2",
     "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=3",
+    "https://www.walmart.com/browse/music/vinyl-records/4104_1205481?page=4",
 ]
 HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/search?q=vinyl"
 MERCHBAR_SEARCH_URL = "https://www.merchbar.com/vinyl-records"
@@ -781,17 +782,9 @@ def build_unfd(source):
 
 
 def build_millions(source):
-    deals = build_shopify_deals({
-        "name": source["name"],
-        "source_type": "shopify_store",
-        "url": source["url"],
-    })
-    if deals:
-        SOURCE_STATUS[source["name"]] = f"{len(deals)} deals"
-        return deals
-
-    log(f'{source["name"]}: Shopify path empty, trying HTML fallback')
-    return build_html_deals(source)
+    deals = build_html_deals(source)
+    SOURCE_STATUS[source["name"]] = f"{len(deals)} deals"
+    return deals
 
 
 def build_deepdiscount(source):
@@ -841,7 +834,6 @@ def build_deepdiscount(source):
             return False
 
         last = parts[-1]
-
         if re.fullmatch(r"\d{8,14}", last):
             return True
 
@@ -959,233 +951,127 @@ def build_deepdiscount(source):
 
 def build_walmart_vinyl(source):
     deals = []
-    visible_seen = set()
-    product_seen = set()
+    seen = set()
+    robot_walls = 0
 
     def walmart_sleep():
-        time.sleep(random.uniform(0.7, 1.5))
+        time.sleep(random.uniform(0.8, 1.6))
 
     def clean_walmart_title(text):
         text = clean(text)
         text = re.sub(r"\s+\$[\d\.,]+.*$", "", text).strip()
         return text
 
-    def is_real_walmart_vinyl(text):
+    def is_junk_walmart_item(text):
         t = (text or "").lower()
-
-        if any(bad in t for bad in [
-            "cd",
-            "compact disc",
-            "cassette",
-            "turntable",
-            "record player",
-            "slipmat",
-            "cleaner",
-            "cleaning kit",
-            "book",
-            "kindle",
-            "audiobook",
-            "paperback",
-            "hardcover",
-            "poster",
-            "shirt",
-            "toy",
-            "funko"
-        ]):
-            return False
-
-        return any(good in t for good in [
-            "vinyl",
-            "lp",
-            "2lp",
-            "1lp",
-            "record"
+        return any(bad in t for bad in [
+            "cleaner", "cleaning", "lint", "roller", "brush",
+            "slipmat", "turntable", "record player", "speaker",
+            "cassette", "cd", "compact disc",
+            "book", "kindle", "audiobook",
+            "poster", "shirt", "toy", "funko",
+            "mermaid", "supplement", "vitamin",
+            "cat food", "gravy", "paper towels", "detergent"
         ])
 
-    def parse_walmart_title_parts(full_title):
-        full_title = clean_walmart_title(full_title)
+    def looks_like_real_vinyl(text):
+        t = (text or "").lower()
+        if is_junk_walmart_item(t):
+            return False
+        return any(marker in t for marker in [
+            "vinyl", "1lp", "2lp", " lp", "lp ", "record"
+        ])
 
-        if " - " in full_title:
-            parts = [p.strip() for p in full_title.split(" - ") if p.strip()]
-            if len(parts) >= 2:
-                artist = parts[0]
-                album = parts[1]
-                extra = " - ".join(parts[2:]) if len(parts) > 2 else ""
-                if extra:
-                    album = f"{album} - {extra}"
-                return artist, album
-
-        return "Unknown Artist", full_title
-
-    def extract_walmart_links(page_html):
-        links = []
-        hrefs = re.findall(r'href="([^"]+)"', page_html, re.I)
-
-        for href in hrefs:
-            full = urljoin("https://www.walmart.com", href)
-            low = full.lower()
-
-            if "/ip/" not in low:
-                continue
-
-            if any(bad in low for bad in [
-                "/reviews",
-                "/seller",
-                "/cp/",
-                "adsredirect",
-                "javascript:",
-                "#"
-            ]):
-                continue
-
-            if full not in links:
-                links.append(full)
-
-        return links[:500]
-
-    def extract_visible_titles(page_html):
-        titles = set()
+    def extract_candidates(page_html):
+        candidates = []
 
         patterns = [
             r'"name":"([^"]+)"',
             r'"title":"([^"]+)"',
+            r'"productName":"([^"]+)"',
+            r'"imageAlt":"([^"]+)"',
             r'aria-label="([^"]+)"',
             r'<img[^>]+alt="([^"]+)"',
         ]
 
+        found = []
         for pattern in patterns:
-            for match in re.findall(pattern, page_html, re.I):
-                title = clean_walmart_title(match)
-                if not title:
-                    continue
-                if len(title) < 4:
-                    continue
-                if is_real_walmart_vinyl(title):
-                    titles.add(title)
+            found.extend(re.findall(pattern, page_html, re.I))
 
-        return list(titles)
+        for raw in found:
+            title = clean_walmart_title(raw)
+            if not title or len(title) < 5:
+                continue
+            if not looks_like_real_vinyl(title):
+                continue
+            if is_banned(title):
+                continue
+            candidates.append(title)
 
-    # Phase 1: visible card titles from Walmart vinyl browse
+        deduped = []
+        seen_local = set()
+        for t in candidates:
+            key = t.lower().strip()
+            if key in seen_local:
+                continue
+            seen_local.add(key)
+            deduped.append(t)
+
+        return deduped
+
     for url in WALMART_VINYL_URLS:
         try:
+            walmart_sleep()
             page_html = walmart_fetch(url)
-            visible_titles = extract_visible_titles(page_html)
-            log(f'Walmart: found {len(visible_titles)} visible titles from {url}')
-
-            for full_title in visible_titles:
-                key = full_title.lower().strip()
-                if key in visible_seen:
-                    continue
-                visible_seen.add(key)
-
-                if not is_real_walmart_vinyl(full_title):
-                    continue
-
-                artist, album = parse_walmart_title_parts(full_title)
-                if looks_like_garbage(album):
-                    continue
-                if contains_bad_product_terms(f"{artist} {album}"):
-                    continue
-
-                query = quote_plus(f"{artist} {album} vinyl")
-                link = f"https://www.walmart.com/search?q={query}"
-
-                keywords, version_parts = build_version_parts(
-                    full_title,
-                    title_lower=full_title.lower(),
-                    link_lower=link.lower()
-                )
-
-                deals.append({
-                    "artist": artist,
-                    "title": album,
-                    "raw_title": full_title,
-                    "price": 0.0,
-                    "source": "Walmart",
-                    "source_type": source["source_type"],
-                    "link": link,
-                    "image": "",
-                    "keywords": keywords,
-                    "deal_quality": "normal",
-                    "demand": "steady",
-                    "format": "vinyl",
-                    "version": " ".join(version_parts) if version_parts else "standard",
-                    "availability_text": "",
-                    "page_text_snippet": full_title,
-                })
-
         except Exception as e:
-            log(f'Walmart: browse page failed {url} | {e}')
-
-    # Phase 2: actual product pages from /ip/ links
-    for url in WALMART_VINYL_URLS:
-        try:
-            page_html = walmart_fetch(url)
-            product_links = extract_walmart_links(page_html)
-            log(f'Walmart: found {len(product_links)} product links from {url}')
-        except Exception as e:
-            log(f'Walmart: failed to pull product links from {url} | {e}')
+            log(f'Walmart: failed {url} | {e}')
             continue
 
-        for link in product_links[:120]:
-            if link in product_seen:
-                continue
-            product_seen.add(link)
+        if not page_html:
+            continue
 
-            try:
-                walmart_sleep()
-                product_html = walmart_fetch(link)
-            except Exception as e:
-                log(f'Walmart: product page failed {link} | {e}')
-                continue
+        if "Robot or human" in page_html or "/blocked?" in page_html:
+            robot_walls += 1
+            log(f'Walmart: robot wall on {url}')
+            continue
 
-            raw_title = extract_title(product_html)
-            if not raw_title:
-                continue
-            if should_skip(raw_title, link):
-                continue
-            if not is_real_walmart_vinyl(raw_title):
-                continue
+        titles = extract_candidates(page_html)
+        log(f'Walmart: found {len(titles)} candidate vinyl items from {url}')
 
-            price = extract_price(product_html)
-            image = extract_image(product_html, link)
+        for raw_title in titles:
+            key = raw_title.lower().strip()
+            if key in seen:
+                continue
+            seen.add(key)
 
-            artist, album = parse_walmart_title_parts(raw_title)
-            if looks_like_garbage(album):
-                continue
-            if contains_bad_product_terms(f"{artist} {album}"):
-                continue
-
-            fmt = detect_format(title=raw_title, product_type="", page_text=product_html[:3500])
-            if fmt != "vinyl":
-                continue
+            link = f"https://www.walmart.com/search?q={quote_plus(raw_title)}"
 
             keywords, version_parts = build_version_parts(
-                f"{raw_title} {product_html[:2500]}",
+                raw_title,
                 title_lower=raw_title.lower(),
                 link_lower=link.lower()
             )
 
             deals.append({
-                "artist": artist,
-                "title": album,
+                "artist": "Walmart Vinyl",
+                "title": raw_title,
                 "raw_title": raw_title,
-                "price": price,
+                "price": 0.0,
                 "source": "Walmart",
                 "source_type": source["source_type"],
                 "link": link,
-                "image": image,
+                "image": "",
                 "keywords": keywords,
-                "deal_quality": "good" if price and price < 40 else "normal",
-                "demand": "steady",
+                "deal_quality": "catalog",
+                "demand": "broad",
                 "format": "vinyl",
                 "version": " ".join(version_parts) if version_parts else "standard",
                 "availability_text": "",
-                "page_text_snippet": clean(product_html)[:1000],
+                "page_text_snippet": raw_title,
             })
 
     deduped = dedupe_source_items(deals)
-    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals"
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | robot walls: {robot_walls}"
     log(f'Walmart: kept {len(deduped)}')
     return deduped
 
