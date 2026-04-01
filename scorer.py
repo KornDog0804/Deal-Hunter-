@@ -113,19 +113,24 @@ def joined_text(item):
     ]).lower()
 
 
+def is_walmart(item):
+    return normalize_text(item.get("source", "")) == "walmart"
+
+
 def hard_block(item):
+    if is_walmart(item):
+        return False
+
     text = joined_text(item)
 
     for term in HARD_BLOCK_TERMS:
         if term in text:
             return True
 
-    # force vinyl-only
     fmt = normalize_text(item.get("format", ""))
     if fmt and fmt != "vinyl":
         return True
 
-    # weird zero-price junk
     price = safe_price(item.get("best_price", item.get("price", 0)))
     if price <= 0:
         return True
@@ -287,7 +292,6 @@ def clean_item(item):
     title = str(item.get("title", "") or "").strip()
     raw_title = str(item.get("raw_title", "") or "").strip()
 
-    # if parser created junk artist/title pairs, fall back harder
     if not title or title.lower() in {"vinyl", "product"}:
         item["title"] = raw_title or "Unknown Title"
 
@@ -303,6 +307,9 @@ def clean_item(item):
 def score_item(item):
     try:
         item = clean_item(item)
+
+        if is_walmart(item):
+            return None
 
         title = item.get("title", "") or ""
         version = item.get("version", "") or ""
@@ -335,7 +342,6 @@ def score_item(item):
             + dr_points
         )
 
-        # force preorders upward, but not if blocked
         if item.get("is_preorder"):
             total += 15
 
@@ -427,9 +433,14 @@ def main():
 
     results = []
     blocked = 0
+    walmart_skipped = 0
 
     for item in items:
         if not isinstance(item, dict):
+            continue
+
+        if is_walmart(item):
+            walmart_skipped += 1
             continue
 
         if hard_block(item):
@@ -446,6 +457,7 @@ def main():
     results = dedupe_best_variants(results)
     print(f"After dedupe: {len(results)}")
     print(f"Hard blocked: {blocked}")
+    print(f"Walmart skipped from scoring: {walmart_skipped}")
 
     results.sort(
         key=lambda r: (
