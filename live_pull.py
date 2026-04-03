@@ -1252,6 +1252,85 @@ def build():
     return dedupe_deals(deals)
 
 
+# ── UPCOMING VINYL SCRAPER ─────────────────────────────────────────────────────
+
+def fetch_upcoming_vinyl():
+    """Scrape upcomingvinyl.com for releases this week, filter by artist whitelist."""
+    import re as _re
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        log("[UpcomingVinyl] BeautifulSoup not available, skipping")
+        return []
+
+    upcoming = []
+    urls = [
+        "https://upcomingvinyl.com/this-week",
+        "https://upcomingvinyl.com/overview",
+    ]
+
+    for url in urls:
+        try:
+            html_text = fetch(url, retries=2, delay=3)
+        except Exception:
+            log(f"[UpcomingVinyl] Failed to fetch {url}")
+            continue
+        if not html_text:
+            log(f"[UpcomingVinyl] Empty response for {url}")
+            continue
+
+        try:
+            soup = BeautifulSoup(html_text, "html.parser")
+
+            for li in soup.select("li"):
+                h2 = li.find("h2")
+                if not h2:
+                    continue
+
+                raw_title = h2.get_text(strip=True)
+
+                label_link = li.find("a", href=lambda h: h and "/label/" in h)
+                label = label_link.get_text(strip=True) if label_link else ""
+
+                if " - " in raw_title:
+                    parts = raw_title.split(" - ", 1)
+                    artist = parts[0].strip()
+                    title = parts[1].strip()
+                else:
+                    artist = raw_title
+                    title = ""
+
+                title_clean = _re.sub(r'\[.*?\]', '', title).strip()
+                artist_clean = _re.sub(r'\[.*?\]', '', artist).strip()
+
+                if not artist_allowed(artist_clean, title_clean):
+                    continue
+
+                upcoming.append({
+                    "artist": artist_clean,
+                    "title": title_clean,
+                    "label": label,
+                    "source_url": url,
+                    "type": "upcoming_release",
+                })
+                log(f"[UpcomingVinyl] MATCH: {artist_clean} — {title_clean} ({label})")
+
+        except Exception as e:
+            log(f"[UpcomingVinyl] Parse error for {url}: {e}")
+            continue
+
+    seen = set()
+    deduped = []
+    for item in upcoming:
+        key = f"{item['artist'].lower()}|{item['title'].lower()}"
+        if key not in seen:
+            seen.add(key)
+            deduped.append(item)
+
+    log(f"[UpcomingVinyl] Total whitelist matches: {len(deduped)}")
+    return deduped
+
+
 if __name__ == "__main__":
     data = build()
 
@@ -1322,85 +1401,3 @@ if __name__ == "__main__":
         f.write("\n".join(DEBUG))
 
     log(f"\nWrote {len(data)} total live deals")
-
-# ── UPCOMING VINYL SCRAPER ─────────────────────────────────────────────────────
-
-def fetch_upcoming_vinyl():
-    """Scrape upcomingvinyl.com for releases this week, filter by artist whitelist."""
-    import re as _re
-    try:
-        from bs4 import BeautifulSoup
-    except ImportError:
-        log("[UpcomingVinyl] BeautifulSoup not available, skipping")
-        return []
-
-    upcoming = []
-    urls = [
-        "https://upcomingvinyl.com/this-week",
-        "https://upcomingvinyl.com/overview",
-    ]
-
-    for url in urls:
-        html = fetch(url, retries=2, delay=3)
-        if not html:
-            log(f"[UpcomingVinyl] Failed to fetch {url}")
-            continue
-
-        try:
-            soup = BeautifulSoup(html, "html.parser")
-
-            # Each release is an <li> with an <h2> (artist - title) and a link for label
-            for li in soup.select("li"):
-                h2 = li.find("h2")
-                if not h2:
-                    continue
-
-                raw_title = h2.get_text(strip=True)
-
-                # Get label from the link inside the li
-                label_link = li.find("a", href=lambda h: h and "/label/" in h)
-                label = label_link.get_text(strip=True) if label_link else ""
-
-                # Split "Artist Title" — upcomingvinyl uses "Artist Title" not "Artist - Title"
-                # Try to split on " - " first, otherwise use full string as artist
-                if " - " in raw_title:
-                    parts = raw_title.split(" - ", 1)
-                    artist = parts[0].strip()
-                    title = parts[1].strip()
-                else:
-                    artist = raw_title
-                    title = ""
-
-                # Strip [2xLP] etc
-                title_clean = _re.sub(r'\[.*?\]', '', title).strip()
-                artist_clean = _re.sub(r'\[.*?\]', '', artist).strip()
-
-                if not artist_allowed(artist_clean, title_clean):
-                    continue
-
-                upcoming.append({
-                    "artist": artist_clean,
-                    "title": title_clean,
-                    "label": label,
-                    "source_url": url,
-                    "type": "upcoming_release",
-                })
-                log(f"[UpcomingVinyl] MATCH: {artist_clean} — {title_clean} ({label})")
-
-        except Exception as e:
-            log(f"[UpcomingVinyl] Parse error for {url}: {e}")
-            continue
-
-    # Dedupe
-    seen = set()
-    deduped = []
-    for item in upcoming:
-        key = f"{item['artist'].lower()}|{item['title'].lower()}"
-        if key not in seen:
-            seen.add(key)
-            deduped.append(item)
-
-    log(f"[UpcomingVinyl] Total whitelist matches: {len(deduped)}")
-    return deduped
-
-
