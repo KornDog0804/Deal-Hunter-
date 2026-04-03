@@ -1272,23 +1272,33 @@ def fetch_upcoming_vinyl():
     for url in urls:
         try:
             html_text = fetch(url, retries=2, delay=3)
-        except Exception:
-            log(f"[UpcomingVinyl] Failed to fetch {url}")
+        except Exception as e:
+            log(f"[UpcomingVinyl] Failed to fetch {url}: {e}")
             continue
         if not html_text:
             log(f"[UpcomingVinyl] Empty response for {url}")
             continue
 
+        # Debug: show first 300 chars so we can see what we got
+        log(f"[UpcomingVinyl] Got {len(html_text)} bytes from {url}")
+        log(f"[UpcomingVinyl] Preview: {html_text[:300].strip()}")
+
         try:
             soup = BeautifulSoup(html_text, "html.parser")
 
+            # Count h2 tags to see if content loaded
+            all_h2 = soup.find_all("h2")
+            all_li = soup.find_all("li")
+            log(f"[UpcomingVinyl] Found {len(all_h2)} h2 tags, {len(all_li)} li tags")
+
+            # Try li > h2 approach first
+            found_via_li = 0
             for li in soup.select("li"):
                 h2 = li.find("h2")
                 if not h2:
                     continue
-
+                found_via_li += 1
                 raw_title = h2.get_text(strip=True)
-
                 label_link = li.find("a", href=lambda h: h and "/label/" in h)
                 label = label_link.get_text(strip=True) if label_link else ""
 
@@ -1303,7 +1313,7 @@ def fetch_upcoming_vinyl():
                 title_clean = _re.sub(r'\[.*?\]', '', title).strip()
                 artist_clean = _re.sub(r'\[.*?\]', '', artist).strip()
 
-                if not artist_allowed(artist_clean, title_clean):
+                if not artist_clean:
                     continue
 
                 upcoming.append({
@@ -1313,7 +1323,18 @@ def fetch_upcoming_vinyl():
                     "source_url": url,
                     "type": "upcoming_release",
                 })
-                log(f"[UpcomingVinyl] MATCH: {artist_clean} — {title_clean} ({label})")
+                log(f"[UpcomingVinyl] FOUND: {artist_clean} — {title_clean} ({label})")
+
+            log(f"[UpcomingVinyl] li>h2 approach found {found_via_li} entries")
+
+            # Fallback: try any h2 tags directly if li approach got nothing
+            if found_via_li == 0:
+                log("[UpcomingVinyl] Trying direct h2 fallback...")
+                for h2 in all_h2:
+                    raw_title = h2.get_text(strip=True)
+                    if not raw_title or len(raw_title) < 3:
+                        continue
+                    log(f"[UpcomingVinyl] h2 text: {raw_title[:80]}")
 
         except Exception as e:
             log(f"[UpcomingVinyl] Parse error for {url}: {e}")
@@ -1327,7 +1348,7 @@ def fetch_upcoming_vinyl():
             seen.add(key)
             deduped.append(item)
 
-    log(f"[UpcomingVinyl] Total whitelist matches: {len(deduped)}")
+    log(f"[UpcomingVinyl] Total matches: {len(deduped)}")
     return deduped
 
 
