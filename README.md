@@ -1,29 +1,58 @@
-# Korndog Deal Hunter Starter
+# KornDog Deal Hunter
 
-This is a free starter build for your deal-hunting brain.
+Private buying intelligence system for KornDog Records (Bowling Green, KY).
+
+Scrapes 20+ vinyl stores on a schedule, scores deals, and surfaces buy signals — so I know what to buy, when to buy it, and what it's worth before anyone else does.
+
+---
+
+## What It Does
+
+- Pulls live inventory from 20+ stores every 6 hours via GitHub Actions
+- Filters deals against my artist whitelist
+- Scores deals by format, keywords, and price signals
+- Tracks upcoming vinyl releases from my target artists
+- Outputs clean JSON files ready for my private dashboard
+
+---
+
+## Output Files
+
+| File | What It Is |
+|------|-----------|
+| `live_deals.json` | All deals pulled from all sources |
+| `buy_signals.json` | Whitelist-only deals sorted by score — my shopping list |
+| `upcoming_releases.json` | This week's releases from artists I track |
+| `debug_live_pull.txt` | Full scrape log for debugging |
+
+---
+
+## Sources
+
+**Shopify stores:** Rollin Records, Sound of Vinyl, uDiscover, Fearless, Rise Records, Brooklyn Vegan, Revolver, Newbury Comics, Craft Recordings, MNRK Heavy, Equal Vision, Rhino, Interscope, SharpTone, Rock Metal Fan Nation, Sumerian, Solid State, IndieMerchstore, Hopeless, Pirates Press
+
+**MerchNOW stores:** Pure Noise, Trust Records, Spinefarm, InVogue, Thriller Records, Hopeless Records
+
+**Other:** Deep Discount, Walmart, Merchbar, Hot Topic, UNFD
+
+---
 
 ## Files
-- `artists.json` -> artist priority tiers
-- `rules.json` -> scoring weights and thresholds
-- `filters.json` -> positive and ignore keywords
-- `sources.json` -> stores and alert sources to watch
-- `sample_deals.json` -> example deals to test against the brain
-- `scorer.py` -> scores sample deals and writes `scored_deals.json`
 
-## Run it
-```bash
-python scorer.py
-```
+| File | Purpose |
+|------|---------|
+| `live_pull.py` | Main scraper — runs all sources and writes output JSON |
+| `artist_whitelist.json` | Artists I track and prioritize |
+| `slug_patterns.json` | URL pattern matching helpers |
+| `.github/workflows/run-deal-hunter.yml` | GitHub Actions schedule |
 
-## What it does
-- gives artist-fit points
-- boosts variants, anniversary editions, exclusives
-- downranks junk
-- gives Sound of Vinyl and other trusted alerts a boost
-- treats vinyl as the main format
+---
 
-## Next upgrades
-1. replace `sample_deals.json` with real scraped deals
-2. add affiliate link fields
-3. compare against Discogs / retailer averages
-4. publish results to a simple webpage or dashboard
+## Schedule
+
+Runs automatically 3x per day: 7am, 1pm, 7pm Central.
+Trigger manually anytime from the Actions tab.
+
+---
+
+*KornDog Records — Vinyl Therapy Never Dies.*
