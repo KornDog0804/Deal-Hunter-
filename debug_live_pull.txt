@@ -58,18 +58,16 @@ Rise All: kept 58
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
-  -> retry 1/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  -> retry 2/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 201
+Brooklyn Vegan: kept 203
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 177
+Revolver: kept 173
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -111,14 +109,14 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 142
+Rhino: kept 141
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 166
+Interscope Records: kept 162
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -151,16 +149,16 @@ Sumerian Records: kept 74
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 127 products
-Solid State Records: 127 products via Shopify JSON
-Solid State Records: kept 50
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 128 products
+Solid State Records: 128 products via Shopify JSON
+Solid State Records: kept 51
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/collections/vinyl/products.json?limit=250 -> 48 products
-Solid State Vinyl: 48 products via Shopify JSON
-Solid State Vinyl: kept 46
+  ✓ https://solidstaterecords.store/collections/vinyl/products.json?limit=250 -> 49 products
+Solid State Vinyl: 49 products via Shopify JSON
+Solid State Vinyl: kept 47
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -310,9 +308,9 @@ Hot Topic: skipping product https://www.hottopic.com/product/5-seconds-of-summer
 Hot Topic: skipping product https://www.hottopic.com/product/slaughter-to-prevail-grizzly-bone-color-with-black-burgundy-splatter-vinyl-lp/34917040.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/all-time-low-everyones-talking-white-blue-splatter-vinyl-lp-hot-topic-exclusive/35117651.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/dance-gavin-dance-pantheon-baby-blue-lemon-smush-with-white-splatter-double-vinyl-lp-hot-topic-exclusive/34874629.html | name 'looks_like_amazon_link' is not defined
-Hot Topic: skipping product https://www.hottopic.com/product/bruno-mars-the-romantic-vinyl-lp/36100840.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/turnstile-never-enough-milky-clear-vinyl-lp-hot-topic-exclusive/34586856.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/taylor-swift-the-life-of-a-showgirl-sweat-and-vanilla-perfume-portofino-orange-glitter-vinyl-lp/35515029.html | name 'looks_like_amazon_link' is not defined
+Hot Topic: skipping product https://www.hottopic.com/product/bruno-mars-the-romantic-vinyl-lp/36100840.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/karol-g-tropicoqueta-tropical-blue-vinyl-lp/34968809.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/yellowcard-better-days-orange-vinyl-lp-hot-topic-exclusive/34874627.html | name 'looks_like_amazon_link' is not defined
 Hot Topic: skipping product https://www.hottopic.com/product/state-champs-state-champs-black-white-split-vinyl-lp-hot-topic-exclusive/33350716.html | name 'looks_like_amazon_link' is not defined
@@ -330,58 +328,58 @@ Deep Discount fetch: https://www.deepdiscount.com/search?mod=AP&cr=vinyl
 Deep Discount: found 0 product links from https://www.deepdiscount.com/search?mod=AP&cr=vinyl
 Deep Discount fetch: https://www.deepdiscount.com/music/vinyl
 Deep Discount: found 31 product links from https://www.deepdiscount.com/music/vinyl
-Deep Discount fetch: https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104
-Deep Discount fetch: https://www.deepdiscount.com/love-is-not-enough/641956287635
-Deep Discount fetch: https://www.deepdiscount.com/confessions-on-a-dance-floor/603497808120
 Deep Discount fetch: https://www.deepdiscount.com/hades/075678589928
-Deep Discount fetch: https://www.deepdiscount.com/light-as-a-feather/8435395505328
-Deep Discount fetch: https://www.deepdiscount.com/irreversible/880882681913
-Deep Discount fetch: https://www.deepdiscount.com/creature-of-habit/810090098340
-Deep Discount fetch: https://www.deepdiscount.com/whatevers-clever/075678591754
-Deep Discount fetch: https://www.deepdiscount.com/frankenstein-original-soundtrack/810155841416
-Deep Discount fetch: https://www.deepdiscount.com/axis-bold-as-love-stereo-version/198029892819
-Deep Discount fetch: https://www.deepdiscount.com/sexistential/889030046710
-Deep Discount fetch: https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412
+Deep Discount fetch: https://www.deepdiscount.com/-/5054429208375
 Deep Discount fetch: https://www.deepdiscount.com/make-up-is-a-lie-blue/093624829799
-Deep Discount fetch: https://www.deepdiscount.com/the-astonishing/603497807765
-Deep Discount fetch: https://www.deepdiscount.com/a-decade-of-dio-1983-1993/603497805044
+Deep Discount fetch: https://www.deepdiscount.com/kiss-all-the-time-disco-occasionally/199584177113
+Deep Discount fetch: https://www.deepdiscount.com/into-oblivion/199584033914
+Deep Discount fetch: https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810
+Deep Discount fetch: https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104
+Deep Discount fetch: https://www.deepdiscount.com/irreversible/880882681913
+Deep Discount fetch: https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104
+Deep Discount fetch: https://www.deepdiscount.com/sexistential/889030046710
+Deep Discount fetch: https://www.deepdiscount.com/with-heaven-on-top/093624827078
+Deep Discount fetch: https://www.deepdiscount.com/creature-of-habit/810090098340
 Deep Discount fetch: https://www.deepdiscount.com/sex-packets-35th-anniversary-pop-up-version/016998557013
 Deep Discount fetch: https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947
-Deep Discount fetch: https://www.deepdiscount.com/northern-lights-southern-cross/602478343117
+Deep Discount fetch: https://www.deepdiscount.com/love-is-not-enough/641956287635
 Deep Discount fetch: https://www.deepdiscount.com/folk-singer-chess-acoustic-sounds-series/602488332415
-Deep Discount fetch: https://www.deepdiscount.com/bully/9120005656048
-Deep Discount fetch: https://www.deepdiscount.com/live-in-europe/8717931354738
-Deep Discount fetch: https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810
-Deep Discount fetch: https://www.deepdiscount.com/-/5054429208375
-Deep Discount fetch: https://www.deepdiscount.com/kiss-all-the-time-disco-occasionally/199584177113
+Deep Discount fetch: https://www.deepdiscount.com/whatevers-clever/075678591754
 Deep Discount fetch: https://www.deepdiscount.com/soul-to-soul-music-from-the-original-soundtrack-various-artists/810177219224
-Deep Discount fetch: https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104
-Deep Discount fetch: https://www.deepdiscount.com/trying-times/198704834592
-Deep Discount fetch: https://www.deepdiscount.com/aerosmith-legendary-edition/602465844641
-Deep Discount fetch: https://www.deepdiscount.com/into-oblivion/199584033914
+Deep Discount fetch: https://www.deepdiscount.com/live-in-europe/8717931354738
+Deep Discount fetch: https://www.deepdiscount.com/confessions-on-a-dance-floor/603497808120
+Deep Discount fetch: https://www.deepdiscount.com/a-decade-of-dio-1983-1993/603497805044
+Deep Discount fetch: https://www.deepdiscount.com/light-as-a-feather/8435395505328
+Deep Discount fetch: https://www.deepdiscount.com/axis-bold-as-love-stereo-version/198029892819
 Deep Discount fetch: https://www.deepdiscount.com/chicago-vi-aqua/829421889335
-Deep Discount fetch: https://www.deepdiscount.com/with-heaven-on-top/093624827078
+Deep Discount fetch: https://www.deepdiscount.com/aerosmith-legendary-edition/602465844641
+Deep Discount fetch: https://www.deepdiscount.com/frankenstein-original-soundtrack/810155841416
+Deep Discount fetch: https://www.deepdiscount.com/trying-times/198704834592
+Deep Discount fetch: https://www.deepdiscount.com/the-astonishing/603497807765
+Deep Discount fetch: https://www.deepdiscount.com/northern-lights-southern-cross/602478343117
+Deep Discount fetch: https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412
+Deep Discount fetch: https://www.deepdiscount.com/bully/9120005656048
 Deep Discount fetch: https://www.deepdiscount.com/music/vinyl/new-releases
 Deep Discount: found 25 product links from https://www.deepdiscount.com/music/vinyl/new-releases
-Deep Discount fetch: https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212
-Deep Discount fetch: https://www.deepdiscount.com/the-lost-tapes/4262428984577
-Deep Discount fetch: https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696
 Deep Discount fetch: https://www.deepdiscount.com/against-the-dying-of-the-light/724596121818
 Deep Discount fetch: https://www.deepdiscount.com/queen-ii-collectors-edition-5-cd180g-2-lp-box-set/050087593612
-Deep Discount fetch: https://www.deepdiscount.com/5150-expanded-edition/603497809264
-Deep Discount fetch: https://www.deepdiscount.com/survival-and-other-stories/8024391153956
-Deep Discount fetch: https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113
-Deep Discount fetch: https://www.deepdiscount.com/yourprettyplaceisgoingtohell/5061041821790
-Deep Discount fetch: https://www.deepdiscount.com/peace-in-place/4065629759353
-Deep Discount fetch: https://www.deepdiscount.com/hail-horror-hail-orange-marble-vinyl/801056836212
-Deep Discount fetch: https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797
-Deep Discount fetch: https://www.deepdiscount.com/this-music-may-contain-hope/820200076182
-Deep Discount fetch: https://www.deepdiscount.com/el-nuevo-montuno-llego/8435008865207
 Deep Discount fetch: https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692
-Deep Discount fetch: https://www.deepdiscount.com/how-sad-how-lovely/810074425452
+Deep Discount fetch: https://www.deepdiscount.com/5150-expanded-edition/603497809264
+Deep Discount fetch: https://www.deepdiscount.com/hail-horror-hail-orange-marble-vinyl/801056836212
 Deep Discount fetch: https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018
-Deep Discount fetch: https://www.deepdiscount.com/breakfast-in-america/602475456254
+Deep Discount fetch: https://www.deepdiscount.com/this-music-may-contain-hope/820200076182
+Deep Discount fetch: https://www.deepdiscount.com/yourprettyplaceisgoingtohell/5061041821790
+Deep Discount fetch: https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113
 Deep Discount fetch: https://www.deepdiscount.com/earth-mother-earth/8024391153857
+Deep Discount fetch: https://www.deepdiscount.com/how-sad-how-lovely/810074425452
+Deep Discount fetch: https://www.deepdiscount.com/survival-and-other-stories/8024391153956
+Deep Discount fetch: https://www.deepdiscount.com/the-lost-tapes/4262428984577
+Deep Discount fetch: https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797
+Deep Discount fetch: https://www.deepdiscount.com/el-nuevo-montuno-llego/8435008865207
+Deep Discount fetch: https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212
+Deep Discount fetch: https://www.deepdiscount.com/peace-in-place/4065629759353
+Deep Discount fetch: https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696
+Deep Discount fetch: https://www.deepdiscount.com/breakfast-in-america/602475456254
 Deep Discount fetch: https://www.deepdiscount.com/featured-vinyl/b141496
 Deep Discount: found 15 product links from https://www.deepdiscount.com/featured-vinyl/b141496
 Deep Discount: kept 47
@@ -404,7 +402,7 @@ Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
   ✓ https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 -> 250 products
 IndieMerchstore Preorders: 250 products via Shopify JSON
-IndieMerchstore Preorders: kept 110
+IndieMerchstore Preorders: kept 102
 
 ==================================================
 Scraping: Walmart (walmart_catalog_source)
@@ -429,7 +427,7 @@ Target: SKIPPED (JS-rendered - needs browser lane)
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 327844 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 327712 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -812,7 +810,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 六道寺恵梨Death Stranding Original Soundtrack —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: 友川かずきMuzan No Bi Beauty Without Mercy —  (Fuji)
 [UpcomingVinyl] li>h2 approach found 366 entries
-[UpcomingVinyl] Got 516451 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 516338 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -827,7 +825,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3534 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3533 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -836,7 +834,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 364
 [UpcomingVinyl] 364 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3357 buy signals saved to buy_signals.json
+[BuySignals] 3344 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -849,21 +847,21 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 180 deals
   Rise Records: 77 deals
   Rise All: 58 deals
-  Brooklyn Vegan: 201 deals
-  Revolver: 177 deals
+  Brooklyn Vegan: 203 deals
+  Revolver: 173 deals
   Newbury Comics: 142 deals
   Newbury Preorders: 1 deals
   Craft Recordings: 84 deals
   MNRK Heavy: 132 deals
   Equal Vision: 96 deals
-  Rhino: 142 deals
-  Interscope Records: 166 deals
+  Rhino: 141 deals
+  Interscope Records: 162 deals
   SharpTone Records: 97 deals
   Rock Metal Fan Nation: 207 deals
   RMFN All: 205 deals
   Sumerian Records: 74 deals
-  Solid State Records: 50 deals
-  Solid State Vinyl: 46 deals
+  Solid State Records: 51 deals
+  Solid State Vinyl: 47 deals
   Pure Noise Records: 79 deals
   Hopeless Records: 57 deals
   Hopeless Shopify: 57 deals
@@ -878,11 +876,11 @@ SOURCE STATUS SUMMARY
   Deep Discount: 47 deals
   Millions of Records: 0 deals
   IndieMerchstore: 81 deals
-  IndieMerchstore Preorders: 110 deals
+  IndieMerchstore Preorders: 102 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
   Target: SKIPPED (JS-rendered - needs browser lane)
 ----- SOURCE SUMMARY -----
-Brooklyn Vegan: 201
+Brooklyn Vegan: 203
 Craft Recordings: 84
 Deep Discount: 47
 Equal Vision: 96
@@ -891,15 +889,15 @@ Fearless Vinyl: 179
 Hopeless Records: 57
 Hopeless Shopify: 57
 IndieMerchstore: 79
-IndieMerchstore Preorders: 102
-Interscope Records: 166
+IndieMerchstore Preorders: 96
+Interscope Records: 162
 MNRK Heavy: 132
 Newbury Comics: 142
 Newbury Preorders: 1
 Pirates Press Records: 67
 Pure Noise Records: 79
-Revolver: 177
-Rhino: 142
+Revolver: 173
+Rhino: 141
 Rise All: 58
 Rise Records: 77
 RMFN All: 204
