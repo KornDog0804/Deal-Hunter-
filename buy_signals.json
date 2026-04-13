@@ -5122,15 +5122,6 @@
   },
   {
     "artist": "August Burns Red",
-    "title": "\"Behemoth\" Test Press Vinyl",
-    "price": 60.0,
-    "source": "Fearless Records",
-    "link": "https://store.fearlessrecords.com/products/august-burns-red-behemoth-test-press-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/testpress-7_44c5000b-10ee-4bdc-acc9-2836893fa518.png?v=1774570746",
-    "score": 0
-  },
-  {
-    "artist": "August Burns Red",
     "title": "\"Season Of Surrender\" Spring Skies Vinyl",
     "price": 30.0,
     "source": "Fearless Records",
@@ -5892,15 +5883,6 @@
     "source": "Fearless Vinyl",
     "link": "https://store.fearlessrecords.com/products/the-plot-in-you-black-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/ThePlotInYou_ThePlotInYou_LP_VInyl_Black.png?v=1775144261",
-    "score": 0
-  },
-  {
-    "artist": "August Burns Red",
-    "title": "\"Behemoth\" Test Press Vinyl",
-    "price": 60.0,
-    "source": "Fearless Vinyl",
-    "link": "https://store.fearlessrecords.com/products/august-burns-red-behemoth-test-press-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/testpress-7_44c5000b-10ee-4bdc-acc9-2836893fa518.png?v=1774570746",
     "score": 0
   },
   {
@@ -28162,29 +28144,110 @@
   },
   {
     "artist": "Unknown Artist",
+    "title": "Jack Harlow Monica on DeepDiscount",
+    "price": 29.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/monica/075678587665",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/17/4501217-3555945.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Thundercat Distracted (RED VINYL) on DeepDiscount",
+    "price": 35.68,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/distracted-red-vinyl/5054429208740",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/01/4490301-3557201.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Laura Nyro Live In San Francisco, 28Th April 1994 on DeepDiscount",
+    "price": 45.76,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/53/4493753-3528025.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Rush Grace Under Pressure (Super Deluxe Edition) on DeepDiscount",
+    "price": 355.66,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4488492-3547069.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Kim Wilde Close",
+    "title": "Picture Disc [Import] on DeepDiscount",
+    "price": 42.02,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/close-picture-disc/5014797911673",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/23/4488523-3516342.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Vince Guaraldi It's Arbor Day, Charlie Brown/ Charlie Brown's All Stars (Forest Green vinyl) on DeepDiscount",
+    "price": 35.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/20/4493020-3531092.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Squarepusher Kammerkonzert on DeepDiscount",
+    "price": 38.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/kammerkonzert/5056818806070",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4492835-3545684.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Robin Trower Robin Trower Live! 50th Anniversary Edition on DeepDiscount",
+    "price": 39.95,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/robin-trower-live-50th-anniversary-edition/840401722121",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/67/4470567-3478632.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Connie Converse How Sad, How Lovely on DeepDiscount",
+    "price": 26.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/how-sad-how-lovely/810074425452",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/34/4489134-3520085.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Supertramp Even In The Quietest Moments... on DeepDiscount",
+    "price": 39.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/even-in-the-quietest-moments/602475456162",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4489678-3543985.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "The Jimi Hendrix Experience BBC Sessions on DeepDiscount",
+    "price": 27.47,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/bbc-sessions/198029892611",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/11/4497111-3542637.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
     "title": "John Fogerty The Lost Tapes on DeepDiscount",
     "price": 29.4,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/the-lost-tapes/4262428984577",
     "image": "https://mediacdn.aent-m.com/prod-img/300/24/4486024-3510084.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Ice-T Power Rarities [Explicit Content] on DeepDiscount",
-    "price": 26.79,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/power-rarities/603497805259",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4496836-3564263.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Frank Sinatra Songs For Swingin' Lovers (Blue Note Tone Poet Edition) on DeepDiscount",
-    "price": 40.8,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4491589-3551885.jpg?ae=4338133151",
     "score": 0
   },
   {
@@ -28207,186 +28270,6 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "The Charlatans UK Some Friendly 35th Anniversary Edition (WHITE VINYL) on DeepDiscount",
-    "price": 47.87,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/66/4490166-3547141.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Holly Humberstone Cruel World [Explicit Content] on DeepDiscount",
-    "price": 36.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/cruel-world/602488113694",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/19/4490219-3521348.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Carter the Unstoppable Sex Machine Straw Donkey",
-    "title": "the Complete Singles on DeepDiscount",
-    "price": 35.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/straw-donkey-the-complete-singles/840401722343",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4487793-3513786.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Kim Wilde Close",
-    "title": "Picture Disc [Import] on DeepDiscount",
-    "price": 42.02,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/close-picture-disc/5014797911673",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/23/4488523-3516342.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Squarepusher Kammerkonzert on DeepDiscount",
-    "price": 38.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/kammerkonzert/5056818806070",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4492835-3545684.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Todd Rundgren An Evening With Todd Rundgren: The Complete Live At The Ridgefield on DeepDiscount",
-    "price": 58.91,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/95/4488695-3516554.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Connie Converse How Sad, How Lovely on DeepDiscount",
-    "price": 26.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/how-sad-how-lovely/810074425452",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/34/4489134-3520085.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "The Cramps Bad Music For Bad People on DeepDiscount",
-    "price": 27.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/bad-music-for-bad-people/602478346491",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4463849-3565889.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "SZA Save The Day (From Hoppers) on DeepDiscount",
-    "price": 31.96,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4496249-3538591.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Supertramp Even In The Quietest Moments... on DeepDiscount",
-    "price": 39.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/even-in-the-quietest-moments/602475456162",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4489678-3543985.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "The Electric Prunes Release Of An Oath",
-    "title": "Limited [Import] on DeepDiscount",
-    "price": 33.17,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/release-of-an-oath-limited/8435395505250",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/33/4500433-3568372.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Heaven & Hell Breaking Out Of Heaven: 2007-2009 on DeepDiscount",
-    "price": 188.98,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/31/4493831-3557292.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "The Jimi Hendrix Experience BBC Sessions on DeepDiscount",
-    "price": 27.47,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/bbc-sessions/198029892611",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/11/4497111-3542637.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Cymande Promised Heights on DeepDiscount",
-    "price": 26.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/promised-heights/720841302711",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4489835-3519655.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Rush Grace Under Pressure (Super Deluxe Edition) on DeepDiscount",
-    "price": 355.66,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4488492-3547069.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Saxon Solid Ball Of Rock",
-    "title": "Limited 180-Gram Silver Colored Vinyl [Import] on DeepDiscount",
-    "price": 38.79,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4489270-3531523.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Vince Guaraldi It's Arbor Day, Charlie Brown/ Charlie Brown's All Stars (Forest Green vinyl) on DeepDiscount",
-    "price": 35.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/20/4493020-3531092.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Robin Trower Robin Trower Live! 50th Anniversary Edition on DeepDiscount",
-    "price": 39.95,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/robin-trower-live-50th-anniversary-edition/840401722121",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/67/4470567-3478632.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Dave Matthews Band Live Trax Vol. 72 6.28.25 Huntington Bank Pavilion at Northerly Island on DeepDiscount",
-    "price": 75.94,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/50/4487350-3513317.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Laura Nyro Live In San Francisco, 28Th April 1994 on DeepDiscount",
-    "price": 45.76,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/53/4493753-3528025.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
     "title": "Jon Anderson Earth Mother Earth on DeepDiscount",
     "price": 33.21,
     "source": "Deep Discount",
@@ -28396,20 +28279,11 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "Thundercat Distracted (RED VINYL) on DeepDiscount",
-    "price": 35.68,
+    "title": "The Jimi Hendrix Experience Winterland on DeepDiscount",
+    "price": 27.47,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/distracted-red-vinyl/5054429208740",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/01/4490301-3557201.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Jack Harlow Monica on DeepDiscount",
-    "price": 29.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/monica/075678587665",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/17/4501217-3555945.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/winterland/198029892710",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/12/4497112-3542638.jpg?ae=4338133151",
     "score": 0
   },
   {
@@ -28423,110 +28297,128 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "The Jimi Hendrix Experience Winterland on DeepDiscount",
-    "price": 27.47,
+    "title": "Cymande Promised Heights on DeepDiscount",
+    "price": 26.99,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/winterland/198029892710",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/12/4497112-3542638.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Enter Shikari Lose Your Self",
-    "title": "Teal With Black Splatter Vinyl [Import] on DeepDiscount",
-    "price": 43.01,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/lose-your-self-teal-with-black-splatter-vinyl/822166004087",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4498192-3540903.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/promised-heights/720841302711",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4489835-3519655.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Delines The Set Up (CLEAR VINYL) on DeepDiscount",
-    "price": 32.85,
+    "title": "Frank Sinatra Songs For Swingin' Lovers (Blue Note Tone Poet Edition) on DeepDiscount",
+    "price": 40.8,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/the-set-up-clear-vinyl/5052571225813",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4487174-3512618.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4491589-3551885.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Fcukers Ã- on DeepDiscount",
-    "price": 35.68,
+    "title": "SZA Save The Day (From Hoppers) on DeepDiscount",
+    "price": 31.96,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/-/5054429208375",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/26/4487726-3513757.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4496249-3538591.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Bob & Doug McKenzie Great White North & Strange Brew 44 3/ 4 Anniversary on DeepDiscount",
-    "price": 69.51,
+    "title": "The Charlatans UK Some Friendly 35th Anniversary Edition (WHITE VINYL) on DeepDiscount",
+    "price": 47.87,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/16/4490316-3542654.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/66/4490166-3547141.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Alan Parsons Project Ammonia Avenue (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
+    "title": "The Cramps Bad Music For Bad People on DeepDiscount",
+    "price": 27.99,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4490178-3557303.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/bad-music-for-bad-people/602478346491",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4463849-3565889.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Alan Parsons Project Eye In The Sky (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
+    "title": "Ice-T Power Rarities [Explicit Content] on DeepDiscount",
+    "price": 26.79,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490174-3557300.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/power-rarities/603497805259",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4496836-3564263.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Van Halen 5150 (Expanded Edition) on DeepDiscount",
-    "price": 94.48,
+    "title": "Heaven & Hell Breaking Out Of Heaven: 2007-2009 on DeepDiscount",
+    "price": 188.98,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/5150-expanded-edition/603497809264",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4493336-3557787.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/31/4493831-3557292.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Ella Langley Dandelion (Puffball White) on DeepDiscount",
-    "price": 40.78,
+    "title": "Todd Rundgren An Evening With Todd Rundgren: The Complete Live At The Ridgefield on DeepDiscount",
+    "price": 58.91,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/dandelion-puffball-white/199584308913",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/60/4505360-3557350.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/95/4488695-3516554.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Saxon Solid Ball Of Rock",
+    "title": "Limited 180-Gram Silver Colored Vinyl [Import] on DeepDiscount",
+    "price": 38.79,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4489270-3531523.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "The Electric Prunes Release Of An Oath",
+    "title": "Limited [Import] on DeepDiscount",
+    "price": 33.17,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/release-of-an-oath-limited/8435395505250",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/33/4500433-3568372.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Alan Parsons Project The Turn Of A Friendly Card (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
+    "title": "Dave Matthews Band Live Trax Vol. 72 6.28.25 Huntington Bank Pavilion at Northerly Island on DeepDiscount",
+    "price": 75.94,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4490170-3557792.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/50/4487350-3513317.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Carter the Unstoppable Sex Machine Straw Donkey",
+    "title": "the Complete Singles on DeepDiscount",
+    "price": 35.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/straw-donkey-the-complete-singles/840401722343",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4487793-3513786.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Brigitte Calls Me Baby Irreversible on DeepDiscount",
-    "price": 26.95,
+    "title": "Holly Humberstone Cruel World [Explicit Content] on DeepDiscount",
+    "price": 36.99,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/irreversible/880882681913",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/55/4478855-3540257.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/cruel-world/602488113694",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/19/4490219-3521348.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Gaerea Loss on DeepDiscount",
-    "price": 30.64,
+    "title": "Upsammy Seismo on DeepDiscount",
+    "price": 32.45,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/loss/199584026114",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/68/4467568-3468436.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/seismo/756029613188",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/33/4492333-3528496.jpg?ae=4338133151",
     "score": 0
   },
   {
@@ -28540,20 +28432,74 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "Duran Duran Duran Duran (The Wedding Album) on DeepDiscount",
-    "price": 38.09,
+    "title": "Brigitte Calls Me Baby Irreversible on DeepDiscount",
+    "price": 26.95,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/duran-duran-the-wedding-album/5054197915512",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/06/4497106-3569377.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/irreversible/880882681913",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/55/4478855-3540257.jpg?ae=4338133151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Muddy Waters Folk Singer (Chess Acoustic Sounds Series) on DeepDiscount",
-    "price": 40.8,
+    "title": "Delines The Set Up (CLEAR VINYL) on DeepDiscount",
+    "price": 32.85,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/folk-singer-chess-acoustic-sounds-series/602488332415",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490374-3545267.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/the-set-up-clear-vinyl/5052571225813",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4487174-3512618.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project Ammonia Avenue (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4490178-3557303.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Van Halen 5150 (Expanded Edition) on DeepDiscount",
+    "price": 94.48,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/5150-expanded-edition/603497809264",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4493336-3557787.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Enter Shikari Lose Your Self",
+    "title": "Teal With Black Splatter Vinyl [Import] on DeepDiscount",
+    "price": 43.01,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/lose-your-self-teal-with-black-splatter-vinyl/822166004087",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4498192-3540903.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project The Turn Of A Friendly Card (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4490170-3557792.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Ella Langley Dandelion (Puffball White) on DeepDiscount",
+    "price": 40.78,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/dandelion-puffball-white/199584308913",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/60/4505360-3557350.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project Eye In The Sky (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490174-3557300.jpg?ae=4338133151",
     "score": 0
   },
   {
@@ -28567,11 +28513,47 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "Upsammy Seismo on DeepDiscount",
-    "price": 32.45,
+    "title": "Bob & Doug McKenzie Great White North & Strange Brew 44 3/ 4 Anniversary on DeepDiscount",
+    "price": 69.51,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/seismo/756029613188",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/33/4492333-3528496.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/16/4490316-3542654.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Muddy Waters Folk Singer (Chess Acoustic Sounds Series) on DeepDiscount",
+    "price": 40.8,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/folk-singer-chess-acoustic-sounds-series/602488332415",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490374-3545267.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Duran Duran Duran Duran (The Wedding Album) on DeepDiscount",
+    "price": 38.09,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/duran-duran-the-wedding-album/5054197915512",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/06/4497106-3569377.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Gaerea Loss on DeepDiscount",
+    "price": 30.64,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/loss/199584026114",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/68/4467568-3468436.jpg?ae=4338133151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Fcukers Ã- on DeepDiscount",
+    "price": 35.68,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/-/5054429208375",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/26/4487726-3513757.jpg?ae=4338133151",
     "score": 0
   },
   {
