@@ -1352,8 +1352,221 @@ def fetch_upcoming_vinyl():
     return deduped
 
 
+# ── r/VINYLRELEASES SCRAPER ───────────────────────────────────────────────────
+
+def fetch_vinyl_releases():
+    """
+    Scrape r/VinylReleases/new via Reddit's public JSON API.
+    Returns a list of deal dicts ready to merge into live_deals.json.
+    No API key needed — just a User-Agent header.
+    """
+    url = "https://www.reddit.com/r/VinylReleases/new.json"
+    reddit_headers = {
+        "User-Agent": "DealHunter/1.0 (vinyl price tracker; github actions bot)"
+    }
+    params_str = "limit=50&raw_json=1"
+    full_url = f"{url}?{params_str}"
+
+    deals = []
+
+    try:
+        req = urllib.request.Request(full_url, headers={
+            "User-Agent": "DealHunter/1.0 (vinyl price tracker; github actions bot)",
+            "Accept": "application/json",
+        })
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            raw = resp.read().decode("utf-8", "ignore")
+        data = json.loads(raw)
+
+        posts = data.get("data", {}).get("children", [])
+        log(f"\n{'=' * 50}")
+        log(f"[r/VinylReleases] Fetched {len(posts)} posts")
+        log(f"{'=' * 50}")
+
+        for post in posts:
+            p = post.get("data", {})
+
+            # Skip pinned/stickied mod posts
+            if p.get("stickied"):
+                continue
+
+            title = (p.get("title", "") or "").strip()
+            post_url = p.get("url", "")
+            reddit_link = f"https://www.reddit.com{p.get('permalink', '')}"
+            created_utc = p.get("created_utc", 0)
+            selftext = p.get("selftext", "")
+            flair = p.get("link_flair_text", "") or ""
+            reddit_score = p.get("score", 0)
+            upvote_ratio = p.get("upvote_ratio", 0)
+
+            # Extract store URL
+            store_url = ""
+            if post_url and "reddit.com" not in post_url and "redd.it" not in post_url:
+                store_url = post_url
+            elif selftext:
+                link_match = re.search(r'https?://[^\s\)\]]+', selftext)
+                if link_match:
+                    store_url = link_match.group(0)
+
+            # Parse price from title if present
+            price_str = ""
+            price_val = 0.0
+            price_match = re.search(r'\$(\d+(?:\.\d{2})?)', title)
+            if price_match:
+                price_str = "$" + price_match.group(1)
+                price_val = normalize_price(price_match.group(1))
+
+            # Detect release type from flair or title
+            release_type = ""
+            type_keywords = {
+                "restock": "Restock",
+                "pre-order": "Pre-Order",
+                "preorder": "Pre-Order",
+                "new release": "New Release",
+                "deal": "Deal",
+                "sale": "Sale",
+                "price drop": "Price Drop",
+                "rsd": "Record Store Day",
+                "limited": "Limited",
+                "expired": "Expired",
+            }
+            check_text = f"{flair} {title}".lower()
+            for keyword, label in type_keywords.items():
+                if keyword in check_text:
+                    release_type = label
+                    break
+
+            # Skip expired posts
+            if release_type == "Expired" or "[expired]" in title.lower():
+                continue
+
+            # Skip banned keywords / bad product terms
+            if is_banned(title):
+                continue
+            if contains_bad_product_terms(title):
+                continue
+
+            # Try to split artist/album from Reddit title
+            artist, album = "Unknown Artist", title
+            if " - " in title:
+                parts = title.split(" - ", 1)
+                artist = parts[0].strip()
+                album = parts[1].strip()
+                # Clean common Reddit title suffixes
+                album = re.sub(r'\[.*?\]', '', album).strip()
+                album = re.sub(r'\(.*?edition.*?\)', '', album, flags=re.I).strip()
+
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "raw_title": title,
+                "price": price_val,
+                "source": "r/VinylReleases",
+                "source_type": "reddit_scraper",
+                "link": store_url or reddit_link,
+                "reddit_url": reddit_link,
+                "image": "",
+                "keywords": keyword_hits(title),
+                "deal_quality": "community",
+                "demand": "broad",
+                "format": "vinyl",
+                "version": "standard",
+                "availability_text": flair,
+                "page_text_snippet": selftext[:500] if selftext else title,
+                "reddit_score": reddit_score,
+                "reddit_upvote_ratio": upvote_ratio,
+                "release_type": release_type,
+                "timestamp": int(created_utc),
+            })
+
+        log(f"[r/VinylReleases] {len(deals)} deals after filtering")
+
+    except Exception as e:
+        log(f"[r/VinylReleases] ERROR: {e}")
+
+    return deals
+
+
+# ── NTFY PUSH NOTIFICATIONS ──────────────────────────────────────────────────
+
+def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count=0, buy_signal_count=0):
+    """
+    Send a push notification summary via ntfy.sh.
+    Install the ntfy app on your phone and subscribe to your topic.
+    """
+    # ⚠️ CHANGE THIS to your own unique topic name
+    NTFY_TOPIC = "korndog-deals"
+
+    from datetime import datetime
+
+    try:
+        now = datetime.now().strftime("%I:%M %p")
+
+        lines = [f"Deal Hunter ran at {now}"]
+        lines.append(f"Total deals: {total_deals}")
+
+        if reddit_deals:
+            lines.append(f"Reddit drops: {len(reddit_deals)}")
+
+        if upcoming_count > 0:
+            lines.append(f"Upcoming releases: {upcoming_count}")
+        if buy_signal_count > 0:
+            lines.append(f"Buy signals: {buy_signal_count}")
+
+        # Show top 3 Reddit posts by score
+        if reddit_deals:
+            top_reddit = sorted(reddit_deals, key=lambda x: x.get("reddit_score", 0), reverse=True)[:3]
+            if top_reddit:
+                lines.append("")
+                lines.append("Hot drops:")
+                for r in top_reddit:
+                    rt = r.get("raw_title", "")[:80]
+                    price = f" (${r['price']:.2f})" if r.get("price", 0) > 0 else ""
+                    lines.append(f"  {rt}{price}")
+
+        message = "\n".join(lines)
+
+        req = urllib.request.Request(
+            f"https://ntfy.sh/{NTFY_TOPIC}",
+            data=message.encode("utf-8"),
+            headers={
+                "Title": "Deal Hunter Update",
+                "Priority": "default",
+                "Tags": "cd,shopping_cart",
+            },
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            status = resp.getcode()
+
+        if status == 200:
+            log(f"[ntfy] Notification sent successfully")
+        else:
+            log(f"[ntfy] WARNING: status {status}")
+
+    except Exception as e:
+        # Never let notification failure crash the whole script
+        log(f"[ntfy] ERROR (non-fatal): {e}")
+
+
+# ── MAIN ──────────────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
     data = build()
+
+    # ── r/VinylReleases community drops ───────────────────────────────────────
+    log("\n" + "=" * 50)
+    log("SCRAPING r/VINYLRELEASES")
+    log("=" * 50)
+    try:
+        reddit_deals = fetch_vinyl_releases()
+    except Exception as e:
+        log(f"[r/VinylReleases] Fatal error: {e}")
+        reddit_deals = []
+
+    # Merge Reddit deals into main data
+    data.extend(reddit_deals)
+    data = dedupe_deals(data)
 
     with open(BASE / "live_deals.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -1422,3 +1635,11 @@ if __name__ == "__main__":
         f.write("\n".join(DEBUG))
 
     log(f"\nWrote {len(data)} total live deals")
+
+    # ── Send push notification ─────────────────────────────────────────────────
+    send_deal_hunter_notification(
+        total_deals=len(data),
+        reddit_deals=reddit_deals,
+        upcoming_count=len(upcoming),
+        buy_signal_count=len(buy_signals),
+    )
