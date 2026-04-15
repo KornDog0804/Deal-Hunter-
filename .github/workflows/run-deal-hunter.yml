@@ -1,38 +1,42 @@
-name: KornDog Deal Scraper
+name: Deal Hunter
 
 on:
   schedule:
-    - cron: '0 12,18,0 * * *'  # 7am, 1pm, 7pm Central
-  workflow_dispatch:  # allows manual trigger
+    # 3x/day: 8am, 2pm, 8pm Eastern (UTC-4 during EDT)
+    - cron: '0 12 * * *'
+    - cron: '0 18 * * *'
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write  # needed for git push
+  contents: write
 
 jobs:
-  scrape:
+  run-deal-hunter:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 lxml
+        run: |
+          pip install beautifulsoup4
 
-      - name: Run scraper
+      - name: Run Deal Hunter
         run: python live_pull.py
 
-      - name: Commit outputs
+      - name: Commit and push results
         run: |
-          git config user.name "KornDog Bot"
-          git config user.email "korndogrecords@gmail.com"
-          git add live_deals.json buy_signals.json upcoming_releases.json debug_live_pull.txt || true
-          git diff --staged --quiet || git commit -m "chore: scraper run $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git config user.name "Deal Hunter Bot"
+          git config user.email "actions@github.com"
+          git add live_deals.json buy_signals.json upcoming_releases.json debug_live_pull.txt
+          git diff --staged --quiet || git commit -m "Deal Hunter run $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
+          git push origin main
