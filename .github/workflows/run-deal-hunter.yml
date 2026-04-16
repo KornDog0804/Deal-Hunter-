@@ -2,7 +2,6 @@ name: Deal Hunter
 
 on:
   schedule:
-    # 3x/day: 8am, 2pm, 8pm Eastern (UTC-4 during EDT)
     - cron: '0 12 * * *'
     - cron: '0 18 * * *'
     - cron: '0 0 * * *'
@@ -10,6 +9,11 @@ on:
 
 permissions:
   contents: write
+
+# Prevent overlapping runs from fighting over the same files
+concurrency:
+  group: deal-hunter
+  cancel-in-progress: false
 
 jobs:
   run-deal-hunter:
@@ -37,6 +41,23 @@ jobs:
           git config user.name "Deal Hunter Bot"
           git config user.email "actions@github.com"
           git add live_deals.json buy_signals.json upcoming_releases.json debug_live_pull.txt
-          git diff --staged --quiet || git commit -m "Deal Hunter run $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git pull --rebase origin main
-          git push origin main
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Deal Hunter run $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          # Retry push up to 3 times; on conflict, prefer our fresh scrape data
+          for i in 1 2 3; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed on attempt $i, rebasing with fresh-data priority..."
+            git pull --rebase -X theirs origin main || git rebase --abort
+          done
+
+          echo "Exhausted retries, force-pushing fresh scrape"
+          git push --force-with-lease origin main
