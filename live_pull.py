@@ -1354,33 +1354,73 @@ def fetch_upcoming_vinyl():
 
 # ── r/VINYLRELEASES SCRAPER ───────────────────────────────────────────────────
 
+def _fetch_reddit_json(endpoints, max_attempts=3):
+    """Try multiple Reddit endpoints with browser-like headers to bypass 403s."""
+    browser_headers_options = [
+        {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "identity",
+            "Referer": "https://www.google.com/",
+            "DNT": "1",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+        },
+        {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+            "Accept": "application/json",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Accept-Encoding": "identity",
+            "Connection": "keep-alive",
+        },
+    ]
+
+    for endpoint in endpoints:
+        for attempt in range(max_attempts):
+            headers = browser_headers_options[attempt % len(browser_headers_options)]
+            try:
+                req = urllib.request.Request(endpoint, headers=headers)
+                with urllib.request.urlopen(req, timeout=30) as resp:
+                    raw = resp.read().decode("utf-8", "ignore")
+                log(f"[r/VinylReleases] Success on {endpoint}")
+                return json.loads(raw), endpoint
+            except urllib.error.HTTPError as e:
+                log(f"[r/VinylReleases] HTTP {e.code} on {endpoint} (attempt {attempt + 1})")
+                if e.code == 429:
+                    time.sleep(5)
+                else:
+                    time.sleep(1.5)
+            except Exception as e:
+                log(f"[r/VinylReleases] Error on {endpoint}: {e}")
+                time.sleep(1.5)
+
+    return None, None
+
+
 def fetch_vinyl_releases():
     """
     Scrape r/VinylReleases/new via Reddit's public JSON API.
+    Tries old.reddit.com first (less aggressive blocking), then fallbacks.
     Returns a list of deal dicts ready to merge into live_deals.json.
-    No API key needed — just a User-Agent header.
     """
-    url = "https://www.reddit.com/r/VinylReleases/new.json"
-    reddit_headers = {
-        "User-Agent": "DealHunter/1.0 (vinyl price tracker; github actions bot)"
-    }
-    params_str = "limit=50&raw_json=1"
-    full_url = f"{url}?{params_str}"
+    endpoints = [
+        "https://old.reddit.com/r/VinylReleases/new.json?limit=50&raw_json=1",
+        "https://www.reddit.com/r/VinylReleases/new.json?limit=50&raw_json=1",
+        "https://old.reddit.com/r/VinylReleases/new/.json?limit=50",
+    ]
 
     deals = []
+    data, used_endpoint = _fetch_reddit_json(endpoints)
+
+    if not data:
+        log(f"[r/VinylReleases] All endpoints failed — skipping")
+        return deals
 
     try:
-        req = urllib.request.Request(full_url, headers={
-            "User-Agent": "DealHunter/1.0 (vinyl price tracker; github actions bot)",
-            "Accept": "application/json",
-        })
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            raw = resp.read().decode("utf-8", "ignore")
-        data = json.loads(raw)
-
         posts = data.get("data", {}).get("children", [])
         log(f"\n{'=' * 50}")
-        log(f"[r/VinylReleases] Fetched {len(posts)} posts")
+        log(f"[r/VinylReleases] Fetched {len(posts)} posts from {used_endpoint}")
         log(f"{'=' * 50}")
 
         for post in posts:
