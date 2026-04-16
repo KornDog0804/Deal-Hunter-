@@ -1354,12 +1354,12 @@ def fetch_upcoming_vinyl():
 
 # ── r/VINYLRELEASES SCRAPER ───────────────────────────────────────────────────
 
-def _fetch_reddit_json(endpoints, max_attempts=3):
-    """Try multiple Reddit endpoints with browser-like headers to bypass 403s."""
+def _fetch_reddit_raw(endpoints, max_attempts=3):
+    """Try multiple Reddit endpoints with browser-like headers to bypass 403s. Returns raw text."""
     browser_headers_options = [
         {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "application/json, text/plain, */*",
+            "Accept": "application/rss+xml, application/xml, text/xml, application/json, text/html, */*",
             "Accept-Language": "en-US,en;q=0.9",
             "Accept-Encoding": "identity",
             "Referer": "https://www.google.com/",
@@ -1368,9 +1368,9 @@ def _fetch_reddit_json(endpoints, max_attempts=3):
             "Upgrade-Insecure-Requests": "1",
         },
         {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
-            "Accept": "application/json",
-            "Accept-Language": "en-US,en;q=0.5",
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+            "Accept": "application/rss+xml, application/xml, text/xml, */*",
+            "Accept-Language": "en-US,en;q=0.9",
             "Accept-Encoding": "identity",
             "Connection": "keep-alive",
         },
@@ -1384,7 +1384,7 @@ def _fetch_reddit_json(endpoints, max_attempts=3):
                 with urllib.request.urlopen(req, timeout=30) as resp:
                     raw = resp.read().decode("utf-8", "ignore")
                 log(f"[r/VinylReleases] Success on {endpoint}")
-                return json.loads(raw), endpoint
+                return raw, endpoint
             except urllib.error.HTTPError as e:
                 log(f"[r/VinylReleases] HTTP {e.code} on {endpoint} (attempt {attempt + 1})")
                 if e.code == 429:
@@ -1398,62 +1398,105 @@ def _fetch_reddit_json(endpoints, max_attempts=3):
     return None, None
 
 
+def _parse_reddit_rss(xml_text):
+    """Parse Reddit RSS feed into a list of post dicts that mimic the JSON API structure."""
+    posts = []
+
+    # Extract each <entry> block (Atom format used by Reddit RSS)
+    entry_blocks = re.findall(r'<entry>(.*?)</entry>', xml_text, re.S)
+
+    for entry in entry_blocks:
+        try:
+            # Title
+            title_m = re.search(r'<title[^>]*>(.*?)</title>', entry, re.S)
+            title = html.unescape(title_m.group(1)).strip() if title_m else ""
+
+            # Link to the Reddit post
+            link_m = re.search(r'<link[^>]+href="([^"]+)"', entry)
+            reddit_url = link_m.group(1) if link_m else ""
+
+            # Published date
+            pub_m = re.search(r'<published>(.*?)</published>', entry, re.S)
+            published = pub_m.group(1).strip() if pub_m else ""
+
+            # Content contains the post body with embedded links
+            content_m = re.search(r'<content[^>]*>(.*?)</content>', entry, re.S)
+            content = html.unescape(content_m.group(1)) if content_m else ""
+
+            # Flair is usually in the title as [Flair] prefix
+            flair = ""
+            flair_m = re.match(r'^\[([^\]]+)\]\s*', title)
+            if flair_m:
+                flair = flair_m.group(1).strip()
+                title = title[flair_m.end():].strip()
+
+            # Extract first external store URL from content body
+            store_url = ""
+            # Reddit RSS content is HTML-encoded; look for href links that aren't Reddit internal
+            link_matches = re.findall(r'href="(https?://[^"]+)"', content, re.I)
+            for link in link_matches:
+                low = link.lower()
+                if "reddit.com" in low or "redd.it" in low or "redditstatic" in low:
+                    continue
+                store_url = link
+                break
+
+            posts.append({
+                "title": title,
+                "reddit_url": reddit_url,
+                "store_url": store_url,
+                "flair": flair,
+                "published": published,
+                "content_snippet": re.sub(r'<[^>]+>', ' ', content)[:500],
+            })
+        except Exception as e:
+            log(f"[r/VinylReleases] Parse error on entry: {e}")
+            continue
+
+    return posts
+
+
 def fetch_vinyl_releases():
     """
-    Scrape r/VinylReleases/new via Reddit's public JSON API.
-    Tries old.reddit.com first (less aggressive blocking), then fallbacks.
+    Scrape r/VinylReleases/new via Reddit's public RSS feed.
+    RSS is served on a less aggressively blocked path than the JSON API.
     Returns a list of deal dicts ready to merge into live_deals.json.
     """
     endpoints = [
-        "https://old.reddit.com/r/VinylReleases/new.json?limit=50&raw_json=1",
-        "https://www.reddit.com/r/VinylReleases/new.json?limit=50&raw_json=1",
-        "https://old.reddit.com/r/VinylReleases/new/.json?limit=50",
+        "https://www.reddit.com/r/VinylReleases/new/.rss?limit=50",
+        "https://old.reddit.com/r/VinylReleases/new/.rss?limit=50",
+        "https://www.reddit.com/r/VinylReleases/.rss?limit=50",
     ]
 
     deals = []
-    data, used_endpoint = _fetch_reddit_json(endpoints)
+    raw_xml, used_endpoint = _fetch_reddit_raw(endpoints)
 
-    if not data:
+    if not raw_xml:
         log(f"[r/VinylReleases] All endpoints failed — skipping")
         return deals
 
+    log(f"\n{'=' * 50}")
+    log(f"[r/VinylReleases] Fetched RSS from {used_endpoint}")
+    log(f"{'=' * 50}")
+
     try:
-        posts = data.get("data", {}).get("children", [])
-        log(f"\n{'=' * 50}")
-        log(f"[r/VinylReleases] Fetched {len(posts)} posts from {used_endpoint}")
-        log(f"{'=' * 50}")
+        posts = _parse_reddit_rss(raw_xml)
+        log(f"[r/VinylReleases] Parsed {len(posts)} posts from RSS")
 
-        for post in posts:
-            p = post.get("data", {})
-
-            # Skip pinned/stickied mod posts
-            if p.get("stickied"):
+        for p in posts:
+            title = p.get("title", "")
+            if not title:
                 continue
 
-            title = (p.get("title", "") or "").strip()
-            post_url = p.get("url", "")
-            reddit_link = f"https://www.reddit.com{p.get('permalink', '')}"
-            created_utc = p.get("created_utc", 0)
-            selftext = p.get("selftext", "")
-            flair = p.get("link_flair_text", "") or ""
-            reddit_score = p.get("score", 0)
-            upvote_ratio = p.get("upvote_ratio", 0)
-
-            # Extract store URL
-            store_url = ""
-            if post_url and "reddit.com" not in post_url and "redd.it" not in post_url:
-                store_url = post_url
-            elif selftext:
-                link_match = re.search(r'https?://[^\s\)\]]+', selftext)
-                if link_match:
-                    store_url = link_match.group(0)
+            flair = p.get("flair", "")
+            reddit_url = p.get("reddit_url", "")
+            store_url = p.get("store_url", "")
+            content_snippet = p.get("content_snippet", "")
 
             # Parse price from title if present
-            price_str = ""
             price_val = 0.0
             price_match = re.search(r'\$(\d+(?:\.\d{2})?)', title)
             if price_match:
-                price_str = "$" + price_match.group(1)
                 price_val = normalize_price(price_match.group(1))
 
             # Detect release type from flair or title
@@ -1503,8 +1546,8 @@ def fetch_vinyl_releases():
                 "price": price_val,
                 "source": "r/VinylReleases",
                 "source_type": "reddit_scraper",
-                "link": store_url or reddit_link,
-                "reddit_url": reddit_link,
+                "link": store_url or reddit_url,
+                "reddit_url": reddit_url,
                 "image": "",
                 "keywords": keyword_hits(title),
                 "deal_quality": "community",
@@ -1512,17 +1555,17 @@ def fetch_vinyl_releases():
                 "format": "vinyl",
                 "version": "standard",
                 "availability_text": flair,
-                "page_text_snippet": selftext[:500] if selftext else title,
-                "reddit_score": reddit_score,
-                "reddit_upvote_ratio": upvote_ratio,
+                "page_text_snippet": content_snippet,
+                "reddit_score": 0,
+                "reddit_upvote_ratio": 0,
                 "release_type": release_type,
-                "timestamp": int(created_utc),
+                "timestamp": 0,
             })
 
         log(f"[r/VinylReleases] {len(deals)} deals after filtering")
 
     except Exception as e:
-        log(f"[r/VinylReleases] ERROR: {e}")
+        log(f"[r/VinylReleases] Parse error: {e}")
 
     return deals
 
