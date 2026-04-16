@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Korndog Deal Board</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reddit deal card styling */
+    .deal-card-reddit {
+      border-left: 3px solid #ff4500;
+    }
+    .badge-reddit {
+      background: #ff4500;
+      color: #fff;
+      font-weight: 600;
+    }
+    .reddit-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .reddit-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(255, 69, 0, 0.15);
+      color: #ff4500;
+      border: 1px solid rgba(255, 69, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .reddit-tag-type {
+      background: rgba(255, 69, 0, 0.25);
+    }
+    .reddit-tag-score {
+      background: rgba(255, 165, 0, 0.15);
+      color: #ffa500;
+      border-color: rgba(255, 165, 0, 0.3);
+    }
+  </style>
 </head>
 <body>
   <header id="siteHeader" class="site-header">
@@ -44,6 +81,7 @@
         <div class="chip-row chip-row-nowrap">
           <button class="filter-chip active" data-quick="all">All</button>
           <button class="filter-chip" data-quick="under30">Under $30</button>
+          <button class="filter-chip" data-quick="reddit">Reddit Drops</button>
           <button class="filter-chip" data-quick="amazon">Amazon</button>
           <button class="filter-chip" data-quick="walmart">Walmart</button>
           <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
@@ -147,6 +185,7 @@
       if (source.includes("amazon")) return "amazon";
       if (source.includes("walmart")) return "walmart";
       if (source.includes("deep discount")) return "deep discount";
+      if (source.includes("vinylreleases") || source.includes("r/vinylreleases") || source.includes("reddit")) return "reddit";
       if (source.includes("newbury")) return "newbury comics";
       if (source.includes("udiscover")) return "udiscover music";
       if (source.includes("sound of vinyl")) return "sound of vinyl";
@@ -183,6 +222,7 @@
         "amazon": "Amazon",
         "walmart": "Walmart",
         "deep discount": "Deep Discount",
+        "reddit": "r/VinylReleases",
         "newbury comics": "Newbury Comics",
         "udiscover music": "uDiscover Music",
         "sound of vinyl": "Sound of Vinyl",
@@ -256,9 +296,30 @@
         : "";
 
       const sourceName = prettifySourceName(deal.source || "Unknown");
+      const isReddit = normalizeSourceKey(deal.source || "") === "reddit";
+      const redditUrl = deal.reddit_url || "";
+      const redditScore = safeNumber(deal.reddit_score, 0);
+      const releaseType = deal.release_type || "";
+      const flair = deal.availability_text || "";
+
+      // Reddit cards get an orange badge and extra metadata
+      const badgeClass = isReddit ? "badge badge-reddit" : "badge badge-mid";
+      const badgeLabel = isReddit ? `🔴 ${sourceName}` : sourceName;
+
+      const redditMetaHtml = isReddit ? `
+        <div class="reddit-meta">
+          ${releaseType ? `<span class="reddit-tag reddit-tag-type">${escapeHtml(releaseType)}</span>` : ""}
+          ${flair && flair.toLowerCase() !== releaseType.toLowerCase() ? `<span class="reddit-tag">${escapeHtml(flair)}</span>` : ""}
+          ${redditScore > 0 ? `<span class="reddit-tag reddit-tag-score">▲ ${redditScore}</span>` : ""}
+        </div>
+      ` : "";
+
+      const redditActionHtml = isReddit && redditUrl ? `
+        <a class="btn btn-alt" href="${escapeHtml(redditUrl)}" target="_blank" rel="noopener noreferrer">View on Reddit</a>
+      ` : "";
 
       const card = document.createElement("div");
-      card.className = "deal-card";
+      card.className = "deal-card" + (isReddit ? " deal-card-reddit" : "");
       card.innerHTML = `
         ${imageHtml}
 
@@ -266,8 +327,9 @@
           <div>
             <div class="artist">${escapeHtml(deal.artist || "Unknown Artist")}</div>
             <h2 class="title">${escapeHtml(deal.title || "Unknown Title")}</h2>
+            ${redditMetaHtml}
           </div>
-          <div class="badge badge-mid">${escapeHtml(sourceName)}</div>
+          <div class="${badgeClass}">${escapeHtml(badgeLabel)}</div>
         </div>
 
         <div class="deal-meta">
@@ -281,8 +343,9 @@
           </div>
         </div>
 
-        <div class="deal-actions ${amazonLink ? "" : "single-action"}">
-          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">Open Link</a>
+        <div class="deal-actions ${(amazonLink || redditActionHtml) ? "" : "single-action"}">
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${isReddit ? "Open Store Link" : "Open Link"}</a>
+          ${redditActionHtml}
           ${amazonLink ? `<button class="btn btn-alt copy-amazon-btn">Copy Amazon Link</button>` : ""}
         </div>
 
@@ -297,8 +360,11 @@
             `Source: ${sourceName}`,
             `Price: ${getPriceText(deal)}`,
             `Version: ${deal.version || "standard"}`,
-            `Link: ${buyLink}`
-          ].join("\n"))}</div>
+            isReddit && releaseType ? `Type: ${releaseType}` : "",
+            isReddit && redditScore > 0 ? `Reddit Upvotes: ${redditScore}` : "",
+            `Link: ${buyLink}`,
+            isReddit && redditUrl ? `Reddit Thread: ${redditUrl}` : ""
+          ].filter(Boolean).join("\n"))}</div>
           <div class="mini-actions">
             <button class="btn btn-ghost copy-link-btn">Copy Link</button>
           </div>
@@ -376,6 +442,9 @@
         .filter(d => {
           if (activeQuickFilter === "under30") {
             return safeNumber(d.price) > 0 && safeNumber(d.price) < 30;
+          }
+          if (activeQuickFilter === "reddit") {
+            return normalizeSourceKey(d.source || "") === "reddit";
           }
           if (activeQuickFilter === "amazon") {
             return normalizeSourceKey(d.source || "") === "amazon";
