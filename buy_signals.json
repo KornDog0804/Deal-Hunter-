@@ -1,20 +1,803 @@
 [
   {
+    "artist": "Daft Punk",
+    "title": "Musique Vol 2 2006-2021 (Colored Vinyl)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/daft-punk-musique-vol-2-2006-2021-colored-vinyl-copy",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/8DD90074-81DB-4C47-9751-FE2041DDACFE.jpg?v=1776710679",
+    "score": 0
+  },
+  {
+    "artist": "Bad Bunny",
+    "title": "NPR Tiny Desk Concert Live",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/bad-bunny-npr-tiny-desk-concert-live",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/5EF4CAA5-A303-4598-84D1-784D72347739.jpg?v=1776710638",
+    "score": 0
+  },
+  {
+    "artist": "Frank Ocean",
+    "title": "Channel Orange (Alt Cover)",
+    "price": 44.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/frank-ocean-channel-orange-alt-cover",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/ad6de224-299f-42ad-8fdc-f1d4f1abbe57.jpg?v=1774026324",
+    "score": 0
+  },
+  {
+    "artist": "Sabrina Carpenter",
+    "title": "NPR Tiny Desk (Colored Vinyl)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/sabrina-carpenter-npr-tiny-desk-colored-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_69332.jpg?v=1774024299",
+    "score": 0
+  },
+  {
+    "artist": "Taylor Swift",
+    "title": "NPR Tiny Desk Concert (Colored Vinyl)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/taylor-swift-npr-tiny-desk-concert-colored-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/a76a6f57-b2f1-48ed-bf82-1889bdb29798.jpg?v=1774026285",
+    "score": 0
+  },
+  {
+    "artist": "Insane Clown Posse",
+    "title": "The Amazing Jeckel Brothers",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/insane-clown-posse-the-amazing-jeckel-brothers",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_40502.jpg?v=1742497652",
+    "score": 0
+  },
+  {
+    "artist": "Kanye West",
+    "title": "The Life Of Pablo (New Mix)",
+    "price": 44.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/kanye-west-the-life-of-pablo-new-mix",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_4355.jpg?v=1721414760",
+    "score": 0
+  },
+  {
+    "artist": "Frank Ocean",
+    "title": "nostalgia, ULTRA.",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/frank-ocean-nostalgia-ultra",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3519.jpg?v=1741308122",
+    "score": 0
+  },
+  {
+    "artist": "Ye",
+    "title": "Bully (Indie Exclusive Green Vinyl)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/ye-bully-indie-exclusive-green-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/A84AE616-C6EF-45A9-9E99-BAE0E697CDDF.jpg?v=1776709449",
+    "score": 0
+  },
+  {
+    "artist": "Muse",
+    "title": "Muse (RSD26 Red Vinyl)(LIMIT OF 1)",
+    "price": 21.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/muse-muse-rsd26-red-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8084_50fbcc87-0769-4909-b4ec-423d0cdcb017.jpg?v=1776383067",
+    "score": 0
+  },
+  {
+    "artist": "Taylor Swift",
+    "title": "Elizabeth Taylor (RSD Exclusive 7\")(LIMIT OF 1)",
+    "price": 18.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/taylor-swift-elizabeth-taylor-rsd-exclusive-7",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_81463.jpg?v=1776384597",
+    "score": 0
+  },
+  {
+    "artist": "TV Girl",
+    "title": "Night In Question: French Exit Outtakes (RSD26)(LIMIT OF 1)",
+    "price": 32.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/tv-girl-night-in-question-french-exit-outtakes-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/59DEB34A-575F-460B-AE12-15D7AE59639F_1_102_a_9a52b646-b388-45fc-ac18-38a941f8e231.jpg?v=1776376367",
+    "score": 0
+  },
+  {
+    "artist": "The Jesus and Mary Chain",
+    "title": "Some Candy Talking (RSD26 Exclusive 12\" Vinyl)(LIMIT OF 1)",
+    "price": 16.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-jesus-and-mary-chain-some-candy-talking-rsd26-exclusive-12-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8102_fbb5a84d-5f24-4eef-b88e-7c32951bd7ba.jpg?v=1776383336",
+    "score": 0
+  },
+  {
+    "artist": "Bad Brains",
+    "title": "Live (RSD26 Exclusive Solar Flare Vinyl) (RSD26) (LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/bad-brains-live-rsd26-exclusive-solar-flare-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80333.jpg?v=1776381499",
+    "score": 0
+  },
+  {
+    "artist": "Ghost Funk Orchestra",
+    "title": "Live In Europe (RSD26 Exclusive Fuchsia Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 22.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/ghost-funk-orchestra-live-in-europe-rsd26-exclusive-fuchsia-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80532.jpg?v=1776382261",
+    "score": 0
+  },
+  {
+    "artist": "Khrurangbin",
+    "title": "White Gloves ii / M. Blanc (RSD Exclusive 7\") (RSD26)(LIMIT OF 1)",
+    "price": 11.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/krurangbin-white-gloves-ii-m-blanc-rsd-exclusive-7-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8138.jpg?v=1776384384",
+    "score": 0
+  },
+  {
+    "artist": "The Cure",
+    "title": "Acoustic Hits (RSD Exclusive 25th Anniversary Silver Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-cure-acoustic-hits-rsd-exclusive-25th-anniversary-silver-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_78152.jpg?v=1775854664",
+    "score": 0
+  },
+  {
+    "artist": "Grateful Dead",
+    "title": "On A Back Porch, Vol. 3 (LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/grateful-dead-on-a-back-porch-vol-3",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80552.jpg?v=1776382296",
+    "score": 0
+  },
+  {
+    "artist": "Deafheaven",
+    "title": "KEXP Sessions (RSD Exclusive Multicolored Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 19.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/deafheaven-kexp-sessions-rsd-exclusive-multicolored-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/855DA274-EC6E-4D92-9F80-9C87883A9E8E_1_105_c.jpg?v=1776374481",
+    "score": 0
+  },
+  {
+    "artist": "Van Halen",
+    "title": "Live In New Haven, CT 1986 (RSD Exclusive Clear Vinyl)(LIMIT OF 1)",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/van-halen-live-in-new-haven-ct-1986-rsd-exclusive-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7897.jpg?v=1775856778",
+    "score": 0
+  },
+  {
+    "artist": "Black Sabbath",
+    "title": "Seventh Star (RSD Exclusive Black/ Red Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/black-sabbath-seventh-star-rsd-exclusive-black-red-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_78052.jpg?v=1775854521",
+    "score": 0
+  },
+  {
+    "artist": "Ween",
+    "title": "Europe 90 (RSD Exclusive 3LP) (RSD26)(LIMIT OF 1)",
+    "price": 59.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/ween-europe-90-rsd-exclusive-3lp-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8116_a5c644ae-957c-4417-9bae-3e6f00cdb0c1.jpg?v=1776383663",
+    "score": 0
+  },
+  {
+    "artist": "The Talking Heads",
+    "title": "The CBS/ Columbia Demos (RSD Exclusive) (RSD26)(LIMIT OF 1)",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-talking-heads-the-cbs-columbia-demos-rsd-exclusive-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7889.jpg?v=1775856630",
+    "score": 0
+  },
+  {
+    "artist": "Neil Young & Chrome Hearts",
+    "title": "The Live Album (RSD Exclusive Gatefold Clear Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/neil-young-chrome-hearts-the-live-album-rsd-exclusive-gatefold-clear-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7861.jpg?v=1775855531",
+    "score": 0
+  },
+  {
+    "artist": "Billy Strings",
+    "title": "Tiny Desk (RSD Exclusive White Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/billy-strings-tiny-desk-rsd-exclusive-white-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80352_6a3d5947-027a-42be-9259-59581a0237b6.jpg?v=1776381907",
+    "score": 0
+  },
+  {
+    "artist": "John Frusciante",
+    "title": "To Only Record Water for Ten Days (RSD Exclusive Orange/ Blue Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/john-frusciante-to-only-record-water-for-ten-days-rsd-exclusive-orange-blue-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7835.jpg?v=1775855016",
+    "score": 0
+  },
+  {
+    "artist": "Pavement",
+    "title": "Perfect Sound Forever (RSD Exclusive White 10\" Vinyl) (RSD26)",
+    "price": 26.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/pavement-perfect-sound-forever-rsd-exclusive-white-10-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7863.jpg?v=1775855752",
+    "score": 0
+  },
+  {
+    "artist": "Adrianne Lenker",
+    "title": "Live At Revolution Hall (RSD Exclusive 3LP) (RSD26)",
+    "price": 55.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/adrianne-lenker-live-at-revolution-hall-rsd-exclusive-3lp-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7581_be891c7f-82ad-4bbb-8062-6aa852305cc9.jpg?v=1775679336",
+    "score": 0
+  },
+  {
+    "artist": "The Sword",
+    "title": "Three Songs (RSD Exclusive Black Ice Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 26.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-sword-three-songs-rsd-exclusive-black-ice-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7687.jpg?v=1775680717",
+    "score": 0
+  },
+  {
+    "artist": "Dijon",
+    "title": "How Do You Feel About Getting Married? (RSD Exclusive Colored EP) (RSD26)(LIMIT OF 1)",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/dijon-how-do-you-feel-about-getting-married-rsd-exclusive-colored-ep-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/31C5C9CF-54A9-40FE-9125-B4D6572F387D_1_105_c.jpg?v=1776374631",
+    "score": 0
+  },
+  {
+    "artist": "Adam Sandler",
+    "title": "They're All Gonna Laugh At You! (RSD Exclusive Orange Vinyl) (RSD26)",
+    "price": 44.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/adam-sandler-theyre-all-gonna-laugh-at-you-rsd-exclusive-orange-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_78032.jpg?v=1775854406",
+    "score": 0
+  },
+  {
+    "artist": "Amble",
+    "title": "Hand Me Downs (RSD Exclusive) (RSD26)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/amble-hand-me-downs-rsd-exclusive-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7583_2529b33e-3e69-4250-80c0-9f0f735ac275.jpg?v=1775679360",
+    "score": 0
+  },
+  {
+    "artist": "Paper Route Illuminati",
+    "title": "Paper Route Illuminati (RSD Exclusive Snake Eyes Galaxy Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 37.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/paper-route-illuminati-paper-route-illuminati-rsd-exclusive-snake-eyes-galaxy-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/E9C7722F-8B66-4A54-9AF4-740814C9B93B_1_105_c.jpg?v=1776375892",
+    "score": 0
+  },
+  {
+    "artist": "Anderson .Paak",
+    "title": "Malibu (RSD Exclusive 10th Anniversary 7\" Box Set) (RSD26)",
+    "price": 124.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/anderson-paak-malibu-rsd-exclusive-10th-anniversary-7-box-set-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/060FA304-4FE0-4518-99B2-B9B36F775E65.jpg?v=1776709489",
+    "score": 0
+  },
+  {
+    "artist": "Judas Priest",
+    "title": "Live In Los Angeles '90 (RSD Exclusive Translucent Purple Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/judas-priest-live-in-los-angeles-90-rsd-exclusive-translucent-purple-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/FC903C2F-1B37-43DF-B838-2F66149F07CB_1_105_c.jpg?v=1776374958",
+    "score": 0
+  },
+  {
+    "artist": "Jeff Buckley",
+    "title": "Live At Olympia (RSD Exclusive) (RSD26)(LIMIT OF 1)",
+    "price": 35.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/jeff-buckley-live-at-olympia-rsd-exclusive-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7627_4acf24f5-2c55-41c6-b57c-f2acc8b44c6d.jpg?v=1775680008",
+    "score": 0
+  },
+  {
+    "artist": "Tyler Childers",
+    "title": "Live From Dinosaur World (RSD Exclusive 7\") (RSD26)(LIMIT OF 1)",
+    "price": 17.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/tyler-childers-live-from-dinosaur-world-rsd-exclusive-7-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_81483.jpg?v=1776384620",
+    "score": 0
+  },
+  {
+    "artist": "Wolf Alice",
+    "title": "Spotify Live Room (RSD Exclusive 7\") (RSD26)(LIMIT OF 1)",
+    "price": 17.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/wolf-alice-spotify-live-room-rsd-exclusive-7-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_81523.jpg?v=1776384684",
+    "score": 0
+  },
+  {
+    "artist": "Polo G",
+    "title": "Hall Of Fame (RSD Exclusive Gilded Smoke Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 25.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/polo-g-hall-of-fame-rsd-exclusive-gilded-smoke-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/C16CFC9B-5490-4296-BB12-EB7C84CC4155_1_105_c.jpg?v=1776375404",
+    "score": 0
+  },
+  {
+    "artist": "KISS",
+    "title": "A Special KISS Tour (RSD Exclusive 45RPM White Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 26.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/kiss-a-special-kiss-tour-rsd-exclusive-45rpm-white-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/E1296FBA-CA54-4A77-884C-37F92DAE4EE6_1_105_c.jpg?v=1776375128",
+    "score": 0
+  },
+  {
+    "artist": "Sonic Youth",
+    "title": "Diamond Seas (RSD Exclusive) (RSD26)(LIMIT OF 1)",
+    "price": 25.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/sonic-youth-diamond-seas-rsd-exclusive-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8094_2d0561bb-6d0e-49f0-a781-8ff6f8caa11e.jpg?v=1776383226",
+    "score": 0
+  },
+  {
+    "artist": "Big Sean",
+    "title": "Detroit (RSD Exclusive 2LP) (RSD26) (LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/big-sean-detroit-rsd-exclusive-2lp-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7587.jpg?v=1775679444",
+    "score": 0
+  },
+  {
+    "artist": "Megadeth",
+    "title": "Hidden Treasures (RSD Exclusive Alternate Cover) (RSD26)(LIMIT OF 1)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/megadeth-hidden-treasures-rsd-exclusive-alternate-cover-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7853.jpg?v=1775855405",
+    "score": 0
+  },
+  {
+    "artist": "Demi Lovato",
+    "title": "Frequency (RSD Exclusive 7\" Cream Vinyl) (RSD26)",
+    "price": 14.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/demi-lovato-frequency-rsd-exclusive-7-cream-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8128.jpg?v=1776383846",
+    "score": 0
+  },
+  {
+    "artist": "Gigi Perez",
+    "title": "Live From Vevo (RSD Exclusive 7\" Blue Vinyl) (RSD26)",
+    "price": 14.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/gigi-perez-live-from-vevo-rsd-exclusive-7-blue-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8132.jpg?v=1776383904",
+    "score": 0
+  },
+  {
+    "artist": "Motley Crue",
+    "title": "Live Wire (RSD Exclusive 45th Anniversary Colored Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 26.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/motley-crue-live-wire-rsd-exclusive-45th-anniversary-colored-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8070.jpg?v=1776382475",
+    "score": 0
+  },
+  {
+    "artist": "Mama Cass",
+    "title": "Dream A Little Dream (RSD Exclusive Violet Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 32.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/mama-cass-dream-a-little-dream-rsd-exclusive-violet-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7647.jpg?v=1775680184",
+    "score": 0
+  },
+  {
+    "artist": "Babymetal",
+    "title": "Live At The O2 Arena",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/babymetal-live-at-the-o2-arena-highlights-rsd-exclusive-clear-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7585.jpg?v=1775679427",
+    "score": 0
+  },
+  {
+    "artist": "Niall Horan",
+    "title": "Flicker (RSD Exclusive Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/niall-horan-flicker-rsd-exclusive-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7859.jpg?v=1775855501",
+    "score": 0
+  },
+  {
+    "artist": "Joe Strummer & the Mescaleros",
+    "title": "Global A Go-Go (RSD Exclusive Splatter Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/joe-strummer-the-mescaleros-global-a-go-go-rsd-exclusive-splatter-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/A654C1EC-7F54-4F5C-B6B4-F56B3E00CF33_1_105_c.jpg?v=1776374932",
+    "score": 0
+  },
+  {
+    "artist": "George Harrison",
+    "title": "Extra Texture (RSD Exclusive Zoetrope) (RSD26)(LIMIT OF 1)",
+    "price": 36.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/george-harrison-extra-texture-rsd-exclusive-zoetrope-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/31F2E678-9FE3-4E3A-A500-4252660863A1_1_105_c.jpg?v=1776374700",
+    "score": 0
+  },
+  {
+    "artist": "George Harrison",
+    "title": "Dark Horse (RSD Exclusive Zoetrope) (RSD26)(LIMIT OF 1)",
+    "price": 36.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/george-harrison-dark-horse-rsd-exclusive-zoetrope-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/560F0901-4C11-41B1-828E-72689AC7C12E_1_105_c.jpg?v=1776374677",
+    "score": 0
+  },
+  {
+    "artist": "Meshuggah",
+    "title": "Catch Thirtythree (RSD Exclusive 20th Anniversary Yellow Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 43.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/meshuggah-catch-thirtythree-rsd-exclusive-20th-anniversary-yellow-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7659.jpg?v=1775680371",
+    "score": 0
+  },
+  {
+    "artist": "Motorhead",
+    "title": "On Parole Steve Wilson (RSD Exclusive Black/White Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/motorhead-on-parole-steve-wilson-rsd-exclusive-black-white-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8080_64a4c715-e891-4ff6-a214-472baf2e64ef.jpg?v=1776383035",
+    "score": 0
+  },
+  {
+    "artist": "Pixies",
+    "title": "Live In Newport (RSD Exclusive Yellow/Green Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 45.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/pixies-live-in-newport-rsd-exclusive-yellow-green-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7669.jpg?v=1775680473",
+    "score": 0
+  },
+  {
+    "artist": "Labi Siffre",
+    "title": "Crying Lauging Loving Lying: Expanded Edition (RSD Exclusive Yellow Vinyl w/Bonus Tracks) (RSD26)(LIMIT OF 1)",
+    "price": 45.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/labi-siffre-crying-lauging-loving-lying-expanded-edition-rsd-exclusive-yellow-vinyl-w-bonus-tracks-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7845.jpg?v=1775855268",
+    "score": 0
+  },
+  {
+    "artist": "Blur",
+    "title": "Live at The Budokan (RSD Exclusive 2LP Red Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 49.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/blur-live-at-the-budokan-rsd-exclusive-2lp-red-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80372.jpg?v=1776381934",
+    "score": 0
+  },
+  {
+    "artist": "Sisters of Mercy",
+    "title": "First And Last And Always The Japanese Edition (RSD Esclusive Black Ice Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/sisters-of-mercy-first-and-last-and-always-the-japanese-edition-rsd-esclusive-black-ice-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7885.jpg?v=1775856551",
+    "score": 0
+  },
+  {
+    "artist": "Primal Scream",
+    "title": "1987 EPs (RSD Exclusive) (RSD26)(LIMIT OF 1)",
+    "price": 24.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/primal-scream-1987-eps-rsd-exclusive-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7870.jpg?v=1775856054",
+    "score": 0
+  },
+  {
+    "artist": "David Bowie",
+    "title": "Excerpts From Outside (RSD Exclusive Half-Speed Remaster Clear Vinyl) (RSD26)",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/david-bowie-excerpts-from-outside-rsd-exclusive-half-speed-remaster-clear-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_78192.jpg?v=1775854730",
+    "score": 0
+  },
+  {
+    "artist": "Phoenix",
+    "title": "Alphabetical (RSD Exclusive Silver Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-phoenix-alphabetical-rsd-exclusive-silver-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7865.jpg?v=1775855813",
+    "score": 0
+  },
+  {
+    "artist": "Phoenix",
+    "title": "United (RSD Exclusive Clear Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-phoenix-united-rsd-exclusive-clear-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7867.jpg?v=1775855846",
+    "score": 0
+  },
+  {
+    "artist": "Muse",
+    "title": "Muscle Museum (RSD Exclusive Teal Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 21.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/muse-muscle-museum-rsd-exclusive-teal-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8082.jpg?v=1776383052",
+    "score": 0
+  },
+  {
+    "artist": "The Power Station",
+    "title": "Raw Power: Live At The Spectrum, Philadelphia (RSD Exclusive 40th Anniversary Gatefold) (RSD26)(LIMIT OF 1)",
+    "price": 59.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-power-station-raw-power-live-at-the-spectrum-philadelphia-rsd-exclusive-40th-anniversary-gatefold-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7872.jpg?v=1775856120",
+    "score": 0
+  },
+  {
+    "artist": "Lil Peep",
+    "title": "Crybaby (RSD Exclusive Black/White Die-Cut Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/lil-peep-crybaby-rsd-exclusive-black-white-die-cut-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/7F956A37-2E3C-4FA8-BE8A-29FCFB5F8B96_1_105_c.jpg?v=1776375156",
+    "score": 0
+  },
+  {
+    "artist": "Electronic",
+    "title": "1996 Remixes 1999 (RSD Exclusive Anniversary Edition) (RSD26)",
+    "price": 19.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/electronic-1996-remixes-1999-rsd-exclusive-anniversary-edition-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/F53391C8-73A2-4FA1-A604-87323BCACE7D_1_105_c.jpg?v=1776396069",
+    "score": 0
+  },
+  {
+    "artist": "Thin Lizzy",
+    "title": "Live In Cleveland 1976 (RSD Exclusive 2LP) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/thin-lizzy-live-in-cleveland-1976-rsd-exclusive-2lp-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7893.jpg?v=1775856719",
+    "score": 0
+  },
+  {
+    "artist": "Olivia Dean",
+    "title": "BBC Radio 1 Live Lounge (RSD Exclusive 7\" Colored Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 16.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/olivia-dean-bbc-radio-1-live-lounge-rsd-exclusive-7-colored-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8140.jpg?v=1776384414",
+    "score": 0
+  },
+  {
+    "artist": "Mark Knopfler & Emmylou Harris",
+    "title": "All The Roadrunning (RSD Exclusive 20th Anniversary 2LP Smoky Marbled Vinyl) (RSD26)",
+    "price": 46.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/mark-knopfler-emmylou-harris-all-the-roadrunning-rsd-exclusive-20th-anniversary-2lp-smoky-marbled-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/072CC83E-2A23-4E41-97E7-9D15F02CEBD7_1_105_c.jpg?v=1776375224",
+    "score": 0
+  },
+  {
+    "artist": "Def Leppard",
+    "title": "Slang (RSD Exclusive 30th Anniversary 180G Magenta Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/def-leppard-slang-rsd-exclusive-30th-anniversary-180g-magenta-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/CA22A87A-3AEC-4ED6-8E9F-7CA5FA8A0820_1_105_c.jpg?v=1776374503",
+    "score": 0
+  },
+  {
+    "artist": "Grateful Dead",
+    "title": "Boston Music Hall, Boston, MA 06/11/76 (RSD Exclusive 5LP Set) (RSD26)(LIMIT OF 1)",
+    "price": 124.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/the-grateful-dead-boston-music-hall-boston-ma-06-11-76-rsd-exclusive-5lp-set-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7831_231e83e6-725b-4fa7-9a81-40f208b76a09.jpg?v=1775854956",
+    "score": 0
+  },
+  {
+    "artist": "Last Dinner Party",
+    "title": "The Scythe (Live From The Pyre) (RSD Exclusive 7\" Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 14.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/last-dinner-party-the-scythe-live-from-the-pyre-rsd-exclusive-7-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8134.jpg?v=1776384053",
+    "score": 0
+  },
+  {
+    "artist": "Cream",
+    "title": "Wheels Of Fire: Live At The Fillmore & Winterland (RSD Exclusive 3LP Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/cream-wheels-of-fire-live-at-teh-fillmore-winterland-rsd-exclusive-3lp-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/C54A5640-6815-44CC-8A8D-B67E0900CACD_1_105_c.jpg?v=1776374387",
+    "score": 0
+  },
+  {
+    "artist": "Marc Maron",
+    "title": "Panicked (RSD Exclusive Limited Autographed/Star Signed Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 39.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/marc-maron-panicked-rsd-exclusive-limited-autographed-star-signed-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/7EF8AFEC-EC50-41D3-A6FB-B27106192D60_1_105_c.jpg?v=1776375207",
+    "score": 0
+  },
+  {
+    "artist": "Jurassic 5",
+    "title": "Quality Control (RSD Exclusive 25th Anniversary Gatefold 2LP Woodgrain Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 36.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/jurassic-5-quality-control-rsd-exclusive-25th-anniversary-gatefold-2lp-woodgrain-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/F3A391EF-3CF5-47CD-A484-87AF027FCC82_1_105_c.jpg?v=1776375063",
+    "score": 0
+  },
+  {
+    "artist": "Chaka Khan",
+    "title": "Naughty (RSD Exclusive Fig Cream Colored Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 32.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/chaka-khan-naughty-rsd-exclusive-fig-cream-colored-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80452.jpg?v=1776382131",
+    "score": 0
+  },
+  {
+    "artist": "Momma",
+    "title": "Welcome to My Bluse Sky (the Heart Charm) (RSD Exclusive 12\" Silver Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 22.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/momma-welcome-to-my-bluse-sky-the-heart-charm-rsd-exclusive-12-silver-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8076_d0f3f430-47be-486a-8355-306e51fe1cc1.jpg?v=1776382993",
+    "score": 0
+  },
+  {
+    "artist": "Cam'ron",
+    "title": "Killa Season (RSD Exlusive 2LP Red Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 36.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/camron-killa-season-rsd-exlusive-2lp-red-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_78092_3895629c-771b-4d94-9d54-518346055660.jpg?v=1775854579",
+    "score": 0
+  },
+  {
+    "artist": "Scott Weiland",
+    "title": "Live [Explicit Content] (RSD Exclusive Blue Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/scott-weiland-live-explicit-content-rsd-exclusive-blue-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/858142ED-D007-4161-B819-AECFE5781111_1_105_c.jpg?v=1776375515",
+    "score": 0
+  },
+  {
+    "artist": "Dropkick Murphys",
+    "title": "Knock Me Down (RSD Exclusive 7\" Vinyl) (RSD26)",
+    "price": 15.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/dropkick-murphys-knock-me-down-rsd-exclusive-7-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8130.jpg?v=1776383874",
+    "score": 0
+  },
+  {
+    "artist": "Various Artists",
+    "title": "Salad Days: Music From The Documentary (RSD Exclusive 180G Clear/Red Vinyl(LIMIT OF 1)",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/various-artists-salad-days-music-from-the-documentary-rsd-exclusive-180g-clear-red-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7882.jpg?v=1775856455",
+    "score": 0
+  },
+  {
+    "artist": "Roy Ayers",
+    "title": "Daddy Bug (RSD Exclusive Yellow Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 30.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/roy-ayers-daddy-bug-rsd-exclusive-yellow-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/BBF95509-0643-4772-B911-D2D71EA7CAA5_1_105_c.jpg?v=1776375491",
+    "score": 0
+  },
+  {
+    "artist": "Jerry Garcia",
+    "title": "Reflections (RSD Exclusive 50th Anniversary 3LP 180G Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 59.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/jerry-garcia-reflections-rsd-exclusive-50th-anniversary-3lp-180g-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7629.jpg?v=1775680028",
+    "score": 0
+  },
+  {
+    "artist": "Ziggy Marley",
+    "title": "Brightside (RSD Exclusive Translucent Orange Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 27.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/ziggy-marley-brightside-rsd-exclusive-translucent-orange-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7903.jpg?v=1775856941",
+    "score": 0
+  },
+  {
+    "artist": "Bill Evans",
+    "title": "At the BBC (RSD Exclusive 180G 2LP Gatefold) (RSD26) (LIMIT OF 1)",
+    "price": 49.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/bill-evans-at-the-bbc-rsd-exclusive-180g-2lp-gatefold-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/37CE39D4-B7B4-4FCB-8575-41DADE587F1A_1_105_c.jpg?v=1776374161",
+    "score": 0
+  },
+  {
+    "artist": "Mayday Parade",
+    "title": "Tales Told By Dead Friends (RSD Exclusive 20th Anniversary 10\" Orange Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 25.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/mayday-parade-tales-told-by-dead-friends-rsd-exclusive-20th-anniversary-10-orange-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_80672.jpg?v=1776382451",
+    "score": 0
+  },
+  {
+    "artist": "MC 900 Ft. Jesus",
+    "title": "Welcome to My Dream (35th Anniversary Silver 2LP 140G Vinyl) (RSD26)(LIMIT OF 1)",
+    "price": 35.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/mc-900-ft-jesus-welcome-to-my-dream-35th-anniversary-silver-2lp-140g-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7657.jpg?v=1775680348",
+    "score": 0
+  },
+  {
+    "artist": "Slint",
+    "title": "Untitled (Albini Rough Mixes) (12\" Single Gray Vinyl",
+    "price": 28.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/slint-untitled-albini-rough-mixes-12-single-gray-vinyl-rsd26",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7683.jpg?v=1775680652",
+    "score": 0
+  },
+  {
     "artist": "Taylor Swift",
     "title": "Speak Now: World Tour Live",
     "price": 39.99,
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/taylor-swift-speak-now-world-tour-live",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_9931.jpg?v=1711657133",
-    "score": 0
-  },
-  {
-    "artist": "Taylor Swift",
-    "title": "So It Goes... Tokyo",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/taylor-swift-so-it-goes-tokyo",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8197-_W.jpg?v=1717007504",
     "score": 0
   },
   {
@@ -72,15 +855,6 @@
     "score": 0
   },
   {
-    "artist": "Ye",
-    "title": "Bully (Indie Exclusive Green Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/ye-bully-indie-exclusive-green-vinyl",
-    "image": "",
-    "score": 0
-  },
-  {
     "artist": "Vegyn",
     "title": "The Road To Hell Is Paved With Good Intentions (Silver Vinyl)",
     "price": 67.99,
@@ -114,33 +888,6 @@
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/van-halen-aint-talkin-bout-the-crown-city",
     "image": "",
-    "score": 0
-  },
-  {
-    "artist": "Frank Ocean",
-    "title": "Channel Orange (Alt Cover)",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/frank-ocean-channel-orange-alt-cover",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/ad6de224-299f-42ad-8fdc-f1d4f1abbe57.jpg?v=1774026324",
-    "score": 0
-  },
-  {
-    "artist": "Sabrina Carpenter",
-    "title": "NPR Tiny Desk (Colored Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/sabrina-carpenter-npr-tiny-desk-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_69332.jpg?v=1774024299",
-    "score": 0
-  },
-  {
-    "artist": "Taylor Swift",
-    "title": "NPR Tiny Desk Concert (Colored Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/taylor-swift-npr-tiny-desk-concert-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/a76a6f57-b2f1-48ed-bf82-1889bdb29798.jpg?v=1774026285",
     "score": 0
   },
   {
@@ -204,15 +951,6 @@
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/oasis-straight-outta-manchester",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_4375.jpg?v=1743097876",
-    "score": 0
-  },
-  {
-    "artist": "Insane Clown Posse",
-    "title": "The Amazing Jeckel Brothers",
-    "price": 39.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/insane-clown-posse-the-amazing-jeckel-brothers",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_40502.jpg?v=1742497652",
     "score": 0
   },
   {
@@ -339,15 +1077,6 @@
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/drake-nothing-was-the-same-platinum-edition",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7576.jpg?v=1749831432",
-    "score": 0
-  },
-  {
-    "artist": "Frank Ocean",
-    "title": "nostalgia, ULTRA.",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/frank-ocean-nostalgia-ultra",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3519.jpg?v=1741308122",
     "score": 0
   },
   {
@@ -1293,726 +2022,6 @@
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/system-of-a-down-toxicity",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_1396.jpg?v=1757622233",
-    "score": 0
-  },
-  {
-    "artist": "Panic! at the Disco",
-    "title": "Too Weird To Live, Too Rare To Die!",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/panic-at-the-disco-too-weird-to-live-too-rare-to-dare",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_6396-_W.jpg?v=1627791243",
-    "score": 0
-  },
-  {
-    "artist": "SZA",
-    "title": "Crtl (Translucent Green Vinyl)",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/sza-crtl-translucent-green-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_4591-_W_5918df0f-880c-4acf-99e4-9c1be360778f.jpg?v=1707424148",
-    "score": 0
-  },
-  {
-    "artist": "Lana Del Rey",
-    "title": "Lust For Life",
-    "price": 42.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/lana-del-rey-lust-for-life",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6140-_W_bae02e30-f4ea-4bcf-b5d5-96d89711bf07.jpg?v=1710440181",
-    "score": 0
-  },
-  {
-    "artist": "** PRE-ORDER 08/14 ** Jungle",
-    "title": "Sunshine (Indie Exclusive Peach Vinyl)",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pre-order-08-14-jungle-sunshine-indie-exclusive-peach-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/5056167183945-Jungle_Album_Mockup_peach_580x_c00a28c3-47b2-40d0-9a4d-769c38ef1ac1.webp?v=1774466013",
-    "score": 0
-  },
-  {
-    "artist": "Frank Ocean",
-    "title": "Blond (Super Deluxe Edition)",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/frank-ocean-blond-super-deluxe-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_0594.jpg?v=1755804872",
-    "score": 0
-  },
-  {
-    "artist": "Daniel Lopatin",
-    "title": "Marty Supreme (Original Soundtrack) (Clear & Black Vinyl)",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/daniel-lopatin-marty-supreme-original-soundtrack-clear-black-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6916.jpg?v=1774024632",
-    "score": 0
-  },
-  {
-    "artist": "Nirvana",
-    "title": "Heart-Shaped Paris",
-    "price": 84.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/nirvana-heart-shaped-paris",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6926.jpg?v=1774024215",
-    "score": 0
-  },
-  {
-    "artist": "Led Zeppelin",
-    "title": "Lotta Love In Honolulu",
-    "price": 84.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/led-zeppelin-lotta-love-in-honolulu",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6922.jpg?v=1774024034",
-    "score": 0
-  },
-  {
-    "artist": "U2",
-    "title": "Woody Guthrie Prize 2025",
-    "price": 59.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/u2-woody-guthrie-prize-2025",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6930.jpg?v=1774024267",
-    "score": 0
-  },
-  {
-    "artist": "Radiohead",
-    "title": "Truth Will Mess You Up",
-    "price": 114.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/radiohead-truth-will-mess-you-up",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6928.jpg?v=1774024241",
-    "score": 0
-  },
-  {
-    "artist": "The Cure",
-    "title": "Monterrey 1992",
-    "price": 84.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/the-cure-monterrey-1992-primera-vez-en-mexico",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6918.jpg?v=1774023977",
-    "score": 0
-  },
-  {
-    "artist": "Tyler, The Creator",
-    "title": "NPR Tiny Desk Concert (Colored Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tyler-the-creator-npr-tiny-desk-concert-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/6968b374-f95d-4e60-91ab-f92219c7bb03.jpg?v=1774026268",
-    "score": 0
-  },
-  {
-    "artist": "High Vis",
-    "title": "Guided Tour",
-    "price": 20.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/high-vis-guided-tour",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6914.jpg?v=1774023929",
-    "score": 0
-  },
-  {
-    "artist": "Father John Misty",
-    "title": "Live At Third Man Records",
-    "price": 22.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/father-john-misty-live-at-third-man-records",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_69362.jpg?v=1774025886",
-    "score": 0
-  },
-  {
-    "artist": "Highly Suspect",
-    "title": "Mister Asylum",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/highly-suspect-mister-asylum",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5777.jpg?v=1770405029",
-    "score": 0
-  },
-  {
-    "artist": "Ween",
-    "title": "The Mollusk",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/ween-the-mollusk",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_45332.jpg?v=1766178315",
-    "score": 0
-  },
-  {
-    "artist": "Tyler, The Creator",
-    "title": "Don't Tap The Glass",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tyler-the-creator-dont-tap-the-glass",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/8f9ed765-a6c9-46fb-867a-edd177c0338c.jpg?v=1774026179",
-    "score": 0
-  },
-  {
-    "artist": "Mac DeMarco",
-    "title": "Another One (10th Anniversary Edition)",
-    "price": 35.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/mac-demarco-another-one-10th-anniversary-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_32572.jpg?v=1762467104",
-    "score": 0
-  },
-  {
-    "artist": "Armand Hammer & The Alchemist",
-    "title": "Mercy",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pre-order-11-07-armand-hammer-the-alchemist-mercy",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_32232.jpg?v=1762466680",
-    "score": 0
-  },
-  {
-    "artist": "Hayley Williams",
-    "title": "Ego Death At A Bachelorette Party (26 Highlighter Vinyl)",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pre-order-11-07-hayley-williams-ego-death-at-a-bachelorette-party-26-highlighter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_32472.jpg?v=1762466965",
-    "score": 0
-  },
-  {
-    "artist": "Atmosphere",
-    "title": "Strictly Leakage",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/atmosphere-strictly-leakage",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_9703.jpg?v=1732236204",
-    "score": 0
-  },
-  {
-    "artist": "Geordie Greep",
-    "title": "The New Sound (Yellow Cover)",
-    "price": 32.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/geordie-greep-the-new-sound-yellow-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_8573.jpg?v=1729796043",
-    "score": 0
-  },
-  {
-    "artist": "Title Fight",
-    "title": "Floral Green",
-    "price": 28.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/title-fight-floral-green",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5804.jpg?v=1724383691",
-    "score": 0
-  },
-  {
-    "artist": "Faye Webster",
-    "title": "Undressed at the Symphony",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/faye-webster-undressed-at-the-symphony",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5907-_W_41f6cef4-3f78-4a62-bd3c-b02c6be75d0f.jpg?v=1709241965",
-    "score": 0
-  },
-  {
-    "artist": "Wednesday",
-    "title": "Rat Saw God (Purple Vinyl)",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/wednesday-rat-saw-god-purple-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3765-_W_60d65f5e-67fe-4668-987e-9febba1777ff.jpg?v=1706210883",
-    "score": 0
-  },
-  {
-    "artist": "Otis Redding",
-    "title": "Otis Blue/Otis Redding Sings Soul",
-    "price": 26.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/otis-redding-otis-blue-otis-redding-sings-soul",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2332-_W_6b717e6f-e919-4fef-ae9f-aabe0990d158.jpg?v=1701987002",
-    "score": 0
-  },
-  {
-    "artist": "Mitski",
-    "title": "Retired From Sad, New Career in Business (Colored Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/mitski-retired-from-sad-new-career-in-business-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_9435-_W.jpg?v=1697654961",
-    "score": 0
-  },
-  {
-    "artist": "Elliott Smith",
-    "title": "Either/Or",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/elliott-smith-either-or",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7881-_W_d02e6b91-aab8-42fe-8a2a-5309f35a25a6.jpg?v=1692384120",
-    "score": 0
-  },
-  {
-    "artist": "Faye Webster",
-    "title": "Faye Webster",
-    "price": 23.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/faye-webster-faye-webster",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6285-_W_2.jpg?v=1688690271",
-    "score": 0
-  },
-  {
-    "artist": "Car Seat Headrest",
-    "title": "Twin Fantasy",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/car-seat-headrest-twin-fantasy",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3730-_W.jpg?v=1685482101",
-    "score": 0
-  },
-  {
-    "artist": "Cocteau Twins",
-    "title": "Heaven or Las Vegas",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/cocteau-twins-heaven-or-las-vegas",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_4411-_W_25516b5e-8cd7-48c1-a241-8fc39cc6ff3b.jpg?v=1707334097",
-    "score": 0
-  },
-  {
-    "artist": "Khruangbin",
-    "title": "Mordechai",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/khruangbin-mordechai",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_8834-_W_34093758-5059-46b0-a7bc-23b1c6575e25.jpg?v=1663880945",
-    "score": 0
-  },
-  {
-    "artist": "Crumb",
-    "title": "Crumb/Locket",
-    "price": 19.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/crumb-crumb-locket",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_37862.jpg?v=1741890259",
-    "score": 0
-  },
-  {
-    "artist": "Blood Orange",
-    "title": "Negro Swan",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/blood-orange-negro-swan",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_4695.jpg?v=1722021020",
-    "score": 0
-  },
-  {
-    "artist": "Mac Demarco",
-    "title": "Salad Days",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/mac-demarco-salad-days",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5086-_W_41ca8caf-849a-404d-a830-af277bfd4c9c.jpg?v=1708464127",
-    "score": 0
-  },
-  {
-    "artist": "Interpol",
-    "title": "Antics",
-    "price": 28.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/interpol-antics",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_69382.jpg?v=1774025944",
-    "score": 0
-  },
-  {
-    "artist": "Lil Uzi Vert",
-    "title": "Lil Uzi Vert ‎- Lil Uzi Vert Vs. The World",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/lil-uzi-vert-lil-uzi-vert-vs-the-world",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5751_daff9048-aeb1-4e4b-a5e4-c461eaaed256.jpg?v=1770320953",
-    "score": 0
-  },
-  {
-    "artist": "Marilyn Manson",
-    "title": "Smells Like Children Colored Vinyl",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/marilyn-manson-smells-like-children-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/c4acf760-e658-40ea-96af-6a80e024d5f9.jpg?v=1774026306",
-    "score": 0
-  },
-  {
-    "artist": "Nine Inch Nails",
-    "title": "Further Down The Spiral / Halo 10",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/nine-inch-nails-further-down-the-spiral-halo-10",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_28742.jpg?v=1761253100",
-    "score": 0
-  },
-  {
-    "artist": "Bad Bunny",
-    "title": "Un Verano Sin Ti (Colored Vinyl)",
-    "price": 49.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/bad-bunny-un-verano-sin-ti-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2689.jpg?v=1760637061",
-    "score": 0
-  },
-  {
-    "artist": "Beyonce",
-    "title": "I Am Sasha Fierce",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/beyonce-i-am-sasha-fierce",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3077.jpg?v=1761846939",
-    "score": 0
-  },
-  {
-    "artist": "Doja Cat",
-    "title": "Amala (Colored Vinyl)",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/doja-cat-amala-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3873.jpg?v=1720201767",
-    "score": 0
-  },
-  {
-    "artist": "Brent Faiyaz",
-    "title": "Sonder Son (Colored Vinyl)",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/brent-faiyaz-sonder-son-colored-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_0023.jpg?v=1754586572",
-    "score": 0
-  },
-  {
-    "artist": "Beyoncé",
-    "title": "The Lion King: The Gift",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/beyonce-the-lion-king-the-gift",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5749_181e4bc3-1ad4-454b-b5a5-21a215936332.jpg?v=1770320801",
-    "score": 0
-  },
-  {
-    "artist": "Kendrick Lamar",
-    "title": "Section.80",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/kendrick-lamar-section-80",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7578.jpg?v=1749831476",
-    "score": 0
-  },
-  {
-    "artist": "Nick Shoulders",
-    "title": "Okay, Crawdad (Violet Vinyl)",
-    "price": 27.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/nick-shoulders-okay-crawdad-violet-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6771.jpg?v=1773420672",
-    "score": 0
-  },
-  {
-    "artist": "Tha god Fahim",
-    "title": "Dump Goat 3",
-    "price": 39.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tha-god-fahim-dump-goat-3",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6777.jpg?v=1773420833",
-    "score": 0
-  },
-  {
-    "artist": "Death Cab For Cutie",
-    "title": "Something About Airplanes",
-    "price": 27.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/death-cab-for-cutie-something-about-airplanes-1",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6751.jpg?v=1773420171",
-    "score": 0
-  },
-  {
-    "artist": "Lamb of God",
-    "title": "Into Oblivion (Gray Splatter)",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/lamb-of-god-into-oblivion-gray-splatter",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6763.jpg?v=1773420441",
-    "score": 0
-  },
-  {
-    "artist": "Chicago",
-    "title": "Chicago IV (Silver Anniversary Edition)",
-    "price": 37.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/chicago-chicago-iv-silver-anniversary-edition",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6749.jpg?v=1773420146",
-    "score": 0
-  },
-  {
-    "artist": "James Blake",
-    "title": "Trying times (Indie Exclusive White Vinyl)",
-    "price": 38.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/james-blake-trying-times-indie-exclusive-white-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6757.jpg?v=1773420266",
-    "score": 0
-  },
-  {
-    "artist": "Sweet Pill",
-    "title": "Still There's A Glow (Indie Exclusive Blue & Yellow Splatter)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/sweet-pill-still-theres-a-glow-indie-exclusive-blue-yellow-splatter",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6775_8c1ae329-e338-4118-a511-470f7f363cf2.jpg?v=1773420800",
-    "score": 0
-  },
-  {
-    "artist": "Mdou Moctar",
-    "title": "Ilana (The Creator)",
-    "price": 28.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/mdou-moctar-ilana-the-creator",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6765.jpg?v=1773420510",
-    "score": 0
-  },
-  {
-    "artist": "The Black Crowes",
-    "title": "A Pound of Feathers",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/the-black-crowes-a-pound-of-feathers",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6783.jpg?v=1773420882",
-    "score": 0
-  },
-  {
-    "artist": "Beck",
-    "title": "Everybody's Gotta Learn Sometime (Red Vinyl)",
-    "price": 25.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/beck-everybodys-gotta-learn-sometime-red-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6745.jpg?v=1773420098",
-    "score": 0
-  },
-  {
-    "artist": "The Band",
-    "title": "Northern Lights",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/the-band-northern-lights-southern-cross",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6781.jpg?v=1773420867",
-    "score": 0
-  },
-  {
-    "artist": "Original Soundtracks",
-    "title": "Naruto Best Collection (Kyubi Picture Disc)",
-    "price": 84.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/original-soundtracks-naruto-best-collection-kyubi-picture-disc",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6773.jpg?v=1773420691",
-    "score": 0
-  },
-  {
-    "artist": "Djo",
-    "title": "Decide (Blue Vinyl)",
-    "price": 33.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/djo-decide-blue-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6043.jpg?v=1771531346",
-    "score": 0
-  },
-  {
-    "artist": "Pastel Ghost",
-    "title": "Abyss (Clear Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pastel-ghost-abyss-clear-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_5415.jpg?v=1769795441",
-    "score": 0
-  },
-  {
-    "artist": "Blood Orange",
-    "title": "Essex Honey",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/blood-orange-essex-honey",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_1360.jpg?v=1757621777",
-    "score": 0
-  },
-  {
-    "artist": "TV Girl",
-    "title": "French Exit",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tv-girl-french-exit-1",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3276.jpg?v=1740691697",
-    "score": 0
-  },
-  {
-    "artist": "TV Girl",
-    "title": "Who Really Cares",
-    "price": 32.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tv-girl-who-really-cares",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_3280.jpg?v=1740691727",
-    "score": 0
-  },
-  {
-    "artist": "Aphex Twin",
-    "title": "Selected Ambient Works 85-92",
-    "price": 31.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/aphex-twin-selected-ambient-works-85-92",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2320-_W_42d34469-c5f0-4878-83de-418352fc1701.jpg?v=1701986880",
-    "score": 0
-  },
-  {
-    "artist": "Air",
-    "title": "Moon Safari",
-    "price": 24.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/air-moon-safari",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2164-_W_2.jpg?v=1701977511",
-    "score": 0
-  },
-  {
-    "artist": "Soundtracks",
-    "title": "Minecraft Volume Alpha (Transparent Green Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/minecraft-volume-alpha-transparent-green-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_2793.jpg?v=1669932257",
-    "score": 0
-  },
-  {
-    "artist": "Prince",
-    "title": "Dirty Mind (2022 Reissue)",
-    "price": 22.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/prince-dirty-mind",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/products/IMG_5093-_W.jpg?v=1646950721",
-    "score": 0
-  },
-  {
-    "artist": "The Brian Jonestown Massacre",
-    "title": "Their Satanic Majesties Second Request",
-    "price": 30.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/the-brian-jonestown-massacre-their-satanic-majesties-second-request",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6785.jpg?v=1773420918",
-    "score": 0
-  },
-  {
-    "artist": "N.E.R.D.",
-    "title": "Seeing Sounds",
-    "price": 26.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/n-e-r-d-seeing-sounds",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6767.jpg?v=1773420581",
-    "score": 0
-  },
-  {
-    "artist": "** PRE-ORDER 05/22 ** J. Cole",
-    "title": "The Fall-Off (Red Vinyl)",
-    "price": 66.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pre-order-05-22-j-cole-the-fall-off-red-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/4500087-3547332.jpg?v=1773427404",
-    "score": 0
-  },
-  {
-    "artist": "** PRE-ORDER 07/10 ** Insane Clown Posse",
-    "title": "The Great Milenko (Indie Exclusive Clear Vinyl)",
-    "price": 44.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/pre-order-07-10-insane-clown-posse-the-great-milenko-indie-exclusive-clear-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/418467312760_500.png?v=1772848059",
-    "score": 0
-  },
-  {
-    "artist": "Joey Valence & Brae",
-    "title": "Punk Tactics",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/joey-valence-brae-punk-tactics",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/4365732F-5B58-475E-9A89-5C16116A20A1.jpg?v=1772823794",
-    "score": 0
-  },
-  {
-    "artist": "Various Artists",
-    "title": "HELP(2)",
-    "price": 39.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/various-artists-help2",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6599.jpg?v=1772747986",
-    "score": 0
-  },
-  {
-    "artist": "Hannah Montana",
-    "title": "Original Soundtrack (Green Splatter Vinyl)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/original-soundtracks-hannah-montana-green-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6581.jpg?v=1772745290",
-    "score": 0
-  },
-  {
-    "artist": "Hannah Montana 2",
-    "title": "Original Soundtrack (Black & White Splatter)",
-    "price": 29.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/original-soundtracks-hannah-montana-2-black-white-splatter",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6583.jpg?v=1772745394",
-    "score": 0
-  },
-  {
-    "artist": "Katherine Priddy",
-    "title": "These Frightening Machines (Gray Vinyl)",
-    "price": 28.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/katherine-priddy-these-frightening-machines-gray-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_65712.jpg?v=1772745450",
-    "score": 0
-  },
-  {
-    "artist": "Tennis",
-    "title": "Yours Conditionally (Color Vinyl)",
-    "price": 31.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tennis-yours-conditionally-color-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6590.jpg?v=1772745733",
-    "score": 0
-  },
-  {
-    "artist": "Miles Davis",
-    "title": "Sketches of Spain",
-    "price": 26.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/miles-davis-sketches-of-spain-1",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6575.jpg?v=1772745505",
-    "score": 0
-  },
-  {
-    "artist": "Denzel Curry",
-    "title": "Strictly 4 The Scythe (Tangerine Vinyl)",
-    "price": 23.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/denzel-curry-strictly-4-the-scythe-tangerine-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_65692.jpg?v=1772745254",
-    "score": 0
-  },
-  {
-    "artist": "Barry Can't Swim",
-    "title": "Late Night Tales: Barry Can't Swim (Yellow Vinyl)",
-    "price": 36.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/barry-cant-swim-late-night-tales-barry-cant-swim-yellow-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6567.jpg?v=1772745232",
-    "score": 0
-  },
-  {
-    "artist": "Talking Heads",
-    "title": "Tentative Decisions: Demos & Live (Bonus 7\")",
-    "price": 34.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/talking-heads-tentative-decisions-demos-live-bonus-7",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_6587.jpg?v=1772745713",
     "score": 0
   },
   {
@@ -5094,6 +5103,24 @@
     "score": 0
   },
   {
+    "artist": "The Plot In You",
+    "title": "\"Vol. 2\" White 10\" Vinyl",
+    "price": 18.0,
+    "source": "Fearless Records",
+    "link": "https://store.fearlessrecords.com/products/vol-1-white-10-vinyl-1",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/Plot_Vol2_10__VinylMockup_Front_White.png?v=1705614703",
+    "score": 0
+  },
+  {
+    "artist": "Pierce The Veil",
+    "title": "\"Misadventures\" Centurion Vinyl",
+    "price": 25.0,
+    "source": "Fearless Records",
+    "link": "https://store.fearlessrecords.com/products/pierce-the-veil-misadventures-centurion-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/Misadv_Centurion.png?v=1740436528",
+    "score": 0
+  },
+  {
     "artist": "The Pretty Reckless",
     "title": "\"Death By Rock And Roll\" Sea Blue Smoke Vinyl",
     "price": 36.0,
@@ -5931,15 +5958,6 @@
     "score": 0
   },
   {
-    "artist": "Grayscale",
-    "title": "\"Adornment\" Tigers Eye Vinyl",
-    "price": 24.0,
-    "source": "Fearless Records",
-    "link": "https://store.fearlessrecords.com/products/adornment-tigers-eye-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/products/Grayscale_1.png?v=1672771479",
-    "score": 0
-  },
-  {
     "artist": "Pierce The Veil",
     "title": "\"Misadventures\" Vaporwave Vinyl",
     "price": 25.0,
@@ -6606,6 +6624,15 @@
     "score": 0
   },
   {
+    "artist": "Pierce The Veil",
+    "title": "\"Misadventures\" Centurion Vinyl",
+    "price": 25.0,
+    "source": "Fearless Vinyl",
+    "link": "https://store.fearlessrecords.com/products/pierce-the-veil-misadventures-centurion-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/Misadv_Centurion.png?v=1740436528",
+    "score": 0
+  },
+  {
     "artist": "Bloodywood",
     "title": "\"Nu Delhi\" Red Smoke Vinyl",
     "price": 28.0,
@@ -6819,6 +6846,15 @@
     "source": "Fearless Vinyl",
     "link": "https://store.fearlessrecords.com/products/the-mosaic-smores-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/CAPSTAN_THEMOSAIC_PACKSHOTS-smores.png?v=1707336748",
+    "score": 0
+  },
+  {
+    "artist": "The Plot In You",
+    "title": "\"Vol. 2\" White 10\" Vinyl",
+    "price": 18.0,
+    "source": "Fearless Vinyl",
+    "link": "https://store.fearlessrecords.com/products/vol-1-white-10-vinyl-1",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/Plot_Vol2_10__VinylMockup_Front_White.png?v=1705614703",
     "score": 0
   },
   {
@@ -7611,6 +7647,15 @@
     "source": "Fearless Vinyl",
     "link": "https://store.fearlessrecords.com/products/my-kid-brother-my-kid-brother-10-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/products/MKB-Vinyl.png?v=1598640221",
+    "score": 0
+  },
+  {
+    "artist": "Dave Hause",
+    "title": "Resolutions A-Side/B-Side Orange & Yellow W/ Black Splatter Vinyl LP",
+    "price": 28.0,
+    "source": "Rise Records",
+    "link": "https://riserecords.com/products/dh00resoab-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/e5492ab6cae0424b8959b2a6291f5388-130708.jpg?v=1698417685",
     "score": 0
   },
   {
@@ -8835,6 +8880,159 @@
     "source": "Rise All",
     "link": "https://riserecords.com/products/shrkcovrbl-lp",
     "image": "https://cdn.shopify.com/s/files/1/0098/1585/1086/products/01f8978c672240c9b32993a6e20c2549-125850.jpg?v=1642539185",
+    "score": 0
+  },
+  {
+    "artist": "AEC",
+    "title": "G FLIP 'DRUMMER' LP (Clear Vinyl)",
+    "price": 33.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/g-flip-drummer-lp-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4232220-3018485.jpg?v=1776703732",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "BAUHAUS 'BBC RADIO SESSIONS VOL. 1' LP",
+    "price": 17.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/bauhaus-bbc-radio-sessions-vol-1-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/Bauhaus-BBCSessions-cover_e83bf057-bf2a-4d61-b8f3-dfd8b18945bd.webp?v=1776701830",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "MDOU MOCTAR 'TEARS OF INJUSTICE' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/mdou-moctar-tears-of-injustice-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4379932-3273964.jpg?v=1776701518",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "MDOU MOCTAR 'ILANA THE CREATOR' LP",
+    "price": 22.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/mdou-moctar-ilana-the-creator-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4490334-3538593.jpg?v=1776701330",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "MDOU MOCTAR 'FUNERAL FOR JUSTICE' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/mdou-moctar-funeral-for-justice-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/02_939e4694_thumbnail_4096.webp?v=1776701168",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "INTERPOL 'MARAUDER' LP",
+    "price": 19.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/interpol-marauder-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3802954.jpg?v=1776700705",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "DEAD CAN DANCE 'TOWARD THE WITHIN' 2LP",
+    "price": 27.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/dead-can-dance-toward-the-within-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3451223.jpg?v=1776700514",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "DEAD CAN DANCE 'AION' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/dead-can-dance-aion-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3538780.jpg?v=1776699713",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "COCTEAU TWINS 'THE MOON AND THE MELODIES' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/cocteau-twins-the-moon-and-the-melodies-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4359891-3208456.jpg?v=1776699328",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "CAR SEAT HEADREST 'FACES FROM THE MASQUERADE' 2LP",
+    "price": 30.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/car-seat-headrest-faces-from-the-masquerade-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4264264-3056600.jpg?v=1776694601",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "CAROLINE 'CAROLINE' LP",
+    "price": 22.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/caroline-caroline-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/0191402015010.jpg?v=1776694312",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "BLACK MIDI 'HELLFIRE' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/black-midi-hellfire-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4096682-2851031.jpg?v=1776693410",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "BIG THIEF 'MASTERPIECE' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/big-thief-masterpiece-lp-1",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4376067-3266648.jpg?v=1776693219",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "BIG THIEF 'DOUBLE INFINITY' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/big-thief-double-infinity-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4433890-3445976.jpg?v=1776692960",
+    "score": 0
+  },
+  {
+    "artist": "SECRETLY DISTRO",
+    "title": "UNWOUND 'NEW PLASTIC IDEAS' LP (Clear Vinyl)",
+    "price": 26.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/unwound-new-plastic-ideas-lp-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4508088-3565847.jpg?v=1776692147",
+    "score": 0
+  },
+  {
+    "artist": "SECRETLY DISTRO",
+    "title": "JOHN PRINE 'THE TREE OF FORGIVENESS' LP",
+    "price": 24.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/john-prine-the-tree-of-forgiveness-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3476576-3163921.jpg?v=1776691506",
+    "score": 0
+  },
+  {
+    "artist": "SECRETLY DISTRO",
+    "title": "NEUTRAL MILK HOTEL 'ON AVERY ISLAND' 2LP",
+    "price": 27.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/neutral-milk-hotel-on-avery-island-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4173858-2935101.jpg?v=1776691232",
     "score": 0
   },
   {
@@ -10548,138 +10746,66 @@
     "score": 0
   },
   {
-    "artist": "Universal",
-    "title": "PAUL MCCARTNEY 'THE BOYS OF DUNGEON LANE' LP",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/paul-mccartney-the-boys-of-dungeon-lane-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/PaulMcCartney_VinylPackshot.png?v=1774541950",
-    "score": 0
-  },
-  {
-    "artist": "WARNER",
-    "title": "DIMMU BORGIR ‘GRAND SERPENT RISING' 2LP (Dark Green Vinyl)",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/dimmu-borgir-grand-serpent-rising-2lp-dark-green-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/DimmuBorgir-GrandSerpentRising2LPDARKGREENVINYL.jpg?v=1774535664",
+    "artist": "ORCHARD",
+    "title": "DEVILDRIVER 'STRIKE AND KILL' LP (Color Vinyl)",
+    "price": 26.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/devildriver-strike-and-kill-lp-color-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/devildriver.png?v=1776706949",
     "score": 0
   },
   {
     "artist": "AEC",
-    "title": "DIMMU BORGIR 'EONIAN' 2LP (Limited, Clear Vinyl)",
-    "price": 41.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/dimmu-borgir-eonian-2lp-limited-clear-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4378214-3270207.jpg?v=1774530458",
+    "title": "PALAYE ROYALE ‘DEATH OR GLORY' LP (Clear, Black, Red Vinyl)",
+    "price": 29.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/palaye-royale-death-or-glory-lp-clear-black-red-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4357336-3464210_1.jpg?v=1776704451",
     "score": 0
   },
   {
     "artist": "AEC",
-    "title": "ARCHITECTS ‘HOLLOW CROWN' LP (Limited, Picture Disc Vinyl)",
-    "price": 39.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/architects-hollow-crown-lp-limited-picture-disc-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4478387-3500208.jpg?v=1774530456",
-    "score": 0
-  },
-  {
-    "artist": "AEC",
-    "title": "ARCHITECTS ‘THE HERE AND NOW' LP (Limited, Picture Disc Vinyl)",
-    "price": 39.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/architects-the-here-and-now-lp-limited-picture-disc-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4478384-3500209.jpg?v=1774530454",
-    "score": 0
-  },
-  {
-    "artist": "DIMMU BORGIR ‘GRAND SERPENT RISING' 2LP (Exclusive",
-    "title": "Limited to 300, Gold w/ Black Marbled Vinyl)",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/dimmu-borgir-grand-serpent-rising-2lp-exclusive-limited-to-300-gold-w-black-marbled-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/DimmuBorgir-GrandSerpentRising2LPMARBLEDVINYL.png?v=1774514614",
-    "score": 0
-  },
-  {
-    "artist": "SUBLIME ‘UNTIL THE SUN EXPLODES' 2LP (Exclusive",
-    "title": "Limited to 500, Blue Burst Vinyl)",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/sublime-until-the-sun-explodes-2lp-exclusive-limited-to-500-blue-burst-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/Sublime-BV.png?v=1774379320",
-    "score": 0
-  },
-  {
-    "artist": "WARNER",
-    "title": "SUBLIME ‘UNTIL THE SUN EXPLODES' 2LP (Blue Gray Vinyl)",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/sublime-until-the-sun-explodes-2lp-blue-gray-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/Sublime-Retail.png?v=1774379319",
-    "score": 0
-  },
-  {
-    "artist": "SUBLIME ‘UNTIL THE SUN EXPLODES' 2LP (Exclusive",
-    "title": "Limited to 500, Yellow Splatter Vinyl)",
-    "price": 37.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/sublime-until-the-sun-explodes-2lp-exclusive-limited-to-500-yellow-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/Sublime-AP.png?v=1774379319",
-    "score": 0
-  },
-  {
-    "artist": "AEC",
-    "title": "THIS PROVIDENCE 'THIS PROVIDENCE' LP (Coke Bottle With Brown Splatter Vinyl)",
+    "title": "DES ROCS ‘DREAM MACHINE' LP (Color Vinyl)",
     "price": 28.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/this-providence-this-providence-lp-coke-bottle-with-brown-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4323465-3133188.jpg?v=1774388797",
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/des-rocs-dream-machine-lp-color-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/0810121777961.jpg?v=1776702879",
     "score": 0
   },
   {
-    "artist": "Redeye",
-    "title": "SWERVEDRIVER '99TH DREAM' 2LP (Silver Vinyl)",
-    "price": 33.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/swervedriver-99th-dream-2lp-silver-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/634457224186-CoverArtImage1.jpg?v=1774387724",
+    "artist": "MATADOR DIRECT",
+    "title": "BAUHAUS 'BBC RADIO SESSIONS VOL. 1' LP",
+    "price": 17.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/bauhaus-bbc-radio-sessions-vol-1-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Bauhaus-BBCSessions-cover_e83bf057-bf2a-4d61-b8f3-dfd8b18945bd.webp?v=1776702303",
     "score": 0
   },
   {
-    "artist": "Redeye",
-    "title": "SWERVEDRIVER 'THE WORLD'S FAIR' EP (Orange Vinyl)",
-    "price": 20.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/swervedriver-the-worlds-fair-ep-orange-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/634457199514-CoverArtImage1.jpg?v=1774387500",
+    "artist": "MATADOR DIRECT",
+    "title": "DEAD CAN DANCE 'TOWARD THE WITHIN' 2LP",
+    "price": 27.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/dead-can-dance-toward-the-within-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/3451223.jpg?v=1776702301",
+    "score": 0
+  },
+  {
+    "artist": "MATADOR DIRECT",
+    "title": "DEAD CAN DANCE 'AION' LP",
+    "price": 23.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/dead-can-dance-aion-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/3538780.jpg?v=1776702297",
     "score": 0
   },
   {
     "artist": "SECRETLY DISTRO",
-    "title": "BAD BRAINS 'ROCK FOR LIGHT' LP (Solar Flare Vinyl)",
+    "title": "UNWOUND 'NEW PLASTIC IDEAS' LP (Clear Vinyl)",
     "price": 26.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/bad-brains-rock-for-light-lp-solar-flare-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/1-bad-brains-rock-for-light-solar-flare-vinyl-edition.webp?v=1774386088",
-    "score": 0
-  },
-  {
-    "artist": "AEC",
-    "title": "THE WEAKERTHANS 'FALLOW' LP",
-    "price": 23.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/the-weakerthans-fallow-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/0045778691913.jpg?v=1774382928",
-    "score": 0
-  },
-  {
-    "artist": "ORCHARD",
-    "title": "EXHUMED/IRON REAGAN 'SPLIT' 12\" SINGLE (Red/White Splatter Vinyl)",
-    "price": 22.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/exhumed-iron-reagan-split-12-single-red-white-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4503534-3552451.jpg?v=1774365277",
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/unwound-new-plastic-ideas-lp-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4508088-3565847.jpg?v=1776692598",
     "score": 0
   },
   {
@@ -10797,6 +10923,15 @@
     "source": "Revolver",
     "link": "https://shop.revolvermag.com/products/des-rocs-to-hell-and-back-lp-white-black-a-side-b-side-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/7_6ca82b39-b9ed-4e02-96c0-23bbb0b24d65.png?v=1776282529",
+    "score": 0
+  },
+  {
+    "artist": "WARNER",
+    "title": "DOWN 'OVER THE UNDER' 2LP (Red Black Marbled Vinyl)",
+    "price": 37.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/down-over-the-under-2lp-red-black-marbled-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Down_OTU_2LP_EU_redBlkMrbl.webp?v=1776268469",
     "score": 0
   },
   {
@@ -14301,6 +14436,33 @@
     "score": 0
   },
   {
+    "artist": "Downswing",
+    "title": "And Everything Was Dark Half N Half",
+    "price": 28.98,
+    "source": "MNRK Heavy",
+    "link": "https://mnrkheavy.com/products/downswing-and-everything-was-dark-half-n-half",
+    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/downswing_And-Everything-Was-Dark_LP_Half_Half_FRONT_218165e6-32a9-4759-8792-451cc4573bdd.png?v=1756214184",
+    "score": 0
+  },
+  {
+    "artist": "The Blue Stones",
+    "title": "Hidden Gems Glow In the Dark Blue Vinyl (BAND VARIANT)",
+    "price": 28.98,
+    "source": "MNRK Heavy",
+    "link": "https://mnrkheavy.com/products/the-blue-stones-hidden-gems-glow-in-the-dark-blue-vinyl-band-variant",
+    "image": "",
+    "score": 0
+  },
+  {
+    "artist": "The Callous Daoboys",
+    "title": "I Don't Want To See You In Heaven Candy Paint & Asphalt Vinyl (BAND VARIANT)",
+    "price": 25.0,
+    "source": "MNRK Heavy",
+    "link": "https://mnrkheavy.com/products/the-callous-daoboys-i-dont-want-to-see-you-in-heaven-candy-paint-asphalt-vinyl-band-variant",
+    "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/TheCallousDaoboys_CANDY-PAINT_ASPHALT_FRONT.png?v=1744820022",
+    "score": 0
+  },
+  {
     "artist": "WHORES",
     "title": "\"GOLD\" Splatter VINYL LP",
     "price": 19.98,
@@ -16363,7 +16525,7 @@
   },
   {
     "artist": "The Monkees",
-    "title": "Good Times (Rhino Reserve) LP",
+    "title": "Good Times (Rhino Reserve)",
     "price": 31.98,
     "source": "Rhino",
     "link": "https://store.rhino.com/products/good-times-rhino-reserve-lp",
@@ -23960,7 +24122,7 @@
   {
     "artist": "Between The Buried And Me",
     "title": "‘COLORS II' 2nd Pressing (Clear w/ Mustard + Easter + Neon Yellow Splatter)",
-    "price": 15.0,
+    "price": 30.0,
     "source": "Sumerian Records",
     "link": "https://sumerianrecords.com/products/between-the-buried-and-me-colors-ii-2nd-pressing-clear-w-mustard-easter-neon-yellow-splatter",
     "image": "https://cdn.shopify.com/s/files/1/1487/2138/files/BTBAM-COLORS-II-CLEAR-W-TRIPLE-YELLOW.png?v=1695701075",
@@ -24050,7 +24212,7 @@
   {
     "artist": "The Faceless",
     "title": "'Autotheism' (Orange + Trans. Kelly Green Galaxy)",
-    "price": 21.0,
+    "price": 30.0,
     "source": "Sumerian Records",
     "link": "https://sumerianrecords.com/products/copy-of-the-faceless-autotheism-bone-silver-side-a-b-w-red-white-heavy-splatter-indie-exclusive",
     "image": "https://cdn.shopify.com/s/files/1/1487/2138/files/TFACE-AUTOTHEISM-SUM1752.png?v=1695324543",
@@ -24059,7 +24221,7 @@
   {
     "artist": "Between The Buried And Me",
     "title": "'Automata' (Gold in Milky Clear w/ Black + White Heavy Splatter)",
-    "price": 24.5,
+    "price": 35.0,
     "source": "Sumerian Records",
     "link": "https://sumerianrecords.com/products/between-the-buried-and-me-automata-i-gold-clear-black-white-splatter",
     "image": "https://cdn.shopify.com/s/files/1/1487/2138/files/BTBAM-AUTOMATA-SUM1920.png?v=1695074035",
@@ -24068,7 +24230,7 @@
   {
     "artist": "Between The Buried And Me",
     "title": "'Automata' (White + Black + Silver Tri-Color Side A/B w/ Black Heavy Splatter)",
-    "price": 24.5,
+    "price": 35.0,
     "source": "Sumerian Records",
     "link": "https://sumerianrecords.com/products/between-the-buried-and-me-automata-i-white-black-silver-tricolor-black-splatter",
     "image": "https://cdn.shopify.com/s/files/1/1487/2138/files/BTBAM-AUTOMATA-SUM1921.png?v=1695074135",
@@ -24077,7 +24239,7 @@
   {
     "artist": "Between The Buried And Me",
     "title": "'Automata' (Black In Trans. Highlighter Yellow w/ Black Heavy Splatter)",
-    "price": 24.5,
+    "price": 35.0,
     "source": "Sumerian Records",
     "link": "https://sumerianrecords.com/products/between-the-buried-and-me-automata-i-black-trans-yellow-highligheter-black-splatter",
     "image": "https://cdn.shopify.com/s/files/1/1487/2138/files/BTBAM-AUTOMATA-SUM1922.png?v=1695074178",
@@ -24921,6 +25083,582 @@
     "score": 0
   },
   {
+    "artist": "Schmaltz",
+    "title": "Half Clear/Half White W/ Black Splatter LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/sls0schmbs-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/8ef397342d8d4757b042f7c186c08db0.jpg?v=1759929112",
+    "score": 0
+  },
+  {
+    "artist": "Pop Culture",
+    "title": "Beer & Bone W/ Evergreen Splatter LP",
+    "price": 23.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/kl00popcbe-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/cdd07f07784342e1b6767051611cd3f4.jpg?v=1758825182",
+    "score": 0
+  },
+  {
+    "artist": "Under Soil & Dirt",
+    "title": "Violet w/ Black Splatter LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfusadvb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/4de048cb09734fcd95b7d72a5e930452.jpg?v=1752262788",
+    "score": 0
+  },
+  {
+    "artist": "Self Titled 10th Anniversary Edition",
+    "title": "Royal Blue & Bone Aside/Bside w/ Glitter LP",
+    "price": 22.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssftssfrb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/133da6c4219c4214bbf0d8947d54751b.jpg?v=1752076082",
+    "score": 0
+  },
+  {
+    "artist": "Cinemetal",
+    "title": "Green/Yellow Aside/Bside w/ Red Splatter LP",
+    "price": 20.25,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/gaemcimeab-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN-1-Side-B_88c308cd-dcdf-4e9d-8af9-2d2318693e45.jpg?v=1759948706",
+    "score": 0
+  },
+  {
+    "artist": "You Won't Go Before You're Supposed To",
+    "title": "Green/Yellow w/ Black Splatter LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/kl00ywgbgy-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/fdf218494b02452fa54d1db412630153.jpg?v=1747077872",
+    "score": 0
+  },
+  {
+    "artist": "Special Edition",
+    "title": "Slip Mat",
+    "price": 7.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/gaemspce00-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/SpecialEditionSlipMat.jpg?v=1745259746",
+    "score": 0
+  },
+  {
+    "artist": "Die Close",
+    "title": "Blood Red & White Aside/Bside w/ Heavy Black Splatter LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/bldvdiecbs-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN-Side-A_352dd8db-ac31-4157-8c1f-9c9df6c2c569.jpg?v=1750969931",
+    "score": 0
+  },
+  {
+    "artist": "Cheer",
+    "title": "Red/Bone/Black Ice Tri-Stripe LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/drchcheets-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/29d3194dfe92409a9dd4c8c11f463e42.jpg?v=1738788824",
+    "score": 0
+  },
+  {
+    "artist": "Laugh Tracks",
+    "title": "Blue, Red & Yellow Aside/Bside LP",
+    "price": 20.25,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/kl00lt00ab-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/7c57471eed74441c8169a10d886a59bc.jpg?v=1738073184",
+    "score": 0
+  },
+  {
+    "artist": "A Different Shade Of Blue",
+    "title": "Bleach Deluxe Marble LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/kl00adsbbm-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/3e3a09e7fddd48d98ca001b77f1e2fd0.jpg?v=1738073184",
+    "score": 0
+  },
+  {
+    "artist": "A Tear In The Fabric Of Life",
+    "title": "Merlot Deluxe Marble LP",
+    "price": 23.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/kl00tiflmm-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/knocked_loose_A_Tear_In_The_Fabric_Of_Life_-_Merlot_Deluxe_Marble_LP_vinyl_record.jpg?v=1736783909",
+    "score": 0
+  },
+  {
+    "artist": "Coup de Grâce",
+    "title": "Wine Marble LP",
+    "price": 13.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/sysccdg0wm-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Side-A_d4036b2c-abb0-4fc9-b2ce-94d72094bba5.jpg?v=1752422992",
+    "score": 0
+  },
+  {
+    "artist": "Under Soil And Dirt",
+    "title": "Sunset Marble LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfusadsm-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/cb2b642c88e94c499048a92313855d71.jpg?v=1734122489",
+    "score": 0
+  },
+  {
+    "artist": "Enemy Of The World",
+    "title": "Brown & Gold Aside/Bside LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/fys0eotwbg-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/649f19f5f04c42e48e82be8a16372ecd.jpg?v=1731349881",
+    "score": 0
+  },
+  {
+    "artist": "Champs Black",
+    "title": "Scarf",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/schmchmpbl-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/7e63f990fb7f4bec9b8aa34a2776f219.jpg?v=1727287617",
+    "score": 0
+  },
+  {
+    "artist": "Let The Ocean Take Me (Redux)",
+    "title": "Sea Blue W/ White Splatter LP",
+    "price": 18.75,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tamalotmsb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various_b46eff27-cfe7-4b2f-a953-b437c238bb32.jpg?v=1752105183",
+    "score": 0
+  },
+  {
+    "artist": "The Story So Far",
+    "title": "Laguna Eco Mix LP",
+    "price": 13.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssftssfle-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/acf05204db3540afa8ecec08d10b4989.jpg?v=1719326615",
+    "score": 0
+  },
+  {
+    "artist": "Proper Dose",
+    "title": "Lavender Eco Mix LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfdosele-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/6e8911fcda0449d59f2fcec32ce82d9e_8402216a-9823-4fa2-b7ad-e4e4e6ecbb10.jpg?v=1719326589",
+    "score": 0
+  },
+  {
+    "artist": "Belmont",
+    "title": "Liminal Cloudy Violet Alternate Cover",
+    "price": 30.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/blmtlimial-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/BELMONT.jpg?v=1714489085",
+    "score": 0
+  },
+  {
+    "artist": "Coup De Grace",
+    "title": "Makeup Bag",
+    "price": 4.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/sysccdg0cl-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/SYSC-Makeup-Bag.jpg?v=1711540947",
+    "score": 0
+  },
+  {
+    "artist": "I Want To Disappear",
+    "title": "Milky Clear w/ Black, Blue & Orange Splatter LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfiwtdmc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/various_1a9b4ff8-319e-4f2e-8405-e6fb0a83d16a.png?v=1715622572",
+    "score": 0
+  },
+  {
+    "artist": "Bored Of Being Sad Black",
+    "title": "Ashtray",
+    "price": 9.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/mcwvbobsbl-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/BoredOfBeingSadBlack-Ashtray.jpg?v=1711135603",
+    "score": 0
+  },
+  {
+    "artist": "Liminal",
+    "title": "Cloudy Violet LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/blmtlimicv-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/LP_Various_6f18f681-188b-439c-aa21-ef575fabe630.jpg?v=1709748697",
+    "score": 0
+  },
+  {
+    "artist": "Harboring The Hurt I've Caused",
+    "title": "Silver & Clear Galaxy LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/coryhbhcsc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various_978e3113-1ce7-4114-88f4-66aa4b6b519b.png?v=1707405669",
+    "score": 0
+  },
+  {
+    "artist": "Aftermath",
+    "title": "Deep Purple Cloudy LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/blmtaftmdp-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/eee03b58dc15458295cf02f8f06a9bff.jpg?v=1706809154",
+    "score": 0
+  },
+  {
+    "artist": "Big Blind",
+    "title": "Bone W/ Heavy Blue & Orange Splatter 7 Inch",
+    "price": 6.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfbigbbn-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/aadc2c03c4cb41bdb008c7ccaf27daab.jpg?v=1700570037",
+    "score": 0
+  },
+  {
+    "artist": "Maybe In Another Life",
+    "title": "Blue/Black/White Aside/Bside W/ White Splatter LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/blommialab-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/01684e0c69d6496f9bf6b1037d0c39bf.jpg?v=1699988471",
+    "score": 0
+  },
+  {
+    "artist": "No Love Lost",
+    "title": "Purple & Bone Galaxy LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/yotknll0ga-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/30249304609249399548e39d361be862.jpg?v=1695726951",
+    "score": 0
+  },
+  {
+    "artist": "Together In Lonesome",
+    "title": "Olive In Yellow W/ White Splatter LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/yftntil0oy-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/22d9174cf6054c8aa1007b6535f28d01.jpg?v=1694523225",
+    "score": 0
+  },
+  {
+    "artist": "Dead Formats Vol. 2",
+    "title": "Clear W/ Red & White Smoke LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/pne0dfv2cs-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/579ac1f076e3431593dd888baf59976c.jpg?v=1691499941",
+    "score": 0
+  },
+  {
+    "artist": "Gusher",
+    "title": "Orange, Bone & White Galaxy LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/jf00gushob-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/eccedb3bc78e4d4fb0238399091ca358.jpg?v=1687352844",
+    "score": 0
+  },
+  {
+    "artist": "The Best Part About Being Human",
+    "title": "Wall Flag",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/bearbpah00-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/f7332a881b684533b8ecbf93bfdf7373.jpg?v=1687270012",
+    "score": 0
+  },
+  {
+    "artist": "No More Sound",
+    "title": "White, Green, Black Aside/Bside W/ Heavy Redish Splatter LP",
+    "price": 15.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/sadpnms0wg-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/LP_PN1_e197f396-33b9-4779-96fc-e147ae7c2409.png?v=1684850689",
+    "score": 0
+  },
+  {
+    "artist": "Not Without My Ghosts",
+    "title": "Ultra Clear LP",
+    "price": 27.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tamanwmguc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/e7e54792df6c4ca8834980202f2c496b.jpg?v=1683728268",
+    "score": 0
+  },
+  {
+    "artist": "Not Without My Ghosts",
+    "title": "Translucent Cyan Blue LP",
+    "price": 20.25,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tamanwmgcb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/f0730f1c93da466a92f022546562870f.jpg?v=1679488473",
+    "score": 0
+  },
+  {
+    "artist": "A Eulogy For Those Still Here",
+    "title": "Magenta & Purple Galaxy LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/counetshmp-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/ecfe54883c224bfb91d455ca95d5e857.jpg?v=1668114342",
+    "score": 0
+  },
+  {
+    "artist": "Enemy Of The World Re-Recorded",
+    "title": "Yellow & Orange Galaxy LP",
+    "price": 18.75,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/fys0etwryo-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/3e6b7aadecf049979b48f4e0c3671400.jpg?v=1665590186",
+    "score": 0
+  },
+  {
+    "artist": "Dancer",
+    "title": "Bone & Blue Jay Galaxy Vinyl LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/bwobdancbb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/e31f6e4fe130441d8e4070bff965a912.jpg?v=1663588005",
+    "score": 0
+  },
+  {
+    "artist": "Cheer",
+    "title": "Red & Bone Galaxy LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/drchcheega-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/a768c2ada4a8424ea9e22ba47f508fd4.jpg?v=1663355543",
+    "score": 0
+  },
+  {
+    "artist": "Unplugged",
+    "title": "Blue & Bone Galaxy LP",
+    "price": 9.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/schmunplbb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/c4336f04b3854665bd7949476fcf201e.jpg?v=1663341139",
+    "score": 0
+  },
+  {
+    "artist": "Letters To Our Former Selves",
+    "title": "Purple & White Galaxy LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/yftnltfspw-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/2cee84449e7e49a1bcc025ef647fdbd0.jpg?v=1662144367",
+    "score": 0
+  },
+  {
+    "artist": "Kings Of The New Age",
+    "title": "Easter Yellow/Green Galaxy LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/schmkonayb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/ccc9c28855ff48dbb054fde443436651.jpg?v=1662142980",
+    "score": 0
+  },
+  {
+    "artist": "Drug Church",
+    "title": "Hygiene Silver Grinder",
+    "price": 15.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/drchhygisl-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/4bb82432f310497cbe0248ca09083b90.jpg?v=1657810219",
+    "score": 0
+  },
+  {
+    "artist": "Kamikaze",
+    "title": "Half White/Half Black 7\"",
+    "price": 6.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/vshokamihh-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/12592a05991e44bf9a9f659f884fa56f.jpg?v=1657628327",
+    "score": 0
+  },
+  {
+    "artist": "Hello, It's You Deluxe",
+    "title": "Red & White Galaxy LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/bearhiy0ry-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Hello_It_sYouDeluxe-Red_Yellow_WhiteGalaxyLP1.jpg?v=1686947830",
+    "score": 0
+  },
+  {
+    "artist": "Songs Of",
+    "title": "Bone & Black Aside/Bside W/ White & Red Splatter 10\"",
+    "price": 18.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfsongbb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/95709a85e13347c0860cd80ce3b80f79.jpg?v=1656421695",
+    "score": 0
+  },
+  {
+    "artist": "Halo Of Hurt",
+    "title": "Black In Milky Clear LP",
+    "price": 20.25,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/shvnhoh0bc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/HaloOfHurtBlackInMilkyClearLP1.jpg?v=1656341015",
+    "score": 0
+  },
+  {
+    "artist": "Devon Kay & The Solutions Grieving Expectation",
+    "title": "White In Clear W/ Splatter LP",
+    "price": 5.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/dktsgrvewc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/2567dcfc31174a07827ce9b09d7de972.jpg?v=1645559657",
+    "score": 0
+  },
+  {
+    "artist": "Phototroph",
+    "title": "Royal Blue In Milky Clear W/ Heavy Yellow & Green Splatter LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/mnthphtorb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/MoonTooth-Phototroph-Vinyl-2.jpg?v=1652118896",
+    "score": 0
+  },
+  {
+    "artist": "Aftermath",
+    "title": "Violet In Clear W/ Neon Violet Splatter LP",
+    "price": 25.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/blmtaftmvc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/Aftermath-VioletInClearNeonVioletSplatterLP1.jpg?v=1660578591",
+    "score": 0
+  },
+  {
+    "artist": "Death Deserves A Name",
+    "title": "White In Clear W/ Violet Splatter LP",
+    "price": 9.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/cnswddanwc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/7b59f6ad198a410cb1cc4ac064499057.jpg?v=1642082502",
+    "score": 0
+  },
+  {
+    "artist": "Everything Is A-OK",
+    "title": "Yellow-Green Twist LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/vshoeaokyg-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/EverythingIsA-OKYellow-GreenTwistLP1.jpg?v=1635778246",
+    "score": 0
+  },
+  {
+    "artist": "Some Of You Will Like This...",
+    "title": "Blue Jay In Clear W/ Silver Splatter LP",
+    "price": 18.75,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/fys0swswbj-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/PNE203_2ndPress.jpg?v=1642081761",
+    "score": 0
+  },
+  {
+    "artist": "Under Soil And Dirt",
+    "title": "Gatefold Picture Disc",
+    "price": 35.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssfusadpd-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/picdisc.jpg?v=1628805943",
+    "score": 0
+  },
+  {
+    "artist": "Guitar",
+    "title": "Wall Flag",
+    "price": 5.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/stygtmr000-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/TheMeaningRemainsFlag1.jpg?v=1614718464",
+    "score": 0
+  },
+  {
+    "artist": "The Finer Things",
+    "title": "Picture Disc LP",
+    "price": 18.75,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/schmtft0pd-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/c9fa6eb64d6d416e898ee32e1cc1b9ce.jpg?v=1606161529",
+    "score": 0
+  },
+  {
+    "artist": "Fail You Again",
+    "title": "Half Mint / Half Back LP",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/cnswfailhh-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/9a82a7e507cc41feb17c8e3d260e40a7.jpg?v=1606161468",
+    "score": 0
+  },
+  {
+    "artist": "Live",
+    "title": "Wall Flag",
+    "price": 10.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/ltj0sivl00-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/SilverLinings3X5WallFlag_7d06ff5c-48d8-4d48-b0b9-7456bd9dce9d.jpg?v=1610468899",
+    "score": 0
+  },
+  {
+    "artist": "Band",
+    "title": "Wall Flag",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/schmband00-ap",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/Band3x5WallFlag.jpg?v=1616783932",
+    "score": 0
+  },
+  {
+    "artist": "Bad Frequencies",
+    "title": "Deep Purple LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/hawhbadfdp-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/e95415f83973475ab4a2a044a7217eda.jpg?v=1591907304",
+    "score": 0
+  },
+  {
+    "artist": "Strike Anywhere",
+    "title": "Nightmares Of The West Swamp Green & Doublemint Galaxy",
+    "price": 9.0,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/saw0notwsw-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/fac2f5737b5f49929eda6306a8809615.jpg?v=1591907283",
+    "score": 0
+  },
+  {
+    "artist": "The Story So Far",
+    "title": "Ultra Clear LP",
+    "price": 13.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/tssftssfuc-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/9cf386172a61477ba4bfd7e5016a76ac.jpg?v=1591907183",
+    "score": 0
+  },
+  {
+    "artist": "Bad Frequencies",
+    "title": "Bone LP",
+    "price": 12.5,
+    "source": "Pure Noise Records",
+    "link": "https://purenoise.merchnow.com/products/hawhbadfbn-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ebf4edd0ecdc408da40279218c6c6708.jpg?v=1720637862",
+    "score": 0
+  },
+  {
     "artist": "The Brass Tax",
     "title": "Iridescent Blue LP",
     "price": 20.0,
@@ -25008,627 +25746,6 @@
     "source": "Pure Noise Records",
     "link": "https://purenoise.merchnow.com/products/shvnshvnsm-lp",
     "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/1f45bc458f484394bf630cb621ef9c13.jpg?v=1773838584",
-    "score": 0
-  },
-  {
-    "artist": "This Is Goodbye...",
-    "title": "White W/ Magenta & Blue Dot Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/chmbtig0wm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various-Mock_448cd963-2826-446c-8e18-cd5c35a69e9f.jpg?v=1771513101",
-    "score": 0
-  },
-  {
-    "artist": "This Is Goodbye...",
-    "title": "Blue / Purple Aside/Bside LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/chmbtig0bp-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN2-Side-B-Mock.jpg?v=1771513080",
-    "score": 0
-  },
-  {
-    "artist": "This Is Goodbye...",
-    "title": "Black In Sea Blue/White w/ Black Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/chmbtig0bs-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN1-Mock.jpg?v=1771513063",
-    "score": 0
-  },
-  {
-    "artist": "Proper Dose",
-    "title": "Smores Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssfdosesm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ProperDose-SmoresMarbleLP1.jpg?v=1771436137",
-    "score": 0
-  },
-  {
-    "artist": "Tan Lines",
-    "title": "Tidal Wave Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/lalotanltw-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/bf13afbeddb94f9b80513440c51680a9.jpg?v=1770903883",
-    "score": 0
-  },
-  {
-    "artist": "Tan Lines",
-    "title": "Clear W/ Rainbow Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/lalotanlcr-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/6d7ed32eebbd4beab0248118945784e4.jpg?v=1770903873",
-    "score": 0
-  },
-  {
-    "artist": "Knocked Loose",
-    "title": "Knocked Loose Vinyl Collection",
-    "price": 110.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/knocked-loose-vinyl-collection",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Discography-Bundle_6b5f1660-4add-4c2e-a75e-09691f6d1109.jpg?v=1775071020",
-    "score": 0
-  },
-  {
-    "artist": "Hive Mind (Feat. Denzel Curry)",
-    "title": "Clear w/ Black And Red Splatter 12\" Single",
-    "price": 20.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00hm00cs-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/5efd627eb04d45c58b5242d334776f11.jpg?v=1770743242",
-    "score": 0
-  },
-  {
-    "artist": "A Different Shade Of Blue",
-    "title": "Electric Smoke LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00adsbes-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/be8989d95266408d9c60a986ff46eb39.jpg?v=1770660159",
-    "score": 0
-  },
-  {
-    "artist": "Hive Mind (Feat. Denzel Curry)",
-    "title": "Onyx Marble 12\" Single",
-    "price": 20.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00hv00om-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/bd4606b2f5904e358e19c8d70444db15.jpg?v=1770660158",
-    "score": 0
-  },
-  {
-    "artist": "Hive Mind (Feat. Denzel Curry)",
-    "title": "Half Blood Red/Half Red W/ Black Splatter 12\" Single",
-    "price": 20.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00hv00hh-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/a8e6d5ef35b449448e8c4f99399cc541.jpg?v=1770660150",
-    "score": 0
-  },
-  {
-    "artist": "You Won't Go Before You're Supposed To",
-    "title": "Blood Red w/ Rainbow Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00ywgbms-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Side-A_1.jpg?v=1770832703",
-    "score": 0
-  },
-  {
-    "artist": "The Amity Affliction",
-    "title": "The Amity Affliction Vinyl Collection",
-    "price": 60.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/the-amity-affliction-vinyl-bundle",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Bundle_ecff3155-909b-465b-b3d2-cc56ed86bcd7.jpg?v=1774985310",
-    "score": 0
-  },
-  {
-    "artist": "Rune Black",
-    "title": "Snapback",
-    "price": 30.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamarunebl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/c645560575744f43a5642b103cf5b75a.jpg?v=1770225716",
-    "score": 0
-  },
-  {
-    "artist": "House Of Cards",
-    "title": "40x40 Wall Flag",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamahoc000-br",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/b10fb384a1e04cc8ad5364779e53edfe.jpg?v=1770225675",
-    "score": 0
-  },
-  {
-    "artist": "House Of Cards",
-    "title": "Blood Red LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamahoc0cb-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/standard_a6864344-f706-4712-83ea-307919b8ba65.jpg?v=1774982171",
-    "score": 0
-  },
-  {
-    "artist": "House Of Cards",
-    "title": "Blood Red & White Aside/Bside W/ Black Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamahoc0ab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN2-Side-A_b062be6f-5b56-4c24-8b8f-dfef84e5d1f6.jpg?v=1774982250",
-    "score": 0
-  },
-  {
-    "artist": "House Of Cards",
-    "title": "Yellow In Green W/ White Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamahoc0yg-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN-1_eec16173-467f-48a9-a87e-591cfaf63ef9.jpg?v=1774982295",
-    "score": 0
-  },
-  {
-    "artist": "KOYO",
-    "title": "Koyo Vinyl Collection",
-    "price": 50.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/koyo-vinyl-collection",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/VinylBundle_941151cb-4581-4f3a-8854-5548bc6fae9e.jpg?v=1770066974",
-    "score": 0
-  },
-  {
-    "artist": "Barely Here",
-    "title": "Half Black Ice W/ White & Red Splatter/Half White w/ Black Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/koyobh00hh-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/66c7968c84d9416d97fd701a6759a0d4.jpg?v=1770066095",
-    "score": 0
-  },
-  {
-    "artist": "Barely Here",
-    "title": "Centurion Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/koyobh00cm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/e890b84dae9e4e6ab9a007d4df404aea.jpg?v=1770066094",
-    "score": 0
-  },
-  {
-    "artist": "Barely Here",
-    "title": "Red/White Aside/Bside w/ Black Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/koyobh00ab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ff1ff9ef4a0243c4aadcd606e8476089.jpg?v=1770066088",
-    "score": 0
-  },
-  {
-    "artist": "Cheer",
-    "title": "Black Ice W/ White Splatter Vinyl LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/drchcheebi-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/a874587cc574406b8d67d4cff24d7d3d.jpg?v=1769028946",
-    "score": 0
-  },
-  {
-    "artist": "Laugh Tracks",
-    "title": "Bone W Rainbow Splatter Vinyl LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00lt00bs-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/d153e013ea9c408fb4905af94944f089.jpg?v=1769028945",
-    "score": 0
-  },
-  {
-    "artist": "Somewhere, In Between...",
-    "title": "Electric Smoke LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/untxsib0es-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various-Mock_56cc6920-448c-4c82-ae55-0a4d7dfdc6fe.jpg?v=1769008775",
-    "score": 0
-  },
-  {
-    "artist": "Somewhere, In Between...",
-    "title": "Black & Purple Aside/Bside w/ Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/untxsib0ab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN-Mock_ee18f6a3-2b3d-45d9-acc9-345d67a5b084.jpg?v=1769008768",
-    "score": 0
-  },
-  {
-    "artist": "UNITYTX",
-    "title": "UNITYTX Vinyl Collection",
-    "price": 45.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/unitytx-vinyl-collection",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Bundle_2a044ca3-e6a1-4ce0-9e8a-b2502b709226.jpg?v=1768919066",
-    "score": 0
-  },
-  {
-    "artist": "The Process",
-    "title": "Tigers Eye Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/almetprote-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/d9e1352883aa4cdbbaaac6f14555eb8c.jpg?v=1768835299",
-    "score": 0
-  },
-  {
-    "artist": "is this the low point or the moment after?",
-    "title": "Amber Deluxe Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/shlnlpmaam-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various-Side-A_37d49587-4c05-4ed6-a64a-6624ab1e3a14.jpg?v=1773411657",
-    "score": 0
-  },
-  {
-    "artist": "is this the low point or the moment after?",
-    "title": "Gold/Blue/Brown Aside/Bside LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/shlnlpmaab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN2--Side-A_20c65784-6418-45a0-802d-d6e2e4303c00.jpg?v=1773411695",
-    "score": 0
-  },
-  {
-    "artist": "is this the low point or the moment after?",
-    "title": "Half Yellow/Half Electric Blue W/ Gold Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/shlnlpmahh-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN1--Side-A_63108919-bcf1-4c5c-95fa-39580649f171.jpg?v=1773411701",
-    "score": 0
-  },
-  {
-    "artist": "Flower",
-    "title": "3X5 Custom",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssfflowgn-br",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/4e6f5e19bac14da2872a3ea7698ea457.jpg?v=1767208431",
-    "score": 0
-  },
-  {
-    "artist": "Live",
-    "title": "3X5 Custom",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/kl00live00-ap",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/66294ca1bc3d45579b72ec9df6e0e6ec.jpg?v=1591904673",
-    "score": 0
-  },
-  {
-    "artist": "I Want To Disappear Black",
-    "title": "Snapback",
-    "price": 30.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssfiwtdbl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/8b318effa02843c3b5edc8ec862f6e90.jpg?v=1710943516",
-    "score": 0
-  },
-  {
-    "artist": "The Story So Far",
-    "title": "Crayon Marble",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssftssfcm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/76b919093a1a4e1d8b7eb50d0aba1b7e.jpg?v=1764178959",
-    "score": 0
-  },
-  {
-    "artist": "S/T Album Art Natural",
-    "title": "Tote Bag",
-    "price": 15.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssfstaant-tb",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/8594f812f12e4247b69da4db51dded52.jpg?v=1763939839",
-    "score": 0
-  },
-  {
-    "artist": "Arch Logo Black",
-    "title": "Sweatpants",
-    "price": 30.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamaarlgbl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/de55c757005d47e7ac911a2f6ba276dc.jpg?v=1763760519",
-    "score": 0
-  },
-  {
-    "artist": "The Story So Far",
-    "title": "I Want To Disappear Black Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tssfiwtdbl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/TSSF-Sweatpants-Mock-TSSFIWTDBL-SW.jpg?v=1763760687",
-    "score": 0
-  },
-  {
-    "artist": "Analysis Paralysis Black",
-    "title": "Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/fys0anpabl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/FYS-Sweatpants-Mock-FYS0ANPABL-SW.jpg?v=1763760647",
-    "score": 0
-  },
-  {
-    "artist": "Prude Black",
-    "title": "Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/drchprdebl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/DC-Sweatpants-Mock-DRCHPRDEBL-SW_bf62dd09-696d-4cd1-b354-7a9ed19d2319.jpg?v=1763760584",
-    "score": 0
-  },
-  {
-    "artist": "Counterparts",
-    "title": "Sad Face Black -Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/counsadfbl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/b83e1b40695a4043875cead70e1b1694.jpg?v=1763760402",
-    "score": 0
-  },
-  {
-    "artist": "There's A Whole World Out There Black",
-    "title": "Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/armlwwotbl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/AL-Sweatpants-Mock-ARMLWWOTBL-SW.jpg?v=1763760473",
-    "score": 0
-  },
-  {
-    "artist": "Logo Black",
-    "title": "Sweatpants",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/156slogobl-sw",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/156-Sweatpants-Mock-156SLOGOBL-SW.jpg?v=1763760510",
-    "score": 0
-  },
-  {
-    "artist": "Desertion",
-    "title": "Violet & Baby Blue Aside/Bside w/ Glitter LP",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sphsdestab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN-SIDE-B_e83f65ca-4702-40ee-adc2-baa84addd0d9.jpg?v=1759955228",
-    "score": 0
-  },
-  {
-    "artist": "Crime In Stereo",
-    "title": "House & Trance Slip Mat",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/cis0hat000-ap",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/7d96d2d3dbd44a2289ddd8b310359132.jpg?v=1745512283",
-    "score": 0
-  },
-  {
-    "artist": "Aurora",
-    "title": "Electric Blue & Black Ice W/ Black & White Splatter LP",
-    "price": 25.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/slocauroeb-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Slow_Crush_-_Aurora_Electric_Blue_Black_Ice_w_Black_White_Splatter_-_Vinyl_LP.jpg?v=1762378789",
-    "score": 0
-  },
-  {
-    "artist": "From Then & Now",
-    "title": "Rainbow Splatter Vinyl LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/spsoftanrs-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/eb2919c08ef845cf89e5277a74721003.jpg?v=1762282103",
-    "score": 0
-  },
-  {
-    "artist": "Eye Black",
-    "title": "Cord Cap",
-    "price": 30.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/schmeye0bl-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/state_champs_Eye_Black_Dad_Hat_front.jpg?v=1761938463",
-    "score": 0
-  },
-  {
-    "artist": "Schmaltz",
-    "title": "Crayon Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sls0schmcm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ca02a128f3f247a0ae506734a94b5beb.jpg?v=1759929121",
-    "score": 0
-  },
-  {
-    "artist": "Schmaltz",
-    "title": "Beer W/ Rainbow Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sls0schmbr-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/b58e03e261474e57a4169c40e25349c5.jpg?v=1759929120",
-    "score": 0
-  },
-  {
-    "artist": "Rocket White",
-    "title": "Ashtray",
-    "price": 12.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sls0rcktbl-ap",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/SLS-Ashtray-Mockjpg.jpg?v=1761762330",
-    "score": 0
-  },
-  {
-    "artist": "A Brief Intermission In The Flattening Of Time",
-    "title": "White W/ Green Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sls0biftwg-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/1d69651bef194f2c909942ff19d37d98.jpg?v=1759929071",
-    "score": 0
-  },
-  {
-    "artist": "A Brief Intermission In The Flattening Of Time",
-    "title": "Blue/White/Purple Aside/Bside LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/sls0biftab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/3d5d8c764f8c4baabb3b27e6ab4652f8.jpg?v=1759929066",
-    "score": 0
-  },
-  {
-    "artist": "ANGEL HYMNS",
-    "title": "Bloodlust Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/hvngaghybm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/73a476fe0a0e49eba90d9f7bb0845cc2.jpg?v=1759348899",
-    "score": 0
-  },
-  {
-    "artist": "ANGEL HYMNS",
-    "title": "Black Ice W/ White & Red Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/hvngaghybi-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/82b7155603454cd79a3f04e776806cfc.jpg?v=1759348889",
-    "score": 0
-  },
-  {
-    "artist": "ANGEL HYMNS",
-    "title": "Black Ice/Bone/Red Aside/Bside w/ Heavy White Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/hvngaghyab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/1b26e42f4d8c43fda1d9dcd8c5ff6e54.jpg?v=1759348884",
-    "score": 0
-  },
-  {
-    "artist": "Listen Up!",
-    "title": "Biscuit/Black Umpqua Cap",
-    "price": 40.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/nfg0lu00bb-mc",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/NFG-Hat-Mock.jpg?v=1759149325",
-    "score": 0
-  },
-  {
-    "artist": "Listen Up!",
-    "title": "Tropical Sunset Deluxe Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/nfg0lu00ts-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ListenUp-TropicalSunsetDeluxeMarble-LP-1.jpg?v=1761077211",
-    "score": 0
-  },
-  {
-    "artist": "Not Without My Ghost",
-    "title": "Into The Deep Marble Vinyl LP",
-    "price": 20.25,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/tamanwmgdm-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/The_Amity_Affliction_Not_Without_My_Ghost_-_Into_The_Deep_Marble_Vinyl_LP.jpg?v=1758133758",
-    "score": 0
-  },
-  {
-    "artist": "Posture Syndrome",
-    "title": "Golden Pearl Vinyl LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/aceeps00gp-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/930fe1df9d0b4063a0d2feb9790493cc.jpg?v=1757528469",
-    "score": 0
-  },
-  {
-    "artist": "Posture Syndrome",
-    "title": "Orange Crush Vinyl LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/aceeps00oo-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/e5b6b062cd114eafb308aa325b60172a.jpg?v=1757528465",
-    "score": 0
-  },
-  {
-    "artist": "Posture Syndrome",
-    "title": "Seablue & Coke Bottle Aside/Bside W/ Glitter",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/aceeps00sc-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/ad38f58647054611a9a224d4f523afd9.jpg?v=1757528459",
-    "score": 0
-  },
-  {
-    "artist": "No Escape",
-    "title": "Royal Blue, Silver & Black Marble LP",
-    "price": 20.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/spcdnoesmb-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various-Side-A_c7dd46c8-7900-4b71-814f-d4bcb048609a.jpg?v=1762451311",
-    "score": 0
-  },
-  {
-    "artist": "No Escape",
-    "title": "Red, Orange & Yellow Aside/Bside LP",
-    "price": 20.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/spcdnoesab-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/PN2-Side-A_ab28194e-6c33-4461-8335-fa64c802b642.jpg?v=1762451352",
-    "score": 0
-  },
-  {
-    "artist": "Wisher",
-    "title": "Blue Koozie",
-    "price": 5.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/benqwisrbu-ap",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/3f57d63de6ff4d5ca5e603eeaf89f7de.jpg?v=1756817094",
-    "score": 0
-  },
-  {
-    "artist": "Wisher",
-    "title": "Key Chain",
-    "price": 12.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/benqwisr00-kr",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/b29cba52daf44b21976fcbbf41cc5af2.jpg?v=1756816511",
-    "score": 0
-  },
-  {
-    "artist": "Wisher",
-    "title": "Croc Charm Set",
-    "price": 15.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/benqwisr00-ap",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/178345e4330047308e0a492dd910f306.jpg?v=1756816502",
-    "score": 0
-  },
-  {
-    "artist": "Wisher",
-    "title": "Bone In Clear W/ Blue Splatter LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/benqwisrbc-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various_4cfc7171-25b3-4327-88bf-c14d5d07ad4e.jpg?v=1762883708",
-    "score": 0
-  },
-  {
-    "artist": "Ever After",
-    "title": "Sundrop Marble LP",
-    "price": 27.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/acadea00sd-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/Various_ea908f29-4db5-490a-9860-3ec818ec3a24.jpg?v=1762451448",
     "score": 0
   },
   {
@@ -28153,164 +28270,11 @@
   },
   {
     "artist": "Unknown Artist",
-    "title": "Supertramp Even In The Quietest Moments... on DeepDiscount",
-    "price": 39.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/even-in-the-quietest-moments/602475456162",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4489678-3543985.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
     "title": "Connie Converse How Sad, How Lovely on DeepDiscount",
     "price": 26.99,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/how-sad-how-lovely/810074425452",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/34/4489134-3520085.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Squarepusher Kammerkonzert on DeepDiscount",
-    "price": 38.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/kammerkonzert/5056818806070",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4492835-3545684.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Laura Nyro Live In San Francisco, 28Th April 1994 on DeepDiscount",
-    "price": 45.76,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/53/4493753-3528025.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "The Jimi Hendrix Experience BBC Sessions on DeepDiscount",
-    "price": 27.47,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/bbc-sessions/198029892611",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/11/4497111-3542637.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Rush Grace Under Pressure (Super Deluxe Edition) on DeepDiscount",
-    "price": 355.66,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4488492-3547069.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Laufey A Matter Of Time: The Final Hour on DeepDiscount",
-    "price": 39.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/a-matter-of-time-the-final-hour/5056167183334",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/46/4497546-3541291.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Dave Matthews Band Live Trax Vol. 72 6.28.25 Huntington Bank Pavilion at Northerly Island on DeepDiscount",
-    "price": 75.94,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/50/4487350-3513317.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Robin Trower Robin Trower Live! 50th Anniversary Edition on DeepDiscount",
-    "price": 39.95,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/robin-trower-live-50th-anniversary-edition/840401722121",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/67/4470567-3478632.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "The Jimi Hendrix Experience Winterland on DeepDiscount",
-    "price": 27.47,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/winterland/198029892710",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/12/4497112-3542638.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Thundercat Distracted (RED VINYL) on DeepDiscount",
-    "price": 35.68,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/distracted-red-vinyl/5054429208740",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/01/4490301-3557201.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "John Fogerty The Lost Tapes on DeepDiscount",
-    "price": 29.4,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/the-lost-tapes/4262428984577",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4486024-3510084.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "The Charlatans UK Some Friendly 35th Anniversary Edition (WHITE VINYL) on DeepDiscount",
-    "price": 47.87,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/66/4490166-3547141.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Heaven & Hell Breaking Out Of Heaven: 2007-2009 on DeepDiscount",
-    "price": 188.98,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/31/4493831-3557292.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Dio A Decade of Dio: 1983-1993 on DeepDiscount",
-    "price": 142.56,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/a-decade-of-dio-1983-1993/603497805044",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/97/4494097-3574342.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Vince Guaraldi It's Arbor Day, Charlie Brown/ Charlie Brown's All Stars (Forest Green vinyl) on DeepDiscount",
-    "price": 35.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/20/4493020-3531092.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Saxon Solid Ball Of Rock",
-    "title": "Limited 180-Gram Silver Colored Vinyl [Import] on DeepDiscount",
-    "price": 38.79,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4489270-3531523.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Wolf Parade Apologies to the Queen Mary on DeepDiscount",
-    "price": 28.12,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/apologies-to-the-queen-mary/098787065534",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4487324-3557283.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/34/4489134-3520085.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28319,34 +28283,16 @@
     "price": 26.79,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/power-rarities/603497805259",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4496836-3564263.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4496836-3564263.jpg?ae=4365467151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "The Cramps Bad Music For Bad People on DeepDiscount",
-    "price": 27.99,
+    "title": "The Charlatans UK Some Friendly 35th Anniversary Edition (WHITE VINYL) on DeepDiscount",
+    "price": 47.87,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/bad-music-for-bad-people/602478346491",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4463849-3565889.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Todd Rundgren An Evening With Todd Rundgren: The Complete Live At The Ridgefield on DeepDiscount",
-    "price": 58.91,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/95/4488695-3516554.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "SZA Save The Day (From Hoppers) on DeepDiscount",
-    "price": 31.96,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4496249-3538591.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/66/4490166-3547141.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28355,43 +28301,16 @@
     "price": 33.21,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/earth-mother-earth/8024391153857",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/43/4493743-3528043.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Kim Wilde Close",
-    "title": "Picture Disc [Import] on DeepDiscount",
-    "price": 42.02,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/close-picture-disc/5014797911673",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/23/4488523-3516342.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/43/4493743-3528043.jpg?ae=4365467151",
     "score": 0
   },
   {
     "artist": "Unknown Artist",
-    "title": "Cymande Promised Heights on DeepDiscount",
-    "price": 26.99,
+    "title": "Thundercat Distracted (RED VINYL) on DeepDiscount",
+    "price": 35.68,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/promised-heights/720841302711",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4489835-3519655.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Frank Sinatra Songs For Swingin' Lovers (Blue Note Tone Poet Edition) on DeepDiscount",
-    "price": 40.8,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4491589-3551885.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Jack Harlow Monica on DeepDiscount",
-    "price": 29.99,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/monica/075678587665",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/17/4501217-3555945.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/distracted-red-vinyl/5054429208740",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/01/4490301-3557201.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28400,7 +28319,196 @@
     "price": 36.99,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/cruel-world/602488113694",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/19/4490219-3521348.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/19/4490219-3521348.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "John Fogerty The Lost Tapes on DeepDiscount",
+    "price": 29.4,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/the-lost-tapes/4262428984577",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4486024-3510084.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Vince Guaraldi It's Arbor Day, Charlie Brown/ Charlie Brown's All Stars (Forest Green vinyl) on DeepDiscount",
+    "price": 35.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/20/4493020-3531092.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Dio A Decade of Dio: 1983-1993 on DeepDiscount",
+    "price": 142.56,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/a-decade-of-dio-1983-1993/603497805044",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/97/4494097-3574342.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Laufey A Matter Of Time: The Final Hour on DeepDiscount",
+    "price": 39.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/a-matter-of-time-the-final-hour/5056167183334",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/46/4497546-3541291.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Saxon Solid Ball Of Rock",
+    "title": "Limited 180-Gram Silver Colored Vinyl [Import] on DeepDiscount",
+    "price": 38.79,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4489270-3531523.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Laura Nyro Live In San Francisco, 28Th April 1994 on DeepDiscount",
+    "price": 45.76,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/53/4493753-3528025.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Todd Rundgren An Evening With Todd Rundgren: The Complete Live At The Ridgefield on DeepDiscount",
+    "price": 58.91,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/95/4488695-3516554.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Rush Grace Under Pressure (Super Deluxe Edition) on DeepDiscount",
+    "price": 355.66,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4488492-3547069.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Heaven & Hell Breaking Out Of Heaven: 2007-2009 on DeepDiscount",
+    "price": 188.98,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/31/4493831-3557292.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cymande Promised Heights on DeepDiscount",
+    "price": 26.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/promised-heights/720841302711",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4489835-3519655.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Jack Harlow Monica on DeepDiscount",
+    "price": 29.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/monica/075678587665",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/17/4501217-3555945.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Robin Trower Robin Trower Live! 50th Anniversary Edition on DeepDiscount",
+    "price": 39.95,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/robin-trower-live-50th-anniversary-edition/840401722121",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/67/4470567-3478632.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Frank Sinatra Songs For Swingin' Lovers (Blue Note Tone Poet Edition) on DeepDiscount",
+    "price": 40.8,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4491589-3551885.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Supertramp Even In The Quietest Moments... on DeepDiscount",
+    "price": 39.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/even-in-the-quietest-moments/602475456162",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4489678-3543985.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Wolf Parade Apologies to the Queen Mary on DeepDiscount",
+    "price": 28.12,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/apologies-to-the-queen-mary/098787065534",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4487324-3557283.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "SZA Save The Day (From Hoppers) on DeepDiscount",
+    "price": 31.96,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4496249-3538591.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Dave Matthews Band Live Trax Vol. 72 6.28.25 Huntington Bank Pavilion at Northerly Island on DeepDiscount",
+    "price": 75.94,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/50/4487350-3513317.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "The Jimi Hendrix Experience BBC Sessions on DeepDiscount",
+    "price": 27.47,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/bbc-sessions/198029892611",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/11/4497111-3542637.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "The Cramps Bad Music For Bad People on DeepDiscount",
+    "price": 27.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/bad-music-for-bad-people/602478346491",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4463849-3565889.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Squarepusher Kammerkonzert on DeepDiscount",
+    "price": 38.99,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/kammerkonzert/5056818806070",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/35/4492835-3545684.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "The Jimi Hendrix Experience Winterland on DeepDiscount",
+    "price": 27.47,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/winterland/198029892710",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/12/4497112-3542638.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28409,97 +28517,16 @@
     "price": 35.99,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/straw-donkey-the-complete-singles/840401722343",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4487793-3513786.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4487793-3513786.jpg?ae=4365467151",
     "score": 0
   },
   {
-    "artist": "Unknown Artist",
-    "title": "Duran Duran Duran Duran (The Wedding Album) on DeepDiscount",
-    "price": 38.09,
+    "artist": "Kim Wilde Close",
+    "title": "Picture Disc [Import] on DeepDiscount",
+    "price": 42.02,
     "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/duran-duran-the-wedding-album/5054197915512",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/06/4497106-3574834.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Dave Brubeck Dave Digs Disney",
-    "title": "Limited 180-Gram Colored Vinyl with Bonus Tracks [Import] on DeepDiscount",
-    "price": 23.53,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/dave-digs-disney-limited-180-gram-colored-vinyl-with-bonus-tracks/8436563186899",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/41/4505041-3561673.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Charley Crockett Age Of The Ram on DeepDiscount",
-    "price": 30.87,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/age-of-the-ram/602488221238",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/73/4494373-3538709.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Delines The Set Up (CLEAR VINYL) on DeepDiscount",
-    "price": 32.85,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/the-set-up-clear-vinyl/5052571225813",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4487174-3512618.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Cannonball Adderley Cannonball's Sharpshooters (Verve Vault Series) on DeepDiscount",
-    "price": 30.87,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/cannonballs-sharpshooters-verve-vault-series/199957010245",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4495824-3538596.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Alan Parsons Project Eye In The Sky (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490174-3557300.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Bow Wow Wow Love Peace & Harmony: The Best Of Bow Wow Wow",
-    "title": "Limited 180-Gram Crystal Clear & Gold Colored Vinyl [Import] on DeepDiscount",
-    "price": 40.13,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/love-peace-and-harmony-the-best-of-bow-wow-wow-limited-180-gram-crystal-clear-and-gold-colored-vinyl/8719262041585",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4490849-3523406.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Bob & Doug McKenzie Great White North & Strange Brew 44 3/ 4 Anniversary on DeepDiscount",
-    "price": 69.51,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/16/4490316-3542654.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Van Halen 5150 (Expanded Edition) on DeepDiscount",
-    "price": 94.48,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/5150-expanded-edition/603497809264",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4493336-3557787.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "The Chills Sunburnt",
-    "title": "Yellow on DeepDiscount",
-    "price": 40.33,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/sunburnt-yellow/809236004802",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4490193-3524234.jpg?ae=4338133151",
+    "link": "https://www.deepdiscount.com/close-picture-disc/5014797911673",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/23/4488523-3516342.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28508,52 +28535,7 @@
     "price": 34.13,
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/michael-songs-from-the-motion-picture-limited-edition/199584404516",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4502189-3549258.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Fcukers Ã- on DeepDiscount",
-    "price": 35.68,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/-/5054429208375",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/26/4487726-3513757.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Atjazz Starbase 17 on DeepDiscount",
-    "price": 31.46,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/starbase-17/5061099140683",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/68/4503668-3552991.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Enter Shikari Lose Your Self",
-    "title": "Teal With Black Splatter Vinyl [Import] on DeepDiscount",
-    "price": 43.01,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/lose-your-self-teal-with-black-splatter-vinyl/822166004087",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4498192-3540903.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Alan Parsons Project The Turn Of A Friendly Card (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4490170-3557792.jpg?ae=4338133151",
-    "score": 0
-  },
-  {
-    "artist": "Unknown Artist",
-    "title": "Alan Parsons Project Ammonia Avenue (CV 45 Audiophile Edition) on DeepDiscount",
-    "price": 63.86,
-    "source": "Deep Discount",
-    "link": "https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696",
-    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4490178-3557303.jpg?ae=4338133151",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/89/4502189-3549258.jpg?ae=4365467151",
     "score": 0
   },
   {
@@ -28563,6 +28545,177 @@
     "source": "Deep Discount",
     "link": "https://www.deepdiscount.com/pavilion-12-inches-volume-1-balearic-nuggets-various-limited/5053760146520",
     "image": "https://www.deepdiscount.com/content/img/no_image_CD_sm.gif",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Delines The Set Up (CLEAR VINYL) on DeepDiscount",
+    "price": 32.85,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/the-set-up-clear-vinyl/5052571225813",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4487174-3512618.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Bow Wow Wow Love Peace & Harmony: The Best Of Bow Wow Wow",
+    "title": "Limited 180-Gram Crystal Clear & Gold Colored Vinyl [Import] on DeepDiscount",
+    "price": 40.13,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/love-peace-and-harmony-the-best-of-bow-wow-wow-limited-180-gram-crystal-clear-and-gold-colored-vinyl/8719262041585",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/49/4490849-3523406.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Bob & Doug McKenzie Great White North & Strange Brew 44 3/ 4 Anniversary on DeepDiscount",
+    "price": 69.51,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/great-white-north-and-strange-brew-44-34-anniversary/708857002412",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/16/4490316-3542654.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Charley Crockett Age Of The Ram on DeepDiscount",
+    "price": 30.87,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/age-of-the-ram/602488221238",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/73/4494373-3538709.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project Eye In The Sky (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/74/4490174-3557300.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Van Halen 5150 (Expanded Edition) on DeepDiscount",
+    "price": 94.48,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/5150-expanded-edition/603497809264",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/36/4493336-3557787.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Cannonball Adderley Cannonball's Sharpshooters (Verve Vault Series) on DeepDiscount",
+    "price": 30.87,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/cannonballs-sharpshooters-verve-vault-series/199957010245",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/24/4495824-3538596.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Atjazz Starbase 17 on DeepDiscount",
+    "price": 31.46,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/starbase-17/5061099140683",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/68/4503668-3552991.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Dave Brubeck Dave Digs Disney",
+    "title": "Limited 180-Gram Colored Vinyl with Bonus Tracks [Import] on DeepDiscount",
+    "price": 23.53,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/dave-digs-disney-limited-180-gram-colored-vinyl-with-bonus-tracks/8436563186899",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/41/4505041-3561673.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Enter Shikari Lose Your Self",
+    "title": "Teal With Black Splatter Vinyl [Import] on DeepDiscount",
+    "price": 43.01,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/lose-your-self-teal-with-black-splatter-vinyl/822166004087",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/92/4498192-3540903.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project The Turn Of A Friendly Card (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/70/4490170-3557792.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Fcukers Ã- on DeepDiscount",
+    "price": 35.68,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/-/5054429208375",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/26/4487726-3513757.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Duran Duran Duran Duran (The Wedding Album) on DeepDiscount",
+    "price": 38.09,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/duran-duran-the-wedding-album/5054197915512",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/06/4497106-3574834.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "The Chills Sunburnt",
+    "title": "Yellow on DeepDiscount",
+    "price": 40.33,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/sunburnt-yellow/809236004802",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/93/4490193-3524234.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Unknown Artist",
+    "title": "Alan Parsons Project Ammonia Avenue (CV 45 Audiophile Edition) on DeepDiscount",
+    "price": 63.86,
+    "source": "Deep Discount",
+    "link": "https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696",
+    "image": "https://mediacdn.aent-m.com/prod-img/300/78/4490178-3557303.jpg?ae=4365467151",
+    "score": 0
+  },
+  {
+    "artist": "Ov Sulfur",
+    "title": "Ov Sulfur \"'Endless' (Bluejay Vinyl)\" 12\"",
+    "price": 29.99,
+    "source": "IndieMerchstore",
+    "link": "https://www.indiemerchstore.com/products/ov-sulfur-endless-bluejay-vinyl-12",
+    "image": "https://cdn.shopify.com/s/files/1/0267/8122/0924/files/5baa0952ed8d7d4dbef68a055ca98c45.jpg?v=1776709566",
+    "score": 0
+  },
+  {
+    "artist": "Blut Aus Nord",
+    "title": "Blut Aus Nord \"The Work Which Transforms God (Swirl Effect)\" Limited Edition 12\"",
+    "price": 24.99,
+    "source": "IndieMerchstore",
+    "link": "https://www.indiemerchstore.com/products/blut-aus-nord-the-work-which-transforms-god-swirl-effect-limited-edition-12",
+    "image": "https://cdn.shopify.com/s/files/1/0267/8122/0924/files/ce32a8a44ac8e8fc346b782cf55880e3.jpg?v=1776691887",
+    "score": 0
+  },
+  {
+    "artist": "Blut Aus Nord",
+    "title": "Blut Aus Nord \"Ethereal Horizons (DMP exclusive)\" Special Edition 2x12\"",
+    "price": 49.99,
+    "source": "IndieMerchstore",
+    "link": "https://www.indiemerchstore.com/products/blut-aus-nord-ethereal-horizons-dmp-exclusive-special-edition-2x12-1",
+    "image": "https://cdn.shopify.com/s/files/1/0267/8122/0924/files/3f0f4f13095feb3a2d1243615e539447.jpg?v=1776691837",
+    "score": 0
+  },
+  {
+    "artist": "Blut Aus Nord",
+    "title": "Blut Aus Nord \"Ethereal Horizons (Galaxy Effect)\" Limited Edition 2x12\"",
+    "price": 30.99,
+    "source": "IndieMerchstore",
+    "link": "https://www.indiemerchstore.com/products/blut-aus-nord-ethereal-horizons-galaxy-effect-limited-edition-2x12",
+    "image": "https://cdn.shopify.com/s/files/1/0267/8122/0924/files/5b4d68d89784d4db63db563a03a397cc.jpg?v=1776691728",
     "score": 0
   },
   {
@@ -30335,15 +30488,6 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
-    "image": "",
-    "score": 0
-  },
-  {
-    "artist": "Stewart Copeland",
-    "title": "The Rhythmatist",
-    "price": 34.99,
-    "source": "r/VinylReleases",
-    "link": "https://www.theingroove.com/products/stewart-copeland-the-rhythmatist-rsd-lp?_pos=1&amp;_psq=stewart+c&amp;_ss=e&amp;_v=1.0",
     "image": "",
     "score": 0
   }
