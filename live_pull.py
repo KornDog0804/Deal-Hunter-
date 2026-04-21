@@ -8,6 +8,12 @@ import urllib.request
 import urllib.parse
 from urllib.parse import urljoin
 from pathlib import Path
+try:
+    from buyer_brain import apply_buyer_brain
+except Exception as e:
+    print(f"buyer_brain import failed: {e}")
+    def apply_buyer_brain(data):
+        return data
 
 BASE = Path(__file__).resolve().parent
 
@@ -1636,6 +1642,9 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 
 if __name__ == "__main__":
     data = build()
+    data = apply_buyer_brain(data)
+
+    # Reddit community drops
 
     # ── r/VinylReleases community drops ───────────────────────────────────────
     log("\n" + "=" * 50)
