@@ -1,0 +1,57 @@
+name: Price Lookup
+
+on:
+  schedule:
+    # Once daily at 10am Eastern (2pm UTC)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: price-lookup
+  cancel-in-progress: false
+
+jobs:
+  run-price-lookup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Price Lookup
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: python price_lookup.py
+
+      - name: Commit and push results
+        run: |
+          git config user.name "Deal Hunter Bot"
+          git config user.email "actions@github.com"
+          git add live_deals.json price_cache.json debug_price_lookup.txt
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Price lookup $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          for i in 1 2 3; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed, rebasing..."
+            git pull --rebase -X theirs origin main || git rebase --abort
+          done
+
+          git push --force-with-lease origin main
