@@ -6,40 +6,92 @@
   <title>Korndog Deal Board</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Reddit deal card styling */
-    .deal-card-reddit {
-      border-left: 3px solid #ff4500;
-    }
-    .badge-reddit {
-      background: #ff4500;
-      color: #fff;
-      font-weight: 600;
-    }
-    .reddit-meta {
+    /* ── BUYER BRAIN OVERRIDES ─────────────────────────── */
+    .decision-strip {
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .reddit-tag {
+    .decision-BUY-NOW { background: rgba(0,200,83,0.15); color: #00c853; border: 1px solid rgba(0,200,83,0.3); }
+    .decision-BUY-LIGHT { background: rgba(255,214,0,0.15); color: #ffd600; border: 1px solid rgba(255,214,0,0.3); }
+    .decision-WATCH { background: rgba(66,165,245,0.15); color: #42a5f5; border: 1px solid rgba(66,165,245,0.3); }
+    .decision-PASS { background: rgba(120,120,120,0.15); color: #888; border: 1px solid rgba(120,120,120,0.3); }
+
+    .score-ring {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .score-hot { background: rgba(0,200,83,0.2); color: #00c853; border: 2px solid #00c853; }
+    .score-warm { background: rgba(255,214,0,0.2); color: #ffd600; border: 2px solid #ffd600; }
+    .score-cool { background: rgba(66,165,245,0.2); color: #42a5f5; border: 2px solid #42a5f5; }
+    .score-cold { background: rgba(120,120,120,0.2); color: #888; border: 2px solid #666; }
+
+    .decision-label { flex: 1; }
+    .decision-sublabel { font-size: 10px; font-weight: 500; opacity: 0.7; text-transform: none; letter-spacing: 0; margin-top: 1px; }
+
+    .brain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .brain-cell {
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .brain-cell .label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.8px; opacity: 0.5; margin-bottom: 2px; }
+    .brain-cell .value { font-size: 13px; font-weight: 600; }
+    .brain-cell-wide { grid-column: 1 / -1; }
+
+    .margin-positive { color: #00c853; }
+    .margin-neutral { color: #ffd600; }
+    .margin-none { color: #888; }
+
+    .lane-tag {
       display: inline-block;
       padding: 2px 8px;
       border-radius: 10px;
-      font-size: 11px;
-      font-weight: 600;
-      background: rgba(255, 69, 0, 0.15);
-      color: #ff4500;
-      border: 1px solid rgba(255, 69, 0, 0.3);
+      font-size: 10px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    .reddit-tag-type {
-      background: rgba(255, 69, 0, 0.25);
+    .lane-identity { background: rgba(156,39,176,0.2); color: #ce93d8; border: 1px solid rgba(156,39,176,0.3); }
+    .lane-bread { background: rgba(255,167,38,0.2); color: #ffb74d; border: 1px solid rgba(255,167,38,0.3); }
+    .lane-trend { background: rgba(233,30,99,0.2); color: #f06292; border: 1px solid rgba(233,30,99,0.3); }
+    .lane-treasure { background: rgba(0,188,212,0.2); color: #4dd0e1; border: 1px solid rgba(0,188,212,0.3); }
+
+    /* Reddit card styling */
+    .deal-card-reddit { border-left: 3px solid #ff4500; }
+    .badge-reddit { background: #ff4500; color: #fff; font-weight: 600; }
+    .reddit-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .reddit-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 10px;
+      font-size: 11px; font-weight: 600;
+      background: rgba(255,69,0,0.15); color: #ff4500;
+      border: 1px solid rgba(255,69,0,0.3);
+      text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .reddit-tag-score {
-      background: rgba(255, 165, 0, 0.15);
-      color: #ffa500;
-      border-color: rgba(255, 165, 0, 0.3);
+    .reddit-tag-score { background: rgba(255,165,0,0.15); color: #ffa500; border-color: rgba(255,165,0,0.3); }
+
+    .why-buy-text {
+      font-size: 11px; font-style: italic; opacity: 0.7; margin-top: 4px;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -80,10 +132,14 @@
       <div class="chip-scroll">
         <div class="chip-row chip-row-nowrap">
           <button class="filter-chip active" data-quick="all">All</button>
+          <button class="filter-chip" data-quick="buynow">BUY NOW</button>
+          <button class="filter-chip" data-quick="buylight">BUY LIGHT</button>
+          <button class="filter-chip" data-quick="watch">WATCH</button>
           <button class="filter-chip" data-quick="under30">Under $30</button>
           <button class="filter-chip" data-quick="reddit">Reddit Drops</button>
           <button class="filter-chip" data-quick="amazon">Amazon</button>
           <button class="filter-chip" data-quick="walmart">Walmart</button>
+          <button class="filter-chip" data-quick="target">Target</button>
           <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
         </div>
       </div>
@@ -103,14 +159,7 @@
       <div class="top-page-nav-inner">
         <div id="topPageNumbers" class="page-numbers"></div>
         <div class="page-jump-wrap">
-          <input
-            id="topPageJumpInput"
-            class="page-jump-input"
-            type="number"
-            min="1"
-            placeholder="Page"
-            inputmode="numeric"
-          />
+          <input id="topPageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" />
           <button class="btn btn-ghost" id="topPageJumpBtn">Go</button>
         </div>
       </div>
@@ -119,7 +168,7 @@
     <section class="section">
       <div class="section-head">
         <h2 class="section-title">All Live Records</h2>
-        <div class="section-note">Raw vinyl wall. Search it, filter it, dig through it.</div>
+        <div class="section-note">Brain-scored vinyl wall. Filter by decision, source, or dig manually.</div>
       </div>
 
       <div id="dealList" class="deal-list"></div>
@@ -128,14 +177,7 @@
         <button class="btn btn-ghost" id="prevPageBtn">Previous</button>
         <div id="pageNumbers" class="page-numbers"></div>
         <div class="page-jump-wrap">
-          <input
-            id="pageJumpInput"
-            class="page-jump-input"
-            type="number"
-            min="1"
-            placeholder="Page"
-            inputmode="numeric"
-          />
+          <input id="pageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" />
           <button class="btn btn-ghost" id="pageJumpBtn">Go</button>
         </div>
         <button class="btn btn-ghost" id="nextPageBtn">Next</button>
@@ -144,8 +186,7 @@
 
     <div class="footer-note">
       Disclosure: As an Amazon Associate, I earn from qualifying purchases.
-      <br />
-      Korndog Deal Board is now a raw vinyl catalog lane. No scoring. Just digging.
+      <br />Korndog Deal Board — Buyer Brain powered.
     </div>
   </main>
 
@@ -155,173 +196,231 @@
     let currentPage = 1;
     const DEALS_PER_PAGE = 24;
 
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+    function escapeHtml(v) {
+      return String(v ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+    }
+    function safeNumber(v, fb = 0) { const n = Number(v); return Number.isFinite(n) ? n : fb; }
+    function normalizeText(v) {
+      return String(v ?? "").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim();
     }
 
-    function safeNumber(value, fallback = 0) {
-      const num = Number(value);
-      return Number.isFinite(num) ? num : fallback;
+    function normalizeSourceKey(v) {
+      const s = String(v || "").trim().toLowerCase();
+      if (!s) return "";
+      if (s.includes("amazon")) return "amazon";
+      if (s.includes("walmart")) return "walmart";
+      if (s.includes("target")) return "target";
+      if (s.includes("deep discount")) return "deep discount";
+      if (s.includes("vinylreleases") || s.includes("r/vinylreleases") || s.includes("reddit")) return "reddit";
+      if (s.includes("newbury")) return "newbury comics";
+      if (s.includes("udiscover")) return "udiscover music";
+      if (s.includes("sound of vinyl")) return "sound of vinyl";
+      if (s.includes("rise all")) return "rise all";
+      if (s.includes("rise records")) return "rise records";
+      if (s.includes("fearless")) return "fearless records";
+      if (s.includes("brooklyn vegan")) return "brooklyn vegan";
+      if (s.includes("equal vision")) return "equal vision";
+      if (s.includes("rollin")) return "rollin records";
+      if (s.includes("merchbar")) return "merchbar";
+      if (s.includes("craft recordings")) return "craft recordings";
+      if (s.includes("mnrk")) return "mnrk heavy";
+      if (s.includes("revolver")) return "revolver";
+      if (s.includes("sharptone")) return "sharptone records";
+      if (s.includes("rock metal fan nation")) return "rock metal fan nation";
+      if (s.includes("rmfn")) return "rmfn all";
+      if (s.includes("unfd")) return "unfd";
+      if (s.includes("sumerian")) return "sumerian records";
+      if (s.includes("solid state vinyl")) return "solid state vinyl";
+      if (s.includes("solid state")) return "solid state records";
+      if (s.includes("hot topic")) return "hot topic";
+      if (s.includes("pure noise")) return "pure noise records";
+      if (s.includes("hopeless")) return "hopeless records";
+      if (s.includes("trust records")) return "trust records";
+      if (s.includes("pirates press")) return "pirates press records";
+      if (s.includes("spinefarm")) return "spinefarm records";
+      if (s.includes("invogue")) return "invogue records";
+      if (s.includes("thriller")) return "thriller records";
+      if (s.includes("rhino")) return "rhino";
+      if (s.includes("interscope")) return "interscope records";
+      if (s.includes("millions of records")) return "millions of records";
+      if (s.includes("indiemerchstore")) return "indiemerchstore";
+      return s;
     }
 
-    function normalizeText(value) {
-      return String(value ?? "")
-        .toLowerCase()
-        .replace(/&/g, "and")
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-    }
-
-    function normalizeSourceKey(value) {
-      const source = String(value || "").trim().toLowerCase();
-      if (!source) return "";
-
-      if (source.includes("amazon")) return "amazon";
-      if (source.includes("walmart")) return "walmart";
-      if (source.includes("deep discount")) return "deep discount";
-      if (source.includes("vinylreleases") || source.includes("r/vinylreleases") || source.includes("reddit")) return "reddit";
-      if (source.includes("newbury")) return "newbury comics";
-      if (source.includes("udiscover")) return "udiscover music";
-      if (source.includes("sound of vinyl")) return "sound of vinyl";
-      if (source.includes("rise all")) return "rise all";
-      if (source.includes("rise records")) return "rise records";
-      if (source.includes("fearless")) return "fearless records";
-      if (source.includes("brooklyn vegan")) return "brooklyn vegan";
-      if (source.includes("equal vision")) return "equal vision";
-      if (source.includes("rollin")) return "rollin records";
-      if (source.includes("merchbar")) return "merchbar";
-      if (source.includes("craft recordings")) return "craft recordings";
-      if (source.includes("mnrk")) return "mnrk heavy";
-      if (source.includes("revolver")) return "revolver";
-      if (source.includes("sharptone")) return "sharptone records";
-      if (source.includes("rock metal fan nation")) return "rock metal fan nation";
-      if (source.includes("rmfn")) return "rmfn all";
-      if (source.includes("unfd")) return "unfd";
-      if (source.includes("sumerian")) return "sumerian records";
-      if (source.includes("solid state vinyl")) return "solid state vinyl";
-      if (source.includes("solid state")) return "solid state records";
-      if (source.includes("hot topic")) return "hot topic";
-      if (source.includes("pure noise")) return "pure noise records";
-      if (source.includes("rhino")) return "rhino";
-      if (source.includes("interscope")) return "interscope records";
-      if (source.includes("millions of records")) return "millions of records";
-      if (source.includes("indiemerchstore")) return "indiemerchstore";
-
-      return source;
-    }
-
-    function prettifySourceName(value) {
-      const key = normalizeSourceKey(value);
+    function prettifySourceName(v) {
+      const key = normalizeSourceKey(v);
       const map = {
-        "amazon": "Amazon",
-        "walmart": "Walmart",
-        "deep discount": "Deep Discount",
-        "reddit": "r/VinylReleases",
-        "newbury comics": "Newbury Comics",
-        "udiscover music": "uDiscover Music",
-        "sound of vinyl": "Sound of Vinyl",
-        "rise all": "Rise All",
-        "rise records": "Rise Records",
-        "fearless records": "Fearless Records",
-        "brooklyn vegan": "Brooklyn Vegan",
-        "equal vision": "Equal Vision",
-        "rollin records": "Rollin Records",
-        "merchbar": "Merchbar",
-        "craft recordings": "Craft Recordings",
-        "mnrk heavy": "MNRK Heavy",
-        "revolver": "Revolver",
-        "sharptone records": "SharpTone Records",
-        "rock metal fan nation": "Rock Metal Fan Nation",
-        "rmfn all": "RMFN All",
-        "unfd": "UNFD",
-        "sumerian records": "Sumerian Records",
-        "solid state records": "Solid State Records",
-        "solid state vinyl": "Solid State Vinyl",
-        "hot topic": "Hot Topic",
-        "pure noise records": "Pure Noise Records",
-        "rhino": "Rhino",
-        "interscope records": "Interscope Records",
-        "millions of records": "Millions of Records",
-        "indiemerchstore": "IndieMerchstore"
+        "amazon": "Amazon", "walmart": "Walmart", "target": "Target",
+        "deep discount": "Deep Discount", "reddit": "r/VinylReleases",
+        "newbury comics": "Newbury Comics", "udiscover music": "uDiscover Music",
+        "sound of vinyl": "Sound of Vinyl", "rise all": "Rise All",
+        "rise records": "Rise Records", "fearless records": "Fearless Records",
+        "brooklyn vegan": "Brooklyn Vegan", "equal vision": "Equal Vision",
+        "rollin records": "Rollin Records", "merchbar": "Merchbar",
+        "craft recordings": "Craft Recordings", "mnrk heavy": "MNRK Heavy",
+        "revolver": "Revolver", "sharptone records": "SharpTone Records",
+        "rock metal fan nation": "Rock Metal Fan Nation", "rmfn all": "RMFN All",
+        "unfd": "UNFD", "sumerian records": "Sumerian Records",
+        "solid state records": "Solid State Records", "solid state vinyl": "Solid State Vinyl",
+        "hot topic": "Hot Topic", "pure noise records": "Pure Noise Records",
+        "hopeless records": "Hopeless Records", "trust records": "Trust Records",
+        "pirates press records": "Pirates Press Records",
+        "spinefarm records": "Spinefarm Records", "invogue records": "InVogue Records",
+        "thriller records": "Thriller Records",
+        "rhino": "Rhino", "interscope records": "Interscope Records",
+        "millions of records": "Millions of Records", "indiemerchstore": "IndieMerchstore",
       };
-      return map[key] || String(value || "").trim();
+      return map[key] || String(v || "").trim();
     }
 
-    function getPriceText(deal) {
-      const price = safeNumber(deal.price);
-      if (price > 0) return `$${price.toFixed(2)}`;
-      return "Browse / search link";
+    function getPriceText(d) {
+      const p = safeNumber(d.price);
+      return p > 0 ? `$${p.toFixed(2)}` : "Browse";
     }
 
-    function getSearchBlob(deal) {
+    function getSearchBlob(d) {
       return normalizeText([
-        deal.artist,
-        deal.title,
-        deal.raw_title,
-        deal.source,
-        deal.version,
-        deal.page_text_snippet
+        d.artist, d.title, d.raw_title, d.source, d.version,
+        d.page_text_snippet, d.inventory_lane, d.decision, d.why_buy
       ].join(" "));
     }
 
-    function getAmazonLink(deal) {
-      const link = String(deal.link || "").trim();
-      if (!link.includes("amazon.com")) return "";
-      if (!link.includes("tag=korndog20-20")) return "";
+    function getAmazonLink(d) {
+      const link = String(d.link || "").trim();
+      if (!link.includes("amazon.com") || !link.includes("tag=korndog20-20")) return "";
       return link;
     }
 
     async function copyText(text) {
-      try {
-        await navigator.clipboard.writeText(text);
-        alert("Copied.");
-      } catch (err) {
-        alert("Copy failed. Long-press and copy manually.");
-      }
+      try { await navigator.clipboard.writeText(text); alert("Copied."); }
+      catch { alert("Copy failed. Long-press and copy manually."); }
     }
 
+    // ── DECISION & BRAIN HELPERS ──────────────────────────
+    function decisionClass(d) {
+      const dec = (d.decision || "").toUpperCase().replace(/\s+/g, "-");
+      return `decision-${dec || "PASS"}`;
+    }
+
+    function scoreClass(score) {
+      if (score >= 80) return "score-hot";
+      if (score >= 65) return "score-warm";
+      if (score >= 45) return "score-cool";
+      return "score-cold";
+    }
+
+    function laneClass(lane) {
+      const l = (lane || "").toLowerCase();
+      if (l.includes("identity")) return "lane-identity";
+      if (l.includes("bread")) return "lane-bread";
+      if (l.includes("trend")) return "lane-trend";
+      if (l.includes("treasure")) return "lane-treasure";
+      return "lane-bread";
+    }
+
+    function marginClass(margin) {
+      if (margin >= 5) return "margin-positive";
+      if (margin > 0) return "margin-neutral";
+      return "margin-none";
+    }
+
+    // ── CARD BUILDER ──────────────────────────────────────
     function createDealCard(deal) {
       const buyLink = deal.link || "#";
       const amazonLink = getAmazonLink(deal);
       const detailId = `detail-${Math.random().toString(36).slice(2, 10)}`;
-
-      const imageHtml = deal.image
-        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "Unknown Artist") + " - " + (deal.title || "Unknown Title"))}" loading="lazy" /></div>`
-        : "";
-
       const sourceName = prettifySourceName(deal.source || "Unknown");
       const isReddit = normalizeSourceKey(deal.source || "") === "reddit";
-      const redditUrl = deal.reddit_url || "";
-      const redditScore = safeNumber(deal.reddit_score, 0);
-      const releaseType = deal.release_type || "";
-      const flair = deal.availability_text || "";
+      const hasBrain = !!deal.decision;
 
-      // Reddit cards get an orange badge and extra metadata
+      const imageHtml = deal.image
+        ? `<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist || "") + " - " + (deal.title || ""))}" loading="lazy" /></div>`
+        : "";
+
+      // Source badge
       const badgeClass = isReddit ? "badge badge-reddit" : "badge badge-mid";
-      const badgeLabel = isReddit ? `🔴 ${sourceName}` : sourceName;
+      const badgeLabel = isReddit ? `r/VinylReleases` : sourceName;
 
-      const redditMetaHtml = isReddit ? `
-        <div class="reddit-meta">
-          ${releaseType ? `<span class="reddit-tag reddit-tag-type">${escapeHtml(releaseType)}</span>` : ""}
-          ${flair && flair.toLowerCase() !== releaseType.toLowerCase() ? `<span class="reddit-tag">${escapeHtml(flair)}</span>` : ""}
-          ${redditScore > 0 ? `<span class="reddit-tag reddit-tag-score">▲ ${redditScore}</span>` : ""}
-        </div>
-      ` : "";
+      // Decision strip (Brain)
+      const decision = (deal.decision || "").toUpperCase();
+      const buyScore = safeNumber(deal.buy_score, 0);
+      const lane = deal.inventory_lane || "";
+      const marginDollars = safeNumber(deal.expected_margin_dollars, 0);
+      const marginPct = safeNumber(deal.expected_margin_percent, 0);
+      const salePrice = safeNumber(deal.suggested_sale_price, 0);
+      const qty = safeNumber(deal.recommend_qty, 0);
+      const whyBuy = deal.why_buy || "";
+      const shelfPlace = deal.shelf_placement || "";
+      const turnSpeed = deal.turn_speed || "";
+      const demandLevel = deal.demand_level || "";
+      const storeFit = deal.store_fit || "";
 
-      const redditActionHtml = isReddit && redditUrl ? `
-        <a class="btn btn-alt" href="${escapeHtml(redditUrl)}" target="_blank" rel="noopener noreferrer">View on Reddit</a>
-      ` : "";
+      let decisionHtml = "";
+      if (hasBrain) {
+        decisionHtml = `
+          <div class="decision-strip ${decisionClass(deal)}">
+            <div class="${scoreClass(buyScore)} score-ring">${buyScore}</div>
+            <div class="decision-label">
+              <div>${escapeHtml(decision || "PASS")}</div>
+              <div class="decision-sublabel">${escapeHtml(lane)}</div>
+            </div>
+            ${lane ? `<span class="lane-tag ${laneClass(lane)}">${escapeHtml(lane.split(" ")[0])}</span>` : ""}
+          </div>`;
+      }
+
+      // Reddit metadata
+      let redditMetaHtml = "";
+      if (isReddit) {
+        const releaseType = deal.release_type || "";
+        const flair = deal.availability_text || "";
+        const redditScore = safeNumber(deal.reddit_score, 0);
+        redditMetaHtml = `<div class="reddit-meta">
+          ${releaseType ? `<span class="reddit-tag">${escapeHtml(releaseType)}</span>` : ""}
+          ${flair && flair.toLowerCase() !== (releaseType || "").toLowerCase() ? `<span class="reddit-tag">${escapeHtml(flair)}</span>` : ""}
+          ${redditScore > 0 ? `<span class="reddit-tag reddit-tag-score">\u25B2 ${redditScore}</span>` : ""}
+        </div>`;
+      }
+
+      // Brain grid (margin, sale price, qty, speed)
+      let brainGridHtml = "";
+      if (hasBrain && decision !== "PASS") {
+        brainGridHtml = `<div class="brain-grid">
+          <div class="brain-cell">
+            <div class="label">Sell At</div>
+            <div class="value">${salePrice > 0 ? `$${salePrice.toFixed(2)}` : "—"}</div>
+          </div>
+          <div class="brain-cell">
+            <div class="label">Margin</div>
+            <div class="value ${marginClass(marginDollars)}">${marginDollars > 0 ? `$${marginDollars.toFixed(2)} (${marginPct.toFixed(0)}%)` : "—"}</div>
+          </div>
+          <div class="brain-cell">
+            <div class="label">Speed</div>
+            <div class="value">${escapeHtml(turnSpeed || "—")}</div>
+          </div>
+          <div class="brain-cell">
+            <div class="label">Buy Qty</div>
+            <div class="value">${qty > 0 ? qty : "—"}</div>
+          </div>
+        </div>`;
+      }
+
+      // Why buy text
+      let whyBuyHtml = "";
+      if (hasBrain && whyBuy && decision !== "PASS") {
+        whyBuyHtml = `<div class="why-buy-text">${escapeHtml(whyBuy)}</div>`;
+      }
+
+      // Reddit action button
+      const redditUrl = deal.reddit_url || "";
+      const redditActionHtml = isReddit && redditUrl
+        ? `<a class="btn btn-alt" href="${escapeHtml(redditUrl)}" target="_blank" rel="noopener noreferrer">Reddit Thread</a>`
+        : "";
 
       const card = document.createElement("div");
       card.className = "deal-card" + (isReddit ? " deal-card-reddit" : "");
       card.innerHTML = `
         ${imageHtml}
+        ${decisionHtml}
 
         <div class="deal-top">
           <div>
@@ -343,8 +442,11 @@
           </div>
         </div>
 
+        ${brainGridHtml}
+        ${whyBuyHtml}
+
         <div class="deal-actions ${(amazonLink || redditActionHtml) ? "" : "single-action"}">
-          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${isReddit ? "Open Store Link" : "Open Link"}</a>
+          <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${isReddit ? "Store Link" : "Open Link"}</a>
           ${redditActionHtml}
           ${amazonLink ? `<button class="btn btn-alt copy-amazon-btn">Copy Amazon Link</button>` : ""}
         </div>
@@ -360,10 +462,19 @@
             `Source: ${sourceName}`,
             `Price: ${getPriceText(deal)}`,
             `Version: ${deal.version || "standard"}`,
-            isReddit && releaseType ? `Type: ${releaseType}` : "",
-            isReddit && redditScore > 0 ? `Reddit Upvotes: ${redditScore}` : "",
+            hasBrain ? `Decision: ${decision}` : "",
+            hasBrain ? `Buy Score: ${buyScore}` : "",
+            hasBrain ? `Lane: ${lane}` : "",
+            hasBrain && salePrice > 0 ? `Sell At: $${salePrice.toFixed(2)}` : "",
+            hasBrain && marginDollars > 0 ? `Margin: $${marginDollars.toFixed(2)} (${marginPct.toFixed(0)}%)` : "",
+            hasBrain ? `Demand: ${demandLevel}` : "",
+            hasBrain ? `Turn Speed: ${turnSpeed}` : "",
+            hasBrain && qty > 0 ? `Recommended Qty: ${qty}` : "",
+            hasBrain ? `Shelf: ${shelfPlace}` : "",
+            hasBrain ? `Store Fit: ${storeFit}` : "",
+            hasBrain && whyBuy ? `Why: ${whyBuy}` : "",
             `Link: ${buyLink}`,
-            isReddit && redditUrl ? `Reddit Thread: ${redditUrl}` : ""
+            isReddit && redditUrl ? `Reddit: ${redditUrl}` : "",
           ].filter(Boolean).join("\n"))}</div>
           <div class="mini-actions">
             <button class="btn btn-ghost copy-link-btn">Copy Link</button>
@@ -372,10 +483,7 @@
       `;
 
       const copyAmazonBtn = card.querySelector(".copy-amazon-btn");
-      if (copyAmazonBtn) {
-        copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
-      }
-
+      if (copyAmazonBtn) copyAmazonBtn.addEventListener("click", () => copyText(amazonLink));
       card.querySelector(".copy-link-btn").addEventListener("click", () => copyText(buyLink));
       card.querySelector(".detail-toggle").addEventListener("click", (e) => {
         const panel = card.querySelector(`#${e.currentTarget.dataset.target}`);
@@ -386,29 +494,25 @@
       return card;
     }
 
+    // ── PAGE NUMBERS ──────────────────────────────────────
     function renderPageNumberSet(containerId, totalPages) {
       const container = document.getElementById(containerId);
       if (!container) return;
-
       container.innerHTML = "";
       if (totalPages <= 1) return;
-
       const pages = new Set([1, totalPages]);
       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
         if (i > 1 && i < totalPages) pages.add(i);
       }
-
-      const sortedPages = [...pages].sort((a, b) => a - b);
-      let lastPage = 0;
-
-      sortedPages.forEach(page => {
-        if (page - lastPage > 1) {
-          const ellipsis = document.createElement("span");
-          ellipsis.className = "page-ellipsis";
-          ellipsis.textContent = "...";
-          container.appendChild(ellipsis);
+      const sorted = [...pages].sort((a, b) => a - b);
+      let last = 0;
+      sorted.forEach(page => {
+        if (page - last > 1) {
+          const el = document.createElement("span");
+          el.className = "page-ellipsis";
+          el.textContent = "...";
+          container.appendChild(el);
         }
-
         const btn = document.createElement("button");
         btn.className = `page-number-btn ${page === currentPage ? "active" : ""}`;
         btn.textContent = page;
@@ -418,9 +522,8 @@
           toggleTopPageNav(false);
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
-
         container.appendChild(btn);
-        lastPage = page;
+        last = page;
       });
     }
 
@@ -429,6 +532,7 @@
       renderPageNumberSet("topPageNumbers", totalPages);
     }
 
+    // ── FILTERING & SORTING ───────────────────────────────
     function getFilteredDeals() {
       const sourceValue = normalizeSourceKey(document.getElementById("sourceFilter").value);
       const searchValue = normalizeText(document.getElementById("searchInput").value);
@@ -440,21 +544,17 @@
           return normalizeSourceKey(d.source || "") === sourceValue;
         })
         .filter(d => {
-          if (activeQuickFilter === "under30") {
-            return safeNumber(d.price) > 0 && safeNumber(d.price) < 30;
-          }
-          if (activeQuickFilter === "reddit") {
-            return normalizeSourceKey(d.source || "") === "reddit";
-          }
-          if (activeQuickFilter === "amazon") {
-            return normalizeSourceKey(d.source || "") === "amazon";
-          }
-          if (activeQuickFilter === "walmart") {
-            return normalizeSourceKey(d.source || "") === "walmart";
-          }
-          if (activeQuickFilter === "deepdiscount") {
-            return normalizeSourceKey(d.source || "") === "deep discount";
-          }
+          const q = activeQuickFilter;
+          if (q === "all") return true;
+          if (q === "buynow") return (d.decision || "").toUpperCase() === "BUY NOW";
+          if (q === "buylight") return (d.decision || "").toUpperCase() === "BUY LIGHT";
+          if (q === "watch") return (d.decision || "").toUpperCase() === "WATCH";
+          if (q === "under30") return safeNumber(d.price) > 0 && safeNumber(d.price) < 30;
+          if (q === "reddit") return normalizeSourceKey(d.source || "") === "reddit";
+          if (q === "amazon") return normalizeSourceKey(d.source || "") === "amazon";
+          if (q === "walmart") return normalizeSourceKey(d.source || "") === "walmart";
+          if (q === "target") return normalizeSourceKey(d.source || "") === "target";
+          if (q === "deepdiscount") return normalizeSourceKey(d.source || "") === "deep discount";
           return true;
         })
         .filter(d => {
@@ -462,82 +562,63 @@
           return getSearchBlob(d).includes(searchValue);
         })
         .sort((a, b) => {
-          const sourceA = normalizeText(a.source || "");
-          const sourceB = normalizeText(b.source || "");
-          if (sourceA !== sourceB) return sourceA.localeCompare(sourceB);
+          // Sort by buy_score descending first, then source, then artist
+          const scoreA = safeNumber(a.buy_score, 0);
+          const scoreB = safeNumber(b.buy_score, 0);
+          if (scoreA !== scoreB) return scoreB - scoreA;
 
-          const artistA = normalizeText(a.artist || "");
-          const artistB = normalizeText(b.artist || "");
-          if (artistA !== artistB) return artistA.localeCompare(artistB);
+          const srcA = normalizeText(a.source || "");
+          const srcB = normalizeText(b.source || "");
+          if (srcA !== srcB) return srcA.localeCompare(srcB);
 
-          return normalizeText(a.title || "").localeCompare(normalizeText(b.title || ""));
+          return normalizeText(a.artist || "").localeCompare(normalizeText(b.artist || ""));
         });
     }
 
     function populateSourceFilter() {
       const select = document.getElementById("sourceFilter");
       const sources = new Map();
-
-      allDeals.forEach(deal => {
-        const rawSource = (deal.source || "").trim();
-        if (!rawSource) return;
-
-        const key = normalizeSourceKey(rawSource);
-        const label = prettifySourceName(rawSource);
-
-        if (!key) return;
-        if (!sources.has(key)) sources.set(key, label);
+      allDeals.forEach(d => {
+        const raw = (d.source || "").trim();
+        if (!raw) return;
+        const key = normalizeSourceKey(raw);
+        const label = prettifySourceName(raw);
+        if (key && !sources.has(key)) sources.set(key, label);
       });
-
-      const sorted = [...sources.entries()]
-        .map(([value, label]) => ({ value, label }))
-        .sort((a, b) => a.label.localeCompare(b.label));
-
-      select.innerHTML =
-        `<option value="">All sources</option>` +
-        sorted.map(src =>
-          `<option value="${escapeHtml(src.value)}">${escapeHtml(src.label)}</option>`
-        ).join("");
+      const sorted = [...sources.entries()].map(([v, l]) => ({value:v,label:l})).sort((a,b) => a.label.localeCompare(b.label));
+      select.innerHTML = `<option value="">All sources</option>` + sorted.map(s => `<option value="${escapeHtml(s.value)}">${escapeHtml(s.label)}</option>`).join("");
     }
 
     function renderDeals(deals) {
       const dealList = document.getElementById("dealList");
       const pager = document.getElementById("pager");
       const pageStatus = document.getElementById("pageStatus");
-
       dealList.innerHTML = "";
-
       if (!deals.length) {
-        dealList.innerHTML = `<div class="empty">No records found. Try another artist, title, or source.</div>`;
+        dealList.innerHTML = `<div class="empty">No records found. Try another filter.</div>`;
         pager.style.display = "none";
         pageStatus.textContent = "Page 0";
         renderPageNumbers(0);
         toggleTopPageNav(false);
         return;
       }
-
       const totalPages = Math.max(1, Math.ceil(deals.length / DEALS_PER_PAGE));
       if (currentPage > totalPages) currentPage = 1;
-
       const start = (currentPage - 1) * DEALS_PER_PAGE;
-      const end = start + DEALS_PER_PAGE;
-      const pageDeals = deals.slice(start, end);
-
-      pageDeals.forEach(deal => dealList.appendChild(createDealCard(deal)));
-
+      const pageDeals = deals.slice(start, start + DEALS_PER_PAGE);
+      pageDeals.forEach(d => dealList.appendChild(createDealCard(d)));
       pager.style.display = totalPages > 1 ? "flex" : "none";
       pageStatus.textContent = `Page ${currentPage} / ${totalPages}`;
       document.getElementById("prevPageBtn").disabled = currentPage === 1;
       document.getElementById("nextPageBtn").disabled = currentPage === totalPages;
-
       renderPageNumbers(totalPages);
     }
 
-    function toggleTopPageNav(forceOpen = null) {
-      const topNav = document.getElementById("topPageNav");
-      if (!topNav) return;
-      const shouldOpen = forceOpen === null ? topNav.style.display === "none" : !!forceOpen;
-      topNav.style.display = shouldOpen ? "block" : "none";
+    function toggleTopPageNav(force = null) {
+      const n = document.getElementById("topPageNav");
+      if (!n) return;
+      const open = force === null ? n.style.display === "none" : !!force;
+      n.style.display = open ? "block" : "none";
     }
 
     function applyFilters(resetPage = true) {
@@ -558,7 +639,7 @@
       });
     }
 
-    function getTotalPageCountForCurrentView() {
+    function getTotalPageCount() {
       return Math.max(1, Math.ceil(getFilteredDeals().length / DEALS_PER_PAGE));
     }
 
@@ -566,10 +647,8 @@
       const input = document.getElementById(inputId);
       let page = Number(input.value || 0);
       if (!page || page < 1) return;
-
-      const totalPages = getTotalPageCountForCurrentView();
-      if (page > totalPages) page = totalPages;
-
+      const total = getTotalPageCount();
+      if (page > total) page = total;
       currentPage = page;
       applyFilters(false);
       toggleTopPageNav(false);
@@ -579,50 +658,28 @@
 
     function initPager() {
       document.getElementById("prevPageBtn").addEventListener("click", () => {
-        if (currentPage > 1) {
-          currentPage -= 1;
-          applyFilters(false);
-          toggleTopPageNav(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
+        if (currentPage > 1) { currentPage--; applyFilters(false); toggleTopPageNav(false); window.scrollTo({top:0,behavior:"smooth"}); }
       });
-
       document.getElementById("nextPageBtn").addEventListener("click", () => {
-        const total = getTotalPageCountForCurrentView();
-        if (currentPage < total) {
-          currentPage += 1;
-          applyFilters(false);
-          toggleTopPageNav(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
+        if (currentPage < getTotalPageCount()) { currentPage++; applyFilters(false); toggleTopPageNav(false); window.scrollTo({top:0,behavior:"smooth"}); }
       });
-
       document.getElementById("pageJumpBtn").addEventListener("click", () => jumpToPage("pageJumpInput"));
       document.getElementById("topPageJumpBtn").addEventListener("click", () => jumpToPage("topPageJumpInput"));
-
-      document.getElementById("pageJumpInput").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") jumpToPage("pageJumpInput");
-      });
-
-      document.getElementById("topPageJumpInput").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") jumpToPage("topPageJumpInput");
-      });
-
+      document.getElementById("pageJumpInput").addEventListener("keydown", e => { if (e.key==="Enter") jumpToPage("pageJumpInput"); });
+      document.getElementById("topPageJumpInput").addEventListener("keydown", e => { if (e.key==="Enter") jumpToPage("topPageJumpInput"); });
       document.getElementById("pageStatus").addEventListener("click", () => toggleTopPageNav());
     }
 
     function openMenu() {
       document.getElementById("sideMenu").classList.add("open");
       document.getElementById("menuBackdrop").classList.add("open");
-      document.getElementById("sideMenu").setAttribute("aria-hidden", "false");
+      document.getElementById("sideMenu").setAttribute("aria-hidden","false");
     }
-
     function closeMenu() {
       document.getElementById("sideMenu").classList.remove("open");
       document.getElementById("menuBackdrop").classList.remove("open");
-      document.getElementById("sideMenu").setAttribute("aria-hidden", "true");
+      document.getElementById("sideMenu").setAttribute("aria-hidden","true");
     }
-
     function initMenu() {
       document.getElementById("menuToggle").addEventListener("click", openMenu);
       document.getElementById("menuClose").addEventListener("click", closeMenu);
@@ -631,26 +688,18 @@
 
     async function init() {
       try {
-        const res = await fetch("./live_deals.json?_=" + Date.now(), { cache: "no-store" });
-        const data = await res.json();
-        allDeals = Array.isArray(data) ? data : [];
+        const res = await fetch("./live_deals.json?_=" + Date.now(), {cache:"no-store"});
+        allDeals = await res.json();
+        if (!Array.isArray(allDeals)) allDeals = [];
         populateSourceFilter();
         applyFilters(true);
-      } catch (err) {
-        document.getElementById("dealList").innerHTML =
-          `<div class="empty">Could not load live_deals.json. The rack is empty because the loader fell down the stairs.</div>`;
+      } catch {
+        document.getElementById("dealList").innerHTML = `<div class="empty">Could not load live_deals.json.</div>`;
       }
     }
 
-    document.getElementById("sourceFilter").addEventListener("change", () => {
-      applyFilters(true);
-      toggleTopPageNav(false);
-      closeMenu();
-    });
-
-    document.getElementById("searchInput").addEventListener("input", () => {
-      applyFilters(true);
-    });
+    document.getElementById("sourceFilter").addEventListener("change", () => { applyFilters(true); toggleTopPageNav(false); closeMenu(); });
+    document.getElementById("searchInput").addEventListener("input", () => applyFilters(true));
 
     initQuickFilters();
     initPager();
