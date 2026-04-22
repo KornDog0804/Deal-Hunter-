@@ -1,5 +1,14 @@
 [
   {
+    "artist": "Radiohead",
+    "title": "Com Lag",
+    "price": 29.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/radiohead-com-lag",
+    "image": "",
+    "score": 0
+  },
+  {
     "artist": "Daft Punk",
     "title": "Musique Vol 2 2006-2021 (Colored Vinyl)",
     "price": 29.99,
@@ -843,15 +852,6 @@
     "source": "Rollin Records",
     "link": "https://rollinrecs.com/products/drake-scorpion",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_41362.jpg?v=1742581179",
-    "score": 0
-  },
-  {
-    "artist": "Tigercub",
-    "title": "Nets To Catch The Wind (Indie Exclusive Gray Vinyl)",
-    "price": 27.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/tigercub-nets-to-catch-the-wind-indie-exclusive-gray-vinyl",
-    "image": "",
     "score": 0
   },
   {
@@ -2025,6 +2025,15 @@
     "score": 0
   },
   {
+    "artist": "Radiohead",
+    "title": "Com Lag",
+    "price": 29.99,
+    "source": "Rollin Preorders",
+    "link": "https://rollinrecs.com/products/radiohead-com-lag",
+    "image": "",
+    "score": 0
+  },
+  {
     "artist": "Daft Punk",
     "title": "Musique Vol 2 2006-2021 (Colored Vinyl)",
     "price": 29.99,
@@ -2868,15 +2877,6 @@
     "source": "Rollin Preorders",
     "link": "https://rollinrecs.com/products/drake-scorpion",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_41362.jpg?v=1742581179",
-    "score": 0
-  },
-  {
-    "artist": "Tigercub",
-    "title": "Nets To Catch The Wind (Indie Exclusive Gray Vinyl)",
-    "price": 27.99,
-    "source": "Rollin Preorders",
-    "link": "https://rollinrecs.com/products/tigercub-nets-to-catch-the-wind-indie-exclusive-gray-vinyl",
-    "image": "",
     "score": 0
   },
   {
@@ -10089,6 +10089,24 @@
     "score": 0
   },
   {
+    "artist": "SONY",
+    "title": "JUDAS PRIEST ‘THE BEST OF JUDAS PRIEST' LP",
+    "price": 23.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/judas-priest-the-best-of-judas-priest-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/The_Best_Of_Judas_Priest_black_vinyl_product_shot.webp?v=1776884760",
+    "score": 0
+  },
+  {
+    "artist": "Universal",
+    "title": "HAWTHORNE HEIGHTS 'IF ONLY YOU WERE LONELY' LP",
+    "price": 28.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/hawthorne-heights-if-only-you-were-lonely-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/HawthorneHeights_PS.png?v=1776878340",
+    "score": 0
+  },
+  {
     "artist": "ORCHARD",
     "title": "CLUTCH 'STRANGE COUSINS FROM THE WEST' LP",
     "price": 27.99,
@@ -11898,30 +11916,12 @@
     "score": 0
   },
   {
-    "artist": "Universal",
-    "title": "THE BLOODHOUND GANG 'HOORAY FOR BOOBIES' 2LP (Splatter Vinyl)",
-    "price": 43.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/the-bloodhound-gang-hooray-for-boobies-2lp-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/81_-nx4husl._sl1500.webp?v=1774650084",
-    "score": 0
-  },
-  {
-    "artist": "Universal",
-    "title": "INCUBUS '8' LP",
-    "price": 30.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/incubus-8-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3577963.jpg?v=1774650082",
-    "score": 0
-  },
-  {
-    "artist": "AEC",
-    "title": "LUCINDA WILLIAMS 'THE GHOSTS OF HIGHWAY 20' 2LP",
-    "price": 26.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/lucinda-williams-the-ghosts-of-highway-20-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/2865628-3154117.jpg?v=1774647069",
+    "artist": "SONY",
+    "title": "JUDAS PRIEST ‘THE BEST OF JUDAS PRIEST' LP",
+    "price": 23.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/judas-priest-the-best-of-judas-priest-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/The_Best_Of_Judas_Priest_black_vinyl_product_shot.webp?v=1776882589",
     "score": 0
   },
   {
@@ -13533,24 +13533,6 @@
     "source": "Revolver",
     "link": "https://shop.revolvermag.com/products/black-label-society-grimmest-hits-on-forest-green-double-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/BLS_MNK-LP-443494_GrimmestHits_LP_Mockup_FRONT.png?v=1773762790",
-    "score": 0
-  },
-  {
-    "artist": "MNRK Heavy",
-    "title": "BLACK LABEL SOCIETY 'CATACOMBS OF THE BLACK' 2LP (Gold Vinyl)",
-    "price": 33.98,
-    "source": "Revolver",
-    "link": "https://shop.revolvermag.com/products/black-label-society-catacombs-of-the-black-vatican-on-gold-double-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/634164437145-1.jpg?v=1773762790",
-    "score": 0
-  },
-  {
-    "artist": "MNRK Heavy",
-    "title": "RELATE. 'HAVE I EVER DONE ANYTHING?' LP (Coke Bottle Clear Vinyl)",
-    "price": 28.98,
-    "source": "Revolver",
-    "link": "https://shop.revolvermag.com/products/relate-have-i-ever-done-anything-on-coke-bottle-clear-with-splatter-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/MNK-LP-444040_Relate_LP_Splatter_Mockup_FRONT.png?v=1773762790",
     "score": 0
   },
   {
@@ -29498,6 +29480,15 @@
     "price": 0.01,
     "source": "Target",
     "link": "https://www.target.com/s?searchTerm=vinyl+records",
+    "image": "",
+    "score": 0
+  },
+  {
+    "artist": "Olivia Rodrigo",
+    "title": "Drop Dead  - $9.98",
+    "price": 9.98,
+    "source": "r/VinylReleases",
+    "link": "https://parkavecds.shop/products/pre-order-olivia-rodrigo-drop-dead-chewing-gum-7-single",
     "image": "",
     "score": 0
   },
