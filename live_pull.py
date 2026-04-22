@@ -46,9 +46,9 @@ WALMART_BROWSE_URLS = [
     "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=3",
     "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=4",
 ]
+
 # ─────────────────────────────────────────────────────────────────
 # AMAZON + TARGET CATALOG SCRAPERS
-# Add these to your live_pull.py file, right after the Walmart functions
 # ─────────────────────────────────────────────────────────────────
 
 # ─── URLS ───────────────────────────────────────────────────────
@@ -490,9 +490,9 @@ SOURCES = [
     {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
     {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
 
-    # Amazon removed — affiliate API not yet active
     {"name": "Walmart", "source_type": "walmart_catalog_source", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"},
-    {"name": "Target", "source_type": "js_store", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
+    {"name": "Amazon", "source_type": "amazon_catalog_source", "url": "https://www.amazon.com/Best-Sellers-Vinyl-Records/zgbs/music/71838931"},
+    {"name": "Target", "source_type": "target_catalog_source", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
 ]
 
 POSITIVE_KEYWORDS = [
@@ -657,6 +657,24 @@ def should_skip(title, link):
     if contains_bad_product_terms(blob):
         return True
     return False
+
+
+def looks_like_real_vinyl(text):
+    t = (text or "").lower()
+    if any(bad in t for bad in [
+        "compact disc", "cassette", "turntable", "record player", "cleaner",
+        "cleaning kit", "slipmat", "speaker", "book", "kindle", "audiobook",
+        "poster", "shirt", "toy", "funko", "earbuds", "headphones",
+        "vinyl gloves", "vinyl flooring"
+    ]):
+        return False
+    return any(good in t for good in [
+        "vinyl", " 1lp", " 2lp", " lp", "record"
+    ])
+
+
+def looks_like_amazon_link(url):
+    return "amazon.com" in url.lower()
 
 
 def clean_store_title(title):
@@ -1329,20 +1347,6 @@ def walmart_robot_wall(page_html):
     ])
 
 
-def looks_like_real_walmart_vinyl(text):
-    t = (text or "").lower()
-    if any(bad in t for bad in [
-        "compact disc", "cassette", "turntable", "record player", "cleaner",
-        "cleaning kit", "slipmat", "speaker", "book", "kindle", "audiobook",
-        "poster", "shirt", "toy", "funko", "earbuds", "headphones",
-        "vinyl gloves", "vinyl flooring"
-    ]):
-        return False
-    return any(good in t for good in [
-        "vinyl", " 1lp", " 2lp", " lp", "record"
-    ])
-
-
 def clean_walmart_title(text):
     text = clean(text)
     text = re.sub(r"\s+\$[\d\.,]+.*$", "", text).strip()
@@ -1360,7 +1364,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     )
     for name, canonical, price in pattern_objects:
         title = clean_walmart_title(name)
-        if not title or not looks_like_real_walmart_vinyl(title):
+        if not title or not looks_like_real_vinyl(title):
             continue
         results.append({
             "title": title,
@@ -1377,7 +1381,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     )
     for name, item_id in pattern_objects_2:
         title = clean_walmart_title(name)
-        if not title or not looks_like_real_walmart_vinyl(title):
+        if not title or not looks_like_real_vinyl(title):
             continue
         results.append({
             "title": title,
@@ -1397,7 +1401,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     for pat in fallback_patterns:
         for match in re.findall(pat, blob_text, re.I):
             title = clean_walmart_title(match)
-            if not title or not looks_like_real_walmart_vinyl(title):
+            if not title or not looks_like_real_vinyl(title):
                 continue
             results.append({
                 "title": title,
@@ -1576,6 +1580,12 @@ def scrape_source(source):
     if stype == "walmart_catalog_source":
         return build_walmart_catalog(source)
 
+    if stype == "amazon_catalog_source":
+        return build_amazon_catalog(source)
+
+    if stype == "target_catalog_source":
+        return build_target_catalog(source)
+
     if stype == "unfd_store":
         return build_unfd(source)
 
@@ -1590,11 +1600,6 @@ def scrape_source(source):
 
     if stype == "amazon_affiliate_source":
         SOURCE_STATUS[source["name"]] = "Derived after main scrape"
-        return []
-
-    if stype == "js_store":
-        SOURCE_STATUS[source["name"]] = "SKIPPED (JS-rendered - needs browser lane)"
-        log(f'{source["name"]}: SKIPPED (JS-rendered - needs browser lane)')
         return []
 
     if stype == "merchnow_store":
@@ -1680,19 +1685,16 @@ def fetch_upcoming_vinyl():
             log(f"[UpcomingVinyl] Empty response for {url}")
             continue
 
-        # Debug: show first 300 chars so we can see what we got
         log(f"[UpcomingVinyl] Got {len(html_text)} bytes from {url}")
         log(f"[UpcomingVinyl] Preview: {html_text[:300].strip()}")
 
         try:
             soup = BeautifulSoup(html_text, "html.parser")
 
-            # Count h2 tags to see if content loaded
             all_h2 = soup.find_all("h2")
             all_li = soup.find_all("li")
             log(f"[UpcomingVinyl] Found {len(all_h2)} h2 tags, {len(all_li)} li tags")
 
-            # Try li > h2 approach first
             found_via_li = 0
             for li in soup.select("li"):
                 h2 = li.find("h2")
@@ -1728,7 +1730,6 @@ def fetch_upcoming_vinyl():
 
             log(f"[UpcomingVinyl] li>h2 approach found {found_via_li} entries")
 
-            # Fallback: try any h2 tags directly if li approach got nothing
             if found_via_li == 0:
                 log("[UpcomingVinyl] Trying direct h2 fallback...")
                 for h2 in all_h2:
@@ -1803,37 +1804,29 @@ def _parse_reddit_rss(xml_text):
     """Parse Reddit RSS feed into a list of post dicts that mimic the JSON API structure."""
     posts = []
 
-    # Extract each <entry> block (Atom format used by Reddit RSS)
     entry_blocks = re.findall(r'<entry>(.*?)</entry>', xml_text, re.S)
 
     for entry in entry_blocks:
         try:
-            # Title
             title_m = re.search(r'<title[^>]*>(.*?)</title>', entry, re.S)
             title = html.unescape(title_m.group(1)).strip() if title_m else ""
 
-            # Link to the Reddit post
             link_m = re.search(r'<link[^>]+href="([^"]+)"', entry)
             reddit_url = link_m.group(1) if link_m else ""
 
-            # Published date
             pub_m = re.search(r'<published>(.*?)</published>', entry, re.S)
             published = pub_m.group(1).strip() if pub_m else ""
 
-            # Content contains the post body with embedded links
             content_m = re.search(r'<content[^>]*>(.*?)</content>', entry, re.S)
             content = html.unescape(content_m.group(1)) if content_m else ""
 
-            # Flair is usually in the title as [Flair] prefix
             flair = ""
             flair_m = re.match(r'^\[([^\]]+)\]\s*', title)
             if flair_m:
                 flair = flair_m.group(1).strip()
                 title = title[flair_m.end():].strip()
 
-            # Extract first external store URL from content body
             store_url = ""
-            # Reddit RSS content is HTML-encoded; look for href links that aren't Reddit internal
             link_matches = re.findall(r'href="(https?://[^"]+)"', content, re.I)
             for link in link_matches:
                 low = link.lower()
@@ -1860,7 +1853,6 @@ def _parse_reddit_rss(xml_text):
 def fetch_vinyl_releases():
     """
     Scrape r/VinylReleases/new via Reddit's public RSS feed.
-    RSS is served on a less aggressively blocked path than the JSON API.
     Returns a list of deal dicts ready to merge into live_deals.json.
     """
     endpoints = [
@@ -1894,13 +1886,11 @@ def fetch_vinyl_releases():
             store_url = p.get("store_url", "")
             content_snippet = p.get("content_snippet", "")
 
-            # Parse price from title if present
             price_val = 0.0
             price_match = re.search(r'\$(\d+(?:\.\d{2})?)', title)
             if price_match:
                 price_val = normalize_price(price_match.group(1))
 
-            # Detect release type from flair or title
             release_type = ""
             type_keywords = {
                 "restock": "Restock",
@@ -1920,23 +1910,19 @@ def fetch_vinyl_releases():
                     release_type = label
                     break
 
-            # Skip expired posts
             if release_type == "Expired" or "[expired]" in title.lower():
                 continue
 
-            # Skip banned keywords / bad product terms
             if is_banned(title):
                 continue
             if contains_bad_product_terms(title):
                 continue
 
-            # Try to split artist/album from Reddit title
             artist, album = "Unknown Artist", title
             if " - " in title:
                 parts = title.split(" - ", 1)
                 artist = parts[0].strip()
                 album = parts[1].strip()
-                # Clean common Reddit title suffixes
                 album = re.sub(r'\[.*?\]', '', album).strip()
                 album = re.sub(r'\(.*?edition.*?\)', '', album, flags=re.I).strip()
 
@@ -1978,7 +1964,6 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
     Send a push notification summary via ntfy.sh.
     Install the ntfy app on your phone and subscribe to your topic.
     """
-    # ⚠️ CHANGE THIS to your own unique topic name
     NTFY_TOPIC = "korndog-deals"
 
     from datetime import datetime
@@ -1997,7 +1982,6 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
         if buy_signal_count > 0:
             lines.append(f"Buy signals: {buy_signal_count}")
 
-        # Show top 3 Reddit posts by score
         if reddit_deals:
             top_reddit = sorted(reddit_deals, key=lambda x: x.get("reddit_score", 0), reverse=True)[:3]
             if top_reddit:
@@ -2029,7 +2013,6 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
             log(f"[ntfy] WARNING: status {status}")
 
     except Exception as e:
-        # Never let notification failure crash the whole script
         log(f"[ntfy] ERROR (non-fatal): {e}")
 
 
@@ -2038,7 +2021,6 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 if __name__ == "__main__":
     data = build()
     data = apply_buyer_brain(data)
-    # Popsike valuation brain
     try:
         cache = load_popsike_cache(BASE / "popsike_cache.json")
 
@@ -2061,9 +2043,6 @@ if __name__ == "__main__":
     except Exception as e:
         log(f"[Popsike] ERROR: {e}")
 
-    # Reddit community drops
-
-    # ── r/VinylReleases community drops ───────────────────────────────────────
     log("\n" + "=" * 50)
     log("SCRAPING r/VINYLRELEASES")
     log("=" * 50)
@@ -2073,14 +2052,12 @@ if __name__ == "__main__":
         log(f"[r/VinylReleases] Fatal error: {e}")
         reddit_deals = []
 
-    # Merge Reddit deals into main data
     data.extend(reddit_deals)
     data = dedupe_deals(data)
 
     with open(BASE / "live_deals.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    # ── Upcoming vinyl releases filtered by whitelist ──────────────────────────
     log("\n" + "=" * 50)
     log("SCRAPING UPCOMING VINYL RELEASES")
     log("=" * 50)
@@ -2093,7 +2070,6 @@ if __name__ == "__main__":
         json.dump(upcoming, f, indent=2, ensure_ascii=False)
     log(f"[UpcomingVinyl] {len(upcoming)} whitelist matches saved to upcoming_releases.json")
 
-    # ── Buy signals: deals sorted by best margin potential ─────────────────────
     buy_signals = []
     for deal in data:
         artist = deal.get("artist", "")
@@ -2118,7 +2094,6 @@ if __name__ == "__main__":
             "score": deal.get("score", 0),
         })
 
-    # Sort by score descending
     buy_signals.sort(key=lambda x: x.get("score", 0), reverse=True)
 
     with open(BASE / "buy_signals.json", "w", encoding="utf-8") as f:
@@ -2145,7 +2120,6 @@ if __name__ == "__main__":
 
     log(f"\nWrote {len(data)} total live deals")
 
-    # ── Send push notification ─────────────────────────────────────────────────
     send_deal_hunter_notification(
         total_deals=len(data),
         reddit_deals=reddit_deals,
