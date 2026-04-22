@@ -4,6 +4,7 @@ import re
 import html
 import time
 import random
+import os
 import urllib.request
 import urllib.parse
 from urllib.parse import urljoin
@@ -23,7 +24,22 @@ try:
     )
 except Exception as e:
     print(f"popsike_brain import failed: {e}")
+
 BASE = Path(__file__).resolve().parent
+
+def load_sources_from_json(json_file="sources.json"):
+    """Load sources from external JSON config file."""
+    try:
+        if os.path.exists(json_file):
+            with open(json_file, 'r') as f:
+                data = json.load(f)
+                return data.get("sources", [])
+        else:
+            log(f"WARNING: {json_file} not found, using fallback")
+            return []
+    except Exception as e:
+        log(f"ERROR loading sources.json: {e}")
+        return []
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -234,28 +250,30 @@ def build_amazon_catalog(source):
                 "page_text_snippet": raw_title,
             })
     
-    if not deals and robot_walls >= max(1, pages_hit // 2):
-        log("Amazon: blocked, adding catalog portal fallback")
-        deals.append({
-            "artist": "Amazon",
-            "title": "Amazon Vinyl Records Catalog",
+    deduped = dedupe_source_items(deals)
+    
+    # If no deals found, provide catalog portal fallback
+    if len(deduped) == 0:
+        log("Amazon: No vinyl products found, adding catalog portal fallback")
+        deduped = [{
+            "artist": "Amazon Catalog",
+            "title": "Amazon Vinyl Records",
             "raw_title": "Amazon Vinyl Records Catalog",
             "price": 0.01,
             "source": "Amazon",
             "source_type": source["source_type"],
-            "link": f"https://www.amazon.com/b?node=71838931&tag={AMAZON_TAG}",
+            "link": f"https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag={AMAZON_TAG}",
             "image": "",
             "keywords": ["vinyl", "catalog"],
             "deal_quality": "catalog",
             "demand": "broad",
             "format": "vinyl",
             "version": "catalog",
-            "availability_text": "",
-            "page_text_snippet": "Fallback Amazon vinyl catalog portal.",
-        })
+            "availability_text": "Click link to browse Amazon catalog",
+            "page_text_snippet": "Amazon vinyl catalog portal.",
+        }]
     
-    deduped = dedupe_source_items(deals)
-    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | pages: {pages_hit} | robot walls: {robot_walls}"
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} items | pages: {pages_hit} | robot walls: {robot_walls}"
     log(f'Amazon: kept {len(deduped)}')
     return deduped
 
@@ -403,11 +421,14 @@ def build_target_catalog(source):
                 "page_text_snippet": raw_title,
             })
     
-    if not deals and robot_walls >= max(1, pages_hit // 2):
-        log("Target: blocked, adding catalog portal fallback")
-        deals.append({
-            "artist": "Target",
-            "title": "Target Vinyl Records Catalog",
+    deduped = dedupe_source_items(deals)
+    
+    # If no deals found, provide catalog portal fallback
+    if len(deduped) == 0:
+        log("Target: No vinyl products found, adding catalog portal fallback")
+        deduped = [{
+            "artist": "Target Catalog",
+            "title": "Target Vinyl Records",
             "raw_title": "Target Vinyl Records Catalog",
             "price": 0.01,
             "source": "Target",
@@ -419,12 +440,11 @@ def build_target_catalog(source):
             "demand": "broad",
             "format": "vinyl",
             "version": "catalog",
-            "availability_text": "",
-            "page_text_snippet": "Fallback Target vinyl catalog portal.",
-        })
+            "availability_text": "Click link to browse Target catalog",
+            "page_text_snippet": "Target vinyl catalog portal.",
+        }]
     
-    deduped = dedupe_source_items(deals)
-    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | pages: {pages_hit} | robot walls: {robot_walls} | api: {'yes' if api_success else 'no'}"
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} items | pages: {pages_hit} | robot walls: {robot_walls} | api: {'yes' if api_success else 'no'}"
     log(f'Target: kept {len(deduped)}')
     return deduped
 
@@ -442,58 +462,9 @@ DEEPDISCOUNT_SEARCH_URLS = [
     "https://www.deepdiscount.com/featured-vinyl/b141496",
 ]
 
-SOURCES = [
-    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com"},
-    {"name": "Rollin Preorders", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/pre-orders"},
-    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us"},
-    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com"},
-
-    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com"},
-    {"name": "Fearless Vinyl", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com/collections/vinyl"},
-
-    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com"},
-    {"name": "Rise All", "source_type": "shopify_store", "url": "https://riserecords.com/collections/all"},
-    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com"},
-    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com"},
-    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com"},
-    {"name": "Newbury Preorders", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/pre-orders"},
-    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com"},
-    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com"},
-    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com"},
-    {"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com"},
-    {"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com"},
-    {"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co"},
-
-    {"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rmfnvinyl.com"},
-    {"name": "RMFN All", "source_type": "shopify_store", "url": "https://rmfnvinyl.com/collections/all"},
-
-    {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com"},
-    {"name": "Solid State Records", "source_type": "shopify_store", "url": "https://solidstaterecords.store"},
-    {"name": "Solid State Vinyl", "source_type": "shopify_store", "url": "https://solidstaterecords.store/collections/vinyl"},
-
-    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
-    {"name": "Hopeless Records",      "source_type": "merchnow_store", "url": "https://hopelessrecords.merchnow.com"},
-    {"name": "Hopeless Shopify",      "source_type": "shopify_store",  "url": "https://hopelessrecords.myshopify.com"},
-    {"name": "Smartpunk Records", "source_type": "shopify_store", "url": "https://smartpunk.com"},
-    {"name": "Trust Records",         "source_type": "merchnow_store", "url": "https://trustrecords.merchnow.com"},
-    {"name": "Pirates Press Records", "source_type": "shopify_store",  "url": "https://shop.piratespressrecords.com"},
-    {"name": "Spinefarm Records",     "source_type": "merchnow_store", "url": "https://spinefarm.merchnow.com"},
-    {"name": "InVogue Records",       "source_type": "merchnow_store", "url": "https://invoguerecords.merchnow.com"},
-    {"name": "Thriller Records",      "source_type": "merchnow_store", "url": "https://thrillerrecords.merchnow.com"},
-
-    {"name": "UNFD", "source_type": "unfd_store", "url": "https://usa.24hundred.net/collections/unfd"},
-    {"name": "Merchbar", "source_type": "merchbar_store", "url": "https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl"},
-    {"name": "Hot Topic", "source_type": "hottopic_store", "url": HOT_TOPIC_SEARCH_URL},
-
-    {"name": "Deep Discount", "source_type": "deepdiscount_store", "url": "https://www.deepdiscount.com"},
-    {"name": "Millions of Records", "source_type": "millions_store", "url": "https://www.millionsofrecords.com"},
-    {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com"},
-    {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://www.indiemerchstore.com/collections/pre-orders"},
-
-    {"name": "Walmart", "source_type": "walmart_catalog_source", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"},
-    {"name": "Amazon", "source_type": "amazon_catalog_source", "url": "https://www.amazon.com/Best-Sellers-Vinyl-Records/zgbs/music/71838931"},
-    {"name": "Target", "source_type": "target_catalog_source", "url": "https://www.target.com/c/vinyl-records-music-movies-books/-/N-yz7nt"},
-]
+SOURCES = load_sources_from_json("sources.json")
+if not SOURCES:
+    log("CRITICAL: No sources loaded from sources.json!")
 
 POSITIVE_KEYWORDS = [
     "colored", "exclusive", "limited", "anniversary", "deluxe",
@@ -2031,8 +2002,7 @@ if __name__ == "__main__":
 
             data = enrich_candidates_with_lookup(
                 data,
-                candidates,
-                cache
+                candidates
             )
 
             save_popsike_cache(BASE / "popsike_cache.json", cache)
