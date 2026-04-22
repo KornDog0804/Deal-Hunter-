@@ -9,9 +9,12 @@ Rollin Records: kept 225
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
 ==================================================
-  ✓ https://rollinrecs.com/collections/pre-orders/products.json?limit=250 -> 13 products
-Rollin Preorders: 13 products via Shopify JSON
-Rollin Preorders: kept 11
+  -> retry 1/2 for https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
+Rollin Preorders: 250 products via Shopify JSON
+Rollin Preorders: kept 225
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
@@ -37,9 +40,12 @@ Fearless Records: kept 95
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
 ==================================================
-  ✓ https://store.fearlessrecords.com/collections/vinyl/products.json?limit=250 -> 210 products
-Fearless Vinyl: 210 products via Shopify JSON
-Fearless Vinyl: kept 189
+  -> retry 1/2 for https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
+Fearless Vinyl: 250 products via Shopify JSON
+Fearless Vinyl: kept 95
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -51,23 +57,26 @@ Rise Records: kept 76
 ==================================================
 Scraping: Rise All (shopify_store)
 ==================================================
-  ✓ https://riserecords.com/collections/all/products.json?limit=250 -> 250 products
+  -> retry 1/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 61
+Rise All: kept 76
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 206
+Brooklyn Vegan: kept 204
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 183
+Revolver: kept 181
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -79,16 +88,19 @@ Newbury Comics: kept 154
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
 ==================================================
-  ✓ https://www.newburycomics.com/collections/pre-orders/products.json?limit=250 -> 8 products
-Newbury Preorders: 8 products via Shopify JSON
-Newbury Preorders: kept 1
+  -> retry 1/2 for https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
+Newbury Preorders: 250 products via Shopify JSON
+Newbury Preorders: kept 154
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 75
+Craft Recordings: kept 76
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -116,7 +128,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 143
+Interscope Records: kept 137
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -135,9 +147,12 @@ Rock Metal Fan Nation: kept 209
 ==================================================
 Scraping: RMFN All (shopify_store)
 ==================================================
-  ✓ https://rmfnvinyl.com/collections/all/products.json?limit=250 -> 250 products
+  -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 205
+RMFN All: kept 209
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -156,9 +171,12 @@ Solid State Records: kept 53
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/collections/vinyl/products.json?limit=250 -> 51 products
-Solid State Vinyl: 51 products via Shopify JSON
-Solid State Vinyl: kept 49
+  -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 129 products
+Solid State Vinyl: 129 products via Shopify JSON
+Solid State Vinyl: kept 53
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -177,47 +195,57 @@ Hopeless Records: kept 58
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
 ==================================================
-  ✓ https://hopelessrecords.myshopify.com/products.json?limit=250 -> 250 products
-Hopeless Shopify: 250 products via Shopify JSON
-Hopeless Shopify: kept 58
-
-==================================================
-Scraping: Smartpunk Records (shopify_store)
-==================================================
-  ✓ https://smartpunk.com/products.json?limit=250 -> 250 products
-Smartpunk Records: 250 products via Shopify JSON
-Smartpunk Records: kept 222
-
-==================================================
-Scraping: Trust Records (merchnow_store)
-==================================================
-  -> retry 1/2 for https://trustrecords.merchnow.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://trustrecords.merchnow.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://trustrecords.merchnow.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://trustrecords.merchnow.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://trustrecords.merchnow.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://trustrecords.merchnow.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://trustrecords.merchnow.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://trustrecords.merchnow.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://trustrecords.merchnow.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://trustrecords.merchnow.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-Trust Records: 0 products via Shopify JSON
-Trust Records: Merchnow JSON empty, trying HTML fallback
-  -> retry 1/2 for https://trustrecords.merchnow.com | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://trustrecords.merchnow.com | <urlopen error [Errno -2] Name or service not known>
-Trust Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+Hopeless Shopify: 0 products via Shopify JSON
+Hopeless Shopify: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+Hopeless Shopify: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 81
+Pirates Press Records: kept 80
+
+==================================================
+Scraping: Smartpunk Records (shopify_store)
+==================================================
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
+Smartpunk Records: 0 products via Shopify JSON
+Smartpunk Records: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
+Smartpunk Records: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Spinefarm Records (merchnow_store)
@@ -249,121 +277,128 @@ Scraping: InVogue Records (merchnow_store)
   ✗ https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
 InVogue Records: 0 products via Shopify JSON
 InVogue Records: Merchnow JSON empty, trying HTML fallback
-  -> retry 1/2 for https://invoguerecords.merchnow.com | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com | HTTP Error 404: Not Found
+  -> retry 1/2 for https://invoguerecords.merchnow.com/products.json | HTTP Error 404: Not Found
+  -> retry 2/2 for https://invoguerecords.merchnow.com/products.json | HTTP Error 404: Not Found
 InVogue Records: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
-Scraping: Thriller Records (merchnow_store)
+Scraping: Thriller Records (shopify_store)
 ==================================================
-  ✓ https://thrillerrecords.merchnow.com/products.json?limit=250 -> 217 products
-Thriller Records: 217 products via Shopify JSON
-Thriller Records: kept 44
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+Thriller Records: 0 products via Shopify JSON
+Thriller Records: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+Thriller Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
-Scraping: UNFD (unfd_store)
+Scraping: UNFD (shopify_store)
 ==================================================
-  ✓ https://usa.24hundred.net/collections/unfd/products.json?limit=250 -> 250 products
-UNFD: 250 products via Shopify JSON
-UNFD: kept 56
+  -> retry 1/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+UNFD: 0 products via Shopify JSON
+UNFD: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
+UNFD: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
-Scraping: Merchbar (merchbar_store)
+Scraping: Merchbar (html_store)
 ==================================================
-  -> retry 1/2 for https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl | HTTP Error 429: Too Many Requests
-  -> retry 2/2 for https://www.merchbar.com/search?hMn%5BhierarchicalCategories.lvl0%5D=Vinyl | HTTP Error 429: Too Many Requests
-Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
+Merchbar: unknown source_type "html_store" - skipping
 
 ==================================================
-Scraping: Hot Topic (hottopic_store)
+Scraping: Hot Topic (html_store)
 ==================================================
-Hot Topic: found 46 HTML links
-Hot Topic: kept 0
+Hot Topic: unknown source_type "html_store" - skipping
 
 ==================================================
-Scraping: Deep Discount (deepdiscount_store)
+Scraping: Deep Discount (html_store)
 ==================================================
-Deep Discount fetch: https://www.deepdiscount.com/
-Deep Discount fetch: https://www.deepdiscount.com/music/vinyl
-Deep Discount fetch: https://www.deepdiscount.com/search?mod=AP&cr=vinyl
-Deep Discount: found 0 product links from https://www.deepdiscount.com/search?mod=AP&cr=vinyl
-Deep Discount fetch: https://www.deepdiscount.com/music/vinyl
-Deep Discount: found 31 product links from https://www.deepdiscount.com/music/vinyl
-Deep Discount fetch: https://www.deepdiscount.com/solid-ball-of-rock-limited-180-gram-silver-colored-vinyl/8719262039797
-Deep Discount fetch: https://www.deepdiscount.com/promised-heights/720841302711
-Deep Discount fetch: https://www.deepdiscount.com/a-decade-of-dio-1983-1993/603497805044
-Deep Discount fetch: https://www.deepdiscount.com/apologies-to-the-queen-mary/098787065534
-Deep Discount fetch: https://www.deepdiscount.com/grace-under-pressure-super-deluxe-edition/602478262104
-Deep Discount fetch: https://www.deepdiscount.com/straw-donkey-the-complete-singles/840401722343
-Deep Discount fetch: https://www.deepdiscount.com/thats-the-way-it-is-limited-180-gram-crystal-clear-vinyl/8719262040540
-Deep Discount fetch: https://www.deepdiscount.com/its-arbor-day-charlie-browncharlie-browns-all-stars-forest-green-vinyl/843563199947
-Deep Discount fetch: https://www.deepdiscount.com/some-friendly-35th-anniversary-edition-white-vinyl/607618270018
-Deep Discount fetch: https://www.deepdiscount.com/sex-packets-35th-anniversary-pop-up-version/016998557013
-Deep Discount fetch: https://www.deepdiscount.com/robin-trower-live-50th-anniversary-edition/840401722121
-Deep Discount fetch: https://www.deepdiscount.com/a-matter-of-time-the-final-hour/5056167183334
-Deep Discount fetch: https://www.deepdiscount.com/save-the-day-from-hoppers/050087595692
-Deep Discount fetch: https://www.deepdiscount.com/monica/075678587665
-Deep Discount fetch: https://www.deepdiscount.com/close-picture-disc/5014797911673
-Deep Discount fetch: https://www.deepdiscount.com/winterland/198029892710
-Deep Discount fetch: https://www.deepdiscount.com/cruel-world/602488113694
-Deep Discount fetch: https://www.deepdiscount.com/live-trax-vol-72-6-28-25-huntington-bank-pavilion-at-northerly-island/880882689810
-Deep Discount fetch: https://www.deepdiscount.com/distracted-red-vinyl/5054429208740
-Deep Discount fetch: https://www.deepdiscount.com/power-rarities/603497805259
-Deep Discount fetch: https://www.deepdiscount.com/earth-mother-earth/8024391153857
-Deep Discount fetch: https://www.deepdiscount.com/how-sad-how-lovely/810074425452
-Deep Discount fetch: https://www.deepdiscount.com/live-in-san-francisco-28th-april-1994/636551832113
-Deep Discount fetch: https://www.deepdiscount.com/bad-music-for-bad-people/602478346491
-Deep Discount fetch: https://www.deepdiscount.com/even-in-the-quietest-moments/602475456162
-Deep Discount fetch: https://www.deepdiscount.com/kammerkonzert/5056818806070
-Deep Discount fetch: https://www.deepdiscount.com/breaking-out-of-heaven-2007-2009/603497811427
-Deep Discount fetch: https://www.deepdiscount.com/the-lost-tapes/4262428984577
-Deep Discount fetch: https://www.deepdiscount.com/bbc-sessions/198029892611
-Deep Discount fetch: https://www.deepdiscount.com/songs-for-swingin-lovers-blue-note-tone-poet-edition/602478949104
-Deep Discount fetch: https://www.deepdiscount.com/an-evening-with-todd-rundgren-the-complete-live-at-the-ridgefield/889466718212
-Deep Discount fetch: https://www.deepdiscount.com/music/vinyl/new-releases
-Deep Discount: found 25 product links from https://www.deepdiscount.com/music/vinyl/new-releases
-Deep Discount fetch: https://www.deepdiscount.com/the-turn-of-a-friendly-card-cv-45-audiophile-edition/711297534498
-Deep Discount fetch: https://www.deepdiscount.com/queen-ii-collectors-edition-5-cd180g-2-lp-box-set/050087593612
-Deep Discount fetch: https://www.deepdiscount.com/ammonia-avenue-cv-45-audiophile-edition/711297534696
-Deep Discount fetch: https://www.deepdiscount.com/cannonballs-sharpshooters-verve-vault-series/199957010245
-Deep Discount fetch: https://www.deepdiscount.com/eye-in-the-sky-cv-45-audiophile-edition/711297534597
-Deep Discount fetch: https://www.deepdiscount.com/habilidades-extraordinarias/3700604778998
-Deep Discount fetch: https://www.deepdiscount.com/sings-the-rodgers-and-hart-song-book-verve-acoustic-sounds-series/602478282249
-Deep Discount fetch: https://www.deepdiscount.com/pavilion-12-inches-volume-1-balearic-nuggets-various-limited/5053760146520
-Deep Discount fetch: https://www.deepdiscount.com/age-of-the-ram/602488221238
-Deep Discount fetch: https://www.deepdiscount.com/michael-songs-from-the-motion-picture-limited-edition/199584404516
-Deep Discount fetch: https://www.deepdiscount.com/lose-your-self-teal-with-black-splatter-vinyl/822166004087
-Deep Discount fetch: https://www.deepdiscount.com/duran-duran-the-wedding-album/5054197915512
-Deep Discount fetch: https://www.deepdiscount.com/crawdaddy-express/8055515236125
-Deep Discount fetch: https://www.deepdiscount.com/love-peace-and-harmony-the-best-of-bow-wow-wow-limited-180-gram-crystal-clear-and-gold-colored-vinyl/8719262041585
-Deep Discount fetch: https://www.deepdiscount.com/-/5054429208375
-Deep Discount fetch: https://www.deepdiscount.com/the-set-up-clear-vinyl/5052571225813
-Deep Discount fetch: https://www.deepdiscount.com/starbase-17/5061099140683
-Deep Discount fetch: https://www.deepdiscount.com/dave-digs-disney-limited-180-gram-colored-vinyl-with-bonus-tracks/8436563186899
-Deep Discount fetch: https://www.deepdiscount.com/5150-expanded-edition/603497809264
-Deep Discount fetch: https://www.deepdiscount.com/featured-vinyl/b141496
-Deep Discount: found 15 product links from https://www.deepdiscount.com/featured-vinyl/b141496
-Deep Discount: kept 46
+Deep Discount: unknown source_type "html_store" - skipping
 
 ==================================================
-Scraping: Millions of Records (millions_store)
+Scraping: Millions of Records (html_store)
 ==================================================
-Millions of Records: found 0 HTML links
-Millions of Records: kept 0
+Millions of Records: unknown source_type "html_store" - skipping
 
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
-  ✓ https://www.indiemerchstore.com/products.json?limit=250 -> 250 products
-IndieMerchstore: 250 products via Shopify JSON
-IndieMerchstore: kept 112
+  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore: 0 products via Shopify JSON
+IndieMerchstore: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://indiemerchandise.com/products.json | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/products.json | <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore: HTML source failed | <urlopen error [Errno 104] Connection reset by peer>
 
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
-  ✓ https://www.indiemerchstore.com/collections/pre-orders/products.json?limit=250 -> 250 products
-IndieMerchstore Preorders: 250 products via Shopify JSON
-IndieMerchstore Preorders: kept 101
+  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 1/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore Preorders: 0 products via Shopify JSON
+IndieMerchstore Preorders: Shopify JSON empty, trying HTML fallback
+  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json | <urlopen error [Errno 104] Connection reset by peer>
+  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json | <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore Preorders: HTML source failed | <urlopen error [Errno 104] Connection reset by peer>
 
 ==================================================
 Scraping: Walmart (walmart_catalog_source)
@@ -396,7 +431,8 @@ Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A7183893
   -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
   -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
 Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: kept 0
+Amazon: No vinyl products found, adding catalog portal fallback
+Amazon: kept 1
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -411,9 +447,15 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
 Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
-Target: kept 0
+Target: No vinyl products found, adding catalog portal fallback
+Target: kept 1
+
+==================================================
+Scraping: Popsike (popsike_source)
+==================================================
+Popsike: unknown source_type "popsike_source" - skipping
 [Popsike] 3 records selected for value lookup
-[Popsike] ERROR: enrich_candidates_with_lookup() takes from 1 to 2 positional arguments but 3 were given
+[Popsike] ERROR: 'base_score'
 
 ==================================================
 SCRAPING r/VINYLRELEASES
@@ -424,12 +466,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 50 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 384033 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 391679 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -444,7 +486,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 430 h2 tags, 459 li tags
+[UpcomingVinyl] Found 439 h2 tags, 468 li tags
 [UpcomingVinyl] FOUND: MigalaAsi Duele Un Verano —  (Acuarela)
 [UpcomingVinyl] FOUND: 45 TrioNebulosa / Tenorio —  (Jazz Room Records)
 [UpcomingVinyl] FOUND: 45Trio#Jamal b/w I Love Music —  (Bloom Music)
@@ -455,6 +497,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Abhorrence I Disgrace I Messiah ParatroopsMaggots: Original Artyfacts From the First Finnish Death Metal Era Part I —  (Svart Records)
 [UpcomingVinyl] FOUND: Ahorrance I Disgracde I Messiah ParatroopsMaggots: Original Artyfacts From the First Finnish Death Metal Era Part I —  (Svart Records)
 [UpcomingVinyl] FOUND: Aj Fullerton & Jake FrielFullerton & Friel, Vol. II —  (Gitcha Records)
+[UpcomingVinyl] FOUND: Alabama 3Woke Up This Morning Mob Wife —  (Universal UK)
 [UpcomingVinyl] FOUND: AlarmBest Of Live —  (Secret Records)
 [UpcomingVinyl] FOUND: Alessia CaraKNow-It-All (Deluxe, Red / Signed Insert) —  (Def Jam Recordings)
 [UpcomingVinyl] FOUND: Alex Zhang HungtaiDras —  (Shelter Press)
@@ -463,7 +506,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Alien Sex FiendBetween Good and Evil (Red) —  (Culture Factory USA)
 [UpcomingVinyl] FOUND: Alisha's AtticAlisha Rules The World —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Alix PerezSabotage —  (1985 Music)
-[UpcomingVinyl] FOUND: Alvarius BMalarial Dream —  (Abduction Records)
 [UpcomingVinyl] FOUND: Aly-UsFollow Me —  (Strictly Rhythm)
 [UpcomingVinyl] FOUND: Amerikan KaosThe Sheeple Swing —  (Metal Department)
 [UpcomingVinyl] FOUND: Anaïs MitchellHadestown Original Broadway Cast Recording —  (Sing It Again Records)
@@ -538,6 +580,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Cosmic DeadThe Exalted King —  (Heavy Psych Sounds)
 [UpcomingVinyl] FOUND: Count BasieSend In The Clowns —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Courtney SantanaLiving Through It All —  (Blue Elan)
+[UpcomingVinyl] FOUND: Curse of Frankenstein: Hammer Horror — O.S.T.Curse Of Frankenstein: Hammer Horror Original Soundtrack (Silva Screen)
 [UpcomingVinyl] FOUND: D.R.I.Four Of A Kind (Picture) —  (Back On Black)
 [UpcomingVinyl] FOUND: D.R.I.Thrash Zone (Picture) —  (Back On Black)
 [UpcomingVinyl] FOUND: Daevid AllenGood Morning! —  (Musea Records France)
@@ -615,6 +658,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Gia MargaretSinging (Orange) —  (Jagjaguwar)
 [UpcomingVinyl] FOUND: GirlschoolLive From the Camden Palace (Red) —  (Culture Factory USA)
 [UpcomingVinyl] FOUND: Giver of Illness Ak'ChamelSpiritually Unemployed —  (Akuphone)
+[UpcomingVinyl] FOUND: GjenferdBlack Smoke Rising —  (Apollon Records)
 [UpcomingVinyl] FOUND: Glen HansardDon't Settle Vol. 1 (Transmissions East) —  (Plateau Records)
 [UpcomingVinyl] FOUND: Gordon LightfootSundown —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: GorrchStillamentum —  (Avantgarde Music)
@@ -625,6 +669,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Gypsy PistolerosDark Faerie Tales (Neon Purple & Black Splatter) —  (New Church Records)
 [UpcomingVinyl] FOUND: HaertsLaguna Road —  (Haerts)
 [UpcomingVinyl] FOUND: HalcaliHalcali Bacon —  (For Life Music Ent.)
+[UpcomingVinyl] FOUND: HamletRevolucion 12,111 —  (Desdemona)
+[UpcomingVinyl] FOUND: HamletSanatorio De Munecos —  (Desdemona)
 [UpcomingVinyl] FOUND: Hans ReichelDalbergia Retusa —  (Black Truffle)
 [UpcomingVinyl] FOUND: HardriveDeep Inside —  (Strictly Rhythm)
 [UpcomingVinyl] FOUND: Hardt AntoineOne More Night —  (Crosstown Rebels)
@@ -663,6 +709,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Joni MitchellThe Hissing of Summer Lawns —  (Mobile Fidelity)
 [UpcomingVinyl] FOUND: Josh WinkHigher State Of Consciousness —  (Strictly Rhythm)
 [UpcomingVinyl] FOUND: Joy HarjoInsomnia and Seven Steps to Grace —  (Smithsonian Folkways)
+[UpcomingVinyl] FOUND: Judie TzukeNow Or Never —  (Universal UK)
 [UpcomingVinyl] FOUND: Juli DeakBrisk —  (Thanatosis Prod)
 [UpcomingVinyl] FOUND: Julia CummingJulia —  (Partisan Records)
 [UpcomingVinyl] FOUND: Julie CampicheUNSPOKEN —  (Ronin Rhythm Records)
@@ -697,6 +744,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: M'BaminaAfrica Roll —  (Space Echo)
 [UpcomingVinyl] FOUND: M83Resurrection Original Soundtrack —  (M83 Recording INC.)
 [UpcomingVinyl] FOUND: Maaayo/TezzKaze Ni Naru / Kimi Wo Nosete —  (Jet Set)
+[UpcomingVinyl] FOUND: MadameDisincanto —  (Universal Italy)
 [UpcomingVinyl] FOUND: Manu DibangoWaka Juju —  (Soul Makossa)
 [UpcomingVinyl] FOUND: ManualTrue Bypass (Teal) —  (Darla Records)
 [UpcomingVinyl] FOUND: Marc Mac Presents VisioneersDirty Old Hip Hop —  (Omniverse)
@@ -734,6 +782,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: One Thousand Motels2% Out Of Sync (Green Smoke) —  (Foad Records)
 [UpcomingVinyl] FOUND: OrdhBlind In Abyssal Realms —  (Pulverised Import)
 [UpcomingVinyl] FOUND: Oren AmbarchiHubris (10th Anniversary) —  (Black Truffle)
+[UpcomingVinyl] FOUND: Owen RieglingIn The Feeling —  (Universal Import)
 [UpcomingVinyl] FOUND: Ozuna & BeeleStendhal —  (Sony U.s. Latin)
 [UpcomingVinyl] FOUND: Paraiso: The True Spirit of Ibiza: Bonus Sampler 2Paraiso: The True Spirit Of Ibiza: Bonus Sampler 2 —  (Rebirth)
 [UpcomingVinyl] FOUND: ParliamentOsmium —  (Demon / Edsel)
@@ -776,6 +825,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: SasseChordal Motion —  (Tenampa)
 [UpcomingVinyl] FOUND: Satoshi Tomiie12B-Dub Part 3 —  (Phonogramme)
 [UpcomingVinyl] FOUND: Saturno 4000Arrival —  (Rumi Sounds)
+[UpcomingVinyl] FOUND: Se or CoconutEl Baile Aleman —  (Transamericas)
 [UpcomingVinyl] FOUND: SemprefreskiLive At Punkrock Raduno 13th July 2024 —  (Hey Suburbia)
 [UpcomingVinyl] FOUND: Septic FleshCommunion —  (Season Of Mist)
 [UpcomingVinyl] FOUND: SettingSetting —  (Thrill Jockey)
@@ -850,6 +900,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Various ArtistsMemory Garden: New Age For Old Worlds —  (Secrets of Sound)
 [UpcomingVinyl] FOUND: Various ArtistsQuite Essential —  (Quintessentials)
 [UpcomingVinyl] FOUND: Various ArtistsSafe Travels Sampler Compiled by Ariane V —  (Nervous)
+[UpcomingVinyl] FOUND: Various ArtistsSex: Craft Must Have Clothes —  (Universal UK)
 [UpcomingVinyl] FOUND: Various ArtistsTailored Cuts, Vol. 06 —  (Scissor & Thread)
 [UpcomingVinyl] FOUND: Various ArtistsTeachers Vol. 1 —  (Only Cuts)
 [UpcomingVinyl] FOUND: Warren WolfSmoove Vibes —  (Outside In Music)
@@ -875,8 +926,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zoot SimsPassion Flower — Zoot Sims Plays Duke Ellington (Analogue Prod.)
 [UpcomingVinyl] FOUND: 尾澤拓実Disney Twisted; Wonderland: The Animation (Episode Of Heartslabyul) —  (Universal Japan)
 [UpcomingVinyl] FOUND: 牛尾憲輔TV Anime Ikoku Nikk Original Soundtrack —  (Pony Canyon)
-[UpcomingVinyl] li>h2 approach found 430 entries
-[UpcomingVinyl] Got 507482 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 439 entries
+[UpcomingVinyl] Got 525956 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -891,95 +942,90 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3468 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3598 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 423
-[UpcomingVinyl] 423 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3609 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 432
+[UpcomingVinyl] 432 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3279 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 225 deals
-  Rollin Preorders: 11 deals
+  Rollin Preorders: 225 deals
   Sound of Vinyl: 222 deals
   uDiscover Music: 109 deals
   Fearless Records: 95 deals
-  Fearless Vinyl: 189 deals
+  Fearless Vinyl: 95 deals
   Rise Records: 76 deals
-  Rise All: 61 deals
-  Brooklyn Vegan: 206 deals
-  Revolver: 183 deals
+  Rise All: 76 deals
+  Brooklyn Vegan: 204 deals
+  Revolver: 181 deals
   Newbury Comics: 154 deals
-  Newbury Preorders: 1 deals
-  Craft Recordings: 75 deals
+  Newbury Preorders: 154 deals
+  Craft Recordings: 76 deals
   MNRK Heavy: 135 deals
   Equal Vision: 97 deals
   Rhino: 143 deals
-  Interscope Records: 143 deals
+  Interscope Records: 137 deals
   SharpTone Records: 96 deals
   Rock Metal Fan Nation: 209 deals
-  RMFN All: 205 deals
+  RMFN All: 209 deals
   Sumerian Records: 69 deals
   Solid State Records: 53 deals
-  Solid State Vinyl: 49 deals
+  Solid State Vinyl: 53 deals
   Pure Noise Records: 74 deals
   Hopeless Records: 58 deals
-  Hopeless Shopify: 58 deals
-  Smartpunk Records: 222 deals
-  Trust Records: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 81 deals
+  Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
+  Pirates Press Records: 80 deals
+  Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 0 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
-  Thriller Records: 44 deals
-  UNFD: 56 deals
-  Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 0 deals
-  Deep Discount: 46 deals
-  Millions of Records: 0 deals
-  IndieMerchstore: 112 deals
-  IndieMerchstore Preorders: 101 deals
+  Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
+  UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
+  Merchbar: SKIPPED (unknown type: html_store)
+  Hot Topic: SKIPPED (unknown type: html_store)
+  Deep Discount: SKIPPED (unknown type: html_store)
+  Millions of Records: SKIPPED (unknown type: html_store)
+  IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
+  IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 0 deals | pages: 5 | robot walls: 0
-  Target: 0 deals | pages: 2 | robot walls: 0 | api: no
+  Amazon: 1 items | pages: 5 | robot walls: 0
+  Target: 1 items | pages: 2 | robot walls: 0 | api: no
+  Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Brooklyn Vegan: 206
-Craft Recordings: 75
-Deep Discount: 46
+Amazon: 1
+Brooklyn Vegan: 204
+Craft Recordings: 76
 Equal Vision: 97
 Fearless Records: 95
-Fearless Vinyl: 188
+Fearless Vinyl: 95
 Hopeless Records: 58
-Hopeless Shopify: 58
-IndieMerchstore: 108
-IndieMerchstore Preorders: 95
-Interscope Records: 143
+Interscope Records: 137
 MNRK Heavy: 135
 Newbury Comics: 154
-Newbury Preorders: 1
+Newbury Preorders: 154
 Pirates Press Records: 67
 Pure Noise Records: 74
-r/VinylReleases: 50
-Revolver: 183
+r/VinylReleases: 45
+Revolver: 181
 Rhino: 143
-Rise All: 61
+Rise All: 76
 Rise Records: 76
-RMFN All: 204
+RMFN All: 209
 Rock Metal Fan Nation: 209
-Rollin Preorders: 11
+Rollin Preorders: 225
 Rollin Records: 225
 SharpTone Records: 95
-Smartpunk Records: 218
 Solid State Records: 47
-Solid State Vinyl: 43
+Solid State Vinyl: 47
 Sound of Vinyl: 220
 Sumerian Records: 67
-Thriller Records: 41
+Target: 1
 uDiscover Music: 109
-UNFD: 56
 Walmart: 1
