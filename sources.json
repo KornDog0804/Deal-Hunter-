@@ -1,64 +1,46 @@
 {
-  "stores": [
-    {
-      "name": "Amazon",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Walmart",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Target",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Best Buy",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "DeepDiscount",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Acoustic Sounds",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Merchbar",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "uDiscover Music",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Get On Down",
-      "enabled": true,
-      "type": "retailer"
-    },
-    {
-      "name": "Fearless Records",
-      "enabled": true,
-      "type": "label"
-    },
-    {
-      "name": "Rise Records",
-      "enabled": true,
-      "type": "label"
-    },
-    {
-      "name": "Sound of Vinyl",
-      "enabled": true,
-      "type": "alert_source"
-    }
+  "sources": [
+    {"name": "Rollin Records", "source_type": "shopify_store", "url": "https://rollinrecs.com/products.json"},
+    {"name": "Rollin Preorders", "source_type": "shopify_store", "url": "https://rollinrecs.com/collections/pre-orders/products.json"},
+    {"name": "Sound of Vinyl", "source_type": "shopify_store", "url": "https://thesoundofvinyl.us/products.json"},
+    {"name": "uDiscover Music", "source_type": "shopify_store", "url": "https://shop.udiscovermusic.com/products.json"},
+    {"name": "Fearless Records", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com/products.json"},
+    {"name": "Fearless Vinyl", "source_type": "shopify_store", "url": "https://store.fearlessrecords.com/collections/vinyl/products.json"},
+    {"name": "Rise Records", "source_type": "shopify_store", "url": "https://riserecords.com/products.json"},
+    {"name": "Rise All", "source_type": "shopify_store", "url": "https://riserecords.com/collections/all/products.json"},
+    {"name": "Brooklyn Vegan", "source_type": "shopify_store", "url": "https://shop.brooklynvegan.com/products.json"},
+    {"name": "Revolver", "source_type": "shopify_store", "url": "https://shop.revolvermag.com/products.json"},
+    {"name": "Newbury Comics", "source_type": "shopify_store", "url": "https://www.newburycomics.com/products.json"},
+    {"name": "Newbury Preorders", "source_type": "shopify_store", "url": "https://www.newburycomics.com/collections/pre-orders/products.json"},
+    {"name": "Craft Recordings", "source_type": "shopify_store", "url": "https://craftrecordings.com/products.json"},
+    {"name": "MNRK Heavy", "source_type": "shopify_store", "url": "https://mnrkheavy.com/products.json"},
+    {"name": "Equal Vision", "source_type": "shopify_store", "url": "https://equalvision.com/products.json"},
+    {"name": "Rhino", "source_type": "shopify_store", "url": "https://store.rhino.com/products.json"},
+    {"name": "Interscope Records", "source_type": "shopify_store", "url": "https://interscope.com/products.json"},
+    {"name": "SharpTone Records", "source_type": "shopify_store", "url": "https://sharptonerecords.co/products.json"},
+    {"name": "Rock Metal Fan Nation", "source_type": "shopify_store", "url": "https://rmfnvinyl.com/products.json"},
+    {"name": "RMFN All", "source_type": "shopify_store", "url": "https://rmfnvinyl.com/collections/all/products.json"},
+    {"name": "Sumerian Records", "source_type": "shopify_store", "url": "https://sumerianrecords.com/products.json"},
+    {"name": "Solid State Records", "source_type": "shopify_store", "url": "https://solidstaterecords.store/products.json"},
+    {"name": "Solid State Vinyl", "source_type": "shopify_store", "url": "https://solidstaterecords.store/collections/vinyl/products.json"},
+    {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com/products.json"},
+    {"name": "Hopeless Records", "source_type": "merchnow_store", "url": "https://hopelessrecords.merchnow.com/products.json"},
+    {"name": "Hopeless Shopify", "source_type": "shopify_store", "url": "https://hopelessrecords.shopifyapps.com/products.json"},
+    {"name": "Pirates Press Records", "source_type": "shopify_store", "url": "https://shop.piratespressrecords.com/products.json"},
+    {"name": "Smartpunk Records", "source_type": "shopify_store", "url": "https://smartpunkmerchandise.myshopify.com/products.json"},
+    {"name": "Spinefarm Records", "source_type": "merchnow_store", "url": "https://spinefarm.merchnow.com/products.json"},
+    {"name": "InVogue Records", "source_type": "merchnow_store", "url": "https://invoguerecords.merchnow.com/products.json"},
+    {"name": "Thriller Records", "source_type": "shopify_store", "url": "https://thrillervinyl.shopifyapps.com/products.json"},
+    {"name": "UNFD", "source_type": "shopify_store", "url": "https://unfdmusic.shop/products.json"},
+    {"name": "Merchbar", "source_type": "html_store", "url": "https://www.merchbar.com/rock-vinyl/new-vinyl-records"},
+    {"name": "Hot Topic", "source_type": "html_store", "url": "https://www.hottopic.com/shop/c/vinyl-records"},
+    {"name": "Deep Discount", "source_type": "html_store", "url": "https://www.deepdiscount.com/vinyl-records"},
+    {"name": "Millions of Records", "source_type": "html_store", "url": "https://www.millionsofonlinerecords.com"},
+    {"name": "IndieMerchstore", "source_type": "shopify_store", "url": "https://indiemerchandise.com/products.json"},
+    {"name": "IndieMerchstore Preorders", "source_type": "shopify_store", "url": "https://indiemerchandise.com/collections/preorders/products.json"},
+    {"name": "Walmart", "source_type": "walmart_catalog_source", "url": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481"},
+    {"name": "Amazon", "source_type": "amazon_catalog_source", "url": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931"},
+    {"name": "Target", "source_type": "target_catalog_source", "url": "https://www.target.com/s?searchTerm=vinyl+records"},
+    {"name": "Popsike", "source_type": "popsike_source", "url": "https://www.popsike.com/search/html"}
   ]
 }
