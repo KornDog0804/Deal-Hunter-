@@ -46,6 +46,392 @@ WALMART_BROWSE_URLS = [
     "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=3",
     "https://www.walmart.com/browse/rock-music-cd-vinyl/4104_4118?page=4",
 ]
+# ─────────────────────────────────────────────────────────────────
+# AMAZON + TARGET CATALOG SCRAPERS
+# Add these to your live_pull.py file, right after the Walmart functions
+# ─────────────────────────────────────────────────────────────────
+
+# ─── URLS ───────────────────────────────────────────────────────
+AMAZON_BROWSE_URLS = [
+    "https://www.amazon.com/Best-Sellers-Vinyl-Records/zgbs/music/71838931",
+    "https://www.amazon.com/Best-Sellers-Vinyl-Records/zgbs/music/71838931?pg=2",
+    "https://www.amazon.com/gp/new-releases/music/71838931",
+    "https://www.amazon.com/gp/new-releases/music/71838931?pg=2",
+    "https://www.amazon.com/gp/movers-and-shakers/music/71838931",
+    "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931",
+    "https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2",
+]
+
+TARGET_BROWSE_URLS = [
+    "https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter",
+    "https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter",
+    "https://www.target.com/s?searchTerm=vinyl+records&Nao=0",
+    "https://www.target.com/s?searchTerm=vinyl+records&Nao=24",
+]
+
+# ─── FETCH FUNCTIONS ────────────────────────────────────────────
+def amazon_fetch(url, retries=3, delay=2):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "identity",
+        "Upgrade-Insecure-Requests": "1",
+        "Referer": "https://www.amazon.com/",
+        "DNT": "1",
+        "Connection": "keep-alive",
+    }
+    return fetch(url, retries=retries, delay=delay, extra_headers=headers)
+
+
+def target_fetch(url, retries=3, delay=2):
+    is_api = "redsky.target.com" in url
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36",
+        "Accept": "application/json, text/html,*/*" if is_api else "text/html,application/xhtml+xml,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "identity",
+        "Referer": "https://www.target.com/",
+        "Origin": "https://www.target.com",
+        "DNT": "1",
+        "Connection": "keep-alive",
+    }
+    return fetch(url, retries=retries, delay=delay, extra_headers=headers)
+
+# ─── ROBOT WALL DETECTION ───────────────────────────────────────
+def amazon_robot_wall(page_html):
+    t = (page_html or "").lower()
+    return any(m in t for m in [
+        "to discuss automated access",
+        "sorry, we just need to make sure",
+        "enter the characters you see below",
+        "api-services-support@amazon.com",
+        "/captcha/", "robot check",
+    ])
+
+
+def target_robot_wall(page_html):
+    t = (page_html or "").lower()
+    return any(m in t for m in [
+        "access to this page has been denied",
+        "perimeterx", "px-captcha", "are you a human",
+    ])
+
+# ─── AMAZON EXTRACTION & BUILDER ────────────────────────────────
+def extract_amazon_candidates(page_html):
+    results = []
+    
+    # JSON-LD blocks
+    for block in re.findall(r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', page_html, re.S | re.I):
+        try:
+            data = json.loads(block)
+            items = data if isinstance(data, list) else [data]
+            for item in items:
+                name = item.get("name", "")
+                if name and looks_like_real_vinyl(name):
+                    url = item.get("url", "")
+                    asin_m = re.search(r'/dp/([A-Z0-9]{10})', url)
+                    asin = asin_m.group(1) if asin_m else ""
+                    price_obj = item.get("offers", {})
+                    price = normalize_price(price_obj.get("price", 0)) if isinstance(price_obj, dict) else 0.0
+                    results.append({
+                        "title": clean(name), "asin": asin,
+                        "link": f"https://www.amazon.com/dp/{asin}?tag={AMAZON_TAG}" if asin else url,
+                        "price": price, "image": ""
+                    })
+        except Exception:
+            pass
+    
+    # ASIN + title patterns
+    for pat in [
+        r'"asin"\s*:\s*"([A-Z0-9]{10})".*?"title"\s*:\s*"([^"]{4,250})"',
+        r'data-asin="([A-Z0-9]{10})"[^>]*>.*?(?:aria-label|alt)="([^"]{4,250})"',
+        r'/dp/([A-Z0-9]{10})[^"]*"[^>]*>.*?<span[^>]*>([^<]{4,250})</span>',
+    ]:
+        for groups in re.findall(pat, page_html, re.I | re.S):
+            asin, title = groups[0], groups[1]
+            title = clean(title)
+            if title and looks_like_real_vinyl(title):
+                results.append({
+                    "title": title, "asin": asin,
+                    "link": f"https://www.amazon.com/dp/{asin}?tag={AMAZON_TAG}",
+                    "price": 0.0, "image": ""
+                })
+    
+    # Span title fallback
+    for title in re.findall(r'<span[^>]*class="[^"]*(?:a-text-normal|a-size-base-plus|a-size-medium|zg-text-center-align)[^"]*"[^>]*>([^<]{10,250})</span>', page_html, re.I):
+        title = clean(title)
+        if title and looks_like_real_vinyl(title):
+            results.append({
+                "title": title, "asin": "",
+                "link": f"https://www.amazon.com/s?k={urllib.parse.quote_plus(title + ' vinyl')}&tag={AMAZON_TAG}",
+                "price": 0.0, "image": ""
+            })
+    
+    return results
+
+
+def build_amazon_catalog(source):
+    deals = []
+    seen = set()
+    robot_walls = 0
+    pages_hit = 0
+    
+    for url in AMAZON_BROWSE_URLS:
+        try:
+            time.sleep(random.uniform(1.0, 2.5))
+            page_html = amazon_fetch(url)
+            pages_hit += 1
+        except Exception as e:
+            log(f'Amazon: failed {url} | {e}')
+            continue
+        
+        if not page_html:
+            continue
+        
+        if amazon_robot_wall(page_html):
+            robot_walls += 1
+            log(f'Amazon: robot wall (CAPTCHA) on {url}')
+            continue
+        
+        candidates = extract_amazon_candidates(page_html)
+        log(f'Amazon: found {len(candidates)} candidate vinyl items')
+        
+        for c in candidates:
+            raw_title = c["title"]
+            if should_skip(raw_title, c["link"]):
+                continue
+            
+            key = raw_title.lower().strip()
+            if key in seen:
+                continue
+            seen.add(key)
+            
+            artist, album = "Unknown Artist", raw_title
+            if " - " in raw_title:
+                parts = raw_title.split(" - ", 1)
+                artist = parts[0].strip()
+                album = re.sub(r'\[.*?\]', '', parts[1].strip()).strip()
+            
+            if not artist_allowed(artist, album):
+                continue
+            
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "raw_title": raw_title,
+                "price": normalize_price(c.get("price", 0)),
+                "source": "Amazon",
+                "source_type": source["source_type"],
+                "link": c.get("link", ""),
+                "image": c.get("image", ""),
+                "keywords": keyword_hits(raw_title),
+                "deal_quality": "catalog",
+                "demand": "broad",
+                "format": "vinyl",
+                "version": "standard",
+                "availability_text": "",
+                "page_text_snippet": raw_title,
+            })
+    
+    if not deals and robot_walls >= max(1, pages_hit // 2):
+        log("Amazon: blocked, adding catalog portal fallback")
+        deals.append({
+            "artist": "Amazon",
+            "title": "Amazon Vinyl Records Catalog",
+            "raw_title": "Amazon Vinyl Records Catalog",
+            "price": 0.01,
+            "source": "Amazon",
+            "source_type": source["source_type"],
+            "link": f"https://www.amazon.com/b?node=71838931&tag={AMAZON_TAG}",
+            "image": "",
+            "keywords": ["vinyl", "catalog"],
+            "deal_quality": "catalog",
+            "demand": "broad",
+            "format": "vinyl",
+            "version": "catalog",
+            "availability_text": "",
+            "page_text_snippet": "Fallback Amazon vinyl catalog portal.",
+        })
+    
+    deduped = dedupe_source_items(deals)
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | pages: {pages_hit} | robot walls: {robot_walls}"
+    log(f'Amazon: kept {len(deduped)}')
+    return deduped
+
+# ─── TARGET EXTRACTION & BUILDER ────────────────────────────────
+def extract_target_candidates_from_api(json_text):
+    results = []
+    try:
+        data = json.loads(json_text)
+        products = data.get("data", {}).get("search", {}).get("products", [])
+        for product in products:
+            try:
+                item = product.get("item", product)
+                tcin = str(item.get("tcin", "") or product.get("tcin", ""))
+                title = item.get("product_description", {}).get("title", "") or product.get("title", "")
+                title = clean(title)
+                
+                if not title or not looks_like_real_vinyl(title):
+                    continue
+                
+                price_obj = product.get("price", {}) or item.get("price", {})
+                price = 0.0
+                if isinstance(price_obj, dict):
+                    price_str = price_obj.get("formatted_current_price", "0").replace("$", "").replace(",", "")
+                    price = normalize_price(price_str)
+                    if price <= 0:
+                        price = normalize_price(price_obj.get("current_retail", 0))
+                
+                link = f"https://www.target.com/p/-/A-{tcin}" if tcin else ""
+                results.append({
+                    "title": title,
+                    "tcin": tcin,
+                    "link": link,
+                    "price": price,
+                    "image": ""
+                })
+            except Exception:
+                continue
+    except Exception:
+        pass
+    return results
+
+
+def extract_target_candidates_from_html(page_html):
+    results = []
+    
+    # JSON blocks in HTML
+    for blob in re.findall(r'<script[^>]+type="application/json"[^>]*>(.*?)</script>', page_html, re.S):
+        try:
+            for tcin, title in re.findall(r'"tcin"\s*:\s*"(\d{6,10})".*?"title"\s*:\s*"([^"]{4,250})"', blob, re.I | re.S):
+                title = clean(title)
+                if title and looks_like_real_vinyl(title):
+                    results.append({
+                        "title": title,
+                        "tcin": tcin,
+                        "link": f"https://www.target.com/p/-/A-{tcin}",
+                        "price": 0.0,
+                        "image": ""
+                    })
+        except Exception:
+            pass
+    
+    # Link + title patterns
+    for tcin, title in re.findall(r'<a[^>]+href="/p/[^"]*-/A-(\d+)"[^>]*>([^<]{4,250})</a>', page_html, re.I):
+        title = clean(title)
+        if title and looks_like_real_vinyl(title):
+            results.append({
+                "title": title,
+                "tcin": tcin,
+                "link": f"https://www.target.com/p/-/A-{tcin}",
+                "price": 0.0,
+                "image": ""
+            })
+    
+    return results
+
+
+def build_target_catalog(source):
+    deals = []
+    seen = set()
+    robot_walls = 0
+    pages_hit = 0
+    api_success = False
+    
+    for url in TARGET_BROWSE_URLS:
+        try:
+            time.sleep(random.uniform(1.0, 2.0))
+            page_text = target_fetch(url)
+            pages_hit += 1
+        except Exception as e:
+            log(f'Target: failed {url} | {e}')
+            continue
+        
+        if not page_text:
+            continue
+        
+        if target_robot_wall(page_text):
+            robot_walls += 1
+            log(f'Target: robot wall on {url}')
+            continue
+        
+        is_api = "redsky.target.com" in url
+        if is_api:
+            candidates = extract_target_candidates_from_api(page_text)
+            if candidates:
+                api_success = True
+        else:
+            candidates = extract_target_candidates_from_html(page_text)
+        
+        log(f'Target: found {len(candidates)} candidate vinyl items')
+        
+        for c in candidates:
+            raw_title = c["title"]
+            if should_skip(raw_title, c["link"]):
+                continue
+            
+            key = raw_title.lower().strip()
+            if key in seen:
+                continue
+            seen.add(key)
+            
+            artist, album = "Unknown Artist", raw_title
+            if " - " in raw_title:
+                parts = raw_title.split(" - ", 1)
+                artist = parts[0].strip()
+                album = parts[1].strip()
+            
+            if not artist_allowed(artist, album):
+                continue
+            
+            deals.append({
+                "artist": artist,
+                "title": album,
+                "raw_title": raw_title,
+                "price": normalize_price(c.get("price", 0)),
+                "source": "Target",
+                "source_type": source["source_type"],
+                "link": c.get("link", ""),
+                "image": c.get("image", ""),
+                "keywords": keyword_hits(raw_title),
+                "deal_quality": "catalog",
+                "demand": "broad",
+                "format": "vinyl",
+                "version": "standard",
+                "availability_text": "",
+                "page_text_snippet": raw_title,
+            })
+    
+    if not deals and robot_walls >= max(1, pages_hit // 2):
+        log("Target: blocked, adding catalog portal fallback")
+        deals.append({
+            "artist": "Target",
+            "title": "Target Vinyl Records Catalog",
+            "raw_title": "Target Vinyl Records Catalog",
+            "price": 0.01,
+            "source": "Target",
+            "source_type": source["source_type"],
+            "link": "https://www.target.com/s?searchTerm=vinyl+records",
+            "image": "",
+            "keywords": ["vinyl", "catalog"],
+            "deal_quality": "catalog",
+            "demand": "broad",
+            "format": "vinyl",
+            "version": "catalog",
+            "availability_text": "",
+            "page_text_snippet": "Fallback Target vinyl catalog portal.",
+        })
+    
+    deduped = dedupe_source_items(deals)
+    SOURCE_STATUS[source["name"]] = f"{len(deduped)} deals | pages: {pages_hit} | robot walls: {robot_walls} | api: {'yes' if api_success else 'no'}"
+    log(f'Target: kept {len(deduped)}')
+    return deduped
+
+# ─────────────────────────────────────────────────────────────────
+# END AMAZON + TARGET SCRAPERS
+# ─────────────────────────────────────────────────────────────────
+
 
 HOT_TOPIC_SEARCH_URL = "https://www.hottopic.com/search?q=vinyl"
 MERCHBAR_SEARCH_URL = "https://www.merchbar.com/vinyl-records"
