@@ -80,6 +80,7 @@ SOURCES = [
     {"name": "Pure Noise Records", "source_type": "merchnow_store", "url": "https://purenoise.merchnow.com"},
     {"name": "Hopeless Records",      "source_type": "merchnow_store", "url": "https://hopelessrecords.merchnow.com"},
     {"name": "Hopeless Shopify",      "source_type": "shopify_store",  "url": "https://hopelessrecords.myshopify.com"},
+    {"name": "Smartpunk Records", "source_type": "shopify_store", "url": "https://smartpunk.com"},
     {"name": "Trust Records",         "source_type": "merchnow_store", "url": "https://trustrecords.merchnow.com"},
     {"name": "Pirates Press Records", "source_type": "shopify_store",  "url": "https://shop.piratespressrecords.com"},
     {"name": "Spinefarm Records",     "source_type": "merchnow_store", "url": "https://spinefarm.merchnow.com"},
