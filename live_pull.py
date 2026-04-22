@@ -1652,6 +1652,28 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 if __name__ == "__main__":
     data = build()
     data = apply_buyer_brain(data)
+    # Popsike valuation brain
+    try:
+        cache = load_popsike_cache(BASE / "popsike_cache.json")
+
+        candidates = evaluate_records_for_popsike(data)
+
+        if candidates:
+            log(f"[Popsike] {len(candidates)} records selected for value lookup")
+
+            data = enrich_candidates_with_lookup(
+                data,
+                candidates,
+                cache
+            )
+
+            save_popsike_cache(BASE / "popsike_cache.json", cache)
+
+        else:
+            log("[Popsike] No qualifying records today")
+
+    except Exception as e:
+        log(f"[Popsike] ERROR: {e}")
 
     # Reddit community drops
 
