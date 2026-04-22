@@ -14,7 +14,15 @@ except Exception as e:
     print(f"buyer_brain import failed: {e}")
     def apply_buyer_brain(data):
         return data
-
+try:
+    from popsike_brain import (
+        load_popsike_cache,
+        save_popsike_cache,
+        evaluate_records_for_popsike,
+        enrich_candidates_with_lookup,
+    )
+except Exception as e:
+    print(f"popsike_brain import failed: {e}")
 BASE = Path(__file__).resolve().parent
 
 USER_AGENTS = [
