@@ -25,6 +25,13 @@ try:
 except Exception as e:
     print(f"popsike_brain import failed: {e}")
 
+try:
+    from discogs_lookup_integration import enrich_candidates_with_discogs_lookup
+except Exception as e:
+    print(f"discogs_lookup_integration import failed: {e}")
+    def enrich_candidates_with_discogs_lookup(candidates, cache=None):
+        return candidates
+
 BASE = Path(__file__).resolve().parent
 
 def load_sources_from_json(json_file="sources.json"):
@@ -1992,26 +1999,37 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 if __name__ == "__main__":
     data = build()
     data = apply_buyer_brain(data)
+    
+    log("\n" + "=" * 50)
+    log("ENRICHING WITH DISCOGS MINT PRICING")
+    log("=" * 50)
+    
     try:
-        cache = load_popsike_cache(BASE / "popsike_cache.json")
-
-        candidates = evaluate_records_for_popsike(data)
-
-        if candidates:
-            log(f"[Popsike] {len(candidates)} records selected for value lookup")
-
-            data = enrich_candidates_with_lookup(
-                data,
-                candidates
-            )
-
-            save_popsike_cache(BASE / "popsike_cache.json", cache)
-
-        else:
-            log("[Popsike] No qualifying records today")
-
+        cache = {}
+        cache_file = BASE / "discogs_cache.json"
+        if cache_file.exists():
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    cache = json.load(f)
+                log(f"[Discogs] Loaded cache with {len(cache)} entries")
+            except Exception as e:
+                log(f"[Discogs] Cache load failed, starting fresh: {e}")
+                cache = {}
+        
+        vinyl_records = [d for d in data if d.get("format") == "vinyl"]
+        log(f"[Discogs] Enriching {len(vinyl_records)} vinyl records with Mint pricing...")
+        
+        data = enrich_candidates_with_discogs_lookup(vinyl_records, cache=cache)
+        
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2, ensure_ascii=False)
+        log(f"[Discogs] Cache saved ({len(cache)} entries)")
+        log(f"[Discogs] Enrichment complete!")
+        
     except Exception as e:
-        log(f"[Popsike] ERROR: {e}")
+        log(f"[Discogs] ERROR: {e}")
+        import traceback
+        log(traceback.format_exc())
 
     log("\n" + "=" * 50)
     log("SCRAPING r/VINYLRELEASES")
@@ -2048,6 +2066,11 @@ if __name__ == "__main__":
         source = deal.get("source", "")
         link = deal.get("link", "")
         image = deal.get("image", "")
+        
+        # NEW: Include Discogs data
+        discogs_mint = deal.get("discogs_mint_price", 0)
+        discogs_lowest = deal.get("discogs_lowest", 0)
+        discogs_num = deal.get("discogs_num_for_sale", 0)
 
         if not artist_allowed(artist, title):
             continue
@@ -2061,7 +2084,12 @@ if __name__ == "__main__":
             "source": source,
             "link": link,
             "image": image,
-            "score": deal.get("score", 0),
+            "score": deal.get("final_score", 0),
+            "lane": deal.get("final_lane", "PASS"),
+            # NEW: Discogs fields
+            "discogs_mint_price": discogs_mint,
+            "discogs_lowest": discogs_lowest,
+            "discogs_num_for_sale": discogs_num,
         })
 
     buy_signals.sort(key=lambda x: x.get("score", 0), reverse=True)
