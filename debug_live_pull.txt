@@ -35,7 +35,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 95
+Fearless Records: kept 96
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 95
+Fearless Vinyl: kept 96
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -57,7 +57,7 @@ Rise Records: kept 76
 ==================================================
 Scraping: Rise All (shopify_store)
 ==================================================
-  -> retry 1/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 1/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 503: Service Unavailable
   -> retry 2/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
@@ -100,17 +100,15 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 76
+Craft Recordings: kept 75
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
   -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  ✗ https://mnrkheavy.com/products.json?limit=250 -> HTTP Error 500: Internal Server Error
-  ✓ https://mnrkheavy.com/collections/all/products.json?limit=250 -> 250 products
+  ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 110
+MNRK Heavy: kept 135
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -124,14 +122,14 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 143
+Rhino: kept 145
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 137
+Interscope Records: kept 138
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -236,17 +234,17 @@ Scraping: Smartpunk Records (shopify_store)
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✗ https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 503: Service Unavailable
 Smartpunk Records: 0 products via Shopify JSON
 Smartpunk Records: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 503: Service Unavailable
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
 Smartpunk Records: HTML source failed | HTTP Error 404: Not Found
 
@@ -462,7 +460,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -923,7 +921,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 尾澤拓実Disney Twisted; Wonderland: The Animation (Episode Of Heartslabyul) —  (Universal Japan)
 [UpcomingVinyl] FOUND: 牛尾憲輔TV Anime Ikoku Nikk Original Soundtrack —  (Pony Canyon)
 [UpcomingVinyl] li>h2 approach found 439 entries
-[UpcomingVinyl] Got 525956 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 525824 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -947,7 +945,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 432
 [UpcomingVinyl] 432 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3241 buy signals saved to buy_signals.json
+[BuySignals] 3269 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -956,19 +954,19 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 225 deals
   Sound of Vinyl: 222 deals
   uDiscover Music: 106 deals
-  Fearless Records: 95 deals
-  Fearless Vinyl: 95 deals
+  Fearless Records: 96 deals
+  Fearless Vinyl: 96 deals
   Rise Records: 76 deals
   Rise All: 76 deals
   Brooklyn Vegan: 201 deals
   Revolver: 179 deals
   Newbury Comics: 154 deals
   Newbury Preorders: 154 deals
-  Craft Recordings: 76 deals
-  MNRK Heavy: 110 deals
+  Craft Recordings: 75 deals
+  MNRK Heavy: 135 deals
   Equal Vision: 92 deals
-  Rhino: 143 deals
-  Interscope Records: 137 deals
+  Rhino: 145 deals
+  Interscope Records: 138 deals
   SharpTone Records: 96 deals
   Rock Metal Fan Nation: 209 deals
   RMFN All: 209 deals
@@ -997,20 +995,20 @@ SOURCE STATUS SUMMARY
 ----- SOURCE SUMMARY -----
 Amazon: 12
 Brooklyn Vegan: 201
-Craft Recordings: 76
+Craft Recordings: 75
 Equal Vision: 92
-Fearless Records: 95
-Fearless Vinyl: 95
+Fearless Records: 96
+Fearless Vinyl: 96
 Hopeless Records: 58
-Interscope Records: 137
-MNRK Heavy: 110
+Interscope Records: 138
+MNRK Heavy: 135
 Newbury Comics: 154
 Newbury Preorders: 154
 Pirates Press Records: 67
 Pure Noise Records: 74
-r/VinylReleases: 45
+r/VinylReleases: 47
 Revolver: 179
-Rhino: 143
+Rhino: 145
 Rise All: 76
 Rise Records: 76
 RMFN All: 209
