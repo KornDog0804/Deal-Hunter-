@@ -1,22 +1,16 @@
-name: Deal Hunter
+name: Deal Hunter + Discogs Mint Pricing
 
 on:
   schedule:
-    - cron: '0 12 * * *'
-    - cron: '0 18 * * *'
-    - cron: '0 0 * * *'
+    - cron: "0 9,14,20 * * *"  # 9 AM, 2 PM, 8 PM Eastern
   workflow_dispatch:
 
 permissions:
   contents: write
-
-# Prevent overlapping runs from fighting over the same files
-concurrency:
-  group: deal-hunter
-  cancel-in-progress: false
+  actions: read
 
 jobs:
-  run-deal-hunter:
+  deal_hunter:
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -25,39 +19,35 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
-          pip install beautifulsoup4
+          pip install --break-system-packages beautifulsoup4 requests
 
-      - name: Run Deal Hunter
-        run: python live_pull.py
+      - name: Run Deal Hunter + Discogs Enrichment
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: |
+          cd $GITHUB_WORKSPACE
+          python3 live_pull.py
 
-      - name: Commit and push results
+      - name: Commit & push results
         run: |
           git config user.name "Deal Hunter Bot"
-          git config user.email "actions@github.com"
-          git add live_deals.json buy_signals.json upcoming_releases.json debug_live_pull.txt
+          git config user.email "deal-hunter@github.local"
+          git add -A
+          git commit -m "Deal Hunter run $(date -u '+%Y-%m-%d %H:%M:%S') UTC" || true
+          git push
 
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git commit -m "Deal Hunter run $(date -u '+%Y-%m-%d %H:%M UTC')"
-
-          # Retry push up to 3 times; on conflict, prefer our fresh scrape data
-          for i in 1 2 3; do
-            if git push origin main; then
-              echo "Push succeeded on attempt $i"
-              exit 0
-            fi
-            echo "Push failed on attempt $i, rebasing with fresh-data priority..."
-            git pull --rebase -X theirs origin main || git rebase --abort
-          done
-
-          echo "Exhausted retries, force-pushing fresh scrape"
-          git push --force-with-lease origin main
+      - name: Upload debug logs
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-logs-${{ github.run_id }}
+          path: |
+            debug_live_pull.txt
+            debug_price_lookup.txt
+          retention-days: 7
