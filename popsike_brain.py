@@ -296,4 +296,4 @@ if __name__ == "__main__":
         print(json.dumps(result, indent=2))
         
         # Rate limit between requests
-        time.sleep(2.0)   
+        time.sleep(2.0)
