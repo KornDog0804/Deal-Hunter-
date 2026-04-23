@@ -57,7 +57,7 @@ Rise Records: kept 76
 ==================================================
 Scraping: Rise All (shopify_store)
 ==================================================
-  -> retry 1/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://riserecords.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
@@ -105,7 +105,6 @@ Craft Recordings: kept 75
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 135
@@ -143,7 +142,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 209
+Rock Metal Fan Nation: kept 212
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +152,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 209
+RMFN All: kept 212
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -234,17 +233,17 @@ Scraping: Smartpunk Records (shopify_store)
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
 Smartpunk Records: 0 products via Shopify JSON
 Smartpunk Records: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json | HTTP Error 404: Not Found
 Smartpunk Records: HTML source failed | HTTP Error 404: Not Found
 
@@ -424,9 +423,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 39 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 12
+Amazon: found 37 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 11
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -448,8 +447,13 @@ Target: kept 1
 Scraping: Popsike (popsike_source)
 ==================================================
 Popsike: unknown source_type "popsike_source" - skipping
-[Popsike] 3 records selected for value lookup
-[Popsike] ERROR: 'base_score'
+
+==================================================
+ENRICHING WITH DISCOGS MINT PRICING
+==================================================
+[Discogs] Enriching 3286 vinyl records with Mint pricing...
+[Discogs] Cache saved (0 entries)
+[Discogs] Enrichment complete!
 
 ==================================================
 SCRAPING r/VINYLRELEASES
@@ -460,12 +464,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 391661 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 391679 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -921,7 +925,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 尾澤拓実Disney Twisted; Wonderland: The Animation (Episode Of Heartslabyul) —  (Universal Japan)
 [UpcomingVinyl] FOUND: 牛尾憲輔TV Anime Ikoku Nikk Original Soundtrack —  (Pony Canyon)
 [UpcomingVinyl] li>h2 approach found 439 entries
-[UpcomingVinyl] Got 525824 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 525956 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -945,7 +949,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 432
 [UpcomingVinyl] 432 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3269 buy signals saved to buy_signals.json
+[BuySignals] 3277 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -968,8 +972,8 @@ SOURCE STATUS SUMMARY
   Rhino: 145 deals
   Interscope Records: 138 deals
   SharpTone Records: 96 deals
-  Rock Metal Fan Nation: 209 deals
-  RMFN All: 209 deals
+  Rock Metal Fan Nation: 212 deals
+  RMFN All: 212 deals
   Sumerian Records: 70 deals
   Solid State Records: 53 deals
   Solid State Vinyl: 53 deals
@@ -989,11 +993,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 12 items | pages: 7 | robot walls: 0
+  Amazon: 11 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 12
+Amazon: 11
 Brooklyn Vegan: 201
 Craft Recordings: 75
 Equal Vision: 92
@@ -1006,13 +1010,13 @@ Newbury Comics: 154
 Newbury Preorders: 154
 Pirates Press Records: 67
 Pure Noise Records: 74
-r/VinylReleases: 47
+r/VinylReleases: 46
 Revolver: 179
 Rhino: 145
 Rise All: 76
 Rise Records: 76
-RMFN All: 209
-Rock Metal Fan Nation: 209
+RMFN All: 212
+Rock Metal Fan Nation: 212
 Rollin Preorders: 225
 Rollin Records: 225
 SharpTone Records: 95
