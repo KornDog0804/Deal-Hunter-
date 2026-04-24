@@ -14517,5 +14517,251 @@
     "match_confidence": 0.0,
     "match_reason": "no_search_results",
     "search_query": "Target Catalog Target Vinyl Records"
+  },
+  "Aesop Rock & Homeboy Sandman::Miami Lice: Season Four": {
+    "found": false,
+    "match_confidence": 0.3384615384615384,
+    "match_reason": "title_mismatch (56%)",
+    "search_query": "Aesop Rock & Homeboy Sandman Miami Lice: Season Four"
+  },
+  "Bilmuri::Kinda Hard (Indie Exclusive Colored Vinyl)": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Bilmuri Kinda Hard (Indie Exclusive Colored Vinyl)"
+  },
+  "Wolfmother::Rock Out (Indie Exclusive Yellow Vinyl)": {
+    "found": false,
+    "match_confidence": 0.16633663366336635,
+    "match_reason": "title_mismatch (28%)",
+    "search_query": "Wolfmother Rock Out (Indie Exclusive Yellow Vinyl)"
+  },
+  "Julia Cumming::Julia (Indie Exclusive Red Vinyl)": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Julia Cumming Julia (Indie Exclusive Red Vinyl)"
+  },
+  "M83::Resurrection (Original Soundtrack)": {
+    "found": true,
+    "match_confidence": 0.5513513513513514,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 1.03,
+    "discogs_mint_condition": "Lowest Listed",
+    "discogs_lowest": 1.03,
+    "discogs_num_for_sale": 4,
+    "discogs_release_id": 4205268,
+    "discogs_title_match": "M83 - Resurrection (Original Soundtrack)",
+    "search_query": "M83 Resurrection (Original Soundtrack)"
+  },
+  "A.G. Cook::The Moment (The Score)": {
+    "found": false,
+    "match_confidence": 0.46315789473684205,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 0.0,
+    "discogs_mint_condition": "No pricing",
+    "discogs_lowest": 0.0,
+    "discogs_num_for_sale": 0,
+    "discogs_release_id": 4205319,
+    "discogs_title_match": "A. G. Cook - The Moment (The Score)",
+    "search_query": "A.G. Cook The Moment (The Score)"
+  },
+  "Noah Kahan::The Great Divide": {
+    "found": false,
+    "match_confidence": 0.4266666666666667,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 0.0,
+    "discogs_mint_condition": "No pricing",
+    "discogs_lowest": 0.0,
+    "discogs_num_for_sale": 0,
+    "discogs_release_id": 37161384,
+    "discogs_title_match": "Noah Kahan - The Great Divide",
+    "search_query": "Noah Kahan The Great Divide"
+  },
+  "Silverchair::The Best of Vol.1": {
+    "found": false,
+    "match_confidence": 0.36,
+    "match_reason": "title_mismatch (60%)",
+    "search_query": "Silverchair The Best of Vol.1"
+  },
+  "Rage Against The Machine::Greatest Hits": {
+    "found": false,
+    "match_confidence": 0.2943396226415094,
+    "match_reason": "title_mismatch (49%)",
+    "search_query": "Rage Against The Machine Greatest Hits"
+  },
+  "Mobb Deep::Hell On Earth": {
+    "found": false,
+    "match_confidence": 0.4105263157894737,
+    "match_reason": "title_mismatch (68%)",
+    "search_query": "Mobb Deep Hell On Earth"
+  },
+  "Frank Ocean::Channel Orange (Alt Cover)": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Frank Ocean Channel Orange (Alt Cover)"
+  },
+  "Tyler, The Creator::The Grinch": {
+    "found": false,
+    "match_confidence": 0.2608695652173913,
+    "match_reason": "title_mismatch (43%)",
+    "search_query": "Tyler, The Creator The Grinch"
+  },
+  "Tyler, The Creator::Don't Tap The Glass": {
+    "found": false,
+    "match_confidence": 0.38644067796610165,
+    "match_reason": "title_mismatch (64%)",
+    "search_query": "Tyler, The Creator Don't Tap The Glass"
+  },
+  "Frank Ocean::Blond (Super Deluxe Edition)": {
+    "found": false,
+    "match_confidence": 0.48,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 0.0,
+    "discogs_mint_condition": "No pricing",
+    "discogs_lowest": 0.0,
+    "discogs_num_for_sale": 0,
+    "discogs_release_id": 34998284,
+    "discogs_title_match": "Frank Ocean - Blond (Super Deluxe Edition)",
+    "search_query": "Frank Ocean Blond (Super Deluxe Edition)"
+  },
+  "Blink-182::Dogs Eating Dogs (Colored Vinyl)": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Blink-182 Dogs Eating Dogs (Colored Vinyl)"
+  },
+  "Brent Faiyaz::Fuck The World (Colored Vinyl)": {
+    "found": false,
+    "match_confidence": 0.2847457627118644,
+    "match_reason": "title_mismatch (47%)",
+    "search_query": "Brent Faiyaz Fuck The World (Colored Vinyl)"
+  },
+  "Brent Faiyaz::Sonder Son (Colored Vinyl)": {
+    "found": false,
+    "match_confidence": 0.23529411764705882,
+    "match_reason": "title_mismatch (39%)",
+    "search_query": "Brent Faiyaz Sonder Son (Colored Vinyl)"
+  },
+  "Drake::Certified Lover Boy": {
+    "found": true,
+    "match_confidence": 0.49565217391304345,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 5.27,
+    "discogs_mint_condition": "Lowest Listed",
+    "discogs_lowest": 5.27,
+    "discogs_num_for_sale": 1,
+    "discogs_release_id": 2283283,
+    "discogs_title_match": "Drake - Certified Lover Boy",
+    "search_query": "Drake Certified Lover Boy"
+  },
+  "Marilyn Manson::Portrait Of An American Family": {
+    "found": true,
+    "match_confidence": 0.4675324675324675,
+    "match_reason": "artist_weak (0%)",
+    "discogs_mint_price": 91.31,
+    "discogs_mint_condition": "Lowest Listed",
+    "discogs_lowest": 91.31,
+    "discogs_num_for_sale": 1,
+    "discogs_release_id": 17936,
+    "discogs_title_match": "Marilyn Manson - Portrait Of An American Family",
+    "search_query": "Marilyn Manson Portrait Of An American Family"
+  },
+  "Marilyn Manson::Smells Like Children Colored Vinyl": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Marilyn Manson Smells Like Children Colored Vinyl"
+  },
+  "Drake::Nothing Was The Same": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Drake Nothing Was The Same"
+  },
+  "Frank Ocean::nostalgia, ULTRA.": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Frank Ocean nostalgia, ULTRA."
+  },
+  "Tool::Ænima Colored Vinyl": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Tool Ænima Colored Vinyl"
+  },
+  "Radiohead::Com Lag": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Radiohead Com Lag"
+  },
+  "ORCHARD::CANNIBAL CORPSE 'BUTCHERED AT BIRTH' LP (Red & Black Smoke Vinyl)": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "ORCHARD CANNIBAL CORPSE 'BUTCHERED AT BIRTH' LP (Red & Black Smoke Vinyl)"
+  },
+  "AFI::DECEMBERUNDERGROUND (Indie Exclusive, RSD Essential, Transparent Smoke Vinyl) [PREORDER]": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "AFI DECEMBERUNDERGROUND (Indie Exclusive, RSD Essential, Transparent Smoke Vinyl) [PREORDER]"
+  },
+  "State Champs::Clear w/ White Splatter LP": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "State Champs Clear w/ White Splatter LP"
+  },
+  "There's A Whole World Out There::Black Ice/Beer W/ Orange And White Splatter LP": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "There's A Whole World Out There Black Ice/Beer W/ Orange And White Splatter LP"
+  },
+  "Nothing Left To Love::Black Ice w/ White Splatter LP": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Nothing Left To Love Black Ice w/ White Splatter LP"
+  },
+  "Living Proof::Aqua Blue, Magenta, White Galaxy LP": {
+    "found": false,
+    "match_confidence": 0.1636363636363636,
+    "match_reason": "title_mismatch (27%)",
+    "search_query": "Living Proof Aqua Blue, Magenta, White Galaxy LP"
+  },
+  "Go to detail page for \"Hudson Hi-Fi Anti-Static Vinyl Record 250 Inner 250 Outer Sleeves::Ultimate LP Protection from Scratches, Dust & Dirt- Acid Free Thick Rice Paper.\" Eligible for Prime.": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Go to detail page for \"Hudson Hi-Fi Anti-Static Vinyl Record 250 Inner 250 Outer Sleeves Ultimate LP Protection from Scratches, Dust & Dirt- Acid Free Thick Rice Paper.\" Eligible for Prime."
+  },
+  "Go to detail page for \"Hudson Hi-Fi Anti-Static Vinyl Record Sleeves::Durable Clear Disc Sleeves- Protect Your LP Albums from Scratches, Dust & Dirt - Acid-Free Rice Paper Disc Covers, 250x Outer Sleeves.\" Eligible for Prime.": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Go to detail page for \"Hudson Hi-Fi Anti-Static Vinyl Record Sleeves Durable Clear Disc Sleeves- Protect Your LP Albums from Scratches, Dust & Dirt - Acid-Free Rice Paper Disc Covers, 250x Outer Sleeves.\" Eligible for Prime."
+  },
+  "Unknown Artist::The Great Divide[American Rust 2 LP]": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Unknown Artist The Great Divide[American Rust 2 LP]"
+  },
+  "Sponsored Ad::Emfogo Vinyl Record Frame, 3-Pack Album Frames for Vinyl Records Display, Record Frame for 12x12 Inch LP Co...": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Sponsored Ad Emfogo Vinyl Record Frame, 3-Pack Album Frames for Vinyl Records Display, Record Frame for 12x12 Inch LP Co..."
+  },
+  "Sponsored Ad::The Boxery 100 Pack - LP Strong Record Mailer Boxes - 12.5\" x 12.5\" x 1\" - Height-Adjustable - Perfect for ...": {
+    "found": false,
+    "match_confidence": 0.0,
+    "match_reason": "no_search_results",
+    "search_query": "Sponsored Ad The Boxery 100 Pack - LP Strong Record Mailer Boxes - 12.5\" x 12.5\" x 1\" - Height-Adjustable - Perfect for ..."
   }
 }
