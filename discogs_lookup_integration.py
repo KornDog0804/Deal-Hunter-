@@ -151,7 +151,7 @@ def discogs_fetch(endpoint: str) -> Tuple[Optional[Dict[str, Any]], Optional[Dic
     except urllib.error.HTTPError as e:
         if e.code == 429:
             print(f"[Discogs] Rate limited! Sleeping 30s...")
-            time.sleep(30)
+            time.sleep(10)
             return None, None
         if e.code == 404:
             return None, None
