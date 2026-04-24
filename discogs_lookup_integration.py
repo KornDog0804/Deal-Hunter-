@@ -8,10 +8,11 @@
 
 import urllib.request
 import urllib.error
+import urllib.parse
 import json
 import time
 import math
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 from datetime import datetime, timezone
 
 # Your token from environment or hardcoded (use env var in production!)
@@ -416,6 +417,3 @@ HOW TO USE IN live_pull.py:
    - final_score: updated with Discogs boost
    - final_lane: updated lane (TREASURE/BUY NOW/BUY LIGHT/WATCH/PASS)
 """
-
-import urllib.parse
-from typing import List
