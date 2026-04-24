@@ -1,9 +1,6 @@
 # =====================================================
 # DISCOGS REAL API LOOKUP INTEGRATION
-# For popsike_brain.py
-# =====================================================
-# Replace fake_popsike_lookup() and enrich_candidates_with_lookup()
-# with these real Discogs functions
+# With Match Validation - Filters Bad Matches
 # =====================================================
 
 import urllib.request
@@ -12,12 +9,17 @@ import urllib.parse
 import json
 import time
 import math
+import difflib
 from typing import Dict, Any, Optional, Tuple, List
 from datetime import datetime, timezone
 
 # Your token from environment or hardcoded (use env var in production!)
 DISCOGS_TOKEN = "pQZkNeqJhFJrNaYCiHkalTRbZIuqGqDohKryLQwk"
 DISCOGS_API_BASE = "https://api.discogs.com"
+
+# Match confidence thresholds
+MIN_TITLE_MATCH = 0.70  # 70% fuzzy match on title
+MIN_ARTIST_MATCH = 0.75  # 75% fuzzy match on artist
 
 # Rate limit tracking (60-second moving window)
 class DiscogRateLimiter:
@@ -48,6 +50,74 @@ class DiscogRateLimiter:
 
 
 _rate_limiter = DiscogRateLimiter()
+
+
+def fuzzy_match(source: str, target: str) -> float:
+    """
+    Calculate similarity ratio between two strings (0.0 to 1.0).
+    Higher = better match.
+    """
+    if not source or not target:
+        return 0.0
+    
+    # Normalize: lowercase, strip whitespace
+    s = str(source).lower().strip()
+    t = str(target).lower().strip()
+    
+    # Quick exact match
+    if s == t:
+        return 1.0
+    
+    # Fuzzy match using difflib
+    ratio = difflib.SequenceMatcher(None, s, t).ratio()
+    return ratio
+
+
+def validate_discogs_match(
+    source_artist: str,
+    source_title: str,
+    discogs_result: Dict[str, Any],
+) -> Tuple[bool, float, str]:
+    """
+    Validate if Discogs result matches the source record.
+    
+    Returns (is_valid, confidence, reason)
+    - is_valid: True if match is confident enough
+    - confidence: 0.0-1.0 score
+    - reason: human-readable explanation
+    """
+    if not discogs_result:
+        return False, 0.0, "no_result"
+    
+    discogs_title = discogs_result.get("title", "").strip()
+    discogs_artist = discogs_result.get("basic_information", {}).get("artists", [{}])[0].get("name", "").strip()
+    
+    if not discogs_title:
+        return False, 0.0, "no_title"
+    
+    # Title match is critical
+    title_match = fuzzy_match(source_title, discogs_title)
+    
+    # Artist match is secondary (helps validate)
+    artist_match = 1.0  # Default to high confidence if no artist provided
+    if source_artist:
+        artist_match = fuzzy_match(source_artist, discogs_artist)
+    
+    # Combined confidence: weight title higher (60%) than artist (40%)
+    combined_confidence = (title_match * 0.6) + (artist_match * 0.4)
+    
+    # Decision logic
+    if title_match < MIN_TITLE_MATCH:
+        reason = f"title_mismatch ({title_match:.0%})"
+        return False, combined_confidence, reason
+    
+    if source_artist and artist_match < MIN_ARTIST_MATCH:
+        reason = f"artist_weak ({artist_match:.0%})"
+        # Return True but with lower confidence (still valid, just weak artist match)
+        return True, combined_confidence, reason
+    
+    reason = "matched"
+    return True, combined_confidence, reason
 
 
 def discogs_fetch(endpoint: str) -> Tuple[Optional[Dict[str, Any]], Optional[Dict]]:
@@ -179,15 +249,18 @@ def extract_num_for_sale(release_data: Dict[str, Any]) -> int:
 
 def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Real Discogs lookup that pulls Mint condition pricing.
+    Real Discogs lookup with MATCH VALIDATION.
+    Only returns high-confidence matches.
     
     Returns dict with:
     {
         "found": bool,
-        "discogs_mint_price": float,      # Mint condition price
-        "discogs_mint_condition": str,    # Condition actually found (Mint, NM, VG+, etc)
-        "discogs_lowest": float,          # Lowest active listing
-        "discogs_num_for_sale": int,      # Number of copies listed
+        "match_confidence": float,      # 0.0-1.0
+        "match_reason": str,            # why match succeeded/failed
+        "discogs_mint_price": float,    # Only if found=True
+        "discogs_mint_condition": str,
+        "discogs_lowest": float,
+        "discogs_num_for_sale": int,
         "discogs_release_id": int,
         "search_query": str,
     }
@@ -198,6 +271,8 @@ def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     if not artist or not title:
         return {
             "found": False,
+            "match_confidence": 0.0,
+            "match_reason": "missing_metadata",
             "search_query": f"{artist} {title}".strip(),
         }
     
@@ -207,6 +282,22 @@ def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     if not search_result:
         return {
             "found": False,
+            "match_confidence": 0.0,
+            "match_reason": "no_search_results",
+            "search_query": f"{artist} {title}",
+        }
+    
+    # VALIDATE the match before proceeding
+    is_valid, confidence, reason = validate_discogs_match(
+        artist, title, search_result
+    )
+    
+    if not is_valid:
+        # Match confidence too low, reject this result
+        return {
+            "found": False,
+            "match_confidence": confidence,
+            "match_reason": reason,
             "search_query": f"{artist} {title}",
         }
     
@@ -214,6 +305,8 @@ def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     if not release_id:
         return {
             "found": False,
+            "match_confidence": confidence,
+            "match_reason": "no_release_id",
             "search_query": f"{artist} {title}",
         }
     
@@ -223,6 +316,8 @@ def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     if not release_data:
         return {
             "found": False,
+            "match_confidence": confidence,
+            "match_reason": "no_release_details",
             "discogs_release_id": release_id,
             "search_query": f"{artist} {title}",
         }
@@ -239,6 +334,8 @@ def real_discogs_lookup(record: Dict[str, Any]) -> Dict[str, Any]:
     
     return {
         "found": mint_price > 0 or lowest_price > 0,
+        "match_confidence": confidence,
+        "match_reason": reason,
         "discogs_mint_price": mint_price,
         "discogs_mint_condition": mint_condition or "No pricing",
         "discogs_lowest": lowest_price,
@@ -255,9 +352,7 @@ def enrich_candidates_with_discogs_lookup(
 ) -> List[Dict[str, Any]]:
     """
     Enrich all candidates with REAL Discogs Mint pricing.
-    
-    This replaces the fake Popsike stub. We're now pulling actual
-    market data from Discogs for every record.
+    Uses match validation to filter bad matches.
     """
     enriched_results: List[Dict[str, Any]] = []
     
@@ -278,7 +373,6 @@ def enrich_candidates_with_discogs_lookup(
         
         if cache and cache_key in cache:
             cached = cache[cache_key]
-            # For now, use cache without TTL check (you can add TTL if needed)
             discogs_result = cached
         else:
             # Do the real lookup
@@ -288,7 +382,7 @@ def enrich_candidates_with_discogs_lookup(
             if cache is not None:
                 cache[cache_key] = discogs_result
         
-        # Apply Discogs enrichment (replaces Popsike enrichment)
+        # Apply Discogs enrichment (with validation)
         enriched = apply_discogs_enrichment(candidate, base_result, discogs_result)
         merged = {**candidate, **enriched}
         enriched_results.append(merged)
@@ -307,12 +401,14 @@ def apply_discogs_enrichment(
 ) -> Dict[str, Any]:
     """
     Apply Discogs score boost to base score.
-    This replaces apply_popsike_enrichment() logic.
+    Only boosts if match confidence is high.
     """
     enriched = dict(base_result)
     enriched["discogs_checked"] = True
     enriched["discogs_found"] = discogs_result.get("found", False)
     enriched["discogs_boost"] = 0
+    enriched["discogs_match_confidence"] = discogs_result.get("match_confidence", 0.0)
+    enriched["discogs_match_reason"] = discogs_result.get("match_reason", "unknown")
     enriched["final_score"] = int(base_result["base_score"])
     enriched["final_lane"] = base_result["lane"]
     
@@ -324,7 +420,12 @@ def apply_discogs_enrichment(
     enriched["discogs_release_id"] = discogs_result.get("discogs_release_id", 0)
     
     if not discogs_result.get("found"):
-        enriched["discogs_reason"] = "no_match"
+        # No valid match found
+        return enriched
+    
+    # Only apply boost if confidence is reasonable
+    confidence = discogs_result.get("match_confidence", 0.0)
+    if confidence < 0.70:  # Too low, don't boost
         return enriched
     
     current_price = float(record.get("price", 0.0))
@@ -358,16 +459,16 @@ def apply_discogs_enrichment(
     elif num_for_sale <= 3:
         boost += 8  # Rare/scarce
     
-    # FRESHNESS (if Mint price recently established)
-    mint_condition = discogs_result.get("discogs_mint_condition", "")
-    if "Mint" in (mint_condition or ""):
-        boost += 5  # Mint data is more reliable
+    # CONFIDENCE MULTIPLIER
+    # High confidence (>0.85) = full boost
+    # Medium confidence (0.70-0.85) = 50% boost
+    if confidence < 0.85:
+        boost = int(boost * 0.5)
     
     final_score = int(base_result["base_score"] + boost)
     final_lane = lane_from_discogs_score(final_score)
     
     enriched["discogs_boost"] = boost
-    enriched["discogs_reason"] = "matched"
     enriched["final_score"] = final_score
     enriched["final_lane"] = final_lane
     
@@ -385,35 +486,3 @@ def lane_from_discogs_score(score: int) -> str:
     if score >= 40:
         return "WATCH"
     return "PASS"
-
-
-# =====================================================
-# INTEGRATION INSTRUCTIONS
-# =====================================================
-"""
-HOW TO USE IN live_pull.py:
-
-1. Import this module:
-   from discogs_lookup_integration import enrich_candidates_with_discogs_lookup, real_discogs_lookup
-
-2. In your main block, replace:
-
-   OLD:
-   data = enrich_candidates_with_lookup(data, candidates)
-
-   NEW:
-   try:
-       cache = load_popsike_cache(BASE / "discogs_cache.json")
-       data = enrich_candidates_with_discogs_lookup(candidates, cache=cache)
-       save_popsike_cache(BASE / "discogs_cache.json", cache)
-   except Exception as e:
-       log(f"[Discogs] Enrichment failed: {e}")
-
-3. In your results output, the enriched records now have:
-   - discogs_mint_price: actual Mint condition price
-   - discogs_mint_condition: which condition was found
-   - discogs_lowest: lowest active listing
-   - discogs_num_for_sale: supply signal
-   - final_score: updated with Discogs boost
-   - final_lane: updated lane (TREASURE/BUY NOW/BUY LIGHT/WATCH/PASS)
-"""
