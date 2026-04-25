@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 Build Discogs Cache - Enriches live_deals.json with Discogs marketplace data.
-Runs as a separate workflow to avoid timeout issues with main scraper.
+Includes rate limiting to respect Discogs API limits.
 """
 
 import os
 import json
+import time
 import requests
 from typing import Dict, List, Any
 from difflib import SequenceMatcher
@@ -13,6 +14,7 @@ from urllib.parse import quote
 
 DISCOGS_TOKEN = os.getenv('DISCOGS_TOKEN')
 DISCOGS_API_BASE = "https://api.discogs.com"
+REQUEST_DELAY = 1.5  # Delay between requests in seconds
 
 def fuzzy_match(s1: str, s2: str) -> float:
     """Returns similarity score 0.0-1.0."""
@@ -50,7 +52,7 @@ def get_discogs_marketplace_url(release_id: int, title: str) -> str:
     return f"https://www.discogs.com/release/{release_id}-{title_slug}"
 
 def search_discogs(artist: str, title: str) -> Dict[str, Any]:
-    """Search Discogs API for a record."""
+    """Search Discogs API for a record with rate limiting."""
     if not DISCOGS_TOKEN:
         print("⚠️  DISCOGS_TOKEN not set")
         return None
@@ -65,19 +67,50 @@ def search_discogs(artist: str, title: str) -> Dict[str, Any]:
             'per_page': 5
         }
         
+        time.sleep(REQUEST_DELAY)  # Rate limiting
+        
         resp = requests.get(url, params=params, timeout=10)
+        
+        if resp.status_code == 429:
+            print(f"⚠️  Rate limited by Discogs. Waiting 5 seconds...")
+            time.sleep(5)
+            resp = requests.get(url, params=params, timeout=10)
+        
         resp.raise_for_status()
         data = resp.json()
         
         if data.get('results'):
             return data['results'][0]
         return None
-    except Exception as e:
+    except requests.exceptions.RequestException as e:
         print(f"⚠️  Discogs search error for '{query}': {e}")
         return None
 
-def enrich_deal_with_discogs(deal: Dict, cache: Dict) -> Dict:
-    """Enrich a single deal with Discogs data."""
+def get_discogs_stats(release_id: int) -> Dict[str, Any]:
+    """Get Discogs marketplace stats with rate limiting."""
+    if not DISCOGS_TOKEN:
+        return {}
+    
+    try:
+        marketplace_url = f"{DISCOGS_API_BASE}/releases/{release_id}/stats"
+        
+        time.sleep(REQUEST_DELAY)  # Rate limiting
+        
+        resp = requests.get(marketplace_url, params={'token': DISCOGS_TOKEN}, timeout=10)
+        
+        if resp.status_code == 429:
+            print(f"⚠️  Rate limited by Discogs. Waiting 5 seconds...")
+            time.sleep(5)
+            resp = requests.get(marketplace_url, params={'token': DISCOGS_TOKEN}, timeout=10)
+        
+        resp.raise_for_status()
+        return resp.json()
+    except requests.exceptions.RequestException as e:
+        print(f"⚠️  Discogs stats error for release {release_id}: {e}")
+        return {}
+
+def enrich_deal_with_discogs(deal: Dict, cache: Dict, search_count: int) -> tuple:
+    """Enrich a single deal with Discogs data. Returns (updated_deal, new_search_count)."""
     artist = deal.get('artist', '')
     title = deal.get('title', '')
     cache_key = f"{artist}|{title}"
@@ -85,9 +118,10 @@ def enrich_deal_with_discogs(deal: Dict, cache: Dict) -> Dict:
     if cache_key in cache:
         cached_data = cache[cache_key]
         deal.update(cached_data)
-        return deal
+        return deal, search_count
     
     discogs_result = search_discogs(artist, title)
+    search_count += 1
     
     if not discogs_result:
         enriched = {
@@ -98,7 +132,7 @@ def enrich_deal_with_discogs(deal: Dict, cache: Dict) -> Dict:
         }
         deal.update(enriched)
         cache[cache_key] = enriched
-        return deal
+        return deal, search_count
     
     validation = validate_discogs_match(deal, discogs_result)
     
@@ -111,24 +145,14 @@ def enrich_deal_with_discogs(deal: Dict, cache: Dict) -> Dict:
         }
         deal.update(enriched)
         cache[cache_key] = enriched
-        return deal
+        return deal, search_count
     
-    try:
-        release_id = discogs_result.get('id')
-        marketplace_url = f"{DISCOGS_API_BASE}/releases/{release_id}/stats"
-        resp = requests.get(marketplace_url, params={'token': DISCOGS_TOKEN}, timeout=10)
-        resp.raise_for_status()
-        stats = resp.json()
-        
-        mint_price = stats.get('price', {}).get('value', 0)
-        lowest_price = stats.get('lowest_price', {}).get('value', 0)
-        num_for_sale = stats.get('num_for_sale', 0)
-        
-    except Exception as e:
-        print(f"⚠️  Discogs stats error: {e}")
-        mint_price = 0
-        lowest_price = 0
-        num_for_sale = 0
+    release_id = discogs_result.get('id')
+    stats = get_discogs_stats(release_id)
+    
+    mint_price = stats.get('price', {}).get('value', 0) if stats else 0
+    lowest_price = stats.get('lowest_price', {}).get('value', 0) if stats else 0
+    num_for_sale = stats.get('num_for_sale', 0) if stats else 0
     
     discogs_url = get_discogs_marketplace_url(
         discogs_result.get('id'),
@@ -148,11 +172,12 @@ def enrich_deal_with_discogs(deal: Dict, cache: Dict) -> Dict:
     deal.update(enriched)
     cache[cache_key] = enriched
     
-    return deal
+    return deal, search_count
 
 def main():
     """Main function to build Discogs cache."""
-    print("🎯 Starting Discogs Cache Builder...")
+    print("🎯 Starting Discogs Cache Builder (with rate limiting)...")
+    print(f"   Request delay: {REQUEST_DELAY}s between API calls\n")
     
     if not DISCOGS_TOKEN:
         print("❌ DISCOGS_TOKEN environment variable not set!")
@@ -181,13 +206,18 @@ def main():
     
     # Enrich deals
     enriched_count = 0
+    search_count = 0
+    start_time = time.time()
+    
     for i, deal in enumerate(deals):
-        enrich_deal_with_discogs(deal, cache)
+        deal, search_count = enrich_deal_with_discogs(deal, cache, search_count)
         if deal.get('discogs_found'):
             enriched_count += 1
         
-        if (i + 1) % 100 == 0:
-            print(f"⏳ Processed {i + 1}/{len(deals)} deals...")
+        if (i + 1) % 50 == 0:
+            elapsed = time.time() - start_time
+            rate = (i + 1) / elapsed if elapsed > 0 else 0
+            print(f"⏳ Processed {i + 1}/{len(deals)} deals... ({rate:.1f} deals/sec, {search_count} API searches)")
     
     # Save enriched deals
     try:
@@ -207,10 +237,14 @@ def main():
         print(f"❌ Failed to save discogs_cache.json: {e}")
         return
     
+    total_time = time.time() - start_time
+    
     print(f"\n🎉 Discogs enrichment complete!")
     print(f"   Total deals: {len(deals)}")
-    print(f"   Enriched: {enriched_count}")
+    print(f"   Enriched with Discogs: {enriched_count}")
+    print(f"   New API searches: {search_count}")
     print(f"   Cache size: {len(cache)}")
+    print(f"   Total time: {total_time:.1f}s")
 
 if __name__ == '__main__':
     main()
