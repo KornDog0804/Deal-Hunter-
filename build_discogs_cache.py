@@ -144,8 +144,8 @@ def enrich_deal(deal: Dict, cache: Dict) -> tuple:
     num_for_sale = stats.get('num_for_sale', 0) if stats else 0
     
     discogs_url = get_discogs_marketplace_url(
-        discogs_result=result.get('id'),
-        title=result.get('title', '')
+        result.get('id'),
+        result.get('title', '')
     )
     
     enriched = {
