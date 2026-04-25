@@ -2,6 +2,7 @@
 """
 Build Discogs Cache - Enriches live_deals.json with Discogs marketplace data.
 Includes rate limiting to respect Discogs API limits.
+RELAXED thresholds for better match coverage.
 """
 
 import os
@@ -25,7 +26,7 @@ def fuzzy_match(s1: str, s2: str) -> float:
     return SequenceMatcher(None, s1, s2).ratio()
 
 def validate_discogs_match(source_data: Dict, discogs_result: Dict) -> Dict:
-    """Validate Discogs match against source data."""
+    """Validate Discogs match against source data. RELAXED thresholds."""
     source_title = (source_data.get('title') or "").lower().strip()
     source_artist = (source_data.get('artist') or "").lower().strip()
     
@@ -36,7 +37,9 @@ def validate_discogs_match(source_data: Dict, discogs_result: Dict) -> Dict:
     artist_match = fuzzy_match(source_artist, discogs_artist)
     
     confidence = (title_match * 0.6) + (artist_match * 0.4)
-    is_valid = (title_match >= 0.70 and artist_match >= 0.75) or confidence >= 0.80
+    
+    # RELAXED thresholds: 60% title + 65% artist, OR 70% combined
+    is_valid = (title_match >= 0.60 and artist_match >= 0.65) or confidence >= 0.70
     
     return {
         'is_valid': is_valid,
@@ -176,8 +179,9 @@ def enrich_deal_with_discogs(deal: Dict, cache: Dict, search_count: int) -> tupl
 
 def main():
     """Main function to build Discogs cache."""
-    print("🎯 Starting Discogs Cache Builder (with rate limiting)...")
-    print(f"   Request delay: {REQUEST_DELAY}s between API calls\n")
+    print("🎯 Starting Discogs Cache Builder (RELAXED matching)...")
+    print(f"   Request delay: {REQUEST_DELAY}s between API calls")
+    print(f"   Thresholds: 60% title + 65% artist, OR 70% combined\n")
     
     if not DISCOGS_TOKEN:
         print("❌ DISCOGS_TOKEN environment variable not set!")
@@ -217,7 +221,7 @@ def main():
         if (i + 1) % 50 == 0:
             elapsed = time.time() - start_time
             rate = (i + 1) / elapsed if elapsed > 0 else 0
-            print(f"⏳ Processed {i + 1}/{len(deals)} deals... ({rate:.1f} deals/sec, {search_count} API searches)")
+            print(f"⏳ Processed {i + 1}/{len(deals)} deals... (Enriched: {enriched_count}, {rate:.1f} deals/sec)")
     
     # Save enriched deals
     try:
