@@ -1,0 +1,44 @@
+name: Discogs Cache Builder (3x Daily)
+
+on:
+  schedule:
+    - cron: '0 14,20,1 * * *'  # 8 AM, 2 PM, 7 PM Central Time daily
+  workflow_dispatch:
+
+jobs:
+  build-discogs-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Build Discogs cache
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: |
+          python build_discogs_cache.py
+
+      - name: Commit and push results
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Discogs cache - $(date -u +'%Y-%m-%d %H:%M:%S UTC')" && git push origin main)
+        continue-on-error: true
