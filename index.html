@@ -39,6 +39,9 @@
     .deal-actions-with-discogs{display:flex;gap:8px;flex-direction:column}
     .btn-discogs{background:rgba(51,51,51,.2);color:#999;border:1px solid rgba(51,51,51,.3)}
     .btn-discogs:hover{background:rgba(51,51,51,.35);color:#bbb}
+    .shuffle-btn{background:rgba(76,175,80,.15);color:#4caf50;border:1px solid rgba(76,175,80,.3);font-weight:700;padding:8px 12px;border-radius:6px;text-transform:uppercase;font-size:11px;letter-spacing:.5px;cursor:pointer;transition:all 0.2s}
+    .shuffle-btn:hover{background:rgba(76,175,80,.25);color:#66bb6a}
+    .shuffle-btn.active{background:rgba(76,175,80,.3);color:#81c784;box-shadow:0 0 8px rgba(76,175,80,.4)}
   </style>
 </head>
 <body>
@@ -66,14 +69,14 @@
     <div class="summary"><div class="chip" id="dealCount">Records: 0</div><div class="chip">Live from GitHub</div><button class="chip chip-button" id="pageStatus" type="button">Page 1</button></div>
     <div id="topPageNav" class="top-page-nav" style="display:none;"><div class="top-page-nav-inner"><div id="topPageNumbers" class="page-numbers"></div><div class="page-jump-wrap"><input id="topPageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" /><button class="btn btn-ghost" id="topPageJumpBtn">Go</button></div></div></div>
     <section class="section">
-      <div class="section-head"><h2 class="section-title">All Live Records</h2><div class="section-note">Brain-scored vinyl wall. Filter by decision, source, or dig manually.</div></div>
+      <div class="section-head"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><h2 class="section-title">All Live Records</h2><button id="shuffleBtn" class="shuffle-btn" title="Randomize record order">🎲 Shuffle</button></div><div class="section-note">Brain-scored vinyl wall. Filter by decision, source, or dig manually.</div></div>
       <div id="dealList" class="deal-list"></div>
       <div class="pager" id="pager"><button class="btn btn-ghost" id="prevPageBtn">Previous</button><div id="pageNumbers" class="page-numbers"></div><div class="page-jump-wrap"><input id="pageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" /><button class="btn btn-ghost" id="pageJumpBtn">Go</button></div><button class="btn btn-ghost" id="nextPageBtn">Next</button></div>
     </section>
     <div class="footer-note">Disclosure: As an Amazon Associate, I earn from qualifying purchases.<br/>Korndog Deal Board &mdash; Buyer Brain powered.</div>
   </main>
 <script>
-let allDeals=[],activeQuickFilter="all",currentPage=1;const DEALS_PER_PAGE=24;
+let allDeals=[],activeQuickFilter="all",currentPage=1,shuffleMode=false;const DEALS_PER_PAGE=24;
 function escapeHtml(v){return String(v??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
 function safeNumber(v,fb=0){const n=Number(v);return Number.isFinite(n)?n:fb}
 function normalizeText(v){return String(v??"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim()}
@@ -132,11 +135,15 @@ function renderPageNumberSet(id,total){const c=document.getElementById(id);if(!c
 function renderPageNumbers(t){renderPageNumberSet("pageNumbers",t);renderPageNumberSet("topPageNumbers",t)}
 
 function getFilteredDeals(){
-  const sv=normalizeSourceKey(document.getElementById("sourceFilter").value),search=normalizeText(document.getElementById("searchInput").value);
-  return allDeals.filter(d=>normalizeText(d.format||"vinyl")==="vinyl").filter(d=>{if(!sv)return true;return normalizeSourceKey(d.source||"")===sv})
-    .filter(d=>{const q=activeQuickFilter;if(q==="all")return true;if(q==="buynow")return(d.decision||"").toUpperCase()==="BUY NOW";if(q==="buylight")return(d.decision||"").toUpperCase()==="BUY LIGHT";if(q==="watch")return(d.decision||"").toUpperCase()==="WATCH";if(q==="discogs")return d.discogs_found===true;if(q==="under30")return safeNumber(d.price)>0&&safeNumber(d.price)<30;if(q==="reddit")return normalizeSourceKey(d.source||"")==="reddit";if(q==="amazon")return normalizeSourceKey(d.source||"")==="amazon";if(q==="walmart")return normalizeSourceKey(d.source||"")==="walmart";if(q==="target")return normalizeSourceKey(d.source||"")==="target";if(q==="deepdiscount")return normalizeSourceKey(d.source||"")==="deep discount";return true})
-    .filter(d=>{if(!search)return true;return getSearchBlob(d).includes(search)})
-    .sort((a,b)=>{const sa=safeNumber(a.buy_score,0),sb=safeNumber(b.buy_score,0);if(sa!==sb)return sb-sa;return normalizeText(a.artist||"").localeCompare(normalizeText(b.artist||""))});
+  let deals=allDeals.filter(d=>normalizeText(d.format||"vinyl")==="vinyl");
+  const sv=normalizeSourceKey(document.getElementById("sourceFilter").value);
+  if(sv)deals=deals.filter(d=>normalizeSourceKey(d.source||"")===sv);
+  const search=normalizeText(document.getElementById("searchInput").value);
+  deals=deals.filter(d=>{if(!search)return true;return getSearchBlob(d).includes(search)});
+  const q=activeQuickFilter;
+  deals=deals.filter(d=>{if(q==="all")return true;if(q==="buynow")return(d.decision||"").toUpperCase()==="BUY NOW";if(q==="buylight")return(d.decision||"").toUpperCase()==="BUY LIGHT";if(q==="watch")return(d.decision||"").toUpperCase()==="WATCH";if(q==="discogs")return d.discogs_found===true;if(q==="under30")return safeNumber(d.price)>0&&safeNumber(d.price)<30;if(q==="reddit")return normalizeSourceKey(d.source||"")==="reddit";if(q==="amazon")return normalizeSourceKey(d.source||"")==="amazon";if(q==="walmart")return normalizeSourceKey(d.source||"")==="walmart";if(q==="target")return normalizeSourceKey(d.source||"")==="target";if(q==="deepdiscount")return normalizeSourceKey(d.source||"")==="deep discount";return true});
+  if(shuffleMode){deals=[...deals].sort(()=>Math.random()-0.5)}else{deals.sort((a,b)=>{const sa=safeNumber(a.buy_score,0),sb=safeNumber(b.buy_score,0);if(sa!==sb)return sb-sa;return normalizeText(a.artist||"").localeCompare(normalizeText(b.artist||""))})}
+  return deals;
 }
 function populateSourceFilter(){const sel=document.getElementById("sourceFilter");const src=new Map();allDeals.forEach(d=>{const r=(d.source||"").trim();if(!r)return;const k=normalizeSourceKey(r),l=prettifySourceName(r);if(k&&!src.has(k))src.set(k,l)});const sorted=[...src.entries()].map(([v,l])=>({value:v,label:l})).sort((a,b)=>a.label.localeCompare(b.label));sel.innerHTML=`<option value="">All sources</option>`+sorted.map(s=>`<option value="${escapeHtml(s.value)}">${escapeHtml(s.label)}</option>`).join("")}
 function renderDeals(deals){const dl=document.getElementById("dealList"),pg=document.getElementById("pager"),ps=document.getElementById("pageStatus");dl.innerHTML="";if(!deals.length){dl.innerHTML=`<div class="empty">No records found.</div>`;pg.style.display="none";ps.textContent="Page 0";renderPageNumbers(0);toggleTopPageNav(false);return}const tp=Math.max(1,Math.ceil(deals.length/DEALS_PER_PAGE));if(currentPage>tp)currentPage=1;const start=(currentPage-1)*DEALS_PER_PAGE;deals.slice(start,start+DEALS_PER_PAGE).forEach(d=>dl.appendChild(createDealCard(d)));pg.style.display=tp>1?"flex":"none";ps.textContent=`Page ${currentPage} / ${tp}`;document.getElementById("prevPageBtn").disabled=currentPage===1;document.getElementById("nextPageBtn").disabled=currentPage===tp;renderPageNumbers(tp)}
@@ -146,13 +153,14 @@ function initQuickFilters(){document.querySelectorAll(".filter-chip").forEach(c=
 function getTotalPageCount(){return Math.max(1,Math.ceil(getFilteredDeals().length/DEALS_PER_PAGE))}
 function jumpToPage(id="pageJumpInput"){const inp=document.getElementById(id);let p=Number(inp.value||0);if(!p||p<1)return;const t=getTotalPageCount();if(p>t)p=t;currentPage=p;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"});inp.value=""}
 function initPager(){document.getElementById("prevPageBtn").addEventListener("click",()=>{if(currentPage>1){currentPage--;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"})}});document.getElementById("nextPageBtn").addEventListener("click",()=>{if(currentPage<getTotalPageCount()){currentPage++;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"})}});document.getElementById("pageJumpBtn").addEventListener("click",()=>jumpToPage("pageJumpInput"));document.getElementById("topPageJumpBtn").addEventListener("click",()=>jumpToPage("topPageJumpInput"));document.getElementById("pageJumpInput").addEventListener("keydown",e=>{if(e.key==="Enter")jumpToPage("pageJumpInput")});document.getElementById("topPageJumpInput").addEventListener("keydown",e=>{if(e.key==="Enter")jumpToPage("topPageJumpInput")});document.getElementById("pageStatus").addEventListener("click",()=>toggleTopPageNav())}
+function initShuffle(){const btn=document.getElementById("shuffleBtn");btn.addEventListener("click",()=>{shuffleMode=!shuffleMode;btn.classList.toggle("active",shuffleMode);currentPage=1;applyFilters(false);window.scrollTo({top:0,behavior:"smooth"})})}
 function openMenu(){document.getElementById("sideMenu").classList.add("open");document.getElementById("menuBackdrop").classList.add("open");document.getElementById("sideMenu").setAttribute("aria-hidden","false")}
 function closeMenu(){document.getElementById("sideMenu").classList.remove("open");document.getElementById("menuBackdrop").classList.remove("open");document.getElementById("sideMenu").setAttribute("aria-hidden","true")}
 function initMenu(){document.getElementById("menuToggle").addEventListener("click",openMenu);document.getElementById("menuClose").addEventListener("click",closeMenu);document.getElementById("menuBackdrop").addEventListener("click",closeMenu)}
 async function init(){try{console.log("Fetching live_deals.json from Deal-Hunter- repo...");const r=await fetch("https://raw.githubusercontent.com/KornDog0804/Deal-Hunter-/main/live_deals.json");if(!r.ok){console.error("Fetch failed:",r.status);document.getElementById("dealList").innerHTML=`<div class="empty">Could not load live_deals.json (${r.status}).</div>`;return}allDeals=await r.json();console.log("Loaded",allDeals.length,"deals");if(!Array.isArray(allDeals))allDeals=[];populateSourceFilter();applyFilters(true)}catch(e){console.error("Error loading deals:",e);document.getElementById("dealList").innerHTML=`<div class="empty">Error loading deals. Check console for details.</div>`}}
 document.getElementById("sourceFilter").addEventListener("change",()=>{applyFilters(true);toggleTopPageNav(false);closeMenu()});
 document.getElementById("searchInput").addEventListener("input",()=>applyFilters(true));
-initQuickFilters();initPager();initMenu();init();
+initQuickFilters();initPager();initShuffle();initMenu();init();
 </script>
 </body>
 </html>
