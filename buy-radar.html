@@ -34,6 +34,55 @@
             margin-bottom: 24px;
         }
         
+        .search-section {
+            max-width: 1400px;
+            margin: 0 auto 24px;
+            display: flex;
+            gap: 12px;
+            padding: 0 8px;
+            flex-wrap: wrap;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #7fd41a;
+            background: #222;
+        }
+        
+        .search-input::placeholder {
+            color: #666;
+        }
+        
+        .source-dropdown {
+            padding: 10px 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-width: 150px;
+        }
+        
+        .source-dropdown:focus {
+            outline: none;
+            border-color: #7fd41a;
+            background: #222;
+        }
+        
         .filter-section {
             max-width: 1400px;
             margin: 0 auto 32px;
@@ -83,7 +132,6 @@
             border-radius: 8px;
             padding: 16px;
             transition: all 0.3s;
-            cursor: pointer;
         }
         
         .card:hover {
@@ -274,6 +322,7 @@
             gap: 16px;
             font-size: 12px;
             color: #999;
+            flex-wrap: wrap;
         }
         
         @media (max-width: 768px) {
@@ -284,6 +333,15 @@
             h1 {
                 font-size: 32px;
             }
+            
+            .search-section {
+                flex-direction: column;
+            }
+            
+            .search-input,
+            .source-dropdown {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -293,6 +351,13 @@
         <div class="section-note">Private sourcing radar. Buy faster, flip smarter, waste less time.</div>
     </header>
     
+    <div class="search-section">
+        <input type="text" class="search-input" id="search-input" placeholder="Search artist, title, or source...">
+        <select class="source-dropdown" id="source-filter">
+            <option value="">All Sources</option>
+        </select>
+    </div>
+    
     <div class="filter-section">
         <button class="filter-chip active" data-quick="all">All</button>
         <button class="filter-chip" data-quick="sniper">Sniper Only</button>
@@ -301,10 +366,6 @@
         <button class="filter-chip" data-quick="fastflip">Fast Flip</button>
         <button class="filter-chip" data-quick="under30">Under $30</button>
         <button class="filter-chip" data-quick="discogs">Discogs Priced</button>
-        <button class="filter-chip" data-quick="amazon">Amazon</button>
-        <button class="filter-chip" data-quick="walmart">Walmart</button>
-        <button class="filter-chip" data-quick="target">Target</button>
-        <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
     </div>
     
     <div class="stats">
@@ -320,6 +381,8 @@
         
         let allDeals = [];
         let currentFilter = 'all';
+        let searchText = '';
+        let selectedSource = '';
         
         function safeNumber(val, fallback = 0) {
             const num = parseFloat(val);
@@ -337,28 +400,12 @@
         }
         
         function getDealLink(d) {
-            const keys = [
-                "link",
-                "url",
-                "product_url",
-                "store_url",
-                "purchase_url",
-                "source_url",
-                "reddit_url"
-            ];
-        
+            const keys = ["link", "url", "product_url", "store_url", "purchase_url", "source_url", "reddit_url"];
             for (const key of keys) {
                 const v = String(d[key] || "").trim();
                 if (v.startsWith("http")) return v;
             }
-        
-            const blob = [
-                d.raw_title,
-                d.page_text_snippet,
-                d.source_text,
-                d.description
-            ].join(" ");
-        
+            const blob = [d.raw_title, d.page_text_snippet, d.source_text, d.description].join(" ");
             const match = blob.match(/https?:\/\/[^\s"'<>]+/);
             return match ? match[0] : "";
         }
@@ -384,20 +431,34 @@
             if (q === 'fastflip') return normalizeText(d.turn_speed || '').includes('fast') || normalizeText(d.turn_speed || '').includes('quick');
             if (q === 'under30') return safeNumber(d.price, 0) < 30;
             if (q === 'discogs') return d.discogs_found === true;
-            if (q === 'amazon') return normalizeText(d.source || '').includes('amazon');
-            if (q === 'walmart') return normalizeText(d.source || '').includes('walmart');
-            if (q === 'target') return normalizeText(d.source || '').includes('target');
-            if (q === 'deepdiscount') return normalizeText(d.source || '').includes('deep discount');
             return true;
         }
         
+        function matchesSearch(d, search) {
+            if (!search) return true;
+            const query = normalizeText(search);
+            const artist = normalizeText(d.artist || '');
+            const title = normalizeText(d.title || '');
+            const source = normalizeText(d.source || '');
+            return artist.includes(query) || title.includes(query) || source.includes(query);
+        }
+        
+        function matchesSource(d, source) {
+            if (!source) return true;
+            return normalizeText(d.source || '') === normalizeText(source);
+        }
+        
         function renderBoard() {
-            const filtered = allDeals.filter(d => matchesFilter(d, currentFilter));
+            const filtered = allDeals.filter(d => 
+                matchesFilter(d, currentFilter) && 
+                matchesSearch(d, searchText) &&
+                matchesSource(d, selectedSource)
+            );
             const board = document.getElementById('board');
             board.innerHTML = '';
             
             if (filtered.length === 0) {
-                board.innerHTML = '<div class="no-results">No records match this filter.</div>';
+                board.innerHTML = '<div class="no-results">No records match these filters.</div>';
                 document.getElementById('showing-count').textContent = '0';
                 return;
             }
@@ -417,28 +478,15 @@
                 const marginD = safeNumber(deal.expected_margin_dollars, 0);
                 
                 const buyLink = getDealLink(deal);
-                const detailId = `d-${Math.random().toString(36).slice(2,10)}`;
                 
                 let discogsPart = '';
                 if (deal.discogs_found) {
                     const discogsLowest = safeNumber(deal.discogs_lowest, 0);
                     const discogsForSale = safeNumber(deal.discogs_num_for_sale, 0);
-                    discogsPart = `
-                        <div class="discogs-section">
-                            <strong>💿 Discogs Market</strong>
-                            <div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div>
-                            <div class="discogs-for-sale">${discogsForSale} listings for sale</div>
-                        </div>
-                    `;
+                    discogsPart = `<div class="discogs-section"><strong>💿 Discogs Market</strong><div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div><div class="discogs-for-sale">${discogsForSale} listings for sale</div></div>`;
                 }
                 
-                const buyNoteText = `${artist} - ${title}
-Price: ${getPriceText(deal)}
-Sell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}
-Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}
-Decision: ${decision}
-Source: ${sourceName}
-Link: ${buyLink || 'No link found'}`;
+                const buyNoteText = `${artist} - ${title}\nPrice: ${getPriceText(deal)}\nSell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}\nMargin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}\nDecision: ${decision}\nSource: ${sourceName}\nLink: ${buyLink || 'No link found'}`;
                 
                 card.innerHTML = `
                     <div class="card-header">
@@ -446,42 +494,24 @@ Link: ${buyLink || 'No link found'}`;
                         <div class="artist-title">${escapeHtml(artist)} — ${escapeHtml(title)}</div>
                         <div class="source-tag">${escapeHtml(sourceName)}</div>
                     </div>
-                    
                     <div class="card-price">
-                        <div class="price-row">
-                            <span>Buy Price:</span>
-                            <strong>${getPriceText(deal)}</strong>
-                        </div>
-                        <div class="price-row">
-                            <span>Sell At:</span>
-                            <strong>${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}</strong>
-                        </div>
-                        <div class="margin-row">
-                            💰 Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}
-                        </div>
+                        <div class="price-row"><span>Buy Price:</span><strong>${getPriceText(deal)}</strong></div>
+                        <div class="price-row"><span>Sell At:</span><strong>${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}</strong></div>
+                        <div class="margin-row">💰 Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}</div>
                     </div>
-                    
                     ${discogsPart}
-                    
                     <div class="card-actions">
-                        ${buyLink
-                          ? `<a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${decision==="BUY NOW"?"SNAG THIS":"CHECK DEAL"}</a>`
-                          : `<button class="btn btn-main" disabled>No Link Found</button>`
-                        }
+                        ${buyLink ? `<a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${decision==="BUY NOW"?"SNAG THIS":"CHECK DEAL"}</a>` : `<button class="btn btn-main" disabled>No Link Found</button>`}
                         <button class="btn btn-ghost copy-link-btn">Copy Link</button>
                         <button class="btn btn-ghost copy-note-btn">Copy Note</button>
                     </div>
                 `;
                 
                 const copyLinkBtn = card.querySelector(".copy-link-btn");
-                if (copyLinkBtn) {
-                    copyLinkBtn.addEventListener("click", () => copyText(buyLink || "No link found"));
-                }
+                if (copyLinkBtn) copyLinkBtn.addEventListener("click", () => copyText(buyLink || "No link found"));
                 
                 const copyNoteBtn = card.querySelector(".copy-note-btn");
-                if (copyNoteBtn) {
-                    copyNoteBtn.addEventListener("click", () => copyText(buyNoteText));
-                }
+                if (copyNoteBtn) copyNoteBtn.addEventListener("click", () => copyText(buyNoteText));
                 
                 board.appendChild(card);
             });
@@ -490,19 +520,35 @@ Link: ${buyLink || 'No link found'}`;
         }
         
         function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('✅ Copied!');
-            }).catch(() => {
-                alert('❌ Copy failed');
+            navigator.clipboard.writeText(text).then(() => alert('✅ Copied!')).catch(() => alert('❌ Copy failed'));
+        }
+        
+        function populateSourceDropdown() {
+            const sources = [...new Set(allDeals.map(d => d.source || 'Unknown'))].sort();
+            const dropdown = document.getElementById('source-filter');
+            sources.forEach(source => {
+                const option = document.createElement('option');
+                option.value = source;
+                option.textContent = source;
+                dropdown.appendChild(option);
             });
         }
+        
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            searchText = e.target.value;
+            renderBoard();
+        });
+        
+        document.getElementById('source-filter').addEventListener('change', (e) => {
+            selectedSource = e.target.value;
+            renderBoard();
+        });
         
         document.querySelectorAll('.filter-chip').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.quick;
-                
                 const filterName = document.getElementById('filter-name');
                 const filterDiv = document.getElementById('active-filter');
                 if (currentFilter === 'all') {
@@ -511,7 +557,6 @@ Link: ${buyLink || 'No link found'}`;
                     filterName.textContent = btn.textContent;
                     filterDiv.style.display = 'inline';
                 }
-                
                 renderBoard();
             });
         });
@@ -521,6 +566,7 @@ Link: ${buyLink || 'No link found'}`;
                 const response = await fetch(FETCH_URL);
                 allDeals = await response.json();
                 document.getElementById('record-count').textContent = allDeals.length;
+                populateSourceDropdown();
                 renderBoard();
             } catch (err) {
                 console.error('Error loading deals:', err);
