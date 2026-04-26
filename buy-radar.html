@@ -253,6 +253,21 @@
         .discogs-for-sale {
             color: #999;
             font-size: 11px;
+            margin-bottom: 8px;
+        }
+        
+        .discogs-link {
+            color: #7fd41a;
+            text-decoration: none;
+            font-size: 11px;
+            margin-top: 8px;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+        
+        .discogs-link:hover {
+            color: #9fe344;
+            text-decoration: underline;
         }
         
         .card-actions {
@@ -483,7 +498,8 @@
                 if (deal.discogs_found) {
                     const discogsLowest = safeNumber(deal.discogs_lowest, 0);
                     const discogsForSale = safeNumber(deal.discogs_num_for_sale, 0);
-                    discogsPart = `<div class="discogs-section"><strong>💿 Discogs Market</strong><div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div><div class="discogs-for-sale">${discogsForSale} listings for sale</div></div>`;
+                    const discogsUrl = deal.discogs_url || `https://www.discogs.com/search/?q=${encodeURIComponent(deal.artist + ' ' + deal.title)}&type=release`;
+                    discogsPart = `<div class="discogs-section"><strong>💿 Discogs Market</strong><div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div><div class="discogs-for-sale">${discogsForSale} listings for sale</div><a href="${escapeHtml(discogsUrl)}" target="_blank" rel="noopener noreferrer" class="discogs-link">Verify on Discogs →</a></div>`;
                 }
                 
                 const buyNoteText = `${artist} - ${title}\nPrice: ${getPriceText(deal)}\nSell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}\nMargin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}\nDecision: ${decision}\nSource: ${sourceName}\nLink: ${buyLink || 'No link found'}`;
