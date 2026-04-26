@@ -124,6 +124,7 @@
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 16px;
             padding: 0 8px;
+            min-height: 400px;
         }
         
         .card {
@@ -340,6 +341,49 @@
             flex-wrap: wrap;
         }
         
+        .pagination {
+            max-width: 1400px;
+            margin: 32px auto 0;
+            padding: 24px 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .pagination-btn {
+            padding: 8px 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #7fd41a;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+        
+        .pagination-btn:hover:not(:disabled) {
+            border-color: #7fd41a;
+            background: #7fd41a;
+            color: #000;
+        }
+        
+        .pagination-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .pagination-info {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            min-width: 100px;
+        }
+        
         @media (max-width: 768px) {
             .board {
                 grid-template-columns: 1fr;
@@ -391,13 +435,24 @@
     
     <div class="board" id="board"></div>
     
+    <div class="pagination">
+        <button class="pagination-btn" id="prev-btn">← Previous</button>
+        <div class="pagination-info">
+            Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+        </div>
+        <button class="pagination-btn" id="next-btn">Next →</button>
+    </div>
+    
     <script>
         const FETCH_URL = 'https://raw.githubusercontent.com/KornDog0804/Deal-Hunter-/main/live_deals.json';
+        const ITEMS_PER_PAGE = 12;
         
         let allDeals = [];
         let currentFilter = 'all';
         let searchText = '';
         let selectedSource = '';
+        let currentPage = 1;
+        let totalPages = 1;
         
         function safeNumber(val, fallback = 0) {
             const num = parseFloat(val);
@@ -463,22 +518,35 @@
             return normalizeText(d.source || '') === normalizeText(source);
         }
         
-        function renderBoard() {
-            const filtered = allDeals.filter(d => 
+        function getFilteredDeals() {
+            return allDeals.filter(d => 
                 matchesFilter(d, currentFilter) && 
                 matchesSearch(d, searchText) &&
                 matchesSource(d, selectedSource)
             );
+        }
+        
+        function renderBoard() {
+            const filtered = getFilteredDeals();
             const board = document.getElementById('board');
             board.innerHTML = '';
             
-            if (filtered.length === 0) {
+            totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+            
+            const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+            const endIdx = startIdx + ITEMS_PER_PAGE;
+            const pageDeals = filtered.slice(startIdx, endIdx);
+            
+            if (pageDeals.length === 0) {
                 board.innerHTML = '<div class="no-results">No records match these filters.</div>';
                 document.getElementById('showing-count').textContent = '0';
+                updatePagination();
                 return;
             }
             
-            filtered.forEach(deal => {
+            pageDeals.forEach(deal => {
                 const card = document.createElement('div');
                 card.className = 'card';
                 
@@ -532,7 +600,15 @@
                 board.appendChild(card);
             });
             
-            document.getElementById('showing-count').textContent = filtered.length;
+            document.getElementById('showing-count').textContent = pageDeals.length;
+            updatePagination();
+        }
+        
+        function updatePagination() {
+            document.getElementById('current-page').textContent = currentPage;
+            document.getElementById('total-pages').textContent = totalPages;
+            document.getElementById('prev-btn').disabled = currentPage <= 1;
+            document.getElementById('next-btn').disabled = currentPage >= totalPages;
         }
         
         function copyText(text) {
@@ -552,11 +628,13 @@
         
         document.getElementById('search-input').addEventListener('input', (e) => {
             searchText = e.target.value;
+            currentPage = 1;
             renderBoard();
         });
         
         document.getElementById('source-filter').addEventListener('change', (e) => {
             selectedSource = e.target.value;
+            currentPage = 1;
             renderBoard();
         });
         
@@ -573,8 +651,25 @@
                     filterName.textContent = btn.textContent;
                     filterDiv.style.display = 'inline';
                 }
+                currentPage = 1;
                 renderBoard();
             });
+        });
+        
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderBoard();
+                window.scrollTo(0, 0);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderBoard();
+                window.scrollTo(0, 0);
+            }
         });
         
         async function loadData() {
