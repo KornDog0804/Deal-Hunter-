@@ -177,16 +177,34 @@
         
         .discogs-section {
             margin: 12px 0;
-            padding: 8px;
+            padding: 10px;
             background: #0f0f0f;
             border-radius: 4px;
             border: 1px solid #333;
-            font-size: 11px;
-            color: #999;
+            border-left: 3px solid #7fd41a;
+            font-size: 12px;
+            color: #ccc;
         }
         
         .discogs-section strong {
-            color: #ccc;
+            color: #7fd41a;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .discogs-price {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .discogs-for-sale {
+            color: #999;
+            font-size: 11px;
         }
         
         .card-actions {
@@ -219,9 +237,14 @@
             flex: 2;
         }
         
-        .btn-main:hover {
+        .btn-main:hover:not(:disabled) {
             background: #9fe344;
             transform: scale(1.02);
+        }
+        
+        .btn-main:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
         
         .btn-ghost {
@@ -307,6 +330,39 @@
             return (s || '').toLowerCase().trim();
         }
         
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function getDealLink(d) {
+            const keys = [
+                "link",
+                "url",
+                "product_url",
+                "store_url",
+                "purchase_url",
+                "source_url",
+                "reddit_url"
+            ];
+        
+            for (const key of keys) {
+                const v = String(d[key] || "").trim();
+                if (v.startsWith("http")) return v;
+            }
+        
+            const blob = [
+                d.raw_title,
+                d.page_text_snippet,
+                d.source_text,
+                d.description
+            ].join(" ");
+        
+            const match = blob.match(/https?:\/\/[^\s"'<>]+/);
+            return match ? match[0] : "";
+        }
+        
         function getSourceName(deal) {
             return deal.source || deal.store || 'Unknown';
         }
@@ -360,15 +416,18 @@
                 const salePrice = safeNumber(deal.expected_sale_price, 0);
                 const marginD = safeNumber(deal.expected_margin_dollars, 0);
                 
-                const buyLink = deal.buy_link || deal.url || '#';
+                const buyLink = getDealLink(deal);
+                const detailId = `d-${Math.random().toString(36).slice(2,10)}`;
                 
                 let discogsPart = '';
                 if (deal.discogs_found) {
+                    const discogsLowest = safeNumber(deal.discogs_lowest, 0);
+                    const discogsForSale = safeNumber(deal.discogs_num_for_sale, 0);
                     discogsPart = `
                         <div class="discogs-section">
-                            <div><strong>Discogs:</strong> $${safeNumber(deal.discogs_lowest, 0).toFixed(2)} lowest</div>
-                            <div><strong>For Sale:</strong> ${safeNumber(deal.discogs_num_for_sale, 0)} listings</div>
-                            <div><strong>Confidence:</strong> ${(safeNumber(deal.discogs_match_confidence, 0) * 100).toFixed(0)}%</div>
+                            <strong>💿 Discogs Market</strong>
+                            <div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div>
+                            <div class="discogs-for-sale">${discogsForSale} listings for sale</div>
                         </div>
                     `;
                 }
@@ -379,7 +438,7 @@ Sell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}
 Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}
 Decision: ${decision}
 Source: ${sourceName}
-Link: ${buyLink}`;
+Link: ${buyLink || 'No link found'}`;
                 
                 card.innerHTML = `
                     <div class="card-header">
@@ -405,16 +464,24 @@ Link: ${buyLink}`;
                     ${discogsPart}
                     
                     <div class="card-actions">
-                        <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">
-                            ${decision === 'BUY NOW' ? 'SNAG THIS' : 'CHECK DEAL'}
-                        </a>
+                        ${buyLink
+                          ? `<a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${decision==="BUY NOW"?"SNAG THIS":"CHECK DEAL"}</a>`
+                          : `<button class="btn btn-main" disabled>No Link Found</button>`
+                        }
                         <button class="btn btn-ghost copy-link-btn">Copy Link</button>
                         <button class="btn btn-ghost copy-note-btn">Copy Note</button>
                     </div>
                 `;
                 
-                card.querySelector('.copy-link-btn').addEventListener('click', () => copyText(buyLink));
-                card.querySelector('.copy-note-btn').addEventListener('click', () => copyText(buyNoteText));
+                const copyLinkBtn = card.querySelector(".copy-link-btn");
+                if (copyLinkBtn) {
+                    copyLinkBtn.addEventListener("click", () => copyText(buyLink || "No link found"));
+                }
+                
+                const copyNoteBtn = card.querySelector(".copy-note-btn");
+                if (copyNoteBtn) {
+                    copyNoteBtn.addEventListener("click", () => copyText(buyNoteText));
+                }
                 
                 board.appendChild(card);
             });
@@ -424,16 +491,10 @@ Link: ${buyLink}`;
         
         function copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('Copied!');
+                alert('✅ Copied!');
             }).catch(() => {
-                alert('Copy failed');
+                alert('❌ Copy failed');
             });
-        }
-        
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
         }
         
         document.querySelectorAll('.filter-chip').forEach(btn => {
