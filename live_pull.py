@@ -493,7 +493,7 @@ BAD_PRODUCT_TERMS = [
     "earbuds", "headphones", "airpods", "sticker", "patch", "pin",
     "pullover", "crewneck", "long sleeve", "t-shirt", "shorts", "socks",
     "turntable", "record player", "cleaner", "cleaning kit",
-    "speaker", "stylus", "needle", "receiver"
+    "speaker", "stylus", "needle", "receiver", "drawstring bag", "wall flag", "flag", "tote", "bag"
 ]
 
 DEBUG = []
