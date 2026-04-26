@@ -11,6 +11,16 @@ from urllib.parse import quote
 DISCOGS_API_BASE = "https://api.discogs.com"
 DISCOGS_TOKEN = os.getenv("DISCOGS_TOKEN")
 
+COMMON_LABELS = {
+    "warner", "warner records", "reprise", "atlantic", "rhino",
+    "sony", "columbia", "epic", "rca", "legacy",
+    "universal", "interscope", "geffen", "capitol",
+    "republic", "island", "def jam", "roadrunner",
+    "nuclear blast", "metal blade", "rise records",
+    "fearless records", "sumerian", "e1", "bmg",
+    "craft recordings", "concord", "music on vinyl",
+}
+
 HEADERS = {
     "User-Agent": "KorndogDealHunter/1.0 +https://korndogrecords.com",
     "Accept": "application/json",
@@ -44,6 +54,28 @@ def split_discogs_title(full_title: str):
         artist, title = full_title.split(" - ", 1)
         return artist.strip(), title.strip()
     return "", full_title.strip()
+
+def get_discogs_search_parts(deal: Dict) -> tuple:
+    """
+    Prevent record label from being used as the artist.
+    Keeps scraper data untouched, only fixes Discogs lookup.
+    """
+    artist = (deal.get("artist") or "").strip()
+    title = (deal.get("title") or "").strip()
+    label = (deal.get("label") or deal.get("record_label") or "").strip()
+
+    artist_clean = clean_text(artist)
+    label_clean = clean_text(label)
+
+    # If artist is missing or is actually a record label, try safer fields.
+    if not artist or artist_clean in COMMON_LABELS:
+        for key in ["band", "performer", "main_artist", "artist_name"]:
+            value = (deal.get(key) or "").strip()
+            if value and clean_text(value) not in COMMON_LABELS:
+                artist = value
+                break
+
+    return artist, title
 
 def discogs_get(path: str, params: Optional[Dict] = None) -> Optional[Dict]:
     if not DISCOGS_TOKEN:
@@ -135,7 +167,6 @@ def get_release_stats(release_id: int) -> Dict:
     community_have = community.get("have", 0)
     community_want = community.get("want", 0)
 
-    # Some Discogs responses include this at release level
     if isinstance(release.get("num_for_sale"), int):
         num_for_sale = release.get("num_for_sale", 0)
 
@@ -149,8 +180,8 @@ def get_release_stats(release_id: int) -> Dict:
 def enrich_with_discogs(deal: Dict, cache: Optional[Dict] = None) -> Dict:
     cache = cache or {}
 
-    artist = deal.get("artist", "").strip()
-    title = deal.get("title", "").strip()
+    # Use cleaned artist/title for Discogs lookup
+    artist, title = get_discogs_search_parts(deal)
     cache_key = f"{artist}|{title}"
 
     if cache_key in cache:
