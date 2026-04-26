@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korndog Buy Radar</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        header {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            color: #7fd41a;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        
+        .section-note {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        
+        .filter-section {
+            max-width: 1400px;
+            margin: 0 auto 32px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 0 8px;
+        }
+        
+        .filter-chip {
+            padding: 8px 16px;
+            border: 1px solid #333;
+            background: transparent;
+            color: #ccc;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .filter-chip:hover {
+            border-color: #7fd41a;
+            color: #7fd41a;
+        }
+        
+        .filter-chip.active {
+            background: #7fd41a;
+            border-color: #7fd41a;
+            color: #000;
+        }
+        
+        .board {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            padding: 0 8px;
+        }
+        
+        .card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 16px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            border-color: #7fd41a;
+            background: #222;
+            transform: translateY(-4px);
+        }
+        
+        .card-header {
+            margin-bottom: 12px;
+        }
+        
+        .decision-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .decision-badge.buynow {
+            background: #22c55e;
+            color: #000;
+        }
+        
+        .decision-badge.watch {
+            background: #3b82f6;
+            color: #fff;
+        }
+        
+        .decision-badge.light {
+            background: #fbbf24;
+            color: #000;
+        }
+        
+        .decision-badge.pass {
+            background: #555;
+            color: #fff;
+        }
+        
+        .artist-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            word-break: break-word;
+        }
+        
+        .source-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #2a2a2a;
+            color: #7fd41a;
+            font-size: 11px;
+            border-radius: 2px;
+            margin-top: 8px;
+        }
+        
+        .card-price {
+            margin: 12px 0;
+            padding: 12px;
+            background: #0f0f0f;
+            border-radius: 4px;
+            border-left: 3px solid #7fd41a;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: #ccc;
+        }
+        
+        .price-row strong {
+            color: #fff;
+        }
+        
+        .margin-row {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #2a2a2a;
+            font-size: 13px;
+            color: #7fd41a;
+            font-weight: 600;
+        }
+        
+        .discogs-section {
+            margin: 12px 0;
+            padding: 8px;
+            background: #0f0f0f;
+            border-radius: 4px;
+            border: 1px solid #333;
+            font-size: 11px;
+            color: #999;
+        }
+        
+        .discogs-section strong {
+            color: #ccc;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 6px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            flex: 1;
+            min-width: 70px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-main {
+            background: #7fd41a;
+            color: #000;
+            flex: 2;
+        }
+        
+        .btn-main:hover {
+            background: #9fe344;
+            transform: scale(1.02);
+        }
+        
+        .btn-ghost {
+            background: #2a2a2a;
+            color: #7fd41a;
+            border: 1px solid #7fd41a;
+        }
+        
+        .btn-ghost:hover {
+            background: #7fd41a;
+            color: #000;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .stats {
+            max-width: 1400px;
+            margin: 0 auto 24px;
+            padding: 0 8px;
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        @media (max-width: 768px) {
+            .board {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Korndog Buy Radar</h1>
+        <div class="section-note">Private sourcing radar. Buy faster, flip smarter, waste less time.</div>
+    </header>
+    
+    <div class="filter-section">
+        <button class="filter-chip active" data-quick="all">All</button>
+        <button class="filter-chip" data-quick="sniper">Sniper Only</button>
+        <button class="filter-chip" data-quick="buynow">BUY NOW</button>
+        <button class="filter-chip" data-quick="highmargin">High Margin</button>
+        <button class="filter-chip" data-quick="fastflip">Fast Flip</button>
+        <button class="filter-chip" data-quick="under30">Under $30</button>
+        <button class="filter-chip" data-quick="discogs">Discogs Priced</button>
+        <button class="filter-chip" data-quick="amazon">Amazon</button>
+        <button class="filter-chip" data-quick="walmart">Walmart</button>
+        <button class="filter-chip" data-quick="target">Target</button>
+        <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
+    </div>
+    
+    <div class="stats">
+        <div>Records: <span id="record-count">0</span></div>
+        <div>Showing: <span id="showing-count">0</span></div>
+        <div id="active-filter" style="display:none;">Filter: <span id="filter-name"></span></div>
+    </div>
+    
+    <div class="board" id="board"></div>
+    
+    <script>
+        const FETCH_URL = 'https://raw.githubusercontent.com/KornDog0804/Deal-Hunter-/main/live_deals.json';
+        
+        let allDeals = [];
+        let currentFilter = 'all';
+        
+        function safeNumber(val, fallback = 0) {
+            const num = parseFloat(val);
+            return isNaN(num) ? fallback : num;
+        }
+        
+        function normalizeText(s) {
+            return (s || '').toLowerCase().trim();
+        }
+        
+        function getSourceName(deal) {
+            return deal.source || deal.store || 'Unknown';
+        }
+        
+        function getPriceText(deal) {
+            const price = safeNumber(deal.price);
+            return price > 0 ? `$${price.toFixed(2)}` : 'N/A';
+        }
+        
+        function getDecision(deal) {
+            return (deal.decision || deal.brain_decision || 'CHECK').toUpperCase();
+        }
+        
+        function matchesFilter(d, q) {
+            if (q === 'all') return true;
+            if (q === 'sniper') return safeNumber(d.buy_score, 0) >= 85 && safeNumber(d.expected_margin_dollars, 0) >= 15;
+            if (q === 'buynow') return getDecision(d) === 'BUY NOW';
+            if (q === 'highmargin') return safeNumber(d.expected_margin_dollars, 0) >= 20;
+            if (q === 'fastflip') return normalizeText(d.turn_speed || '').includes('fast') || normalizeText(d.turn_speed || '').includes('quick');
+            if (q === 'under30') return safeNumber(d.price, 0) < 30;
+            if (q === 'discogs') return d.discogs_found === true;
+            if (q === 'amazon') return normalizeText(d.source || '').includes('amazon');
+            if (q === 'walmart') return normalizeText(d.source || '').includes('walmart');
+            if (q === 'target') return normalizeText(d.source || '').includes('target');
+            if (q === 'deepdiscount') return normalizeText(d.source || '').includes('deep discount');
+            return true;
+        }
+        
+        function renderBoard() {
+            const filtered = allDeals.filter(d => matchesFilter(d, currentFilter));
+            const board = document.getElementById('board');
+            board.innerHTML = '';
+            
+            if (filtered.length === 0) {
+                board.innerHTML = '<div class="no-results">No records match this filter.</div>';
+                document.getElementById('showing-count').textContent = '0';
+                return;
+            }
+            
+            filtered.forEach(deal => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                const decision = getDecision(deal);
+                const decisionClass = decision === 'BUY NOW' ? 'buynow' : decision === 'WATCH' ? 'watch' : decision === 'BUY LIGHT' ? 'light' : 'pass';
+                
+                const artist = deal.artist || 'Unknown Artist';
+                const title = deal.title || 'Unknown Title';
+                const sourceName = getSourceName(deal);
+                const price = safeNumber(deal.price, 0);
+                const salePrice = safeNumber(deal.expected_sale_price, 0);
+                const marginD = safeNumber(deal.expected_margin_dollars, 0);
+                
+                const buyLink = deal.buy_link || deal.url || '#';
+                
+                let discogsPart = '';
+                if (deal.discogs_found) {
+                    discogsPart = `
+                        <div class="discogs-section">
+                            <div><strong>Discogs:</strong> $${safeNumber(deal.discogs_lowest, 0).toFixed(2)} lowest</div>
+                            <div><strong>For Sale:</strong> ${safeNumber(deal.discogs_num_for_sale, 0)} listings</div>
+                            <div><strong>Confidence:</strong> ${(safeNumber(deal.discogs_match_confidence, 0) * 100).toFixed(0)}%</div>
+                        </div>
+                    `;
+                }
+                
+                const buyNoteText = `${artist} - ${title}
+Price: ${getPriceText(deal)}
+Sell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}
+Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}
+Decision: ${decision}
+Source: ${sourceName}
+Link: ${buyLink}`;
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="decision-badge ${decisionClass}">${decision}</div>
+                        <div class="artist-title">${escapeHtml(artist)} — ${escapeHtml(title)}</div>
+                        <div class="source-tag">${escapeHtml(sourceName)}</div>
+                    </div>
+                    
+                    <div class="card-price">
+                        <div class="price-row">
+                            <span>Buy Price:</span>
+                            <strong>${getPriceText(deal)}</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Sell At:</span>
+                            <strong>${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}</strong>
+                        </div>
+                        <div class="margin-row">
+                            💰 Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}
+                        </div>
+                    </div>
+                    
+                    ${discogsPart}
+                    
+                    <div class="card-actions">
+                        <a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">
+                            ${decision === 'BUY NOW' ? 'SNAG THIS' : 'CHECK DEAL'}
+                        </a>
+                        <button class="btn btn-ghost copy-link-btn">Copy Link</button>
+                        <button class="btn btn-ghost copy-note-btn">Copy Note</button>
+                    </div>
+                `;
+                
+                card.querySelector('.copy-link-btn').addEventListener('click', () => copyText(buyLink));
+                card.querySelector('.copy-note-btn').addEventListener('click', () => copyText(buyNoteText));
+                
+                board.appendChild(card);
+            });
+            
+            document.getElementById('showing-count').textContent = filtered.length;
+        }
+        
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied!');
+            }).catch(() => {
+                alert('Copy failed');
+            });
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        document.querySelectorAll('.filter-chip').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.quick;
+                
+                const filterName = document.getElementById('filter-name');
+                const filterDiv = document.getElementById('active-filter');
+                if (currentFilter === 'all') {
+                    filterDiv.style.display = 'none';
+                } else {
+                    filterName.textContent = btn.textContent;
+                    filterDiv.style.display = 'inline';
+                }
+                
+                renderBoard();
+            });
+        });
+        
+        async function loadData() {
+            try {
+                const response = await fetch(FETCH_URL);
+                allDeals = await response.json();
+                document.getElementById('record-count').textContent = allDeals.length;
+                renderBoard();
+            } catch (err) {
+                console.error('Error loading deals:', err);
+                document.getElementById('board').innerHTML = '<div class="no-results">Error loading data. Check console.</div>';
+            }
+        }
+        
+        loadData();
+    </script>
+</body>
+</html>
