@@ -14853,5 +14853,74 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "okgutta|god less america": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7714,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Various",
+    "discogs_title": "God Less America",
+    "discogs_release_id": 5178192,
+    "discogs_url": "https://www.discogs.com/release/5178192-Various-God-Less-America",
+    "discogs_mint_price": 0.11,
+    "discogs_lowest": 0.11,
+    "discogs_num_for_sale": 20,
+    "discogs_have": 381,
+    "discogs_want": 172
+  },
+  "luiz bonfa|introspection": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Luiz Bonfa*",
+    "discogs_title": "Introspection",
+    "discogs_release_id": 1889465,
+    "discogs_url": "https://www.discogs.com/release/1889465-Luiz-Bonfa-Introspection",
+    "discogs_mint_price": 500.0,
+    "discogs_lowest": 500.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 203,
+    "discogs_want": 1625
+  },
+  "unknown artist|the best of judas priest bad world": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "fallujah|xenotaph": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Fallujah",
+    "discogs_title": "Xenotaph",
+    "discogs_release_id": 34252234,
+    "discogs_url": "https://www.discogs.com/release/34252234-Fallujah-Xenotaph",
+    "discogs_mint_price": 27.27,
+    "discogs_lowest": 27.27,
+    "discogs_num_for_sale": 21,
+    "discogs_have": 344,
+    "discogs_want": 37
+  },
+  "rod stewart|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dogstar|all in now": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6644,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
