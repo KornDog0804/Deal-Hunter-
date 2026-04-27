@@ -1,5 +1,18 @@
 [
   {
+    "artist": "Kanye West",
+    "title": "Yeezus",
+    "price": 34.99,
+    "source": "Rollin Records",
+    "link": "https://rollinrecs.com/products/kanye-west-yeezus",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2431.jpg?v=1760036737",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "Aesop Rock & Homeboy Sandman",
     "title": "Miami Lice: Season Four",
     "price": 19.99,
@@ -2977,12 +2990,12 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Avenged Sevenfold",
-    "title": "Nightmare (Black/ Purple Splatter 2LP Vinyl)",
-    "price": 37.99,
-    "source": "Rollin Records",
-    "link": "https://rollinrecs.com/products/avenged-sevenfold-nightmare-black-red-splatter-2lp-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7087_406c62a2-04b9-4efe-bf08-5f4c5732a854.jpg?v=1774627996",
+    "artist": "Kanye West",
+    "title": "Yeezus",
+    "price": 34.99,
+    "source": "Rollin Preorders",
+    "link": "https://rollinrecs.com/products/kanye-west-yeezus",
+    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_2431.jpg?v=1760036737",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -5960,19 +5973,6 @@
     "source": "Rollin Preorders",
     "link": "https://rollinrecs.com/products/snail-mail-ricochet-indie-exclusive-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_71232.jpg?v=1774628444",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "Avenged Sevenfold",
-    "title": "Nightmare (Black/ Purple Splatter 2LP Vinyl)",
-    "price": 37.99,
-    "source": "Rollin Preorders",
-    "link": "https://rollinrecs.com/products/avenged-sevenfold-nightmare-black-red-splatter-2lp-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0508/8555/8458/files/IMG_7087_406c62a2-04b9-4efe-bf08-5f4c5732a854.jpg?v=1774627996",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -10946,19 +10946,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Movements",
-    "title": "Feel Something (Opaque Sangria Vinyl)",
-    "price": 24.0,
-    "source": "Fearless Records",
-    "link": "https://store.fearlessrecords.com/products/feel-something-sangria-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/products/Movements_5cd7dda1-1a8b-4de7-87f0-f2f8edfb6fc7.png?v=1654900652",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "I Prevail",
     "title": "True Power",
     "price": 26.0,
@@ -11537,6 +11524,19 @@
     "source": "Fearless Records",
     "link": "https://store.fearlessrecords.com/products/heart-vs-mind-10-year-anniversary-highlighter-yellow-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/IPrevail_HeartVsMind_LP_Vinyl_Highlighter_bdeaecf7-a292-4fa5-93f4-3eb1ba9eb345.png?v=1732207268",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Pierce The Veil",
+    "title": "\"Collide With The Sky\" Highlighter Smoke Vinyl",
+    "price": 25.0,
+    "source": "Fearless Records",
+    "link": "https://store.fearlessrecords.com/products/collide-with-the-sky-highlighter-smoke-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/PierceTheVeil_CollideWithTheSky_HighlighterSmoke.png?v=1733785855",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -12142,19 +12142,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Movements",
-    "title": "Feel Something (Opaque Sangria Vinyl)",
-    "price": 24.0,
-    "source": "Fearless Vinyl",
-    "link": "https://store.fearlessrecords.com/products/feel-something-sangria-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/products/Movements_5cd7dda1-1a8b-4de7-87f0-f2f8edfb6fc7.png?v=1654900652",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "I Prevail",
     "title": "True Power",
     "price": 26.0,
@@ -12733,6 +12720,19 @@
     "source": "Fearless Vinyl",
     "link": "https://store.fearlessrecords.com/products/heart-vs-mind-10-year-anniversary-highlighter-yellow-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/IPrevail_HeartVsMind_LP_Vinyl_Highlighter_bdeaecf7-a292-4fa5-93f4-3eb1ba9eb345.png?v=1732207268",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Pierce The Veil",
+    "title": "\"Collide With The Sky\" Highlighter Smoke Vinyl",
+    "price": 25.0,
+    "source": "Fearless Vinyl",
+    "link": "https://store.fearlessrecords.com/products/collide-with-the-sky-highlighter-smoke-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0424/8967/5931/files/PierceTheVeil_CollideWithTheSky_HighlighterSmoke.png?v=1733785855",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
