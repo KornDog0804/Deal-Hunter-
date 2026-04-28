@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 174
+Revolver: kept 173
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -121,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 150
+Rhino: kept 148
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -164,9 +164,9 @@ Sumerian Records: kept 67
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 128 products
-Solid State Records: 128 products via Shopify JSON
-Solid State Records: kept 51
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 131 products
+Solid State Records: 131 products via Shopify JSON
+Solid State Records: kept 52
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -174,9 +174,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 128 products
-Solid State Vinyl: 128 products via Shopify JSON
-Solid State Vinyl: kept 51
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 131 products
+Solid State Vinyl: 131 products via Shopify JSON
+Solid State Vinyl: kept 52
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -190,7 +190,7 @@ Scraping: Hopeless Records (merchnow_store)
 ==================================================
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
-Hopeless Records: kept 54
+Hopeless Records: kept 55
 
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
@@ -423,9 +423,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: kept 12
+Amazon: found 44 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -451,9 +451,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 1251 entries
-[Discogs] Enriching 3273 vinyl records with Mint pricing...
-[Discogs] Cache saved (1251 entries)
+[Discogs] Loaded cache with 1315 entries
+[Discogs] Enriching 3274 vinyl records with Mint pricing...
+[Discogs] Cache saved (1315 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -465,12 +465,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 348940 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 348916 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -877,7 +877,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] li>h2 approach found 390 entries
-[UpcomingVinyl] Got 521034 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 521028 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -901,7 +901,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 387
 [UpcomingVinyl] 387 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3262 buy signals saved to buy_signals.json
+[BuySignals] 3263 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -915,22 +915,22 @@ SOURCE STATUS SUMMARY
   Rise Records: 73 deals
   Rise All: 73 deals
   Brooklyn Vegan: 195 deals
-  Revolver: 174 deals
+  Revolver: 173 deals
   Newbury Comics: 154 deals
   Newbury Preorders: 154 deals
   Craft Recordings: 75 deals
   MNRK Heavy: 134 deals
   Equal Vision: 88 deals
-  Rhino: 150 deals
+  Rhino: 148 deals
   Interscope Records: 137 deals
   SharpTone Records: 92 deals
   Rock Metal Fan Nation: 212 deals
   RMFN All: 212 deals
   Sumerian Records: 67 deals
-  Solid State Records: 51 deals
-  Solid State Vinyl: 51 deals
+  Solid State Records: 52 deals
+  Solid State Vinyl: 52 deals
   Pure Noise Records: 73 deals
-  Hopeless Records: 54 deals
+  Hopeless Records: 55 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 72 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
@@ -945,26 +945,26 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 12 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 12
+Amazon: 13
 Brooklyn Vegan: 195
 Craft Recordings: 75
 Equal Vision: 88
 Fearless Records: 92
 Fearless Vinyl: 92
-Hopeless Records: 54
+Hopeless Records: 55
 Interscope Records: 137
 MNRK Heavy: 134
 Newbury Comics: 154
 Newbury Preorders: 154
 Pirates Press Records: 61
 Pure Noise Records: 73
-r/VinylReleases: 48
-Revolver: 174
-Rhino: 150
+r/VinylReleases: 46
+Revolver: 173
+Rhino: 148
 Rise All: 73
 Rise Records: 73
 RMFN All: 212
@@ -972,8 +972,8 @@ Rock Metal Fan Nation: 212
 Rollin Preorders: 230
 Rollin Records: 230
 SharpTone Records: 91
-Solid State Records: 45
-Solid State Vinyl: 45
+Solid State Records: 46
+Solid State Vinyl: 46
 Sound of Vinyl: 222
 Sumerian Records: 65
 Target: 1
