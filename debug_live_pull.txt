@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 128
+uDiscover Music: kept 132
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 195
+Brooklyn Vegan: kept 193
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 173
+Revolver: kept 172
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -100,7 +100,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 75
+Craft Recordings: kept 74
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -159,7 +159,7 @@ Scraping: Sumerian Records (shopify_store)
 ==================================================
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 67
+Sumerian Records: kept 68
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
@@ -423,9 +423,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 44 candidate vinyl items
-Amazon: found 31 candidate vinyl items
-Amazon: kept 13
+Amazon: found 41 candidate vinyl items
+Amazon: found 35 candidate vinyl items
+Amazon: kept 16
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -452,7 +452,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 1315 entries
-[Discogs] Enriching 3274 vinyl records with Mint pricing...
+[Discogs] Enriching 3278 vinyl records with Mint pricing...
 [Discogs] Cache saved (1315 entries)
 [Discogs] Enrichment complete!
 
@@ -877,7 +877,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] li>h2 approach found 390 entries
-[UpcomingVinyl] Got 521028 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 521010 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -901,7 +901,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 387
 [UpcomingVinyl] 387 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3263 buy signals saved to buy_signals.json
+[BuySignals] 3264 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -909,16 +909,16 @@ SOURCE STATUS SUMMARY
   Rollin Records: 230 deals
   Rollin Preorders: 230 deals
   Sound of Vinyl: 224 deals
-  uDiscover Music: 128 deals
+  uDiscover Music: 132 deals
   Fearless Records: 92 deals
   Fearless Vinyl: 92 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 195 deals
-  Revolver: 173 deals
+  Brooklyn Vegan: 193 deals
+  Revolver: 172 deals
   Newbury Comics: 154 deals
   Newbury Preorders: 154 deals
-  Craft Recordings: 75 deals
+  Craft Recordings: 74 deals
   MNRK Heavy: 134 deals
   Equal Vision: 88 deals
   Rhino: 148 deals
@@ -926,7 +926,7 @@ SOURCE STATUS SUMMARY
   SharpTone Records: 92 deals
   Rock Metal Fan Nation: 212 deals
   RMFN All: 212 deals
-  Sumerian Records: 67 deals
+  Sumerian Records: 68 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
   Pure Noise Records: 73 deals
@@ -945,13 +945,13 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 13 items | pages: 7 | robot walls: 0
+  Amazon: 16 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 13
-Brooklyn Vegan: 195
-Craft Recordings: 75
+Amazon: 16
+Brooklyn Vegan: 193
+Craft Recordings: 74
 Equal Vision: 88
 Fearless Records: 92
 Fearless Vinyl: 92
@@ -963,7 +963,7 @@ Newbury Preorders: 154
 Pirates Press Records: 61
 Pure Noise Records: 73
 r/VinylReleases: 46
-Revolver: 173
+Revolver: 172
 Rhino: 148
 Rise All: 73
 Rise Records: 73
@@ -975,7 +975,7 @@ SharpTone Records: 91
 Solid State Records: 46
 Solid State Vinyl: 46
 Sound of Vinyl: 222
-Sumerian Records: 65
+Sumerian Records: 66
 Target: 1
-uDiscover Music: 128
+uDiscover Music: 132
 Walmart: 1
