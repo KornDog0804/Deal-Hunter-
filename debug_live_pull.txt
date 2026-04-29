@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 134
+uDiscover Music: kept 127
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,21 +69,21 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 190
+Brooklyn Vegan: kept 188
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 172
+Revolver: kept 171
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 154
+Newbury Comics: kept 153
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -93,7 +93,7 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 154
+Newbury Preorders: kept 153
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -122,7 +122,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 151
+Rhino: kept 148
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -424,9 +424,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 39 candidate vinyl items
-Amazon: kept 18
+Amazon: found 36 candidate vinyl items
+Amazon: found 38 candidate vinyl items
+Amazon: kept 17
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -453,7 +453,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 1371 entries
-[Discogs] Enriching 3282 vinyl records with Mint pricing...
+[Discogs] Enriching 3266 vinyl records with Mint pricing...
 [Discogs] Cache saved (1371 entries)
 [Discogs] Enrichment complete!
 
@@ -466,12 +466,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 43 deals after filtering
+[r/VinylReleases] 41 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 348916 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 354128 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -486,7 +486,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 390 h2 tags, 419 li tags
+[UpcomingVinyl] Found 395 h2 tags, 424 li tags
 [UpcomingVinyl] FOUND: 4 SkinsFistful Of 4 Skins (Uk Exclusive Clear) —  (Radiation)
 [UpcomingVinyl] FOUND: 4 SkinsGood, The Bad & The Ugly —  (Radiation)
 [UpcomingVinyl] FOUND: 45Trio#Jamal b/w I Love Music —  (Bloom Music)
@@ -505,6 +505,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Ana Carla MazaAlamar —  (Autre Distribution)
 [UpcomingVinyl] FOUND: Ana RoxannePoem 1 —  (Kranky)
 [UpcomingVinyl] FOUND: AnenonDream Temperature —  (Tonal Union)
+[UpcomingVinyl] FOUND: Angie BrownI'm Gonna Get You —  (Drumcode)
 [UpcomingVinyl] FOUND: Anna McLuckieLittle Winters —  (Hudson Records)
 [UpcomingVinyl] FOUND: Anthony JosephArk —  (Heavenly Sweetness)
 [UpcomingVinyl] FOUND: Appalachian Road ShowDella Jane's Heart —  (New Day Ent)
@@ -569,6 +570,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Dana FuchsDana Fuchs Live in Denmark —  (Ruf)
 [UpcomingVinyl] FOUND: Daphne RoubiniWhisky Scented Kisses —  (Cellar Live)
 [UpcomingVinyl] FOUND: Darrow FletcherDarrow Fletcher Presents Jacklyn & Genna Records —  (Kent Records UK)
+[UpcomingVinyl] FOUND: David BowieNarrates Prokofiev's Peter And The Wolf —  (Classical Music On)
 [UpcomingVinyl] FOUND: Deaf CenterThrough Time —  (Sonic Pieces)
 [UpcomingVinyl] FOUND: DeclaimeFlatulent —  (Urbnet)
 [UpcomingVinyl] FOUND: Deftonesprivate music —  (Reprise)
@@ -720,6 +722,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Mission in BlackDivinity Of Lies (Splatter) —  (El Puerto Records)
 [UpcomingVinyl] FOUND: Mitchum YacoubCumbia No Get Enemy —  (Jazz Room Records)
 [UpcomingVinyl] FOUND: Modern WomanJohnny's Dreamworld —  (One Little Independent Records)
+[UpcomingVinyl] FOUND: Modern WomanJohnny's Dreamworld —  (One Little Independent Records)
 [UpcomingVinyl] FOUND: Monster MagnetDopes to Infinity —  (Pias America)
 [UpcomingVinyl] FOUND: Monster MagnetGod Says No —  (Pias America)
 [UpcomingVinyl] FOUND: Monster MagnetSuperjudge —  (Pias America)
@@ -742,6 +745,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: New Bomb TurksNightmare Scenario (Translucent Violet) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Nina PolacaDonde Esta La Onu Cuando Mas La Necesitas? — Band (Subterfuge)
 [UpcomingVinyl] FOUND: NOFXThe War on Errorism —  (Fat Wreck Chords)
+[UpcomingVinyl] FOUND: Octo OctaSigils For Survival —  (T4T Luv Nrg)
 [UpcomingVinyl] FOUND: Old WaindsReligion Of Spiritual Violence —  (Darkness Shall Rise)
 [UpcomingVinyl] FOUND: Old WaindsScalding Coldness —  (Darkness Shall Rise)
 [UpcomingVinyl] FOUND: Old WaindsWhere The Snows Are Never Gone —  (Darkness Shall Rise)
@@ -877,8 +881,9 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zoot SimsPassion Flower — Zoot Sims Plays Duke Ellington (Analogue Prod.)
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
-[UpcomingVinyl] li>h2 approach found 390 entries
-[UpcomingVinyl] Got 521028 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] FOUND: DegiheugiEndless Smile 2 —  (Universal UK)
+[UpcomingVinyl] li>h2 approach found 395 entries
+[UpcomingVinyl] Got 527817 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -893,16 +898,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3561 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3607 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 387
-[UpcomingVinyl] 387 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3263 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 391
+[UpcomingVinyl] 391 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3248 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -910,19 +915,19 @@ SOURCE STATUS SUMMARY
   Rollin Records: 230 deals
   Rollin Preorders: 230 deals
   Sound of Vinyl: 224 deals
-  uDiscover Music: 134 deals
+  uDiscover Music: 127 deals
   Fearless Records: 92 deals
   Fearless Vinyl: 92 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 190 deals
-  Revolver: 172 deals
-  Newbury Comics: 154 deals
-  Newbury Preorders: 154 deals
+  Brooklyn Vegan: 188 deals
+  Revolver: 171 deals
+  Newbury Comics: 153 deals
+  Newbury Preorders: 153 deals
   Craft Recordings: 74 deals
   MNRK Heavy: 134 deals
   Equal Vision: 88 deals
-  Rhino: 151 deals
+  Rhino: 148 deals
   Interscope Records: 137 deals
   SharpTone Records: 92 deals
   Rock Metal Fan Nation: 212 deals
@@ -946,12 +951,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 18 items | pages: 7 | robot walls: 0
+  Amazon: 17 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 18
-Brooklyn Vegan: 190
+Amazon: 17
+Brooklyn Vegan: 188
 Craft Recordings: 74
 Equal Vision: 88
 Fearless Records: 92
@@ -959,13 +964,13 @@ Fearless Vinyl: 92
 Hopeless Records: 55
 Interscope Records: 137
 MNRK Heavy: 134
-Newbury Comics: 154
-Newbury Preorders: 154
+Newbury Comics: 153
+Newbury Preorders: 153
 Pirates Press Records: 61
 Pure Noise Records: 73
-r/VinylReleases: 43
-Revolver: 172
-Rhino: 151
+r/VinylReleases: 41
+Revolver: 171
+Rhino: 148
 Rise All: 73
 Rise Records: 73
 RMFN All: 212
@@ -978,5 +983,5 @@ Solid State Vinyl: 46
 Sound of Vinyl: 222
 Sumerian Records: 66
 Target: 1
-uDiscover Music: 134
+uDiscover Music: 127
 Walmart: 1
