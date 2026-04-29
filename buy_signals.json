@@ -14898,6 +14898,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Universal",
+    "title": "THE SWORD 'APOCRYPHON' LP",
+    "price": 29.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/the-sword-apocryphon-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/image_4f05719b-e824-4007-b9bd-bf645a4a32c1.jpg?v=1777410688",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "ORCHARD",
     "title": "KERRY KING 'FROM HELL I RISE' 2LP (Extended Deluxe, Toxic Orange Marbled Vinyl)",
     "price": 46.99,
@@ -15275,7 +15288,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "SUMERIAN RECORDS",
+    "artist": "AEC",
     "title": "BOUNDARIES ‘YEARNING: THE UNBEAUTIFUL AFTER' LP (Neon Violet & Mint Green A-Side/B-Side Vinyl)",
     "price": 32.99,
     "source": "Brooklyn Vegan",
@@ -16107,7 +16120,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "CONCORD",
+    "artist": "Universal",
     "title": "DROWNING POOL ‘SINNER' 25TH ANNIVERSARY LP (Sea Blue Smoke Vinyl)",
     "price": 29.99,
     "source": "Brooklyn Vegan",
@@ -17356,19 +17369,6 @@
   },
   {
     "artist": "ORCHARD",
-    "title": "W.A.S.P. 'W.A.S.P.' LP (40th Anniversary, High-Speed Master, Marble Vinyl)",
-    "price": 30.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/w-a-s-p-w-a-s-p-lp-40th-anniversary-high-speed-master-marble-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/b3072cc8677c4caabc5a05d56cb70965_ec134ef2_315e_42b5_9d12_c71663fcf7dc.jpg?v=1775070993",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "ORCHARD",
     "title": "STAND BY ME SOUNDTRACK LP (Turquoise Blue Vinyl)",
     "price": 39.99,
     "source": "Revolver",
@@ -17654,7 +17654,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "SUMERIAN RECORDS",
+    "artist": "AEC",
     "title": "BOUNDARIES ‘YEARNING: THE UNBEAUTIFUL AFTER' LP (Neon Violet & Mint Green A-Side/B-Side Vinyl)",
     "price": 32.99,
     "source": "Revolver",
@@ -18356,7 +18356,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "CONCORD",
+    "artist": "Universal",
     "title": "DROWNING POOL ‘SINNER' 25TH ANNIVERSARY LP (Sea Blue Smoke Vinyl)",
     "price": 29.99,
     "source": "Revolver",
@@ -19513,7 +19513,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "CONCORD",
+    "artist": "Universal",
     "title": "AUGUST BURNS RED ‘SEASON OF SURRENDER' LP (Black Vinyl)",
     "price": 27.99,
     "source": "Revolver",
@@ -27449,6 +27449,45 @@
     "source": "Equal Vision",
     "link": "https://equalvision.com/products/sea0sea0cs-lp",
     "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/83c96c2080d64e0c85b5590b479581f2.jpg?v=1691680205",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Brandy",
+    "title": "Afrodisiac (2LP)",
+    "price": 999.99,
+    "source": "Rhino",
+    "link": "https://store.rhino.com/products/afrodisiac-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0729/6162/2262/files/brandyafrodisiacorange2LP.jpg?v=1777456550",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Rhino",
+    "title": "Every 1's a Winner 1LP",
+    "price": 999.99,
+    "source": "Rhino",
+    "link": "https://store.rhino.com/products/every-1s-a-winner-1lp",
+    "image": "https://cdn.shopify.com/s/files/1/0729/6162/2262/files/HotChocolateBlackVinylPackshot_1.png?v=1777454885",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Flea",
+    "title": "Honora Sky Blue Vinyl 2LP",
+    "price": 999.99,
+    "source": "Rhino",
+    "link": "https://store.rhino.com/products/honora-sky-blue-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0729/6162/2262/files/FLEAHonoraBLUED2CLPmockup.png?v=1777454302",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
