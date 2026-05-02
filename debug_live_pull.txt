@@ -401,8 +401,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 36 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 10
+Amazon: found 31 candidate vinyl items
+Amazon: kept 9
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +429,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 1589 entries
-[Discogs] Enriching 3199 vinyl records with Mint pricing...
+[Discogs] Enriching 3198 vinyl records with Mint pricing...
 [Discogs] Cache saved (1589 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +442,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 44 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 353594 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 339016 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -462,7 +462,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 395 h2 tags, 424 li tags
+[UpcomingVinyl] Found 377 h2 tags, 406 li tags
 [UpcomingVinyl] FOUND: 4 SkinsFistful Of 4 Skins (Uk Exclusive Clear) —  (Radiation)
 [UpcomingVinyl] FOUND: 4 SkinsGood, The Bad & The Ugly —  (Radiation)
 [UpcomingVinyl] FOUND: 45Trio#Jamal b/w I Love Music —  (Bloom Music)
@@ -470,7 +470,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: A.G. & Stu BangasSelfy —  (Lastop Records)
 [UpcomingVinyl] FOUND: AC/DCBon Scott —  (Blue-Line)
 [UpcomingVinyl] FOUND: AfromanCrazy Rap —  (X-Ray Records)
-[UpcomingVinyl] FOUND: AkusmiLines —  (Tonal Union)
 [UpcomingVinyl] FOUND: AlcestEcailles De Lune —  (Prophecy)
 [UpcomingVinyl] FOUND: Alex RossiAlex Rossi Quartet Plays Tom Jobim (Marble) —  (Second Records)
 [UpcomingVinyl] FOUND: Alexander ClaffyAlive In Philadelphia, Vol.1 At Chris' Jazz Cafe —  (Cellar Live)
@@ -478,17 +477,14 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Alvarius BMalarial Dream —  (Abduction Records)
 [UpcomingVinyl] FOUND: Aly-UsFollow Me —  (Strictly Rhythm)
 [UpcomingVinyl] FOUND: American FootballAmerican Football 4 (Red) —  (Polyvinyl Records)
-[UpcomingVinyl] FOUND: Ana Carla MazaAlamar —  (Autre Distribution)
 [UpcomingVinyl] FOUND: Ana RoxannePoem 1 —  (Kranky)
 [UpcomingVinyl] FOUND: AnenonDream Temperature —  (Tonal Union)
 [UpcomingVinyl] FOUND: Angie BrownI'm Gonna Get You —  (Drumcode)
-[UpcomingVinyl] FOUND: Anna McLuckieLittle Winters —  (Hudson Records)
 [UpcomingVinyl] FOUND: Anthony JosephArk —  (Heavenly Sweetness)
 [UpcomingVinyl] FOUND: Appalachian Road ShowDella Jane's Heart —  (New Day Ent)
 [UpcomingVinyl] FOUND: ArbreWrap A Tear In Cellophane —  (Ronin Rhythm Records)
 [UpcomingVinyl] FOUND: ArcturusAspera Hiems Symfonia —  (Prophecy)
 [UpcomingVinyl] FOUND: Aretha FranklinLady Soul —  (Analogue Prod.)
-[UpcomingVinyl] FOUND: Armed for ApocalypseEarth Is Breathing Beneath Me —  (Church Road Records)
 [UpcomingVinyl] FOUND: As IsCrazy World —  (Outside In Music)
 [UpcomingVinyl] FOUND: ASCSAIBAI3 —  (Saibai)
 [UpcomingVinyl] FOUND: AtjazzStarbase 17 —  (Atjazz)
@@ -504,7 +500,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: BillyrromWind —  (Jet Set)
 [UpcomingVinyl] FOUND: Black LoopsSomething Special —  (Freerange)
 [UpcomingVinyl] FOUND: Black Oak CountyMisprint (Orange Splatter) —  (Mighty Music Import)
-[UpcomingVinyl] FOUND: Black Sun EnsembleWhirlpool Ocean —  (Lion Music Finland)
 [UpcomingVinyl] FOUND: Black Uhuru & Sly & RobbieEden Out Deh —  (Greensleeves)
 [UpcomingVinyl] FOUND: Blessid Union Of SoulsLive At Never On Sunday —  (Cleopatra Records)
 [UpcomingVinyl] FOUND: Boston Symphony Orchestra/Seiji OzawaTakemitsu: Quatrain; A Flock Descends into the Pentagonal Garden Avantgarde Series —  (Deutsche Grammophon)
@@ -547,7 +542,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Daphne RoubiniWhisky Scented Kisses —  (Cellar Live)
 [UpcomingVinyl] FOUND: Darrow FletcherDarrow Fletcher Presents Jacklyn & Genna Records —  (Kent Records UK)
 [UpcomingVinyl] FOUND: David BowieNarrates Prokofiev's Peter And The Wolf —  (Classical Music On)
-[UpcomingVinyl] FOUND: Deaf CenterThrough Time —  (Sonic Pieces)
 [UpcomingVinyl] FOUND: DeclaimeFlatulent —  (Urbnet)
 [UpcomingVinyl] FOUND: Deftonesprivate music —  (Reprise)
 [UpcomingVinyl] FOUND: Dexter GordonDexter Calling (Blue Note Tone Poet Edition) —  (Blue Note)
@@ -563,12 +557,9 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: DJ Laxxiste aPromo Use Only —  (Disques Magnetiques)
 [UpcomingVinyl] FOUND: DJ MinxEnergy —  (Rekids)
 [UpcomingVinyl] FOUND: DJ TennisFabric Presents... —  (Fabric)
-[UpcomingVinyl] FOUND: Doug GomezSignals 2 —  (Merecumbe)
 [UpcomingVinyl] FOUND: Doyeon KimWellspring —  (Tao Forms)
-[UpcomingVinyl] FOUND: DrakulasMidnight City —  (Dirtnap Records)
 [UpcomingVinyl] FOUND: DruidToward The Sun (Yellow & Orange) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: EaglesOne Of These Nights —  (Rhino Records)
-[UpcomingVinyl] FOUND: Edo Van BreemenKeeper —  (Mutant)
 [UpcomingVinyl] FOUND: Ego Ella MayGood Intentions (Clear) —  (Believe Music)
 [UpcomingVinyl] FOUND: Elis ReginaElis —  (Universal Import)
 [UpcomingVinyl] FOUND: Emily NenniMovin' Shoes —  (New West Records)
@@ -600,7 +591,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: GodsmackLive at Mohegan Sun —  (Godsmack)
 [UpcomingVinyl] FOUND: Gordon LightfootIf You Could Read My Mind (Translucent) —  (Friday Music Two)
 [UpcomingVinyl] FOUND: Gordon LightfootSundown —  (Analogue Prod.)
-[UpcomingVinyl] FOUND: Guido SpannocchiKammermusik —  (Audioguido)
 [UpcomingVinyl] FOUND: Gypseas of InfinityGypseas of Infinity —  (Surfdog)
 [UpcomingVinyl] FOUND: Hackney ElectronicaSynaptic Shadows —  (Dark Entries)
 [UpcomingVinyl] FOUND: HalcaliHalcali Bacon —  (For Life Music Ent.)
@@ -736,7 +726,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Pedro Vian & Ustad Nawab Khan & Naved Nawab KhanThe Bubble Of Love —  (Modern Obscure Music)
 [UpcomingVinyl] FOUND: PetraHope —  (Girder Records)
 [UpcomingVinyl] FOUND: Phil YostBent City —  (Uno Loop)
-[UpcomingVinyl] FOUND: Pig's BloodDestroying The Spirit —  (Dark Descent)
 [UpcomingVinyl] FOUND: PlasmajetSolastalgia (Orange & Black) —  (Octopus Rising)
 [UpcomingVinyl] FOUND: Poison IdeaRecord Collectors Are STILL Pretentious Assholes —  (American Leather)
 [UpcomingVinyl] FOUND: Poison IdeaWar All The Time (Opaque) —  (American Leather)
@@ -756,7 +745,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Roy OrbisonMonument Singles Collelction 1960-1964 (Gold) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: RunkusSUPERNOVA —  (Easy Star)
 [UpcomingVinyl] FOUND: Sacred ReichAlive At The Dynamo —  (Back On Black)
-[UpcomingVinyl] FOUND: SaideraMiscigenacao —  (Ceci Discos)
 [UpcomingVinyl] FOUND: Sam BlasucciPhysical Dream —  (Doubleplay Calico)
 [UpcomingVinyl] FOUND: Satoshi Tomiie12B-Dub Part 3 —  (Phonogramme)
 [UpcomingVinyl] FOUND: Saturdays at Your PlaceAlways Cloudy —  (Wax Bodega)
@@ -795,7 +783,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Taj MahalTime —  (Thirty Tigers)
 [UpcomingVinyl] FOUND: TealBluish Green —  (Spiritual World)
 [UpcomingVinyl] FOUND: TealOriginal Watercolour —  (Spiritual World)
-[UpcomingVinyl] FOUND: TendreTendre —  (Rallye Label)
 [UpcomingVinyl] FOUND: The Black Dahlia MurderVerminous —  (Metal Blade)
 [UpcomingVinyl] FOUND: The Black KeysPeaches! —  (Warner Records)
 [UpcomingVinyl] FOUND: The BusinessKeep The Faith —  (Back On Black)
@@ -809,7 +796,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: The Head and the HeartThe Head and the Heart (15th Anniversary) —  (Head and the (Chord))
 [UpcomingVinyl] FOUND: The Rolling StonesBig Hits: High Tide & Green Grass Us —  (Universal Japan)
 [UpcomingVinyl] FOUND: The TydeOnce —  (Dust & Memory)
-[UpcomingVinyl] FOUND: The Unbelievable TruthAlmost Here —  (Proper Records UK)
 [UpcomingVinyl] FOUND: The Wave PicturesYou're My Patient Now —  (Acuarela)
 [UpcomingVinyl] FOUND: The Wedding PresentSeamonsters —  (Sony International Network)
 [UpcomingVinyl] FOUND: Thou Shalt SufferInto The Woods Of Belial —  (Darkness Shall Rise)
@@ -827,7 +813,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: UltrabombThe Bridges That We Burn —  (The Label Group)
 [UpcomingVinyl] FOUND: Umbra SumObras De Misericordia —  (Acuarela)
 [UpcomingVinyl] FOUND: UnanimatedFire Storm —  (Darkness Shall Rise)
-[UpcomingVinyl] FOUND: Unbelievable TruthAlmost Here —  (Proper Records UK)
 [UpcomingVinyl] FOUND: Unearthly RitesTortural Symphony of the Flesh —  (Svart Records)
 [UpcomingVinyl] FOUND: Unearthly RitesTortural Symphony of the Flesh —  (Svart Records)
 [UpcomingVinyl] FOUND: Various ArtistsA Touch Of Love EP 7 —  (Big Love)
@@ -848,18 +833,15 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: White LionBig Game (Translucent Gold; Anniversary Edition) —  (Friday Music Two)
 [UpcomingVinyl] FOUND: WiredKyoto 1970 —  (Metaphon)
 [UpcomingVinyl] FOUND: Wishbone AshArgus —  (Proper Records UK)
-[UpcomingVinyl] FOUND: XclusivFools Are Friendly —  (Phantasy Sound)
 [UpcomingVinyl] FOUND: Xoel LopezOniria Popular —  (Esmerarte)
 [UpcomingVinyl] FOUND: Y'KnowWhy Now —  (Spiritual World)
 [UpcomingVinyl] FOUND: YoubetYoubet —  (Hardly Art)
 [UpcomingVinyl] FOUND: Young the GiantVictory Garden —  (Fearless Records)
 [UpcomingVinyl] FOUND: Yuji Ohno & GalaxyCaptain Future Original Soundtrack —  (Lawson Ent)
-[UpcomingVinyl] FOUND: Zoot SimsPassion Flower — Zoot Sims Plays Duke Ellington (Analogue Prod.)
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
-[UpcomingVinyl] FOUND: DegiheugiEndless Smile 2 —  (Universal UK)
-[UpcomingVinyl] li>h2 approach found 395 entries
-[UpcomingVinyl] Got 463749 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 377 entries
+[UpcomingVinyl] Got 495669 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -874,15 +856,15 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3151 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3377 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 391
-[UpcomingVinyl] 391 whitelist matches saved to upcoming_releases.json
+[UpcomingVinyl] Total matches: 373
+[UpcomingVinyl] 373 whitelist matches saved to upcoming_releases.json
 [BuySignals] 3189 buy signals saved to buy_signals.json
 
 ==================================================
@@ -927,11 +909,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 9 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
+Amazon: 9
 Brooklyn Vegan: 183
 Craft Recordings: 75
 Equal Vision: 87
@@ -944,7 +926,7 @@ Newbury Comics: 152
 Newbury Preorders: 152
 Pirates Press Records: 61
 Pure Noise Records: 74
-r/VinylReleases: 44
+r/VinylReleases: 46
 Revolver: 153
 Rhino: 102
 Rise All: 74
