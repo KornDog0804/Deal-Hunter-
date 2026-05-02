@@ -68,9 +68,11 @@ Rise All: kept 74
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   -> retry 1/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
+  -> retry 2/2 for https://shop.brooklynvegan.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  ✗ https://shop.brooklynvegan.com/products.json?limit=250 -> HTTP Error 500: Internal Server Error
+  ✓ https://shop.brooklynvegan.com/collections/all/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 183
+Brooklyn Vegan: kept 148
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -400,9 +402,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 36 candidate vinyl items
+Amazon: found 38 candidate vinyl items
 Amazon: found 31 candidate vinyl items
-Amazon: kept 9
+Amazon: kept 10
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +431,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 1589 entries
-[Discogs] Enriching 3198 vinyl records with Mint pricing...
+[Discogs] Enriching 3162 vinyl records with Mint pricing...
 [Discogs] Cache saved (1589 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +444,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 339016 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 338614 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -841,7 +843,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] li>h2 approach found 377 entries
-[UpcomingVinyl] Got 495669 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 496071 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -865,7 +867,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 373
 [UpcomingVinyl] 373 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3189 buy signals saved to buy_signals.json
+[BuySignals] 3152 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -878,7 +880,7 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 92 deals
   Rise Records: 74 deals
   Rise All: 74 deals
-  Brooklyn Vegan: 183 deals
+  Brooklyn Vegan: 148 deals
   Revolver: 153 deals
   Newbury Comics: 152 deals
   Newbury Preorders: 152 deals
@@ -909,12 +911,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 9 items | pages: 7 | robot walls: 0
+  Amazon: 10 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 9
-Brooklyn Vegan: 183
+Amazon: 10
+Brooklyn Vegan: 146
 Craft Recordings: 75
 Equal Vision: 87
 Fearless Records: 92
@@ -926,7 +928,7 @@ Newbury Comics: 152
 Newbury Preorders: 152
 Pirates Press Records: 61
 Pure Noise Records: 74
-r/VinylReleases: 46
+r/VinylReleases: 45
 Revolver: 153
 Rhino: 102
 Rise All: 74
