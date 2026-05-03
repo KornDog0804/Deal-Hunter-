@@ -108,6 +108,7 @@ Craft Recordings: kept 75
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 135
@@ -355,9 +356,17 @@ Millions of Records: unknown source_type "html_store" - skipping
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
-  ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
@@ -402,9 +411,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: found 31 candidate vinyl items
-Amazon: kept 10
+Amazon: found 34 candidate vinyl items
+Amazon: found 28 candidate vinyl items
+Amazon: kept 7
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -430,9 +439,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 1589 entries
-[Discogs] Enriching 3162 vinyl records with Mint pricing...
-[Discogs] Cache saved (1589 entries)
+[Discogs] Loaded cache with 1664 entries
+[Discogs] Enriching 3159 vinyl records with Mint pricing...
+[Discogs] Cache saved (1664 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -449,7 +458,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 338614 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 338482 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -843,7 +852,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZuFerrum Sidereum —  (House Of Mythology)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] li>h2 approach found 377 entries
-[UpcomingVinyl] Got 496071 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 495669 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -911,11 +920,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 7 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
+Amazon: 7
 Brooklyn Vegan: 146
 Craft Recordings: 75
 Equal Vision: 87
