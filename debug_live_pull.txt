@@ -356,17 +356,9 @@ Millions of Records: unknown source_type "html_store" - skipping
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
-  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
@@ -411,9 +403,10 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: found 28 candidate vinyl items
-Amazon: kept 7
+Amazon: found 0 candidate vinyl items
+Amazon: found 0 candidate vinyl items
+Amazon: No vinyl products found, adding catalog portal fallback
+Amazon: kept 1
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -440,7 +433,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 1664 entries
-[Discogs] Enriching 3159 vinyl records with Mint pricing...
+[Discogs] Enriching 3153 vinyl records with Mint pricing...
 [Discogs] Cache saved (1664 entries)
 [Discogs] Enrichment complete!
 
@@ -458,7 +451,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 338482 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 338614 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -876,7 +869,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 373
 [UpcomingVinyl] 373 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3152 buy signals saved to buy_signals.json
+[BuySignals] 3153 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -920,11 +913,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 7 items | pages: 7 | robot walls: 0
+  Amazon: 1 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 7
+Amazon: 1
 Brooklyn Vegan: 146
 Craft Recordings: 75
 Equal Vision: 87
