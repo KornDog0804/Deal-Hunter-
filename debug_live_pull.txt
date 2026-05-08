@@ -4,7 +4,7 @@ Scraping: Rollin Records (shopify_store)
 ==================================================
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 227
+Rollin Records: kept 225
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
@@ -14,14 +14,14 @@ Scraping: Rollin Preorders (shopify_store)
   ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Preorders: 250 products via Shopify JSON
-Rollin Preorders: kept 227
+Rollin Preorders: kept 225
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 225
+Sound of Vinyl: kept 226
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 163
+Brooklyn Vegan: kept 164
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 12
+Amazon: found 43 candidate vinyl items
+Amazon: found 33 candidate vinyl items
+Amazon: kept 14
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 412997 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 412973 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -927,7 +927,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: フーテン族Mayonaka No Youchien Midnight Kindergarten —  (Suzo)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 464 entries
-[UpcomingVinyl] Got 547732 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 548116 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -951,20 +951,20 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 455
 [UpcomingVinyl] 455 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3137 buy signals saved to buy_signals.json
+[BuySignals] 3135 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 227 deals
-  Rollin Preorders: 227 deals
-  Sound of Vinyl: 225 deals
+  Rollin Records: 225 deals
+  Rollin Preorders: 225 deals
+  Sound of Vinyl: 226 deals
   uDiscover Music: 131 deals
   Fearless Records: 96 deals
   Fearless Vinyl: 96 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 163 deals
+  Brooklyn Vegan: 164 deals
   Revolver: 133 deals
   Newbury Comics: 150 deals
   Newbury Preorders: 150 deals
@@ -995,12 +995,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 12 items | pages: 7 | robot walls: 0
+  Amazon: 14 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 12
-Brooklyn Vegan: 163
+Amazon: 14
+Brooklyn Vegan: 164
 Craft Recordings: 78
 Equal Vision: 87
 Fearless Records: 96
@@ -1019,12 +1019,12 @@ Rise All: 72
 Rise Records: 72
 RMFN All: 212
 Rock Metal Fan Nation: 212
-Rollin Preorders: 227
-Rollin Records: 227
+Rollin Preorders: 225
+Rollin Records: 225
 SharpTone Records: 91
 Solid State Records: 48
 Solid State Vinyl: 48
-Sound of Vinyl: 223
+Sound of Vinyl: 224
 Sumerian Records: 66
 Target: 1
 uDiscover Music: 131
