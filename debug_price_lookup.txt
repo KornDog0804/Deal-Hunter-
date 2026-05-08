@@ -1,9 +1,29 @@
-[PriceLookup] Loaded 3211 deals
+[PriceLookup] Loaded 3203 deals
 [PriceLookup] Cache TTL: 7 days
 [PriceLookup] Min score for lookup: 45
-[PriceLookup] Eligible deals (score >= 45): 3155
-[PriceLookup] Cache entries: 3120
+[PriceLookup] Eligible deals (score >= 45): 3142
+[PriceLookup] Cache entries: 3144
+[Discogs] Search HTTP 502 for 'Metallica Woodstock 99'
+[Discogs] Search HTTP 502 for 'Bob Marley & the Wailers Rastaman Vibration (50th Anniversary Green Swirl)'
+[Discogs] Search HTTP 502 for 'Mya Fear Of Flying [Signed]'
+[Discogs] Search HTTP 502 for 'Movements "Happier Now" SIGNED Black Ice Glitter'
+[Discogs] Search HTTP 502 for 'Movements "Happier Now" Neon Coral Ghost'
+[Discogs] Search HTTP 502 for 'Movements "Happier Now" Half and Half Tangerine and Apple Red'
+[Discogs] Search HTTP 502 for 'Movements "Happier Now" Color In Color Emerald and Black'
+[Discogs] Search HTTP 502 for 'Redeye BOARDS OF CANADA 'INFERNO' (Deluxe, Transparent Red )'
+[Discogs] Search HTTP 502 for 'Fleetwood Mac Tango In The Night ()'
+[Discogs] Search HTTP 502 for 'Red Hot Chili Peppers Unlimited Love Deluxe'
+[Discogs] Search HTTP 502 for 'Deftones White Pony (20th Anniversary) Deluxe Box Set'
 [PriceLookup] Progress: 25 lookups done...
+[Discogs] Rate limited, sleeping 5s...
+[Discogs] Rate limited, sleeping 5s...
+[Discogs] Stats error for release 37073151: HTTP Error 429: Too Many Requests
+[Discogs] Search HTTP 502 for 'The Fault In Our Stars Music From the Motion Picture ()'
+[Discogs] Search HTTP 502 for 'Movements "Happier Now" Bone'
+[Discogs] Rate limited, sleeping 5s...
+[Discogs] Price suggestions HTTP 502 for release 21422524
+[Discogs] Stats error for release 20982424: HTTP Error 502: Bad Gateway
+[Discogs] Price suggestions HTTP 502 for release 20982424
 [PriceLookup] Progress: 50 lookups done...
 [PriceLookup] Progress: 75 lookups done...
 [PriceLookup] Progress: 100 lookups done...
@@ -21,8 +41,8 @@
 
 [PriceLookup] Summary:
   Lookups performed: 350
-  Cache hits: 1660
+  Cache hits: 2734
   Skipped (low score): 0
-  Deals enriched with real prices: 758
+  Deals enriched with real prices: 1343
 [PriceLookup] Updated /home/runner/work/Deal-Hunter-/Deal-Hunter-/live_deals.json
-[PriceLookup] Cache saved (3144 entries)
+[PriceLookup] Cache saved (3212 entries)
