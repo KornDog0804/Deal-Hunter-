@@ -35,7 +35,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 96
+Fearless Records: kept 97
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 96
+Fearless Vinyl: kept 97
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 160
+Brooklyn Vegan: kept 163
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -114,7 +114,7 @@ Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 87
+Equal Vision: kept 88
 
 ==================================================
 Scraping: Rhino (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: found 33 candidate vinyl items
-Amazon: kept 11
+Amazon: found 37 candidate vinyl items
+Amazon: found 35 candidate vinyl items
+Amazon: kept 14
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 2092 entries
-[Discogs] Enriching 3137 vinyl records with Mint pricing...
+[Discogs] Enriching 3146 vinyl records with Mint pricing...
 [Discogs] Cache saved (2092 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 383001 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 383007 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -889,7 +889,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 426 entries
-[UpcomingVinyl] Got 528722 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 528566 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -913,7 +913,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 420
 [UpcomingVinyl] 420 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3129 buy signals saved to buy_signals.json
+[BuySignals] 3133 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -922,17 +922,17 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 225 deals
   Sound of Vinyl: 229 deals
   uDiscover Music: 132 deals
-  Fearless Records: 96 deals
-  Fearless Vinyl: 96 deals
+  Fearless Records: 97 deals
+  Fearless Vinyl: 97 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 160 deals
+  Brooklyn Vegan: 163 deals
   Revolver: 132 deals
   Newbury Comics: 150 deals
   Newbury Preorders: 150 deals
   Craft Recordings: 78 deals
   MNRK Heavy: 135 deals
-  Equal Vision: 87 deals
+  Equal Vision: 88 deals
   Rhino: 102 deals
   Interscope Records: 117 deals
   SharpTone Records: 92 deals
@@ -957,16 +957,16 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 11 items | pages: 7 | robot walls: 0
+  Amazon: 14 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 11
-Brooklyn Vegan: 160
+Amazon: 14
+Brooklyn Vegan: 163
 Craft Recordings: 78
-Equal Vision: 87
-Fearless Records: 96
-Fearless Vinyl: 96
+Equal Vision: 88
+Fearless Records: 97
+Fearless Vinyl: 97
 Hopeless Records: 55
 Interscope Records: 117
 MNRK Heavy: 135
