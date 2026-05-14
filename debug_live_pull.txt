@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 165
+Brooklyn Vegan: kept 164
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -100,12 +100,11 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 78
+Craft Recordings: kept 80
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 135
@@ -400,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 36 candidate vinyl items
+Amazon: found 33 candidate vinyl items
+Amazon: kept 11
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 2136 entries
-[Discogs] Enriching 3129 vinyl records with Mint pricing...
-[Discogs] Cache saved (2136 entries)
+[Discogs] Loaded cache with 2185 entries
+[Discogs] Enriching 3140 vinyl records with Mint pricing...
+[Discogs] Cache saved (2185 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -443,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 399989 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 400403 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -948,11 +946,11 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 97 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 165 deals
+  Brooklyn Vegan: 164 deals
   Revolver: 131 deals
   Newbury Comics: 150 deals
   Newbury Preorders: 150 deals
-  Craft Recordings: 78 deals
+  Craft Recordings: 80 deals
   MNRK Heavy: 135 deals
   Equal Vision: 88 deals
   Rhino: 102 deals
@@ -979,13 +977,13 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 11 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
-Brooklyn Vegan: 165
-Craft Recordings: 78
+Amazon: 11
+Brooklyn Vegan: 164
+Craft Recordings: 80
 Equal Vision: 88
 Fearless Records: 97
 Fearless Vinyl: 97
@@ -996,7 +994,7 @@ Newbury Comics: 150
 Newbury Preorders: 150
 Pirates Press Records: 59
 Pure Noise Records: 83
-r/VinylReleases: 47
+r/VinylReleases: 45
 Revolver: 130
 Rhino: 102
 Rise All: 73
