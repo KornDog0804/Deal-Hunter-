@@ -26541,5 +26541,243 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|take your experience to the next level": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "clay birds|a separation from vanity": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Clay Birds",
+    "discogs_title": "A Separation From Vanity",
+    "discogs_release_id": 37253787,
+    "discogs_url": "https://www.discogs.com/release/37253787-Clay-Birds-A-Separation-From-Vanity",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 3,
+    "discogs_want": 3
+  },
+  "julian lennon|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "boz scaggs|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bill evans|interplay": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bill Evans",
+    "discogs_title": "Interplay",
+    "discogs_release_id": 7743879,
+    "discogs_url": "https://www.discogs.com/release/7743879-Bill-Evans-Interplay",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 49,
+    "discogs_want": 204
+  },
+  "adrian johnston|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "l orange|old soul": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8176,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Orange Juice (3)",
+    "discogs_title": "Poor Old Soul",
+    "discogs_release_id": 461031,
+    "discogs_url": "https://www.discogs.com/release/461031-Orange-Juice-Poor-Old-Soul",
+    "discogs_mint_price": 17.78,
+    "discogs_lowest": 17.78,
+    "discogs_num_for_sale": 38,
+    "discogs_have": 1210,
+    "discogs_want": 311
+  },
+  "various|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pain|psalms of extinction": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Pain (3)",
+    "discogs_title": "Psalms Of Extinction",
+    "discogs_release_id": 37340964,
+    "discogs_url": "https://www.discogs.com/release/37340964-Pain-Psalms-Of-Extinction",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 22,
+    "discogs_want": 5
+  },
+  "pain|rebirth": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Pain (3)",
+    "discogs_title": "Rebirth",
+    "discogs_release_id": 37340871,
+    "discogs_url": "https://www.discogs.com/release/37340871-Pain-Rebirth",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 25,
+    "discogs_want": 4
+  },
+  "unknown artist|pain pain": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.796,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Unknown Artist",
+    "discogs_title": "Window Pain",
+    "discogs_release_id": 33421928,
+    "discogs_url": "https://www.discogs.com/release/33421928-Unknown-Artist-Window-Pain",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 1,
+    "discogs_want": 2
+  },
+  "raf camora|forever rr 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "skip the use|love and anxiety": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Skip The Use",
+    "discogs_title": "Love & Anxiety",
+    "discogs_release_id": 37209126,
+    "discogs_url": "https://www.discogs.com/release/37209126-Skip-The-Use-Love-Anxiety",
+    "discogs_mint_price": 62.49,
+    "discogs_lowest": 62.49,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 27,
+    "discogs_want": 1
+  },
+  "anthrax|cursum perficio red yellow orange": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|a little vengeance signed alt cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "john coltrane|meditations": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "John Coltrane",
+    "discogs_title": "Meditations",
+    "discogs_release_id": 13102042,
+    "discogs_url": "https://www.discogs.com/release/13102042-John-Coltrane-Meditations",
+    "discogs_mint_price": 81.12,
+    "discogs_lowest": 81.12,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 62,
+    "discogs_want": 164
+  },
+  "laura veirs|temple songs": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.501,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mcalmont and butler|september 18 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5778,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "shaboozey|2 antique copper rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "shaboozey|walmart tan leather": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "shaboozey|outlaw cherie lee and other western tales": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "niall horan dinner party|canada ice wine with wine charms and signed art card": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
