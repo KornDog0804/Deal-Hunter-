@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: found 33 candidate vinyl items
-Amazon: kept 11
+Amazon: found 42 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 2317 entries
-[Discogs] Enriching 3134 vinyl records with Mint pricing...
-[Discogs] Cache saved (2317 entries)
+[Discogs] Loaded cache with 2339 entries
+[Discogs] Enriching 3136 vinyl records with Mint pricing...
+[Discogs] Cache saved (2339 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 355175 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 355589 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -855,7 +855,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 友川かずきMuzan No Bi Beauty Without Mercy —  (Fuji)
 [UpcomingVinyl] FOUND: 川井憲次Twilight Of The Warriors: Walled In Original Soundtrack —  (Nei! Music)
 [UpcomingVinyl] li>h2 approach found 392 entries
-[UpcomingVinyl] Got 494710 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 494578 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -923,11 +923,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 11 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 11
+Amazon: 13
 Brooklyn Vegan: 158
 Craft Recordings: 80
 Equal Vision: 88
