@@ -26779,5 +26779,174 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "amazon catalog|amazon records": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7733,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jimmy Castor",
+    "discogs_title": "Amazon",
+    "discogs_release_id": 1750577,
+    "discogs_url": "https://www.discogs.com/release/1750577-Jimmy-Castor-Amazon",
+    "discogs_mint_price": 0.9,
+    "discogs_lowest": 0.9,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 43,
+    "discogs_want": 22
+  },
+  "unknown artist|legend of zelda ocarina of time n64 ost": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4477,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lady gaga mayhem in the desert|coachella 2025 2 coloured": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1821,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cheap trick|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cheap trick|in color": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Cheap Trick",
+    "discogs_title": "In Color",
+    "discogs_release_id": 1801643,
+    "discogs_url": "https://www.discogs.com/release/1801643-Cheap-Trick-In-Color",
+    "discogs_mint_price": 3.12,
+    "discogs_lowest": 3.12,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 1218,
+    "discogs_want": 180
+  },
+  "sheryl crow|2017 be myself tour": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sheryl Crow",
+    "discogs_title": "Live At The Capitol Theatre 2017 Be Myself Tour",
+    "discogs_release_id": 13004559,
+    "discogs_url": "https://www.discogs.com/release/13004559-Sheryl-Crow-Live-At-The-Capitol-Theatre-2017-Be-Myself-Tour",
+    "discogs_mint_price": 39.21,
+    "discogs_lowest": 39.21,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 267,
+    "discogs_want": 91
+  },
+  "the mama s and the papa s|collected": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8667,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Huey Lewis & The News",
+    "discogs_title": "Collected",
+    "discogs_release_id": 11140808,
+    "discogs_url": "https://www.discogs.com/release/11140808-Huey-Lewis-The-News-Collected",
+    "discogs_mint_price": 48.0,
+    "discogs_lowest": 48.0,
+    "discogs_num_for_sale": 14,
+    "discogs_have": 1368,
+    "discogs_want": 180
+  },
+  "unknown artist|olivia rodrigo x weezer live 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mobb deep|2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7077,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the pretty reckless|34": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7292,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "el michels affair|adult themes": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "El Michels Affair",
+    "discogs_title": "Adult Themes",
+    "discogs_release_id": 15201379,
+    "discogs_url": "https://www.discogs.com/release/15201379-El-Michels-Affair-Adult-Themes",
+    "discogs_mint_price": 87.21,
+    "discogs_lowest": 87.21,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 42,
+    "discogs_want": 162
+  },
+  "unknown artist|esthero wlg 20th anniversary double 3rd pressing with alternate artwork": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "motorhead|july 3 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6813,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "thee sinseers|love stories": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7399,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "matt hansen|orchid sunspot double": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "you are an angel|it s fine to dream": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5576,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
