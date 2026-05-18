@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 136
+Revolver: kept 137
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 9
+Amazon: found 40 candidate vinyl items
+Amazon: found 33 candidate vinyl items
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 2355 entries
-[Discogs] Enriching 3136 vinyl records with Mint pricing...
+[Discogs] Enriching 3141 vinyl records with Mint pricing...
 [Discogs] Cache saved (2355 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 346477 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 347246 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -461,7 +461,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 386 h2 tags, 415 li tags
+[UpcomingVinyl] Found 387 h2 tags, 416 li tags
 [UpcomingVinyl] FOUND: Arthur RussellLove Is Overtaking Me Redux —  (Audika Records)
 [UpcomingVinyl] FOUND: 16Forgeries Vol 1, 1972-1984 —  (Heavy Psych Sounds)
 [UpcomingVinyl] FOUND: 16Forgeries, Vol. 1, 1972-1984 —  (Heavy Psych Sounds)
@@ -490,6 +490,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Armin Van BuurenFeel Again —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Armored SaintEmotion Factory Reset —  (Metal Blade)
 [UpcomingVinyl] FOUND: ArtilleryFace Of Fear (Uk Exclusive Clear) —  (Back On Black)
+[UpcomingVinyl] FOUND: ArtilleryMade In Hell —  (Mighty Music Import)
 [UpcomingVinyl] FOUND: ArtilleryPenalty By Perception —  (Back On Black)
 [UpcomingVinyl] FOUND: ArtilleryX —  (Back On Black)
 [UpcomingVinyl] FOUND: ASCSAIBAI3 —  (Saibai)
@@ -848,8 +849,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZZ TopTres Hombres —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: フーテン族Mayonaka No Youchien Midnight Kindergarten —  (Suzo)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
-[UpcomingVinyl] li>h2 approach found 386 entries
-[UpcomingVinyl] Got 494710 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 387 entries
+[UpcomingVinyl] Got 504633 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -864,16 +865,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3375 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3445 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 381
-[UpcomingVinyl] 381 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3128 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 382
+[UpcomingVinyl] 382 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3129 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -887,7 +888,7 @@ SOURCE STATUS SUMMARY
   Rise Records: 74 deals
   Rise All: 74 deals
   Brooklyn Vegan: 157 deals
-  Revolver: 136 deals
+  Revolver: 137 deals
   Newbury Comics: 151 deals
   Newbury Preorders: 151 deals
   Craft Recordings: 81 deals
@@ -917,11 +918,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 9 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 9
+Amazon: 13
 Brooklyn Vegan: 157
 Craft Recordings: 81
 Equal Vision: 88
@@ -934,8 +935,8 @@ Newbury Comics: 151
 Newbury Preorders: 151
 Pirates Press Records: 60
 Pure Noise Records: 81
-r/VinylReleases: 47
-Revolver: 135
+r/VinylReleases: 46
+Revolver: 136
 Rhino: 96
 Rise All: 74
 Rise Records: 74
