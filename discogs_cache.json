@@ -28453,5 +28453,51 @@
     "discogs_num_for_sale": 0,
     "discogs_have": 6,
     "discogs_want": 44
+  },
+  "myles smith|my mess my heart my life": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2917,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|remember the humans broken social scene rough trade limited to 750": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "durand bernarr|bloom bernarr": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Durand Bernarr",
+    "discogs_title": "Bloom",
+    "discogs_release_id": 35111297,
+    "discogs_url": "https://www.discogs.com/release/35111297-Durand-Bernarr-Bloom",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 23,
+    "discogs_want": 171
+  },
+  "angel olsen|my woman": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Angel Olsen",
+    "discogs_title": "My Woman",
+    "discogs_release_id": 9548405,
+    "discogs_url": "https://www.discogs.com/release/9548405-Angel-Olsen-My-Woman",
+    "discogs_mint_price": 53.33,
+    "discogs_lowest": 53.33,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 479,
+    "discogs_want": 340
   }
 }
