@@ -30669,7 +30669,7 @@
   {
     "artist": "ARCHITECTS",
     "title": "ALL OUR GODS HAVE ABANDONED US (Indie Exclusive, Limited 10th Anniversary Edition, Black Splatter Colored Vinyl)",
-    "price": 29.98,
+    "price": 24.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/architects-all-our-gods-have-abandoned-us-indie-exclusive-10th-anniversary-edition-black-splatter-colored-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/architects_-_all_our_gods_have_abandoned_us_indie_exclusive_10th_anniversary_colored_vinyl.webp?v=1779379803",
@@ -32528,7 +32528,7 @@
   {
     "artist": "RADIOHEAD",
     "title": "OK COMPUTER OKNOTOK 1997 2017 (20th Anniversary Edition, Triple Black Vinyl) (3LP)",
-    "price": 59.98,
+    "price": 41.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/radiohead-ok-computer-oknotok-1997-2017-20th-anniversary-edition-triple-black-vinyl-3lp",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/radiohead_-_ok_computer_oknotok_1997_2007_20th_anniversary_3lp_vinyl.jpg?v=1776091136",
@@ -33334,7 +33334,7 @@
   {
     "artist": "ARCHITECTS",
     "title": "ALL OUR GODS HAVE ABANDONED US (Indie Exclusive, Limited 10th Anniversary Edition, Black Splatter Colored Vinyl)",
-    "price": 29.98,
+    "price": 24.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/architects-all-our-gods-have-abandoned-us-indie-exclusive-10th-anniversary-edition-black-splatter-colored-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/architects_-_all_our_gods_have_abandoned_us_indie_exclusive_10th_anniversary_colored_vinyl.webp?v=1779379803",
@@ -35193,7 +35193,7 @@
   {
     "artist": "RADIOHEAD",
     "title": "OK COMPUTER OKNOTOK 1997 2017 (20th Anniversary Edition, Triple Black Vinyl) (3LP)",
-    "price": 59.98,
+    "price": 41.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/radiohead-ok-computer-oknotok-1997-2017-20th-anniversary-edition-triple-black-vinyl-3lp",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/radiohead_-_ok_computer_oknotok_1997_2007_20th_anniversary_3lp_vinyl.jpg?v=1776091136",
@@ -40643,6 +40643,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
