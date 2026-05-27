@@ -28,14 +28,14 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 132
+uDiscover Music: kept 137
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 98
+Fearless Records: kept 99
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,14 +45,14 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 98
+Fearless Vinyl: kept 99
 
 ==================================================
 Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 74
+Rise Records: kept 72
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -62,7 +62,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 74
+Rise All: kept 72
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -76,14 +76,14 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 138
+Revolver: kept 139
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 151
+Newbury Comics: kept 150
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -93,14 +93,14 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 151
+Newbury Preorders: kept 150
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 82
+Craft Recordings: kept 81
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -164,9 +164,9 @@ Sumerian Records: kept 66
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 163 products
-Solid State Records: 163 products via Shopify JSON
-Solid State Records: kept 54
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 162 products
+Solid State Records: 162 products via Shopify JSON
+Solid State Records: kept 53
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -174,23 +174,23 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 163 products
-Solid State Vinyl: 163 products via Shopify JSON
-Solid State Vinyl: kept 54
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 162 products
+Solid State Vinyl: 162 products via Shopify JSON
+Solid State Vinyl: kept 53
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
 Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 82
+Pure Noise Records: kept 78
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
 ==================================================
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
-Hopeless Records: kept 55
+Hopeless Records: kept 56
 
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
@@ -355,8 +355,6 @@ Scraping: IndieMerchstore (shopify_store)
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
@@ -368,7 +366,6 @@ IndieMerchstore: kept 0
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
   ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
@@ -402,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 36 candidate vinyl items
+Amazon: found 32 candidate vinyl items
+Amazon: kept 8
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -432,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 2596 entries
-[Discogs] Enriching 3135 vinyl records with Mint pricing...
+[Discogs] Enriching 3138 vinyl records with Mint pricing...
 [Discogs] Cache saved (2596 entries)
 [Discogs] Enrichment complete!
 
@@ -445,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 371195 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 372750 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -465,7 +461,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 409 h2 tags, 438 li tags
+[UpcomingVinyl] Found 411 h2 tags, 440 li tags
 [UpcomingVinyl] FOUND: Laurence PikePossible Utopias For Jazz Quintet —  (Balmat)
 [UpcomingVinyl] FOUND: Laurence PikePossible Utopias For Jazz Quintet —  (Balmat)
 [UpcomingVinyl] FOUND: 16 HorsepowerOlden —  (Glitterhouse)
@@ -497,6 +493,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: AtjazzStarbase 17 —  (Atjazz)
 [UpcomingVinyl] FOUND: Atjazz & Fred Everything8 Days —  (Lazy Days)
 [UpcomingVinyl] FOUND: Aura NoirBlack Thrash Attack (30th Anniversary; Red Marble) —  (Peaceville)
+[UpcomingVinyl] FOUND: Aural ImbalanceFragile Shapes —  (Spatial)
 [UpcomingVinyl] FOUND: Avishai Cohen TrioEternal Child —  (Naive)
 [UpcomingVinyl] FOUND: Aza LineageRebel Daawta —  (Universal UK)
 [UpcomingVinyl] FOUND: BagThis House Is A Body —  (Universal UK)
@@ -511,11 +508,11 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Bill Evans TrioAT Shelly's Manne-Hole —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Bill Evans TrioExplorations —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Bill Evans TrioMoon Beams —  (Analogue Prod.)
+[UpcomingVinyl] FOUND: Billy LockettThings Are Looking Up —  (Lockett Records)
 [UpcomingVinyl] FOUND: billy woodsMaps —  (billy woods)
 [UpcomingVinyl] FOUND: BillyrromWind —  (Jet Set)
 [UpcomingVinyl] FOUND: Black LoopsSomething Special —  (Freerange)
 [UpcomingVinyl] FOUND: Black LungsSend Flowers (15 Year Anniversary; Silver) —  (Dine Alone Music Inc)
-[UpcomingVinyl] FOUND: Black SaaganBlak Saagan: Un Sequestro Lungo 10000 Anni —  (Maple)
 [UpcomingVinyl] FOUND: Black SmokerBlack Smoker —  (Swoon Records)
 [UpcomingVinyl] FOUND: BlarfFilm Scores For Films That Don't Exist —  (Stones Throw)
 [UpcomingVinyl] FOUND: Blaze20:20 Vision Dubs n Edits —  (Slip 'N' Slide)
@@ -544,6 +541,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: City and ColourThe Hurry And The Harm (Black Ice With Splatter) —  (Dine Alone Music Inc)
 [UpcomingVinyl] FOUND: ClammbonLover Album 2 —  (Lawson Ent)
 [UpcomingVinyl] FOUND: Coastal CommissionBring Down The Walls —  (Pacific Coast House)
+[UpcomingVinyl] FOUND: CoilThe Unreleased Themes For Hellraiser Expanded Ritual —  (Musique Pour Danse)
 [UpcomingVinyl] FOUND: CoilThe Unreleased Themes For Hellraiser Expanded Ritual —  (Musique Pour Danse)
 [UpcomingVinyl] FOUND: Cole BerlinerThe Black Door —  (Drag City)
 [UpcomingVinyl] FOUND: Corpse Water...Something In The Water —  (Grindscene Records)
@@ -687,9 +685,11 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: MegadethCountdown to Extinction —  (Capitol)
 [UpcomingVinyl] FOUND: MegadethYouthanasia —  (Capitol)
 [UpcomingVinyl] FOUND: MellaOr so I've been told... —  (Kill Iconic)
+[UpcomingVinyl] FOUND: Michael Gregory JacksonClarity —  (Moved by Sound)
 [UpcomingVinyl] FOUND: Miles DavisBirth Of The Blue —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Mindless Self IndulgenceHow I Learned To Stop Giving A Shit & Love MSI (Purple Splatter) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Mister RogersIt's Such A Good Feeling: The Best Of Mister Rogers (Opaque Yellow) —  (Omnivore Recordings)
+[UpcomingVinyl] FOUND: Mitchum YacoubCumbia No Get Enemy —  (Jazz Room Records)
 [UpcomingVinyl] FOUND: Modern LoversRock N Roll With The Modern Lovers (Silver) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: MohairSmall Talk (20th Anniversary) —  (Last Night Glasgow)
 [UpcomingVinyl] FOUND: MoneenAre We Really Happy With Who We Are Right Now? (Black/Grey/Red Merge) —  (Dine Alone Music Inc)
@@ -740,9 +740,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Porcupine TreeStupid Dream (Uk Exclusive Clear) —  (Transmission)
 [UpcomingVinyl] FOUND: Psychick Warriors Ov GaiaOv Biospheres And Sacred Grooves: A Document Ov New Edge Folk Classics —  (Forever Records)
 [UpcomingVinyl] FOUND: Psychick Warriors Ov GaiaOv Biospheres And Sacred Grooves: A Document Ov New Edge Folk Classics —  (Forever Records)
-[UpcomingVinyl] FOUND: Quadro NuevoLuna Rossa (Salmon Pink) —  (Universal UK)
 [UpcomingVinyl] FOUND: Rachel KitchlewFlirty Ghost (Yellow) —  (Universal UK)
-[UpcomingVinyl] FOUND: Radio HitoL'Uso E Gli Attributi Del Cuore —  (Maple)
 [UpcomingVinyl] FOUND: RattusUskonto On Vaara —  (Svart Records)
 [UpcomingVinyl] FOUND: Raw TunesThe Jersey DATs —  (Daybreakers)
 [UpcomingVinyl] FOUND: Real FarmerTwo Wrongs Don't Make A Right —  (Strap Originals)
@@ -875,8 +873,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZZ TopTres Hombres —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: フーテン族Mayonaka No Youchien Midnight Kindergarten —  (Suzo)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
-[UpcomingVinyl] li>h2 approach found 409 entries
-[UpcomingVinyl] Got 499084 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 411 entries
+[UpcomingVinyl] Got 514633 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -891,16 +889,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3405 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3514 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 403
-[UpcomingVinyl] 403 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3135 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 404
+[UpcomingVinyl] 404 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3130 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -908,16 +906,16 @@ SOURCE STATUS SUMMARY
   Rollin Records: 227 deals
   Rollin Preorders: 227 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 132 deals
-  Fearless Records: 98 deals
-  Fearless Vinyl: 98 deals
-  Rise Records: 74 deals
-  Rise All: 74 deals
+  uDiscover Music: 137 deals
+  Fearless Records: 99 deals
+  Fearless Vinyl: 99 deals
+  Rise Records: 72 deals
+  Rise All: 72 deals
   Brooklyn Vegan: 160 deals
-  Revolver: 138 deals
-  Newbury Comics: 151 deals
-  Newbury Preorders: 151 deals
-  Craft Recordings: 82 deals
+  Revolver: 139 deals
+  Newbury Comics: 150 deals
+  Newbury Preorders: 150 deals
+  Craft Recordings: 81 deals
   MNRK Heavy: 137 deals
   Equal Vision: 88 deals
   Rhino: 97 deals
@@ -926,10 +924,10 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 205 deals
   RMFN All: 205 deals
   Sumerian Records: 66 deals
-  Solid State Records: 54 deals
-  Solid State Vinyl: 54 deals
-  Pure Noise Records: 82 deals
-  Hopeless Records: 55 deals
+  Solid State Records: 53 deals
+  Solid State Vinyl: 53 deals
+  Pure Noise Records: 78 deals
+  Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 71 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
@@ -944,37 +942,37 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 8 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 8
 Brooklyn Vegan: 160
-Craft Recordings: 82
+Craft Recordings: 81
 Equal Vision: 88
-Fearless Records: 98
-Fearless Vinyl: 98
-Hopeless Records: 55
+Fearless Records: 99
+Fearless Vinyl: 99
+Hopeless Records: 56
 Interscope Records: 115
 MNRK Heavy: 137
-Newbury Comics: 151
-Newbury Preorders: 151
+Newbury Comics: 150
+Newbury Preorders: 150
 Pirates Press Records: 60
-Pure Noise Records: 82
-r/VinylReleases: 49
-Revolver: 137
+Pure Noise Records: 78
+r/VinylReleases: 43
+Revolver: 138
 Rhino: 95
-Rise All: 74
-Rise Records: 74
+Rise All: 72
+Rise Records: 72
 RMFN All: 205
 Rock Metal Fan Nation: 205
 Rollin Preorders: 227
 Rollin Records: 227
 SharpTone Records: 91
-Solid State Records: 48
-Solid State Vinyl: 48
+Solid State Records: 47
+Solid State Vinyl: 47
 Sound of Vinyl: 228
 Sumerian Records: 64
 Target: 1
-uDiscover Music: 132
+uDiscover Music: 137
 Walmart: 1
