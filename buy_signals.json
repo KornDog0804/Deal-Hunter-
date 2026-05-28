@@ -26832,6 +26832,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Thomas Bangalter",
+    "title": "Thomas Bangalter: Circonvolutions",
+    "price": 24.98,
+    "source": "Rhino",
+    "link": "https://store.rhino.com/products/thomas-bangalter-circonvolutions",
+    "image": "https://cdn.shopify.com/s/files/1/0729/6162/2262/files/BANGALTERThomas-CIRCONVOLUTIONS3D-Alternate1.png?v=1779911063",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "Yes",
     "title": "Live At Roosevelt Stadium, Jersey City, NJ (6/17/76) (3LP)",
     "price": 44.98,
@@ -29057,7 +29070,7 @@
   {
     "artist": "Interscope Records",
     "title": "Golden Hour Vinyl",
-    "price": 33.0,
+    "price": 32.99,
     "source": "Interscope Records",
     "link": "https://interscope.com/products/golden-hour-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0272/7605/0568/files/KaceyMusgracesGoldenHourPS.png?v=1770772110",
@@ -40781,37 +40794,11 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Amazon Catalog",
-    "title": "Amazon Vinyl Records",
-    "price": 0.01,
-    "source": "Amazon",
-    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
-    "image": "",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Target Catalog",
     "title": "Target Vinyl Records",
     "price": 0.01,
     "source": "Target",
     "link": "https://www.target.com/s?searchTerm=vinyl+records",
-    "image": "",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "Ramones",
-    "title": "Live at The Roxy, 8/12/76 (2LP Color) - $34.98 - Ships 07/31/2026",
-    "price": 34.98,
-    "source": "r/VinylReleases",
-    "link": "https://store.rhino.com/products/live-at-the-roxy-8-12-76-2lp-color?variant=50723854385398",
     "image": "",
     "score": 0,
     "lane": "PASS",

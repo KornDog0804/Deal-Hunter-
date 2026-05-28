@@ -121,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 107
+Rhino: kept 108
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -399,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 34 candidate vinyl items
+Amazon: found 32 candidate vinyl items
+Amazon: kept 6
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 2596 entries
-[Discogs] Enriching 3139 vinyl records with Mint pricing...
-[Discogs] Cache saved (2596 entries)
+[Discogs] Loaded cache with 2657 entries
+[Discogs] Enriching 3145 vinyl records with Mint pricing...
+[Discogs] Cache saved (2657 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -442,7 +441,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -881,7 +880,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: フーテン族Mayonaka No Youchien Midnight Kindergarten —  (Suzo)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 417 entries
-[UpcomingVinyl] Got 533019 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 533433 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -905,7 +904,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 408
 [UpcomingVinyl] 408 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3140 buy signals saved to buy_signals.json
+[BuySignals] 3139 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -925,7 +924,7 @@ SOURCE STATUS SUMMARY
   Craft Recordings: 81 deals
   MNRK Heavy: 137 deals
   Equal Vision: 87 deals
-  Rhino: 107 deals
+  Rhino: 108 deals
   Interscope Records: 115 deals
   SharpTone Records: 92 deals
   Rock Metal Fan Nation: 204 deals
@@ -949,11 +948,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 6 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 6
 Brooklyn Vegan: 163
 Craft Recordings: 81
 Equal Vision: 87
@@ -966,9 +965,9 @@ Newbury Comics: 150
 Newbury Preorders: 150
 Pirates Press Records: 59
 Pure Noise Records: 80
-r/VinylReleases: 44
+r/VinylReleases: 45
 Revolver: 138
-Rhino: 105
+Rhino: 106
 Rise All: 72
 Rise Records: 72
 RMFN All: 204
