@@ -31535,5 +31535,161 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "sponsored ad|orange": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.776,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Studio 1",
+    "discogs_title": "Orange",
+    "discogs_release_id": 7964,
+    "discogs_url": "https://www.discogs.com/release/7964-Studio-1-Orange",
+    "discogs_mint_price": 8.99,
+    "discogs_lowest": 8.99,
+    "discogs_num_for_sale": 13,
+    "discogs_have": 897,
+    "discogs_want": 694
+  },
+  "chuck timely and the hourglass|role model official store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "harold budd|jane 1 11": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6697,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "don gillis and peter breiner|anne of green gables soundtrack selections": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "stephen hough|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "inuyasha|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pablo moses|best of": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7678,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Blondie",
+    "discogs_title": "The Best Of Blondie",
+    "discogs_release_id": 162581,
+    "discogs_url": "https://www.discogs.com/release/162581-Blondie-The-Best-Of-Blondie",
+    "discogs_mint_price": 6.99,
+    "discogs_lowest": 6.99,
+    "discogs_num_for_sale": 26,
+    "discogs_have": 13505,
+    "discogs_want": 1231
+  },
+  "sofia isella|something is a shell": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sofia Isella",
+    "discogs_title": "Something Is A Shell",
+    "discogs_release_id": 37099983,
+    "discogs_url": "https://www.discogs.com/release/37099983-Sofia-Isella-Something-Is-A-Shell",
+    "discogs_mint_price": 118.7,
+    "discogs_lowest": 118.7,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 85,
+    "discogs_want": 14
+  },
+  "miki matsubara|stay with me": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Miki Matsubara",
+    "discogs_title": "Stay With Me",
+    "discogs_release_id": 11938067,
+    "discogs_url": "https://www.discogs.com/release/11938067-Miki-Matsubara-Stay-With-Me",
+    "discogs_mint_price": 189.29,
+    "discogs_lowest": 189.29,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 77,
+    "discogs_want": 496
+  },
+  "sublime|until the sun explodes purple marble": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sublime|until the sun explodes ocean wave": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sublime|until the sun explodes with black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0941,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "az|doe or die ii": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "AZ",
+    "discogs_title": "Doe Or Die II",
+    "discogs_release_id": 22393543,
+    "discogs_url": "https://www.discogs.com/release/22393543-AZ-Doe-Or-Die-II",
+    "discogs_mint_price": 100.0,
+    "discogs_lowest": 100.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 2,
+    "discogs_want": 16
+  },
+  "neck deep|the peace and the panic": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Neck Deep (2)",
+    "discogs_title": "The Peace and the Panic",
+    "discogs_release_id": 12821596,
+    "discogs_url": "https://www.discogs.com/release/12821596-Neck-Deep-The-Peace-and-the-Panic",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 22,
+    "discogs_want": 4
   }
 }
