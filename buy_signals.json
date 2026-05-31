@@ -22698,19 +22698,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Comedia (Clear Smoke LP",
-    "title": "Fania Exclusive)",
-    "price": 32.0,
-    "source": "Craft Recordings",
-    "link": "https://craftrecordings.com/products/hector-lavoe-comedia-clear-smoke-lp-fania-exclusive",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/CR00991HectorLavoe-ComediaPackShotClearSmoke.png?v=1770142607",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Boone Creek",
     "title": "Boone Creek LP",
     "price": 28.0,
@@ -40630,6 +40617,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
