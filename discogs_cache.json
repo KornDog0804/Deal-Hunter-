@@ -31691,5 +31691,129 @@
     "discogs_num_for_sale": 0,
     "discogs_have": 22,
     "discogs_want": 4
+  },
+  "charly garcia|piano bar": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Charly Garcia",
+    "discogs_title": "Piano Bar",
+    "discogs_release_id": 2679614,
+    "discogs_url": "https://www.discogs.com/release/2679614-Charly-Garcia-Piano-Bar",
+    "discogs_mint_price": 120.0,
+    "discogs_lowest": 120.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 375,
+    "discogs_want": 251
+  },
+  "flotsam and jetsam|doomsday for the deceiver": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Flotsam And Jetsam",
+    "discogs_title": "Doomsday For The Deceiver",
+    "discogs_release_id": 6078089,
+    "discogs_url": "https://www.discogs.com/release/6078089-Flotsam-And-Jetsam-Doomsday-For-The-Deceiver",
+    "discogs_mint_price": 7.09,
+    "discogs_lowest": 7.09,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 171,
+    "discogs_want": 102
+  },
+  "rosendo|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "miles davis and marcus miller|music from siesta": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Miles Davis & Marcus Miller",
+    "discogs_title": "Music From Siesta",
+    "discogs_release_id": 3943546,
+    "discogs_url": "https://www.discogs.com/release/3943546-Miles-Davis-Marcus-Miller-Music-From-Siesta",
+    "discogs_mint_price": 0.22,
+    "discogs_lowest": 0.22,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 35,
+    "discogs_want": 79
+  },
+  "anthony johnson|reggae feelings": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Anthony Johnson",
+    "discogs_title": "Reggae Feelings",
+    "discogs_release_id": 770608,
+    "discogs_url": "https://www.discogs.com/release/770608-Anthony-Johnson-Reggae-Feelings",
+    "discogs_mint_price": 62.09,
+    "discogs_lowest": 62.09,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 146,
+    "discogs_want": 357
+  },
+  "monster hunter world iceborne|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the calling|camino palmero": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Calling",
+    "discogs_title": "Camino Palmero",
+    "discogs_release_id": 25327915,
+    "discogs_url": "https://www.discogs.com/release/25327915-The-Calling-Camino-Palmero",
+    "discogs_mint_price": 175.76,
+    "discogs_lowest": 175.76,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 440,
+    "discogs_want": 178
+  },
+  "robert hood|sophisticcato ep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ravyn lenae|blue island transparent sea blue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2769,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|westside gunn who made the sunshin 12": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "vinyl|no control no glory diggers factory": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
