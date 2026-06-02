@@ -32031,5 +32031,370 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "universal|the damned damned damned damned": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "u lp|in store pickup and signing at harvard square 6 14": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "francis of delirium|run run pure beauty": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Francis Of Delirium",
+    "discogs_title": "Run, Run Pure Beauty",
+    "discogs_release_id": 37485036,
+    "discogs_url": "https://www.discogs.com/release/37485036-Francis-Of-Delirium-Run-Run-Pure-Beauty",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 5,
+    "discogs_want": 2
+  },
+  "unknown artist|josh caffe the velvet hour": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "natural child|wooden": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "olivia o brian pixie|spotify 500": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5607,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|confessions ii 12 track pride edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1924,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "afi|decemberunderground ivc edition us": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "charli xcx|black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7227,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "david bowie|heathen": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "David Bowie",
+    "discogs_title": "Heathen",
+    "discogs_release_id": 12763857,
+    "discogs_url": "https://www.discogs.com/release/12763857-David-Bowie-Heathen",
+    "discogs_mint_price": 117.4,
+    "discogs_lowest": 117.4,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 298,
+    "discogs_want": 333
+  },
+  "david bowie|reality": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "David Bowie",
+    "discogs_title": "Reality",
+    "discogs_release_id": 4175424,
+    "discogs_url": "https://www.discogs.com/release/4175424-David-Bowie-Reality",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 81,
+    "discogs_want": 227
+  },
+  "david bowie|the next day": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "David Bowie",
+    "discogs_title": "The Next Day",
+    "discogs_release_id": 9830055,
+    "discogs_url": "https://www.discogs.com/release/9830055-David-Bowie-The-Next-Day",
+    "discogs_mint_price": 45.65,
+    "discogs_lowest": 45.65,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 6459,
+    "discogs_want": 935
+  },
+  "sweet fortune|deep red": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7964,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Costin Rp",
+    "discogs_title": "Deep Red",
+    "discogs_release_id": 8332134,
+    "discogs_url": "https://www.discogs.com/Costin-Rp-Deep-Red/release/8332134",
+    "discogs_mint_price": 14.61,
+    "discogs_lowest": 14.61,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 144,
+    "discogs_want": 183
+  },
+  "unknown artist|jon bellion live from forest hills": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "brandon flowers|the desired effect": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Brandon Flowers",
+    "discogs_title": "The Desired Effect",
+    "discogs_release_id": 7146308,
+    "discogs_url": "https://www.discogs.com/release/7146308-Brandon-Flowers-The-Desired-Effect",
+    "discogs_mint_price": 89.0,
+    "discogs_lowest": 89.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 1374,
+    "discogs_want": 324
+  },
+  "unknown artist|from under the cork tree 3": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "avantasia|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "honey revenge|loving and losing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5995,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hayley williams|ego death at a bachelorette party 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "barrington levy|money move": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Barrington Levy",
+    "discogs_title": "Money Move",
+    "discogs_release_id": 8004216,
+    "discogs_url": "https://www.discogs.com/release/8004216-Barrington-Levy-Money-Move",
+    "discogs_mint_price": 4.86,
+    "discogs_lowest": 4.86,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 24,
+    "discogs_want": 22
+  },
+  "olivia rodrigo|static lover pop up blue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3467,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "you seem pretty sad for a girl so in love|olivia rodrigo": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2093,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "freddie hubbard|the artistry of freddie hubbard": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Freddie Hubbard",
+    "discogs_title": "The Artistry Of Freddie Hubbard",
+    "discogs_release_id": 13957214,
+    "discogs_url": "https://www.discogs.com/release/13957214-Freddie-Hubbard-The-Artistry-Of-Freddie-Hubbard",
+    "discogs_mint_price": 47.32,
+    "discogs_lowest": 47.32,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 9,
+    "discogs_want": 86
+  },
+  "cookin soul x larry june|orange season 10 anniversary edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3627,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "yo yo ma|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|chuck timely and the hourglass": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "meshuggah|destroy erase improve 30th anniversary edition": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Meshuggah",
+    "discogs_title": "Destroy Erase Improve",
+    "discogs_release_id": 37067241,
+    "discogs_url": "https://www.discogs.com/release/37067241-Meshuggah-Destroy-Erase-Improve",
+    "discogs_mint_price": 60.36,
+    "discogs_lowest": 60.36,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 750,
+    "discogs_want": 188
+  },
+  "ryan beatty|sweet fortune": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6612,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cce edition|ice blood w obi": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3709,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "art blakey and the jazz messengers|moanin": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Art Blakey And The Jazz Messengers*",
+    "discogs_title": "Moanin’",
+    "discogs_release_id": 16480695,
+    "discogs_url": "https://www.discogs.com/release/16480695-Art-Blakey-And-The-Jazz-Messengers-Moanin",
+    "discogs_mint_price": 16.22,
+    "discogs_lowest": 16.22,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 233,
+    "discogs_want": 219
+  },
+  "lugatti and 9ine 1lp vinyl signiert signed sleeve cover|transparent marbled grey": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3401,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cel ray|cel rayzer": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|wednesday 13 un alive from pol and rock 2025": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "charli xcx|indie ecomm hardwood version": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "charli xcx|amazon white bone": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.385,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
