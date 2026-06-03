@@ -15080,6 +15080,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "WARNER",
+    "title": "THE STONE ROSES 'SALLY CINNAMON' LP (Ultra Clear Vinyl)",
+    "price": 31.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/the-stone-roses-sally-cinnamon-lp-ultra-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/EVP-5016681737116-1_72c6bd66-2309-48d2-9e7c-0062b6283720.webp?v=1780491403",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "ORCHARD",
     "title": "SAVES THE DAY ‘THROUGH BEING COOL' LP (Flame Red Vinyl)",
     "price": 30.99,
@@ -17023,19 +17036,6 @@
     "source": "Brooklyn Vegan",
     "link": "https://shop.brooklynvegan.com/products/fatboy-slim-youve-come-a-long-way-baby-lp",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3768139.jpg?v=1778192949",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "ORCHARD",
-    "title": "NASHVILLE PUSSY 'HIGH AS HELL' LP (Blue Vinyl)",
-    "price": 31.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/nashville-pussy-high-as-hell-lp-blue-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/Nashville-Pussy-High-As-Hell-LP-177350-1-1774424541.jpg?v=1778191232",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -30890,7 +30890,7 @@
   {
     "artist": "SHREK",
     "title": "ORIGINAL MOTION PICTURE SCORE (Picture Disc Vinyl) [PREORDER]",
-    "price": 33.98,
+    "price": 31.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/shrek-original-motion-picture-score-picture-disc-vinyl-preorder",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/shrek_-_original_motion_picture_score_picture_disc_vinyl_lp.jpg?v=1779379151",
@@ -33568,7 +33568,7 @@
   {
     "artist": "SHREK",
     "title": "ORIGINAL MOTION PICTURE SCORE (Picture Disc Vinyl) [PREORDER]",
-    "price": 33.98,
+    "price": 31.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/shrek-original-motion-picture-score-picture-disc-vinyl-preorder",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/shrek_-_original_motion_picture_score_picture_disc_vinyl_lp.jpg?v=1779379151",
@@ -40643,6 +40643,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
