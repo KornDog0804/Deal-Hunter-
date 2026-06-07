@@ -106,9 +106,11 @@ Craft Recordings: kept 81
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
   -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
+  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  ✗ https://mnrkheavy.com/products.json?limit=250 -> HTTP Error 500: Internal Server Error
+  ✓ https://mnrkheavy.com/collections/all/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 137
+MNRK Heavy: kept 112
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -149,42 +151,22 @@ Rock Metal Fan Nation: kept 205
 Scraping: RMFN All (shopify_store)
 ==================================================
   -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-  -> retry 1/2 for https://rmfnvinyl.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://rmfnvinyl.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://rmfnvinyl.com/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-  -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://rmfnvinyl.com/collections/all/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-  -> retry 1/2 for https://rmfnvinyl.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 1/2 for https://rmfnvinyl.com/collections/records/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://rmfnvinyl.com/collections/records/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://rmfnvinyl.com/collections/records/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-RMFN All: 0 products via Shopify JSON
-RMFN All: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json | HTTP Error 503: Service Unavailable
-RMFN All: HTML source failed | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
+  ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
+RMFN All: 250 products via Shopify JSON
+RMFN All: kept 205
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
 ==================================================
-  -> retry 1/2 for https://sumerianrecords.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://sumerianrecords.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://sumerianrecords.com/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-  -> retry 1/2 for https://sumerianrecords.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://sumerianrecords.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  ✗ https://sumerianrecords.com/collections/all/products.json?limit=250 -> HTTP Error 503: Service Unavailable
-  ✓ https://sumerianrecords.com/collections/music/products.json?limit=250 -> 250 products
+  ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 125
+Sumerian Records: kept 65
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  -> retry 1/2 for https://solidstaterecords.store/products.json?limit=250 | HTTP Error 503: Service Unavailable
-  -> retry 2/2 for https://solidstaterecords.store/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://solidstaterecords.store/products.json?limit=250 -> 160 products
 Solid State Records: 160 products via Shopify JSON
 Solid State Records: kept 52
@@ -420,9 +402,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 10
+Amazon: found 44 candidate vinyl items
+Amazon: found 36 candidate vinyl items
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -449,7 +431,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3083 entries
-[Discogs] Enriching 3022 vinyl records with Mint pricing...
+[Discogs] Enriching 3145 vinyl records with Mint pricing...
 [Discogs] Cache saved (3083 entries)
 [Discogs] Enrichment complete!
 
@@ -467,7 +449,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 368179 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 368203 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -891,7 +873,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 堤博明100 Meters / Hyakuemu Original Soundtrack —  (Pony Canyon)
 [UpcomingVinyl] FOUND: MarinaPrincess Of Power Everybody Knows I'm Blue —  (Bmg)
 [UpcomingVinyl] li>h2 approach found 407 entries
-[UpcomingVinyl] Got 459332 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 459752 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -915,7 +897,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 404
 [UpcomingVinyl] 404 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3012 buy signals saved to buy_signals.json
+[BuySignals] 3132 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -933,14 +915,14 @@ SOURCE STATUS SUMMARY
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 81 deals
-  MNRK Heavy: 137 deals
+  MNRK Heavy: 112 deals
   Equal Vision: 86 deals
   Rhino: 112 deals
   Interscope Records: 121 deals
   SharpTone Records: 93 deals
   Rock Metal Fan Nation: 205 deals
-  RMFN All: FAILED: HTTP Error 503: Service Unavailable
-  Sumerian Records: 125 deals
+  RMFN All: 205 deals
+  Sumerian Records: 65 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
   Pure Noise Records: 80 deals
@@ -959,11 +941,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
+Amazon: 13
 Brooklyn Vegan: 162
 Craft Recordings: 81
 Equal Vision: 86
@@ -971,7 +953,7 @@ Fearless Records: 98
 Fearless Vinyl: 98
 Hopeless Records: 56
 Interscope Records: 121
-MNRK Heavy: 137
+MNRK Heavy: 112
 Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
@@ -981,6 +963,7 @@ Revolver: 140
 Rhino: 110
 Rise All: 74
 Rise Records: 74
+RMFN All: 205
 Rock Metal Fan Nation: 205
 Rollin Preorders: 231
 Rollin Records: 231
@@ -988,7 +971,7 @@ SharpTone Records: 92
 Solid State Records: 47
 Solid State Vinyl: 47
 Sound of Vinyl: 227
-Sumerian Records: 123
+Sumerian Records: 63
 Target: 1
 uDiscover Music: 137
 Walmart: 1
