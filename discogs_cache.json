@@ -34840,5 +34840,102 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|pastel ghost ethereality vv blue and purple haze with raindrop": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hiroshi yoshimura|surround": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Hiroshi Yoshimura",
+    "discogs_title": "Soundscape 1: Surround",
+    "discogs_release_id": 29298058,
+    "discogs_url": "https://www.discogs.com/release/29298058-Hiroshi-Yoshimura-Soundscape-1-Surround-",
+    "discogs_mint_price": 59.99,
+    "discogs_lowest": 59.99,
+    "discogs_num_for_sale": 14,
+    "discogs_have": 1311,
+    "discogs_want": 438
+  },
+  "akira miyazawa|yamame": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Akira Miyazawa",
+    "discogs_title": "Yamame",
+    "discogs_release_id": 5209692,
+    "discogs_url": "https://www.discogs.com/release/5209692-Akira-Miyazawa-Yamame",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 15,
+    "discogs_want": 137
+  },
+  "the rolling stones|foreign tongues blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1312,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "josh freese signed cover|just a minute vol 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Josh Freese",
+    "discogs_title": "Just A Minute Vol. 2",
+    "discogs_release_id": 35851561,
+    "discogs_url": "https://www.discogs.com/release/35851561-Josh-Freese-Just-A-Minute-Vol-2",
+    "discogs_mint_price": 24.51,
+    "discogs_lowest": 24.51,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 26,
+    "discogs_want": 3
+  },
+  "elliott smith|roman candle": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Elliott Smith",
+    "discogs_title": "Roman Candle",
+    "discogs_release_id": 1011028,
+    "discogs_url": "https://www.discogs.com/release/1011028-Elliott-Smith-Roman-Candle",
+    "discogs_mint_price": 85.0,
+    "discogs_lowest": 85.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 544,
+    "discogs_want": 1140
+  },
+  "nate mercereau|joy techniques": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Nate Mercereau",
+    "discogs_title": "Joy Techniques",
+    "discogs_release_id": 14542453,
+    "discogs_url": "https://www.discogs.com/release/14542453-Nate-Mercereau-Joy-Techniques",
+    "discogs_mint_price": 237.81,
+    "discogs_lowest": 237.81,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 112,
+    "discogs_want": 318
+  },
+  "pouya|the south got something to say": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6775,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
