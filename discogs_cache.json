@@ -34937,5 +34937,411 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "the king s consort|vivaldi the complete sacred music": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2759,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jackie mclean|vertigo": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jackie McLean",
+    "discogs_title": "Vertigo",
+    "discogs_release_id": 1959868,
+    "discogs_url": "https://www.discogs.com/release/1959868-Jackie-McLean-Vertigo",
+    "discogs_mint_price": 25.0,
+    "discogs_lowest": 25.0,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 425,
+    "discogs_want": 290
+  },
+  "sony|sade diamond life": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|sade love deluxe": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|between the buried and me the great misdirect 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6821,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|motionless in white when love met destruction": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6942,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "black label society|shot to hell black": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Black Label Society",
+    "discogs_title": "Shot To Hell",
+    "discogs_release_id": 22814987,
+    "discogs_url": "https://www.discogs.com/release/22814987-Black-Label-Society-Shot-To-Hell",
+    "discogs_mint_price": 72.67,
+    "discogs_lowest": 72.67,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 179,
+    "discogs_want": 131
+  },
+  "guilt trip|armour of angels atonement": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Guilt Trip (6)",
+    "discogs_title": "Armour Of Angels",
+    "discogs_release_id": 37554147,
+    "discogs_url": "https://www.discogs.com/release/37554147-Guilt-Trip-Armour-Of-Angels-",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 31,
+    "discogs_want": 6
+  },
+  "unknown artist|jordan davis buy dirt anniversary signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|shania twain little miss twain spotify fans first picture disc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mitch murder x pizza hotline|motorslice original soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dance gavin dance|instant gratification": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dance Gavin Dance",
+    "discogs_title": "Instant Gratification",
+    "discogs_release_id": 12749047,
+    "discogs_url": "https://www.discogs.com/release/12749047-Dance-Gavin-Dance-Instant-Gratification",
+    "discogs_mint_price": 41.91,
+    "discogs_lowest": 41.91,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 387,
+    "discogs_want": 201
+  },
+  "pharoah sanders and bill laswell|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dadawah|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed covers tash sultana|flow state notion and terra firma": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ajr|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|nourished by time": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3394,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "capone n noreaga|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mike d|thank you": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8171,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Humble I",
+    "discogs_title": "Thank You",
+    "discogs_release_id": 3045325,
+    "discogs_url": "https://www.discogs.com/release/3045325-Humble-I-Thank-You",
+    "discogs_mint_price": 231.21,
+    "discogs_lowest": 231.21,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 298,
+    "discogs_want": 512
+  },
+  "unknown artist|signed built to spill keep it like a secret the sound garden": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "james blake|signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ignea|monumental": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7811,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Flatliners",
+    "discogs_title": "Monumental",
+    "discogs_release_id": 2661167,
+    "discogs_url": "https://www.discogs.com/release/2661167-The-Flatliners-Monumental",
+    "discogs_mint_price": 5.0,
+    "discogs_lowest": 5.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 429,
+    "discogs_want": 39
+  },
+  "whitney light upon the lake|cotton candy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7811,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Sylvers",
+    "discogs_title": "Cotton Candy",
+    "discogs_release_id": 3414895,
+    "discogs_url": "https://www.discogs.com/release/3414895-The-Sylvers-Cotton-Candy",
+    "discogs_mint_price": 0.8,
+    "discogs_lowest": 0.8,
+    "discogs_num_for_sale": 55,
+    "discogs_have": 128,
+    "discogs_want": 28
+  },
+  "thank you clear vinyl|mike d official u s store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2648,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|mike d thank you": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.742,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pratt and moody|indies only smoky white": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mike d|indies purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3219,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sergio calder n and c li lee the eternal dice mu120|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "okvsho|white": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7176,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "luisa almaguer|7 azotea and mar a": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bruce liu|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "doctor who|translucent red and purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3918,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bright light bright light|choreography": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bright Light Bright Light",
+    "discogs_title": "Choreography",
+    "discogs_release_id": 8780876,
+    "discogs_url": "https://www.discogs.com/release/8780876-Bright-Light-Bright-Light-Choreography",
+    "discogs_mint_price": 14.99,
+    "discogs_lowest": 14.99,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 342,
+    "discogs_want": 32
+  },
+  "sergio mendes|in person at el matador": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sergio Mendes*",
+    "discogs_title": "In Person At El Matador",
+    "discogs_release_id": 4054460,
+    "discogs_url": "https://www.discogs.com/release/4054460-Sergio-Mendes-In-Person-At-El-Matador",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 14,
+    "discogs_want": 40
+  },
+  "zz top|july 31 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "liam st john|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "keb mo|the breakdown": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7511,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mayday parade|tales told by dead friends": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Mayday Parade",
+    "discogs_title": "Tales Told By Dead Friends",
+    "discogs_release_id": 37101741,
+    "discogs_url": "https://www.discogs.com/release/37101741-Mayday-Parade-Tales-Told-By-Dead-Friends",
+    "discogs_mint_price": 44.44,
+    "discogs_lowest": 44.44,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 693,
+    "discogs_want": 127
+  },
+  "america|halcyon days": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.808,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Manipura (2)",
+    "discogs_title": "Halcyon Days",
+    "discogs_release_id": 355620,
+    "discogs_url": "https://www.discogs.com/release/355620-Manipura-Halcyon-Days",
+    "discogs_mint_price": 3.72,
+    "discogs_lowest": 3.72,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 127,
+    "discogs_want": 52
   }
 }
