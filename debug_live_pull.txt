@@ -21,7 +21,7 @@ Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 229
+Sound of Vinyl: kept 230
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 145
+Revolver: kept 143
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -183,7 +183,7 @@ Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
 Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 80
+Pure Noise Records: kept 75
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -399,9 +399,10 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 35 candidate vinyl items
-Amazon: found 31 candidate vinyl items
-Amazon: kept 7
+Amazon: found 0 candidate vinyl items
+Amazon: found 0 candidate vinyl items
+Amazon: No vinyl products found, adding catalog portal fallback
+Amazon: kept 1
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +429,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3130 entries
-[Discogs] Enriching 3166 vinyl records with Mint pricing...
+[Discogs] Enriching 3154 vinyl records with Mint pricing...
 [Discogs] Cache saved (3130 entries)
 [Discogs] Enrichment complete!
 
@@ -446,7 +447,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 304283 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 304301 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -796,7 +797,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] li>h2 approach found 333 entries
-[UpcomingVinyl] Got 476184 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 476202 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -820,21 +821,21 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 325
 [UpcomingVinyl] 325 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3161 buy signals saved to buy_signals.json
+[BuySignals] 3156 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 231 deals
   Rollin Preorders: 231 deals
-  Sound of Vinyl: 229 deals
+  Sound of Vinyl: 230 deals
   uDiscover Music: 135 deals
   Fearless Records: 98 deals
   Fearless Vinyl: 98 deals
   Rise Records: 75 deals
   Rise All: 75 deals
   Brooklyn Vegan: 161 deals
-  Revolver: 145 deals
+  Revolver: 143 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 81 deals
@@ -848,7 +849,7 @@ SOURCE STATUS SUMMARY
   Sumerian Records: 65 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
-  Pure Noise Records: 80 deals
+  Pure Noise Records: 75 deals
   Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 70 deals
@@ -864,11 +865,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 7 items | pages: 7 | robot walls: 0
+  Amazon: 1 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 7
+Amazon: 1
 Brooklyn Vegan: 161
 Craft Recordings: 81
 Equal Vision: 86
@@ -880,9 +881,9 @@ MNRK Heavy: 138
 Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
-Pure Noise Records: 80
+Pure Noise Records: 75
 r/VinylReleases: 44
-Revolver: 144
+Revolver: 142
 Rhino: 110
 Rise All: 75
 Rise Records: 75
@@ -893,7 +894,7 @@ Rollin Records: 231
 SharpTone Records: 90
 Solid State Records: 47
 Solid State Vinyl: 47
-Sound of Vinyl: 227
+Sound of Vinyl: 228
 Sumerian Records: 63
 Target: 1
 uDiscover Music: 135
