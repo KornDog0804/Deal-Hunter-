@@ -52,7 +52,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 75
+Rise Records: kept 73
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -62,7 +62,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 75
+Rise All: kept 73
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 143
+Revolver: kept 144
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -142,7 +142,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 205
+Rock Metal Fan Nation: kept 203
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,7 +152,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 205
+RMFN All: kept 203
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -399,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 35 candidate vinyl items
+Amazon: found 36 candidate vinyl items
+Amazon: kept 9
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3130 entries
-[Discogs] Enriching 3154 vinyl records with Mint pricing...
+[Discogs] Enriching 3156 vinyl records with Mint pricing...
 [Discogs] Cache saved (3130 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 44 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 304301 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 304709 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -797,7 +796,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] li>h2 approach found 333 entries
-[UpcomingVinyl] Got 476202 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 476052 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -821,7 +820,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 325
 [UpcomingVinyl] 325 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3156 buy signals saved to buy_signals.json
+[BuySignals] 3147 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -832,10 +831,10 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 135 deals
   Fearless Records: 98 deals
   Fearless Vinyl: 98 deals
-  Rise Records: 75 deals
-  Rise All: 75 deals
+  Rise Records: 73 deals
+  Rise All: 73 deals
   Brooklyn Vegan: 161 deals
-  Revolver: 143 deals
+  Revolver: 144 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 81 deals
@@ -844,8 +843,8 @@ SOURCE STATUS SUMMARY
   Rhino: 112 deals
   Interscope Records: 121 deals
   SharpTone Records: 91 deals
-  Rock Metal Fan Nation: 205 deals
-  RMFN All: 205 deals
+  Rock Metal Fan Nation: 203 deals
+  RMFN All: 203 deals
   Sumerian Records: 65 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
@@ -865,11 +864,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 9 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 9
 Brooklyn Vegan: 161
 Craft Recordings: 81
 Equal Vision: 86
@@ -882,13 +881,13 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 75
-r/VinylReleases: 44
-Revolver: 142
+r/VinylReleases: 45
+Revolver: 144
 Rhino: 110
-Rise All: 75
-Rise Records: 75
-RMFN All: 205
-Rock Metal Fan Nation: 205
+Rise All: 73
+Rise Records: 73
+RMFN All: 203
+Rock Metal Fan Nation: 203
 Rollin Preorders: 231
 Rollin Records: 231
 SharpTone Records: 90
