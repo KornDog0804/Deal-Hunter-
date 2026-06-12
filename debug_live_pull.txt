@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 162
+Brooklyn Vegan: kept 159
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -399,13 +399,10 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: found 36 candidate vinyl items
-Amazon: kept 5
+Amazon: found 0 candidate vinyl items
+Amazon: found 0 candidate vinyl items
+Amazon: No vinyl products found, adding catalog portal fallback
+Amazon: kept 1
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -431,9 +428,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3211 entries
-[Discogs] Enriching 3149 vinyl records with Mint pricing...
-[Discogs] Cache saved (3211 entries)
+[Discogs] Loaded cache with 3252 entries
+[Discogs] Enriching 3142 vinyl records with Mint pricing...
+[Discogs] Cache saved (3252 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -445,12 +442,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 44 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 306029 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 303346 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -465,7 +462,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 335 h2 tags, 364 li tags
+[UpcomingVinyl] Found 332 h2 tags, 361 li tags
 [UpcomingVinyl] FOUND: 16voltSkin —  (Metropolis Records)
 [UpcomingVinyl] FOUND: 200 Stab WoundsManual Manic Procedures —  (Metal Blade)
 [UpcomingVinyl] FOUND: Aaron FrazerIt's a Shame B/W the Fool —  (Colemine Records)
@@ -648,7 +645,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: KhemmisKhemmis (Transparent Orange) —  (Nuclear Blast)
 [UpcomingVinyl] FOUND: Kiefer SutherlandGrey —  (Mapel Creek Records)
 [UpcomingVinyl] FOUND: King G & The J KrewIndestructible Songs of the Humpback Whale —  (Solid Brass Records)
-[UpcomingVinyl] FOUND: King Gizzard & Lizard WizardFrom Demos To Demons —  (Beat Generation)
 [UpcomingVinyl] FOUND: Kiri Ranen —  (We Jazz)
 [UpcomingVinyl] FOUND: Kronstad 23Dodehavet —  (Universal UK)
 [UpcomingVinyl] FOUND: La SécuritéBingo! —  (Productions Mothland Inc.)
@@ -727,7 +723,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Radio HitoL'Uso E Gli Attributi Del Cuore —  (Maple)
 [UpcomingVinyl] FOUND: RaekwonThe Emperor's New Clothes —  (Corey Woods p/k/a "Raekwon")
 [UpcomingVinyl] FOUND: Real PeopleReal People (Purple) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Rex the DogFar Out! —  (Kompakt Germany)
 [UpcomingVinyl] FOUND: Robert Aiki Aubrey LoweManifestations in the Shadow of an Uncertain Land —  (Ideologic Organ)
 [UpcomingVinyl] FOUND: Ron TrentNite Grooves: The Ron Trent Collection Vol. 1 —  (Nite Grooves)
 [UpcomingVinyl] FOUND: Roots Radics BandScientist & Jammy Strike Back! (Blue) —  (Lmlr)
@@ -759,7 +754,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: The AuditionControversy Loves Company —  (Parting Gift Records)
 [UpcomingVinyl] FOUND: The Bobby LeesNew Self —  (Epitaph)
 [UpcomingVinyl] FOUND: The EchoesWally Badarou —  (Proper Records UK)
-[UpcomingVinyl] FOUND: The Flower KingsLive In Stockholm 2025 (Transparent Violet With Black Smoke) —  (Construction Records)
 [UpcomingVinyl] FOUND: The Great Big Joy MachineThe Great Big Joy Machine —  (Joy Machine)
 [UpcomingVinyl] FOUND: The HellacoptersCream Of The Crap: Collected Non-Album Works-Volume 3 —  (Warner Bros UK)
 [UpcomingVinyl] FOUND: The Martial ArtsFrom The Burnoff —  (5Db Records)
@@ -801,8 +795,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Young DolphKing of Memphis (10 Yr Anniversary; Royalty Blue/Gold) —  (Paper Route Empire)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
-[UpcomingVinyl] li>h2 approach found 335 entries
-[UpcomingVinyl] Got 485912 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 332 entries
+[UpcomingVinyl] Got 501604 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -817,16 +811,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3311 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3423 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 326
-[UpcomingVinyl] 326 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3144 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 323
+[UpcomingVinyl] 323 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3142 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -839,7 +833,7 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 96 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 162 deals
+  Brooklyn Vegan: 159 deals
   Revolver: 149 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
@@ -870,12 +864,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 5 items | pages: 6 | robot walls: 0
+  Amazon: 1 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 5
-Brooklyn Vegan: 162
+Amazon: 1
+Brooklyn Vegan: 159
 Craft Recordings: 83
 Equal Vision: 86
 Fearless Records: 96
@@ -887,7 +881,7 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 75
-r/VinylReleases: 44
+r/VinylReleases: 43
 Revolver: 149
 Rhino: 113
 Rise All: 73
