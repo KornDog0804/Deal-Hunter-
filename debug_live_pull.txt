@@ -4,7 +4,7 @@ Scraping: Rollin Records (shopify_store)
 ==================================================
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 231
+Rollin Records: kept 230
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
@@ -14,7 +14,7 @@ Scraping: Rollin Preorders (shopify_store)
   ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Preorders: 250 products via Shopify JSON
-Rollin Preorders: kept 231
+Rollin Preorders: kept 230
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 163
+Brooklyn Vegan: kept 165
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -221,7 +221,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 71
+Pirates Press Records: kept 72
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 37 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 9
+Amazon: found 40 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 10
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3252 entries
-[Discogs] Enriching 3162 vinyl records with Mint pricing...
+[Discogs] Enriching 3164 vinyl records with Mint pricing...
 [Discogs] Cache saved (3252 entries)
 [Discogs] Enrichment complete!
 
@@ -819,20 +819,20 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 323
 [UpcomingVinyl] 323 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3153 buy signals saved to buy_signals.json
+[BuySignals] 3154 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 231 deals
-  Rollin Preorders: 231 deals
+  Rollin Records: 230 deals
+  Rollin Preorders: 230 deals
   Sound of Vinyl: 230 deals
   uDiscover Music: 132 deals
   Fearless Records: 96 deals
   Fearless Vinyl: 96 deals
   Rise Records: 73 deals
   Rise All: 73 deals
-  Brooklyn Vegan: 163 deals
+  Brooklyn Vegan: 165 deals
   Revolver: 153 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
@@ -850,7 +850,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 75 deals
   Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 71 deals
+  Pirates Press Records: 72 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 0 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -863,12 +863,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 9 items | pages: 7 | robot walls: 0
+  Amazon: 10 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 9
-Brooklyn Vegan: 163
+Amazon: 10
+Brooklyn Vegan: 165
 Craft Recordings: 83
 Equal Vision: 88
 Fearless Records: 96
@@ -878,7 +878,7 @@ Interscope Records: 121
 MNRK Heavy: 138
 Newbury Comics: 147
 Newbury Preorders: 147
-Pirates Press Records: 58
+Pirates Press Records: 59
 Pure Noise Records: 75
 r/VinylReleases: 46
 Revolver: 153
@@ -887,8 +887,8 @@ Rise All: 73
 Rise Records: 73
 RMFN All: 201
 Rock Metal Fan Nation: 201
-Rollin Preorders: 231
-Rollin Records: 231
+Rollin Preorders: 230
+Rollin Records: 230
 SharpTone Records: 89
 Solid State Records: 47
 Solid State Vinyl: 47
