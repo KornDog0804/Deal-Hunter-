@@ -401,7 +401,7 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 40 candidate vinyl items
 Amazon: found 31 candidate vinyl items
-Amazon: kept 10
+Amazon: kept 9
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3252 entries
-[Discogs] Enriching 3164 vinyl records with Mint pricing...
-[Discogs] Cache saved (3252 entries)
+[Discogs] Loaded cache with 3324 entries
+[Discogs] Enriching 3163 vinyl records with Mint pricing...
+[Discogs] Cache saved (3324 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 303346 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 303364 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -795,7 +795,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] li>h2 approach found 332 entries
-[UpcomingVinyl] Got 502162 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 443486 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -810,7 +810,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3423 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3015 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -819,7 +819,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 323
 [UpcomingVinyl] 323 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3154 buy signals saved to buy_signals.json
+[BuySignals] 3158 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -863,11 +863,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 9 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
+Amazon: 9
 Brooklyn Vegan: 165
 Craft Recordings: 83
 Equal Vision: 88
