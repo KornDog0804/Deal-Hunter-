@@ -37359,5 +37359,215 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|alien ant farm anthology deluxe edition signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "paradis|recto verso 10th anniversary edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "alicia keys|empire state of mind broken down signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tele novella|poet s tooth": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tele Novella",
+    "discogs_title": "Poet’s Tooth",
+    "discogs_release_id": 28507873,
+    "discogs_url": "https://www.discogs.com/release/28507873-Tele-Novella-Poets-Tooth",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 134,
+    "discogs_want": 38
+  },
+  "rodrigo y gabriela|ourhome": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4348,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "doug carn|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tank|filth hounds of hades": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tank (6)",
+    "discogs_title": "Filth Hounds Of Hades",
+    "discogs_release_id": 10965872,
+    "discogs_url": "https://www.discogs.com/release/10965872-Tank-Filth-Hounds-Of-Hades",
+    "discogs_mint_price": 80.0,
+    "discogs_lowest": 80.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 19,
+    "discogs_want": 116
+  },
+  "wednesday|50": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7811,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Sonics",
+    "discogs_title": "50",
+    "discogs_release_id": 7784193,
+    "discogs_url": "https://www.discogs.com/release/7784193-The-Sonics-50",
+    "discogs_mint_price": 65.0,
+    "discogs_lowest": 65.0,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 930,
+    "discogs_want": 259
+  },
+  "militarie gun|tour leftovers 300": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2907,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "real life|send me an angel": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Real Life",
+    "discogs_title": "Send Me An Angel",
+    "discogs_release_id": 592758,
+    "discogs_url": "https://www.discogs.com/release/592758-Real-Life-Send-Me-An-Angel",
+    "discogs_mint_price": 6.42,
+    "discogs_lowest": 6.42,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 455,
+    "discogs_want": 301
+  },
+  "the carpenters|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "juan gabriel|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "blood red shoes|stay lonely": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7487,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sepultura|arise rough mixes": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sepultura",
+    "discogs_title": "Arise (Rough Mixes Limited Edition For Rock In Rio)",
+    "discogs_release_id": 35476831,
+    "discogs_url": "https://www.discogs.com/release/35476831-Sepultura-Arise-Rough-Mixes-Limited-Edition-For-Rock-In-Rio",
+    "discogs_mint_price": 27.04,
+    "discogs_lowest": 27.04,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 110,
+    "discogs_want": 14
+  },
+  "unknown artist|urban outfitters pride drops monday 6 15": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "willis|locals 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7241,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "alice cooper|1978 july 31 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3294,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rick ross set in stone|double": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.795,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Erick Sermon",
+    "discogs_title": "Double Or Nothing",
+    "discogs_release_id": 743930,
+    "discogs_url": "https://www.discogs.com/release/743930-Erick-Sermon-Double-Or-Nothing",
+    "discogs_mint_price": 29.7,
+    "discogs_lowest": 29.7,
+    "discogs_num_for_sale": 31,
+    "discogs_have": 1542,
+    "discogs_want": 793
+  },
+  "grace potter|trespasser double detour talkshoplive red with signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lil darkie|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
