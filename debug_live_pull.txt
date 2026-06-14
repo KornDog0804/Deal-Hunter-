@@ -428,9 +428,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3324 entries
+[Discogs] Loaded cache with 3344 entries
 [Discogs] Enriching 3155 vinyl records with Mint pricing...
-[Discogs] Cache saved (3324 entries)
+[Discogs] Cache saved (3344 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -447,7 +447,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 303772 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 303370 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -796,7 +796,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] FOUND: Zu & Spaceways IncRadiale —  (Subsound Records)
 [UpcomingVinyl] li>h2 approach found 332 entries
-[UpcomingVinyl] Got 443504 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 443354 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
