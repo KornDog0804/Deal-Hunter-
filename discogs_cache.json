@@ -37678,5 +37678,210 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "universal|the wallflowers bringing down the horse 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|machine head the more things change 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|korn the serenity of suffering": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7536,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "revhq|texas is the reason do you know who you are": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6789,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bob marley and the wailers|d2c": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2253,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|taeko onuki ashitakara drama wander lust": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "julia jacklin the gem|turquoise rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3303,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the pretty reckless|dear god": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7714,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Midge Ure",
+    "discogs_title": "Dear God",
+    "discogs_release_id": 650030,
+    "discogs_url": "https://www.discogs.com/release/650030-Midge-Ure-Dear-God",
+    "discogs_mint_price": 0.34,
+    "discogs_lowest": 0.34,
+    "discogs_num_for_sale": 62,
+    "discogs_have": 295,
+    "discogs_want": 7
+  },
+  "julia jacklin|the gem": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|brett young self titled platinum edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the music of red dead redemption 2 original soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6567,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|critical thot by sha ray and dj haram": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "julia jacklin|the gem opal green signed print": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|erotica repress": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Madonna",
+    "discogs_title": "Erotica",
+    "discogs_release_id": 28580698,
+    "discogs_url": "https://www.discogs.com/release/28580698-Madonna-Erotica",
+    "discogs_mint_price": 249.99,
+    "discogs_lowest": 249.99,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 12,
+    "discogs_want": 89
+  },
+  "madonna|music repress": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Madonna",
+    "discogs_title": "Music",
+    "discogs_release_id": 9445875,
+    "discogs_url": "https://www.discogs.com/release/9445875-Madonna-Music",
+    "discogs_mint_price": 6.76,
+    "discogs_lowest": 6.76,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 901,
+    "discogs_want": 574
+  },
+  "katatonia|the fall of hearts": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Katatonia",
+    "discogs_title": "The Fall Of Hearts",
+    "discogs_release_id": 8561823,
+    "discogs_url": "https://www.discogs.com/release/8561823-Katatonia-The-Fall-Of-Hearts",
+    "discogs_mint_price": 32.49,
+    "discogs_lowest": 32.49,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 308,
+    "discogs_want": 234
+  },
+  "sparks live on the moon|2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.824,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Groove Connektion",
+    "discogs_title": "2",
+    "discogs_release_id": 55586,
+    "discogs_url": "https://www.discogs.com/release/55586-Groove-Connektion-2",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 756,
+    "discogs_want": 314
+  },
+  "jaga jazzist|a living room hush on 2x orange 26 june 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "soul jazz records presents rebel island soul|under the influence 26 june 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5524,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|olivia rodrigo honeybee 7 inch": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
