@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 131
+uDiscover Music: kept 130
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 170
+Brooklyn Vegan: kept 171
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -128,7 +128,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 121
+Interscope Records: kept 122
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -142,7 +142,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 192
+Rock Metal Fan Nation: kept 191
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,7 +152,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 192
+RMFN All: kept 191
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -164,8 +164,8 @@ Sumerian Records: kept 65
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 159 products
-Solid State Records: 159 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
+Solid State Records: 158 products via Shopify JSON
 Solid State Records: kept 52
 
 ==================================================
@@ -174,8 +174,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 159 products
-Solid State Vinyl: 159 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
+Solid State Vinyl: 158 products via Shopify JSON
 Solid State Vinyl: kept 52
 
 ==================================================
@@ -352,9 +352,11 @@ Millions of Records: unknown source_type "html_store" - skipping
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
+  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
@@ -365,8 +367,11 @@ IndieMerchstore: kept 0
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
-  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
@@ -399,9 +404,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 42 candidate vinyl items
+Amazon: found 40 candidate vinyl items
 Amazon: found 34 candidate vinyl items
-Amazon: kept 11
+Amazon: kept 12
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +432,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3375 entries
+[Discogs] Loaded cache with 3391 entries
 [Discogs] Enriching 3147 vinyl records with Mint pricing...
-[Discogs] Cache saved (3375 entries)
+[Discogs] Cache saved (3391 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -773,7 +778,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZoonHappy Thought School —  (Paper Bag Records)
 [UpcomingVinyl] FOUND: Zubin Mehta/Los Angeles PhilharmonicVarese: Arcana; Integrales; Ionisation —  (Decca)
 [UpcomingVinyl] li>h2 approach found 310 entries
-[UpcomingVinyl] Got 471647 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 471779 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -797,7 +802,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 304
 [UpcomingVinyl] 304 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3136 buy signals saved to buy_signals.json
+[BuySignals] 3135 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -805,12 +810,12 @@ SOURCE STATUS SUMMARY
   Rollin Records: 230 deals
   Rollin Preorders: 230 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 131 deals
+  uDiscover Music: 130 deals
   Fearless Records: 96 deals
   Fearless Vinyl: 96 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 170 deals
+  Brooklyn Vegan: 171 deals
   Revolver: 154 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
@@ -818,10 +823,10 @@ SOURCE STATUS SUMMARY
   MNRK Heavy: 138 deals
   Equal Vision: 88 deals
   Rhino: 115 deals
-  Interscope Records: 121 deals
+  Interscope Records: 122 deals
   SharpTone Records: 90 deals
-  Rock Metal Fan Nation: 192 deals
-  RMFN All: 192 deals
+  Rock Metal Fan Nation: 191 deals
+  RMFN All: 191 deals
   Sumerian Records: 65 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
@@ -841,30 +846,30 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 11 items | pages: 7 | robot walls: 0
+  Amazon: 12 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 11
-Brooklyn Vegan: 170
+Amazon: 12
+Brooklyn Vegan: 171
 Craft Recordings: 83
 Equal Vision: 88
 Fearless Records: 96
 Fearless Vinyl: 96
 Hopeless Records: 56
-Interscope Records: 119
+Interscope Records: 120
 MNRK Heavy: 138
 Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 75
-r/VinylReleases: 45
+r/VinylReleases: 46
 Revolver: 154
 Rhino: 113
 Rise All: 72
 Rise Records: 72
-RMFN All: 192
-Rock Metal Fan Nation: 192
+RMFN All: 191
+Rock Metal Fan Nation: 191
 Rollin Preorders: 230
 Rollin Records: 230
 SharpTone Records: 89
@@ -873,5 +878,5 @@ Solid State Vinyl: 47
 Sound of Vinyl: 228
 Sumerian Records: 63
 Target: 1
-uDiscover Music: 131
+uDiscover Music: 130
 Walmart: 1
