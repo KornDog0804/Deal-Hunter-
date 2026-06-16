@@ -35,7 +35,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 96
+Fearless Records: kept 95
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 96
+Fearless Vinyl: kept 95
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -69,21 +69,21 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 171
+Brooklyn Vegan: kept 172
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 154
+Revolver: kept 155
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 147
+Newbury Comics: kept 146
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -93,7 +93,7 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 147
+Newbury Preorders: kept 146
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -221,7 +221,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 72
+Pirates Press Records: kept 74
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -352,11 +352,9 @@ Millions of Records: unknown source_type "html_store" - skipping
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
-  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
@@ -367,11 +365,8 @@ IndieMerchstore: kept 0
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
-  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
-  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
-  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
   ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
   ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
@@ -404,21 +399,21 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: found 34 candidate vinyl items
+Amazon: found 43 candidate vinyl items
+Amazon: found 33 candidate vinyl items
 Amazon: kept 12
 
 ==================================================
 Scraping: Target (target_catalog_source)
 ==================================================
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
@@ -433,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3391 entries
-[Discogs] Enriching 3147 vinyl records with Mint pricing...
+[Discogs] Enriching 3145 vinyl records with Mint pricing...
 [Discogs] Cache saved (3391 entries)
 [Discogs] Enrichment complete!
 
@@ -446,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 288236 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 288212 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -802,7 +797,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 304
 [UpcomingVinyl] 304 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3135 buy signals saved to buy_signals.json
+[BuySignals] 3133 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -811,14 +806,14 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 230 deals
   Sound of Vinyl: 230 deals
   uDiscover Music: 130 deals
-  Fearless Records: 96 deals
-  Fearless Vinyl: 96 deals
+  Fearless Records: 95 deals
+  Fearless Vinyl: 95 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 171 deals
-  Revolver: 154 deals
-  Newbury Comics: 147 deals
-  Newbury Preorders: 147 deals
+  Brooklyn Vegan: 172 deals
+  Revolver: 155 deals
+  Newbury Comics: 146 deals
+  Newbury Preorders: 146 deals
   Craft Recordings: 83 deals
   MNRK Heavy: 138 deals
   Equal Vision: 88 deals
@@ -833,7 +828,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 75 deals
   Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 72 deals
+  Pirates Press Records: 74 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 0 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -851,20 +846,20 @@ SOURCE STATUS SUMMARY
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 12
-Brooklyn Vegan: 171
+Brooklyn Vegan: 172
 Craft Recordings: 83
 Equal Vision: 88
-Fearless Records: 96
-Fearless Vinyl: 96
+Fearless Records: 95
+Fearless Vinyl: 95
 Hopeless Records: 56
 Interscope Records: 120
 MNRK Heavy: 138
-Newbury Comics: 147
-Newbury Preorders: 147
+Newbury Comics: 146
+Newbury Preorders: 146
 Pirates Press Records: 59
 Pure Noise Records: 75
-r/VinylReleases: 46
-Revolver: 154
+r/VinylReleases: 44
+Revolver: 155
 Rhino: 113
 Rise All: 72
 Rise Records: 72
