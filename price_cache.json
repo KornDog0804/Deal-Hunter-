@@ -24244,7 +24244,7 @@
     "artist": "Haunted Mouths",
     "title": "A Collection Of Greetings Blue Marble Vinyl LP",
     "found": true,
-    "cached_at": "2026-06-09T16:43:52.482107",
+    "cached_at": "2026-06-17T16:52:38.487645",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 33812094,
@@ -24254,8 +24254,8 @@
     "artist": "Le Butcherettes",
     "title": "Bi/MENTAL Gold/Mustard",
     "found": true,
-    "cached_at": "2026-06-09T16:43:56.107743",
-    "lowest_price": 31.89,
+    "cached_at": "2026-06-17T16:52:42.270731",
+    "lowest_price": 44.99,
     "num_for_sale": 6,
     "price_mint": 109.25,
     "price_nm": 97.75,
@@ -24269,15 +24269,15 @@
     "artist": "Crucial Moments",
     "title": "Royal Blue In Highlighter Yellow Color in Color",
     "found": false,
-    "cached_at": "2026-06-09T16:43:57.357591"
+    "cached_at": "2026-06-17T16:52:46.082665"
   },
   "alkaline trio::blood hair and eyeballs maroon vinyl lp": {
     "artist": "Alkaline Trio",
     "title": "Blood, Hair, And Eyeballs Maroon Vinyl LP",
     "found": true,
-    "cached_at": "2026-06-09T16:44:01.076452",
-    "lowest_price": 33.0,
-    "num_for_sale": 12,
+    "cached_at": "2026-06-17T16:52:49.872942",
+    "lowest_price": 30.0,
+    "num_for_sale": 13,
     "price_mint": 61.75,
     "price_nm": 55.25,
     "price_vgplus": 42.25,
@@ -24290,14 +24290,14 @@
     "artist": "Dave Hause",
     "title": "Kick Black/ Clear Smoke",
     "found": true,
-    "cached_at": "2026-06-09T16:44:04.735269",
+    "cached_at": "2026-06-17T16:52:53.764682",
     "lowest_price": 24.99,
     "num_for_sale": 7,
-    "price_mint": 38.21,
-    "price_nm": 34.19,
-    "price_vgplus": 26.14,
-    "price_vg": 18.1,
-    "suggested_sell_price": 34.19,
+    "price_mint": 38.65,
+    "price_nm": 34.58,
+    "price_vgplus": 26.45,
+    "price_vg": 18.31,
+    "suggested_sell_price": 34.58,
     "release_id": 13611809,
     "discogs_url": "https://www.discogs.com/release/13611809"
   },
@@ -41663,5 +41663,218 @@
     "title": "WAVVES ‘WAVVES' LP",
     "found": false,
     "cached_at": "2026-06-16T18:39:52.042495"
+  },
+  "orchard::katatonia the fall of hearts 2lp 10th anniversary pearl dawn vinyl": {
+    "artist": "ORCHARD",
+    "title": "KATATONIA 'THE FALL OF HEARTS' 2LP (10th Anniversary, Pearl Dawn Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:04.321527"
+  },
+  "sony::311 311 2lp": {
+    "artist": "SONY",
+    "title": "311 '311' 2LP",
+    "found": true,
+    "cached_at": "2026-06-17T16:52:08.188790",
+    "lowest_price": 17.43,
+    "num_for_sale": 35,
+    "price_mint": 55.0,
+    "price_nm": 49.21,
+    "price_vgplus": 37.63,
+    "price_vg": 26.05,
+    "suggested_sell_price": 49.21,
+    "release_id": 10415139,
+    "discogs_url": "https://www.discogs.com/release/10415139"
+  },
+  "love story::opaque turquoise 2lp": {
+    "artist": "Love Story",
+    "title": "Opaque Turquoise 2LP",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:09.470573"
+  },
+  "movements::outgrown things bone waqua 10 vinyl": {
+    "artist": "Movements",
+    "title": "\"Outgrown Things\" Bone w/Aqua 10\" Vinyl",
+    "found": true,
+    "cached_at": "2026-06-17T16:52:13.392600",
+    "lowest_price": 50.0,
+    "num_for_sale": 2,
+    "price_mint": 71.25,
+    "price_nm": 63.75,
+    "price_vgplus": 48.75,
+    "price_vg": 33.75,
+    "suggested_sell_price": 63.75,
+    "release_id": 31387193,
+    "discogs_url": "https://www.discogs.com/release/31387193"
+  },
+  "august burns red::guardians sessions ep 10 vinyl": {
+    "artist": "August Burns Red",
+    "title": "Guardians Sessions EP 10\" Vinyl",
+    "found": true,
+    "cached_at": "2026-06-17T16:52:17.368794",
+    "lowest_price": 6.3,
+    "num_for_sale": 23,
+    "price_mint": 28.49,
+    "price_nm": 25.49,
+    "price_vgplus": 19.49,
+    "price_vg": 13.5,
+    "suggested_sell_price": 25.49,
+    "release_id": 18528187,
+    "discogs_url": "https://www.discogs.com/release/18528187"
+  },
+  "universal::nita strauss the call of the void 2lp clear wred black white splatter vinyl": {
+    "artist": "Universal",
+    "title": "NITA STRAUSS 'THE CALL OF THE VOID' 2LP (Clear w/Red & Black & White Splatter Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:18.677917"
+  },
+  "universal::born of osiris tomorrow we die alive lp blue in cloudy clear wblack white splatter vinyl": {
+    "artist": "Universal",
+    "title": "BORN OF OSIRIS 'TOMORROW WE DIE ALIVE' LP (Blue in Cloudy Clear w/Black & White Splatter Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:20.005404"
+  },
+  "universal::incubus morning view xxiii 2lp violet vinyl": {
+    "artist": "Universal",
+    "title": "INCUBUS 'MORNING VIEW XXIII' 2LP (Violet Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:21.317091"
+  },
+  "matador direct::pulp live 2lp": {
+    "artist": "MATADOR DIRECT",
+    "title": "PULP 'LIVE!' 2LP",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:22.616878"
+  },
+  "matador direct::pulp live 2lp blue vinyl": {
+    "artist": "MATADOR DIRECT",
+    "title": "PULP 'LIVE!' 2LP (Blue Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:23.892851"
+  },
+  "universal::asking alexandria stand up and scream lp black in red in trans royal blue vinyl": {
+    "artist": "Universal",
+    "title": "ASKING ALEXANDRIA 'STAND UP AND SCREAM' LP (Black in Red in Trans. Royal Blue Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:25.212816"
+  },
+  "interscope records::tails 1lp vinyl": {
+    "artist": "Interscope Records",
+    "title": "Tails 1LP Vinyl",
+    "found": true,
+    "cached_at": "2026-06-17T16:52:29.028156",
+    "lowest_price": 46.99,
+    "num_for_sale": 60,
+    "price_mint": 99.96,
+    "price_nm": 89.44,
+    "price_vgplus": 68.39,
+    "price_vg": 47.35,
+    "suggested_sell_price": 89.44,
+    "release_id": 36817693,
+    "discogs_url": "https://www.discogs.com/release/36817693"
+  },
+  "matador direct::mojave 3 excuses for travellers lp 2026 remaster": {
+    "artist": "MATADOR DIRECT",
+    "title": "MOJAVE 3 'EXCUSES FOR TRAVELLERS' LP (2026 Remaster)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:30.318651"
+  },
+  "billie holiday::lady in satin lp": {
+    "artist": "Billie Holiday",
+    "title": "Lady In Satin (LP)",
+    "found": true,
+    "cached_at": "2026-06-17T16:52:34.138048",
+    "lowest_price": 9.99,
+    "num_for_sale": 28,
+    "price_mint": 167.64,
+    "price_nm": 149.99,
+    "price_vgplus": 114.7,
+    "price_vg": 79.41,
+    "suggested_sell_price": 149.99,
+    "release_id": 1375064,
+    "discogs_url": "https://www.discogs.com/release/1375064"
+  },
+  "matador direct::mojave 3 ask me tomorrow lp 2026 remaster": {
+    "artist": "MATADOR DIRECT",
+    "title": "MOJAVE 3 'ASK ME TOMORROW' LP (2026 Remaster)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:55.037119"
+  },
+  "matador direct::mojave 3 out of tune lp 2026 remaster": {
+    "artist": "MATADOR DIRECT",
+    "title": "MOJAVE 3 'OUT OF TUNE' LP (2026 Remaster)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:56.319351"
+  },
+  "matador direct::mojave 3 spoon and rafter lp 2026 remaster": {
+    "artist": "MATADOR DIRECT",
+    "title": "MOJAVE 3 'SPOON AND RAFTER' LP (2026 Remaster)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:57.662205"
+  },
+  "matador direct::mojave 3 puzzles like you lp 2026 remaster": {
+    "artist": "MATADOR DIRECT",
+    "title": "MOJAVE 3 'PUZZLES LIKE YOU' LP (2026 Remaster)",
+    "found": false,
+    "cached_at": "2026-06-17T16:52:59.051108"
+  },
+  "orchard::ceremony in the spirit world now lp orange krush cloudy vinyl": {
+    "artist": "ORCHARD",
+    "title": "CEREMONY 'IN THE SPIRIT WORLD NOW' LP (Orange Krush Cloudy Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:53:00.357862"
+  },
+  "orchard::ceremony tell me your dream lp neon green vinyl": {
+    "artist": "ORCHARD",
+    "title": "CEREMONY 'TELL ME YOUR DREAM' LP (Neon Green Vinyl)",
+    "found": false,
+    "cached_at": "2026-06-17T16:53:01.651323"
+  },
+  "orchard::wavves king of the beach lp": {
+    "artist": "ORCHARD",
+    "title": "WAVVES ‘KING OF THE BEACH' LP",
+    "found": false,
+    "cached_at": "2026-06-17T16:53:02.928473"
+  },
+  "orchard::wavves hideaway lp": {
+    "artist": "ORCHARD",
+    "title": "WAVVES ‘HIDEAWAY' LP",
+    "found": false,
+    "cached_at": "2026-06-17T16:53:04.198420"
+  },
+  "sony::maren morris girl lp": {
+    "artist": "SONY",
+    "title": "MAREN MORRIS 'GIRL' LP",
+    "found": true,
+    "cached_at": "2026-06-17T16:53:07.990300",
+    "lowest_price": 27.98,
+    "num_for_sale": 5,
+    "price_mint": 38.0,
+    "price_nm": 34.0,
+    "price_vgplus": 26.0,
+    "price_vg": 18.0,
+    "suggested_sell_price": 34.0,
+    "release_id": 13644264,
+    "discogs_url": "https://www.discogs.com/release/13644264"
+  },
+  "sony::maren morris hero lp": {
+    "artist": "SONY",
+    "title": "MAREN MORRIS 'HERO' LP",
+    "found": true,
+    "cached_at": "2026-06-17T16:53:11.800073",
+    "lowest_price": 5.0,
+    "num_for_sale": 29,
+    "price_mint": 45.78,
+    "price_nm": 40.96,
+    "price_vgplus": 31.32,
+    "price_vg": 21.68,
+    "suggested_sell_price": 40.96,
+    "release_id": 8608023,
+    "discogs_url": "https://www.discogs.com/release/8608023"
+  },
+  "chalino sanchez::gorra mercanca oficial": {
+    "artist": "Chalino Sanchez",
+    "title": "Gorra (Mercancía Oficial)",
+    "found": false,
+    "cached_at": "2026-06-17T16:53:13.070251"
   }
 }
