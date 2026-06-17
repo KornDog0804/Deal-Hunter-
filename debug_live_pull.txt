@@ -399,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 41 candidate vinyl items
+Amazon: found 33 candidate vinyl items
+Amazon: kept 12
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3391 entries
-[Discogs] Enriching 3132 vinyl records with Mint pricing...
-[Discogs] Cache saved (3391 entries)
+[Discogs] Loaded cache with 3433 entries
+[Discogs] Enriching 3143 vinyl records with Mint pricing...
+[Discogs] Cache saved (3433 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -442,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 288230 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 288212 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -774,7 +773,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZoonHappy Thought School —  (Paper Bag Records)
 [UpcomingVinyl] FOUND: Zubin Mehta/Los Angeles PhilharmonicVarese: Arcana; Integrales; Ionisation —  (Decca)
 [UpcomingVinyl] li>h2 approach found 310 entries
-[UpcomingVinyl] Got 471803 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 471779 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -798,7 +797,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 304
 [UpcomingVinyl] 304 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3132 buy signals saved to buy_signals.json
+[BuySignals] 3131 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -842,11 +841,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 12 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 12
 Brooklyn Vegan: 171
 Craft Recordings: 83
 Equal Vision: 88
@@ -859,7 +858,7 @@ Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 59
 Pure Noise Records: 75
-r/VinylReleases: 45
+r/VinylReleases: 46
 Revolver: 156
 Rhino: 113
 Rise All: 72
