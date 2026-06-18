@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 172
+Brooklyn Vegan: kept 174
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 141
+Revolver: kept 145
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -105,7 +105,6 @@ Craft Recordings: kept 82
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 133
@@ -122,14 +121,14 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 119
+Rhino: kept 118
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 120
+Interscope Records: kept 119
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -400,8 +399,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: found 32 candidate vinyl items
+Amazon: found 36 candidate vinyl items
+Amazon: found 34 candidate vinyl items
 Amazon: kept 11
 
 ==================================================
@@ -429,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3478 entries
-[Discogs] Enriching 3109 vinyl records with Mint pricing...
+[Discogs] Enriching 3113 vinyl records with Mint pricing...
 [Discogs] Cache saved (3478 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 294425 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 294851 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -781,7 +780,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZoonHappy Thought School —  (Paper Bag Records)
 [UpcomingVinyl] FOUND: Zubin Mehta/Los Angeles PhilharmonicVarese: Arcana; Integrales; Ionisation —  (Decca)
 [UpcomingVinyl] li>h2 approach found 317 entries
-[UpcomingVinyl] Got 482471 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 482873 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -805,7 +804,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 311
 [UpcomingVinyl] 311 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3101 buy signals saved to buy_signals.json
+[BuySignals] 3103 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -818,15 +817,15 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 97 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 172 deals
-  Revolver: 141 deals
+  Brooklyn Vegan: 174 deals
+  Revolver: 145 deals
   Newbury Comics: 146 deals
   Newbury Preorders: 146 deals
   Craft Recordings: 82 deals
   MNRK Heavy: 133 deals
   Equal Vision: 87 deals
-  Rhino: 119 deals
-  Interscope Records: 120 deals
+  Rhino: 118 deals
+  Interscope Records: 119 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 188 deals
   RMFN All: 188 deals
@@ -854,21 +853,21 @@ SOURCE STATUS SUMMARY
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 11
-Brooklyn Vegan: 172
+Brooklyn Vegan: 174
 Craft Recordings: 82
 Equal Vision: 87
 Fearless Records: 97
 Fearless Vinyl: 97
 Hopeless Records: 56
-Interscope Records: 118
+Interscope Records: 117
 MNRK Heavy: 133
 Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 59
 Pure Noise Records: 74
-r/VinylReleases: 46
-Revolver: 141
-Rhino: 117
+r/VinylReleases: 44
+Revolver: 145
+Rhino: 116
 Rise All: 72
 Rise Records: 72
 RMFN All: 188
