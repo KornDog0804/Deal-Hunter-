@@ -4,7 +4,7 @@ Scraping: Rollin Records (shopify_store)
 ==================================================
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 230
+Rollin Records: kept 229
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
@@ -14,7 +14,7 @@ Scraping: Rollin Preorders (shopify_store)
   ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Preorders: 250 products via Shopify JSON
-Rollin Preorders: kept 230
+Rollin Preorders: kept 229
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
@@ -105,6 +105,7 @@ Craft Recordings: kept 83
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 133
@@ -114,7 +115,7 @@ Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 87
+Equal Vision: kept 86
 
 ==================================================
 Scraping: Rhino (shopify_store)
@@ -164,9 +165,9 @@ Sumerian Records: kept 65
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
-Solid State Records: 158 products via Shopify JSON
-Solid State Records: kept 52
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 164 products
+Solid State Records: 164 products via Shopify JSON
+Solid State Records: kept 54
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -174,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
-Solid State Vinyl: 158 products via Shopify JSON
-Solid State Vinyl: kept 52
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 164 products
+Solid State Vinyl: 164 products via Shopify JSON
+Solid State Vinyl: kept 54
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -399,8 +400,14 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
+  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
 Amazon: No vinyl products found, adding catalog portal fallback
 Amazon: kept 1
 
@@ -429,7 +436,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3531 entries
-[Discogs] Enriching 3105 vinyl records with Mint pricing...
+[Discogs] Enriching 3106 vinyl records with Mint pricing...
 [Discogs] Cache saved (3531 entries)
 [Discogs] Enrichment complete!
 
@@ -442,7 +449,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -781,7 +788,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZoonHappy Thought School —  (Paper Bag Records)
 [UpcomingVinyl] FOUND: Zubin Mehta/Los Angeles PhilharmonicVarese: Arcana; Integrales; Ionisation —  (Decca)
 [UpcomingVinyl] li>h2 approach found 317 entries
-[UpcomingVinyl] Got 497786 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 497810 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -810,8 +817,8 @@ SCRAPING UPCOMING VINYL RELEASES
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 230 deals
-  Rollin Preorders: 230 deals
+  Rollin Records: 229 deals
+  Rollin Preorders: 229 deals
   Sound of Vinyl: 230 deals
   uDiscover Music: 116 deals
   Fearless Records: 97 deals
@@ -824,15 +831,15 @@ SOURCE STATUS SUMMARY
   Newbury Preorders: 147 deals
   Craft Recordings: 83 deals
   MNRK Heavy: 133 deals
-  Equal Vision: 87 deals
+  Equal Vision: 86 deals
   Rhino: 118 deals
   Interscope Records: 119 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 189 deals
   RMFN All: 189 deals
   Sumerian Records: 65 deals
-  Solid State Records: 52 deals
-  Solid State Vinyl: 52 deals
+  Solid State Records: 54 deals
+  Solid State Vinyl: 54 deals
   Pure Noise Records: 76 deals
   Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -849,14 +856,14 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 1 items | pages: 5 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 1
 Brooklyn Vegan: 170
 Craft Recordings: 83
-Equal Vision: 87
+Equal Vision: 86
 Fearless Records: 97
 Fearless Vinyl: 97
 Hopeless Records: 56
@@ -866,18 +873,18 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
-r/VinylReleases: 45
+r/VinylReleases: 43
 Revolver: 144
 Rhino: 116
 Rise All: 72
 Rise Records: 72
 RMFN All: 189
 Rock Metal Fan Nation: 189
-Rollin Preorders: 230
-Rollin Records: 230
+Rollin Preorders: 229
+Rollin Records: 229
 SharpTone Records: 90
-Solid State Records: 47
-Solid State Vinyl: 47
+Solid State Records: 49
+Solid State Vinyl: 49
 Sound of Vinyl: 228
 Sumerian Records: 63
 Target: 1
