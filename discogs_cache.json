@@ -38940,5 +38940,547 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "westside cowboy|it goes on 1": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6994,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the pretty reckless|dear god signed white label": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3317,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|mobb deep the infamous 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|mobb deep hell on earth 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|alicia keys songs in a minor 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|doja cat planet her 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6789,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|puscifer donkey punch the night 12 ep": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7762,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Puscifer",
+    "discogs_title": "Donkey Punch The Night",
+    "discogs_release_id": 4373367,
+    "discogs_url": "https://www.discogs.com/release/4373367-Puscifer-Donkey-Punch-The-Night",
+    "discogs_mint_price": 60.0,
+    "discogs_lowest": 60.0,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 1508,
+    "discogs_want": 375
+  },
+  "warner|sepultura arise rough mixes": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|bring me the horizon there is a hell believe me i ve seen it there is a heaven let s keep it a secret 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|bring me the horizon suicide season": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6697,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|bring me the horizon count your blessings": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6697,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the smiths|best i": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Smiths",
+    "discogs_title": "Best... I",
+    "discogs_release_id": 3109987,
+    "discogs_url": "https://www.discogs.com/release/3109987-The-Smiths-Best-I",
+    "discogs_mint_price": 173.75,
+    "discogs_lowest": 173.75,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 65,
+    "discogs_want": 260
+  },
+  "the smiths|best ii": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Smiths",
+    "discogs_title": "...Best II",
+    "discogs_release_id": 1652769,
+    "discogs_url": "https://www.discogs.com/release/1652769-The-Smiths-Best-II",
+    "discogs_mint_price": 93.56,
+    "discogs_lowest": 93.56,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 1053,
+    "discogs_want": 856
+  },
+  "interscope records|under the iron sea 1 zoetrope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "interscope records|under the iron sea super deluxe": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "olivia rodrigo|sour ivc edition": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Olivia Rodrigo",
+    "discogs_title": "Sour",
+    "discogs_release_id": 37479747,
+    "discogs_url": "https://www.discogs.com/release/37479747-Olivia-Rodrigo-Sour",
+    "discogs_mint_price": 119.0,
+    "discogs_lowest": 119.0,
+    "discogs_num_for_sale": 47,
+    "discogs_have": 868,
+    "discogs_want": 403
+  },
+  "unknown artist|discover the wonder of": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5122,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ratt|july 31 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "river master|fish god follow the legend": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "david gray|sell sell sell": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4938,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "limited edition anatomy of a brief romance deluxe 2lp|transparent": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7737,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jan Johnston & Serge Devant",
+    "discogs_title": "Transparent",
+    "discogs_release_id": 345894,
+    "discogs_url": "https://www.discogs.com/release/345894-Jan-Johnston-Serge-Devant-Transparent",
+    "discogs_mint_price": 4.01,
+    "discogs_lowest": 4.01,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 244,
+    "discogs_want": 92
+  },
+  "bring me the horizon|count your blessings suicide season and there is a hell eco": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "narnia|x": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Narnia",
+    "discogs_title": "X",
+    "discogs_release_id": 37478988,
+    "discogs_url": "https://www.discogs.com/release/37478988-Narnia-X",
+    "discogs_mint_price": 3.56,
+    "discogs_lowest": 3.56,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 8,
+    "discogs_want": 3
+  },
+  "various|keep the pressure on the beverley s rock steady singles 1966 1967 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "various|1968 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.579,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hilary duff|merlot": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7091,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "wage war it calls me by name limited run 10 ep vinyl|signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7131,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hildur guonadottir|mount a": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.608,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "thank god it s almost monday lp|almost monday": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5173,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "t rex|1974 1977": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "laaz rockit|know your enemy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Laaz Rockit",
+    "discogs_title": "Know Your Enemy",
+    "discogs_release_id": 15832549,
+    "discogs_url": "https://www.discogs.com/release/15832549-Laaz-Rockit-Know-Your-Enemy",
+    "discogs_mint_price": 52.11,
+    "discogs_lowest": 52.11,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 70,
+    "discogs_want": 44
+  },
+  "laaz rockit|annihilation principle": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Laaz Rockit",
+    "discogs_title": "Annihilation Principle",
+    "discogs_release_id": 12633293,
+    "discogs_url": "https://www.discogs.com/release/12633293-Laaz-Rockit-Annihilation-Principle",
+    "discogs_mint_price": 7.29,
+    "discogs_lowest": 7.29,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 43,
+    "discogs_want": 30
+  },
+  "roy ayers ubiquity|live at the montreaux jazz festival": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Roy Ayers Ubiquity",
+    "discogs_title": "Live At The Montreaux Jazz Festival",
+    "discogs_release_id": 403766,
+    "discogs_url": "https://www.discogs.com/release/403766-Roy-Ayers-Ubiquity-Live-At-The-Montreaux-Jazz-Festival",
+    "discogs_mint_price": 0.38,
+    "discogs_lowest": 0.38,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 183,
+    "discogs_want": 351
+  },
+  "eminem|my dad s gone crazy mockingbird 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the rolling stones|jealous lover 10": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "htrk|work": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "HTRK",
+    "discogs_title": "Work (Work, Work)",
+    "discogs_release_id": 3244746,
+    "discogs_url": "https://www.discogs.com/release/3244746-HTRK-Work-Work-Work",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 142,
+    "discogs_want": 293
+  },
+  "benny the butcher|the plugs i met 2 5th anniversary edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ariana grande|petal translucent pearly white restock": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ariana grande|petal opal girly": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tha god fahim|tgif": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tha God Fahim*",
+    "discogs_title": "TGIF",
+    "discogs_release_id": 14765202,
+    "discogs_url": "https://www.discogs.com/release/14765202-Tha-God-Fahim-TGIF",
+    "discogs_mint_price": 189.99,
+    "discogs_lowest": 189.99,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 163,
+    "discogs_want": 187
+  },
+  "unknown artist|halo 3 3x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2959,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|halo 2 3x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.304,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|halo combat evolved 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|halo original trilogy soundtrack collection": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.741,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "harold ousley|the kid rare soul jazz first repress since 1972": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|dj kawasaki beautiful": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5935,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|text059": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "blossoms|songs from the wedding cake": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4959,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "zebrahead|ep o 12 inch": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bring me the horizon|2 140g eco black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2718,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bring me the horizon|suicide season": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bring Me The Horizon",
+    "discogs_title": "Suicide Season",
+    "discogs_release_id": 5257156,
+    "discogs_url": "https://www.discogs.com/release/5257156-Bring-Me-The-Horizon-Suicide-Season",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 224,
+    "discogs_want": 857
+  },
+  "bring me the horizon|count your blessings": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bring Me The Horizon",
+    "discogs_title": "Count Your Blessings",
+    "discogs_release_id": 9525986,
+    "discogs_url": "https://www.discogs.com/release/9525986-Bring-Me-The-Horizon-Count-Your-Blessings",
+    "discogs_mint_price": 101.32,
+    "discogs_lowest": 101.32,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 211,
+    "discogs_want": 592
+  },
+  "the smiths|uk link": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
