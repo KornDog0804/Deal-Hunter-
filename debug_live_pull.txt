@@ -434,9 +434,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3595 entries
+[Discogs] Loaded cache with 3606 entries
 [Discogs] Enriching 3106 vinyl records with Mint pricing...
-[Discogs] Cache saved (3595 entries)
+[Discogs] Cache saved (3606 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -448,12 +448,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 44 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 294449 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 294443 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
