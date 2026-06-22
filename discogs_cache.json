@@ -40432,5 +40432,82 @@
     "discogs_num_for_sale": 4,
     "discogs_have": 151,
     "discogs_want": 158
+  },
+  "apocalyptica|cult": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Apocalyptica",
+    "discogs_title": "Cult",
+    "discogs_release_id": 2673402,
+    "discogs_url": "https://www.discogs.com/release/2673402-Apocalyptica-Cult",
+    "discogs_mint_price": 46.24,
+    "discogs_lowest": 46.24,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 195,
+    "discogs_want": 186
+  },
+  "unknown artist|signed bleachers everyone for ten minutes": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7091,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "reverend baron|indies only maroon w black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "twin atlantic|separation from the animals": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2158,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hiroshi suzuki|japan pressing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6967,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hilary duff|luck look or something tour 2 happy hour edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "2 pac|2 of americaz most wanted snoop collab 7 picture disc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "super mario land 1 2|zoetrope center label": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3485,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
