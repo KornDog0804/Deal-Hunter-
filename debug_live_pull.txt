@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 116
+uDiscover Music: kept 121
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 180
+Brooklyn Vegan: kept 183
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -121,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 120
+Rhino: kept 119
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -435,7 +435,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3660 entries
-[Discogs] Enriching 3038 vinyl records with Mint pricing...
+[Discogs] Enriching 3045 vinyl records with Mint pricing...
 [Discogs] Cache saved (3660 entries)
 [Discogs] Enrichment complete!
 
@@ -453,7 +453,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 422939 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 423071 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -943,7 +943,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 473 entries
-[UpcomingVinyl] Got 489932 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 489776 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -967,7 +967,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 465
 [UpcomingVinyl] 465 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3038 buy signals saved to buy_signals.json
+[BuySignals] 3045 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -975,19 +975,19 @@ SOURCE STATUS SUMMARY
   Rollin Records: 229 deals
   Rollin Preorders: 229 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 116 deals
+  uDiscover Music: 121 deals
   Fearless Records: 97 deals
   Fearless Vinyl: 97 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 180 deals
+  Brooklyn Vegan: 183 deals
   Revolver: 142 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 83 deals
   MNRK Heavy: 133 deals
   Equal Vision: 87 deals
-  Rhino: 120 deals
+  Rhino: 119 deals
   Interscope Records: 116 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 150 deals
@@ -1016,7 +1016,7 @@ SOURCE STATUS SUMMARY
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 180
+Brooklyn Vegan: 183
 Craft Recordings: 83
 Equal Vision: 87
 Fearless Records: 97
@@ -1030,7 +1030,7 @@ Pirates Press Records: 59
 Pure Noise Records: 76
 r/VinylReleases: 46
 Revolver: 142
-Rhino: 118
+Rhino: 117
 Rise All: 72
 Rise Records: 72
 RMFN All: 150
@@ -1043,5 +1043,5 @@ Solid State Vinyl: 49
 Sound of Vinyl: 228
 Sumerian Records: 65
 Target: 1
-uDiscover Music: 116
+uDiscover Music: 121
 Walmart: 1
