@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 174
+Brooklyn Vegan: kept 180
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 141
+Revolver: kept 142
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -159,7 +159,7 @@ Scraping: Sumerian Records (shopify_store)
 ==================================================
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 65
+Sumerian Records: kept 67
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
@@ -434,9 +434,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3624 entries
-[Discogs] Enriching 3029 vinyl records with Mint pricing...
-[Discogs] Cache saved (3624 entries)
+[Discogs] Loaded cache with 3660 entries
+[Discogs] Enriching 3038 vinyl records with Mint pricing...
+[Discogs] Cache saved (3660 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -453,7 +453,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 423071 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 422939 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -943,7 +943,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 473 entries
-[UpcomingVinyl] Got 489908 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 489932 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -967,7 +967,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 465
 [UpcomingVinyl] 465 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3029 buy signals saved to buy_signals.json
+[BuySignals] 3038 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -980,8 +980,8 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 97 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 174 deals
-  Revolver: 141 deals
+  Brooklyn Vegan: 180 deals
+  Revolver: 142 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 83 deals
@@ -992,7 +992,7 @@ SOURCE STATUS SUMMARY
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 150 deals
   RMFN All: 150 deals
-  Sumerian Records: 65 deals
+  Sumerian Records: 67 deals
   Solid State Records: 54 deals
   Solid State Vinyl: 54 deals
   Pure Noise Records: 76 deals
@@ -1016,7 +1016,7 @@ SOURCE STATUS SUMMARY
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 174
+Brooklyn Vegan: 180
 Craft Recordings: 83
 Equal Vision: 87
 Fearless Records: 97
@@ -1029,7 +1029,7 @@ Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
 r/VinylReleases: 46
-Revolver: 141
+Revolver: 142
 Rhino: 118
 Rise All: 72
 Rise Records: 72
@@ -1041,7 +1041,7 @@ SharpTone Records: 90
 Solid State Records: 49
 Solid State Vinyl: 49
 Sound of Vinyl: 228
-Sumerian Records: 63
+Sumerian Records: 65
 Target: 1
 uDiscover Music: 116
 Walmart: 1
