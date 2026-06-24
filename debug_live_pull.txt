@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 121
+uDiscover Music: kept 115
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 180
+Brooklyn Vegan: kept 179
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 137
+Revolver: kept 138
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -100,12 +100,11 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 83
+Craft Recordings: kept 84
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 133
@@ -122,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 119
+Rhino: kept 116
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -400,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 37 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 8
+Amazon: found 38 candidate vinyl items
+Amazon: found 33 candidate vinyl items
+Amazon: kept 12
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3716 entries
-[Discogs] Enriching 3045 vinyl records with Mint pricing...
+[Discogs] Enriching 3041 vinyl records with Mint pricing...
 [Discogs] Cache saved (3716 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 423071 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 426656 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -462,7 +461,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 473 h2 tags, 502 li tags
+[UpcomingVinyl] Found 477 h2 tags, 506 li tags
 [UpcomingVinyl] FOUND: Misery IndexThe Killing Gods —  (Season Of Mist)
 [UpcomingVinyl] FOUND: 100 DemonsEmbrace The Black Light —  (Closed Casket Activities)
 [UpcomingVinyl] FOUND: 35 TapesVeil On Life —  (Apollon Records)
@@ -641,6 +640,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: GoblinIl Ras Del Quartiere Original Sountrack (Clear Lilac) —  (Cinevox Italy)
 [UpcomingVinyl] FOUND: Golden EarringBloody Buccaneers —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Golden EarringMoontan —  (Artone Signature)
+[UpcomingVinyl] FOUND: Gom JabbarGom Jabbar (Neon Yellow) —  (Subsound)
 [UpcomingVinyl] FOUND: HaggusThe Mincecore Manifesto —  (Tankcrimes)
 [UpcomingVinyl] FOUND: HEDONISTScapulimancy —  (Southern Lord)
 [UpcomingVinyl] FOUND: HeimatHeimat 10th Anniversary —  (Kuroneko)
@@ -662,7 +662,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Inner CityGood Life —  (Kms)
 [UpcomingVinyl] FOUND: Into EternityThe Scattering of Ashes —  (M-Theory Audio)
 [UpcomingVinyl] FOUND: IrationWhere It All Began —  (3 Prong Records)
-[UpcomingVinyl] FOUND: IsegrimIsegrim (Marble) —  (Fireflash)
 [UpcomingVinyl] FOUND: Ital TekMind Abandon —  (Planet Mu)
 [UpcomingVinyl] FOUND: Jacob UngerleiderCongratulations —  (Sipsman)
 [UpcomingVinyl] FOUND: Jaga JazzistA Living Room Hush —  (Ninja Tune)
@@ -775,6 +774,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: OneRepublicWaking Up —  (Mosley Music/Interscope)
 [UpcomingVinyl] FOUND: OpethRoundhouse Tapes (Uk Exclusive Clear) —  (Peaceville Import)
 [UpcomingVinyl] FOUND: OpethStill Life (Uk Exclusive Clear) —  (Peaceville Import)
+[UpcomingVinyl] FOUND: Orbit CultureShaman + The Forgotten EP (EU Exclusive) —  (Seek & Strike)
 [UpcomingVinyl] FOUND: Oren AmbarchiHubris (10th Anniversary) —  (Black Truffle)
 [UpcomingVinyl] FOUND: Orlando Voorn & Dark RealityNumb Denial —  (Kompakt Germany)
 [UpcomingVinyl] FOUND: Otto BensonSongs Before Bed 2022 —  (Palto Flats Records)
@@ -785,6 +785,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: PdqbDer Transiente Zeuge —  (Synaptic Cliffs)
 [UpcomingVinyl] FOUND: PentagramRelentless (Uk Exclusive Clear) —  (Peaceville Import)
 [UpcomingVinyl] FOUND: PestilenceBangkok Bloodshed —  (Blue Line Uk)
+[UpcomingVinyl] FOUND: PetrolioClub Atletico Voces Y Gritos —  (Subsound)
 [UpcomingVinyl] FOUND: PetrolioClub Atletico Voces Y Gritos (Blue Smoke) —  (Subsound)
 [UpcomingVinyl] FOUND: Pharis & Jason RomeroThese Are the Days That Turn Into Years —  (Lula Records)
 [UpcomingVinyl] FOUND: Pharoah Sanders & the London Symphony OrchestraDuo Concert Frankfurt 1986 —  (Music On Vinyl)
@@ -829,7 +830,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: SAKNADE SYV DØDSSYNDER —  (Hypaethral Records)
 [UpcomingVinyl] FOUND: Sam CookeMr. Soul (Orange) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Satoshi Tomiie12B-Dub Part 3 —  (Phonogramme)
-[UpcomingVinyl] FOUND: Savage ManiaDemonic Aussault —  (Fireflash Records)
 [UpcomingVinyl] FOUND: Sea Moss/MiscomingsBig Tube Scene —  (Zum)
 [UpcomingVinyl] FOUND: Sea WolfOld World Romance (Coke Bottle Clear) —  (Dangerbird Records)
 [UpcomingVinyl] FOUND: SeafretTell Me It's Real —  (Sony International Network)
@@ -852,6 +852,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Sneaker PimpsSplinter —  (One Little Independent Records)
 [UpcomingVinyl] FOUND: Soul Element (Aka Stacy Kidd & Peven Everett)How Bad I Want Ya —  (Daybreakers)
 [UpcomingVinyl] FOUND: Soul Jazz Records PresentsREBEL ISLAND SOUL – Under The Influence: Reggae, Funk & Soul In Jamaica in the 1970s —  (Soul Jazz)
+[UpcomingVinyl] FOUND: SoulburnQuantifying Cosmic Doom —  (Testimony Records)
 [UpcomingVinyl] FOUND: SoulburnQuantifying Cosmic Doom (Grey Black) —  (Testimony Records)
 [UpcomingVinyl] FOUND: SoulwaxPerfect We Are Not —  (Deewee)
 [UpcomingVinyl] FOUND: Squirrel BaitSkag Heaven —  (Drag City)
@@ -859,6 +860,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Stealing SheepGLO —  (Nine X Nine)
 [UpcomingVinyl] FOUND: Stephen SondheimSunday In The Park With George A Musical Soundtrack —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: StingThe Night Watch Live at the Rijksmuseum —  (A&M)
+[UpcomingVinyl] FOUND: Stone Temple PilotsNo. 4 —  (Mobile Fidelity)
 [UpcomingVinyl] FOUND: Sun Dont ShineFrom Birth To Death (Cool Gray Opaque) —  (Artist Friendly Co.)
 [UpcomingVinyl] FOUND: Sun Ra & His ArkestraEast Two +5 —  (Cosmic Myth Records)
 [UpcomingVinyl] FOUND: Sutherland/Caballe/Pavarotti/London PhilharmonicPuccini: Turnadot —  (Decca)
@@ -922,6 +924,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Various ArtistsVintage Sounds House —  (Wagram)
 [UpcomingVinyl] FOUND: VK BlankaKnightclub —  (Black Screen Records)
 [UpcomingVinyl] FOUND: W.A.S.P.Crimson Idol (Uk Exclusive Clear) —  (Madfish Records Imp)
+[UpcomingVinyl] FOUND: WarningRituals Of Shame —  (Relapse Records UK)
 [UpcomingVinyl] FOUND: Wesseltoft & SchwarzDuo —  (Mule Musiq)
 [UpcomingVinyl] FOUND: William DeVaughnBe Thankful For What You Got —  (Demon / Edsel)
 [UpcomingVinyl] FOUND: Willow AvalonPink Pocket Pistol —  (Atlantic)
@@ -936,8 +939,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZerobaseoneAscend —  (Wakeone)
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
-[UpcomingVinyl] li>h2 approach found 473 entries
-[UpcomingVinyl] Got 490051 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 477 entries
+[UpcomingVinyl] Got 502365 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -952,16 +955,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3342 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3431 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 465
-[UpcomingVinyl] 465 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3037 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 469
+[UpcomingVinyl] 469 whitelist matches saved to upcoming_releases.json
+[BuySignals] 3030 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -969,19 +972,19 @@ SOURCE STATUS SUMMARY
   Rollin Records: 229 deals
   Rollin Preorders: 229 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 121 deals
+  uDiscover Music: 115 deals
   Fearless Records: 97 deals
   Fearless Vinyl: 97 deals
   Rise Records: 72 deals
   Rise All: 72 deals
-  Brooklyn Vegan: 180 deals
-  Revolver: 137 deals
+  Brooklyn Vegan: 179 deals
+  Revolver: 138 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
-  Craft Recordings: 83 deals
+  Craft Recordings: 84 deals
   MNRK Heavy: 133 deals
   Equal Vision: 87 deals
-  Rhino: 119 deals
+  Rhino: 116 deals
   Interscope Records: 116 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 150 deals
@@ -1005,13 +1008,13 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 8 items | pages: 7 | robot walls: 0
+  Amazon: 12 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 8
-Brooklyn Vegan: 180
-Craft Recordings: 83
+Amazon: 12
+Brooklyn Vegan: 179
+Craft Recordings: 84
 Equal Vision: 87
 Fearless Records: 97
 Fearless Vinyl: 97
@@ -1022,9 +1025,9 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
-r/VinylReleases: 47
-Revolver: 137
-Rhino: 117
+r/VinylReleases: 44
+Revolver: 138
+Rhino: 114
 Rise All: 72
 Rise Records: 72
 RMFN All: 150
@@ -1037,5 +1040,5 @@ Solid State Vinyl: 49
 Sound of Vinyl: 228
 Sumerian Records: 67
 Target: 1
-uDiscover Music: 121
+uDiscover Music: 115
 Walmart: 1
