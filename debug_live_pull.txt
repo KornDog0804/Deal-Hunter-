@@ -105,6 +105,7 @@ Craft Recordings: kept 83
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 133
@@ -159,7 +160,7 @@ Scraping: Sumerian Records (shopify_store)
 ==================================================
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 68
+Sumerian Records: kept 69
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
@@ -399,16 +400,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 37 candidate vinyl items
+Amazon: found 32 candidate vinyl items
+Amazon: kept 8
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -434,9 +428,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3660 entries
-[Discogs] Enriching 3037 vinyl records with Mint pricing...
-[Discogs] Cache saved (3660 entries)
+[Discogs] Loaded cache with 3716 entries
+[Discogs] Enriching 3045 vinyl records with Mint pricing...
+[Discogs] Cache saved (3716 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -448,12 +442,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 423089 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 423071 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -943,7 +937,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 473 entries
-[UpcomingVinyl] Got 489908 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 490051 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -958,7 +952,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3344 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3342 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -992,7 +986,7 @@ SOURCE STATUS SUMMARY
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 150 deals
   RMFN All: 150 deals
-  Sumerian Records: 68 deals
+  Sumerian Records: 69 deals
   Solid State Records: 54 deals
   Solid State Vinyl: 54 deals
   Pure Noise Records: 76 deals
@@ -1011,11 +1005,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 5 | robot walls: 0
+  Amazon: 8 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 8
 Brooklyn Vegan: 180
 Craft Recordings: 83
 Equal Vision: 87
@@ -1028,7 +1022,7 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
-r/VinylReleases: 45
+r/VinylReleases: 47
 Revolver: 137
 Rhino: 117
 Rise All: 72
@@ -1041,7 +1035,7 @@ SharpTone Records: 90
 Solid State Records: 49
 Solid State Vinyl: 49
 Sound of Vinyl: 228
-Sumerian Records: 66
+Sumerian Records: 67
 Target: 1
 uDiscover Music: 121
 Walmart: 1
