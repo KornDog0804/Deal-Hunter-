@@ -40913,5 +40913,564 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "owl city|ocean eyes 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Owl City",
+    "discogs_title": "Ocean Eyes",
+    "discogs_release_id": 2174219,
+    "discogs_url": "https://www.discogs.com/release/2174219-Owl-City-Ocean-Eyes",
+    "discogs_mint_price": 31.5,
+    "discogs_lowest": 31.5,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 1813,
+    "discogs_want": 1731
+  },
+  "jimmy smith|softly as a summer breeze": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jimmy Smith",
+    "discogs_title": "Softly As A Summer Breeze",
+    "discogs_release_id": 7564998,
+    "discogs_url": "https://www.discogs.com/release/7564998-Jimmy-Smith-Softly-As-A-Summer-Breeze",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 9,
+    "discogs_want": 48
+  },
+  "grant green|street of dreams": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Grant Green",
+    "discogs_title": "Street Of Dreams",
+    "discogs_release_id": 3279824,
+    "discogs_url": "https://www.discogs.com/release/3279824-Grant-Green-Street-Of-Dreams",
+    "discogs_mint_price": 85.33,
+    "discogs_lowest": 85.33,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 204,
+    "discogs_want": 127
+  },
+  "sony|daniel pemberton project hail mary 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "orchard|the black crowes lions 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6534,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|carly rae jepsen day and night 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2787,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "orchard|autopsy mental funeral": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6713,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "matador direct|this is lorelei the singer in my band": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "this is lorelei the singer in my band lp exclusive|limited to 500 lime green": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3368,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|whitesnake whitesnake": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.693,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|whitesnake slip of the tongue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.693,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "various artists sending hearts to all my dearies a tribute to the smashing pumpkins 2lp exclusive|limited to 100 black in transparent blue w mustard": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|various artists sending hearts to all my dearies a tribute to the smashing pumpkins 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "whitesnake whitesnake lp exclusive|limited to 500 stone marble": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3931,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|saliva breaking through": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jimmy reed|jimmy reed at carnegie hall": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jimmy Reed",
+    "discogs_title": "Jimmy Reed At Carnegie Hall",
+    "discogs_release_id": 6566055,
+    "discogs_url": "https://www.discogs.com/release/6566055-Jimmy-Reed-Jimmy-Reed-At-Carnegie-Hall",
+    "discogs_mint_price": 5.0,
+    "discogs_lowest": 5.0,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 525,
+    "discogs_want": 81
+  },
+  "olivia rodrigo|sour ivc edition unnumbered": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the smashing pumpkins|sending hearts to all my dearies a tribute to the smashing pumpkins 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "starstruck|white and purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "michael patrick bell|viridi ambient ost": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jutes|chin up beautiful": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3757,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the thermals|under crushing rain": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.56,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "newsboys|magenta limited to 500 first time on": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.357,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "carly rae jepsen|day and night": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8044,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Balaam And The Angel",
+    "discogs_title": "Day And Night",
+    "discogs_release_id": 725860,
+    "discogs_url": "https://www.discogs.com/release/725860-Balaam-And-The-Angel-Day-And-Night",
+    "discogs_mint_price": 1.37,
+    "discogs_lowest": 1.37,
+    "discogs_num_for_sale": 96,
+    "discogs_have": 526,
+    "discogs_want": 36
+  },
+  "5 seconds of summer|everyone s a star alt cover limo": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "olivia rodrigo|unnumbered interscope records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2625,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sienna spiro|material lover 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4348,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "whitesnake|whitesnake": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Whitesnake",
+    "discogs_title": "Whitesnake",
+    "discogs_release_id": 8309080,
+    "discogs_url": "https://www.discogs.com/release/8309080-Whitesnake-Whitesnake",
+    "discogs_mint_price": 27.99,
+    "discogs_lowest": 27.99,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 873,
+    "discogs_want": 137
+  },
+  "jungle|sunshine blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4648,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the death of robin hood original motion picture soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "honestav|sweet american boy signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.259,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the veldt|afrodisiac double": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "domi and jd beck|who asked": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6523,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "domi and jd beck|who asked 2 transparent olive": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "royal blood|5": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.808,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Joan Baez",
+    "discogs_title": "5",
+    "discogs_release_id": 1640980,
+    "discogs_url": "https://www.discogs.com/release/1640980-Joan-Baez-5",
+    "discogs_mint_price": 1.19,
+    "discogs_lowest": 1.19,
+    "discogs_num_for_sale": 32,
+    "discogs_have": 1361,
+    "discogs_want": 105
+  },
+  "fiddlehead|baby i ll change": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3906,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kelly rowland|here i am udiscover music": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed amyl and the sniffers|giddy up big attraction": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Amyl and The Sniffers",
+    "discogs_title": "Giddy Up / Big Attraction",
+    "discogs_release_id": 37449978,
+    "discogs_url": "https://www.discogs.com/release/37449978-Amyl-and-The-Sniffers-Giddy-Up-Big-Attraction",
+    "discogs_mint_price": 23.96,
+    "discogs_lowest": 23.96,
+    "discogs_num_for_sale": 32,
+    "discogs_have": 229,
+    "discogs_want": 15
+  },
+  "kelly rowland|here i am glacier gray": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "maya ongaku|nothing space music": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "zo|011025 3": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1255,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "man woman chainsaw|cannonball": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7274,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "palace|lavender rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3407,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "julia holter|materia": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7792,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Prima Materia (3)",
+    "discogs_title": "Prima Materia",
+    "discogs_release_id": 7845115,
+    "discogs_url": "https://www.discogs.com/release/7845115-Prima-Materia-Prima-Materia",
+    "discogs_mint_price": 29.98,
+    "discogs_lowest": 29.98,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 211,
+    "discogs_want": 249
+  },
+  "kavinsky|reborn 2 left": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.364,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "this is lorelei|the singer in my band": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3503,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "thrasher signed lp|brandon flowers official store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2566,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|limited to 500 lime green": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3821,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "this is lorelei|the singer in my band bonus 7 uk link": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pre order this is lorelei|the singer in my band": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3823,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "syd barrett|clowns and jugglers": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5467,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "frankie rose|hila": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7792,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Erick Cosaque",
+    "discogs_title": "Man' Hilan",
+    "discogs_release_id": 2292604,
+    "discogs_url": "https://www.discogs.com/release/2292604-Erick-Cosaque-Man-Hilan",
+    "discogs_mint_price": 24.97,
+    "discogs_lowest": 24.97,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 52,
+    "discogs_want": 219
+  },
+  "mos def|the ecstatic at rh": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kelan philip cohran and legacy|african skies": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.989,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Kelan Phil Cohran* And Legacy (25)",
+    "discogs_title": "African Skies",
+    "discogs_release_id": 2602285,
+    "discogs_url": "https://www.discogs.com/release/2602285-Kelan-Phil-Cohran-And-Legacy-African-Skies",
+    "discogs_mint_price": 157.22,
+    "discogs_lowest": 157.22,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 654,
+    "discogs_want": 2136
+  },
+  "au|cotton on baby blue numbered": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3031,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "editors|surface echo and sound": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3508,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
