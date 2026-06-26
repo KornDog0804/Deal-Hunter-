@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: kept 8
+Amazon: found 46 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 15
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3758 entries
-[Discogs] Enriching 3048 vinyl records with Mint pricing...
-[Discogs] Cache saved (3758 entries)
+[Discogs] Loaded cache with 3807 entries
+[Discogs] Enriching 3055 vinyl records with Mint pricing...
+[Discogs] Cache saved (3807 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 426662 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 426506 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -940,7 +940,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 477 entries
-[UpcomingVinyl] Got 502359 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 502341 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -1008,11 +1008,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 8 items | pages: 7 | robot walls: 0
+  Amazon: 15 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 8
+Amazon: 15
 Brooklyn Vegan: 176
 Craft Recordings: 88
 Equal Vision: 88

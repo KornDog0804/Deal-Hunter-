@@ -14859,6 +14859,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "THINK INDIE",
+    "title": "CHANCE THE RAPPER 'STAR LINE' LP (Clear Green Vinyl)",
+    "price": 50.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/chance-the-rapper-star-line-lp-clear-green-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4502010-3611401.jpg?v=1782424364",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "AEC",
     "title": "FACE YOURSELF ‘FURY' EP (Black Ice w/ Orange + Yellow + Bone Splatter Vinyl)",
     "price": 25.99,
@@ -17135,11 +17148,24 @@
   },
   {
     "artist": "AEC",
-    "title": "JANE REMOVER 'CENSUS DESIGNATED' 2LP (Milky Clear Vinyl)",
-    "price": 43.99,
-    "source": "Brooklyn Vegan",
-    "link": "https://shop.brooklynvegan.com/products/jane-remover-census-designated-2lp-milky-clear-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4512625-3589182.jpg?v=1780501661",
+    "title": "FIVE FINGER DEATH PUNCH 'LEGACY' LP (Clear Vinyl)",
+    "price": 28.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/five-finger-death-punch-legacy-lp-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/260615-5FDPLegacyVinylColors-STANDARD.png?v=1782408681",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "FIVE FINGER DEATH PUNCH 'LEGACY' LP (Exclusive",
+    "title": "Limited to 300, Orange Vinyl)",
+    "price": 34.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/five-finger-death-punch-best-of-exclusive-limited-to-300-orange-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/260615---5FDP-Legacy-Vinyl-Colors---REVOLVER.png?v=1782417863",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -17373,7 +17399,7 @@
     "price": 37.99,
     "source": "Revolver",
     "link": "https://shop.revolvermag.com/products/underoath-define-the-great-line-2lp-brown-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4522980-3622067.jpg?v=1782133881",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/url_fe951b69-bb88-465c-835b-39884c9928c9.webp?v=1782426256",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -18928,32 +18954,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "SECRETLY DISTRO",
-    "title": "DAYDREAM PLUS 'SECOND LAST DAY OF SUMMER' LP (White Vinyl)",
-    "price": 22.99,
-    "source": "Revolver",
-    "link": "https://shop.revolvermag.com/products/daydream-plus-second-last-day-of-summer-lp-white-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/18556.png?v=1779900325",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "A PERFECT CIRCLE ‘STARLESS' 7\" (Exclusive",
-    "title": "Various Color Vinyl)",
-    "price": 15.99,
-    "source": "Revolver",
-    "link": "https://shop.revolvermag.com/products/a-perfect-circle-starless-7-exclusive-various-color-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/APC_7inch_1c05bcc9-66b9-44f6-bc92-1e8c3dfff7ba.png?v=1779827875",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Everyone For Ten Minutes",
     "title": "Indie Exclusive White LP (Opened and Signed)",
     "price": 41.99,
@@ -19294,7 +19294,7 @@
   {
     "artist": "Tyler Childers",
     "title": "Live From Dinosaur World 7\" (RSD 2026)",
-    "price": 11.99,
+    "price": 9.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/live-from-dinosaur-world-7-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2834248.jpg?v=1776256226",
@@ -19463,7 +19463,7 @@
   {
     "artist": "The Doors",
     "title": "Strange Days 1967: A Work In Progress Part 2 LP (RSD 2026)",
-    "price": 24.99,
+    "price": 21.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/strange-days-1967-a-work-in-progress-part-2-lp-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2834057.jpg?v=1776256266",
@@ -20126,7 +20126,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Heart of Stone 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/heart-of-stone-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835337.jpg?v=1776256206",
@@ -20139,7 +20139,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Play With Fire 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/play-with-fire-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835336.jpg?v=1776256250",
@@ -20152,7 +20152,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Have You Seen Your Mother, Baby, Standing in the Shadow 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/have-you-seen-your-mother-baby-standing-in-the-shadow-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835335.jpg?v=1776256206",
@@ -20165,7 +20165,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Mother's Little Helper 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/mothers-little-helper-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835333.jpg?v=1776256238",
@@ -20178,7 +20178,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Get Off of My Cloud 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/get-off-of-my-cloud-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835331.jpg?v=1776256199",
@@ -20191,7 +20191,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Honky Tonk Women 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Comics",
     "link": "https://www.newburycomics.com/products/honky-tonk-women-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835319.jpg?v=1776256211",
@@ -21205,7 +21205,7 @@
   {
     "artist": "Tyler Childers",
     "title": "Live From Dinosaur World 7\" (RSD 2026)",
-    "price": 11.99,
+    "price": 9.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/live-from-dinosaur-world-7-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2834248.jpg?v=1776256226",
@@ -21374,7 +21374,7 @@
   {
     "artist": "The Doors",
     "title": "Strange Days 1967: A Work In Progress Part 2 LP (RSD 2026)",
-    "price": 24.99,
+    "price": 21.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/strange-days-1967-a-work-in-progress-part-2-lp-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2834057.jpg?v=1776256266",
@@ -22037,7 +22037,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Heart of Stone 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/heart-of-stone-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835337.jpg?v=1776256206",
@@ -22050,7 +22050,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Play With Fire 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/play-with-fire-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835336.jpg?v=1776256250",
@@ -22063,7 +22063,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Have You Seen Your Mother, Baby, Standing in the Shadow 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/have-you-seen-your-mother-baby-standing-in-the-shadow-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835335.jpg?v=1776256206",
@@ -22076,7 +22076,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Mother's Little Helper 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/mothers-little-helper-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835333.jpg?v=1776256238",
@@ -22089,7 +22089,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Get Off of My Cloud 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/get-off-of-my-cloud-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835331.jpg?v=1776256199",
@@ -22102,7 +22102,7 @@
   {
     "artist": "The Rolling Stones",
     "title": "Honky Tonk Women 3\" (RSD 2026)",
-    "price": 11.99,
+    "price": 6.99,
     "source": "Newbury Preorders",
     "link": "https://www.newburycomics.com/products/honky-tonk-women-3-rsd-2026",
     "image": "https://cdn.shopify.com/s/files/1/0882/5118/files/2835319.jpg?v=1776256211",
