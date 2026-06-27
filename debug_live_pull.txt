@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 139
+Revolver: kept 140
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -105,8 +105,6 @@ Craft Recordings: kept 91
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 133
@@ -401,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 46 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -430,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3807 entries
-[Discogs] Enriching 3043 vinyl records with Mint pricing...
-[Discogs] Cache saved (3807 entries)
+[Discogs] Loaded cache with 3890 entries
+[Discogs] Enriching 3056 vinyl records with Mint pricing...
+[Discogs] Cache saved (3890 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -449,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 425643 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 425493 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -942,7 +939,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zeta ReticulaThe Human Scientific Vessel —  (Eudemonia)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 476 entries
-[UpcomingVinyl] Got 526431 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 446786 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -957,7 +954,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3597 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3040 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -980,7 +977,7 @@ SOURCE STATUS SUMMARY
   Rise Records: 71 deals
   Rise All: 71 deals
   Brooklyn Vegan: 174 deals
-  Revolver: 139 deals
+  Revolver: 140 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 91 deals
@@ -1010,11 +1007,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 13
 Brooklyn Vegan: 174
 Craft Recordings: 91
 Equal Vision: 89
@@ -1028,7 +1025,7 @@ Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
 r/VinylReleases: 44
-Revolver: 139
+Revolver: 140
 Rhino: 114
 Rise All: 71
 Rise Records: 71
