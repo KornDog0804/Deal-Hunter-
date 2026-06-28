@@ -43348,5 +43348,92 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "tom hengst|zwei zimmer": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8001,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Timi Hendrix",
+    "discogs_title": "Zwei Zimmer, Küche, Bong",
+    "discogs_release_id": 7908319,
+    "discogs_url": "https://www.discogs.com/release/7908319-Timi-Hendrix-Zwei-Zimmer-K%C3%BCche-Bong",
+    "discogs_mint_price": 145.33,
+    "discogs_lowest": 145.33,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 129,
+    "discogs_want": 111
+  },
+  "juju|44 me": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6632,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chelsea jordan|better late than not at all ep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2989,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the hue of two|doctor doctor this city s sick": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2505,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aly and aj|signed": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7653,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Happl",
+    "discogs_title": "Signed",
+    "discogs_release_id": 5477509,
+    "discogs_url": "https://www.discogs.com/release/5477509-Happl-Signed",
+    "discogs_mint_price": 112.3,
+    "discogs_lowest": 112.3,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 42,
+    "discogs_want": 112
+  },
+  "unknown artist|byard lancaster funny funky rib crib 10 july 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "carolina ross|coleccionando corazones 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Carolina Ross (2)",
+    "discogs_title": "Coleccionando Corazones",
+    "discogs_release_id": 37555920,
+    "discogs_url": "https://www.discogs.com/release/37555920-Carolina-Ross-Coleccionando-Corazones",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 1,
+    "discogs_want": 0
+  },
+  "john williams jaws music from the original motion picture 50th anniversary|2025 mix human blood red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.205,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
