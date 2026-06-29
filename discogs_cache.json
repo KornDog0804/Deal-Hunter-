@@ -43435,5 +43435,64 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "olivia rodrigo|guts deluxe 2 marbled version": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "beabadoobee|signed pylon jb hi fi au translucent light blue with": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "venom|august 7 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7267,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "robert earl keen|ready for confetti": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Robert Earl Keen",
+    "discogs_title": "Ready For Confetti",
+    "discogs_release_id": 13434084,
+    "discogs_url": "https://www.discogs.com/release/13434084-Robert-Earl-Keen-Ready-For-Confetti",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 2,
+    "discogs_want": 15
+  },
+  "unknown artist|night ranger best of night ranger": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3584,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|cece winans believe for it purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7024,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
