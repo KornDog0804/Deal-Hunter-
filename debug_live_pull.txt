@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 2
+Brooklyn Vegan: kept 5
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 1
+Revolver: kept 4
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -105,10 +105,9 @@ Craft Recordings: kept 91
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 135
+MNRK Heavy: kept 136
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -129,7 +128,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 116
+Interscope Records: kept 115
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -222,7 +221,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 74
+Pirates Press Records: kept 73
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -400,16 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 44 candidate vinyl items
+Amazon: found 34 candidate vinyl items
+Amazon: kept 15
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -436,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 3984 entries
-[Discogs] Enriching 2691 vinyl records with Mint pricing...
+[Discogs] Enriching 2710 vinyl records with Mint pricing...
 [Discogs] Cache saved (3984 entries)
 [Discogs] Enrichment complete!
 
@@ -454,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 283349 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 283481 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -780,7 +772,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zsela & Daniel Aged & Taul Katz4 Dreams —  (Universal UK)
 [UpcomingVinyl] FOUND: ZuIgneo —  (Subsound)
 [UpcomingVinyl] li>h2 approach found 309 entries
-[UpcomingVinyl] Got 488736 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 488184 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -804,7 +796,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 301
 [UpcomingVinyl] 301 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2693 buy signals saved to buy_signals.json
+[BuySignals] 2697 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -817,15 +809,15 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 99 deals
   Rise Records: 71 deals
   Rise All: 71 deals
-  Brooklyn Vegan: 2 deals
-  Revolver: 1 deals
+  Brooklyn Vegan: 5 deals
+  Revolver: 4 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 91 deals
-  MNRK Heavy: 135 deals
+  MNRK Heavy: 136 deals
   Equal Vision: 89 deals
   Rhino: 117 deals
-  Interscope Records: 116 deals
+  Interscope Records: 115 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 127 deals
   RMFN All: 127 deals
@@ -835,7 +827,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 79 deals
   Hopeless Records: 56 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 74 deals
+  Pirates Press Records: 73 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 0 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -848,25 +840,25 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 5 | robot walls: 0
+  Amazon: 15 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
-Brooklyn Vegan: 2
+Amazon: 15
+Brooklyn Vegan: 5
 Craft Recordings: 91
 Equal Vision: 89
 Fearless Records: 99
 Fearless Vinyl: 99
 Hopeless Records: 56
-Interscope Records: 113
-MNRK Heavy: 134
+Interscope Records: 112
+MNRK Heavy: 135
 Newbury Comics: 147
 Newbury Preorders: 147
-Pirates Press Records: 59
+Pirates Press Records: 58
 Pure Noise Records: 79
 r/VinylReleases: 48
-Revolver: 1
+Revolver: 4
 Rhino: 115
 Rise All: 71
 Rise Records: 71
