@@ -69,14 +69,20 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 176
+Brooklyn Vegan: kept 0
+Brooklyn Vegan: Shopify JSON empty, trying HTML fallback
+Brooklyn Vegan: found 0 HTML links
+Brooklyn Vegan: kept 0
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 152
+Revolver: kept 0
+Revolver: Shopify JSON empty, trying HTML fallback
+Revolver: found 0 HTML links
+Revolver: kept 0
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -121,14 +127,14 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 116
+Rhino: kept 117
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 123
+Interscope Records: kept 116
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -399,8 +405,14 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
+  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
 Amazon: No vinyl products found, adding catalog portal fallback
 Amazon: kept 1
 
@@ -428,9 +440,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3929 entries
-[Discogs] Enriching 3019 vinyl records with Mint pricing...
-[Discogs] Cache saved (3929 entries)
+[Discogs] Loaded cache with 3984 entries
+[Discogs] Enriching 2685 vinyl records with Mint pricing...
+[Discogs] Cache saved (3984 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -447,7 +459,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 279134 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 279132 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -603,7 +615,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Lunatic SoulTransition II (Olive) —  (Kscope Import)
 [UpcomingVinyl] FOUND: MadonnaConfessions II —  (Warner Records)
 [UpcomingVinyl] FOUND: MadonnaConfessions II (Amazon Exclusive) —  (Warner Records)
-[UpcomingVinyl] FOUND: MadonnaCONFESSIONS II (Expanded 2Lp) —  (Warner Records)
+[UpcomingVinyl] FOUND: MadonnaCONFESSIONS II (Expanded) —  (Warner Records)
 [UpcomingVinyl] FOUND: Makeshift Art BarMarionette —  (Universal UK)
 [UpcomingVinyl] FOUND: Mano Le Tough & DJ Koze & RemcordMaeve035 —  (Maeve)
 [UpcomingVinyl] FOUND: MarchelloDestiny (Orange) —  (High Roller Records)
@@ -768,7 +780,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zsela & Daniel Aged & Taul Katz4 Dreams —  (Universal UK)
 [UpcomingVinyl] FOUND: ZuIgneo —  (Subsound)
 [UpcomingVinyl] li>h2 approach found 304 entries
-[UpcomingVinyl] Got 470376 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 469847 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -783,7 +795,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3201 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3200 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -792,7 +804,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 295
 [UpcomingVinyl] 295 whitelist matches saved to upcoming_releases.json
-[BuySignals] 3024 buy signals saved to buy_signals.json
+[BuySignals] 2689 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -805,15 +817,15 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 99 deals
   Rise Records: 71 deals
   Rise All: 71 deals
-  Brooklyn Vegan: 176 deals
-  Revolver: 152 deals
+  Brooklyn Vegan: 0 deals
+  Revolver: 0 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 91 deals
   MNRK Heavy: 134 deals
   Equal Vision: 89 deals
-  Rhino: 116 deals
-  Interscope Records: 123 deals
+  Rhino: 117 deals
+  Interscope Records: 116 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 127 deals
   RMFN All: 127 deals
@@ -836,26 +848,24 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 1 items | pages: 5 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 176
 Craft Recordings: 91
 Equal Vision: 89
 Fearless Records: 99
 Fearless Vinyl: 99
 Hopeless Records: 56
-Interscope Records: 120
+Interscope Records: 113
 MNRK Heavy: 134
 Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 59
 Pure Noise Records: 76
 r/VinylReleases: 44
-Revolver: 152
-Rhino: 114
+Rhino: 115
 Rise All: 71
 Rise Records: 71
 RMFN All: 127
