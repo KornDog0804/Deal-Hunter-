@@ -128,7 +128,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 115
+Interscope Records: kept 117
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 44 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: kept 15
+Amazon: found 45 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 14
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 3984 entries
-[Discogs] Enriching 2710 vinyl records with Mint pricing...
-[Discogs] Cache saved (3984 entries)
+[Discogs] Loaded cache with 4027 entries
+[Discogs] Enriching 2712 vinyl records with Mint pricing...
+[Discogs] Cache saved (4027 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 283481 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 283499 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -772,7 +772,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zsela & Daniel Aged & Taul Katz4 Dreams —  (Universal UK)
 [UpcomingVinyl] FOUND: ZuIgneo —  (Subsound)
 [UpcomingVinyl] li>h2 approach found 309 entries
-[UpcomingVinyl] Got 488184 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 488316 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -796,7 +796,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 301
 [UpcomingVinyl] 301 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2697 buy signals saved to buy_signals.json
+[BuySignals] 2698 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -817,7 +817,7 @@ SOURCE STATUS SUMMARY
   MNRK Heavy: 136 deals
   Equal Vision: 89 deals
   Rhino: 117 deals
-  Interscope Records: 115 deals
+  Interscope Records: 117 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 127 deals
   RMFN All: 127 deals
@@ -840,24 +840,24 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 15 items | pages: 7 | robot walls: 0
+  Amazon: 14 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 15
+Amazon: 14
 Brooklyn Vegan: 5
 Craft Recordings: 91
 Equal Vision: 89
 Fearless Records: 99
 Fearless Vinyl: 99
 Hopeless Records: 56
-Interscope Records: 112
+Interscope Records: 115
 MNRK Heavy: 135
 Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 58
 Pure Noise Records: 79
-r/VinylReleases: 48
+r/VinylReleases: 47
 Revolver: 4
 Rhino: 115
 Rise All: 71
