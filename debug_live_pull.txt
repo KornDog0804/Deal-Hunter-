@@ -28,14 +28,14 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 115
+uDiscover Music: kept 118
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 99
+Fearless Records: kept 98
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 99
+Fearless Vinyl: kept 98
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 4
+Revolver: kept 5
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -121,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 250 products
 Rhino: 250 products via Shopify JSON
-Rhino: kept 117
+Rhino: kept 120
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -142,7 +142,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 127
+Rock Metal Fan Nation: kept 131
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,7 +152,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 127
+RMFN All: kept 131
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 45 candidate vinyl items
-Amazon: found 31 candidate vinyl items
-Amazon: kept 14
+Amazon: found 44 candidate vinyl items
+Amazon: found 36 candidate vinyl items
+Amazon: kept 19
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 4027 entries
-[Discogs] Enriching 2712 vinyl records with Mint pricing...
+[Discogs] Enriching 2730 vinyl records with Mint pricing...
 [Discogs] Cache saved (4027 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 283499 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 283481 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -796,7 +796,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 301
 [UpcomingVinyl] 301 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2698 buy signals saved to buy_signals.json
+[BuySignals] 2711 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -804,23 +804,23 @@ SOURCE STATUS SUMMARY
   Rollin Records: 231 deals
   Rollin Preorders: 231 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 115 deals
-  Fearless Records: 99 deals
-  Fearless Vinyl: 99 deals
+  uDiscover Music: 118 deals
+  Fearless Records: 98 deals
+  Fearless Vinyl: 98 deals
   Rise Records: 71 deals
   Rise All: 71 deals
   Brooklyn Vegan: 5 deals
-  Revolver: 4 deals
+  Revolver: 5 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 91 deals
   MNRK Heavy: 136 deals
   Equal Vision: 89 deals
-  Rhino: 117 deals
+  Rhino: 120 deals
   Interscope Records: 117 deals
   SharpTone Records: 91 deals
-  Rock Metal Fan Nation: 127 deals
-  RMFN All: 127 deals
+  Rock Metal Fan Nation: 131 deals
+  RMFN All: 131 deals
   Sumerian Records: 70 deals
   Solid State Records: 54 deals
   Solid State Vinyl: 54 deals
@@ -840,16 +840,16 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 14 items | pages: 7 | robot walls: 0
+  Amazon: 19 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 14
+Amazon: 19
 Brooklyn Vegan: 5
 Craft Recordings: 91
 Equal Vision: 89
-Fearless Records: 99
-Fearless Vinyl: 99
+Fearless Records: 98
+Fearless Vinyl: 98
 Hopeless Records: 56
 Interscope Records: 115
 MNRK Heavy: 135
@@ -857,13 +857,13 @@ Newbury Comics: 147
 Newbury Preorders: 147
 Pirates Press Records: 58
 Pure Noise Records: 79
-r/VinylReleases: 47
-Revolver: 4
-Rhino: 115
+r/VinylReleases: 45
+Revolver: 5
+Rhino: 118
 Rise All: 71
 Rise Records: 71
-RMFN All: 127
-Rock Metal Fan Nation: 127
+RMFN All: 131
+Rock Metal Fan Nation: 131
 Rollin Preorders: 231
 Rollin Records: 231
 SharpTone Records: 90
@@ -872,5 +872,5 @@ Solid State Vinyl: 49
 Sound of Vinyl: 228
 Sumerian Records: 68
 Target: 1
-uDiscover Music: 115
+uDiscover Music: 118
 Walmart: 1
