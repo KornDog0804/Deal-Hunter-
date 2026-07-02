@@ -715,7 +715,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 08/14** Phoebe Bridgers",
+    "artist": "** PRE-ORDER 08/14 ** Phoebe Bridgers",
     "title": "Lost Weekend (Rogue Planet Vinyl)",
     "price": 35.99,
     "source": "Rollin Records",
@@ -2223,7 +2223,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 07/17** Gracie Abrams",
+    "artist": "** PRE-ORDER 07/17 ** Gracie Abrams",
     "title": "Daughter From Hell (Cobalt Vinyl)",
     "price": 40.99,
     "source": "Rollin Records",
@@ -2236,7 +2236,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 07/24** Charli XCX",
+    "artist": "** PRE-ORDER 07/24 ** Charli XCX",
     "title": "Music, Fashion, Film (Indie Exclusive Smoke Vinyl)",
     "price": 30.99,
     "source": "Rollin Records",
@@ -3718,7 +3718,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 08/14** Phoebe Bridgers",
+    "artist": "** PRE-ORDER 08/14 ** Phoebe Bridgers",
     "title": "Lost Weekend (Rogue Planet Vinyl)",
     "price": 35.99,
     "source": "Rollin Preorders",
@@ -5226,7 +5226,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 07/17** Gracie Abrams",
+    "artist": "** PRE-ORDER 07/17 ** Gracie Abrams",
     "title": "Daughter From Hell (Cobalt Vinyl)",
     "price": 40.99,
     "source": "Rollin Preorders",
@@ -5239,7 +5239,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "**PRE-ORDER 07/24** Charli XCX",
+    "artist": "** PRE-ORDER 07/24 ** Charli XCX",
     "title": "Music, Fashion, Film (Indie Exclusive Smoke Vinyl)",
     "price": 30.99,
     "source": "Rollin Preorders",
@@ -14898,6 +14898,84 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Universal",
+    "title": "MOTORHEAD 'THE WORLD IS YOURS' LP",
+    "price": 28.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/motorhead-the-world-is-yours-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/1-Motorhead_TheWorldIsYours_4099964250633_Vinilo.webp?v=1783021523",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Universal",
+    "title": "MOTORHEAD 'AFTERSHOCK' LP",
+    "price": 28.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/motorhead-aftershock-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/1-Motorhead_Aftershock_4099964250626_vinilo.webp?v=1783021521",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AMS",
+    "title": "THE CRAMPS 'ULTRA TWIST' LP (Import)",
+    "price": 35.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/the-cramps-ultra-twist-lp-import",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4394699-3310981.jpg?v=1783018220",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AMS",
+    "title": "SWERVEDRIVER 'THINK I'M GONNA FEEL BETTER/REFLECTIONS ' 12\" SINGLE (Clear Vinyl)",
+    "price": 17.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/swervedriver-think-im-gonna-feel-better-reflections-12-single-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/0842803018819.jpg?v=1783017383",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AMS",
+    "title": "SWERVEDRIVER 'I WASN'T BORN TO LOSE YOU' 2LP (Purple Swirl Vinyl)",
+    "price": 41.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/swervedriver-i-wasnt-born-to-lose-you-2lp-purple-swirl-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/2839750.jpg?v=1783016657",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AEC",
+    "title": "NOFX 'THE DECLINE' EP (Yellow Vinyl)",
+    "price": 26.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/nofx-the-decline-ep-yellow-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4525413-3631255.jpg?v=1783014060",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "ORCHARD",
     "title": "THE MARS VOLTA 'LUCRO SUCIO; UNFINISHED BUSINESS' 2LP (Red Vinyl)",
     "price": 36.99,
@@ -14956,6 +15034,71 @@
     "source": "Brooklyn Vegan",
     "link": "https://shop.brooklynvegan.com/products/dinosaur-jr-sweep-it-into-space-lp",
     "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/3940364-2674247.jpg?v=1782915943",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Universal",
+    "title": "MOTORHEAD 'THE WORLD IS YOURS' LP",
+    "price": 28.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/motorhead-the-world-is-yours-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/1-Motorhead_TheWorldIsYours_4099964250633_Vinilo.webp?v=1783021333",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Universal",
+    "title": "MOTORHEAD 'AFTERSHOCK' LP",
+    "price": 28.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/motorhead-aftershock-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/1-Motorhead_Aftershock_4099964250626_vinilo.webp?v=1783021093",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AEC",
+    "title": "CINDERELLA 'HEARTBREAK STATION' LP (Import)",
+    "price": 40.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/cinderella-heartbreak-station-lp-import",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4510575-3574593.jpg?v=1783020270",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AMS",
+    "title": "THE CRAMPS 'ULTRA TWIST' LP (Import)",
+    "price": 35.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/the-cramps-ultra-twist-lp-import",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4394699-3310981.jpg?v=1783017931",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "AEC",
+    "title": "THE SWORD 'GODS OF THE EARTH' LP (15th Anniversary Edition)",
+    "price": 29.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/the-sword-gods-of-the-earth-lp-15th-anniversary-edition",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4248385-3075441.jpg?v=1783015921",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -27144,6 +27287,32 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "HONEY REVENGE",
+    "title": "RETROVISION (Limited 1 of 400, Cotton Candy Splatter Vinyl)",
+    "price": 25.98,
+    "source": "Rock Metal Fan Nation",
+    "link": "https://rmfnvinyl.com/products/honey-revenge-retrovision-limited-1-of-400-cotton-candy-splatter-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/honey_revenge_-_retrovision_limited_1_of_400_edition_cotton_candy_splatter_vinyl.webp?v=1783010755",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "CORROSION OF CONFORMITY",
+    "title": "IN THE ARMS OF GOD (Limited 1 of 300 Edition, Double Pearlescent Copper Swirl Vinyl) (2LP)",
+    "price": 35.98,
+    "source": "Rock Metal Fan Nation",
+    "link": "https://rmfnvinyl.com/products/corrosion-of-conformity-in-the-arms-of-god-limited-1-of-300-edition-double-pearlescent-copper-swirl-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/corrosion_of_conformity_-_in_the_arms_of_god_limited_edition_pearlescent_copper_swirl_vinyl.webp?v=1783008271",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "ICE NINE KILLS",
     "title": "THE SILVER SCREAM (9-BIT VERSION) (Limited 1 of 500 Edition, Double Ink & Paint Vinyl) (2LP)",
     "price": 31.98,
@@ -27341,7 +27510,7 @@
   {
     "artist": "DROPKICK MURPHYS",
     "title": "NEW ENGLAND FOREVER (Indie Exclusive Limited Edition, Blue Vinyl)",
-    "price": 31.98,
+    "price": 27.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/dropkick-murphys-new-england-forever-indie-exclusive-limited-edition-blue-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/dropkick_murphys_-_new_england_forever_indie_exclusive_limited_edition_blue_vinyl.jpg?v=1782831306",
@@ -27367,7 +27536,7 @@
   {
     "artist": "FALLING IN REVERSE",
     "title": "FASHIONABLY LATE (Reissue, Black Vinyl)",
-    "price": 23.98,
+    "price": 22.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/falling-in-reverse-fashionably-late-reissue-black-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/falling_in_reverse_-_fashionably_late_reissue_black_vinyl.webp?v=1782829290",
@@ -27510,7 +27679,7 @@
   {
     "artist": "GEESE",
     "title": "3D COUNTRY (Limited Edition, Crystal Clear Vinyl)",
-    "price": 28.98,
+    "price": 25.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/geese-3d-country-limited-edition-crystal-clear-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/geese_-_3d_country_limited_edition_vinyl.jpg?v=1782156130",
@@ -27575,7 +27744,7 @@
   {
     "artist": "MATCHBOX TWENTY",
     "title": "YOURSELF OR SOMEONE LIKE YOU (20th Anniversary Limited Edition, Transparent Red Vinyl)",
-    "price": 29.98,
+    "price": 24.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/matchbox-twenty-yourself-or-someone-like-you-20th-anniversary-limited-edition-transparent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/matchbox_twenty_-_yourself_or_someone_like_you_20th_anniversary_red_translucent_vinyl.webp?v=1782151325",
@@ -27614,7 +27783,7 @@
   {
     "artist": "KITTIE",
     "title": "ORACLE (Transparent Red Vinyl)",
-    "price": 26.98,
+    "price": 23.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/kittie-oracle-transparent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/kittie_-_oracle_transparent_red_vinyl.jpg?v=1782144144",
@@ -28821,12 +28990,12 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "TWENTY ONE PILOTS",
-    "title": "BLURRYFACE (Limited Edition, Double Red & Black Ice Marble w/ Burgundy Splatter Vinyl) (2LP) [Import]",
-    "price": 66.98,
-    "source": "Rock Metal Fan Nation",
-    "link": "https://rmfnvinyl.com/products/twenty-one-pilots-blurryface-limited-edition-double-red-black-ice-marble-w-burgundy-splatter-vinyl-2lp-import",
-    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/twenty_one_pilots_-_blurryface_red___black_ice_marble_with_burgundy_splatter_vinyl_2lp.jpg?v=1778093246",
+    "artist": "HONEY REVENGE",
+    "title": "RETROVISION (Limited 1 of 400, Cotton Candy Splatter Vinyl)",
+    "price": 25.98,
+    "source": "RMFN All",
+    "link": "https://rmfnvinyl.com/products/honey-revenge-retrovision-limited-1-of-400-cotton-candy-splatter-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/honey_revenge_-_retrovision_limited_1_of_400_edition_cotton_candy_splatter_vinyl.webp?v=1783010755",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -28834,12 +29003,12 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "THE ROLLING STONES",
-    "title": "FOREIGN TONGUES (Indie Exclusive, Double 180 Gram Green Vinyl) (2LP) [PREORDER]",
-    "price": 52.98,
-    "source": "Rock Metal Fan Nation",
-    "link": "https://rmfnvinyl.com/products/the-rolling-stones-foreign-tongues-indie-exclusive-double-180-gram-green-vinyl-2lp-preorder",
-    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/the_rolling_stones_-_foreign_tongues_indie_exclusive_green_vinyl_2lp.webp?v=1778081431",
+    "artist": "CORROSION OF CONFORMITY",
+    "title": "IN THE ARMS OF GOD (Limited 1 of 300 Edition, Double Pearlescent Copper Swirl Vinyl) (2LP)",
+    "price": 35.98,
+    "source": "RMFN All",
+    "link": "https://rmfnvinyl.com/products/corrosion-of-conformity-in-the-arms-of-god-limited-1-of-300-edition-double-pearlescent-copper-swirl-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/corrosion_of_conformity_-_in_the_arms_of_god_limited_edition_pearlescent_copper_swirl_vinyl.webp?v=1783008271",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -29044,7 +29213,7 @@
   {
     "artist": "DROPKICK MURPHYS",
     "title": "NEW ENGLAND FOREVER (Indie Exclusive Limited Edition, Blue Vinyl)",
-    "price": 31.98,
+    "price": 27.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/dropkick-murphys-new-england-forever-indie-exclusive-limited-edition-blue-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/dropkick_murphys_-_new_england_forever_indie_exclusive_limited_edition_blue_vinyl.jpg?v=1782831306",
@@ -29070,7 +29239,7 @@
   {
     "artist": "FALLING IN REVERSE",
     "title": "FASHIONABLY LATE (Reissue, Black Vinyl)",
-    "price": 23.98,
+    "price": 22.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/falling-in-reverse-fashionably-late-reissue-black-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/falling_in_reverse_-_fashionably_late_reissue_black_vinyl.webp?v=1782829290",
@@ -29213,7 +29382,7 @@
   {
     "artist": "GEESE",
     "title": "3D COUNTRY (Limited Edition, Crystal Clear Vinyl)",
-    "price": 28.98,
+    "price": 25.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/geese-3d-country-limited-edition-crystal-clear-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/geese_-_3d_country_limited_edition_vinyl.jpg?v=1782156130",
@@ -29278,7 +29447,7 @@
   {
     "artist": "MATCHBOX TWENTY",
     "title": "YOURSELF OR SOMEONE LIKE YOU (20th Anniversary Limited Edition, Transparent Red Vinyl)",
-    "price": 29.98,
+    "price": 24.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/matchbox-twenty-yourself-or-someone-like-you-20th-anniversary-limited-edition-transparent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/matchbox_twenty_-_yourself_or_someone_like_you_20th_anniversary_red_translucent_vinyl.webp?v=1782151325",
@@ -29317,7 +29486,7 @@
   {
     "artist": "KITTIE",
     "title": "ORACLE (Transparent Red Vinyl)",
-    "price": 26.98,
+    "price": 23.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/kittie-oracle-transparent-red-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/kittie_-_oracle_transparent_red_vinyl.jpg?v=1782144144",
@@ -30517,32 +30686,6 @@
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/billy-idol-dont-stop-ep-limited-edition-lemon-jelly-colored-vinyl",
     "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/billy_idol_-_dont_stop_ep_limited_edition_lemon_jelly_vinyl.webp?v=1778098497",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "TWENTY ONE PILOTS",
-    "title": "BLURRYFACE (Limited Edition, Double Red & Black Ice Marble w/ Burgundy Splatter Vinyl) (2LP) [Import]",
-    "price": 66.98,
-    "source": "RMFN All",
-    "link": "https://rmfnvinyl.com/products/twenty-one-pilots-blurryface-limited-edition-double-red-black-ice-marble-w-burgundy-splatter-vinyl-2lp-import",
-    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/twenty_one_pilots_-_blurryface_red___black_ice_marble_with_burgundy_splatter_vinyl_2lp.jpg?v=1778093246",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "THE ROLLING STONES",
-    "title": "FOREIGN TONGUES (Indie Exclusive, Double 180 Gram Green Vinyl) (2LP) [PREORDER]",
-    "price": 52.98,
-    "source": "RMFN All",
-    "link": "https://rmfnvinyl.com/products/the-rolling-stones-foreign-tongues-indie-exclusive-double-180-gram-green-vinyl-2lp-preorder",
-    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/the_rolling_stones_-_foreign_tongues_indie_exclusive_green_vinyl_2lp.webp?v=1778081431",
     "score": 0,
     "lane": "PASS",
     "discogs_mint_price": 0,
@@ -35222,6 +35365,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
