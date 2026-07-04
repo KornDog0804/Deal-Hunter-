@@ -105,6 +105,8 @@ Craft Recordings: kept 91
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 136
@@ -142,7 +144,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 131
+Rock Metal Fan Nation: kept 133
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,7 +154,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 131
+RMFN All: kept 133
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -399,11 +401,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+Amazon: found 37 candidate vinyl items
+Amazon: found 33 candidate vinyl items
 Amazon: kept 10
 
 ==================================================
@@ -431,7 +430,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 4107 entries
-[Discogs] Enriching 2739 vinyl records with Mint pricing...
+[Discogs] Enriching 2743 vinyl records with Mint pricing...
 [Discogs] Cache saved (4107 entries)
 [Discogs] Enrichment complete!
 
@@ -449,7 +448,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 270412 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 270280 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -760,7 +759,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zsela & Daniel Aged & Taul Katz4 Dreams —  (Universal UK)
 [UpcomingVinyl] FOUND: ZuIgneo —  (Subsound)
 [UpcomingVinyl] li>h2 approach found 294 entries
-[UpcomingVinyl] Got 453122 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 453098 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -784,7 +783,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 287
 [UpcomingVinyl] 287 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2730 buy signals saved to buy_signals.json
+[BuySignals] 2734 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -807,8 +806,8 @@ SOURCE STATUS SUMMARY
   Rhino: 120 deals
   Interscope Records: 117 deals
   SharpTone Records: 91 deals
-  Rock Metal Fan Nation: 131 deals
-  RMFN All: 131 deals
+  Rock Metal Fan Nation: 133 deals
+  RMFN All: 133 deals
   Sumerian Records: 70 deals
   Solid State Records: 54 deals
   Solid State Vinyl: 54 deals
@@ -828,7 +827,7 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 6 | robot walls: 0
+  Amazon: 10 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
@@ -850,8 +849,8 @@ Revolver: 14
 Rhino: 118
 Rise All: 71
 Rise Records: 71
-RMFN All: 131
-Rock Metal Fan Nation: 131
+RMFN All: 133
+Rock Metal Fan Nation: 133
 Rollin Preorders: 231
 Rollin Records: 231
 SharpTone Records: 90
