@@ -35516,6 +35516,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "Target Catalog",
     "title": "Target Vinyl Records",
     "price": 0.01,
