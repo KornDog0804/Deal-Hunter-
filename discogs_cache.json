@@ -45712,5 +45712,73 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "hollywood vampires|at montreux jazz festival 2018": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7134,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "giovanni rotondo|the stable trotters sundelion orange variant": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Giovanni Rotondo",
+    "discogs_title": "The Stable Trotters",
+    "discogs_release_id": 32528046,
+    "discogs_url": "https://www.discogs.com/release/32528046-Giovanni-Rotondo-The-Stable-Trotters",
+    "discogs_mint_price": 150.0,
+    "discogs_lowest": 150.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 8,
+    "discogs_want": 4
+  },
+  "giovanni rotondo|the stable trotters ultrahand glow in the dark hand poured variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|pig merciless of 200 copies armalyte industries": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|snow patrol eyes open 20th anniversary signed assai obi edition cream colour 2026": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|hello fascination smartpunk": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the academy is|almost there smartpunk signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
