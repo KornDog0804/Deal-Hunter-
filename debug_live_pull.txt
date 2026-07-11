@@ -105,9 +105,13 @@ Craft Recordings: kept 92
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
+  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  ✗ https://mnrkheavy.com/products.json?limit=250 -> HTTP Error 500: Internal Server Error
+  -> retry 1/2 for https://mnrkheavy.com/collections/all/products.json?limit=250 | HTTP Error 500: Internal Server Error
+  ✓ https://mnrkheavy.com/collections/all/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 136
+MNRK Heavy: kept 114
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -428,9 +432,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 4249 entries
-[Discogs] Enriching 2757 vinyl records with Mint pricing...
-[Discogs] Cache saved (4249 entries)
+[Discogs] Loaded cache with 4315 entries
+[Discogs] Enriching 2735 vinyl records with Mint pricing...
+[Discogs] Cache saved (4315 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -442,12 +446,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 41 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 289330 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 289354 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -779,7 +783,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zodiac MindwarpCarnival Of Souls (Purple) —  (Creation Youth)
 [UpcomingVinyl] FOUND: Will WoodIn Case I Make It —  (Hostile City)
 [UpcomingVinyl] li>h2 approach found 315 entries
-[UpcomingVinyl] Got 485418 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 432506 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -794,7 +798,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3309 li tags
+[UpcomingVinyl] Found 4 h2 tags, 2935 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -803,7 +807,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 307
 [UpcomingVinyl] 307 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2758 buy signals saved to buy_signals.json
+[BuySignals] 2736 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -821,7 +825,7 @@ SOURCE STATUS SUMMARY
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
   Craft Recordings: 92 deals
-  MNRK Heavy: 136 deals
+  MNRK Heavy: 114 deals
   Equal Vision: 89 deals
   Rhino: 125 deals
   Interscope Records: 118 deals
@@ -859,12 +863,12 @@ Fearless Records: 96
 Fearless Vinyl: 96
 Hopeless Records: 56
 Interscope Records: 116
-MNRK Heavy: 135
+MNRK Heavy: 113
 Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 58
 Pure Noise Records: 79
-r/VinylReleases: 40
+r/VinylReleases: 42
 Revolver: 32
 Rhino: 122
 Rise All: 71
