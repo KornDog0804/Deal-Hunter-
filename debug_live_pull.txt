@@ -35,7 +35,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 95
+Fearless Records: kept 94
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 95
+Fearless Vinyl: kept 94
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -105,8 +105,6 @@ Craft Recordings: kept 92
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 136
@@ -401,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 10
+Amazon: found 43 candidate vinyl items
+Amazon: found 31 candidate vinyl items
+Amazon: kept 11
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -430,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 4334 entries
-[Discogs] Enriching 2764 vinyl records with Mint pricing...
+[Discogs] Enriching 2763 vinyl records with Mint pricing...
 [Discogs] Cache saved (4334 entries)
 [Discogs] Enrichment complete!
 
@@ -443,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 43 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 289354 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 289330 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -780,7 +778,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zodiac MindwarpCarnival Of Souls (Purple) —  (Creation Youth)
 [UpcomingVinyl] FOUND: Will WoodIn Case I Make It —  (Hostile City)
 [UpcomingVinyl] li>h2 approach found 315 entries
-[UpcomingVinyl] Got 431661 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 431685 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -804,7 +802,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 307
 [UpcomingVinyl] 307 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2754 buy signals saved to buy_signals.json
+[BuySignals] 2752 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -813,8 +811,8 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 230 deals
   Sound of Vinyl: 230 deals
   uDiscover Music: 123 deals
-  Fearless Records: 95 deals
-  Fearless Vinyl: 95 deals
+  Fearless Records: 94 deals
+  Fearless Vinyl: 94 deals
   Rise Records: 71 deals
   Rise All: 71 deals
   Brooklyn Vegan: 52 deals
@@ -848,16 +846,16 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 11 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
+Amazon: 11
 Brooklyn Vegan: 52
 Craft Recordings: 92
 Equal Vision: 89
-Fearless Records: 95
-Fearless Vinyl: 95
+Fearless Records: 94
+Fearless Vinyl: 94
 Hopeless Records: 56
 Interscope Records: 116
 MNRK Heavy: 135
@@ -865,7 +863,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 58
 Pure Noise Records: 79
-r/VinylReleases: 43
+r/VinylReleases: 44
 Revolver: 32
 Rhino: 122
 Rise All: 71
