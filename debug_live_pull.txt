@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 47 candidate vinyl items
+Amazon: found 44 candidate vinyl items
 Amazon: found 33 candidate vinyl items
-Amazon: kept 14
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 4315 entries
-[Discogs] Enriching 2768 vinyl records with Mint pricing...
-[Discogs] Cache saved (4315 entries)
+[Discogs] Loaded cache with 4334 entries
+[Discogs] Enriching 2767 vinyl records with Mint pricing...
+[Discogs] Cache saved (4334 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,7 +441,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 42 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -778,7 +778,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zodiac MindwarpCarnival Of Souls (Purple) —  (Creation Youth)
 [UpcomingVinyl] FOUND: Will WoodIn Case I Make It —  (Hostile City)
 [UpcomingVinyl] li>h2 approach found 315 entries
-[UpcomingVinyl] Got 432080 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 431661 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -793,7 +793,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 2935 li tags
+[UpcomingVinyl] Found 4 h2 tags, 2932 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -846,11 +846,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 14 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 14
+Amazon: 13
 Brooklyn Vegan: 52
 Craft Recordings: 92
 Equal Vision: 89
@@ -863,7 +863,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 58
 Pure Noise Records: 79
-r/VinylReleases: 42
+r/VinylReleases: 44
 Revolver: 32
 Rhino: 122
 Rise All: 71
