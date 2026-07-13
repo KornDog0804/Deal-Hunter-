@@ -47999,5 +47999,83 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "hardy|country country handprint": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Hardy (32)",
+    "discogs_title": "Country! Country!",
+    "discogs_release_id": 35238925,
+    "discogs_url": "https://www.discogs.com/release/35238925-Hardy-Country-Country",
+    "discogs_mint_price": 79.99,
+    "discogs_lowest": 79.99,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 61,
+    "discogs_want": 5
+  },
+  "unknown artist|age of the exhibitionist": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jim o rourke|halfway to a threeway": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jim O'Rourke",
+    "discogs_title": "Halfway To A Threeway",
+    "discogs_release_id": 1583944,
+    "discogs_url": "https://www.discogs.com/release/1583944-Jim-ORourke-Halfway-To-A-Threeway",
+    "discogs_mint_price": 32.4,
+    "discogs_lowest": 32.4,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 1521,
+    "discogs_want": 553
+  },
+  "unknown artist|margo price days of unrest apple red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "margo price|baby blue": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7943,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dusty Springfield",
+    "discogs_title": "Baby Blue",
+    "discogs_release_id": 1437091,
+    "discogs_url": "https://www.discogs.com/release/1437091-Dusty-Springfield-Baby-Blue",
+    "discogs_mint_price": 7.09,
+    "discogs_lowest": 7.09,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 194,
+    "discogs_want": 232
+  },
+  "danzig|september 17 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "michael jackson|motown records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6838,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
