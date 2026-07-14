@@ -48077,5 +48077,179 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "warner|dream theater images and words": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7267,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the shins|30th anniversary 7": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8933,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Stitches",
+    "discogs_title": "30th Anniversary 7\"",
+    "discogs_release_id": 27776760,
+    "discogs_url": "https://www.discogs.com/release/27776760-The-Stitches-30th-Anniversary-7",
+    "discogs_mint_price": 17.78,
+    "discogs_lowest": 17.78,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 79,
+    "discogs_want": 22
+  },
+  "unknown artist|beauty": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Unknown Artist",
+    "discogs_title": "Sleeping Beauty",
+    "discogs_release_id": 23126198,
+    "discogs_url": "https://www.discogs.com/release/23126198-Unknown-Artist-Sleeping-Beauty-",
+    "discogs_mint_price": 10.0,
+    "discogs_lowest": 10.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 1,
+    "discogs_want": 0
+  },
+  "weezer|1192": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Weezer",
+    "discogs_title": "1192",
+    "discogs_release_id": 37085694,
+    "discogs_url": "https://www.discogs.com/release/37085694-Weezer-1192",
+    "discogs_mint_price": 89.24,
+    "discogs_lowest": 89.24,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 1458,
+    "discogs_want": 868
+  },
+  "beabadoobee|pylon signed assai obi edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "black country new road|forever howlong": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Black Country, New Road",
+    "discogs_title": "Forever Howlong",
+    "discogs_release_id": 33594933,
+    "discogs_url": "https://www.discogs.com/release/33594933-Black-Country-New-Road-Forever-Howlong",
+    "discogs_mint_price": 36.44,
+    "discogs_lowest": 36.44,
+    "discogs_num_for_sale": 119,
+    "discogs_have": 3849,
+    "discogs_want": 349
+  },
+  "geese|projector": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Geese (11)",
+    "discogs_title": "Projector",
+    "discogs_release_id": 21142660,
+    "discogs_url": "https://www.discogs.com/release/21142660-Geese-Projector",
+    "discogs_mint_price": 18.08,
+    "discogs_lowest": 18.08,
+    "discogs_num_for_sale": 74,
+    "discogs_have": 2758,
+    "discogs_want": 368
+  },
+  "babehoven|i see them i see me": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7216,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "geese|3d country red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4117,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mastodon|marrow deep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4623,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sex pistols|filthy lucre live": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sex Pistols",
+    "discogs_title": "Filthy Lucre Live",
+    "discogs_release_id": 2777288,
+    "discogs_url": "https://www.discogs.com/release/2777288-Sex-Pistols-Filthy-Lucre-Live",
+    "discogs_mint_price": 66.59,
+    "discogs_lowest": 66.59,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 479,
+    "discogs_want": 347
+  },
+  "dj shadow|the mountain will fall 10th annive on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mastodon|revolver magazine variants": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2898,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "john coltrane|august 14 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the miles davis quintet|august 14 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7467,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "miranda lambert|crisco amazon whisky sour": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
