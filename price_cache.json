@@ -2583,7 +2583,7 @@
     "artist": "Forty Licks",
     "title": "180G Color 4LP Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:51:42.128799"
+    "cached_at": "2026-07-14T15:21:38.808357"
   },
   "interscope vinyl collective::international": {
     "artist": "Interscope Vinyl Collective",
@@ -2610,9 +2610,9 @@
     "artist": "Chris Cornell",
     "title": "\"Carry On\" IVC Edition",
     "found": true,
-    "cached_at": "2026-07-06T16:51:37.129183",
-    "lowest_price": 50.0,
-    "num_for_sale": 43,
+    "cached_at": "2026-07-14T15:21:33.689947",
+    "lowest_price": 55.0,
+    "num_for_sale": 44,
     "price_mint": 141.94,
     "price_nm": 127.0,
     "price_vgplus": 97.12,
@@ -2715,31 +2715,32 @@
     "artist": "Moodring \"D**th Fe***\"",
     "title": "White/Black/Blue Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:51:45.898919"
+    "cached_at": "2026-07-14T15:21:40.068135"
   },
   "moodring::dth fe": {
     "artist": "Moodring",
     "title": "\"D**th Fe***\"",
     "found": false,
-    "cached_at": "2026-07-06T16:51:47.148086"
+    "cached_at": "2026-07-14T15:21:41.331404"
   },
   "156silence::people watching orange black splatter vinyl preorder": {
     "artist": "156/Silence",
     "title": "People Watching Orange / Black Splatter Vinyl (Pre-Order)",
     "found": false,
-    "cached_at": "2026-07-06T16:51:48.547747"
+    "cached_at": "2026-07-14T15:21:42.769351"
   },
   "boston manor::sundiver whiteblue curacao splatter vinyl": {
     "artist": "Boston Manor",
     "title": "Sundiver White/Blue Curacao Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:52.248142",
-    "num_for_sale": 0,
-    "price_mint": 51.41,
-    "price_nm": 46.0,
-    "price_vgplus": 35.18,
-    "price_vg": 24.35,
-    "suggested_sell_price": 46.0,
+    "cached_at": "2026-07-14T15:21:46.552357",
+    "lowest_price": 38.0,
+    "num_for_sale": 1,
+    "price_mint": 44.71,
+    "price_nm": 40.0,
+    "price_vgplus": 30.59,
+    "price_vg": 21.18,
+    "suggested_sell_price": 40.0,
     "release_id": 31678028,
     "discogs_url": "https://www.discogs.com/release/31678028"
   },
@@ -2747,14 +2748,14 @@
     "artist": "Kingdom of Giants",
     "title": "Passenger Clear Orange/Black Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:55.969952",
+    "cached_at": "2026-07-14T15:21:50.378154",
     "lowest_price": 19.71,
-    "num_for_sale": 14,
-    "price_mint": 33.2,
-    "price_nm": 29.71,
-    "price_vgplus": 22.72,
-    "price_vg": 15.73,
-    "suggested_sell_price": 29.71,
+    "num_for_sale": 15,
+    "price_mint": 28.87,
+    "price_nm": 25.83,
+    "price_vgplus": 19.75,
+    "price_vg": 13.68,
+    "suggested_sell_price": 25.83,
     "release_id": 31168223,
     "discogs_url": "https://www.discogs.com/release/31168223"
   },
@@ -2768,7 +2769,7 @@
     "artist": "Polaris",
     "title": "'The Mortal Coil' Clear/White/ Blue Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:59.679995",
+    "cached_at": "2026-07-14T15:21:54.449160",
     "lowest_price": 24.99,
     "num_for_sale": 6,
     "price_mint": 32.75,
@@ -2783,13 +2784,13 @@
     "artist": "Letters Sent Home",
     "title": "Forever Undone Cream and Green Marble Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:52:00.957893"
+    "cached_at": "2026-07-14T15:21:55.721759"
   },
   "alpha wolf::half living things deluxe box set": {
     "artist": "Alpha Wolf",
     "title": "Half Living Things Deluxe Box Set",
     "found": false,
-    "cached_at": "2026-07-06T16:52:02.227432"
+    "cached_at": "2026-07-14T15:21:57.093213"
   },
   "holding absence::holding absence clear w black splatter vinyl": {
     "artist": "Holding Absence",
@@ -2809,7 +2810,7 @@
     "artist": "Bleeding Through",
     "title": "'Love Will Kill All' Clear w/Black Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:52:05.958530",
+    "cached_at": "2026-07-14T15:22:00.886795",
     "lowest_price": 19.99,
     "num_for_sale": 1,
     "price_mint": 31.67,
@@ -2845,7 +2846,7 @@
     "artist": "Dying Wish",
     "title": "'Symptoms Of Survival' Blue Green Swirl w/ Black Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:52:07.229567"
+    "cached_at": "2026-07-14T15:22:02.191787"
   },
   "broadside::hotel bleu yellow and green swirl w blue splatter vinyl": {
     "artist": "Broadside",
@@ -2872,13 +2873,13 @@
     "artist": "Polaris",
     "title": "'Fatalism' White w/ Black and Red Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:52:08.479337"
+    "cached_at": "2026-07-14T15:22:03.463444"
   },
   "polaris::fatalism clear w green violet curacao splatter vinyl": {
     "artist": "Polaris",
     "title": "'Fatalism' Clear w/ Green + Violet + Curacao Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:52:09.715675"
+    "cached_at": "2026-07-14T15:22:04.764835"
   },
   "miss may i::curse of existence clear w black cream heavy splatter vinyl": {
     "artist": "Miss May I",
@@ -3871,7 +3872,7 @@
     "artist": "Capture The Crown",
     "title": "‘Til Death' Vinyl (Burgundy in Beer + Black Ice Half/Half w/ Bone + Black Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:31.468879"
+    "cached_at": "2026-07-14T15:22:24.531389"
   },
   "dayshell::dayshell vinyl bone black side ab w gold burgundy splatter": {
     "artist": "Dayshell",
@@ -3892,13 +3893,13 @@
     "artist": "Des Rocs",
     "title": "'To Hell and Back' Vinyl (Cloudy Clear + Burgundy Moonphase w/ Black Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:32.739439"
+    "cached_at": "2026-07-14T15:22:25.849512"
   },
   "bad omens::finding god before god finds me vinyl gold beer side ab w black white splatter": {
     "artist": "Bad Omens",
     "title": "'Finding God Before God Finds Me' Vinyl (Gold + Beer Side A/B w/ Black + White Splatter)",
     "found": true,
-    "cached_at": "2026-07-06T16:52:26.477890",
+    "cached_at": "2026-07-14T15:22:23.110674",
     "lowest_price": 27.78,
     "num_for_sale": 9,
     "price_mint": 147.41,
@@ -3913,8 +3914,8 @@
     "artist": "Born of Osiris",
     "title": "'Soul Sphere' Vinyl (Bone + Blue w/ Black + White Splatter)",
     "found": true,
-    "cached_at": "2026-07-06T16:52:36.508916",
-    "lowest_price": 63.38,
+    "cached_at": "2026-07-14T15:22:29.798457",
+    "lowest_price": 63.83,
     "num_for_sale": 2,
     "price_mint": 72.07,
     "price_nm": 64.49,
@@ -3928,14 +3929,14 @@
     "artist": "Born of Osiris",
     "title": "'A Higher Place' Vinyl (Blue Split W/ Black & White Splatter)",
     "found": true,
-    "cached_at": "2026-07-06T16:52:40.238980",
+    "cached_at": "2026-07-14T15:22:33.662540",
     "lowest_price": 65.0,
     "num_for_sale": 2,
-    "price_mint": 63.56,
-    "price_nm": 56.87,
-    "price_vgplus": 43.49,
-    "price_vg": 30.11,
-    "suggested_sell_price": 56.87,
+    "price_mint": 64.01,
+    "price_nm": 57.27,
+    "price_vgplus": 43.79,
+    "price_vg": 30.32,
+    "suggested_sell_price": 57.27,
     "release_id": 25316011,
     "discogs_url": "https://www.discogs.com/release/25316011"
   },
@@ -3958,7 +3959,7 @@
     "artist": "I See Stars",
     "title": "'THE WHEEL' Vinyl (Black Ice + White Cornetto w/ Black Splatter)",
     "found": true,
-    "cached_at": "2026-07-06T16:52:47.709710",
+    "cached_at": "2026-07-14T15:22:37.482067",
     "lowest_price": 68.85,
     "num_for_sale": 2,
     "price_mint": 66.49,
@@ -3973,7 +3974,7 @@
     "artist": "Born Of Osiris",
     "title": "‘The Discovery' Vinyl (Black Ice w/ Violet + White + Blue Splatter)",
     "found": true,
-    "cached_at": "2026-07-06T16:52:51.448647",
+    "cached_at": "2026-07-14T15:22:41.291152",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36991890,
@@ -3983,13 +3984,13 @@
     "artist": "Born Of Osiris",
     "title": "‘The Discovery' Vinyl (Violet + Neon Purple Cornetto w/ Black + White Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:52.737792"
+    "cached_at": "2026-07-14T15:22:42.580658"
   },
   "chon::grow vinyl leaf filled": {
     "artist": "CHON",
     "title": "‘Grow' Vinyl (Leaf Filled",
     "found": false,
-    "cached_at": "2026-07-06T16:52:53.989531"
+    "cached_at": "2026-07-14T15:22:43.843269"
   },
   "from first to last::dead trees vinyl yellow blue black side ab w glitter": {
     "artist": "From First To Last",
@@ -4005,25 +4006,25 @@
     "artist": "From First To Last",
     "title": "‘Dead Trees' Vinyl (Trans Blue + Black Cornetto w/ Baby Blue + Yellow Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:55.263933"
+    "cached_at": "2026-07-14T15:22:45.152224"
   },
   "i the breather::truth and purpose vinyl black ice cloudy w white gold splatter": {
     "artist": "I The Breather",
     "title": "‘Truth and Purpose' Vinyl (Black Ice Cloudy w/ White + Gold Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:56.610359"
+    "cached_at": "2026-07-14T15:22:46.440352"
   },
   "betraying the martyrs::phantom vinyl black ice white cornetto w baby blue silver splatter": {
     "artist": "Betraying The Martyrs",
     "title": "‘Phantom' Vinyl (Black Ice + White Cornetto w/ Baby Blue + Silver Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:57.929079"
+    "cached_at": "2026-07-14T15:22:47.742817"
   },
   "upon a burning body::the world is my enemy now vinyl black ice bone side ab w red orange splatter": {
     "artist": "Upon a Burning Body",
     "title": "'The World Is My Enemy Now' Vinyl (Black Ice + Bone Side A/B w/ Red + Orange Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:59.249013"
+    "cached_at": "2026-07-14T15:22:49.081310"
   },
   "kittie::spit xxv vinyl black in trans red w black yellow splatter": {
     "artist": "Kittie",
@@ -4054,9 +4055,9 @@
     "artist": "Stray From The Path",
     "title": "'Only Death Is Real' Vinyl Box Set",
     "found": true,
-    "cached_at": "2026-07-06T16:53:03.051220",
-    "lowest_price": 59.95,
-    "num_for_sale": 2,
+    "cached_at": "2026-07-14T15:22:52.930217",
+    "lowest_price": 55.95,
+    "num_for_sale": 3,
     "price_mint": 65.51,
     "price_nm": 58.61,
     "price_vgplus": 44.82,
@@ -4139,7 +4140,7 @@
     "artist": "The Ongoing Concept",
     "title": "Handmade",
     "found": true,
-    "cached_at": "2026-07-06T16:53:06.768764",
+    "cached_at": "2026-07-14T15:22:56.962678",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 35493853,
@@ -4164,7 +4165,7 @@
     "artist": "Balance And Composure",
     "title": "Balance and Composure 'Separation (15th Anniversary Deluxe Edition)' Cloudy Clear w/ Orange & Yellow Splatter 2XLP",
     "found": true,
-    "cached_at": "2026-07-06T16:53:10.917052",
+    "cached_at": "2026-07-14T15:23:01.214399",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37323681,
@@ -4174,13 +4175,13 @@
     "artist": "The Wonder Years",
     "title": "The Wonder Years 'No Closer To Heaven (10th Anniversary Edition)' The Bluest Things on Earth Variant Box Set",
     "found": false,
-    "cached_at": "2026-07-06T16:53:12.627511"
+    "cached_at": "2026-07-14T15:23:02.931137"
   },
   "the dangerous summer::the dangerous summer reach for the sun green w orange splatter lp": {
     "artist": "The Dangerous Summer",
     "title": "The Dangerous Summer 'Reach For The Sun' Green W/ Orange Splatter LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:23.890913",
+    "cached_at": "2026-07-14T15:27:13.088397",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36311821,
@@ -4190,19 +4191,19 @@
     "artist": "Samiam",
     "title": "Samiam 'Trips' Clear W/ White, Black, & Grey Splatter LP",
     "found": false,
-    "cached_at": "2026-07-06T16:57:25.166202"
+    "cached_at": "2026-07-14T15:27:14.412661"
   },
   "avenged sevenfold::avenged sevenfold city of evil 20th anniversary eruption blend 2xlp": {
     "artist": "Avenged Sevenfold",
     "title": "Avenged Sevenfold 'City Of Evil' 20th Anniversary Eruption Blend 2XLP",
     "found": false,
-    "cached_at": "2026-07-06T16:53:32.447839"
+    "cached_at": "2026-07-14T15:23:22.121057"
   },
   "michael clifford::michael clifford sidequest black ice w neon green splatter deluxe vinyl": {
     "artist": "Michael Clifford",
     "title": "Michael Clifford 'SIDEQUEST' Black Ice W/ Neon Green Splatter Deluxe Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:57:26.428767"
+    "cached_at": "2026-07-14T15:27:15.694690"
   },
   "reel big fish::turn the radio off": {
     "artist": "Reel Big Fish",
@@ -4572,7 +4573,7 @@
     "artist": "NOi!SE",
     "title": "Fate of the Union",
     "found": true,
-    "cached_at": "2026-07-06T16:53:20.118610",
+    "cached_at": "2026-07-14T15:23:10.529845",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36975597,
@@ -4582,9 +4583,9 @@
     "artist": "The Slackers",
     "title": "Lost And Found Vol. 2",
     "found": true,
-    "cached_at": "2026-07-06T16:53:23.859510",
-    "lowest_price": 20.0,
-    "num_for_sale": 16,
+    "cached_at": "2026-07-14T15:23:14.410292",
+    "lowest_price": 24.04,
+    "num_for_sale": 15,
     "price_mint": 30.13,
     "price_nm": 26.96,
     "price_vgplus": 20.61,
@@ -5050,7 +5051,7 @@
     "artist": "David Bowie & Trevor Jones",
     "title": "Labyrinth (Limited Crystal Edition) 1LP",
     "found": true,
-    "cached_at": "2026-07-06T16:53:29.898648",
+    "cached_at": "2026-07-14T15:23:19.531866",
     "lowest_price": 49.99,
     "num_for_sale": 3,
     "price_mint": 43.68,
@@ -5065,7 +5066,7 @@
     "artist": "Dance Gavin Dance",
     "title": "Pantheon White & Neon Green Smush w/ Black Splatter Double Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T16:53:31.156388"
+    "cached_at": "2026-07-14T15:23:20.809337"
   },
   "bow wow wow love peace harmony the best of bow wow wow::limited 180gram crystal clear gold colored vinyl import on deepdiscount": {
     "artist": "Bow Wow Wow Love Peace & Harmony: The Best Of Bow Wow Wow",
@@ -5089,25 +5090,25 @@
     "artist": "The Cranberries",
     "title": "Uncertain (Limited Edition) 12in LP",
     "found": false,
-    "cached_at": "2026-07-06T16:53:42.430994"
+    "cached_at": "2026-07-14T15:23:32.430814"
   },
   "mauricio kagel::mauricio kagel acustica avantgarde vinyl series 2lp": {
     "artist": "Mauricio Kagel",
     "title": "Mauricio Kagel: ACUSTICA (Avantgarde Vinyl Series) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:53:43.698504"
+    "cached_at": "2026-07-14T15:23:33.709277"
   },
   "wiener philharmoniker::new years day concert in vienna 1979 decca pure analog 2lp": {
     "artist": "Wiener Philharmoniker",
     "title": "New Year's Day Concert in Vienna 1979 (Decca Pure Analog) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:53:44.968606"
+    "cached_at": "2026-07-14T15:23:35.009067"
   },
   "chicago symphony orchestra::stravinsky le sacre du printemps decca pure analogue lp": {
     "artist": "Chicago Symphony Orchestra",
     "title": "STRAVINSKY: Le Sacre du printemps (Decca Pure Analogue) LP",
     "found": true,
-    "cached_at": "2026-07-06T16:53:48.710396",
+    "cached_at": "2026-07-14T15:23:38.937010",
     "lowest_price": 80.34,
     "num_for_sale": 2,
     "price_mint": 109.25,
@@ -5216,7 +5217,7 @@
     "artist": "Underoath",
     "title": "The Place After This One Black/White Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:54:08.889755",
+    "cached_at": "2026-07-14T15:23:59.262429",
     "lowest_price": 22.92,
     "num_for_sale": 3,
     "price_mint": 42.68,
@@ -5231,8 +5232,8 @@
     "artist": "Cut A Silhouette",
     "title": "Marigold W/ Poppy Red Splatter Vinyl LP",
     "found": true,
-    "cached_at": "2026-07-06T16:54:13.988002",
-    "lowest_price": 68.77,
+    "cached_at": "2026-07-14T15:24:04.381493",
+    "lowest_price": 68.08,
     "num_for_sale": 1,
     "price_mint": 64.68,
     "price_nm": 57.87,
@@ -5486,9 +5487,9 @@
     "artist": "The Slackers",
     "title": "Redlight",
     "found": true,
-    "cached_at": "2026-07-06T16:54:29.416501",
-    "lowest_price": 27.96,
-    "num_for_sale": 12,
+    "cached_at": "2026-07-14T15:24:19.812648",
+    "lowest_price": 27.76,
+    "num_for_sale": 11,
     "price_mint": 33.24,
     "price_nm": 29.74,
     "price_vgplus": 22.74,
@@ -5519,19 +5520,19 @@
     "artist": "Winona Fighter",
     "title": "My Apologies To The Chef (Deluxe) White & Violet Smush w/ Black Splatter Vinyl 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:56:03.699781"
+    "cached_at": "2026-07-14T15:25:54.242399"
   },
   "winona fighter::my apologies to the chef deluxe ruby sky blue quad w white splatter vinyl 2lp": {
     "artist": "Winona Fighter",
     "title": "My Apologies To The Chef (Deluxe) Ruby & Sky Blue Quad w/ White Splatter Vinyl 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:56:04.990913"
+    "cached_at": "2026-07-14T15:25:55.540119"
   },
   "tilian::vertigo highlighter yellow w sky blue splatter vinyl lp": {
     "artist": "Tilian",
     "title": "VERTIGO Highlighter Yellow w/ Sky Blue Splatter Vinyl LP",
     "found": true,
-    "cached_at": "2026-07-06T16:56:08.690350",
+    "cached_at": "2026-07-14T15:25:59.370257",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 34037440,
@@ -5625,27 +5626,27 @@
     "artist": "Relate.",
     "title": "Have I Ever Done Anything? on Coke Bottle Clear with Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:56:09.960530"
+    "cached_at": "2026-07-14T15:26:00.671281"
   },
   "black label society::grimmest hits on forest green double vinyl": {
     "artist": "Black Label Society",
     "title": "Grimmest Hits on Forest Green Double Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:56:11.247659"
+    "cached_at": "2026-07-14T15:26:01.950573"
   },
   "black label society::catacombs of the black vatican on gold double vinyl": {
     "artist": "Black Label Society",
     "title": "Catacombs of the Black Vatican on Gold Double Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:56:12.507586"
+    "cached_at": "2026-07-14T15:26:03.283406"
   },
   "black label society::shot to hell on canary yellow vinyl": {
     "artist": "Black Label Society",
     "title": "Shot To Hell on Canary Yellow Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:56:16.259306",
+    "cached_at": "2026-07-14T15:26:07.090130",
     "lowest_price": 23.0,
-    "num_for_sale": 26,
+    "num_for_sale": 28,
     "price_mint": 32.75,
     "price_nm": 29.3,
     "price_vgplus": 22.41,
@@ -5658,7 +5659,7 @@
     "artist": "Ace Frehley",
     "title": "Anomaly Splatter Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:56:19.973000",
+    "cached_at": "2026-07-14T15:26:10.920045",
     "lowest_price": 63.22,
     "num_for_sale": 17,
     "price_mint": 104.5,
@@ -5673,7 +5674,7 @@
     "artist": "Black Label Society",
     "title": "Mafia Smog Vinyl Spotify Fans First Variant",
     "found": false,
-    "cached_at": "2026-07-06T16:56:21.260974"
+    "cached_at": "2026-07-14T15:26:12.203899"
   },
   "david bowie::station to station 50th anniversary edition 1lp picture disc": {
     "artist": "David Bowie",
@@ -5694,13 +5695,14 @@
     "artist": "Currents",
     "title": "'The Death We Seek' Purple Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:56:33.759975",
-    "num_for_sale": 0,
-    "price_mint": 192.79,
-    "price_nm": 172.5,
-    "price_vgplus": 131.91,
-    "price_vg": 91.32,
-    "suggested_sell_price": 172.5,
+    "cached_at": "2026-07-14T15:26:25.180174",
+    "lowest_price": 134.99,
+    "num_for_sale": 1,
+    "price_mint": 167.65,
+    "price_nm": 150.0,
+    "price_vgplus": 114.71,
+    "price_vg": 79.41,
+    "suggested_sell_price": 150.0,
     "release_id": 26988294,
     "discogs_url": "https://www.discogs.com/release/26988294"
   },
@@ -5957,13 +5959,13 @@
     "artist": "Various Artists",
     "title": "Gladiator: Music From The Motion Picture (Limited Edition Gold Marble) LP",
     "found": false,
-    "cached_at": "2026-07-06T16:56:46.378929"
+    "cached_at": "2026-07-14T15:26:34.499893"
   },
   "man on the run 1lp colour third man::new york taxi yellow": {
     "artist": "Man On The Run 1LP Colour (Third Man",
     "title": "New York Taxi Yellow)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:47.649720"
+    "cached_at": "2026-07-14T15:26:35.789035"
   },
   "jack johnson::surfilmusic soundtrack 4tracks 2 lp": {
     "artist": "Jack Johnson",
@@ -5981,7 +5983,7 @@
     "artist": "The Plot In You",
     "title": "\"DISPOSE\" Salt N Peppa Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:56:51.388933",
+    "cached_at": "2026-07-14T15:26:39.677355",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37268376,
@@ -5991,7 +5993,7 @@
     "artist": "The Plot In You",
     "title": "\"DISPOSE\" Copper Cobalt Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:56:55.093153",
+    "cached_at": "2026-07-14T15:26:43.441519",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37236315,
@@ -6086,13 +6088,13 @@
     "artist": "Daddy Yankee",
     "title": "Talento de Barrio (Red 2-LP)",
     "found": false,
-    "cached_at": "2026-07-06T16:57:02.649681"
+    "cached_at": "2026-07-14T15:26:51.088246"
   },
   "mass romantic::red vinyl 7 21st anniversary release": {
     "artist": "Mass Romantic",
     "title": "Red Vinyl + 7\" (21st Anniversary Release)",
     "found": false,
-    "cached_at": "2026-07-06T16:57:03.918931"
+    "cached_at": "2026-07-14T15:26:52.371848"
   },
   "interscope records::pump up the volume soundtrack test pressing": {
     "artist": "Interscope Records",
@@ -6648,7 +6650,7 @@
     "artist": "Case",
     "title": "Open Letter (Limited Edition Tequila Sunrise) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:57:28.989902"
+    "cached_at": "2026-07-14T15:27:18.371506"
   },
   "case::open letter 2lp": {
     "artist": "Case",
@@ -6684,14 +6686,14 @@
     "artist": "Noah Kahan",
     "title": "Stick Season 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:32.708833",
+    "cached_at": "2026-07-14T15:27:22.209927",
     "lowest_price": 25.0,
     "num_for_sale": 44,
-    "price_mint": 56.98,
-    "price_nm": 50.98,
-    "price_vgplus": 38.99,
-    "price_vg": 26.99,
-    "suggested_sell_price": 50.98,
+    "price_mint": 48.77,
+    "price_nm": 43.63,
+    "price_vgplus": 33.37,
+    "price_vg": 23.1,
+    "suggested_sell_price": 43.63,
     "release_id": 27333540,
     "discogs_url": "https://www.discogs.com/release/27333540"
   },
@@ -6741,7 +6743,7 @@
     "artist": "Audioslave",
     "title": "Out Of Exile (Limited Edition Black Liquid-Filled) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:57:33.969828"
+    "cached_at": "2026-07-14T15:27:23.502565"
   },
   "megadeth::youthanasia 2lp": {
     "artist": "Megadeth",
@@ -6792,14 +6794,14 @@
     "artist": "Ennio Morricone",
     "title": "The Good, The Bad And The Ugly (Limited Edition Orange) LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:37.751926",
+    "cached_at": "2026-07-14T15:27:27.433631",
     "lowest_price": 22.99,
-    "num_for_sale": 16,
-    "price_mint": 29.38,
-    "price_nm": 26.29,
-    "price_vgplus": 20.11,
-    "price_vg": 13.92,
-    "suggested_sell_price": 26.29,
+    "num_for_sale": 14,
+    "price_mint": 42.68,
+    "price_nm": 38.19,
+    "price_vgplus": 29.2,
+    "price_vg": 20.22,
+    "suggested_sell_price": 38.19,
     "release_id": 37196919,
     "discogs_url": "https://www.discogs.com/release/37196919"
   },
@@ -6852,7 +6854,7 @@
     "artist": "Art Farmer",
     "title": "Listen to Art Farmer and the Orchestra (Verve Vault Series) LP",
     "found": false,
-    "cached_at": "2026-07-06T16:57:27.718176"
+    "cached_at": "2026-07-14T15:27:17.102369"
   },
   "herbert von karajan and the berliner philharmoniker::wagner das rheingold original source series 3lp": {
     "artist": "Herbert von Karajan and the Berliner Philharmoniker",
@@ -6900,9 +6902,9 @@
     "artist": "OneRepublic",
     "title": "Dreaming Out Loud (Blue Galaxy Limited Edition) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:41.470744",
-    "lowest_price": 60.0,
-    "num_for_sale": 5,
+    "cached_at": "2026-07-14T15:27:31.229418",
+    "lowest_price": 36.16,
+    "num_for_sale": 6,
     "price_mint": 97.47,
     "price_nm": 87.21,
     "price_vgplus": 66.69,
@@ -6915,9 +6917,9 @@
     "artist": "Talking Heads",
     "title": "Speaking In Tongues",
     "found": true,
-    "cached_at": "2026-07-06T16:57:45.319872",
-    "lowest_price": 30.0,
-    "num_for_sale": 26,
+    "cached_at": "2026-07-14T15:27:35.170440",
+    "lowest_price": 33.45,
+    "num_for_sale": 24,
     "price_mint": 68.4,
     "price_nm": 61.2,
     "price_vgplus": 46.8,
@@ -6945,8 +6947,8 @@
     "artist": "Thee Oh Sees",
     "title": "Weird Exits",
     "found": true,
-    "cached_at": "2026-07-06T16:57:49.148859",
-    "lowest_price": 18.99,
+    "cached_at": "2026-07-14T15:27:39.020089",
+    "lowest_price": 15.99,
     "num_for_sale": 33,
     "price_mint": 37.12,
     "price_nm": 33.21,
@@ -6960,8 +6962,8 @@
     "artist": "The Brian Jonestown Massacre",
     "title": "Don't Get Lost",
     "found": true,
-    "cached_at": "2026-07-06T16:57:53.959614",
-    "lowest_price": 19.59,
+    "cached_at": "2026-07-14T15:27:42.843699",
+    "lowest_price": 22.99,
     "num_for_sale": 29,
     "price_mint": 32.27,
     "price_nm": 28.87,
@@ -6975,20 +6977,20 @@
     "artist": "Chainsmokers",
     "title": "So Far So Good (Opaque Bone Limited Edition)",
     "found": false,
-    "cached_at": "2026-07-06T16:57:55.222003"
+    "cached_at": "2026-07-14T15:27:44.152575"
   },
   "small faces::small faces": {
     "artist": "Small Faces",
     "title": "Small Faces",
     "found": true,
-    "cached_at": "2026-07-06T16:57:58.951386",
-    "lowest_price": 23.29,
-    "num_for_sale": 63,
-    "price_mint": 308.32,
-    "price_nm": 275.86,
-    "price_vgplus": 210.95,
-    "price_vg": 146.04,
-    "suggested_sell_price": 275.86,
+    "cached_at": "2026-07-14T15:27:47.994293",
+    "lowest_price": 20.0,
+    "num_for_sale": 61,
+    "price_mint": 167.64,
+    "price_nm": 149.99,
+    "price_vgplus": 114.7,
+    "price_vg": 79.41,
+    "suggested_sell_price": 149.99,
     "release_id": 2979633,
     "discogs_url": "https://www.discogs.com/release/2979633"
   },
@@ -7011,7 +7013,7 @@
     "artist": "4 Non Blondes",
     "title": "Bigger, Better, Faster, More! (Green Limited Edition)",
     "found": true,
-    "cached_at": "2026-07-06T16:58:02.669233",
+    "cached_at": "2026-07-14T15:27:51.867091",
     "lowest_price": 60.0,
     "num_for_sale": 3,
     "price_mint": 142.49,
@@ -7026,8 +7028,8 @@
     "artist": "D12",
     "title": "D12 World 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:58:06.399985",
-    "lowest_price": 45.0,
+    "cached_at": "2026-07-14T15:27:55.679003",
+    "lowest_price": 40.0,
     "num_for_sale": 12,
     "price_mint": 197.26,
     "price_nm": 176.49,
@@ -7041,9 +7043,9 @@
     "artist": "Bennie Green",
     "title": "Back On The Scene (Blue Note Tone Poet Series) LP",
     "found": true,
-    "cached_at": "2026-07-06T16:58:10.130600",
+    "cached_at": "2026-07-14T15:27:59.509629",
     "lowest_price": 37.04,
-    "num_for_sale": 41,
+    "num_for_sale": 42,
     "price_mint": 44.32,
     "price_nm": 39.66,
     "price_vgplus": 30.32,
@@ -7056,9 +7058,9 @@
     "artist": "Lee Morgan",
     "title": "City Lights (Blue Note Tone Poet Series) LP",
     "found": true,
-    "cached_at": "2026-07-06T16:58:13.904666",
+    "cached_at": "2026-07-14T15:28:03.329522",
     "lowest_price": 47.11,
-    "num_for_sale": 23,
+    "num_for_sale": 22,
     "price_mint": 46.95,
     "price_nm": 42.01,
     "price_vgplus": 32.13,
@@ -7071,7 +7073,7 @@
     "artist": "Wiener Philharmoniker",
     "title": "Strauss, J: Die Fledermaus (3LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:58:17.648954",
+    "cached_at": "2026-07-14T15:28:07.199433",
     "lowest_price": 11.57,
     "num_for_sale": 6,
     "price_mint": 19.97,
@@ -7231,7 +7233,7 @@
     "artist": "The Pretty Reckless",
     "title": "\"Death By Rock And Roll\" Sea Blue Smoke Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:58:38.889726",
+    "cached_at": "2026-07-14T15:28:19.994109",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37764966,
@@ -7241,7 +7243,7 @@
     "artist": "Chase Atlantic",
     "title": "\"BEAUTY IN DEATH\" Britannica Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:58:42.686655",
+    "cached_at": "2026-07-14T15:28:23.779489",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37254162,
@@ -7266,9 +7268,9 @@
     "artist": "I Prevail",
     "title": "True Power",
     "found": true,
-    "cached_at": "2026-07-06T16:58:46.412397",
+    "cached_at": "2026-07-14T15:28:27.590940",
     "lowest_price": 17.0,
-    "num_for_sale": 14,
+    "num_for_sale": 15,
     "price_mint": 42.58,
     "price_nm": 38.09,
     "price_vgplus": 29.13,
@@ -7281,15 +7283,15 @@
     "artist": "I Prevail",
     "title": "\"Lifelines\" Orange Smoke Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:58:47.659251"
+    "cached_at": "2026-07-14T15:28:28.889433"
   },
   "chase atlantic::lost in heaven clear smoke vinyl": {
     "artist": "Chase Atlantic",
     "title": "\"LOST IN HEAVEN\" Clear Smoke Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:58:51.386931",
+    "cached_at": "2026-07-14T15:28:32.726876",
     "lowest_price": 55.0,
-    "num_for_sale": 3,
+    "num_for_sale": 2,
     "price_mint": 80.75,
     "price_nm": 72.25,
     "price_vgplus": 55.25,
@@ -7302,27 +7304,27 @@
     "artist": "Chase Atlantic",
     "title": "\"LOST IN HEAVEN\" Ink and Paint Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:58:52.639240"
+    "cached_at": "2026-07-14T15:28:34.028854"
   },
   "varials::where the light leaves clear and aqua vinyl": {
     "artist": "Varials",
     "title": "\"WHERE THE LIGHT LEAVES\" Clear and Aqua Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:58:53.906354"
+    "cached_at": "2026-07-14T15:28:35.321033"
   },
   "starset::vessels blue marble vinyl": {
     "artist": "Starset",
     "title": "\"Vessels\" Blue Marble Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:58:55.209575"
+    "cached_at": "2026-07-14T15:28:36.600764"
   },
   "pierce the veil::collide with the sky": {
     "artist": "Pierce The Veil",
     "title": "Collide With The Sky",
     "found": true,
-    "cached_at": "2026-07-06T16:58:58.979997",
+    "cached_at": "2026-07-14T15:28:40.392883",
     "lowest_price": 24.0,
-    "num_for_sale": 39,
+    "num_for_sale": 41,
     "price_mint": 41.17,
     "price_nm": 36.83,
     "price_vgplus": 28.17,
@@ -7335,7 +7337,7 @@
     "artist": "Volumes",
     "title": "\"Mirror Touch\" Ghost Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:02.700242",
+    "cached_at": "2026-07-14T15:28:44.231387",
     "lowest_price": 25.54,
     "num_for_sale": 4,
     "price_mint": 36.68,
@@ -7350,7 +7352,7 @@
     "artist": "Volumes",
     "title": "\"Mirror Touch\" Lily Pad Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:06.440143",
+    "cached_at": "2026-07-14T15:28:48.168989",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36682207,
@@ -7360,7 +7362,7 @@
     "artist": "Ice Nine Kills",
     "title": "\"Welcome to Horrorwood: The Silver Scream 2\" Iridescent Blue Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:10.201153",
+    "cached_at": "2026-07-14T15:28:52.009243",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 33429647,
@@ -7370,13 +7372,13 @@
     "artist": "Ice Nine Kills",
     "title": "\"The Predator Becomes The Prey\" Opaque White/Sky Blue Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:59:11.499143"
+    "cached_at": "2026-07-14T15:28:53.512411"
   },
   "starset::vessels tidal wave vinyl": {
     "artist": "Starset",
     "title": "\"Vessels\" Tidal Wave Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:15.210863",
+    "cached_at": "2026-07-14T15:28:58.340539",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 35126399,
@@ -7386,7 +7388,7 @@
     "artist": "Starset",
     "title": "\"SILOS\" Tritium Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:18.900691",
+    "cached_at": "2026-07-14T15:29:02.288415",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36170524,
@@ -7396,7 +7398,7 @@
     "artist": "Pierce The Veil",
     "title": "The Jaws Of Life (Deluxe Edition) Garnet Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:22.608101",
+    "cached_at": "2026-07-14T15:29:06.121120",
     "num_for_sale": 0,
     "price_mint": 113.62,
     "price_nm": 101.66,
@@ -7410,7 +7412,7 @@
     "artist": "Pierce The Veil",
     "title": "The Jaws Of Life (Deluxe Edition) Yuletide Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:26.330922",
+    "cached_at": "2026-07-14T15:29:10.080232",
     "lowest_price": 70.48,
     "num_for_sale": 4,
     "price_mint": 46.55,
@@ -7425,7 +7427,7 @@
     "artist": "Ice Nine Kills",
     "title": "\"I Heard They KILL Live 2\" Swamp Thing Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:59:30.118596",
+    "cached_at": "2026-07-14T15:29:13.970537",
     "lowest_price": 71.32,
     "num_for_sale": 2,
     "price_mint": 67.75,
@@ -7756,7 +7758,7 @@
     "artist": "Kurt Travis",
     "title": "Everything Is Beautiful Ghostly Black Vinyl LP",
     "found": true,
-    "cached_at": "2026-07-06T16:59:33.879419",
+    "cached_at": "2026-07-14T15:29:17.824441",
     "lowest_price": 40.0,
     "num_for_sale": 2,
     "price_mint": 52.23,
@@ -7771,7 +7773,7 @@
     "artist": "Kublai Khan TX",
     "title": "Exhibition Of Prowess Tri-Color White, Blue, & Black Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T16:59:35.138885"
+    "cached_at": "2026-07-14T15:29:19.190716"
   },
   "touch amor::spiral in a straight line torrential vinyl lp": {
     "artist": "Touché Amoré",
@@ -8644,9 +8646,9 @@
     "artist": "Snarky Puppy",
     "title": "Live At Groundup Music Festival LP (RSD 2026)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:02.608867",
+    "cached_at": "2026-07-14T15:23:52.900264",
     "lowest_price": 15.0,
-    "num_for_sale": 33,
+    "num_for_sale": 34,
     "price_mint": 29.44,
     "price_nm": 26.34,
     "price_vgplus": 20.14,
@@ -8740,7 +8742,7 @@
     "artist": "Pepper",
     "title": "Operation Irie 2LP (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:54:03.849312"
+    "cached_at": "2026-07-14T15:23:54.169459"
   },
   "various artists::rock and roll doctor lowell george tribute 2lp rsd 2026": {
     "artist": "Various Artists",
@@ -8905,14 +8907,14 @@
     "artist": "Daddy Yankee",
     "title": "Los Homerun es (Clear 2-LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:59:46.257706",
+    "cached_at": "2026-07-14T15:29:30.677120",
     "lowest_price": 30.99,
     "num_for_sale": 9,
-    "price_mint": 46.94,
-    "price_nm": 42.0,
-    "price_vgplus": 32.12,
-    "price_vg": 22.24,
-    "suggested_sell_price": 42.0,
+    "price_mint": 54.54,
+    "price_nm": 48.8,
+    "price_vgplus": 37.32,
+    "price_vg": 25.84,
+    "suggested_sell_price": 48.8,
     "release_id": 32112978,
     "discogs_url": "https://www.discogs.com/release/32112978"
   },
@@ -8920,9 +8922,9 @@
     "artist": "Daddy Yankee",
     "title": "El Cartel The Big Boss (Purple 2-LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:59:50.042675",
+    "cached_at": "2026-07-14T15:29:34.479569",
     "lowest_price": 29.89,
-    "num_for_sale": 8,
+    "num_for_sale": 9,
     "price_mint": 61.13,
     "price_nm": 54.69,
     "price_vgplus": 41.82,
@@ -8935,9 +8937,9 @@
     "artist": "Daddy Yankee",
     "title": "Barrio Fino (White 2-LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:59:54.786963",
+    "cached_at": "2026-07-14T15:29:38.361177",
     "lowest_price": 36.77,
-    "num_for_sale": 8,
+    "num_for_sale": 9,
     "price_mint": 63.65,
     "price_nm": 56.95,
     "price_vgplus": 43.55,
@@ -8950,19 +8952,19 @@
     "artist": "Singin' Some Soul (Soulful Deep Red LP",
     "title": "Exclusive)",
     "found": false,
-    "cached_at": "2026-07-06T16:59:56.038121"
+    "cached_at": "2026-07-14T15:29:39.663633"
   },
   "wes montgomery::the incredible jazz guitar of wes montgomery original jazz classics series 180g lp": {
     "artist": "Wes Montgomery",
     "title": "The Incredible Jazz Guitar Of Wes Montgomery (Original Jazz Classics Series) (180g LP)",
     "found": false,
-    "cached_at": "2026-07-06T16:59:57.371683"
+    "cached_at": "2026-07-14T15:29:40.988935"
   },
   "joe pass::virtuoso original jazz classics series 180g lp": {
     "artist": "Joe Pass",
     "title": "Virtuoso (Original Jazz Classics Series) (180g LP)",
     "found": false,
-    "cached_at": "2026-07-06T16:59:58.628235"
+    "cached_at": "2026-07-14T15:29:42.272358"
   },
   "the best of creed sunspot lp::exclusive": {
     "artist": "The Best of Creed (\"Sunspot\" LP",
@@ -8983,7 +8985,7 @@
     "artist": "Filth is Eternal",
     "title": "Impossible World Laguna Eco Mix Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:06.101594",
+    "cached_at": "2026-07-14T15:29:46.072025",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36849217,
@@ -8993,7 +8995,7 @@
     "artist": "Avatar",
     "title": "\"Hunter Gatherer\" MNRK Heavy Exclusive Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T17:00:07.350032"
+    "cached_at": "2026-07-14T15:29:47.358545"
   },
   "slomosa::tundra rock metallic gold vinyl": {
     "artist": "Slomosa",
@@ -9014,7 +9016,7 @@
     "artist": "High on Fire",
     "title": "Cometh The Storm 4/20 Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:11.039946",
+    "cached_at": "2026-07-14T15:29:51.152225",
     "lowest_price": 50.0,
     "num_for_sale": 2,
     "price_mint": 90.63,
@@ -9029,7 +9031,7 @@
     "artist": "High on Fire",
     "title": "Cometh The Storm Color In Color Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:14.791851",
+    "cached_at": "2026-07-14T15:29:54.970328",
     "lowest_price": 45.0,
     "num_for_sale": 6,
     "price_mint": 29.8,
@@ -9044,7 +9046,7 @@
     "artist": "A Killer's Confession",
     "title": "Victim 2 Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:18.522548",
+    "cached_at": "2026-07-14T15:29:58.770966",
     "lowest_price": 18.9,
     "num_for_sale": 6,
     "price_mint": 18.54,
@@ -9059,7 +9061,7 @@
     "artist": "lowheaven",
     "title": "Ritual Decay Jade Eco Mix Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:22.260683",
+    "cached_at": "2026-07-14T15:30:02.586273",
     "lowest_price": 37.96,
     "num_for_sale": 1,
     "price_mint": 41.47,
@@ -9074,14 +9076,14 @@
     "artist": "Escuela Grind",
     "title": "Memory Theater Glow in the Dark Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:26.050092",
+    "cached_at": "2026-07-14T15:30:06.369728",
     "lowest_price": 35.0,
     "num_for_sale": 2,
-    "price_mint": 51.16,
-    "price_nm": 45.77,
-    "price_vgplus": 35.0,
-    "price_vg": 24.23,
-    "suggested_sell_price": 45.77,
+    "price_mint": 51.52,
+    "price_nm": 46.1,
+    "price_vgplus": 35.25,
+    "price_vg": 24.41,
+    "suggested_sell_price": 46.1,
     "release_id": 26154557,
     "discogs_url": "https://www.discogs.com/release/26154557"
   },
@@ -9089,7 +9091,7 @@
     "artist": "Underoath",
     "title": "The Place After This One Deluxe Thermo Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:29.788699",
+    "cached_at": "2026-07-14T15:30:10.420231",
     "lowest_price": 85.0,
     "num_for_sale": 2,
     "price_mint": 78.24,
@@ -9104,7 +9106,7 @@
     "artist": "Your Spirit Dies",
     "title": "My Gnawing Pains Will Never Rest Translucent Orange Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:33.540883",
+    "cached_at": "2026-07-14T15:30:14.436618",
     "lowest_price": 30.71,
     "num_for_sale": 5,
     "price_mint": 27.99,
@@ -9119,7 +9121,7 @@
     "artist": "Ace Frehley",
     "title": "\"Spaceman\" Silver Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:00:37.231041",
+    "cached_at": "2026-07-14T15:30:19.965311",
     "lowest_price": 17.99,
     "num_for_sale": 14,
     "price_mint": 24.7,
@@ -9134,19 +9136,19 @@
     "artist": "MIRRORLESS",
     "title": "MIRRORLESS • Concrete Mix • Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T17:00:42.380624"
+    "cached_at": "2026-07-14T15:30:25.239628"
   },
   "drugs::drugs until god shows transparent sky blue limited to 500": {
     "artist": "D.R.U.G.S.",
     "title": "D.R.U.G.S. • Until God Shows • Transparent Sky Blue • Limited to 500",
     "found": false,
-    "cached_at": "2026-07-06T17:00:43.664952"
+    "cached_at": "2026-07-14T15:30:26.575762"
   },
   "a lot like birds::conversation piece oriole limited to 300": {
     "artist": "A Lot Like Birds",
     "title": "Conversation Piece • Oriole • Limited to 300",
     "found": true,
-    "cached_at": "2026-07-06T17:00:47.378570",
+    "cached_at": "2026-07-14T15:30:30.419855",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37104297,
@@ -9156,7 +9158,7 @@
     "artist": "A Lot Like Birds",
     "title": "Conversation Piece • Koi Pond • Limited to 250",
     "found": true,
-    "cached_at": "2026-07-06T17:00:51.110224",
+    "cached_at": "2026-07-14T15:30:34.328999",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37104171,
@@ -9166,13 +9168,13 @@
     "artist": "The Flatliners",
     "title": "Cold World • Light Blue/White Starburst • Limited to 250",
     "found": false,
-    "cached_at": "2026-07-06T17:00:52.469000"
+    "cached_at": "2026-07-14T15:30:35.609790"
   },
   "bane::it all comes down to this candy cane limited to 500": {
     "artist": "Bane",
     "title": "It All Comes Down To This • Candy Cane • Limited to 500",
     "found": true,
-    "cached_at": "2026-07-06T17:00:56.229912",
+    "cached_at": "2026-07-14T15:30:39.589587",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36739543,
@@ -9182,7 +9184,7 @@
     "artist": "Bane",
     "title": "It All Comes Down To This • Natural Glitter • Limited to 300",
     "found": true,
-    "cached_at": "2026-07-06T17:01:00.001388",
+    "cached_at": "2026-07-14T15:30:43.421156",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37157211,
@@ -9192,7 +9194,7 @@
     "artist": "I Am The Avalanche",
     "title": "The Horror Show • Black/Grey Starburst • Limited to 250",
     "found": true,
-    "cached_at": "2026-07-06T17:01:03.706987",
+    "cached_at": "2026-07-14T15:30:47.232318",
     "lowest_price": 55.0,
     "num_for_sale": 1,
     "price_mint": 52.25,
@@ -9217,7 +9219,7 @@
     "artist": "Coliseum",
     "title": "Infinity Shit • Opaque White • Limited to 100",
     "found": true,
-    "cached_at": "2026-07-06T17:01:07.439381",
+    "cached_at": "2026-07-14T15:30:51.041263",
     "lowest_price": 21.0,
     "num_for_sale": 4,
     "price_mint": 17.83,
@@ -9232,7 +9234,7 @@
     "artist": "Hail The Sun",
     "title": "Wake • Transparent Orange & Black Marble • Limited to 500",
     "found": true,
-    "cached_at": "2026-07-06T17:01:11.263448",
+    "cached_at": "2026-07-14T15:30:54.870391",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 35817601,
@@ -9242,33 +9244,33 @@
     "artist": "Shelter",
     "title": "Mantra • Red & Black Smash • Limited to 500",
     "found": false,
-    "cached_at": "2026-07-06T17:01:12.538550"
+    "cached_at": "2026-07-14T15:30:56.159109"
   },
   "armor for sleep::there is no memory lavender blue mix limited to 500": {
     "artist": "Armor For Sleep",
     "title": "There Is No Memory • Lavender Blue Mix • Limited To 500",
     "found": false,
-    "cached_at": "2026-07-06T17:01:13.819000"
+    "cached_at": "2026-07-14T15:30:57.525642"
   },
   "armor for sleep::there is no memory white blue red starburst limited to 250": {
     "artist": "Armor For Sleep",
     "title": "There Is No Memory • White, Blue, Red Starburst • Limited To 250",
     "found": false,
-    "cached_at": "2026-07-06T17:01:15.119948"
+    "cached_at": "2026-07-14T15:30:58.840842"
   },
   "polyphia::renaissance black and purple cornetto limited to 500": {
     "artist": "Polyphia",
     "title": "Renaissance • Black And Purple Cornetto • Limited to 500",
     "found": false,
-    "cached_at": "2026-07-06T17:01:16.400833"
+    "cached_at": "2026-07-14T15:31:00.143642"
   },
   "yellowcard::a hopeful sign fuchsiapumpkinlinen mix limited to 250": {
     "artist": "Yellowcard",
     "title": "A Hopeful Sign • Fuchsia/Pumpkin/Linen Mix • Limited to 250",
     "found": true,
-    "cached_at": "2026-07-06T17:01:20.160018",
+    "cached_at": "2026-07-14T15:31:03.961704",
     "lowest_price": 33.33,
-    "num_for_sale": 5,
+    "num_for_sale": 6,
     "price_mint": 80.75,
     "price_nm": 72.25,
     "price_vgplus": 55.25,
@@ -9407,7 +9409,7 @@
     "artist": "Interscope Records",
     "title": "Out of Exile (Limited Edition Black Liquid-Filled) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T17:01:54.759778"
+    "cached_at": "2026-07-14T15:31:23.377806"
   },
   "out of exile::black 180g 2lp": {
     "artist": "Out of Exile",
@@ -9428,7 +9430,7 @@
     "artist": "Interscope Records",
     "title": "Red Pill Blues Deluxe 2LP",
     "found": true,
-    "cached_at": "2026-07-06T17:01:58.502958",
+    "cached_at": "2026-07-14T15:31:27.262200",
     "lowest_price": 21.33,
     "num_for_sale": 34,
     "price_mint": 57.0,
@@ -9930,9 +9932,9 @@
     "artist": "Mothica",
     "title": "Somewhere In Between Transparent Red Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:02:09.821882",
-    "lowest_price": 32.98,
-    "num_for_sale": 8,
+    "cached_at": "2026-07-14T15:31:34.884263",
+    "lowest_price": 28.0,
+    "num_for_sale": 10,
     "price_mint": 119.55,
     "price_nm": 106.96,
     "price_vgplus": 81.8,
@@ -9945,14 +9947,14 @@
     "artist": "Holding Absence",
     "title": "The Greatest Mistake of My Life Green Ripple Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:02:13.629436",
-    "lowest_price": 35.0,
-    "num_for_sale": 6,
-    "price_mint": 176.49,
-    "price_nm": 157.91,
-    "price_vgplus": 120.76,
-    "price_vg": 83.6,
-    "suggested_sell_price": 157.91,
+    "cached_at": "2026-07-14T15:31:38.671994",
+    "lowest_price": 52.86,
+    "num_for_sale": 5,
+    "price_mint": 63.71,
+    "price_nm": 57.0,
+    "price_vgplus": 43.59,
+    "price_vg": 30.18,
+    "suggested_sell_price": 57.0,
     "release_id": 36179938,
     "discogs_url": "https://www.discogs.com/release/36179938"
   },
@@ -10005,19 +10007,19 @@
     "artist": "Alpha Wolf",
     "title": "'A Quiet Place To Die' Trans Opaque Orange Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T17:02:14.908534"
+    "cached_at": "2026-07-14T15:31:39.970913"
   },
   "holding absence::holding absence white w black marble vinyl": {
     "artist": "Holding Absence",
     "title": "'Holding Absence' White w/ Black Marble Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T17:02:16.169527"
+    "cached_at": "2026-07-14T15:31:41.291424"
   },
   "caskets::reflections peach vinyl": {
     "artist": "Caskets",
     "title": "'Reflections' Peach Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:02:19.893540",
+    "cached_at": "2026-07-14T15:31:45.090504",
     "lowest_price": 20.0,
     "num_for_sale": 2,
     "price_mint": 74.5,
@@ -10032,7 +10034,7 @@
     "artist": "Holding Absence",
     "title": "'The Noble Art of Self Destruction' Deluxe Version",
     "found": true,
-    "cached_at": "2026-07-06T17:02:23.669768",
+    "cached_at": "2026-07-14T15:31:48.890224",
     "lowest_price": 173.61,
     "num_for_sale": 1,
     "price_mint": 116.53,
@@ -10047,13 +10049,13 @@
     "artist": "Holding Absence",
     "title": "'The Noble Art of Self Destruction' White + Gold + Mid Blue Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T17:02:24.991156"
+    "cached_at": "2026-07-14T15:31:50.188404"
   },
   "alt::abeyance red vinyl": {
     "artist": "alt.",
     "title": "'ABEYANCE' Red Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:02:28.711813",
+    "cached_at": "2026-07-14T15:31:53.959210",
     "lowest_price": 24.99,
     "num_for_sale": 2,
     "price_mint": 14.75,
@@ -10374,7 +10376,7 @@
     "artist": "Deafheaven",
     "title": "KEXP Sessions 12\" (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:50:40.407762"
+    "cached_at": "2026-07-14T15:20:50.229549"
   },
   "bill evans::at the bbc 2lp rsd 2026": {
     "artist": "Bill Evans",
@@ -10416,7 +10418,7 @@
     "artist": "The Jesus & Mary Chain",
     "title": "Some Candy Talking 12\" (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:50:41.717140"
+    "cached_at": "2026-07-14T15:20:51.541137"
   },
   "my life with the thrill kill kult::sinister whisperz the wax trax remixes 2lp rsd 2026": {
     "artist": "My Life With The Thrill Kill Kult",
@@ -10455,19 +10457,19 @@
     "artist": "A6 LP (Orange Crush)",
     "title": "Opened & Signed",
     "found": false,
-    "cached_at": "2026-07-06T16:56:57.648953"
+    "cached_at": "2026-07-14T15:26:46.021353"
   },
   "hawthorne heights::if only you were lonely exclusive salt and pepper lp": {
     "artist": "Hawthorne Heights",
     "title": "If Only You Were Lonely (Exclusive Salt and Pepper LP)",
     "found": false,
-    "cached_at": "2026-07-06T16:50:42.970597"
+    "cached_at": "2026-07-14T15:20:53.013343"
   },
   "quicksand::bring on the psychics blue w black tan splatter limited to 500": {
     "artist": "Quicksand",
     "title": "Bring On The Psychics • Blue W/ Black & Tan Splatter • Limited to 500",
     "found": false,
-    "cached_at": "2026-07-06T16:50:45.529066"
+    "cached_at": "2026-07-14T15:20:55.581892"
   },
   "megadeth::unplugged un boston picture disc vinyl": {
     "artist": "MEGADETH",
@@ -10599,9 +10601,9 @@
     "artist": "Neko Case",
     "title": "Cool Boys/Winchester Mansion Of Sound 7\" (RSD 2026)",
     "found": true,
-    "cached_at": "2026-07-06T16:53:52.437730",
-    "lowest_price": 8.95,
-    "num_for_sale": 51,
+    "cached_at": "2026-07-14T15:23:42.768954",
+    "lowest_price": 9.98,
+    "num_for_sale": 53,
     "price_mint": 20.88,
     "price_nm": 18.68,
     "price_vgplus": 14.29,
@@ -10614,21 +10616,21 @@
     "artist": "Charli XCX",
     "title": "Party 4 U 7\" (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:53:53.717195"
+    "cached_at": "2026-07-14T15:23:44.039963"
   },
   "haim::relationships lp rsd 2026": {
     "artist": "Haim",
     "title": "Relationships LP (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:53:55.030052"
+    "cached_at": "2026-07-14T15:23:45.302415"
   },
   "tate mcrae::hung up on youone day live 7 rsd 2026": {
     "artist": "Tate McRae",
     "title": "Hung Up On You/One Day (Live) 7\" (RSD 2026)",
     "found": true,
-    "cached_at": "2026-07-06T16:53:58.868370",
-    "lowest_price": 14.0,
-    "num_for_sale": 43,
+    "cached_at": "2026-07-14T15:23:49.131169",
+    "lowest_price": 8.65,
+    "num_for_sale": 45,
     "price_mint": 56.99,
     "price_nm": 50.99,
     "price_vgplus": 38.99,
@@ -10641,7 +10643,7 @@
     "artist": "Wolf Alice",
     "title": "Spotify Live Room 7\" (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:54:05.086976"
+    "cached_at": "2026-07-14T15:23:55.474478"
   },
   "motion city soundtrack::the same old wasted wonderful world lp opened signed": {
     "artist": "Motion City Soundtrack",
@@ -10675,7 +10677,7 @@
     "artist": "Bad Bunny",
     "title": "NPR Tiny Desk Concert Live",
     "found": false,
-    "cached_at": "2026-07-06T16:55:34.686338"
+    "cached_at": "2026-07-14T15:25:33.801815"
   },
   "frank ocean::channel orange alt cover": {
     "artist": "Frank Ocean",
@@ -10702,7 +10704,7 @@
     "artist": "Kanye West",
     "title": "The Life Of Pablo (New Mix)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:14.813888",
+    "cached_at": "2026-07-14T15:25:13.390443",
     "lowest_price": 36.0,
     "num_for_sale": 10,
     "price_mint": 76.0,
@@ -10804,7 +10806,7 @@
     "artist": "Lady Gaga",
     "title": "Mayhem On The Beach Rio De Janeiro 2025 (Colored Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:54:54.448690"
+    "cached_at": "2026-07-14T15:24:53.052638"
   },
   "frank ocean::nights a collection of live performances": {
     "artist": "Frank Ocean",
@@ -10882,7 +10884,7 @@
     "artist": "Kanye West",
     "title": "Graduation (Gatefold)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:38.119822",
+    "cached_at": "2026-07-14T15:24:36.489665",
     "num_for_sale": null,
     "price_mint": 43.69,
     "price_nm": 39.09,
@@ -10969,7 +10971,7 @@
     "artist": "Frank Ocean",
     "title": "Channel Orange",
     "found": true,
-    "cached_at": "2026-07-06T16:55:42.327738",
+    "cached_at": "2026-07-14T15:25:37.661314",
     "num_for_sale": null,
     "price_mint": 43.7,
     "price_nm": 39.1,
@@ -11231,13 +11233,13 @@
     "artist": "Bad Bunny",
     "title": "YHLQMG (Colored Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:54:59.479004"
+    "cached_at": "2026-07-14T15:24:58.111342"
   },
   "bad bunny::da mixtape singles collection": {
     "artist": "Bad Bunny",
     "title": "Da Mixtape (Singles Collection)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:03.179207",
+    "cached_at": "2026-07-14T15:25:01.909682",
     "num_for_sale": null,
     "price_mint": 98.22,
     "price_nm": 87.88,
@@ -11251,9 +11253,9 @@
     "artist": "Interscope Records",
     "title": "HIT ME HARD AND SOFT [Anniversary Edition / Blue & Orange Splatter LP]",
     "found": true,
-    "cached_at": "2026-07-06T16:56:30.019622",
-    "lowest_price": 17.61,
-    "num_for_sale": 46,
+    "cached_at": "2026-07-14T15:26:21.397298",
+    "lowest_price": 17.73,
+    "num_for_sale": 48,
     "price_mint": 61.14,
     "price_nm": 54.7,
     "price_vgplus": 41.83,
@@ -11284,13 +11286,13 @@
     "artist": "Danny Brown",
     "title": "Grown Up 7\" (RSD 2026)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:56.377792"
+    "cached_at": "2026-07-14T15:26:44.723529"
   },
   "hawthorne heights::if only you were lonely lp": {
     "artist": "Hawthorne Heights",
     "title": "If Only You Were Lonely (LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:57:01.408170",
+    "cached_at": "2026-07-14T15:26:49.819172",
     "num_for_sale": 0,
     "price_mint": 43.7,
     "price_nm": 39.1,
@@ -11340,7 +11342,7 @@
     "artist": "Quicksand",
     "title": "Bring On The Psychics • Green Ripple • Limited to 250",
     "found": false,
-    "cached_at": "2026-07-06T17:00:41.130400"
+    "cached_at": "2026-07-14T15:30:23.964079"
   },
   "remy zero::villa elaine test pressing": {
     "artist": "Remy Zero",
@@ -11352,9 +11354,9 @@
     "artist": "LEVELS",
     "title": "This Will Make You Feel Again Clear/Sea Blue Ghostly Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:02:06.089795",
+    "cached_at": "2026-07-14T15:31:31.079232",
     "lowest_price": 38.0,
-    "num_for_sale": 2,
+    "num_for_sale": 3,
     "price_mint": 67.69,
     "price_nm": 60.56,
     "price_vgplus": 46.31,
@@ -11763,25 +11765,25 @@
     "artist": "sace6",
     "title": "'Brutalist' Vinyl (Ultra Clear w/ Glitter)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:48.899405"
+    "cached_at": "2026-07-14T15:32:09.390839"
   },
   "weathers::are we having fun vinyl trans sea blue ultra clear galaxy": {
     "artist": "Weathers",
     "title": "Are We Having Fun? Vinyl (Trans. Sea Blue + Ultra Clear Galaxy)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:50.170047"
+    "cached_at": "2026-07-14T15:32:10.703812"
   },
   "palaye royale::fever dream vinyl silver gold galaxy": {
     "artist": "Palaye Royale",
     "title": "'Fever Dream' Vinyl (Silver + Gold Galaxy)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:51.409040"
+    "cached_at": "2026-07-14T15:32:12.003067"
   },
   "des rocs::to hell and back vinyl red black ice bone side ab w glitter": {
     "artist": "Des Rocs",
     "title": "'To Hell and Back' Vinyl (Red + Black Ice + Bone Side A/B w/ Glitter)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:52.680619"
+    "cached_at": "2026-07-14T15:32:13.311499"
   },
   "static dress::injury episode vinyl cloudy clear trans green cornetto": {
     "artist": "Static Dress",
@@ -11812,7 +11814,7 @@
     "artist": "sace6",
     "title": "'Brutalist' Vinyl (Silver + Black Half/Half)",
     "found": true,
-    "cached_at": "2026-07-06T17:03:03.889243",
+    "cached_at": "2026-07-14T15:32:17.110128",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37313670,
@@ -11822,13 +11824,13 @@
     "artist": "sace6",
     "title": "'Brutalist' Vinyl (Clear / White / Black Marble Blend)",
     "found": false,
-    "cached_at": "2026-07-06T17:03:05.151921"
+    "cached_at": "2026-07-14T15:32:18.550280"
   },
   "starbenders::the beast goes on vinyl magenta white black side ab": {
     "artist": "Starbenders",
     "title": "'The Beast Goes On' Vinyl (Magenta + White + Black Side A/B)",
     "found": true,
-    "cached_at": "2026-07-06T17:03:08.868789",
+    "cached_at": "2026-07-14T15:32:23.380255",
     "lowest_price": 83.0,
     "num_for_sale": 2,
     "price_mint": 27.94,
@@ -11843,7 +11845,7 @@
     "artist": "Starbenders",
     "title": "'The Beast Goes On' Vinyl (Red + Black Ice Side A/B w/ Glitter)",
     "found": true,
-    "cached_at": "2026-07-06T17:03:12.618975",
+    "cached_at": "2026-07-14T15:32:27.228755",
     "lowest_price": 83.0,
     "num_for_sale": 2,
     "price_mint": 27.94,
@@ -11858,13 +11860,13 @@
     "artist": "I The Breather",
     "title": "‘Truth and Purpose' Vinyl (Olive + Bone + Brown Side A/B)",
     "found": false,
-    "cached_at": "2026-07-06T17:03:13.929611"
+    "cached_at": "2026-07-14T15:32:28.549648"
   },
   "betraying the martyrs::phantom vinyl clear silver white color in color w glitter": {
     "artist": "Betraying The Martyrs",
     "title": "‘Phantom' Vinyl (Clear + Silver + White Color in Color w/ Glitter)",
     "found": true,
-    "cached_at": "2026-07-06T17:03:17.658135",
+    "cached_at": "2026-07-14T15:32:32.361281",
     "lowest_price": 70.0,
     "num_for_sale": 1,
     "price_mint": 78.24,
@@ -11889,15 +11891,15 @@
     "artist": "Kittie",
     "title": "'Spit XXV' Vinyl (Black + Orange + Trans Red Side A/B)",
     "found": false,
-    "cached_at": "2026-07-06T17:03:18.904571"
+    "cached_at": "2026-07-14T15:32:33.641898"
   },
   "meg myers::thank u 4 taking me 2 the disco id like 2 go home now lp": {
     "artist": "Meg Myers",
     "title": "'Thank U 4 Taking Me 2 The Disco' + 'I'd Like 2 Go Home Now' (LP)",
     "found": true,
-    "cached_at": "2026-07-06T17:03:22.669082",
+    "cached_at": "2026-07-14T15:32:37.490210",
     "lowest_price": 15.8,
-    "num_for_sale": 22,
+    "num_for_sale": 21,
     "price_mint": 36.68,
     "price_nm": 32.82,
     "price_vgplus": 25.1,
@@ -11991,7 +11993,7 @@
     "artist": "Living Sacrifice",
     "title": "The Hammering Process \"Rivet Hole\" Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:03:30.117429",
+    "cached_at": "2026-07-14T15:32:45.082280",
     "lowest_price": 59.98,
     "num_for_sale": 3,
     "price_mint": 66.5,
@@ -12006,7 +12008,7 @@
     "artist": "Living Sacrifice",
     "title": "Conceived in Fire \"Fire In The Sky\" 2xLP Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:03:33.829708",
+    "cached_at": "2026-07-14T15:32:48.871378",
     "lowest_price": 69.99,
     "num_for_sale": 2,
     "price_mint": 77.9,
@@ -12021,14 +12023,13 @@
     "artist": "Creation/Destruction",
     "title": "\"Reaper\" Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:03:37.558624",
-    "lowest_price": 25.0,
-    "num_for_sale": 1,
-    "price_mint": 22.35,
-    "price_nm": 20.0,
-    "price_vgplus": 15.29,
-    "price_vg": 10.59,
-    "suggested_sell_price": 20.0,
+    "cached_at": "2026-07-14T15:32:52.831761",
+    "num_for_sale": 0,
+    "price_mint": 32.13,
+    "price_nm": 28.75,
+    "price_vgplus": 21.99,
+    "price_vg": 15.22,
+    "suggested_sell_price": 28.75,
     "release_id": 29559127,
     "discogs_url": "https://www.discogs.com/release/29559127"
   },
@@ -12036,7 +12037,7 @@
     "artist": "We Are The Ones 10\"",
     "title": "Check My Pulse",
     "found": true,
-    "cached_at": "2026-07-06T17:03:41.306970",
+    "cached_at": "2026-07-14T15:32:56.661661",
     "num_for_sale": 0,
     "price_mint": 83.54,
     "price_nm": 74.75,
@@ -12050,7 +12051,7 @@
     "artist": "We Are The Ones 10\"",
     "title": "Death Has Lost It's Sting",
     "found": true,
-    "cached_at": "2026-07-06T17:03:45.081944",
+    "cached_at": "2026-07-14T15:33:00.532120",
     "lowest_price": 90.0,
     "num_for_sale": 2,
     "price_mint": 109.2,
@@ -12065,19 +12066,19 @@
     "artist": "Dance Gavin Dance",
     "title": "Tree City Sessions 3 Neon Yellow & Black Wave Double Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T17:03:50.169878"
+    "cached_at": "2026-07-14T15:33:05.710480"
   },
   "dance gavin dance::tree city sessions 3 orchid magenta double vinyl lp": {
     "artist": "Dance Gavin Dance",
     "title": "Tree City Sessions 3 Orchid Magenta Double Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T17:03:51.427286"
+    "cached_at": "2026-07-14T15:33:07.041038"
   },
   "dance gavin dance::pantheon ruby white smush w spring green aqua splatter double vinyl lp": {
     "artist": "Dance Gavin Dance",
     "title": "Pantheon Ruby & White Smush w/ Spring Green & Aqua Splatter Double Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T17:03:52.699167"
+    "cached_at": "2026-07-14T15:33:08.414478"
   },
   "judas priest::rocka rolla 50th anniversary glass clear vinyl": {
     "artist": "Judas Priest",
@@ -12152,7 +12153,7 @@
     "artist": "The Jackson 5",
     "title": "Ultimate Collection Lavender Seaglass 2LP",
     "found": false,
-    "cached_at": "2026-07-06T17:03:55.289136"
+    "cached_at": "2026-07-14T15:33:10.961492"
   },
   "paul mccartney::the boys of dungeon lane 1lp": {
     "artist": "Paul McCartney",
@@ -12179,7 +12180,7 @@
     "artist": "The Cranberries",
     "title": "Everybody Else Is Doing It, So Why Can't We? (Deluxe Limited Edition) 3LP",
     "found": false,
-    "cached_at": "2026-07-06T17:03:56.578215"
+    "cached_at": "2026-07-14T15:33:12.332870"
   },
   "mccoy tyner::inception acoustic sounds series lp": {
     "artist": "McCoy Tyner",
@@ -12200,9 +12201,9 @@
     "artist": "Beastie Boys",
     "title": "To The 5 Boroughs 3LP Deluxe Edition",
     "found": true,
-    "cached_at": "2026-07-06T17:04:00.300274",
-    "lowest_price": 111.71,
-    "num_for_sale": 38,
+    "cached_at": "2026-07-14T15:33:17.201255",
+    "lowest_price": 99.0,
+    "num_for_sale": 40,
     "price_mint": 128.29,
     "price_nm": 114.79,
     "price_vgplus": 87.78,
@@ -12215,7 +12216,7 @@
     "artist": "Therapy?",
     "title": "One Cure Fits All (Red LP)",
     "found": true,
-    "cached_at": "2026-07-06T17:04:04.050576",
+    "cached_at": "2026-07-14T15:33:21.037269",
     "lowest_price": 57.46,
     "num_for_sale": 4,
     "price_mint": 62.77,
@@ -12230,20 +12231,20 @@
     "artist": "Aerosmith",
     "title": "Aerosmith (Legendary Collector's Edition) 5LP",
     "found": false,
-    "cached_at": "2026-07-06T17:04:05.317791"
+    "cached_at": "2026-07-14T15:33:22.341446"
   },
   "the wallflowers::bringing down the horse": {
     "artist": "The Wallflowers",
     "title": "Bringing Down the Horse",
     "found": true,
-    "cached_at": "2026-07-06T17:04:09.227644",
-    "lowest_price": 28.74,
-    "num_for_sale": 30,
-    "price_mint": 42.74,
-    "price_nm": 38.24,
-    "price_vgplus": 29.24,
-    "price_vg": 20.25,
-    "suggested_sell_price": 38.24,
+    "cached_at": "2026-07-14T15:33:26.271511",
+    "lowest_price": 25.0,
+    "num_for_sale": 33,
+    "price_mint": 42.72,
+    "price_nm": 38.22,
+    "price_vgplus": 29.23,
+    "price_vg": 20.24,
+    "suggested_sell_price": 38.22,
     "release_id": 8510400,
     "discogs_url": "https://www.discogs.com/release/8510400"
   },
@@ -12251,8 +12252,8 @@
     "artist": "Sammy Kershaw",
     "title": "I Won't Back Down (Gold Limited Edition)",
     "found": true,
-    "cached_at": "2026-07-06T17:04:12.951404",
-    "lowest_price": 18.0,
+    "cached_at": "2026-07-14T15:33:30.096872",
+    "lowest_price": 17.0,
     "num_for_sale": 8,
     "price_mint": 48.13,
     "price_nm": 43.07,
@@ -12338,7 +12339,7 @@
     "artist": "Starset",
     "title": "\"SILOS\" Dystopian White Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T17:04:24.237819",
+    "cached_at": "2026-07-14T15:33:36.502141",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 36152194,
@@ -13719,7 +13720,7 @@
     "artist": "Ne-Yo",
     "title": "In My Own Words (20th Anniversary Limited Edition Enchanted Night) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:20.290889",
+    "cached_at": "2026-07-14T15:20:29.600300",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37726689,
@@ -13729,7 +13730,7 @@
     "artist": "AFI",
     "title": "DECEMBERUNDERGROUND (LP + 7in)",
     "found": false,
-    "cached_at": "2026-07-06T16:49:56.849022"
+    "cached_at": "2026-07-14T15:20:03.919355"
   },
   "afi::decemberunderground lp": {
     "artist": "AFI",
@@ -13878,9 +13879,9 @@
     "artist": "Brent Faiyaz",
     "title": "Sonder Son (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:54.750061",
-    "lowest_price": 466.67,
-    "num_for_sale": 1,
+    "cached_at": "2026-07-14T15:25:49.123468",
+    "lowest_price": 390.07,
+    "num_for_sale": 2,
     "price_mint": 417.33,
     "price_nm": 373.4,
     "price_vgplus": 285.54,
@@ -13893,8 +13894,8 @@
     "artist": "Marilyn Manson",
     "title": "Portrait Of An American Family",
     "found": true,
-    "cached_at": "2026-07-06T16:55:18.558768",
-    "lowest_price": 571.43,
+    "cached_at": "2026-07-14T15:25:17.220826",
+    "lowest_price": 578.03,
     "num_for_sale": 5,
     "price_mint": 712.5,
     "price_nm": 637.5,
@@ -13908,9 +13909,9 @@
     "artist": "Marilyn Manson",
     "title": "Smells Like Children Colored Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:55:22.308399",
-    "lowest_price": 491.34,
-    "num_for_sale": 5,
+    "cached_at": "2026-07-14T15:25:21.120042",
+    "lowest_price": 206.9,
+    "num_for_sale": 6,
     "price_mint": 629.28,
     "price_nm": 563.04,
     "price_vgplus": 430.56,
@@ -13929,45 +13930,45 @@
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (Opaque White)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:35.009485"
+    "cached_at": "2026-07-14T15:26:26.687330"
   },
   "boundaries::yearning the unbeautiful after vinyl white blue green purple marble blend": {
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (White + Blue + Green + Purple Marble Blend)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:36.309240"
+    "cached_at": "2026-07-14T15:26:28.041498"
   },
   "boundaries::yearning the unbeautiful after vinyl trans beer w black smoke": {
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (Trans Beer w/ Black Smoke)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:37.570722"
+    "cached_at": "2026-07-14T15:26:29.321677"
   },
   "boundaries::yearning the unbeautiful after vinyl clear w purple green smoke": {
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (Clear w/ Purple + Green Smoke)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:38.830069"
+    "cached_at": "2026-07-14T15:26:30.618851"
   },
   "boundaries::yearning the unbeautiful after vinyl orange black silver galaxy": {
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (Orange + Black + Silver Galaxy)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:40.092081"
+    "cached_at": "2026-07-14T15:26:31.897082"
   },
   "boundaries::yearning the unbeautiful after vinyl burgundy black ripple": {
     "artist": "Boundaries",
     "title": "'Yearning: The unbeautiful after' Vinyl (Burgundy + Black Ripple)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:41.347644"
+    "cached_at": "2026-07-14T15:26:33.181187"
   },
   "state champs::clear w white splatter lp": {
     "artist": "State Champs",
     "title": "Clear w/ White Splatter LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:12.627185",
-    "lowest_price": 19.99,
-    "num_for_sale": 16,
+    "cached_at": "2026-07-14T15:27:01.441666",
+    "lowest_price": 15.0,
+    "num_for_sale": 18,
     "price_mint": 24.69,
     "price_nm": 22.09,
     "price_vgplus": 16.89,
@@ -13980,7 +13981,7 @@
     "artist": "There's A Whole World Out There",
     "title": "Black Ice/Beer W/ Orange And White Splatter LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:16.387329",
+    "cached_at": "2026-07-14T15:27:05.383159",
     "lowest_price": 33.0,
     "num_for_sale": 2,
     "price_mint": 35.15,
@@ -13995,7 +13996,7 @@
     "artist": "Nothing Left To Love",
     "title": "Black Ice w/ White Splatter LP",
     "found": true,
-    "cached_at": "2026-07-06T16:57:20.159962",
+    "cached_at": "2026-07-14T15:27:09.232005",
     "num_for_sale": 0,
     "price_mint": 1747.95,
     "price_nm": 1563.95,
@@ -27602,7 +27603,7 @@
     "artist": "Various Artists",
     "title": "Stax Does The Beatles (Exclusive Silver Smoke LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:59:42.568089",
+    "cached_at": "2026-07-14T15:29:26.883583",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37761843,
@@ -27681,9 +27682,9 @@
     "artist": "I Prevail",
     "title": "Trauma",
     "found": true,
-    "cached_at": "2026-07-06T16:58:35.149752",
+    "cached_at": "2026-07-14T15:28:16.109930",
     "lowest_price": 15.0,
-    "num_for_sale": 13,
+    "num_for_sale": 14,
     "price_mint": 43.68,
     "price_nm": 39.08,
     "price_vgplus": 29.89,
@@ -27778,7 +27779,7 @@
     "artist": "Bob Marley & the Wailers",
     "title": "Rastaman Vibration (50th Anniversary Green Swirl) 1LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:16.569796",
+    "cached_at": "2026-07-14T15:20:25.701877",
     "lowest_price": 57.46,
     "num_for_sale": 6,
     "price_mint": 92.82,
@@ -27808,9 +27809,9 @@
     "artist": "Fleetwood Mac",
     "title": "Tango In The Night (1LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:51:00.417076",
-    "lowest_price": 13.33,
-    "num_for_sale": 32,
+    "cached_at": "2026-07-14T15:21:10.741591",
+    "lowest_price": 13.32,
+    "num_for_sale": 34,
     "price_mint": 17.73,
     "price_nm": 15.87,
     "price_vgplus": 12.13,
@@ -27823,9 +27824,9 @@
     "artist": "Red Hot Chili Peppers",
     "title": "Unlimited Love Deluxe Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:04.126884",
+    "cached_at": "2026-07-14T15:21:14.561692",
     "lowest_price": 16.0,
-    "num_for_sale": 112,
+    "num_for_sale": 113,
     "price_mint": 42.03,
     "price_nm": 37.6,
     "price_vgplus": 28.76,
@@ -27838,9 +27839,9 @@
     "artist": "Red Hot Chili Peppers",
     "title": "Unlimited Love Standard Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:07.898367",
+    "cached_at": "2026-07-14T15:21:18.441293",
     "lowest_price": 12.63,
-    "num_for_sale": 148,
+    "num_for_sale": 147,
     "price_mint": 33.24,
     "price_nm": 29.74,
     "price_vgplus": 22.74,
@@ -27853,9 +27854,9 @@
     "artist": "Red Hot Chili Peppers",
     "title": "Unlimited Love Store Exclusive Clear Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:51:11.663918",
+    "cached_at": "2026-07-14T15:21:22.248077",
     "lowest_price": 17.99,
-    "num_for_sale": 6,
+    "num_for_sale": 7,
     "price_mint": 49.14,
     "price_nm": 43.97,
     "price_vgplus": 33.62,
@@ -27868,9 +27869,9 @@
     "artist": "Deftones",
     "title": "White Pony (20th Anniversary) Deluxe Vinyl Box Set",
     "found": true,
-    "cached_at": "2026-07-06T16:51:15.408224",
+    "cached_at": "2026-07-14T15:21:26.111007",
     "lowest_price": 45.98,
-    "num_for_sale": 30,
+    "num_for_sale": 31,
     "price_mint": 81.68,
     "price_nm": 73.08,
     "price_vgplus": 55.89,
@@ -27883,9 +27884,9 @@
     "artist": "Starsailor",
     "title": "Silence Is Easy (20th Anniversary Edition) [1LP Turquoise]",
     "found": true,
-    "cached_at": "2026-07-06T16:51:19.149468",
+    "cached_at": "2026-07-14T15:21:29.900326",
     "lowest_price": 22.99,
-    "num_for_sale": 23,
+    "num_for_sale": 24,
     "price_mint": 47.31,
     "price_nm": 42.33,
     "price_vgplus": 32.37,
@@ -28057,7 +28058,7 @@
     "artist": "The Fault In Our Stars",
     "title": "Music From the Motion Picture (2LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:57:08.918865",
+    "cached_at": "2026-07-14T15:26:57.621110",
     "lowest_price": 17.23,
     "num_for_sale": 18,
     "price_mint": 92.76,
@@ -28084,9 +28085,9 @@
     "artist": "Rod Stewart",
     "title": "The Tears Of Hercules (1LP Green)",
     "found": true,
-    "cached_at": "2026-07-06T17:01:27.259379",
+    "cached_at": "2026-07-14T15:31:09.210591",
     "lowest_price": 13.32,
-    "num_for_sale": 31,
+    "num_for_sale": 30,
     "price_mint": 40.39,
     "price_nm": 36.14,
     "price_vgplus": 27.64,
@@ -28099,9 +28100,9 @@
     "artist": "The Corrs",
     "title": "White Light (1LP White)",
     "found": true,
-    "cached_at": "2026-07-06T17:01:30.968793",
+    "cached_at": "2026-07-14T15:31:13.000866",
     "lowest_price": 37.92,
-    "num_for_sale": 12,
+    "num_for_sale": 11,
     "price_mint": 48.07,
     "price_nm": 43.01,
     "price_vgplus": 32.89,
@@ -28114,8 +28115,8 @@
     "artist": "Robert Plant & Alison Krauss",
     "title": "Raise The Roof (2LP Coke Bottle Green)",
     "found": true,
-    "cached_at": "2026-07-06T17:01:34.897242",
-    "lowest_price": 42.25,
+    "cached_at": "2026-07-14T15:31:16.963786",
+    "lowest_price": 42.55,
     "num_for_sale": 8,
     "price_mint": 58.86,
     "price_nm": 52.66,
@@ -28129,7 +28130,7 @@
     "artist": "Pretenders",
     "title": "Pretenders II (2018 Remaster) [1LP White]",
     "found": true,
-    "cached_at": "2026-07-06T17:01:38.609315",
+    "cached_at": "2026-07-14T15:31:20.773968",
     "lowest_price": 22.65,
     "num_for_sale": 17,
     "price_mint": 47.49,
@@ -29555,7 +29556,7 @@
     "artist": "Kendrick Lamar",
     "title": "Overly Dedicated",
     "found": true,
-    "cached_at": "2026-07-06T16:49:00.547784",
+    "cached_at": "2026-07-14T15:19:20.594324",
     "num_for_sale": null,
     "price_mint": 52.44,
     "price_nm": 46.92,
@@ -29569,7 +29570,7 @@
     "artist": "Kendrick Lamar",
     "title": "Section.80",
     "found": true,
-    "cached_at": "2026-07-06T16:49:04.373691",
+    "cached_at": "2026-07-14T15:19:24.420873",
     "num_for_sale": null,
     "price_mint": 43.7,
     "price_nm": 39.1,
@@ -29807,13 +29808,13 @@
     "artist": "Snow Patrol",
     "title": "Eyes Open (20 Year Anniversary Special Edition 2LP Clear Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:49:55.616516"
+    "cached_at": "2026-07-14T15:20:02.651161"
   },
   "snow patrol::eyes open 20 year anniversary special edition 2lp gold vinyl": {
     "artist": "Snow Patrol",
     "title": "Eyes Open (20 Year Anniversary Special Edition 2LP Gold Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:49:58.107559"
+    "cached_at": "2026-07-14T15:20:05.221045"
   },
   "olivia rodrigo::sour ivc edition": {
     "artist": "Olivia Rodrigo",
@@ -29891,9 +29892,9 @@
     "artist": "Destiny's Child",
     "title": "The Writing's On The Wall (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:45.628266",
-    "lowest_price": 147.89,
-    "num_for_sale": 5,
+    "cached_at": "2026-07-14T15:24:44.098188",
+    "lowest_price": 172.41,
+    "num_for_sale": 8,
     "price_mint": 427.5,
     "price_nm": 382.5,
     "price_vgplus": 292.5,
@@ -29906,7 +29907,7 @@
     "artist": "Bad Bunny",
     "title": "Un Verano Sin Ti (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:58.237905",
+    "cached_at": "2026-07-14T15:24:56.852078",
     "num_for_sale": null,
     "price_mint": 127.06,
     "price_nm": 113.68,
@@ -32200,8 +32201,8 @@
     "artist": "Scream, Dracula, Scream!",
     "title": "Black Splatter on Clear 1LP",
     "found": true,
-    "cached_at": "2026-07-06T16:54:25.641048",
-    "lowest_price": 54.99,
+    "cached_at": "2026-07-14T15:24:15.988706",
+    "lowest_price": 49.99,
     "num_for_sale": 4,
     "price_mint": 61.75,
     "price_nm": 55.25,
@@ -32233,7 +32234,7 @@
     "artist": "Quicksand",
     "title": "Bring On The Psychics • Tan, White & Blue Color in Color • Limited to 250",
     "found": false,
-    "cached_at": "2026-07-06T17:00:39.762059"
+    "cached_at": "2026-07-14T15:30:22.669043"
   },
   "billy idol::dont stop ep limited edition lemon jelly colored vinyl": {
     "artist": "BILLY IDOL",
@@ -32362,43 +32363,43 @@
     "artist": "Movements",
     "title": "\"Happier Now\" SIGNED Ruby Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:29.116436"
+    "cached_at": "2026-07-14T15:20:38.639816"
   },
   "movements::happier now signed black ice glitter vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" SIGNED Black Ice Glitter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:30.378384"
+    "cached_at": "2026-07-14T15:20:39.921590"
   },
   "movements::happier now neon coral ghost vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" Neon Coral Ghost Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:32.862942"
+    "cached_at": "2026-07-14T15:20:42.449363"
   },
   "movements::happier now color in color milky clear and black w olive green splatter vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" Color In Color Milky Clear and Black w/ Olive Green Splatter Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:34.139134"
+    "cached_at": "2026-07-14T15:20:43.801355"
   },
   "movements::happier now sky vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" Sky Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:35.365847"
+    "cached_at": "2026-07-14T15:20:45.071290"
   },
   "movements::happier now half and half tangerine and apple red vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" Half and Half Tangerine and Apple Red Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:36.617874"
+    "cached_at": "2026-07-14T15:20:46.357324"
   },
   "movements::happier now color in color emerald and black vinyl": {
     "artist": "Movements",
     "title": "\"Happier Now\" Color In Color Emerald and Black Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:37.877377"
+    "cached_at": "2026-07-14T15:20:47.642228"
   },
   "redeye::boards of canada inferno 2lp deluxe transparent red vinyl": {
     "artist": "Redeye",
@@ -32410,7 +32411,7 @@
     "artist": "Movements",
     "title": "\"Happier Now\" Bone Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:31.616738"
+    "cached_at": "2026-07-14T15:20:41.193657"
   },
   "movements happier now lp exclusive::limited to 500 blue smoke vinyl": {
     "artist": "MOVEMENTS ‘HAPPIER NOW' LP (Exclusive",
@@ -34456,13 +34457,13 @@
     "artist": "Thin Lizzy",
     "title": "Thin Lizzy (Deluxe) 4LP",
     "found": false,
-    "cached_at": "2026-07-06T16:50:03.139690"
+    "cached_at": "2026-07-14T15:20:10.331489"
   },
   "thin lizzy::thin lizzy blue 2lp": {
     "artist": "Thin Lizzy",
     "title": "Thin Lizzy (Blue) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:01.827805",
+    "cached_at": "2026-07-14T15:20:09.030500",
     "lowest_price": 137.93,
     "num_for_sale": 3,
     "price_mint": 92.93,
@@ -34477,7 +34478,7 @@
     "artist": "Thin Lizzy",
     "title": "Thin Lizzy (Green) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:06.858901",
+    "cached_at": "2026-07-14T15:20:14.221987",
     "num_for_sale": 0,
     "price_mint": 155.11,
     "price_nm": 138.78,
@@ -34503,7 +34504,7 @@
     "artist": "Outspoken",
     "title": "The Current • Clear w/ Blue & Black Splatter • Limited to 250",
     "found": false,
-    "cached_at": "2026-07-06T16:50:44.250429"
+    "cached_at": "2026-07-14T15:20:54.299012"
   },
   "thirty seconds to mars::a beautiful lie 20th anniversary 180 gram red vinyl": {
     "artist": "THIRTY SECONDS TO MARS",
@@ -34530,7 +34531,7 @@
     "artist": "Outspoken",
     "title": "The Current • Teal Sunburst • Limited to 250",
     "found": false,
-    "cached_at": "2026-07-06T17:00:38.497126"
+    "cached_at": "2026-07-14T15:30:21.318535"
   },
   "megadeth::countdown to extinction picture disc 1lp": {
     "artist": "Megadeth",
@@ -34608,7 +34609,7 @@
     "artist": "Beartooth",
     "title": "\"Pure Ecstasy\" SIGNED Tide Pods Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T16:50:27.888395"
+    "cached_at": "2026-07-14T15:20:37.321738"
   },
   "beartooth pure ecstasy lp exclusive::limited to 500 half bluehalf purple w black splatter vinyl": {
     "artist": "BEARTOOTH 'PURE ECSTASY' LP (Exclusive",
@@ -34626,13 +34627,13 @@
     "artist": "Holding Absence",
     "title": "'Modern Life Is Lonely' Vinyl (Picture Disc)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:21.421101"
+    "cached_at": "2026-07-14T15:22:17.862172"
   },
   "holding absence::modern life is lonely vinyl baby blue bubblegum side ab w black white splatter": {
     "artist": "Holding Absence",
     "title": "'Modern Life Is Lonely' Vinyl (Baby Blue + Bubblegum Side A/B w/ Black + White Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:22.718145"
+    "cached_at": "2026-07-14T15:22:19.190068"
   },
   "warner::my chemical romance danger days true lives of the fabulous killjoys 2lp deluxe green sludge": {
     "artist": "WARNER",
@@ -34650,7 +34651,7 @@
     "artist": "Holding Absence",
     "title": "'Modern Life Is Lonely' Vinyl (White + Orange + Red Marble w/ Black Coin Flip)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:43.890850"
+    "cached_at": "2026-07-14T15:32:08.113652"
   },
   "olivia dean::messy lp": {
     "artist": "Olivia Dean",
@@ -34856,8 +34857,12 @@
   "chris cornell::carry on limited edition 2lp picture disc": {
     "artist": "Chris Cornell",
     "title": "Carry On Limited Edition 2LP Picture Disc",
-    "found": false,
-    "cached_at": "2026-07-06T16:50:12.839206"
+    "found": true,
+    "cached_at": "2026-07-14T15:20:21.851135",
+    "num_for_sale": 0,
+    "suggested_sell_price": 0.0,
+    "release_id": 37859901,
+    "discogs_url": "https://www.discogs.com/release/37859901"
   },
   "primus a handful of nuggs 12 exclusive::various color vinyl": {
     "artist": "PRIMUS ‘A HANDFUL OF NUGGS' 12\" (Exclusive",
@@ -34869,7 +34874,7 @@
     "artist": "Cher",
     "title": "3614 Jackson Highway (Rhino High Fidelity)",
     "found": true,
-    "cached_at": "2026-07-06T16:50:56.668841",
+    "cached_at": "2026-07-14T15:21:06.919593",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37499883,
@@ -34879,9 +34884,9 @@
     "artist": "Carry On",
     "title": "Limited Edition 2LP Picture Disc",
     "found": true,
-    "cached_at": "2026-07-06T16:51:40.868441",
-    "lowest_price": 300.0,
-    "num_for_sale": 1,
+    "cached_at": "2026-07-14T15:21:37.533110",
+    "lowest_price": 200.0,
+    "num_for_sale": 2,
     "price_mint": 123.49,
     "price_nm": 110.49,
     "price_vgplus": 84.49,
@@ -34906,7 +34911,7 @@
     "artist": "Off With Their Heads",
     "title": "Hospitals 20th Anniversary",
     "found": true,
-    "cached_at": "2026-07-06T16:53:16.428583",
+    "cached_at": "2026-07-14T15:23:06.751228",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37467378,
@@ -34922,14 +34927,14 @@
     "artist": "Joni Mitchell",
     "title": "Court and Spark (Rhino High Fidelity)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:17.714896",
-    "lowest_price": 113.33,
-    "num_for_sale": 1,
-    "price_mint": 54.61,
-    "price_nm": 48.87,
-    "price_vgplus": 37.37,
-    "price_vg": 25.87,
-    "suggested_sell_price": 48.87,
+    "cached_at": "2026-07-14T15:24:08.243983",
+    "lowest_price": 45.0,
+    "num_for_sale": 2,
+    "price_mint": 47.49,
+    "price_nm": 42.49,
+    "price_vgplus": 32.49,
+    "price_vg": 22.5,
+    "suggested_sell_price": 42.49,
     "release_id": 37437843,
     "discogs_url": "https://www.discogs.com/release/37437843"
   },
@@ -34937,14 +34942,14 @@
     "artist": "Dusty Springfield",
     "title": "Dusty in Memphis (Rhino High Fidelity)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:21.899820",
-    "lowest_price": 62.47,
-    "num_for_sale": 1,
-    "price_mint": 54.61,
-    "price_nm": 48.87,
-    "price_vgplus": 37.37,
-    "price_vg": 25.87,
-    "suggested_sell_price": 48.87,
+    "cached_at": "2026-07-14T15:24:12.037936",
+    "lowest_price": 34.95,
+    "num_for_sale": 2,
+    "price_mint": 47.49,
+    "price_nm": 42.49,
+    "price_vgplus": 32.49,
+    "price_vg": 22.5,
+    "suggested_sell_price": 42.49,
     "release_id": 37457253,
     "discogs_url": "https://www.discogs.com/release/37457253"
   },
@@ -34979,7 +34984,7 @@
     "artist": "Destiny's Child",
     "title": "Destiny Fulfilled (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:33.438009",
+    "cached_at": "2026-07-14T15:25:32.520174",
     "lowest_price": 59.03,
     "num_for_sale": 4,
     "price_mint": 212.93,
@@ -34994,7 +34999,7 @@
     "artist": "Marilyn Manson",
     "title": "Alternate Antichrist (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:07.216912",
+    "cached_at": "2026-07-14T15:25:05.694245",
     "num_for_sale": null,
     "price_mint": 94.18,
     "price_nm": 84.27,
@@ -35008,7 +35013,7 @@
     "artist": "Brent Faiyaz",
     "title": "A.M. Paradox / Lost",
     "found": true,
-    "cached_at": "2026-07-06T16:55:51.016871",
+    "cached_at": "2026-07-14T15:24:24.891118",
     "lowest_price": 86.21,
     "num_for_sale": 2,
     "price_mint": 56.99,
@@ -35038,14 +35043,14 @@
     "artist": "Nine Inch Nails",
     "title": "Year Zero",
     "found": true,
-    "cached_at": "2026-07-06T16:55:58.639378",
-    "lowest_price": 875.49,
-    "num_for_sale": 1,
-    "price_mint": 750.94,
-    "price_nm": 671.89,
-    "price_vgplus": 513.8,
-    "price_vg": 355.71,
-    "suggested_sell_price": 671.89,
+    "cached_at": "2026-07-14T15:25:52.949979",
+    "lowest_price": 599.99,
+    "num_for_sale": 2,
+    "price_mint": 652.99,
+    "price_nm": 584.25,
+    "price_vgplus": 446.78,
+    "price_vg": 309.31,
+    "suggested_sell_price": 584.25,
     "release_id": 1092575,
     "discogs_url": "https://www.discogs.com/release/1092575"
   },
@@ -35053,7 +35058,7 @@
     "artist": "Marilyn Manson",
     "title": "Antichrist Superstar",
     "found": true,
-    "cached_at": "2026-07-06T16:55:46.070067",
+    "cached_at": "2026-07-14T15:25:41.450370",
     "num_for_sale": null,
     "price_mint": 120.17,
     "price_nm": 107.52,
@@ -35173,7 +35178,7 @@
     "artist": "Interscope Records",
     "title": "Vacancy Store Exclusive Vinyl",
     "found": false,
-    "cached_at": "2026-07-06T17:01:53.511013"
+    "cached_at": "2026-07-14T15:31:22.069910"
   },
   "nia archives::emotional junglist 1lp": {
     "artist": "Nia Archives",
@@ -36210,19 +36215,19 @@
     "artist": "ARCHITECTS",
     "title": "ALL OUR GODS HAVE ABANDONED US (Indie Exclusive, Limited 10th Anniversary Edition, Black Splatter Colored Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:14.907570"
+    "cached_at": "2026-07-14T15:22:11.372796"
   },
   "shrek::original motion picture score picture disc vinyl preorder": {
     "artist": "SHREK",
     "title": "ORIGINAL MOTION PICTURE SCORE (Picture Disc Vinyl) [PREORDER]",
     "found": false,
-    "cached_at": "2026-07-06T16:52:16.157537"
+    "cached_at": "2026-07-14T15:22:12.675047"
   },
   "def leppard::slang rsd exclusive 30th anniversary edition double 180 gram magenta vinyl 2lp": {
     "artist": "DEF LEPPARD",
     "title": "SLANG (RSD Exclusive, 30th Anniversary Edition, Double 180 Gram Magenta Vinyl) (2LP)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:17.438059"
+    "cached_at": "2026-07-14T15:22:13.980704"
   },
   "aec::geto boys we cant be stopped 2lp 35th anniversary metallic blue vinyl": {
     "artist": "AEC",
@@ -36234,7 +36239,7 @@
     "artist": "COHEED & CAMBRIA",
     "title": "NO WORLD FOR TOMORROW (Limited Edition, Double 180 Gram Vinyl w/ Etching) (2LP)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:40.049065"
+    "cached_at": "2026-07-14T15:32:05.511506"
   },
   "gravitational forces::2lp vinyl": {
     "artist": "Gravitational Forces",
@@ -36429,7 +36434,7 @@
     "artist": "Jon Pardi",
     "title": "California Sunrise (10th Anniversary Edition Sunrise) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:26.647673",
+    "cached_at": "2026-07-14T15:20:36.020275",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37789776,
@@ -36451,7 +36456,7 @@
     "artist": "Soundtracks",
     "title": "Princess Mononoke: Image Album (Original Soundtrack) TJJA-10024 Japan OBI",
     "found": false,
-    "cached_at": "2026-07-06T16:53:33.701053"
+    "cached_at": "2026-07-14T15:23:23.406129"
   },
   "koji kondo::the legend of zelda the ocarina of time colored vinyl": {
     "artist": "Koji Kondo",
@@ -36471,8 +36476,8 @@
     "artist": "Destiny's Child",
     "title": "Survivor (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:41.861716",
-    "lowest_price": 137.93,
+    "cached_at": "2026-07-14T15:24:40.309656",
+    "lowest_price": 126.44,
     "num_for_sale": 9,
     "price_mint": 261.25,
     "price_nm": 233.75,
@@ -36501,7 +36506,7 @@
     "artist": "Lady Gaga",
     "title": "Coachella 2025: Mayhem In The Desert",
     "found": true,
-    "cached_at": "2026-07-06T16:54:53.151187",
+    "cached_at": "2026-07-14T15:24:51.742629",
     "num_for_sale": null,
     "suggested_sell_price": 0.0,
     "release_id": 35095076,
@@ -36573,7 +36578,7 @@
     "artist": "The Devil Wears Prada",
     "title": "Flowers",
     "found": true,
-    "cached_at": "2026-07-06T17:03:26.349311",
+    "cached_at": "2026-07-14T15:32:41.271678",
     "lowest_price": 59.0,
     "num_for_sale": 2,
     "price_mint": 47.49,
@@ -36588,7 +36593,7 @@
     "artist": "Luke Bryan",
     "title": "Signs (Hunt Orange) 1LP",
     "found": false,
-    "cached_at": "2026-07-06T17:04:15.530414"
+    "cached_at": "2026-07-14T15:33:32.667910"
   },
   "orchard::alice cooper along came a spider 2lp": {
     "artist": "ORCHARD",
@@ -37193,9 +37198,9 @@
     "artist": "Thomas Bangalter",
     "title": "Thomas Bangalter: Circonvolutions",
     "found": true,
-    "cached_at": "2026-07-06T16:50:52.938823",
+    "cached_at": "2026-07-14T15:21:03.123729",
     "lowest_price": 43.99,
-    "num_for_sale": 63,
+    "num_for_sale": 62,
     "price_mint": 175.75,
     "price_nm": 157.25,
     "price_vgplus": 120.25,
@@ -37208,9 +37213,9 @@
     "artist": "The Monkees",
     "title": "Greatest Hits (1LP Color)",
     "found": true,
-    "cached_at": "2026-07-06T16:56:24.988518",
-    "lowest_price": 55.0,
-    "num_for_sale": 1,
+    "cached_at": "2026-07-14T15:26:16.061565",
+    "lowest_price": 45.0,
+    "num_for_sale": 2,
     "price_mint": 42.75,
     "price_nm": 38.25,
     "price_vgplus": 29.25,
@@ -37223,31 +37228,31 @@
     "artist": "M.U.",
     "title": "The Best of Jethro Tull (1LP HSM)",
     "found": false,
-    "cached_at": "2026-07-06T16:56:26.271006"
+    "cached_at": "2026-07-14T15:26:17.520138"
   },
   "yes::live at roosevelt stadium jersey city nj 61776 3lp": {
     "artist": "Yes",
     "title": "Live At Roosevelt Stadium, Jersey City, NJ (6/17/76) (3LP)",
     "found": false,
-    "cached_at": "2026-07-06T17:01:21.541149"
+    "cached_at": "2026-07-14T15:31:05.269816"
   },
   "shadow of intent::elegy double custard colored vinyl 2lp": {
     "artist": "SHADOW OF INTENT",
     "title": "ELEGY (Double Custard Colored Vinyl) (2LP)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:37.468655"
+    "cached_at": "2026-07-14T15:32:02.881250"
   },
   "lorna shore::i feel the everblack festering within me gatefold double translucent milky clear vinyl 2lp": {
     "artist": "LORNA SHORE",
     "title": "I FEEL THE EVERBLACK FESTERING WITHIN ME (Gatefold, Double Translucent Milky Clear Vinyl) (2LP)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:38.732996"
+    "cached_at": "2026-07-14T15:32:04.211034"
   },
   "black sabbath::technical ecstasy 1lp color": {
     "artist": "Black Sabbath",
     "title": "Technical Ecstasy (1LP Color)",
     "found": false,
-    "cached_at": "2026-07-06T17:03:53.981115"
+    "cached_at": "2026-07-14T15:33:09.692217"
   },
   "a perfect circle starless 7 exclusive::various color vinyl": {
     "artist": "A PERFECT CIRCLE ‘STARLESS' 7\" (Exclusive",
@@ -37364,7 +37369,7 @@
     "artist": "It's Hard to Lie to Strangers",
     "title": "Arctic Moss & Mirage Split w/ Grape Splatter • Limited to 150",
     "found": false,
-    "cached_at": "2026-07-06T16:54:10.239940"
+    "cached_at": "2026-07-14T15:24:00.582460"
   },
   "blue october::foiled indie exclusive rsd essential double galaxy blue vinyl 2lp": {
     "artist": "BLUE OCTOBER",
@@ -37560,7 +37565,7 @@
     "artist": "Kendrick Lamar",
     "title": "Kendrick Lamar (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:33.078950",
+    "cached_at": "2026-07-14T15:19:53.731260",
     "num_for_sale": null,
     "price_mint": 89.58,
     "price_nm": 80.16,
@@ -37679,8 +37684,12 @@
   "doechii::the mixtape": {
     "artist": "Doechii",
     "title": "The Mix-Tape",
-    "found": false,
-    "cached_at": "2026-07-06T16:55:47.324441"
+    "found": true,
+    "cached_at": "2026-07-14T15:25:45.252732",
+    "num_for_sale": 0,
+    "suggested_sell_price": 0.0,
+    "release_id": 37850994,
+    "discogs_url": "https://www.discogs.com/release/37850994"
   },
   "jayz kanye west::watch the throne picture disc": {
     "artist": "Jay-Z & Kanye West",
@@ -37701,15 +37710,15 @@
     "artist": "Post Malone",
     "title": "Hollywood's Bleeding (Transparent Green) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T16:58:18.899488"
+    "cached_at": "2026-07-14T15:28:08.539289"
   },
   "pusha t::king push darkest before dawn the prelude smoke swirl 1lp": {
     "artist": "Pusha T",
     "title": "King Push Darkest Before Dawn: The Prelude (Smoke Swirl) 1LP",
     "found": true,
-    "cached_at": "2026-07-06T16:58:22.651073",
+    "cached_at": "2026-07-14T15:28:12.334458",
     "lowest_price": 38.0,
-    "num_for_sale": 10,
+    "num_for_sale": 11,
     "price_mint": 135.13,
     "price_nm": 120.91,
     "price_vgplus": 92.46,
@@ -39009,7 +39018,7 @@
     "artist": "Various Artists",
     "title": "Moulin Rouge! Highlights From Baz Luhrmann's Film (Velvet Rouge) 2LP",
     "found": false,
-    "cached_at": "2026-07-06T17:04:14.239852"
+    "cached_at": "2026-07-14T15:33:31.393027"
   },
   "matador direct::pixies trompe le monde lp remaster": {
     "artist": "MATADOR DIRECT",
@@ -39117,15 +39126,15 @@
     "artist": "Bon Iver",
     "title": "For Emma, Forever Ago (Indie Exclusive Color Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:49:18.087261"
+    "cached_at": "2026-07-14T15:19:38.474647"
   },
   "mac miller::blue slide park translucent green vinyl": {
     "artist": "Mac Miller",
     "title": "Blue Slide Park (Translucent Green Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:21.847599",
+    "cached_at": "2026-07-14T15:19:42.267650",
     "lowest_price": 25.0,
-    "num_for_sale": 68,
+    "num_for_sale": 66,
     "price_mint": 42.03,
     "price_nm": 37.61,
     "price_vgplus": 28.76,
@@ -39138,9 +39147,9 @@
     "artist": "Mac Miller",
     "title": "Best Day Ever (Lavender Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:25.537790",
+    "cached_at": "2026-07-14T15:19:46.070460",
     "lowest_price": 29.99,
-    "num_for_sale": 84,
+    "num_for_sale": 86,
     "price_mint": 48.92,
     "price_nm": 43.77,
     "price_vgplus": 33.48,
@@ -39153,9 +39162,9 @@
     "artist": "Kendrick Lamar",
     "title": "DAMN.",
     "found": true,
-    "cached_at": "2026-07-06T16:49:29.350186",
+    "cached_at": "2026-07-14T15:19:49.922027",
     "lowest_price": 5.75,
-    "num_for_sale": 77,
+    "num_for_sale": 80,
     "price_mint": 52.23,
     "price_nm": 46.73,
     "price_vgplus": 35.74,
@@ -39346,8 +39355,8 @@
     "artist": "Curtis Mayfield",
     "title": "Superfly (Rhino High Fidelity)",
     "found": true,
-    "cached_at": "2026-07-06T16:50:49.229395",
-    "lowest_price": 41.99,
+    "cached_at": "2026-07-14T15:20:59.350491",
+    "lowest_price": 59.99,
     "num_for_sale": 6,
     "price_mint": 100.47,
     "price_nm": 89.89,
@@ -39361,15 +39370,15 @@
     "artist": "BRING ME THE HORIZON",
     "title": "L.I.V.E. IN SAO PAOLO (Limited Edition, Double Clear Vinyl) (2LP) [Import]",
     "found": false,
-    "cached_at": "2026-07-06T16:52:13.634560"
+    "cached_at": "2026-07-14T15:22:10.029634"
   },
   "nine inch nails::tron ares divergence": {
     "artist": "Nine Inch Nails",
     "title": "Tron Ares: Divergence",
     "found": true,
-    "cached_at": "2026-07-06T16:53:37.378110",
+    "cached_at": "2026-07-14T15:23:27.188301",
     "lowest_price": 39.99,
-    "num_for_sale": 37,
+    "num_for_sale": 39,
     "price_mint": 94.17,
     "price_nm": 84.26,
     "price_vgplus": 64.43,
@@ -39382,9 +39391,9 @@
     "artist": "Larry Lovestein & The Velvet Revival",
     "title": "You (10\" EP)",
     "found": true,
-    "cached_at": "2026-07-06T16:53:41.188303",
+    "cached_at": "2026-07-14T15:23:31.149508",
     "lowest_price": 70.0,
-    "num_for_sale": 39,
+    "num_for_sale": 40,
     "price_mint": 213.75,
     "price_nm": 191.25,
     "price_vgplus": 146.25,
@@ -39412,7 +39421,7 @@
     "artist": "Beck",
     "title": "The Information",
     "found": true,
-    "cached_at": "2026-07-06T16:55:29.745886",
+    "cached_at": "2026-07-14T15:25:28.771399",
     "lowest_price": 850.0,
     "num_for_sale": 6,
     "price_mint": 950.0,
@@ -39427,9 +39436,9 @@
     "artist": "Frank Ocean",
     "title": "Blond White Cover Colored Vinyl",
     "found": true,
-    "cached_at": "2026-07-06T16:55:38.480122",
-    "lowest_price": 316.9,
-    "num_for_sale": 32,
+    "cached_at": "2026-07-14T15:24:28.851566",
+    "lowest_price": 319.15,
+    "num_for_sale": 30,
     "price_mint": 950.0,
     "price_nm": 850.0,
     "price_vgplus": 650.0,
@@ -39442,7 +39451,7 @@
     "artist": "Curtis Mayfield",
     "title": "Superfly (Rhino High Fidelity R2R)",
     "found": false,
-    "cached_at": "2026-07-06T16:57:05.179373"
+    "cached_at": "2026-07-14T15:26:53.652440"
   },
   "ecca vandal looking for people to unfollow lp exclusive::limited to 500 purple ribbon vinyl": {
     "artist": "ECCA VANDAL ‘LOOKING FOR PEOPLE TO UNFOLLOW' LP (Exclusive",
@@ -39460,9 +39469,9 @@
     "artist": "MODEST MOUSE",
     "title": "AN ERASER AND A MAZE (Indie Exclusive, Ocean Floor Double Vinyl) (2LP)",
     "found": true,
-    "cached_at": "2026-07-06T17:02:36.213902",
+    "cached_at": "2026-07-14T15:32:01.593126",
     "lowest_price": 34.75,
-    "num_for_sale": 62,
+    "num_for_sale": 61,
     "price_mint": 48.45,
     "price_nm": 43.35,
     "price_vgplus": 33.15,
@@ -41022,7 +41031,7 @@
     "artist": "Ocean Sleeper",
     "title": "Peace When I'm Dead Magenta Galaxy Vinyl LP",
     "found": false,
-    "cached_at": "2026-07-06T16:50:39.169253"
+    "cached_at": "2026-07-14T15:20:48.940872"
   },
   "redeye::rx bandits and the battle begun 2lp 20th anniversary deluxe vinyl": {
     "artist": "Redeye",
@@ -41121,15 +41130,15 @@
     "artist": "Young Dolph",
     "title": "King of Memphis (10 Year Anniversary Royal Blue & Gold Vinyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:49:09.378663"
+    "cached_at": "2026-07-14T15:19:29.492935"
   },
   "boards of canada::inferno": {
     "artist": "Boards of Canada",
     "title": "Inferno",
     "found": true,
-    "cached_at": "2026-07-06T16:49:08.086713",
+    "cached_at": "2026-07-14T15:19:28.185090",
     "lowest_price": 36.0,
-    "num_for_sale": 79,
+    "num_for_sale": 85,
     "price_mint": 64.43,
     "price_nm": 57.64,
     "price_vgplus": 44.08,
@@ -41142,9 +41151,9 @@
     "artist": "Olivia Rodrigo",
     "title": "Guts (Indie Exclusive Lavender Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:13.108878",
-    "lowest_price": 31.29,
-    "num_for_sale": 26,
+    "cached_at": "2026-07-14T15:19:33.353061",
+    "lowest_price": 29.0,
+    "num_for_sale": 27,
     "price_mint": 96.08,
     "price_nm": 85.97,
     "price_vgplus": 65.74,
@@ -41157,7 +41166,7 @@
     "artist": "Death Cab for Cutie",
     "title": "Transatlanticism (20th Anniversary)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:16.831196",
+    "cached_at": "2026-07-14T15:19:37.183551",
     "lowest_price": 52.08,
     "num_for_sale": 18,
     "price_mint": 61.75,
@@ -41178,14 +41187,14 @@
     "artist": "Olivia Rodrigo",
     "title": "you seem pretty sad for a girl so in love (Spark in the Dark Black Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:49:49.347647",
-    "lowest_price": 21.95,
-    "num_for_sale": 107,
-    "price_mint": 36.8,
-    "price_nm": 32.92,
-    "price_vgplus": 25.18,
-    "price_vg": 17.43,
-    "suggested_sell_price": 32.92,
+    "cached_at": "2026-07-14T15:19:57.562158",
+    "lowest_price": 24.0,
+    "num_for_sale": 110,
+    "price_mint": 38.22,
+    "price_nm": 34.2,
+    "price_vgplus": 26.15,
+    "price_vg": 18.1,
+    "suggested_sell_price": 34.2,
     "release_id": 37593093,
     "discogs_url": "https://www.discogs.com/release/37593093"
   },
@@ -41208,9 +41217,9 @@
     "artist": "Korn",
     "title": "Issues",
     "found": true,
-    "cached_at": "2026-07-06T16:49:53.078215",
+    "cached_at": "2026-07-14T15:20:01.342937",
     "lowest_price": 26.44,
-    "num_for_sale": 100,
+    "num_for_sale": 102,
     "price_mint": 39.31,
     "price_nm": 35.17,
     "price_vgplus": 26.9,
@@ -41223,7 +41232,7 @@
     "artist": "YG",
     "title": "Still Brazy (10th Anniversary Limited Edition Molten Lava) 2LP",
     "found": true,
-    "cached_at": "2026-07-06T16:50:11.595094",
+    "cached_at": "2026-07-14T15:20:18.023818",
     "num_for_sale": 0,
     "suggested_sell_price": 0.0,
     "release_id": 37673274,
@@ -41233,13 +41242,13 @@
     "artist": "Keane",
     "title": "Under The Iron Sea (Super Deluxe)",
     "found": false,
-    "cached_at": "2026-07-06T16:50:21.568863"
+    "cached_at": "2026-07-14T15:20:30.891137"
   },
   "keane::under the iron sea zoetrope 1lp": {
     "artist": "Keane",
     "title": "Under The Iron Sea (Zoetrope) 1LP",
     "found": false,
-    "cached_at": "2026-07-06T16:50:22.820256"
+    "cached_at": "2026-07-14T15:20:32.160580"
   },
   "pup the dream is over lp exclusive::limited to 300 orange creamsicle w lenticular cover vinyl": {
     "artist": "PUP ‘THE DREAM IS OVER' LP (Exclusive",
@@ -41278,33 +41287,33 @@
     "artist": "STAIND",
     "title": "BREAK THE CYCLE 25TH ANNIVERSARY LIVE (Limited Edition, Black Ice Vinyl) [PREORDER]",
     "found": false,
-    "cached_at": "2026-07-06T16:52:12.336952"
+    "cached_at": "2026-07-14T15:22:08.719233"
   },
   "gideon::4x4 vinyl black ice w red baby blue gold splatter": {
     "artist": "Gideon",
     "title": "'4x4' Vinyl (Black Ice w/ Red + Baby Blue + Gold Splatter)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:18.908884"
+    "cached_at": "2026-07-14T15:22:15.272950"
   },
   "gideon::4x4 vinyl exclusive picture disc": {
     "artist": "Gideon",
     "title": "'4x4' Vinyl (Exclusive Picture Disc)",
     "found": false,
-    "cached_at": "2026-07-06T16:52:20.148931"
+    "cached_at": "2026-07-14T15:22:16.560471"
   },
   "marilyn manson::mechanical animals deluxe edition": {
     "artist": "Marilyn Manson",
     "title": "Mechanical Animals (Deluxe Edition)",
     "found": false,
-    "cached_at": "2026-07-06T16:54:34.422911"
+    "cached_at": "2026-07-14T15:24:21.079032"
   },
   "ween::the mollusk": {
     "artist": "Ween",
     "title": "The Mollusk",
     "found": true,
-    "cached_at": "2026-07-06T16:54:49.358921",
+    "cached_at": "2026-07-14T15:24:47.979625",
     "lowest_price": 599.99,
-    "num_for_sale": 2,
+    "num_for_sale": 3,
     "price_mint": 1174.49,
     "price_nm": 1050.86,
     "price_vgplus": 803.6,
@@ -41317,7 +41326,7 @@
     "artist": "Jay-Z & Kanye West",
     "title": "Watch The Throne (Colored Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T16:55:11.058082",
+    "cached_at": "2026-07-14T15:25:09.490435",
     "num_for_sale": null,
     "price_mint": 37.61,
     "price_nm": 33.65,
@@ -41331,8 +41340,8 @@
     "artist": "Jim Legxacy",
     "title": "Black British Music",
     "found": true,
-    "cached_at": "2026-07-06T16:55:26.019841",
-    "lowest_price": 23.49,
+    "cached_at": "2026-07-14T15:25:24.900222",
+    "lowest_price": 22.59,
     "num_for_sale": 12,
     "price_mint": 31.65,
     "price_nm": 28.32,
@@ -41352,15 +41361,15 @@
     "artist": "Gideon",
     "title": "'4x4' Vinyl (Red + Silver Side A/B w/ Glitter)",
     "found": false,
-    "cached_at": "2026-07-06T17:02:41.326943"
+    "cached_at": "2026-07-14T15:32:06.792105"
   },
   "olivia rodrigo::sour": {
     "artist": "Olivia Rodrigo",
     "title": "Sour",
     "found": true,
-    "cached_at": "2026-07-06T17:03:48.891425",
-    "lowest_price": 15.53,
-    "num_for_sale": 157,
+    "cached_at": "2026-07-14T15:33:04.393794",
+    "lowest_price": 15.42,
+    "num_for_sale": 166,
     "price_mint": 45.52,
     "price_nm": 40.73,
     "price_vgplus": 31.15,
@@ -42680,9 +42689,9 @@
     "artist": "Metallica",
     "title": "...And Justice For Jason",
     "found": true,
-    "cached_at": "2026-07-06T16:48:56.827862",
+    "cached_at": "2026-07-14T15:19:16.800532",
     "lowest_price": 28.74,
-    "num_for_sale": 108,
+    "num_for_sale": 113,
     "price_mint": 128.34,
     "price_nm": 114.83,
     "price_vgplus": 87.81,
@@ -42764,7 +42773,7 @@
     "artist": "Soundtracks",
     "title": "Once Upon A Time: The Tarantino Sound Vol. 2 (Yellow VInyl)",
     "found": false,
-    "cached_at": "2026-07-06T16:53:25.127693"
+    "cached_at": "2026-07-14T15:23:15.719547"
   },
   "staind::break the cycle": {
     "artist": "Staind",
@@ -42784,7 +42793,7 @@
     "artist": "Bill Evans",
     "title": "Explorations (Exclusive Nardis Flame Swirl LP)",
     "found": true,
-    "cached_at": "2026-07-06T16:59:38.847870",
+    "cached_at": "2026-07-14T15:29:23.070263",
     "lowest_price": 50.0,
     "num_for_sale": 1,
     "price_mint": 47.5,
@@ -42799,9 +42808,9 @@
     "artist": "IN FLAMES",
     "title": "THE JESTER RACE (Transparent Yellow Vinyl)",
     "found": true,
-    "cached_at": "2026-07-06T17:02:32.448190",
-    "lowest_price": 28.99,
-    "num_for_sale": 23,
+    "cached_at": "2026-07-14T15:31:57.742653",
+    "lowest_price": 29.0,
+    "num_for_sale": 28,
     "price_mint": 33.84,
     "price_nm": 30.28,
     "price_vgplus": 23.15,
@@ -44569,13 +44578,13 @@
     "artist": "FIVE FINGER DEATH PUNCH",
     "title": "LEGACY (Indie Exclusive, Gold Marble Vinyl) [PREORDER]",
     "found": false,
-    "cached_at": "2026-07-06T16:52:11.057972"
+    "cached_at": "2026-07-14T15:22:07.338726"
   },
   "frank ocean::blond alt colored cover": {
     "artist": "Frank Ocean",
     "title": "Blond (Alt Colored Cover)",
     "found": true,
-    "cached_at": "2026-07-06T16:54:33.139955",
+    "cached_at": "2026-07-14T15:24:32.666687",
     "num_for_sale": null,
     "price_mint": 100.45,
     "price_nm": 89.87,
@@ -49653,5 +49662,47 @@
     "title": "Various Color Vinyl)",
     "found": false,
     "cached_at": "2026-07-13T16:38:19.153454"
+  },
+  "mastodon::marrow deep indie exclusive double coke bottle green vinyl 2lp": {
+    "artist": "MASTODON",
+    "title": "MARROW DEEP (Indie Exclusive, Double Coke Bottle Green Vinyl) (2LP)",
+    "found": false,
+    "cached_at": "2026-07-14T15:22:06.049216"
+  },
+  "the sex pistols::filthy lucre live 30th anniversary red 2lp": {
+    "artist": "The Sex Pistols",
+    "title": "Filthy Lucre Live (30th Anniversary Red) 2LP",
+    "found": false,
+    "cached_at": "2026-07-14T15:33:37.791677"
+  },
+  "sony::judas priest invincible shield 2lp black vinyl": {
+    "artist": "SONY",
+    "title": "JUDAS PRIEST ‘INVINCIBLE SHIELD' 2LP (Black Vinyl)",
+    "found": true,
+    "cached_at": "2026-07-14T15:33:41.590947",
+    "lowest_price": 24.99,
+    "num_for_sale": 98,
+    "price_mint": 45.66,
+    "price_nm": 40.85,
+    "price_vgplus": 31.24,
+    "price_vg": 21.63,
+    "suggested_sell_price": 40.85,
+    "release_id": 30025216,
+    "discogs_url": "https://www.discogs.com/release/30025216"
+  },
+  "warner::dream theater images and words lp clear vinyl": {
+    "artist": "WARNER",
+    "title": "DREAM THEATER 'IMAGES AND WORDS' LP (Clear Vinyl)",
+    "found": true,
+    "cached_at": "2026-07-14T15:33:45.454011",
+    "lowest_price": 22.0,
+    "num_for_sale": 105,
+    "price_mint": 38.22,
+    "price_nm": 34.2,
+    "price_vgplus": 26.15,
+    "price_vg": 18.1,
+    "suggested_sell_price": 34.2,
+    "release_id": 32591535,
+    "discogs_url": "https://www.discogs.com/release/32591535"
   }
 }
