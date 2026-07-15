@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 123
+uDiscover Music: kept 115
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 74
+Brooklyn Vegan: kept 78
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 43
+Revolver: kept 44
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -100,7 +100,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 93
+Craft Recordings: kept 92
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -128,7 +128,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 117
+Interscope Records: kept 118
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -190,7 +190,7 @@ Scraping: Hopeless Records (merchnow_store)
 ==================================================
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
-Hopeless Records: kept 56
+Hopeless Records: kept 57
 
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
@@ -399,21 +399,21 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 32 candidate vinyl items
-Amazon: kept 10
+Amazon: found 44 candidate vinyl items
+Amazon: found 28 candidate vinyl items
+Amazon: kept 11
 
 ==================================================
 Scraping: Target (target_catalog_source)
 ==================================================
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 4389 entries
-[Discogs] Enriching 2795 vinyl records with Mint pricing...
+[Discogs] Enriching 2793 vinyl records with Mint pricing...
 [Discogs] Cache saved (4389 entries)
 [Discogs] Enrichment complete!
 
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 281664 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 281532 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -771,7 +771,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZentaskaiAnalog Assets, Vol. 04 —  (Mask)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 308 entries
-[UpcomingVinyl] Got 489239 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 489245 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -795,7 +795,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 302
 [UpcomingVinyl] 302 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2786 buy signals saved to buy_signals.json
+[BuySignals] 2782 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -803,20 +803,20 @@ SOURCE STATUS SUMMARY
   Rollin Records: 231 deals
   Rollin Preorders: 231 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 123 deals
+  uDiscover Music: 115 deals
   Fearless Records: 93 deals
   Fearless Vinyl: 93 deals
   Rise Records: 71 deals
   Rise All: 71 deals
-  Brooklyn Vegan: 74 deals
-  Revolver: 43 deals
+  Brooklyn Vegan: 78 deals
+  Revolver: 44 deals
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
-  Craft Recordings: 93 deals
+  Craft Recordings: 92 deals
   MNRK Heavy: 136 deals
   Equal Vision: 90 deals
   Rhino: 125 deals
-  Interscope Records: 117 deals
+  Interscope Records: 118 deals
   SharpTone Records: 90 deals
   Rock Metal Fan Nation: 114 deals
   RMFN All: 114 deals
@@ -824,7 +824,7 @@ SOURCE STATUS SUMMARY
   Solid State Records: 56 deals
   Solid State Vinyl: 56 deals
   Pure Noise Records: 79 deals
-  Hopeless Records: 56 deals
+  Hopeless Records: 57 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 73 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
@@ -839,17 +839,17 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 11 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
-Brooklyn Vegan: 74
-Craft Recordings: 93
+Amazon: 11
+Brooklyn Vegan: 78
+Craft Recordings: 92
 Equal Vision: 90
 Fearless Records: 93
 Fearless Vinyl: 93
-Hopeless Records: 56
+Hopeless Records: 57
 Interscope Records: 115
 MNRK Heavy: 135
 Newbury Comics: 148
@@ -857,7 +857,7 @@ Newbury Preorders: 148
 Pirates Press Records: 58
 Pure Noise Records: 79
 r/VinylReleases: 46
-Revolver: 43
+Revolver: 44
 Rhino: 122
 Rise All: 71
 Rise Records: 71
@@ -871,5 +871,5 @@ Solid State Vinyl: 51
 Sound of Vinyl: 228
 Sumerian Records: 63
 Target: 1
-uDiscover Music: 122
+uDiscover Music: 114
 Walmart: 1
