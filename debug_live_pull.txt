@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 87
+Brooklyn Vegan: kept 92
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 45
+Revolver: kept 48
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -100,7 +100,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 93
+Craft Recordings: kept 92
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -148,11 +148,18 @@ Rock Metal Fan Nation: kept 114
 Scraping: RMFN All (shopify_store)
 ==================================================
   -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
+  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://rmfnvinyl.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://rmfnvinyl.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✗ https://rmfnvinyl.com/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://rmfnvinyl.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://rmfnvinyl.com/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✗ https://rmfnvinyl.com/collections/all/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://rmfnvinyl.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✓ https://rmfnvinyl.com/collections/vinyl/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 114
+RMFN All: kept 208
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -164,18 +171,23 @@ Sumerian Records: kept 65
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
-Solid State Records: 167 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 166 products
+Solid State Records: 166 products via Shopify JSON
 Solid State Records: kept 56
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
 ==================================================
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
-Solid State Vinyl: 167 products via Shopify JSON
+  -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://solidstaterecords.store/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://solidstaterecords.store/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✗ https://solidstaterecords.store/products.json?limit=250 -> HTTP Error 503: Service Unavailable
+  -> retry 1/2 for https://solidstaterecords.store/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://solidstaterecords.store/collections/all/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  ✓ https://solidstaterecords.store/collections/all/products.json?limit=250 -> 166 products
+Solid State Vinyl: 166 products via Shopify JSON
 Solid State Vinyl: kept 56
 
 ==================================================
@@ -183,11 +195,12 @@ Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
 Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 79
+Pure Noise Records: kept 78
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
 ==================================================
+  -> retry 1/2 for https://hopelessrecords.merchnow.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
 Hopeless Records: kept 57
@@ -232,13 +245,13 @@ Scraping: Smartpunk Records (shopify_store)
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✗ https://smartpunkmerchandise.myshopify.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 503: Service Unavailable
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
+  -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 503: Service Unavailable
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
 Smartpunk Records: 0 products via Shopify JSON
@@ -250,6 +263,7 @@ Smartpunk Records: HTML source failed | HTTP Error 404: Not Found
 ==================================================
 Scraping: Spinefarm Records (merchnow_store)
 ==================================================
+  -> retry 1/2 for https://spinefarm.merchnow.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://spinefarm.merchnow.com/products.json?limit=250 -> 250 products
 Spinefarm Records: 250 products via Shopify JSON
 Spinefarm Records: kept 0
@@ -399,9 +413,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 42 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: kept 9
+Amazon: found 40 candidate vinyl items
+Amazon: found 30 candidate vinyl items
+Amazon: kept 7
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +441,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 4438 entries
-[Discogs] Enriching 2801 vinyl records with Mint pricing...
-[Discogs] Cache saved (4438 entries)
+[Discogs] Loaded cache with 4478 entries
+[Discogs] Enriching 2899 vinyl records with Mint pricing...
+[Discogs] Cache saved (4478 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +460,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 281532 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 281688 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -795,7 +809,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 302
 [UpcomingVinyl] 302 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2793 buy signals saved to buy_signals.json
+[BuySignals] 2893 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -808,22 +822,22 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 92 deals
   Rise Records: 71 deals
   Rise All: 71 deals
-  Brooklyn Vegan: 87 deals
-  Revolver: 45 deals
+  Brooklyn Vegan: 92 deals
+  Revolver: 48 deals
   Newbury Comics: 149 deals
   Newbury Preorders: 149 deals
-  Craft Recordings: 93 deals
+  Craft Recordings: 92 deals
   MNRK Heavy: 136 deals
   Equal Vision: 90 deals
   Rhino: 125 deals
   Interscope Records: 118 deals
   SharpTone Records: 90 deals
   Rock Metal Fan Nation: 114 deals
-  RMFN All: 114 deals
+  RMFN All: 208 deals
   Sumerian Records: 65 deals
   Solid State Records: 56 deals
   Solid State Vinyl: 56 deals
-  Pure Noise Records: 79 deals
+  Pure Noise Records: 78 deals
   Hopeless Records: 57 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 73 deals
@@ -839,13 +853,13 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 9 items | pages: 7 | robot walls: 0
+  Amazon: 7 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 9
-Brooklyn Vegan: 87
-Craft Recordings: 93
+Amazon: 7
+Brooklyn Vegan: 92
+Craft Recordings: 92
 Equal Vision: 90
 Fearless Records: 92
 Fearless Vinyl: 92
@@ -855,13 +869,13 @@ MNRK Heavy: 135
 Newbury Comics: 149
 Newbury Preorders: 149
 Pirates Press Records: 58
-Pure Noise Records: 79
+Pure Noise Records: 78
 r/VinylReleases: 45
-Revolver: 45
+Revolver: 48
 Rhino: 122
 Rise All: 71
 Rise Records: 71
-RMFN All: 114
+RMFN All: 208
 Rock Metal Fan Nation: 114
 Rollin Preorders: 230
 Rollin Records: 230
