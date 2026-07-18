@@ -35061,19 +35061,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Strike Anywhere",
-    "title": "Nightmares Of The West Swamp Green & Doublemint Galaxy",
-    "price": 9.0,
-    "source": "Pure Noise Records",
-    "link": "https://purenoise.merchnow.com/products/saw0notwsw-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/products/fac2f5737b5f49929eda6306a8809615.jpg?v=1591907283",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Sincere Engineer",
     "title": "Sincere Engineer 'Probable Claws' Arborvitae Evergreen LP",
     "price": 27.0,
@@ -36600,6 +36587,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
