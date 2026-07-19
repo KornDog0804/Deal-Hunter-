@@ -1,14 +1,12 @@
-[PriceLookup] Loaded 2879 deals
+[PriceLookup] Loaded 2872 deals
 [PriceLookup] Cache TTL: 7 days
 [PriceLookup] Min score for lookup: 45
 [PriceLookup] Eligible deals (score >= 45): 2815
-[PriceLookup] Cache entries: 5062
+[PriceLookup] Cache entries: 5114
 [PriceLookup] Progress: 25 lookups done...
 [PriceLookup] Progress: 50 lookups done...
 [PriceLookup] Progress: 75 lookups done...
 [PriceLookup] Progress: 100 lookups done...
-[Discogs] Price suggestions error for release 4289929: The read operation timed out
-[Discogs] Rate limited, sleeping 5s...
 [PriceLookup] Progress: 125 lookups done...
 [PriceLookup] Progress: 150 lookups done...
 [PriceLookup] Progress: 175 lookups done...
@@ -23,8 +21,8 @@
 
 [PriceLookup] Summary:
   Lookups performed: 350
-  Cache hits: 1919
+  Cache hits: 2357
   Skipped (low score): 0
-  Deals enriched with real prices: 1092
+  Deals enriched with real prices: 1358
 [PriceLookup] Updated /home/runner/work/Deal-Hunter-/Deal-Hunter-/live_deals.json
-[PriceLookup] Cache saved (5114 entries)
+[PriceLookup] Cache saved (5122 entries)
