@@ -50546,5 +50546,96 @@
     "discogs_num_for_sale": 1,
     "discogs_have": 48,
     "discogs_want": 38
+  },
+  "loathe|a stranger to you white": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Loathe (2)",
+    "discogs_title": "A Stranger To You",
+    "discogs_release_id": 37903920,
+    "discogs_url": "https://www.discogs.com/release/37903920-Loathe-A-Stranger-To-You",
+    "discogs_mint_price": 37.99,
+    "discogs_lowest": 37.99,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 117,
+    "discogs_want": 21
+  },
+  "unknown artist|vv easy jace cameron uv printed bubble ultra 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|12 track tiktok": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2864,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "confessions ii|grindr variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "311|311 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "311",
+    "discogs_title": "311",
+    "discogs_release_id": 10415139,
+    "discogs_url": "https://www.discogs.com/release/10415139-311-311",
+    "discogs_mint_price": 21.14,
+    "discogs_lowest": 21.14,
+    "discogs_num_for_sale": 39,
+    "discogs_have": 2163,
+    "discogs_want": 508
+  },
+  "unknown artist|home grown head age of the con": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|neon white soundtrack part 1 the wicked heart 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cities aviv|even colder spring": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|beck midnight vultures": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.311,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
