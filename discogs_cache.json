@@ -50637,5 +50637,261 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "the three sounds|soul symphony": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Three Sounds",
+    "discogs_title": "Soul Symphony",
+    "discogs_release_id": 32646609,
+    "discogs_url": "https://www.discogs.com/release/32646609-The-Three-Sounds-Soul-Symphony",
+    "discogs_mint_price": 4.0,
+    "discogs_lowest": 4.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 0,
+    "discogs_want": 15
+  },
+  "mel torme|swings shubert alley": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Mel Tormé",
+    "discogs_title": "Swings Shubert Alley",
+    "discogs_release_id": 4409865,
+    "discogs_url": "https://www.discogs.com/release/4409865-Mel-Torm%C3%A9-Swings-Shubert-Alley",
+    "discogs_mint_price": 7.3,
+    "discogs_lowest": 7.3,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 43,
+    "discogs_want": 13
+  },
+  "glenn danzig who killed marilyn lp|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "orchard|danzig black hell 12 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|case lang veirs case lang veirs 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6967,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|twenty one pilots more than we ever imagined 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|king gizzard and the lizard wizard skull x ray": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|deadpool and wolverine": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8019,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Various",
+    "discogs_title": "Deadpool & Wolverine (Original Motion Picture Soundtrack)",
+    "discogs_release_id": 31328410,
+    "discogs_url": "https://www.discogs.com/release/31328410-Various-Deadpool-Wolverine-Original-Motion-Picture-Soundtrack",
+    "discogs_mint_price": 20.0,
+    "discogs_lowest": 20.0,
+    "discogs_num_for_sale": 43,
+    "discogs_have": 3564,
+    "discogs_want": 615
+  },
+  "midi matilda|greatest hits probably": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Midi Matilda",
+    "discogs_title": "Greatest Hits, Probably",
+    "discogs_release_id": 37832235,
+    "discogs_url": "https://www.discogs.com/release/37832235-Midi-Matilda-Greatest-Hits-Probably",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 1,
+    "discogs_want": 0
+  },
+  "unknown artist|parachute the way it was": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the jimi hendrix experience|are you experienced": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Jimi Hendrix Experience",
+    "discogs_title": "Are You Experienced?",
+    "discogs_release_id": 23480339,
+    "discogs_url": "https://www.discogs.com/release/23480339-The-Jimi-Hendrix-Experience-Are-You-Experienced",
+    "discogs_mint_price": 6.16,
+    "discogs_lowest": 6.16,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 44,
+    "discogs_want": 284
+  },
+  "channel tres|enigma pov": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3344,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "finding emily os|piccadilly records 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.578,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "uncle acid and the deadbeats|shapes of midnight purple colour": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3312,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "uncle acid and the deadbeats|shapes of midnight": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3992,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rodriguez|cold fact": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Rodriguez",
+    "discogs_title": "Cold Fact",
+    "discogs_release_id": 36738814,
+    "discogs_url": "https://www.discogs.com/release/36738814-Rodriguez-Cold-Fact",
+    "discogs_mint_price": 30.99,
+    "discogs_lowest": 30.99,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 35,
+    "discogs_want": 21
+  },
+  "debut|bj rk": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3547,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "j cole|the fall off": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "J. Cole",
+    "discogs_title": "The Fall-Off",
+    "discogs_release_id": 37425885,
+    "discogs_url": "https://www.discogs.com/release/37425885-J-Cole-The-Fall-Off",
+    "discogs_mint_price": 44.99,
+    "discogs_lowest": 44.99,
+    "discogs_num_for_sale": 52,
+    "discogs_have": 669,
+    "discogs_want": 59
+  },
+  "emery|styrofoam": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7257,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "de la soul|stakes is high 30th anniversary 4x ltd to 600": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|signed american football american football": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6875,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "restock kim petras|turn off the light": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Kim Petras",
+    "discogs_title": "Turn Off The Light",
+    "discogs_release_id": 16154260,
+    "discogs_url": "https://www.discogs.com/release/16154260-Kim-Petras-Turn-Off-The-Light",
+    "discogs_mint_price": 110.0,
+    "discogs_lowest": 110.0,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 1448,
+    "discogs_want": 1848
+  },
+  "kurt travis|anywhere s better": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4451,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "waylon jennings willie nelson jessi colter and tompall glaser|august 28 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6597,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
