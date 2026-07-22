@@ -14716,6 +14716,19 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Redeye",
+    "title": "FLYING LOTUS '1983' LP",
+    "price": 30.99,
+    "source": "Brooklyn Vegan",
+    "link": "https://shop.brooklynvegan.com/products/flying-lotus-1983-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/4527934-3677229.jpg?v=1784671574",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "SECRETLY DISTRO",
     "title": "MINUS THE BEAR 'BANDS LIKE IT WHEN YOU YELL \"YAR\" AT THEM' EP (Puget Sound Vinyl)",
     "price": 19.99,
@@ -22152,32 +22165,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Daddy Yankee",
-    "title": "El Cartel The Big Boss (Purple 2-LP)",
-    "price": 36.0,
-    "source": "Craft Recordings",
-    "link": "https://craftrecordings.com/products/daddy-yankee-el-cartel-the-big-boss-2-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/DaddyYankee_ElCartel-TheBigBoss_OpaquePurple.png?v=1770761058",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "Daddy Yankee",
-    "title": "Talento de Barrio (Red 2-LP)",
-    "price": 36.0,
-    "source": "Craft Recordings",
-    "link": "https://craftrecordings.com/products/daddy-yankee-talento-de-barrio-2-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0015/0840/9399/files/DaddyYankee_TalentodeBarrio_Red.png?v=1770761145",
-    "score": 0,
-    "lane": "PASS",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Downswing",
     "title": "And Everything Was Dark (Yellow Blend)",
     "price": 28.98,
@@ -29368,7 +29355,7 @@
   },
   {
     "artist": "INTERPOL",
-    "title": "THIS MIRROR WEIGHS A TON (Indie Exclusive, Double Transparent Red Vinyl) (2LP [PREORDER]",
+    "title": "THIS MIRROR WEIGHS A TON (Indie Exclusive, Double Transparent Red Vinyl) (2LP) [PREORDER]",
     "price": 34.98,
     "source": "Rock Metal Fan Nation",
     "link": "https://rmfnvinyl.com/products/interpol-this-mirror-weighs-a-ton-indie-exclusive-double-transparent-red-vinyl-2lp-preorder",
@@ -30850,7 +30837,7 @@
   },
   {
     "artist": "INTERPOL",
-    "title": "THIS MIRROR WEIGHS A TON (Indie Exclusive, Double Transparent Red Vinyl) (2LP [PREORDER]",
+    "title": "THIS MIRROR WEIGHS A TON (Indie Exclusive, Double Transparent Red Vinyl) (2LP) [PREORDER]",
     "price": 34.98,
     "source": "RMFN All",
     "link": "https://rmfnvinyl.com/products/interpol-this-mirror-weighs-a-ton-indie-exclusive-double-transparent-red-vinyl-2lp-preorder",
@@ -36977,6 +36964,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
