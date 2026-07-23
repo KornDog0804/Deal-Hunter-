@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 116
+uDiscover Music: kept 111
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 80
+Revolver: kept 81
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -399,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 36 candidate vinyl items
+Amazon: found 35 candidate vinyl items
+Amazon: kept 9
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 4642 entries
-[Discogs] Enriching 2888 vinyl records with Mint pricing...
-[Discogs] Cache saved (4642 entries)
+[Discogs] Loaded cache with 4693 entries
+[Discogs] Enriching 2892 vinyl records with Mint pricing...
+[Discogs] Cache saved (4693 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -442,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 236047 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 235792 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -719,7 +718,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Yo-Yo MaSimply Baroque (Aqua) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Zan & CodyBeautiful N Damned —  (Frontiers New Recordings Physical Only)
 [UpcomingVinyl] li>h2 approach found 255 entries
-[UpcomingVinyl] Got 467279 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 467564 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -743,7 +742,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 252
 [UpcomingVinyl] 252 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2889 buy signals saved to buy_signals.json
+[BuySignals] 2887 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -751,13 +750,13 @@ SOURCE STATUS SUMMARY
   Rollin Records: 230 deals
   Rollin Preorders: 230 deals
   Sound of Vinyl: 230 deals
-  uDiscover Music: 116 deals
+  uDiscover Music: 111 deals
   Fearless Records: 92 deals
   Fearless Vinyl: 92 deals
   Rise Records: 73 deals
   Rise All: 73 deals
   Brooklyn Vegan: 144 deals
-  Revolver: 80 deals
+  Revolver: 81 deals
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
   Craft Recordings: 88 deals
@@ -787,11 +786,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 9 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 9
 Brooklyn Vegan: 144
 Craft Recordings: 88
 Equal Vision: 89
@@ -804,8 +803,8 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 59
 Pure Noise Records: 77
-r/VinylReleases: 45
-Revolver: 80
+r/VinylReleases: 44
+Revolver: 81
 Rhino: 121
 Rise All: 73
 Rise Records: 73
@@ -819,5 +818,5 @@ Solid State Vinyl: 51
 Sound of Vinyl: 228
 Sumerian Records: 65
 Target: 1
-uDiscover Music: 115
+uDiscover Music: 110
 Walmart: 1
