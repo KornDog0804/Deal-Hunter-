@@ -51261,5 +51261,524 @@
     "discogs_num_for_sale": 6,
     "discogs_have": 43,
     "discogs_want": 551
+  },
+  "counting crows|august and everything after 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Counting Crows",
+    "discogs_title": "August And Everything After",
+    "discogs_release_id": 9982250,
+    "discogs_url": "https://www.discogs.com/release/9982250-Counting-Crows-August-And-Everything-After",
+    "discogs_mint_price": 26.5,
+    "discogs_lowest": 26.5,
+    "discogs_num_for_sale": 34,
+    "discogs_have": 6536,
+    "discogs_want": 1400
+  },
+  "aec|american psycho comic series soundtrack 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|the smiths louder than bombs 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|modest mouse the moon and antarctica 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|311 greatest hits 93 03 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chamaco ramirez|alive and kicking": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Chamaco Ramirez",
+    "discogs_title": "Alive And Kicking",
+    "discogs_release_id": 8629726,
+    "discogs_url": "https://www.discogs.com/release/8629726-Chamaco-Ramirez-Alive-And-Kicking",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 24,
+    "discogs_want": 60
+  },
+  "interscope records|rftc": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7785,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Rocket From The Crypt",
+    "discogs_title": "RFTC",
+    "discogs_release_id": 1345162,
+    "discogs_url": "https://www.discogs.com/release/1345162-Rocket-From-The-Crypt-RFTC",
+    "discogs_mint_price": 88.89,
+    "discogs_lowest": 88.89,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 497,
+    "discogs_want": 327
+  },
+  "hound|red velvet": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.76,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Johnny Cash",
+    "discogs_title": "Red Velvet",
+    "discogs_release_id": 5418640,
+    "discogs_url": "https://www.discogs.com/release/5418640-Johnny-Cash-Red-Velvet",
+    "discogs_mint_price": 2.5,
+    "discogs_lowest": 2.5,
+    "discogs_num_for_sale": 19,
+    "discogs_have": 94,
+    "discogs_want": 14
+  },
+  "hound|hardwood brown": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2837,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hound|180g audiophile edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5918,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hound|standard red split": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6942,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the hush sound|like vines friday 12 et": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|miranda lambert crisco alt cover butter yellow": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "susannah joffe|dust settles and so will i with signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "edward sharpe and the magnetic zeros|up from below": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Edward Sharpe And The Magnetic Zeros",
+    "discogs_title": "Up From Below",
+    "discogs_release_id": 37536933,
+    "discogs_url": "https://www.discogs.com/release/37536933-Edward-Sharpe-And-The-Magnetic-Zeros-Up-From-Below",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 6,
+    "discogs_want": 1
+  },
+  "charli xcx|music fashion film b sides box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2884,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "murex|inventio": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7129,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "korn|the nothing": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Korn",
+    "discogs_title": "The Nothing",
+    "discogs_release_id": 14129842,
+    "discogs_url": "https://www.discogs.com/release/14129842-Korn-The-Nothing",
+    "discogs_mint_price": 26.65,
+    "discogs_lowest": 26.65,
+    "discogs_num_for_sale": 97,
+    "discogs_have": 2878,
+    "discogs_want": 312
+  },
+  "sepultura|beneath the remains": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sepultura",
+    "discogs_title": "Beneath The Remains",
+    "discogs_release_id": 3527742,
+    "discogs_url": "https://www.discogs.com/release/3527742-Sepultura-Beneath-The-Remains",
+    "discogs_mint_price": 51.64,
+    "discogs_lowest": 51.64,
+    "discogs_num_for_sale": 13,
+    "discogs_have": 2467,
+    "discogs_want": 914
+  },
+  "spread joy|iii": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8682,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sebadoh",
+    "discogs_title": "III",
+    "discogs_release_id": 386314,
+    "discogs_url": "https://www.discogs.com/release/386314-Sebadoh-III",
+    "discogs_mint_price": 90.67,
+    "discogs_lowest": 90.67,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 1130,
+    "discogs_want": 958
+  },
+  "inpatient|asylum": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7867,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Disturbed",
+    "discogs_title": "Asylum",
+    "discogs_release_id": 9538264,
+    "discogs_url": "https://www.discogs.com/release/9538264-Disturbed-Asylum",
+    "discogs_mint_price": 150.0,
+    "discogs_lowest": 150.0,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 329,
+    "discogs_want": 493
+  },
+  "q tip the renaissance|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "buraka som sistema|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "westside cowboy|it goes on": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7538,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|punk o rama vol 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5105,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "charli xcx|camera 7 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "not for radio|melt park ave signed indie translucent wood": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "protomartyr|hotel usona": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "protomartyr|hotel usona domino mart": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|dusky signals 2x marbled": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "imminence|axis mundi brown bone 250": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "benny the butcher fuego base and b f|ashes in the safe color": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "counting crows|54 98": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3378,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "clairo|sling restock": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|petal translucent pearly white": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sasha and john digweed|northern exposure redux": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "amon amarth|the allfathers awakening": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pain of truth|pain of truth": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.92,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Pain Of Truth (2) / Age Of Apocalypse",
+    "discogs_title": "Pain Of Truth / Age Of Apocalypse",
+    "discogs_release_id": 17864686,
+    "discogs_url": "https://www.discogs.com/release/17864686-Pain-Of-Truth-2-Age-Of-Apocalypse-Pain-Of-Truth-Age-Of-Apocalypse",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 60,
+    "discogs_want": 98
+  },
+  "m83|i wrote you a letter indies only black and white w obi strip": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "imminence|axis mundi": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7785,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Adjustment Bureau",
+    "discogs_title": "Axis Mundi",
+    "discogs_release_id": 14697888,
+    "discogs_url": "https://www.discogs.com/release/14697888-Adjustment-Bureau-Axis-Mundi",
+    "discogs_mint_price": 32.28,
+    "discogs_lowest": 32.28,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 108,
+    "discogs_want": 90
+  },
+  "unknown artist|sheryl crow self titled phyle 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ph ng kh nh linh|gi a m t v n ng i": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3031,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "westside cowboy|6pm gmt": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2543,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "blur|rough trade limited to 2000": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3709,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "white stripes|rough trade 50th anniversary edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4627,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|warren zeiders no brakes jade green with signed art card": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "belle and sebastian|rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "till lindemann|live in krakow": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7474,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sufjan stevens|illinois eu restock": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chief keef|almighty so": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Chief Keef",
+    "discogs_title": "Almighty So 2",
+    "discogs_release_id": 32491800,
+    "discogs_url": "https://www.discogs.com/release/32491800-Chief-Keef-Almighty-So-2",
+    "discogs_mint_price": 298.0,
+    "discogs_lowest": 298.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 77,
+    "discogs_want": 294
+  },
+  "unknown artist|electroacustic music from central america": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
