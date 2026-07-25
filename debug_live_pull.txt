@@ -105,12 +105,9 @@ Craft Recordings: kept 88
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  -> retry 2/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
-  ✗ https://mnrkheavy.com/products.json?limit=250 -> HTTP Error 500: Internal Server Error
-  ✓ https://mnrkheavy.com/collections/all/products.json?limit=250 -> 250 products
+  ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 114
+MNRK Heavy: kept 136
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -403,8 +400,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 36 candidate vinyl items
-Amazon: found 35 candidate vinyl items
-Amazon: kept 9
+Amazon: found 31 candidate vinyl items
+Amazon: kept 7
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -431,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 4828 entries
-[Discogs] Enriching 2880 vinyl records with Mint pricing...
+[Discogs] Enriching 2900 vinyl records with Mint pricing...
 [Discogs] Cache saved (4828 entries)
 [Discogs] Enrichment complete!
 
@@ -449,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 218265 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 218109 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -700,7 +697,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Yo-Yo MaSimply Baroque (Aqua) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Zan & CodyBeautiful N Damned —  (Frontiers New Recordings Physical Only)
 [UpcomingVinyl] li>h2 approach found 234 entries
-[UpcomingVinyl] Got 481378 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 481228 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -724,7 +721,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 231
 [UpcomingVinyl] 231 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2871 buy signals saved to buy_signals.json
+[BuySignals] 2893 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -742,7 +739,7 @@ SOURCE STATUS SUMMARY
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
   Craft Recordings: 88 deals
-  MNRK Heavy: 114 deals
+  MNRK Heavy: 136 deals
   Equal Vision: 88 deals
   Rhino: 126 deals
   Interscope Records: 123 deals
@@ -768,11 +765,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 9 items | pages: 7 | robot walls: 0
+  Amazon: 7 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 9
+Amazon: 7
 Brooklyn Vegan: 142
 Craft Recordings: 88
 Equal Vision: 88
@@ -780,7 +777,7 @@ Fearless Records: 92
 Fearless Vinyl: 92
 Hopeless Records: 58
 Interscope Records: 121
-MNRK Heavy: 113
+MNRK Heavy: 135
 Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
