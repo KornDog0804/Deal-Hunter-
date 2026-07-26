@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
+Amazon: found 42 candidate vinyl items
 Amazon: found 36 candidate vinyl items
-Amazon: kept 11
+Amazon: kept 13
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 4828 entries
-[Discogs] Enriching 2905 vinyl records with Mint pricing...
-[Discogs] Cache saved (4828 entries)
+[Discogs] Loaded cache with 4846 entries
+[Discogs] Enriching 2907 vinyl records with Mint pricing...
+[Discogs] Cache saved (4846 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 42 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 218259 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 218241 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -697,7 +697,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Yo-Yo MaSimply Baroque (Aqua) —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Zan & CodyBeautiful N Damned —  (Frontiers New Recordings Physical Only)
 [UpcomingVinyl] li>h2 approach found 234 entries
-[UpcomingVinyl] Got 481252 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 481228 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -765,11 +765,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 11 items | pages: 7 | robot walls: 0
+  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 11
+Amazon: 13
 Brooklyn Vegan: 142
 Craft Recordings: 88
 Equal Vision: 88
@@ -782,7 +782,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
 Pure Noise Records: 77
-r/VinylReleases: 42
+r/VinylReleases: 45
 Revolver: 93
 Rhino: 122
 Rise All: 73
