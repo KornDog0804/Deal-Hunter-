@@ -16588,6 +16588,32 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Z2 Comics",
+    "title": "Dream Theater 'Parasomnia' 2LP (Translucent Sea Blue)",
+    "price": 44.99,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/dream-theater-parasomnia-vinyl-2-x-lp-translucent-sea-blue",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/Dream_Theater_-_ECOMM_Vinyl.png?v=1784947414",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Z2 Comics",
+    "title": "Poppy 'Music to Scream To' LP",
+    "price": 30.0,
+    "source": "Revolver",
+    "link": "https://shop.revolvermag.com/products/poppy-music-to-scream-to-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/PoppyVinyl.png?v=1784947423",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "ORCHARD",
     "title": "WHITECHAPEL 'MARK OF THE BLADE' LP (Gold Metallic Black Dust Vinyl)",
     "price": 33.99,
@@ -16784,7 +16810,7 @@
   },
   {
     "artist": "WARNER",
-    "title": "GREEN DAY 'NIMROD' LP",
+    "title": "GREEN DAY 'NIMROD' 2LP",
     "price": 36.99,
     "source": "Revolver",
     "link": "https://shop.revolvermag.com/products/green-day-nimrod-lp",
@@ -37609,11 +37635,11 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Amazon Catalog",
-    "title": "Amazon Vinyl Records",
+    "artist": "Target Catalog",
+    "title": "Target Vinyl Records",
     "price": 0.01,
-    "source": "Amazon",
-    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
+    "source": "Target",
+    "link": "https://www.target.com/s?searchTerm=vinyl+records",
     "image": "",
     "score": 0,
     "lane": "PASS",
@@ -37622,11 +37648,11 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Target Catalog",
-    "title": "Target Vinyl Records",
-    "price": 0.01,
-    "source": "Target",
-    "link": "https://www.target.com/s?searchTerm=vinyl+records",
+    "artist": "Unknown Artist",
+    "title": "- new Home Grown Head preorder up, new single “Siphon” out now $20 for random colored vinyl. A few Wax Mage variants left as well",
+    "price": 20.0,
+    "source": "r/VinylReleases",
+    "link": "https://watchitburnrecords.bandcamp.com/album/age-of-the-con",
     "image": "",
     "score": 0,
     "lane": "PASS",
