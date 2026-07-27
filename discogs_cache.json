@@ -53492,5 +53492,147 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|vv coquette habit rot daughter sophie woodhouse": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kash d out|mirage": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7714,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Glass Beams",
+    "discogs_title": "Mirage",
+    "discogs_release_id": 19338658,
+    "discogs_url": "https://www.discogs.com/release/19338658-Glass-Beams-Mirage",
+    "discogs_mint_price": 24.95,
+    "discogs_lowest": 24.95,
+    "discogs_num_for_sale": 14,
+    "discogs_have": 1189,
+    "discogs_want": 1279
+  },
+  "man woman chainsaw|cannonball blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3711,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|bratty dog tapes mystery box": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|baxter dury allbarone versions": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the black dahlia murder|nocturnal": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Black Dahlia Murder",
+    "discogs_title": "Nocturnal",
+    "discogs_release_id": 10578152,
+    "discogs_url": "https://www.discogs.com/release/10578152-The-Black-Dahlia-Murder-Nocturnal",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 417,
+    "discogs_want": 311
+  },
+  "kitchen knife conspiracy|handicapitated": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Kitchen Knife Conspiracy",
+    "discogs_title": "Handicapitated (25th Anniversary Edition)",
+    "discogs_release_id": 37978593,
+    "discogs_url": "https://www.discogs.com/release/37978593-Kitchen-Knife-Conspiracy-Handicapitated-25th-Anniversary-Edition",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 1,
+    "discogs_want": 1
+  },
+  "unknown artist|cormega the realness 25th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the weeknd|one of the girls popular": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Weeknd",
+    "discogs_title": "One Of The Girls + Popular",
+    "discogs_release_id": 30958294,
+    "discogs_url": "https://www.discogs.com/release/30958294-The-Weeknd-One-Of-The-Girls-Popular",
+    "discogs_mint_price": 99.99,
+    "discogs_lowest": 99.99,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 1009,
+    "discogs_want": 278
+  },
+  "patrick droney|made you look apple red signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2627,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "genesis|october 7 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7024,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed cover|welcome to the plains standard 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "extol|cloudy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7867,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Overdog*",
+    "discogs_title": "Cloudy",
+    "discogs_release_id": 24343,
+    "discogs_url": "https://www.discogs.com/release/24343-Overdog-Cloudy",
+    "discogs_mint_price": 2.57,
+    "discogs_lowest": 2.57,
+    "discogs_num_for_sale": 19,
+    "discogs_have": 244,
+    "discogs_want": 115
   }
 }
