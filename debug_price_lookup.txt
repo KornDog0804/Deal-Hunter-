@@ -1,8 +1,8 @@
-[PriceLookup] Loaded 2966 deals
+[PriceLookup] Loaded 2972 deals
 [PriceLookup] Cache TTL: 7 days
 [PriceLookup] Min score for lookup: 45
-[PriceLookup] Eligible deals (score >= 45): 2904
-[PriceLookup] Cache entries: 5301
+[PriceLookup] Eligible deals (score >= 45): 2915
+[PriceLookup] Cache entries: 5316
 [PriceLookup] Progress: 25 lookups done...
 [PriceLookup] Progress: 50 lookups done...
 [PriceLookup] Progress: 75 lookups done...
@@ -16,11 +16,13 @@
 [PriceLookup] Progress: 275 lookups done...
 [PriceLookup] Progress: 300 lookups done...
 [PriceLookup] Progress: 325 lookups done...
+[PriceLookup] Progress: 350 lookups done...
+[PriceLookup] Hit max lookups cap (350), stopping
 
 [PriceLookup] Summary:
-  Lookups performed: 338
-  Cache hits: 2566
-  Skipped (low score): 62
-  Deals enriched with real prices: 1430
+  Lookups performed: 350
+  Cache hits: 2370
+  Skipped (low score): 0
+  Deals enriched with real prices: 1320
 [PriceLookup] Updated /home/runner/work/Deal-Hunter-/Deal-Hunter-/live_deals.json
-[PriceLookup] Cache saved (5316 entries)
+[PriceLookup] Cache saved (5344 entries)
