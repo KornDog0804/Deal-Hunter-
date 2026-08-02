@@ -56337,5 +56337,196 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "sony|pearl jam vs": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|7 inch blank records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5318,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sponsored ad|emfogo 4 pack record frame for the wall wall mounted record display frame album frames for 12": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sponsored ad|emfogo record frame for the wall record display frame album frames for 12x12 inch album co": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "open mike eagle|neighborhood gods unlimited": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Open Mike Eagle",
+    "discogs_title": "Neighborhood Gods Unlimited",
+    "discogs_release_id": 34604092,
+    "discogs_url": "https://www.discogs.com/release/34604092-Open-Mike-Eagle-Neighborhood-Gods-Unlimited",
+    "discogs_mint_price": 78.66,
+    "discogs_lowest": 78.66,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 161,
+    "discogs_want": 91
+  },
+  "hollywood undead|swan songs ivc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pain of truth|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jaydon|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "p e e|now more charm and more tender": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "P.E.E.",
+    "discogs_title": "Now, More Charm And More Tender",
+    "discogs_release_id": 36654295,
+    "discogs_url": "https://www.discogs.com/release/36654295-PEE-Now-More-Charm-And-More-Tender",
+    "discogs_mint_price": 50.0,
+    "discogs_lowest": 50.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 54,
+    "discogs_want": 41
+  },
+  "kool keith x mike redman|sonic psychosis asteroid metallic double": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "president|blood of your empire": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4014,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sam thompkins|are we gonna sing signed black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2882,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "selena|selena live": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Selena",
+    "discogs_title": "Live",
+    "discogs_release_id": 31378229,
+    "discogs_url": "https://www.discogs.com/release/31378229-Selena-Live",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 37,
+    "discogs_want": 19
+  },
+  "unknown artist|the acacia strain and life is very long": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tyler the creator|goblin with obi strip japan": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3029,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ice nine kills|the silver scream signed assai obi edition bloodshot colour": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the temper trap|conditions black white marble 1": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2552,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the temper trap|conditions": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Temper Trap",
+    "discogs_title": "Conditions",
+    "discogs_release_id": 13905819,
+    "discogs_url": "https://www.discogs.com/release/13905819-The-Temper-Trap-Conditions",
+    "discogs_mint_price": 195.12,
+    "discogs_lowest": 195.12,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 152,
+    "discogs_want": 455
+  },
+  "tucker wetmore|sunburn mixtape": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1927,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
