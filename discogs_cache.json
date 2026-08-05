@@ -56990,5 +56990,451 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "frank zappa|freak out 60th anniversary 5 box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "elvis costello|my aim is true 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Elvis Costello",
+    "discogs_title": "My Aim Is True",
+    "discogs_release_id": 2343062,
+    "discogs_url": "https://www.discogs.com/release/2343062-Elvis-Costello-My-Aim-Is-True",
+    "discogs_mint_price": 4.0,
+    "discogs_lowest": 4.0,
+    "discogs_num_for_sale": 57,
+    "discogs_have": 11525,
+    "discogs_want": 843
+  },
+  "sonny rollins|sonny rollins vol 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sonny Rollins",
+    "discogs_title": "Sonny Rollins Vol. 2",
+    "discogs_release_id": 6451208,
+    "discogs_url": "https://www.discogs.com/release/6451208-Sonny-Rollins-Sonny-Rollins-Vol-2",
+    "discogs_mint_price": 0.1,
+    "discogs_lowest": 0.1,
+    "discogs_num_for_sale": 29,
+    "discogs_have": 220,
+    "discogs_want": 145
+  },
+  "warner|david bowie the shel talmy recordings": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3551,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|jason aldean they don t know": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|bear mccreary the singularity ekleipsis 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|party 4 u charli xcx": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "charli xcx|true romance": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Charli XCX",
+    "discogs_title": "True Romance",
+    "discogs_release_id": 4722140,
+    "discogs_url": "https://www.discogs.com/release/4722140-Charli-XCX-True-Romance",
+    "discogs_mint_price": 35.71,
+    "discogs_lowest": 35.71,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 1396,
+    "discogs_want": 1303
+  },
+  "strike anywhere|dead fm": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Strike Anywhere",
+    "discogs_title": "Dead FM",
+    "discogs_release_id": 3445427,
+    "discogs_url": "https://www.discogs.com/release/3445427-Strike-Anywhere-Dead-FM",
+    "discogs_mint_price": 100.0,
+    "discogs_lowest": 100.0,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 191,
+    "discogs_want": 228
+  },
+  "unknown artist|suki waterhouse loveland signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7139,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|sherane ep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kylie cantrall|valley girl problems signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "curly castro|yaphet": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the mothers of invention|freak out 60th anniversary 5 box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the mothers of invention|freak out 60th anniversary 2 multi colored": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sigur ros|g tis byrjun": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cardi b|7 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7568,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "giant rooks|if heaven exists this might be it": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|taking back sunday louder now 20th anniversary edition laminate ships 10 16": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|taking back sunday louder now 20th anniversary edition craft recordings burgandy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "taking back sunday|louder now opaque silver 7 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "conan gray|wishbone deluxe 2 wishbone sailing club": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "conan gray|wishbone deluxe 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1922,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "conan gray|wishbone": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Conan Gray",
+    "discogs_title": "Wishbone",
+    "discogs_release_id": 34823876,
+    "discogs_url": "https://www.discogs.com/release/34823876-Conan-Gray-Wishbone-",
+    "discogs_mint_price": 18.0,
+    "discogs_lowest": 18.0,
+    "discogs_num_for_sale": 26,
+    "discogs_have": 1658,
+    "discogs_want": 414
+  },
+  "burial|burial on rough trade 1500": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "baxter dury|happy soup on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2732,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tame impala|rough trade": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.794,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Fall",
+    "discogs_title": "The Rough Trade Singles",
+    "discogs_release_id": 12753473,
+    "discogs_url": "https://www.discogs.com/release/12753473-The-Fall-The-Rough-Trade-Singles",
+    "discogs_mint_price": 21.99,
+    "discogs_lowest": 21.99,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 1013,
+    "discogs_want": 180
+  },
+  "bon iver|for emma forever ago on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "father john misty|i love you honeybear on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mac demarco|salad days on rough trade": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Mac DeMarco",
+    "discogs_title": "Salad Days",
+    "discogs_release_id": 12545829,
+    "discogs_url": "https://www.discogs.com/release/12545829-Mac-DeMarco-Salad-Days",
+    "discogs_mint_price": 30.0,
+    "discogs_lowest": 30.0,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 433,
+    "discogs_want": 723
+  },
+  "caribou|swim on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.466,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the xx|xx": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The XX",
+    "discogs_title": "XX",
+    "discogs_release_id": 1976385,
+    "discogs_url": "https://www.discogs.com/release/1976385-The-XX-XX",
+    "discogs_mint_price": 18.0,
+    "discogs_lowest": 18.0,
+    "discogs_num_for_sale": 20,
+    "discogs_have": 21357,
+    "discogs_want": 7624
+  },
+  "helen|linda s head": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5381,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "radiohead|in rainbows": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Radiohead",
+    "discogs_title": "In Rainbows",
+    "discogs_release_id": 8605874,
+    "discogs_url": "https://www.discogs.com/release/8605874-Radiohead-In-Rainbows",
+    "discogs_mint_price": 37.48,
+    "discogs_lowest": 37.48,
+    "discogs_num_for_sale": 40,
+    "discogs_have": 11776,
+    "discogs_want": 3509
+  },
+  "nick cave and the bad seeds|push the sky away on rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bonnie prince billy|ghosts of american psychonauts": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "afi|silver bleeds the black sun glitter hell tour variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the pretty reckless|light me up": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Pretty Reckless",
+    "discogs_title": "Light Me Up",
+    "discogs_release_id": 23150816,
+    "discogs_url": "https://www.discogs.com/release/23150816-The-Pretty-Reckless-Light-Me-Up",
+    "discogs_mint_price": 125.0,
+    "discogs_lowest": 125.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 273,
+    "discogs_want": 693
+  },
+  "amyl and the sniffers|truth or consequence": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.742,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|limited to 500 amazonite": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "joan osborne|the best of joan osborne": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4968,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|northlane anemoia deathwish": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7369,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "apes of the state|nothing makes sense anymore": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3133,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mateus asato|asato": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4622,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
