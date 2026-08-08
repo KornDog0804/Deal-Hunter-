@@ -399,8 +399,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 49 candidate vinyl items
-Amazon: found 37 candidate vinyl items
+Amazon: found 51 candidate vinyl items
+Amazon: found 39 candidate vinyl items
 Amazon: kept 18
 
 ==================================================
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5333 entries
+[Discogs] Loaded cache with 5407 entries
 [Discogs] Enriching 2972 vinyl records with Mint pricing...
-[Discogs] Cache saved (5333 entries)
+[Discogs] Cache saved (5407 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 277839 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 277863 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -766,7 +766,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZebraheadWalk The Plank —  (Rude Records)
 [UpcomingVinyl] FOUND: zzzaharaDistant Lands (Blue) —  (Lex Records)
 [UpcomingVinyl] li>h2 approach found 303 entries
-[UpcomingVinyl] Got 555915 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 507879 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -781,7 +781,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3808 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3470 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -790,7 +790,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 297
 [UpcomingVinyl] 297 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2956 buy signals saved to buy_signals.json
+[BuySignals] 2955 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -851,7 +851,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
 Pure Noise Records: 76
-r/VinylReleases: 47
+r/VinylReleases: 45
 Revolver: 157
 Rhino: 77
 Rise All: 73
