@@ -24975,7 +24975,7 @@
   {
     "artist": "MNRK Heavy",
     "title": "12\" Plastic Record Sleeve",
-    "price": 1.75,
+    "price": 1.85,
     "source": "MNRK Heavy",
     "link": "https://mnrkheavy.com/products/12-record-sleeve",
     "image": "https://cdn.shopify.com/s/files/1/0549/0245/6545/files/ClearVinyl_Sleeve_Mockup.png?v=1758034004",
@@ -38381,6 +38381,19 @@
     "price": 0.01,
     "source": "Walmart",
     "link": "https://www.walmart.com/browse/music/vinyl-records/4104_1205481",
+    "image": "",
+    "score": 0,
+    "lane": "PASS",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Amazon Catalog",
+    "title": "Amazon Vinyl Records",
+    "price": 0.01,
+    "source": "Amazon",
+    "link": "https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931&tag=korndog20-20",
     "image": "",
     "score": 0,
     "lane": "PASS",
