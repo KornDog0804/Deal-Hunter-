@@ -428,9 +428,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5407 entries
+[Discogs] Loaded cache with 5426 entries
 [Discogs] Enriching 2955 vinyl records with Mint pricing...
-[Discogs] Cache saved (5407 entries)
+[Discogs] Cache saved (5426 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -442,12 +442,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 44 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 277857 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 277839 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -852,7 +852,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
 Pure Noise Records: 76
-r/VinylReleases: 44
+r/VinylReleases: 43
 Revolver: 157
 Rhino: 77
 Rise All: 73
