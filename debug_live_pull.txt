@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 46 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: kept 16
+Amazon: found 51 candidate vinyl items
+Amazon: found 39 candidate vinyl items
+Amazon: kept 20
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5426 entries
-[Discogs] Enriching 2968 vinyl records with Mint pricing...
+[Discogs] Enriching 2972 vinyl records with Mint pricing...
 [Discogs] Cache saved (5426 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 43 deals after filtering
+[r/VinylReleases] 42 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 277857 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 277839 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -766,7 +766,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZebraheadWalk The Plank —  (Rude Records)
 [UpcomingVinyl] FOUND: zzzaharaDistant Lands (Blue) —  (Lex Records)
 [UpcomingVinyl] li>h2 approach found 303 entries
-[UpcomingVinyl] Got 507747 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 507897 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -834,11 +834,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 16 items | pages: 7 | robot walls: 0
+  Amazon: 20 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 16
+Amazon: 20
 Brooklyn Vegan: 188
 Craft Recordings: 93
 Equal Vision: 88
@@ -851,7 +851,7 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
 Pure Noise Records: 76
-r/VinylReleases: 43
+r/VinylReleases: 42
 Revolver: 157
 Rhino: 77
 Rise All: 73
