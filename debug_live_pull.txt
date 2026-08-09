@@ -35,7 +35,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 90
+Fearless Records: kept 89
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,7 +45,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 90
+Fearless Vinyl: kept 89
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -399,10 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 46 candidate vinyl items
+Amazon: found 40 candidate vinyl items
+Amazon: kept 16
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5426 entries
-[Discogs] Enriching 2955 vinyl records with Mint pricing...
+[Discogs] Enriching 2968 vinyl records with Mint pricing...
 [Discogs] Cache saved (5426 entries)
 [Discogs] Enrichment complete!
 
@@ -447,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 277839 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 277857 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -767,7 +766,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: ZebraheadWalk The Plank —  (Rude Records)
 [UpcomingVinyl] FOUND: zzzaharaDistant Lands (Blue) —  (Lex Records)
 [UpcomingVinyl] li>h2 approach found 303 entries
-[UpcomingVinyl] Got 507879 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 507747 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -791,7 +790,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 297
 [UpcomingVinyl] 297 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2956 buy signals saved to buy_signals.json
+[BuySignals] 2953 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -800,8 +799,8 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 236 deals
   Sound of Vinyl: 216 deals
   uDiscover Music: 116 deals
-  Fearless Records: 90 deals
-  Fearless Vinyl: 90 deals
+  Fearless Records: 89 deals
+  Fearless Vinyl: 89 deals
   Rise Records: 73 deals
   Rise All: 73 deals
   Brooklyn Vegan: 188 deals
@@ -835,16 +834,16 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 16 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 16
 Brooklyn Vegan: 188
 Craft Recordings: 93
 Equal Vision: 88
-Fearless Records: 90
-Fearless Vinyl: 90
+Fearless Records: 89
+Fearless Vinyl: 89
 Hopeless Records: 56
 Interscope Records: 124
 MNRK Heavy: 135
