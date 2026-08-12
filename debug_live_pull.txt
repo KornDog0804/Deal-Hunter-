@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 186
+Brooklyn Vegan: kept 187
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 160
+Revolver: kept 162
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 46 candidate vinyl items
-Amazon: found 37 candidate vinyl items
-Amazon: kept 14
+Amazon: found 38 candidate vinyl items
+Amazon: found 34 candidate vinyl items
+Amazon: kept 10
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5444 entries
-[Discogs] Enriching 2962 vinyl records with Mint pricing...
-[Discogs] Cache saved (5444 entries)
+[Discogs] Loaded cache with 5491 entries
+[Discogs] Enriching 2961 vinyl records with Mint pricing...
+[Discogs] Cache saved (5491 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 45 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 251852 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 251834 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -737,7 +737,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Yuji OhnoThe Inugami Family —  (Jet Set)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 274 entries
-[UpcomingVinyl] Got 526913 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 527045 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -761,7 +761,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 271
 [UpcomingVinyl] 271 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2950 buy signals saved to buy_signals.json
+[BuySignals] 2953 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -774,8 +774,8 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 87 deals
   Rise Records: 75 deals
   Rise All: 75 deals
-  Brooklyn Vegan: 186 deals
-  Revolver: 160 deals
+  Brooklyn Vegan: 187 deals
+  Revolver: 162 deals
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
   Craft Recordings: 97 deals
@@ -805,12 +805,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 14 items | pages: 7 | robot walls: 0
+  Amazon: 10 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 14
-Brooklyn Vegan: 186
+Amazon: 10
+Brooklyn Vegan: 187
 Craft Recordings: 97
 Equal Vision: 86
 Fearless Records: 87
@@ -822,8 +822,8 @@ Newbury Comics: 148
 Newbury Preorders: 148
 Pirates Press Records: 53
 Pure Noise Records: 76
-r/VinylReleases: 48
-Revolver: 160
+r/VinylReleases: 44
+Revolver: 162
 Rhino: 75
 Rise All: 75
 Rise Records: 75
