@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 116
+uDiscover Music: kept 118
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -69,7 +69,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 187
+Brooklyn Vegan: kept 186
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -119,8 +119,8 @@ Equal Vision: kept 86
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 164 products
-Rhino: 164 products via Shopify JSON
+  ✓ https://store.rhino.com/products.json?limit=250 -> 176 products
+Rhino: 176 products via Shopify JSON
 Rhino: kept 75
 
 ==================================================
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: found 34 candidate vinyl items
-Amazon: kept 10
+Amazon: found 44 candidate vinyl items
+Amazon: found 40 candidate vinyl items
+Amazon: kept 17
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5491 entries
-[Discogs] Enriching 2961 vinyl records with Mint pricing...
+[Discogs] Enriching 2967 vinyl records with Mint pricing...
 [Discogs] Cache saved (5491 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 251834 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 253546 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -461,7 +461,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases This Week</title>
 
 <meta name="description
-[UpcomingVinyl] Found 274 h2 tags, 303 li tags
+[UpcomingVinyl] Found 276 h2 tags, 305 li tags
 [UpcomingVinyl] FOUND: ABBADancing Queen (50th Anniversary, 10" Single) —  (Capitol)
 [UpcomingVinyl] FOUND: ABBADancing Queen (50th Anniversary, Sparkling Single) —  (Capitol)
 [UpcomingVinyl] FOUND: Actress & Suzanne CianiConcrete Waves —  (Werkdiscs)
@@ -481,12 +481,14 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Becky GBaraja Bendita —  (Rca Records)
 [UpcomingVinyl] FOUND: Beegie AdairThe Great American Songbook, Vol. 2 —  (Green Hill Prod.)
 [UpcomingVinyl] FOUND: Big LLifestylez Ov Da Poor & Dangerous —  (Legacy Recordings)
+[UpcomingVinyl] FOUND: Bill Evans TrioAT Shelly's Manne-Hole —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Bino Rideaux Nipsey HusslePROLIFIC —  (Atlantic)
 [UpcomingVinyl] FOUND: Black CrowesLions Picture 25th Anniversary —  (Friday Rights Management Llc)
 [UpcomingVinyl] FOUND: Blah23-26 Archive Version —  (Paix Per Mil)
 [UpcomingVinyl] FOUND: Blone NobleDominator —  (Kuroneko)
 [UpcomingVinyl] FOUND: Blue Öyster CultAgents of Fortune (50th Anniversary) —  (Legacy Recordings)
 [UpcomingVinyl] FOUND: bôaTwilight (25th Anniversary, Zoetrope) —  (Nettwerk Records)
+[UpcomingVinyl] FOUND: Bob Marley & WailersBurnin' —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Bob Marley & WailersNatty Dread —  (Analogue Prod.)
 [UpcomingVinyl] FOUND: Bobby RushShe Put the Whammy on Me B/W Gotta Have Money —  (Earth Libraries)
 [UpcomingVinyl] FOUND: Boston ManorBe Nothing (Deluxe 10 Year) —  (Pure Noise Records)
@@ -523,6 +525,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Doctor BionicExpert Witness B/W Mistake —  (Colemine Records)
 [UpcomingVinyl] FOUND: Doctor BionicExpert Witness B/W Mistake (Purple) —  (Colemine Records)
 [UpcomingVinyl] FOUND: Don WalkerLove Songs —  (Mgm Australia)
+[UpcomingVinyl] FOUND: Dorian PimpernelFlowers Too —  (Born Bad Records)
 [UpcomingVinyl] FOUND: DownwardDownward 2 (Deluxe) —  (Pure Noise Records)
 [UpcomingVinyl] FOUND: DownwardThe Brass Tax —  (Pure Noise Records)
 [UpcomingVinyl] FOUND: DrautranThrone of the Depths —  (Prophecy)
@@ -620,7 +623,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: MedlineA New Day 45 Edit Smilin' Billy Suite 45 Edit —  (Jet Set)
 [UpcomingVinyl] FOUND: MetabolistHansten Klork —  (Analogue Pulse)
 [UpcomingVinyl] FOUND: Michael Gregory JacksonClarity —  (Moved by Sound)
-[UpcomingVinyl] FOUND: Michael Yonkers BandMicrominiature Love —  (Sub Pop)
 [UpcomingVinyl] FOUND: Mid DriftGood At Avoiding (Marble) —  (Impressed)
 [UpcomingVinyl] FOUND: Miki YamanakaBreathe —  (Cellar Live)
 [UpcomingVinyl] FOUND: Milan93 & 9Ick & MauricesaxA Garden Between Us —  (Last Year Marienbad)
@@ -653,6 +655,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Planetary Assault SystemsPlanetary People —  (Ostgut Ton)
 [UpcomingVinyl] FOUND: Plug (Aka Luke Vibert)Variety Magic —  (De:tuned)
 [UpcomingVinyl] FOUND: Primal ScreamVanishing Point —  (Sony UK)
+[UpcomingVinyl] FOUND: PrimordialLive In New York City —  (Eisenwald)
 [UpcomingVinyl] FOUND: PrimordialLive In New York City — Ashen Bronze (Eisenwald)
 [UpcomingVinyl] FOUND: Radiator HospitalDistorting Time (Blue) —  (Lame-O)
 [UpcomingVinyl] FOUND: Raw TunesThe Jersey DATs —  (Daybreakers)
@@ -702,6 +705,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: The Womack SistersThe Womack Sisters —  (Daptone)
 [UpcomingVinyl] FOUND: THE-DREAMLove/Hate (Transparent Sea Glass) —  (Def Jam Recordings)
 [UpcomingVinyl] FOUND: Those Poor BastardsBlack Tongue (Red) —  (Chain Smoking Rec.)
+[UpcomingVinyl] FOUND: Tinlicker X Robert MilesChildren —  (Smilax)
 [UpcomingVinyl] FOUND: Tom FunkWhat's It Gonna Be? —  (Lazy Robot)
 [UpcomingVinyl] FOUND: Tom PevearSongs For The Road —  (Gitcha Records)
 [UpcomingVinyl] FOUND: Trashcan SinatrasEver the Optimist —  (Tcs Recording)
@@ -710,7 +714,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Twisted SisterUnder The Blade (Silver Metallic) —  (Friday Music Two)
 [UpcomingVinyl] FOUND: UadaDevoid Of Light (10th Anniversary, Tan & Smoke) —  (Eisenwald)
 [UpcomingVinyl] FOUND: United States of ExistenceReturn To The Psychedelic/Shadows Of Rainbows —  (Guerssen Records)
-[UpcomingVinyl] FOUND: VariousGothic Spirits: Best Of Vol. 1 —  (Golden Core Records Zyx)
 [UpcomingVinyl] FOUND: Various Artists30 Years of Freerange Records, Vol. 3 —  (Freerange)
 [UpcomingVinyl] FOUND: Various ArtistsA State of Trance Classics Volume 01 —  (A State of Trance)
 [UpcomingVinyl] FOUND: Various ArtistsDefected Classics 3 —  (Defected)
@@ -723,7 +726,6 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Various ArtistsUniverso Positivo (Remixed) —  (Universo Positivo)
 [UpcomingVinyl] FOUND: Various ArtistsWatermelon Man Ska —  (Jamaican Gold)
 [UpcomingVinyl] FOUND: VegAdrift In Time —  (Jet Set)
-[UpcomingVinyl] FOUND: Wasia ProjectNocturne —  (Will Gao and Olivia Hardy t/a Wasia Proj)
 [UpcomingVinyl] FOUND: Weather ReportSweetnighter —  (Music On Vinyl)
 [UpcomingVinyl] FOUND: Weird HeraldSaratoga James/Just Yesterday —  (Guerssen Records)
 [UpcomingVinyl] FOUND: Westside CowboyThe User's Guide to Being Human (EcoRecord Clear) —  (Bmg)
@@ -736,8 +738,8 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Young Drummer BoyStr8 Out Tha 9 —  (M.O.B.G. Entertainment)
 [UpcomingVinyl] FOUND: Yuji OhnoThe Inugami Family —  (Jet Set)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
-[UpcomingVinyl] li>h2 approach found 274 entries
-[UpcomingVinyl] Got 527045 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] li>h2 approach found 276 entries
+[UpcomingVinyl] Got 546489 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -752,16 +754,16 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3605 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3742 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
 [UpcomingVinyl] h2 text: Styles / Genres
 [UpcomingVinyl] h2 text: Artists
 [UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 271
-[UpcomingVinyl] 271 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2953 buy signals saved to buy_signals.json
+[UpcomingVinyl] Total matches: 273
+[UpcomingVinyl] 273 whitelist matches saved to upcoming_releases.json
+[BuySignals] 2950 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -769,12 +771,12 @@ SOURCE STATUS SUMMARY
   Rollin Records: 236 deals
   Rollin Preorders: 236 deals
   Sound of Vinyl: 215 deals
-  uDiscover Music: 116 deals
+  uDiscover Music: 118 deals
   Fearless Records: 87 deals
   Fearless Vinyl: 87 deals
   Rise Records: 75 deals
   Rise All: 75 deals
-  Brooklyn Vegan: 187 deals
+  Brooklyn Vegan: 186 deals
   Revolver: 162 deals
   Newbury Comics: 148 deals
   Newbury Preorders: 148 deals
@@ -805,12 +807,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 10 items | pages: 7 | robot walls: 0
+  Amazon: 17 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 10
-Brooklyn Vegan: 187
+Amazon: 17
+Brooklyn Vegan: 186
 Craft Recordings: 97
 Equal Vision: 86
 Fearless Records: 87
@@ -827,8 +829,8 @@ Revolver: 162
 Rhino: 75
 Rise All: 75
 Rise Records: 75
-RMFN All: 116
-Rock Metal Fan Nation: 116
+RMFN All: 115
+Rock Metal Fan Nation: 115
 Rollin Preorders: 235
 Rollin Records: 235
 SharpTone Records: 89
@@ -837,5 +839,5 @@ Solid State Vinyl: 51
 Sound of Vinyl: 212
 Sumerian Records: 62
 Target: 1
-uDiscover Music: 113
+uDiscover Music: 115
 Walmart: 1
