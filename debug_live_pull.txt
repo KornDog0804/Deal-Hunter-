@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 43 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: kept 18
+Amazon: found 51 candidate vinyl items
+Amazon: found 41 candidate vinyl items
+Amazon: kept 21
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5592 entries
-[Discogs] Enriching 2967 vinyl records with Mint pricing...
-[Discogs] Cache saved (5592 entries)
+[Discogs] Loaded cache with 5661 entries
+[Discogs] Enriching 2970 vinyl records with Mint pricing...
+[Discogs] Cache saved (5661 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 202581 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 202689 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -679,7 +679,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Yerin BaekFlash And Core —  (Sony Korea)
 [UpcomingVinyl] FOUND: Young Drummer BoyStr8 Out Tha 9 —  (M.O.B.G. Entertainment)
 [UpcomingVinyl] li>h2 approach found 216 entries
-[UpcomingVinyl] Got 555887 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 522131 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -694,7 +694,7 @@ SCRAPING UPCOMING VINYL RELEASES
         <title>Upcoming Vinyl Releases Overview</title>
 
 <meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 3807 li tags
+[UpcomingVinyl] Found 4 h2 tags, 3571 li tags
 [UpcomingVinyl] li>h2 approach found 0 entries
 [UpcomingVinyl] Trying direct h2 fallback...
 [UpcomingVinyl] h2 text: Formats
@@ -747,11 +747,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 18 items | pages: 7 | robot walls: 0
+  Amazon: 21 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 18
+Amazon: 21
 Brooklyn Vegan: 183
 Craft Recordings: 95
 Equal Vision: 86
