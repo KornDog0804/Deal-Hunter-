@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 39 candidate vinyl items
-Amazon: found 37 candidate vinyl items
-Amazon: kept 13
+Amazon: found 47 candidate vinyl items
+Amazon: found 35 candidate vinyl items
+Amazon: kept 15
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5661 entries
-[Discogs] Enriching 2962 vinyl records with Mint pricing...
-[Discogs] Cache saved (5661 entries)
+[Discogs] Loaded cache with 5676 entries
+[Discogs] Enriching 2964 vinyl records with Mint pricing...
+[Discogs] Cache saved (5676 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 202707 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 202713 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -747,11 +747,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 13 items | pages: 7 | robot walls: 0
+  Amazon: 15 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 13
+Amazon: 15
 Brooklyn Vegan: 183
 Craft Recordings: 95
 Equal Vision: 86
