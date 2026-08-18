@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 121
+uDiscover Music: kept 120
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 159
+Revolver: kept 160
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -114,7 +114,7 @@ Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 86
+Equal Vision: kept 89
 
 ==================================================
 Scraping: Rhino (shopify_store)
@@ -221,7 +221,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 71
+Pirates Press Records: kept 72
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 46 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: kept 19
+Amazon: found 50 candidate vinyl items
+Amazon: found 41 candidate vinyl items
+Amazon: kept 21
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5717 entries
-[Discogs] Enriching 2989 vinyl records with Mint pricing...
+[Discogs] Enriching 2995 vinyl records with Mint pricing...
 [Discogs] Cache saved (5717 entries)
 [Discogs] Enrichment complete!
 
@@ -837,7 +837,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 374 entries
-[UpcomingVinyl] Got 544164 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 544032 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -861,7 +861,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 367
 [UpcomingVinyl] 367 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2970 buy signals saved to buy_signals.json
+[BuySignals] 2974 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -869,18 +869,18 @@ SOURCE STATUS SUMMARY
   Rollin Records: 235 deals
   Rollin Preorders: 235 deals
   Sound of Vinyl: 213 deals
-  uDiscover Music: 121 deals
+  uDiscover Music: 120 deals
   Fearless Records: 86 deals
   Fearless Vinyl: 86 deals
   Rise Records: 75 deals
   Rise All: 75 deals
   Brooklyn Vegan: 185 deals
-  Revolver: 159 deals
+  Revolver: 160 deals
   Newbury Comics: 147 deals
   Newbury Preorders: 147 deals
   Craft Recordings: 95 deals
   MNRK Heavy: 135 deals
-  Equal Vision: 86 deals
+  Equal Vision: 89 deals
   Rhino: 74 deals
   Interscope Records: 122 deals
   SharpTone Records: 91 deals
@@ -892,7 +892,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 77 deals
   Hopeless Records: 57 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 71 deals
+  Pirates Press Records: 72 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 0 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -905,14 +905,14 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 19 items | pages: 7 | robot walls: 0
+  Amazon: 21 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 19
+Amazon: 21
 Brooklyn Vegan: 185
 Craft Recordings: 95
-Equal Vision: 86
+Equal Vision: 89
 Fearless Records: 86
 Fearless Vinyl: 86
 Hopeless Records: 57
@@ -920,10 +920,10 @@ Interscope Records: 120
 MNRK Heavy: 134
 Newbury Comics: 147
 Newbury Preorders: 147
-Pirates Press Records: 51
+Pirates Press Records: 52
 Pure Noise Records: 77
 r/VinylReleases: 48
-Revolver: 159
+Revolver: 160
 Rhino: 74
 Rise All: 75
 Rise Records: 75
@@ -937,5 +937,5 @@ Solid State Vinyl: 51
 Sound of Vinyl: 210
 Sumerian Records: 62
 Target: 1
-uDiscover Music: 118
+uDiscover Music: 117
 Walmart: 1
