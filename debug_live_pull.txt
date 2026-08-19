@@ -28,7 +28,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 121
+uDiscover Music: kept 115
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -76,7 +76,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 160
+Revolver: kept 161
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 53 candidate vinyl items
-Amazon: found 39 candidate vinyl items
-Amazon: kept 21
+Amazon: found 45 candidate vinyl items
+Amazon: found 41 candidate vinyl items
+Amazon: kept 17
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5767 entries
-[Discogs] Enriching 2994 vinyl records with Mint pricing...
+[Discogs] Enriching 2985 vinyl records with Mint pricing...
 [Discogs] Cache saved (5767 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 336533 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 336401 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -837,7 +837,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 374 entries
-[UpcomingVinyl] Got 544188 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 544164 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -861,7 +861,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 367
 [UpcomingVinyl] 367 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2973 buy signals saved to buy_signals.json
+[BuySignals] 2968 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -869,13 +869,13 @@ SOURCE STATUS SUMMARY
   Rollin Records: 235 deals
   Rollin Preorders: 235 deals
   Sound of Vinyl: 213 deals
-  uDiscover Music: 121 deals
+  uDiscover Music: 115 deals
   Fearless Records: 86 deals
   Fearless Vinyl: 86 deals
   Rise Records: 75 deals
   Rise All: 75 deals
   Brooklyn Vegan: 183 deals
-  Revolver: 160 deals
+  Revolver: 161 deals
   Newbury Comics: 146 deals
   Newbury Preorders: 146 deals
   Craft Recordings: 97 deals
@@ -905,11 +905,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 21 items | pages: 7 | robot walls: 0
+  Amazon: 17 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 21
+Amazon: 17
 Brooklyn Vegan: 183
 Craft Recordings: 97
 Equal Vision: 89
@@ -922,8 +922,8 @@ Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 52
 Pure Noise Records: 77
-r/VinylReleases: 45
-Revolver: 160
+r/VinylReleases: 44
+Revolver: 161
 Rhino: 74
 Rise All: 75
 Rise Records: 75
@@ -937,5 +937,5 @@ Solid State Vinyl: 51
 Sound of Vinyl: 210
 Sumerian Records: 62
 Target: 1
-uDiscover Music: 118
+uDiscover Music: 112
 Walmart: 1
