@@ -21,7 +21,7 @@ Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 212
+Sound of Vinyl: kept 211
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
@@ -119,9 +119,9 @@ Equal Vision: kept 89
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 177 products
-Rhino: 177 products via Shopify JSON
-Rhino: kept 74
+  ✓ https://store.rhino.com/products.json?limit=250 -> 178 products
+Rhino: 178 products via Shopify JSON
+Rhino: kept 75
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -164,9 +164,9 @@ Sumerian Records: kept 64
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 164 products
-Solid State Records: 164 products via Shopify JSON
-Solid State Records: kept 55
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
+Solid State Records: 167 products via Shopify JSON
+Solid State Records: kept 56
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -174,9 +174,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 164 products
-Solid State Vinyl: 164 products via Shopify JSON
-Solid State Vinyl: kept 55
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
+Solid State Vinyl: 167 products via Shopify JSON
+Solid State Vinyl: kept 56
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -399,10 +399,12 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
+Amazon: found 42 candidate vinyl items
+Amazon: kept 11
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -429,7 +431,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5811 entries
-[Discogs] Enriching 2977 vinyl records with Mint pricing...
+[Discogs] Enriching 2989 vinyl records with Mint pricing...
 [Discogs] Cache saved (5811 entries)
 [Discogs] Enrichment complete!
 
@@ -442,12 +444,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 43 deals after filtering
+[r/VinylReleases] 42 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 336401 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 336533 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -862,14 +864,14 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 367
 [UpcomingVinyl] 367 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2978 buy signals saved to buy_signals.json
+[BuySignals] 2979 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 235 deals
   Rollin Preorders: 235 deals
-  Sound of Vinyl: 212 deals
+  Sound of Vinyl: 211 deals
   uDiscover Music: 114 deals
   Fearless Records: 87 deals
   Fearless Vinyl: 87 deals
@@ -882,14 +884,14 @@ SOURCE STATUS SUMMARY
   Craft Recordings: 97 deals
   MNRK Heavy: 137 deals
   Equal Vision: 89 deals
-  Rhino: 74 deals
+  Rhino: 75 deals
   Interscope Records: 123 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 136 deals
   RMFN All: 136 deals
   Sumerian Records: 64 deals
-  Solid State Records: 55 deals
-  Solid State Vinyl: 55 deals
+  Solid State Records: 56 deals
+  Solid State Vinyl: 56 deals
   Pure Noise Records: 77 deals
   Hopeless Records: 58 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -906,11 +908,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 7 | robot walls: 0
+  Amazon: 11 items | pages: 6 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
+Amazon: 11
 Brooklyn Vegan: 180
 Craft Recordings: 97
 Equal Vision: 89
@@ -923,9 +925,9 @@ Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 52
 Pure Noise Records: 77
-r/VinylReleases: 43
+r/VinylReleases: 42
 Revolver: 164
-Rhino: 74
+Rhino: 75
 Rise All: 75
 Rise Records: 75
 RMFN All: 135
@@ -933,9 +935,9 @@ Rock Metal Fan Nation: 135
 Rollin Preorders: 234
 Rollin Records: 234
 SharpTone Records: 90
-Solid State Records: 51
-Solid State Vinyl: 51
-Sound of Vinyl: 209
+Solid State Records: 52
+Solid State Vinyl: 52
+Sound of Vinyl: 208
 Sumerian Records: 62
 Target: 1
 uDiscover Music: 111
