@@ -142,7 +142,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 133
+Rock Metal Fan Nation: kept 136
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,7 +152,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 133
+RMFN All: kept 136
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -352,53 +352,29 @@ Millions of Records: unknown source_type "html_store" - skipping
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
 ==================================================
-  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore: 0 products via Shopify JSON
 IndieMerchstore: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://indiemerchandise.com/products.json | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/products.json | <urlopen error [Errno 104] Connection reset by peer>
-IndieMerchstore: HTML source failed | <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore: found 0 HTML links
+IndieMerchstore: kept 0
 
 ==================================================
 Scraping: IndieMerchstore Preorders (shopify_store)
 ==================================================
-  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/all/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/music/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 1/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/records/products.json?limit=250 | <urlopen error [Errno 104] Connection reset by peer>
-  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 104] Connection reset by peer>
+  ✗ https://indiemerchandise.com/collections/preorders/products.json/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/all/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/vinyl/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/music/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
+  ✗ https://indiemerchandise.com/collections/records/products.json?limit=250 -> Expecting value: line 1 column 1 (char 0)
 IndieMerchstore Preorders: 0 products via Shopify JSON
 IndieMerchstore Preorders: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://indiemerchandise.com/collections/preorders/products.json | <urlopen error [Errno 104] Connection reset by peer>
-  -> retry 2/2 for https://indiemerchandise.com/collections/preorders/products.json | <urlopen error [Errno 104] Connection reset by peer>
-IndieMerchstore Preorders: HTML source failed | <urlopen error [Errno 104] Connection reset by peer>
+IndieMerchstore Preorders: found 0 HTML links
+IndieMerchstore Preorders: kept 0
 
 ==================================================
 Scraping: Walmart (walmart_catalog_source)
@@ -423,14 +399,8 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
+Amazon: found 0 candidate vinyl items
+Amazon: found 0 candidate vinyl items
 Amazon: No vinyl products found, adding catalog portal fallback
 Amazon: kept 1
 
@@ -458,9 +428,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5767 entries
-[Discogs] Enriching 2971 vinyl records with Mint pricing...
-[Discogs] Cache saved (5767 entries)
+[Discogs] Loaded cache with 5811 entries
+[Discogs] Enriching 2977 vinyl records with Mint pricing...
+[Discogs] Cache saved (5811 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -472,12 +442,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 43 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 336533 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 336401 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -868,7 +838,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 374 entries
-[UpcomingVinyl] Got 544032 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 544164 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -892,7 +862,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 367
 [UpcomingVinyl] 367 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2972 buy signals saved to buy_signals.json
+[BuySignals] 2978 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -915,8 +885,8 @@ SOURCE STATUS SUMMARY
   Rhino: 74 deals
   Interscope Records: 123 deals
   SharpTone Records: 91 deals
-  Rock Metal Fan Nation: 133 deals
-  RMFN All: 133 deals
+  Rock Metal Fan Nation: 136 deals
+  RMFN All: 136 deals
   Sumerian Records: 64 deals
   Solid State Records: 55 deals
   Solid State Vinyl: 55 deals
@@ -933,10 +903,10 @@ SOURCE STATUS SUMMARY
   Hot Topic: SKIPPED (unknown type: html_store)
   Deep Discount: SKIPPED (unknown type: html_store)
   Millions of Records: SKIPPED (unknown type: html_store)
-  IndieMerchstore: FAILED: <urlopen error [Errno 104] Connection reset by peer>
-  IndieMerchstore Preorders: FAILED: <urlopen error [Errno 104] Connection reset by peer>
+  IndieMerchstore: 0 deals
+  IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 5 | robot walls: 0
+  Amazon: 1 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
@@ -953,13 +923,13 @@ Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 52
 Pure Noise Records: 77
-r/VinylReleases: 45
+r/VinylReleases: 43
 Revolver: 164
 Rhino: 74
 Rise All: 75
 Rise Records: 75
-RMFN All: 132
-Rock Metal Fan Nation: 132
+RMFN All: 135
+Rock Metal Fan Nation: 135
 Rollin Preorders: 234
 Rollin Records: 234
 SharpTone Records: 90
