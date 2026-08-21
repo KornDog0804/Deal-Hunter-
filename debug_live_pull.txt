@@ -69,14 +69,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 177
+Brooklyn Vegan: kept 179
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 158
+Revolver: kept 159
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -399,16 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+records&i=popular&rh=n%3A71838931 | HTTP Error 503: Service Unavailable
-  -> retry 1/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 2/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-  -> retry 3/3 for https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: failed https://www.amazon.com/s?k=vinyl+lp+record&i=popular&rh=n%3A71838931&page=2 | HTTP Error 503: Service Unavailable
-Amazon: No vinyl products found, adding catalog portal fallback
-Amazon: kept 1
+Amazon: found 43 candidate vinyl items
+Amazon: found 41 candidate vinyl items
+Amazon: kept 18
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -434,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5811 entries
-[Discogs] Enriching 2968 vinyl records with Mint pricing...
-[Discogs] Cache saved (5811 entries)
+[Discogs] Loaded cache with 5857 entries
+[Discogs] Enriching 2988 vinyl records with Mint pricing...
+[Discogs] Cache saved (5857 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -448,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 38 deals after filtering
+[r/VinylReleases] 41 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 336983 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 336533 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -844,7 +837,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 374 entries
-[UpcomingVinyl] Got 544164 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 544182 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -868,7 +861,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 367
 [UpcomingVinyl] 367 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2968 buy signals saved to buy_signals.json
+[BuySignals] 2970 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -881,8 +874,8 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 87 deals
   Rise Records: 75 deals
   Rise All: 75 deals
-  Brooklyn Vegan: 177 deals
-  Revolver: 158 deals
+  Brooklyn Vegan: 179 deals
+  Revolver: 159 deals
   Newbury Comics: 146 deals
   Newbury Preorders: 146 deals
   Craft Recordings: 97 deals
@@ -912,12 +905,12 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 1 items | pages: 5 | robot walls: 0
+  Amazon: 18 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 1
-Brooklyn Vegan: 177
+Amazon: 18
+Brooklyn Vegan: 179
 Craft Recordings: 97
 Equal Vision: 87
 Fearless Records: 86
@@ -929,8 +922,8 @@ Newbury Comics: 146
 Newbury Preorders: 146
 Pirates Press Records: 52
 Pure Noise Records: 76
-r/VinylReleases: 38
-Revolver: 158
+r/VinylReleases: 41
+Revolver: 159
 Rhino: 76
 Rise All: 75
 Rise Records: 75
