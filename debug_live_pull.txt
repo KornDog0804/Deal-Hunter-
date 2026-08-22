@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 44 candidate vinyl items
-Amazon: found 40 candidate vinyl items
-Amazon: kept 16
+Amazon: found 45 candidate vinyl items
+Amazon: found 39 candidate vinyl items
+Amazon: kept 17
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5922 entries
-[Discogs] Enriching 2975 vinyl records with Mint pricing...
+[Discogs] Enriching 2976 vinyl records with Mint pricing...
 [Discogs] Cache saved (5922 entries)
 [Discogs] Enrichment complete!
 
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 41 deals after filtering
+[r/VinylReleases] 38 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 276137 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 276005 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -789,7 +789,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 295
 [UpcomingVinyl] 295 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2960 buy signals saved to buy_signals.json
+[BuySignals] 2961 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -833,11 +833,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 16 items | pages: 7 | robot walls: 0
+  Amazon: 17 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 16
+Amazon: 17
 Brooklyn Vegan: 180
 Craft Recordings: 97
 Equal Vision: 88
@@ -850,7 +850,7 @@ Newbury Comics: 145
 Newbury Preorders: 145
 Pirates Press Records: 52
 Pure Noise Records: 75
-r/VinylReleases: 41
+r/VinylReleases: 38
 Revolver: 146
 Rhino: 76
 Rise All: 75
