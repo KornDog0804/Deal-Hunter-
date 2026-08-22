@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 51 candidate vinyl items
-Amazon: found 38 candidate vinyl items
-Amazon: kept 19
+Amazon: found 44 candidate vinyl items
+Amazon: found 40 candidate vinyl items
+Amazon: kept 16
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 5922 entries
-[Discogs] Enriching 2978 vinyl records with Mint pricing...
+[Discogs] Enriching 2975 vinyl records with Mint pricing...
 [Discogs] Cache saved (5922 entries)
 [Discogs] Enrichment complete!
 
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 276587 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 276137 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -765,7 +765,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zac FarroOperator (Live In Studio) —  (Congrats Records)
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] li>h2 approach found 302 entries
-[UpcomingVinyl] Got 527248 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 527356 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -833,11 +833,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 19 items | pages: 7 | robot walls: 0
+  Amazon: 16 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 19
+Amazon: 16
 Brooklyn Vegan: 180
 Craft Recordings: 97
 Equal Vision: 88
