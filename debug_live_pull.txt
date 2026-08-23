@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 45 candidate vinyl items
-Amazon: found 39 candidate vinyl items
-Amazon: kept 17
+Amazon: found 41 candidate vinyl items
+Amazon: found 42 candidate vinyl items
+Amazon: kept 15
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -427,9 +427,9 @@ Popsike: unknown source_type "popsike_source" - skipping
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 5922 entries
-[Discogs] Enriching 2976 vinyl records with Mint pricing...
-[Discogs] Cache saved (5922 entries)
+[Discogs] Loaded cache with 5940 entries
+[Discogs] Enriching 2974 vinyl records with Mint pricing...
+[Discogs] Cache saved (5940 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -441,12 +441,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 38 deals after filtering
+[r/VinylReleases] 39 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 276005 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 276137 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -765,7 +765,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: Zac FarroOperator (Live In Studio) —  (Congrats Records)
 [UpcomingVinyl] FOUND: 民謡クルセイダーズFrom Japan with Love —  (Blue Note)
 [UpcomingVinyl] li>h2 approach found 302 entries
-[UpcomingVinyl] Got 527356 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 527374 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -833,11 +833,11 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 17 items | pages: 7 | robot walls: 0
+  Amazon: 15 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 17
+Amazon: 15
 Brooklyn Vegan: 180
 Craft Recordings: 97
 Equal Vision: 88
@@ -850,7 +850,7 @@ Newbury Comics: 145
 Newbury Preorders: 145
 Pirates Press Records: 52
 Pure Noise Records: 75
-r/VinylReleases: 38
+r/VinylReleases: 39
 Revolver: 146
 Rhino: 76
 Rise All: 75
