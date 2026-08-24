@@ -65133,5 +65133,74 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "a s o|a s o": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "a.s.o.",
+    "discogs_title": "a.s.o.",
+    "discogs_release_id": 28129063,
+    "discogs_url": "https://www.discogs.com/release/28129063-aso-aso",
+    "discogs_mint_price": 168.87,
+    "discogs_lowest": 168.87,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 939,
+    "discogs_want": 1145
+  },
+  "killswitch engage|killswitch engage": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Killswitch Engage",
+    "discogs_title": "Killswitch Engage",
+    "discogs_release_id": 15943212,
+    "discogs_url": "https://www.discogs.com/release/15943212-Killswitch-Engage-Killswitch-Engage",
+    "discogs_mint_price": 22.0,
+    "discogs_lowest": 22.0,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 851,
+    "discogs_want": 186
+  },
+  "songs from the wedding cake|blossoms": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7349,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "over the garden wall|copper variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4576,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "king gizzard and the lizard wizard|translucent black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7149,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "voodoo glow skulls|firme": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Voodoo Glow Skulls",
+    "discogs_title": "Firme",
+    "discogs_release_id": 24242063,
+    "discogs_url": "https://www.discogs.com/release/24242063-Voodoo-Glow-Skulls-Firme",
+    "discogs_mint_price": 259.99,
+    "discogs_lowest": 259.99,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 0,
+    "discogs_want": 15
   }
 }
