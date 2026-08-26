@@ -21,14 +21,14 @@ Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 215
+Sound of Vinyl: kept 216
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 117
+uDiscover Music: kept 112
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -100,7 +100,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 95
+Craft Recordings: kept 94
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -121,7 +121,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 180 products
 Rhino: 180 products via Shopify JSON
-Rhino: kept 82
+Rhino: kept 84
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -399,9 +399,9 @@ Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
 Amazon: found 0 candidate vinyl items
-Amazon: found 52 candidate vinyl items
+Amazon: found 41 candidate vinyl items
 Amazon: found 36 candidate vinyl items
-Amazon: kept 18
+Amazon: kept 14
 
 ==================================================
 Scraping: Target (target_catalog_source)
@@ -428,7 +428,7 @@ Popsike: unknown source_type "popsike_source" - skipping
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 6072 entries
-[Discogs] Enriching 3007 vinyl records with Mint pricing...
+[Discogs] Enriching 3000 vinyl records with Mint pricing...
 [Discogs] Cache saved (6072 entries)
 [Discogs] Enrichment complete!
 
@@ -446,7 +446,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 341751 bytes from https://upcomingvinyl.com/this-week
+[UpcomingVinyl] Got 341775 bytes from https://upcomingvinyl.com/this-week
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -843,7 +843,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] FOUND: 牛尾憲輔Chainsaw Man The Movie: Reze Arc Original Soundtrack (Summer's End) —  (Milan)
 [UpcomingVinyl] FOUND: 錯乱前戦Odoroyo —  (Lawson Ent)
 [UpcomingVinyl] li>h2 approach found 380 entries
-[UpcomingVinyl] Got 560952 bytes from https://upcomingvinyl.com/overview
+[UpcomingVinyl] Got 560520 bytes from https://upcomingvinyl.com/overview
 [UpcomingVinyl] Preview: <!DOCTYPE html>
 <html lang="en">
 
@@ -867,15 +867,15 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] h2 text: Labels
 [UpcomingVinyl] Total matches: 372
 [UpcomingVinyl] 372 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2989 buy signals saved to buy_signals.json
+[BuySignals] 2986 buy signals saved to buy_signals.json
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 234 deals
   Rollin Preorders: 234 deals
-  Sound of Vinyl: 215 deals
-  uDiscover Music: 117 deals
+  Sound of Vinyl: 216 deals
+  uDiscover Music: 112 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
   Rise Records: 74 deals
@@ -884,10 +884,10 @@ SOURCE STATUS SUMMARY
   Revolver: 158 deals
   Newbury Comics: 145 deals
   Newbury Preorders: 145 deals
-  Craft Recordings: 95 deals
+  Craft Recordings: 94 deals
   MNRK Heavy: 137 deals
   Equal Vision: 88 deals
-  Rhino: 82 deals
+  Rhino: 84 deals
   Interscope Records: 124 deals
   SharpTone Records: 91 deals
   Rock Metal Fan Nation: 142 deals
@@ -911,13 +911,13 @@ SOURCE STATUS SUMMARY
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 18 items | pages: 7 | robot walls: 0
+  Amazon: 14 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
   Popsike: SKIPPED (unknown type: popsike_source)
 ----- SOURCE SUMMARY -----
-Amazon: 18
+Amazon: 14
 Brooklyn Vegan: 172
-Craft Recordings: 95
+Craft Recordings: 94
 Equal Vision: 88
 Fearless Records: 88
 Fearless Vinyl: 88
@@ -928,9 +928,9 @@ Newbury Comics: 145
 Newbury Preorders: 145
 Pirates Press Records: 52
 Pure Noise Records: 80
-r/VinylReleases: 40
+r/VinylReleases: 42
 Revolver: 158
-Rhino: 82
+Rhino: 84
 Rise All: 74
 Rise Records: 74
 RMFN All: 141
@@ -940,8 +940,8 @@ Rollin Records: 233
 SharpTone Records: 90
 Solid State Records: 52
 Solid State Vinyl: 52
-Sound of Vinyl: 212
+Sound of Vinyl: 213
 Sumerian Records: 62
 Target: 1
-uDiscover Music: 114
+uDiscover Music: 109
 Walmart: 1
