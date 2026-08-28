@@ -67480,5 +67480,138 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "jawbreaker|dear you 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jawbreaker",
+    "discogs_title": "Dear You",
+    "discogs_release_id": 1850807,
+    "discogs_url": "https://www.discogs.com/release/1850807-Jawbreaker-Dear-You",
+    "discogs_mint_price": 80.0,
+    "discogs_lowest": 80.0,
+    "discogs_num_for_sale": 14,
+    "discogs_have": 1294,
+    "discogs_want": 1116
+  },
+  "the black crowes|shake your money maker": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Black Crowes",
+    "discogs_title": "Shake Your Money Maker",
+    "discogs_release_id": 4036089,
+    "discogs_url": "https://www.discogs.com/release/4036089-The-Black-Crowes-Shake-Your-Money-Maker",
+    "discogs_mint_price": 27.03,
+    "discogs_lowest": 27.03,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 340,
+    "discogs_want": 175
+  },
+  "aec|rise against revolutions per minute": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|the voidz tyranny 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6669,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mnrk heavy|mastiff leave me the ashes of the earth": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7009,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "mnrk heavy|escuela grind memory theater": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6534,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|korn life is peachy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6612,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nick ward|world triple a b": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4956,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bob marley and the wailers|rebel s hop an early 70 s retrospective 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bob Marley And The Wailers*",
+    "discogs_title": "Rebel's Hop (An Early 70's Retrospective)",
+    "discogs_release_id": 15845058,
+    "discogs_url": "https://www.discogs.com/release/15845058-Bob-Marley-And-The-Wailers-Rebels-Hop-An-Early-70s-Retrospective",
+    "discogs_mint_price": 27.39,
+    "discogs_lowest": 27.39,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 351,
+    "discogs_want": 115
+  },
+  "descendents|liveage": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Descendents",
+    "discogs_title": "Liveage!",
+    "discogs_release_id": 38214039,
+    "discogs_url": "https://www.discogs.com/release/38214039-Descendents-Liveage",
+    "discogs_mint_price": 49.99,
+    "discogs_lowest": 49.99,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 13,
+    "discogs_want": 4
+  },
+  "koop|koop islands": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Koop",
+    "discogs_title": "Koop Islands",
+    "discogs_release_id": 837869,
+    "discogs_url": "https://www.discogs.com/release/837869-Koop-Koop-Islands",
+    "discogs_mint_price": 299.0,
+    "discogs_lowest": 299.0,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 382,
+    "discogs_want": 1288
+  },
+  "unknown artist|armor for sleep audiotree live transparent sage green w black limited to 250": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
