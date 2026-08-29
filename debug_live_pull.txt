@@ -77,7 +77,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 98
+Revolver: kept 99
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -196,26 +196,26 @@ Hopeless Records: kept 67
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
 ==================================================
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://hopelessrecords.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
 Hopeless Shopify: 0 products via Shopify JSON
 Hopeless Shopify: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
-Hopeless Shopify: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+Hopeless Shopify: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: Pirates Press Records (shopify_store)
@@ -282,50 +282,50 @@ InVogue Records: HTML source failed | HTTP Error 404: Not Found
 ==================================================
 Scraping: Thriller Records (shopify_store)
 ==================================================
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://thrillervinyl.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
 Thriller Records: 0 products via Shopify JSON
 Thriller Records: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
-Thriller Records: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
+Thriller Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: UNFD (shopify_store)
 ==================================================
-  -> retry 1/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://unfdmusic.shop/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://unfdmusic.shop/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://unfdmusic.shop/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://unfdmusic.shop/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 1/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
-  ✗ https://unfdmusic.shop/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://unfdmusic.shop/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
 UNFD: 0 products via Shopify JSON
 UNFD: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno 7] No address associated with hostname>
-UNFD: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
+UNFD: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: Merchbar (html_store)
@@ -343,16 +343,16 @@ Hot Topic: kept 16
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
 ==================================================
-  -> retry 1/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno 7] No address associated with hostname>
-  -> retry 2/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno 7] No address associated with hostname>
-Millions of Records: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno -2] Name or service not known>
+Millions of Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
@@ -399,28 +399,28 @@ Walmart: kept 1
 ==================================================
 Scraping: Target (target_catalog_source)
 ==================================================
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2585 normalized vinyl listings
+[Stage2] 2586 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6185 entries
-[Discogs] Enriching 2585 vinyl records with Mint pricing...
-[Discogs] Cache saved (6185 entries)
+[Discogs] Loaded cache with 6429 entries
+[Discogs] Enriching 2586 vinyl records with Mint pricing...
+[Discogs] Cache saved (6429 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285867 bytes
+[UpcomingVinyl] Got 285843 bytes
 [UpcomingVinyl] Found 314 raw record URLs
 [UpcomingVinyl] MATCH: Korn | The Nothing
 [UpcomingVinyl] MATCH: Michael Jackson | The Definitive Collection
@@ -459,7 +459,7 @@ SOURCE STATUS SUMMARY
   Rise Records: 88 deals
   Rise All: 88 deals
   Brooklyn Vegan: 174 deals
-  Revolver: 98 deals
+  Revolver: 99 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
   Craft Recordings: 96 deals
@@ -475,17 +475,17 @@ SOURCE STATUS SUMMARY
   Solid State Vinyl: 58 deals
   Pure Noise Records: 89 deals
   Hopeless Records: 67 deals
-  Hopeless Shopify: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 96 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 87 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
-  Thriller Records: FAILED: <urlopen error [Errno 7] No address associated with hostname>
-  UNFD: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
+  UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 16 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
-  Millions of Records: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
@@ -505,7 +505,7 @@ Newbury Comics: 209
 Pirates Press Records: 96
 Pure Noise Records: 89
 r/VinylReleases: 47
-Revolver: 98
+Revolver: 99
 Rhino: 87
 Rise Records: 88
 Rock Metal Fan Nation: 147
