@@ -543,6 +543,117 @@ h1{
     grid-template-columns:1fr
   }
 }
+
+.pagination-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:18px 0;
+  padding:12px;
+}
+
+.pagination-pages{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+}
+
+.page-btn{
+  min-width:42px;
+  height:42px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:10px;
+  background:rgba(255,255,255,.05);
+  color:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.page-btn:hover{
+  border-color:#74ff72;
+  background:rgba(116,255,114,.10);
+}
+
+.page-btn.active{
+  background:#74ff72;
+  color:#111;
+  border-color:#74ff72;
+}
+
+.page-btn:disabled{
+  opacity:.28;
+  cursor:not-allowed;
+}
+
+.page-dots{
+  padding:0 4px;
+  opacity:.55;
+  font-weight:900;
+}
+
+.page-info{
+  width:100%;
+  text-align:center;
+  opacity:.7;
+  font-size:.88rem;
+}
+
+.page-size-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:.85rem;
+  font-weight:800;
+  opacity:.9;
+}
+
+.page-size-wrap select{
+  min-width:74px;
+}
+
+
+.collectible-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:8px 0;
+}
+
+.collectible-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 8px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.collectible-price-old{
+  opacity:.55;
+  text-decoration:line-through;
+  margin-left:6px;
+  font-size:.82em;
+}
+
+.collectible-discount{
+  font-size:.82rem;
+  font-weight:900;
+  margin-top:4px;
+}
+
+.collectible-sold{
+  opacity:.68;
+}
+
 </style>
 </head>
 
@@ -669,6 +780,10 @@ h1{
   🔬 MINI VINYL
 </button>
 
+<button class="tab" data-view="collectibles">
+  🧸 COLLECTIBLES
+</button>
+
 </div>
 
 
@@ -677,7 +792,11 @@ h1{
   <span id="updated"></span>
 </div>
 
+<div id="paginationTop"></div>
+
 <div id="grid" class="grid"></div>
+
+<div id="paginationBottom"></div>
 
 <div class="footer">
   VINYL THERAPY NEVER DIES • KORNDOG RECORDS
@@ -690,7 +809,11 @@ h1{
 let liveDeals = []
 let buySignals = []
 let miniDeals = []
+let collectibleDeals = []
 let view = "all"
+
+let currentPage = 1
+let pageSize = 48
 
 const $ = id => document.getElementById(id)
 
@@ -1119,38 +1242,282 @@ function miniCard(d){
 }
 
 function populateSources(){
-  const sourceData =
-    view === "mini"
-      ? miniDeals
-      : view === "signals"
-        ? buySignals
-        : liveDeals
+  let data
+
+  if(view === "mini"){
+    data = miniDeals
+  }else if(view === "collectibles"){
+    data = collectibleDeals
+  }else if(view === "signals"){
+    data = buySignals
+  }else{
+    data = liveDeals
+  }
+
+  const current = $("source").value
 
   const sources = [
     ...new Set(
-      sourceData
-        .map(x => x.source)
+      data
+        .map(d => d.source)
         .filter(Boolean)
     )
-  ].sort((a,b) => a.localeCompare(b))
+  ].sort(
+    (a,b) =>
+      String(a).localeCompare(String(b))
+  )
 
-  $("source").innerHTML =
-    `<option value="">All stores</option>` +
-    sources
-      .map(
-        s =>
-          `<option value="${esc(s)}">${esc(s)}</option>`
-      )
-      .join("")
+  $("source").innerHTML = `
+    <option value="">
+      All Sources
+    </option>
+
+    ${
+      sources
+        .map(
+          source => `
+            <option
+              value="${esc(source)}"
+            >
+              ${esc(source)}
+            </option>
+          `
+        )
+        .join("")
+    }
+  `
+
+  if(sources.includes(current)){
+    $("source").value = current
+  }else{
+    $("source").value = ""
+  }
 }
+
+
+
+function collectibleCard(d){
+  const url = safeUrl(d.link || "")
+  const image = safeUrl(d.image || "")
+
+  const price = number(d.price)
+  const oldPrice = number(d.compare_at_price)
+  const discount = number(d.discount_pct)
+
+  const badges = []
+
+  if(d.amazing_deal){
+    badges.push("🚨 AMAZING")
+  }else if(d.deal){
+    badges.push("🔥 DEAL")
+  }
+
+  if(d.clearance){
+    badges.push("🔥 CLEARANCE")
+  }else if(d.sale){
+    badges.push("🏷️ SALE")
+  }
+
+  if(d.chase){
+    badges.push("🎯 CHASE")
+  }
+
+  if(d.exclusive){
+    badges.push("✨ EXCLUSIVE")
+  }
+
+  if(d.preorder){
+    badges.push("⏳ PREORDER")
+  }
+
+  if(d.sold_out){
+    badges.push("🚫 SOLD OUT")
+  }
+
+  const badgeHtml = badges.length
+    ? `
+      <div class="collectible-badges">
+        ${badges.map(
+          badge => `
+            <span class="collectible-badge">
+              ${esc(badge)}
+            </span>
+          `
+        ).join("")}
+      </div>
+    `
+    : ""
+
+  const art = image
+    ? `
+      <img
+        src="${esc(image)}"
+        alt="${esc(d.title || "Collectible")}"
+        loading="lazy"
+      >
+    `
+    : `
+      <div class="fallback-art">
+        👹📦
+      </div>
+    `
+
+  const artHtml = url
+    ? `
+      <a
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${art}
+      </a>
+    `
+    : art
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Collectible"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown retailer"
+  )
+
+  const type = esc(
+    d.product_type ||
+    d.category ||
+    "COLLECTIBLE"
+  )
+
+  const franchise = esc(d.franchise || "")
+  const character = esc(d.character || "")
+
+  let priceHtml = "<strong>Browse</strong>"
+
+  if(price > 0){
+    priceHtml = `
+      <strong>$${price.toFixed(2)}</strong>
+      ${
+        oldPrice > price
+          ? `
+            <span class="collectible-price-old">
+              $${oldPrice.toFixed(2)}
+            </span>
+          `
+          : ""
+      }
+    `
+  }
+
+  const availability = esc(
+    d.availability_text ||
+    (
+      d.sold_out
+        ? "Sold Out"
+        : "Browse current listing"
+    )
+  )
+
+  return `
+    <article class="card ${
+      d.sold_out
+        ? "collectible-sold"
+        : ""
+    }">
+
+      <div class="art">
+        ${artHtml}
+      </div>
+
+      <div class="card-body">
+
+        <div class="eyebrow">
+          🧸 ${type}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="title-link"
+              >
+                <h3>${title}</h3>
+              </a>
+            `
+            : `<h3>${title}</h3>`
+        }
+
+        ${badgeHtml}
+
+        <div class="meta">
+          <span>${source}</span>
+
+          ${
+            franchise
+              ? `<span>${franchise}</span>`
+              : ""
+          }
+
+          ${
+            character
+              ? `<span>${character}</span>`
+              : ""
+          }
+        </div>
+
+        <div class="price">
+          ${priceHtml}
+        </div>
+
+        ${
+          discount > 0
+            ? `
+              <div class="collectible-discount">
+                ${discount.toFixed(0)}% OFF
+              </div>
+            `
+            : ""
+        }
+
+        <div class="availability">
+          ${availability}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                class="buy"
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW / BUY AT ${source.toUpperCase()}
+              </a>
+            `
+            : ""
+        }
+
+      </div>
+    </article>
+  `
+}
+
 
 function filtered(){
   let data =
     view === "mini"
       ? [...miniDeals]
-      : view === "signals"
-        ? [...buySignals]
-        : [...liveDeals]
+      : view === "collectibles"
+        ? [...collectibleDeals]
+        : view === "signals"
+          ? [...buySignals]
+          : [...liveDeals]
 
   const search = $("search").value
     .trim()
@@ -1184,6 +1551,7 @@ function filtered(){
 
     if(
       view !== "mini" &&
+      view !== "collectibles" &&
       quality &&
       q !== quality
     ){
@@ -1215,6 +1583,18 @@ function filtered(){
         d.version,
         d.mini_system,
         d.product_type,
+        d.category,
+        d.franchise,
+        d.character,
+        d.availability_text,
+        d.exclusive ? "exclusive" : "",
+        d.chase ? "chase" : "",
+        d.preorder ? "preorder pre-order" : "",
+        d.sale ? "sale" : "",
+        d.clearance ? "clearance" : "",
+        d.deal ? "deal" : "",
+        d.amazing_deal ? "amazing deal" : "",
+        d.sold_out ? "sold out" : "available in stock",
         ...(Array.isArray(d.signals) ? d.signals : [])
       ]
         .join(" ")
@@ -1267,13 +1647,248 @@ function filtered(){
   return data
 }
 
+
+function pageNumbers(current,total){
+  if(total <= 7){
+    return Array.from(
+      {length:total},
+      (_,i) => i + 1
+    )
+  }
+
+  const pages = new Set([
+    1,
+    total,
+    current,
+    current - 1,
+    current + 1
+  ])
+
+  if(current <= 4){
+    pages.add(2)
+    pages.add(3)
+    pages.add(4)
+    pages.add(5)
+  }
+
+  if(current >= total - 3){
+    pages.add(total - 1)
+    pages.add(total - 2)
+    pages.add(total - 3)
+    pages.add(total - 4)
+  }
+
+  return [...pages]
+    .filter(x => x >= 1 && x <= total)
+    .sort((a,b) => a - b)
+}
+
+
+function paginationMarkup(totalItems,totalPages){
+  if(!totalItems){
+    return ""
+  }
+
+  const pages = pageNumbers(
+    currentPage,
+    totalPages
+  )
+
+  let buttons = ""
+
+  let previous = 0
+
+  for(const page of pages){
+
+    if(previous && page - previous > 1){
+      buttons += `
+        <span class="page-dots">…</span>
+      `
+    }
+
+    buttons += `
+      <button
+        class="page-btn ${
+          page === currentPage
+            ? "active"
+            : ""
+        }"
+        onclick="goPage(${page})"
+        aria-label="Page ${page}"
+      >
+        ${page}
+      </button>
+    `
+
+    previous = page
+  }
+
+  return `
+    <div class="pagination-wrap">
+
+      <button
+        class="page-btn"
+        onclick="goPage(${currentPage - 1})"
+        ${currentPage <= 1 ? "disabled" : ""}
+      >
+        ← PREV
+      </button>
+
+      <div class="pagination-pages">
+        ${buttons}
+      </div>
+
+      <button
+        class="page-btn"
+        onclick="goPage(${currentPage + 1})"
+        ${
+          currentPage >= totalPages
+            ? "disabled"
+            : ""
+        }
+      >
+        NEXT →
+      </button>
+
+      <div class="page-size-wrap">
+        SHOW
+
+        <select
+          onchange="changePageSize(this.value)"
+          aria-label="Items per page"
+        >
+          <option
+            value="24"
+            ${pageSize === 24 ? "selected" : ""}
+          >
+            24
+          </option>
+
+          <option
+            value="48"
+            ${pageSize === 48 ? "selected" : ""}
+          >
+            48
+          </option>
+
+          <option
+            value="96"
+            ${pageSize === 96 ? "selected" : ""}
+          >
+            96
+          </option>
+        </select>
+
+        PER PAGE
+      </div>
+
+      <div class="page-info">
+        Page ${currentPage.toLocaleString()}
+        of ${totalPages.toLocaleString()}
+      </div>
+
+    </div>
+  `
+}
+
+
+function goPage(page){
+  const data = filtered()
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(data.length / pageSize)
+  )
+
+  currentPage = Math.max(
+    1,
+    Math.min(
+      Number(page) || 1,
+      totalPages
+    )
+  )
+
+  render()
+
+  const top =
+    document.getElementById("paginationTop")
+
+  if(top){
+    top.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    })
+  }
+}
+
+
+function changePageSize(value){
+  pageSize = Number(value) || 48
+  currentPage = 1
+  render()
+}
+
+
 function render(){
   const data = filtered()
 
-  $("resultCount").textContent =
-    `${data.length.toLocaleString()} records shown`
+  const totalItems = data.length
 
-  if(!data.length){
+  const totalPages = Math.max(
+    1,
+    Math.ceil(totalItems / pageSize)
+  )
+
+  if(currentPage > totalPages){
+    currentPage = totalPages
+  }
+
+  if(currentPage < 1){
+    currentPage = 1
+  }
+
+  const startIndex =
+    (currentPage - 1) * pageSize
+
+  const endIndex = Math.min(
+    startIndex + pageSize,
+    totalItems
+  )
+
+  const pageData = data.slice(
+    startIndex,
+    endIndex
+  )
+
+  if(totalItems){
+    $("resultCount").textContent =
+      `Showing ${
+        (startIndex + 1).toLocaleString()
+      }–${
+        endIndex.toLocaleString()
+      } of ${
+        totalItems.toLocaleString()
+      } ${
+        view === "mini"
+          ? "mini collectibles"
+          : view === "collectibles"
+            ? "collectibles"
+            : "records"
+      }`
+  }else{
+    $("resultCount").textContent =
+      "0 items shown"
+  }
+
+  const nav = paginationMarkup(
+    totalItems,
+    totalPages
+  )
+
+  $("paginationTop").innerHTML = nav
+  $("paginationBottom").innerHTML = nav
+
+  if(!pageData.length){
     $("grid").innerHTML = `
       <div class="empty">
         Nothing matched those filters.
@@ -1283,14 +1898,17 @@ function render(){
   }
 
   $("grid").innerHTML =
-    data
+    pageData
       .map(
         view === "mini"
           ? miniCard
-          : card
+          : view === "collectibles"
+            ? collectibleCard
+            : card
       )
       .join("")
 }
+
 
 function updateStats(){
   $("totalStat").textContent =
@@ -1321,7 +1939,7 @@ function updateStats(){
 
 async function load(){
   try{
-    const [liveRes,buyRes,miniRes] = await Promise.all([
+    const [liveRes,buyRes,miniRes,collectibleRes] = await Promise.all([
       fetch(
         `live_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
@@ -1332,6 +1950,10 @@ async function load(){
       ),
       fetch(
         `mini_vinyl_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `collectibles_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
       )
     ])
@@ -1350,6 +1972,11 @@ async function load(){
 
     if(miniRes.ok){
       miniDeals = await miniRes.json()
+    }
+
+    if(collectibleRes.ok){
+      collectibleDeals =
+        await collectibleRes.json()
     }
 
     populateSources()
@@ -1384,7 +2011,10 @@ async function load(){
 ].forEach(id => {
   $(id).addEventListener(
     id === "search" ? "input" : "change",
-    render
+    () => {
+      currentPage = 1
+      render()
+    }
   )
 })
 
@@ -1398,6 +2028,7 @@ document.querySelectorAll(".tab").forEach(btn => {
     btn.classList.add("active")
 
     view = btn.dataset.view
+    currentPage = 1
 
     $("source").value = ""
     populateSources()

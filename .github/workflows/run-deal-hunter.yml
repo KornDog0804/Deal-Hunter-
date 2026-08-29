@@ -33,6 +33,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           python3 live_pull.py
+          python3 collectibles_pull.py
 
       - name: Commit & push results
         run: |
