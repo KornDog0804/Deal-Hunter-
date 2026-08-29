@@ -1,178 +1,1217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Korndog Deal Board</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .decision-strip{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:8px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px}
-    .decision-BUY-NOW{background:rgba(0,200,83,.15);color:#00c853;border:1px solid rgba(0,200,83,.3)}
-    .decision-BUY-LIGHT{background:rgba(255,214,0,.15);color:#ffd600;border:1px solid rgba(255,214,0,.3)}
-    .decision-WATCH{background:rgba(66,165,245,.15);color:#42a5f5;border:1px solid rgba(66,165,245,.3)}
-    .decision-PASS{background:rgba(120,120,120,.15);color:#888;border:1px solid rgba(120,120,120,.3)}
-    .score-ring{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:13px;font-weight:800;flex-shrink:0}
-    .score-hot{background:rgba(0,200,83,.2);color:#00c853;border:2px solid #00c853}
-    .score-warm{background:rgba(255,214,0,.2);color:#ffd600;border:2px solid #ffd600}
-    .score-cool{background:rgba(66,165,245,.2);color:#42a5f5;border:2px solid #42a5f5}
-    .score-cold{background:rgba(120,120,120,.2);color:#888;border:2px solid #666}
-    .decision-label{flex:1}.decision-sublabel{font-size:10px;font-weight:500;opacity:.7;text-transform:none;letter-spacing:0;margin-top:1px}
-    .brain-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
-    .brain-cell{padding:6px 8px;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
-    .brain-cell .label{font-size:9px;text-transform:uppercase;letter-spacing:.8px;opacity:.5;margin-bottom:2px}
-    .brain-cell .value{font-size:13px;font-weight:600}
-    .margin-positive{color:#00c853}.margin-neutral{color:#ffd600}.margin-none{color:#888}
-    .lane-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:all 0.2s}
-    .lane-tag:hover{opacity:0.8;transform:scale(1.05)}
-    .lane-identity{background:rgba(156,39,176,.2);color:#ce93d8;border:1px solid rgba(156,39,176,.3)}
-    .lane-bread{background:rgba(255,167,38,.2);color:#ffb74d;border:1px solid rgba(255,167,38,.3)}
-    .lane-trend{background:rgba(233,30,99,.2);color:#f06292;border:1px solid rgba(233,30,99,.3)}
-    .lane-treasure{background:rgba(0,188,212,.2);color:#4dd0e1;border:1px solid rgba(0,188,212,.3)}
-    .deal-card-reddit{border-left:3px solid #ff4500}.badge-reddit{background:#ff4500;color:#fff;font-weight:600}
-    .badge{cursor:pointer;transition:all 0.2s}
-    .badge:hover{opacity:0.8;transform:scale(1.02)}
-    .reddit-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-    .reddit-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;background:rgba(255,69,0,.15);color:#ff4500;border:1px solid rgba(255,69,0,.3);text-transform:uppercase;letter-spacing:.5px}
-    .reddit-tag-score{background:rgba(255,165,0,.15);color:#ffa500;border-color:rgba(255,165,0,.3)}
-    .why-buy-text{font-size:11px;font-style:italic;opacity:.7;margin-top:4px;line-height:1.4}
-    .discogs-badge{display:inline-block;padding:2px 6px;border-radius:8px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-left:6px}
-    .discogs-badge-high{background:rgba(0,200,83,.15);color:#00c853;border:1px solid rgba(0,200,83,.3)}
-    .discogs-badge-med{background:rgba(255,214,0,.15);color:#ffd600;border:1px solid rgba(255,214,0,.3)}
-    .discogs-badge-low{background:rgba(255,152,0,.15);color:#ff9800;border:1px solid rgba(255,152,0,.3)}
-    .deal-actions-with-discogs{display:flex;gap:8px;flex-direction:column}
-    .btn-discogs{background:rgba(51,51,51,.2);color:#999;border:1px solid rgba(51,51,51,.3)}
-    .btn-discogs:hover{background:rgba(51,51,51,.35);color:#bbb}
-    .shuffle-btn{background:rgba(76,175,80,.15);color:#4caf50;border:1px solid rgba(76,175,80,.3);font-weight:700;padding:8px 12px;border-radius:6px;text-transform:uppercase;font-size:11px;letter-spacing:.5px;cursor:pointer;transition:all 0.2s}
-    .shuffle-btn:hover{background:rgba(76,175,80,.25);color:#66bb6a}
-    .shuffle-btn.active{background:rgba(76,175,80,.3);color:#81c784;box-shadow:0 0 8px rgba(76,175,80,.4)}
-    .filter-indicator{display:inline-block;background:rgba(255,152,0,.2);color:#ff9800;border:1px solid rgba(255,152,0,.3);padding:3px 8px;border-radius:4px;font-size:10px;font-weight:600;margin-left:8px;text-transform:uppercase}
-  </style>
-</head>
-<body>
-  <header id="siteHeader" class="site-header"><div class="topbar"><button id="menuToggle" class="icon-btn" aria-label="Open menu">&#9776;</button><div class="topbar-brand"><div class="eyebrow">Korndog Records</div><h1>Korndog Deal Board</h1></div></div></header>
-  <aside id="sideMenu" class="side-menu" aria-hidden="true">
-    <div class="side-menu-header"><div><div class="eyebrow">Korndog Records</div><h2 class="menu-title">Browse Records</h2></div><button id="menuClose" class="icon-btn" aria-label="Close menu">&times;</button></div>
-    <div class="menu-block"><label class="menu-label" for="searchInput">Search</label><input id="searchInput" class="menu-select" type="text" placeholder="Artist, title, source..." /></div>
-    <div class="menu-block"><label class="menu-label" for="sourceFilter">Source</label><select id="sourceFilter" class="menu-select"><option value="">All sources</option></select></div>
-    <div class="menu-block"><label class="menu-label" for="laneFilter">Lane</label><select id="laneFilter" class="menu-select"><option value="">All lanes</option></select></div>
-    <div class="menu-block"><div class="menu-label">Quick Filters</div><div class="chip-scroll"><div class="chip-row chip-row-nowrap">
-      <button class="filter-chip active" data-quick="all">All</button>
-      <button class="filter-chip" data-quick="buynow">BUY NOW</button>
-      <button class="filter-chip" data-quick="buylight">BUY LIGHT</button>
-      <button class="filter-chip" data-quick="watch">WATCH</button>
-      <button class="filter-chip" data-quick="discogs">Discogs Priced</button>
-      <button class="filter-chip" data-quick="under30">Under $30</button>
-      <button class="filter-chip" data-quick="reddit">Reddit</button>
-      <button class="filter-chip" data-quick="amazon">Amazon</button>
-      <button class="filter-chip" data-quick="walmart">Walmart</button>
-      <button class="filter-chip" data-quick="target">Target</button>
-      <button class="filter-chip" data-quick="deepdiscount">Deep Discount</button>
-    </div></div></div>
-  </aside>
-  <div id="menuBackdrop" class="menu-backdrop"></div>
-  <main class="main-tight">
-    <div class="summary"><div class="chip" id="dealCount">Records: 0</div><div class="chip">Live from GitHub</div><button class="chip chip-button" id="pageStatus" type="button">Page 1</button><span id="filterIndicator" class="filter-indicator" style="display:none;"></span></div>
-    <div id="topPageNav" class="top-page-nav" style="display:none;"><div class="top-page-nav-inner"><div id="topPageNumbers" class="page-numbers"></div><div class="page-jump-wrap"><input id="topPageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" /><button class="btn btn-ghost" id="topPageJumpBtn">Go</button></div></div></div>
-    <section class="section">
-      <div class="section-head"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><h2 class="section-title">All Live Records</h2><button id="shuffleBtn" class="shuffle-btn" title="Randomize record order">🎲 Shuffle</button></div><div class="section-note">Brain-scored vinyl wall. Filter by decision, source, or dig manually.</div></div>
-      <div id="dealList" class="deal-list"></div>
-      <div class="pager" id="pager"><button class="btn btn-ghost" id="prevPageBtn">Previous</button><div id="pageNumbers" class="page-numbers"></div><div class="page-jump-wrap"><input id="pageJumpInput" class="page-jump-input" type="number" min="1" placeholder="Page" inputmode="numeric" /><button class="btn btn-ghost" id="pageJumpBtn">Go</button></div><button class="btn btn-ghost" id="nextPageBtn">Next</button></div>
-    </section>
-    <div class="footer-note">Disclosure: As an Amazon Associate, I earn from qualifying purchases.<br/>Korndog Deal Board &mdash; Buyer Brain powered.</div>
-  </main>
-<script>
-let allDeals=[],activeQuickFilter="all",currentPage=1,shuffleMode=false,laneFilter="",sourceFilter="";const DEALS_PER_PAGE=24;
-function escapeHtml(v){return String(v??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
-function safeNumber(v,fb=0){const n=Number(v);return Number.isFinite(n)?n:fb}
-function normalizeText(v){return String(v??"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim()}
-function normalizeSourceKey(v){const s=String(v||"").trim().toLowerCase();if(!s)return"";if(s.includes("amazon"))return"amazon";if(s.includes("walmart"))return"walmart";if(s.includes("target"))return"target";if(s.includes("deep discount"))return"deep discount";if(s.includes("vinylreleases")||s.includes("r/vinylreleases")||s.includes("reddit"))return"reddit";if(s.includes("newbury"))return"newbury comics";if(s.includes("udiscover"))return"udiscover music";if(s.includes("sound of vinyl"))return"sound of vinyl";if(s.includes("rise all"))return"rise all";if(s.includes("rise records"))return"rise records";if(s.includes("fearless"))return"fearless records";if(s.includes("brooklyn vegan"))return"brooklyn vegan";if(s.includes("equal vision"))return"equal vision";if(s.includes("rollin"))return"rollin records";if(s.includes("merchbar"))return"merchbar";if(s.includes("craft recordings"))return"craft recordings";if(s.includes("mnrk"))return"mnrk heavy";if(s.includes("revolver"))return"revolver";if(s.includes("sharptone"))return"sharptone records";if(s.includes("rock metal fan nation"))return"rock metal fan nation";if(s.includes("rmfn"))return"rmfn all";if(s.includes("unfd"))return"unfd";if(s.includes("sumerian"))return"sumerian records";if(s.includes("solid state vinyl"))return"solid state vinyl";if(s.includes("solid state"))return"solid state records";if(s.includes("hot topic"))return"hot topic";if(s.includes("pure noise"))return"pure noise records";if(s.includes("hopeless"))return"hopeless records";if(s.includes("trust records"))return"trust records";if(s.includes("pirates press"))return"pirates press records";if(s.includes("spinefarm"))return"spinefarm records";if(s.includes("invogue"))return"invogue records";if(s.includes("thriller"))return"thriller records";if(s.includes("rhino"))return"rhino";if(s.includes("interscope"))return"interscope records";if(s.includes("millions of records"))return"millions of records";if(s.includes("indiemerchstore"))return"indiemerchstore";return s}
-function normalizeLaneKey(v){return(v||"").toLowerCase().trim()}
-function prettifySourceName(v){const k=normalizeSourceKey(v);const m={"amazon":"Amazon","walmart":"Walmart","target":"Target","deep discount":"Deep Discount","reddit":"r/VinylReleases","newbury comics":"Newbury Comics","udiscover music":"uDiscover Music","sound of vinyl":"Sound of Vinyl","rise all":"Rise All","rise records":"Rise Records","fearless records":"Fearless Records","brooklyn vegan":"Brooklyn Vegan","equal vision":"Equal Vision","rollin records":"Rollin Records","merchbar":"Merchbar","craft recordings":"Craft Recordings","mnrk heavy":"MNRK Heavy","revolver":"Revolver","sharptone records":"SharpTone Records","rock metal fan nation":"Rock Metal Fan Nation","rmfn all":"RMFN All","unfd":"UNFD","sumerian records":"Sumerian Records","solid state records":"Solid State Records","solid state vinyl":"Solid State Vinyl","hot topic":"Hot Topic","pure noise records":"Pure Noise Records","hopeless records":"Hopeless Records","trust records":"Trust Records","pirates press records":"Pirates Press Records","spinefarm records":"Spinefarm Records","invogue records":"InVogue Records","thriller records":"Thriller Records","rhino":"Rhino","interscope records":"Interscope Records","millions of records":"Millions of Records","indiemerchstore":"IndieMerchstore"};return m[k]||String(v||"").trim()}
-function getPriceText(d){const p=safeNumber(d.price);return p>0?`$${p.toFixed(2)}`:"Browse"}
-function getSearchBlob(d){return normalizeText([d.artist,d.title,d.raw_title,d.source,d.version,d.page_text_snippet,d.inventory_lane,d.decision,d.why_buy].join(" "))}
-async function copyText(t){try{await navigator.clipboard.writeText(t);alert("Copied.")}catch{alert("Copy failed.")}}
-function decisionClass(d){return"decision-"+(d.decision||"PASS").toUpperCase().replace(/\s+/g,"-")}
-function scoreClass(s){if(s>=80)return"score-hot";if(s>=65)return"score-warm";if(s>=45)return"score-cool";return"score-cold"}
-function laneClass(l){const x=(l||"").toLowerCase();if(x.includes("identity"))return"lane-identity";if(x.includes("bread"))return"lane-bread";if(x.includes("trend"))return"lane-trend";if(x.includes("treasure"))return"lane-treasure";return"lane-bread"}
-function marginClass(m){if(m>=5)return"margin-positive";if(m>0)return"margin-neutral";return"margin-none"}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#130d18">
 
-function createDealCard(deal){
-  const buyLink=deal.link||"#",detailId=`d-${Math.random().toString(36).slice(2,10)}`;
-  const sourceName=prettifySourceName(deal.source||"Unknown"),isReddit=normalizeSourceKey(deal.source||"")==="reddit",hasBrain=!!deal.decision;
-  const imageHtml=deal.image?`<div class="deal-cover-wrap"><img class="deal-cover" src="${escapeHtml(deal.image)}" alt="${escapeHtml((deal.artist||"")+" - "+(deal.title||""))}" loading="lazy"/></div>`:"";
-  const badgeClass=isReddit?"badge badge-reddit":"badge badge-mid",badgeLabel=isReddit?"r/VinylReleases":sourceName;
-  const decision=(deal.decision||"").toUpperCase(),buyScore=safeNumber(deal.buy_score,0),lane=deal.inventory_lane||"";
-  const marginD=safeNumber(deal.expected_margin_dollars,0),marginP=safeNumber(deal.expected_margin_percent,0);
-  const salePrice=safeNumber(deal.suggested_sale_price,0),qty=safeNumber(deal.recommend_qty,0);
-  const whyBuy=deal.why_buy||"",turnSpd=deal.turn_speed||"",demandLvl=deal.demand_level||"",storeFit=deal.store_fit||"",shelfPlace=deal.shelf_placement||"";
-  
-  const discogsFound=deal.discogs_found===true;
-  const discogsPrice=safeNumber(deal.discogs_mint_price,0);
-  const discogsLowest=safeNumber(deal.discogs_lowest,0);
-  const discogsForSale=safeNumber(deal.discogs_num_for_sale,0);
-  const discogsConfidence=safeNumber(deal.discogs_match_confidence,0);
-  const discogsUrl=deal.discogs_url||"";
+<title>KornDog Deal Hunter</title>
 
-  let decisionHtml="";
-  if(hasBrain){decisionHtml=`<div class="decision-strip ${decisionClass(deal)}"><div class="${scoreClass(buyScore)} score-ring">${buyScore}</div><div class="decision-label"><div>${escapeHtml(decision||"PASS")}</div><div class="decision-sublabel">${escapeHtml(lane)}</div></div>${lane?`<button class="lane-tag ${laneClass(lane)} lane-filter-btn" data-lane="${escapeHtml(normalizeLaneKey(lane))}">${escapeHtml(lane.split(" ")[0])}</button>`:""}</div>`}
+<style>
+:root{
+  --bg:#0b0910;
+  --panel:#15101b;
+  --panel2:#1d1526;
+  --purple:#a855f7;
+  --purple2:#7c3aed;
+  --green:#72ff72;
+  --green2:#35d96f;
+  --text:#f8f5ff;
+  --muted:#a89caf;
+  --line:#33253f;
+  --danger:#ff5b79;
+  --gold:#ffd166;
+}
 
-  let redditMetaHtml="";
-  if(isReddit){const rt=deal.release_type||"",fl=deal.availability_text||"",rs=safeNumber(deal.reddit_score,0);redditMetaHtml=`<div class="reddit-meta">${rt?`<span class="reddit-tag">${escapeHtml(rt)}</span>`:""}${fl&&fl.toLowerCase()!==(rt||"").toLowerCase()?`<span class="reddit-tag">${escapeHtml(fl)}</span>`:""}${rs>0?`<span class="reddit-tag reddit-tag-score">▲ ${rs}</span>`:""}</div>`}
+*{
+  box-sizing:border-box
+}
 
-  let brainGridHtml="";
-  if(hasBrain&&decision!=="PASS"){
-    const confidenceBadge=discogsFound?discogsConfidence>=0.85?'<span class="discogs-badge discogs-badge-high" title="High confidence match">HIGH</span>':discogsConfidence>=0.70?'<span class="discogs-badge discogs-badge-med" title="Medium confidence match">MED</span>':'<span class="discogs-badge discogs-badge-low" title="Low confidence match">LOW</span>':"";
-    brainGridHtml=`<div class="brain-grid"><div class="brain-cell"><div class="label">Sell At${discogsFound?` ${confidenceBadge}`:''}</div><div class="value">${salePrice>0?`$${salePrice.toFixed(2)}`:"\u2014"}</div></div><div class="brain-cell"><div class="label">Margin</div><div class="value ${marginClass(marginD)}">${marginD>0?`$${marginD.toFixed(2)} (${marginP.toFixed(0)}%)`:marginD<0?`<span style="color:#f44336">-$${Math.abs(marginD).toFixed(2)}</span>`:"\u2014"}</div></div>${discogsFound?`<div class="brain-cell"><div class="label">Discogs Mint</div><div class="value">${discogsPrice>0?`$${discogsPrice.toFixed(2)}`:"\u2014"}</div></div><div class="brain-cell"><div class="label">For Sale</div><div class="value">${discogsForSale>0?discogsForSale:"\u2014"}</div></div>`:`<div class="brain-cell"><div class="label">Speed</div><div class="value">${escapeHtml(turnSpd||"\u2014")}</div></div><div class="brain-cell"><div class="label">Buy Qty</div><div class="value">${qty>0?qty:"\u2014"}</div></div>`}</div>`;
+html{
+  background:var(--bg)
+}
+
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 8% -5%,#32194b 0,transparent 31rem),
+    radial-gradient(circle at 96% 10%,#10351f 0,transparent 25rem),
+    var(--bg);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a{
+  color:inherit
+}
+
+button,
+select,
+input{
+  font:inherit
+}
+
+.shell{
+  max-width:1500px;
+  margin:auto;
+  padding:20px
+}
+
+.hero{
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(168,85,247,.16),
+      rgba(114,255,114,.07)
+    ),
+    rgba(13,10,17,.93);
+  box-shadow:0 18px 80px #0008;
+}
+
+.heroRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap
+}
+
+.brand{
+  display:flex;
+  gap:15px;
+  align-items:center
+}
+
+.logo{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--purple2),
+      #29123d
+    );
+  border:1px solid #bd7cff;
+  font-size:29px;
+  box-shadow:0 0 28px #8b5cf644
+}
+
+h1{
+  margin:0;
+  font-size:clamp(25px,4vw,42px);
+  letter-spacing:-1.5px
+}
+
+.sub{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.live{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:9px 13px;
+  border:1px solid #285c38;
+  background:#102219;
+  color:#a8ffbd;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green)
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(120px,1fr));
+  gap:10px;
+  margin-top:20px
+}
+
+.stat{
+  background:#0f0c13cc;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px
+}
+
+.statValue{
+  font-size:25px;
+  font-weight:900
+}
+
+.statLabel{
+  color:var(--muted);
+  margin-top:3px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em
+}
+
+.toolbar{
+  margin:18px 0;
+  display:grid;
+  grid-template-columns:minmax(220px,2fr) repeat(4,minmax(130px,1fr));
+  gap:10px
+}
+
+.control{
+  width:100%;
+  border:1px solid var(--line);
+  background:#121017;
+  color:var(--text);
+  border-radius:13px;
+  padding:12px 13px;
+  outline:none
+}
+
+.control:focus{
+  border-color:var(--purple);
+  box-shadow:0 0 0 3px #a855f71f
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px
+}
+
+.tab{
+  border:1px solid var(--line);
+  background:#121017;
+  color:#cabfd1;
+  padding:9px 13px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:12px
+}
+
+.tab.active{
+  background:var(--purple2);
+  border-color:#a875ff;
+  color:white
+}
+
+.status{
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:13px;
+  margin:12px 2px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fill,minmax(300px,1fr));
+  gap:15px
+}
+
+.card{
+  min-width:0;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.018),
+      transparent
+    ),
+    var(--panel);
+  box-shadow:0 12px 35px #0005;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#765391;
+  box-shadow:0 18px 50px #0008
+}
+
+.coverLink{
+  position:relative;
+  display:block;
+  aspect-ratio:1.55/1;
+  background:#09070c;
+  overflow:hidden
+}
+
+.cover{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .25s ease
+}
+
+.coverLink:hover .cover{
+  transform:scale(1.035)
+}
+
+.coverFallback{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle,#32213c,#120c18);
+  font-size:48px
+}
+
+.score{
+  position:absolute;
+  top:11px;
+  right:11px;
+  min-width:47px;
+  height:47px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:#0a0710e8;
+  border:1px solid #7d5b94;
+  font-weight:950;
+  font-size:16px;
+  backdrop-filter:blur(8px)
+}
+
+.quality{
+  position:absolute;
+  top:11px;
+  left:11px;
+  padding:7px 10px;
+  border-radius:10px;
+  background:#08060bdc;
+  border:1px solid var(--line);
+  font-weight:900;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+
+.quality.buy{
+  color:#0d170f;
+  background:var(--green);
+  border-color:var(--green)
+}
+
+.quality.strong{
+  color:#170e00;
+  background:var(--gold);
+  border-color:var(--gold)
+}
+
+.quality.watch{
+  color:white;
+  background:var(--purple2);
+  border-color:#a774ff
+}
+
+.quality.catalog{
+  color:#d9ccdf
+}
+
+.body{
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  flex:1
+}
+
+.artist{
+  color:#c4b4ce;
+  font-size:12px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+
+.titleLink{
+  text-decoration:none
+}
+
+.title{
+  margin:5px 0 9px;
+  font-size:18px;
+  line-height:1.22;
+  font-weight:950;
+  letter-spacing:-.35px
+}
+
+.titleLink:hover .title{
+  color:#d5b3ff
+}
+
+.version{
+  color:#cdbeda;
+  font-size:12px;
+  min-height:17px
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px
+}
+
+.tag{
+  border:1px solid #3d3049;
+  border-radius:999px;
+  padding:5px 7px;
+  background:#100d14;
+  color:#bdb0c5;
+  font-size:10px;
+  font-weight:800
+}
+
+.moneyRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:10px;
+  margin-top:15px
+}
+
+.price{
+  font-size:25px;
+  font-weight:950;
+  color:white
+}
+
+.price.browse{
+  font-size:18px;
+  color:#cdbeda
+}
+
+.market{
+  text-align:right;
+  font-size:11px;
+  line-height:1.5;
+  color:var(--muted)
+}
+
+.brain{
+  margin-top:12px;
+  padding:10px;
+  border-radius:12px;
+  background:#100c15;
+  border:1px solid #2c2134;
+  color:#baafc1;
+  font-size:11px;
+  line-height:1.45
+}
+
+.actions{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  margin-top:auto;
+  padding-top:14px
+}
+
+.buy{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  text-decoration:none;
+  background:
+    linear-gradient(
+      135deg,
+      var(--green2),
+      #67ff86
+    );
+  color:#071108;
+  border-radius:12px;
+  padding:12px;
+  font-weight:950;
+  border:1px solid #82ff98
+}
+
+.buy:hover{
+  filter:brightness(1.08)
+}
+
+.buy.disabled{
+  pointer-events:none;
+  opacity:.35
+}
+
+.storeLink,
+.copy{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--line);
+  background:#201628;
+  color:#e8dded;
+  border-radius:12px;
+  padding:11px;
+  cursor:pointer;
+  text-decoration:none;
+  min-width:45px
+}
+
+.storeLink:hover,
+.copy:hover{
+  border-color:#765391
+}
+
+.empty{
+  border:1px dashed #493854;
+  padding:50px 20px;
+  border-radius:20px;
+  text-align:center;
+  color:var(--muted);
+  grid-column:1/-1
+}
+
+.footer{
+  margin:30px 0 10px;
+  text-align:center;
+  color:#716777;
+  font-size:11px
+}
+
+@media(max-width:900px){
+  .stats{
+    grid-template-columns:repeat(2,1fr)
   }
 
-  let whyBuyHtml="";if(hasBrain&&whyBuy&&decision!=="PASS"){whyBuyHtml=`<div class="why-buy-text">${escapeHtml(whyBuy)}</div>`}
-  const redditUrl=deal.reddit_url||"",redditBtn=isReddit&&redditUrl?`<a class="btn btn-alt" href="${escapeHtml(redditUrl)}" target="_blank" rel="noopener noreferrer">Reddit Thread</a>`:"";
-  
-  const discogsBtn=discogsFound&&discogsUrl?`<a class="btn btn-discogs" href="${escapeHtml(discogsUrl)}" target="_blank" rel="noopener noreferrer">View on Discogs</a>`:"";
+  .toolbar{
+    grid-template-columns:1fr 1fr
+  }
 
-  const card=document.createElement("div");card.className="deal-card"+(isReddit?" deal-card-reddit":"");
-  card.innerHTML=`${imageHtml}${decisionHtml}<div class="deal-top"><div><div class="artist">${escapeHtml(deal.artist||"Unknown Artist")}</div><h2 class="title">${escapeHtml(deal.title||"Unknown Title")}</h2>${redditMetaHtml}</div><button class="${badgeClass} store-filter-btn" data-source="${escapeHtml(normalizeSourceKey(deal.source||""))}">${escapeHtml(badgeLabel)}</button></div><div class="deal-meta"><div class="meta-box"><div class="label">Price</div><div class="value">${escapeHtml(getPriceText(deal))}</div></div><div class="meta-box"><div class="label">Version</div><div class="value">${escapeHtml(deal.version||"standard")}</div></div></div>${brainGridHtml}${whyBuyHtml}<div class="deal-actions ${(redditBtn||discogsBtn)?"":"single-action"}"><a class="btn btn-main" href="${escapeHtml(buyLink)}" target="_blank" rel="noopener noreferrer">${isReddit?"Store Link":"Open Link"}</a>${redditBtn}${discogsBtn}</div><div class="mini-actions"><button class="btn btn-ghost detail-toggle" data-target="${detailId}">Show Details</button></div><div id="${detailId}" class="detail-panel"><div class="post-box">${escapeHtml([`Artist: ${deal.artist||"Unknown Artist"}`,`Title: ${deal.title||"Unknown Title"}`,`Source: ${sourceName}`,`Price: ${getPriceText(deal)}`,`Version: ${deal.version||"standard"}`,hasBrain?`Decision: ${decision}`:"",hasBrain?`Buy Score: ${buyScore}`:"",hasBrain?`Lane: ${lane}`:"",hasBrain&&salePrice>0?`Sell At: $${salePrice.toFixed(2)}`:"",hasBrain&&marginD!==0?`Margin: $${marginD.toFixed(2)} (${marginP.toFixed(0)}%)`:"",discogsFound?`Discogs Mint: $${discogsPrice.toFixed(2)}`:"",discogsFound?`Confidence: ${(discogsConfidence*100).toFixed(0)}%`:"",discogsFound?`For Sale: ${discogsForSale}`:"",discogsUrl?`Discogs Link: ${discogsUrl}`:"",hasBrain?`Demand: ${demandLvl}`:"",hasBrain?`Turn Speed: ${turnSpd}`:"",hasBrain&&qty>0?`Rec Qty: ${qty}`:"",hasBrain?`Shelf: ${shelfPlace}`:"",hasBrain?`Fit: ${storeFit}`:"",hasBrain&&whyBuy?`Why: ${whyBuy}`:"",`Link: ${buyLink}`,isReddit&&redditUrl?`Reddit: ${redditUrl}`:""].filter(Boolean).join("\n"))}</div><div class="mini-actions"><button class="btn btn-ghost copy-link-btn">Copy Link</button></div></div>`;
-  card.querySelector(".copy-link-btn").addEventListener("click",()=>copyText(buyLink));
-  card.querySelector(".detail-toggle").addEventListener("click",e=>{const p=card.querySelector(`#${e.currentTarget.dataset.target}`);const o=p.classList.toggle("open");e.currentTarget.textContent=o?"Hide Details":"Show Details"});
-  card.querySelectorAll(".lane-filter-btn").forEach(btn=>{btn.addEventListener("click",e=>{e.stopPropagation();laneFilter=e.currentTarget.dataset.lane;document.getElementById("laneFilter").value=laneFilter;applyFilters(true);updateFilterIndicator();closeMenu()})});
-  card.querySelectorAll(".store-filter-btn").forEach(btn=>{btn.addEventListener("click",e=>{e.stopPropagation();sourceFilter=e.currentTarget.dataset.source;document.getElementById("sourceFilter").value=sourceFilter;applyFilters(true);updateFilterIndicator();closeMenu()})});
-  return card;
+  .toolbar .search{
+    grid-column:1/-1
+  }
 }
 
-function renderPageNumberSet(id,total){const c=document.getElementById(id);if(!c)return;c.innerHTML="";if(total<=1)return;const ps=new Set([1,total]);for(let i=currentPage-1;i<=currentPage+1;i++){if(i>1&&i<total)ps.add(i)}let last=0;[...ps].sort((a,b)=>a-b).forEach(p=>{if(p-last>1){const el=document.createElement("span");el.className="page-ellipsis";el.textContent="...";c.appendChild(el)}const btn=document.createElement("button");btn.className=`page-number-btn ${p===currentPage?"active":""}`;btn.textContent=p;btn.addEventListener("click",()=>{currentPage=p;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"})});c.appendChild(btn);last=p})}
-function renderPageNumbers(t){renderPageNumberSet("pageNumbers",t);renderPageNumberSet("topPageNumbers",t)}
+@media(max-width:560px){
+  .shell{
+    padding:12px
+  }
 
-function updateFilterIndicator(){const ind=document.getElementById("filterIndicator");const parts=[];if(laneFilter)parts.push(`Lane: ${laneFilter}`);if(sourceFilter)parts.push(`Store: ${sourceFilter}`);if(parts.length){ind.textContent=parts.join(" + ");ind.style.display="inline-block"}else{ind.style.display="none"}}
+  .hero{
+    padding:17px;
+    border-radius:19px
+  }
 
-function getFilteredDeals(){
-  let deals=allDeals.filter(d=>normalizeText(d.format||"vinyl")==="vinyl");
-  if(sourceFilter)deals=deals.filter(d=>normalizeSourceKey(d.source||"")===sourceFilter);
-  if(laneFilter)deals=deals.filter(d=>normalizeLaneKey(d.inventory_lane||"")===laneFilter);
-  const search=normalizeText(document.getElementById("searchInput").value);
-  deals=deals.filter(d=>{if(!search)return true;return getSearchBlob(d).includes(search)});
-  const q=activeQuickFilter;
-  deals=deals.filter(d=>{if(q==="all")return true;if(q==="buynow")return(d.decision||"").toUpperCase()==="BUY NOW";if(q==="buylight")return(d.decision||"").toUpperCase()==="BUY LIGHT";if(q==="watch")return(d.decision||"").toUpperCase()==="WATCH";if(q==="discogs")return d.discogs_found===true;if(q==="under30")return safeNumber(d.price)>0&&safeNumber(d.price)<30;if(q==="reddit")return normalizeSourceKey(d.source||"")==="reddit";if(q==="amazon")return normalizeSourceKey(d.source||"")==="amazon";if(q==="walmart")return normalizeSourceKey(d.source||"")==="walmart";if(q==="target")return normalizeSourceKey(d.source||"")==="target";if(q==="deepdiscount")return normalizeSourceKey(d.source||"")==="deep discount";return true});
-  if(shuffleMode){deals=[...deals].sort(()=>Math.random()-0.5)}else{deals.sort((a,b)=>{const sa=safeNumber(a.buy_score,0),sb=safeNumber(b.buy_score,0);if(sa!==sb)return sb-sa;return normalizeText(a.artist||"").localeCompare(normalizeText(b.artist||""))})}
-  return deals;
+  .stats{
+    grid-template-columns:1fr 1fr
+  }
+
+  .toolbar{
+    grid-template-columns:1fr
+  }
+
+  .toolbar .search{
+    grid-column:auto
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
 }
-function populateSourceFilter(){const sel=document.getElementById("sourceFilter");const src=new Map();allDeals.forEach(d=>{const r=(d.source||"").trim();if(!r)return;const k=normalizeSourceKey(r),l=prettifySourceName(r);if(k&&!src.has(k))src.set(k,l)});const sorted=[...src.entries()].map(([v,l])=>({value:v,label:l})).sort((a,b)=>a.label.localeCompare(b.label));sel.innerHTML=`<option value="">All sources</option>`+sorted.map(s=>`<option value="${escapeHtml(s.value)}">${escapeHtml(s.label)}</option>`).join("")}
-function populateLaneFilter(){const sel=document.getElementById("laneFilter");const lanes=new Set();allDeals.forEach(d=>{const l=(d.inventory_lane||"").trim();if(l)lanes.add(l)});const sorted=[...lanes].sort();sel.innerHTML=`<option value="">All lanes</option>`+sorted.map(l=>`<option value="${escapeHtml(normalizeLaneKey(l))}">${escapeHtml(l)}</option>`).join("")}
-function renderDeals(deals){const dl=document.getElementById("dealList"),pg=document.getElementById("pager"),ps=document.getElementById("pageStatus");dl.innerHTML="";if(!deals.length){dl.innerHTML=`<div class="empty">No records found.</div>`;pg.style.display="none";ps.textContent="Page 0";renderPageNumbers(0);toggleTopPageNav(false);return}const tp=Math.max(1,Math.ceil(deals.length/DEALS_PER_PAGE));if(currentPage>tp)currentPage=1;const start=(currentPage-1)*DEALS_PER_PAGE;deals.slice(start,start+DEALS_PER_PAGE).forEach(d=>dl.appendChild(createDealCard(d)));pg.style.display=tp>1?"flex":"none";ps.textContent=`Page ${currentPage} / ${tp}`;document.getElementById("prevPageBtn").disabled=currentPage===1;document.getElementById("nextPageBtn").disabled=currentPage===tp;renderPageNumbers(tp)}
-function toggleTopPageNav(f=null){const n=document.getElementById("topPageNav");if(!n)return;n.style.display=(f===null?n.style.display==="none":!!f)?"block":"none"}
-function applyFilters(r=true){if(r)currentPage=1;const f=getFilteredDeals();document.getElementById("dealCount").textContent=`Records: ${f.length}`;renderDeals(f)}
-function initQuickFilters(){document.querySelectorAll(".filter-chip").forEach(c=>{c.addEventListener("click",()=>{document.querySelectorAll(".filter-chip").forEach(x=>x.classList.remove("active"));c.classList.add("active");activeQuickFilter=c.dataset.quick;applyFilters(true)})})}
-function getTotalPageCount(){return Math.max(1,Math.ceil(getFilteredDeals().length/DEALS_PER_PAGE))}
-function jumpToPage(id="pageJumpInput"){const inp=document.getElementById(id);let p=Number(inp.value||0);if(!p||p<1)return;const t=getTotalPageCount();if(p>t)p=t;currentPage=p;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"});inp.value=""}
-function initPager(){document.getElementById("prevPageBtn").addEventListener("click",()=>{if(currentPage>1){currentPage--;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"})}});document.getElementById("nextPageBtn").addEventListener("click",()=>{if(currentPage<getTotalPageCount()){currentPage++;applyFilters(false);toggleTopPageNav(false);window.scrollTo({top:0,behavior:"smooth"})}});document.getElementById("pageJumpBtn").addEventListener("click",()=>jumpToPage("pageJumpInput"));document.getElementById("topPageJumpBtn").addEventListener("click",()=>jumpToPage("topPageJumpInput"));document.getElementById("pageJumpInput").addEventListener("keydown",e=>{if(e.key==="Enter")jumpToPage("pageJumpInput")});document.getElementById("topPageJumpInput").addEventListener("keydown",e=>{if(e.key==="Enter")jumpToPage("topPageJumpInput")});document.getElementById("pageStatus").addEventListener("click",()=>toggleTopPageNav())}
-function initShuffle(){const btn=document.getElementById("shuffleBtn");btn.addEventListener("click",()=>{shuffleMode=!shuffleMode;btn.classList.toggle("active",shuffleMode);currentPage=1;applyFilters(false);window.scrollTo({top:0,behavior:"smooth"})})}
-function openMenu(){document.getElementById("sideMenu").classList.add("open");document.getElementById("menuBackdrop").classList.add("open");document.getElementById("sideMenu").setAttribute("aria-hidden","false")}
-function closeMenu(){document.getElementById("sideMenu").classList.remove("open");document.getElementById("menuBackdrop").classList.remove("open");document.getElementById("sideMenu").setAttribute("aria-hidden","true")}
-function initMenu(){document.getElementById("menuToggle").addEventListener("click",openMenu);document.getElementById("menuClose").addEventListener("click",closeMenu);document.getElementById("menuBackdrop").addEventListener("click",closeMenu)}
-async function init(){try{console.log("Fetching live_deals.json from Deal-Hunter- repo...");const r=await fetch("https://raw.githubusercontent.com/KornDog0804/Deal-Hunter-/main/live_deals.json");if(!r.ok){console.error("Fetch failed:",r.status);document.getElementById("dealList").innerHTML=`<div class="empty">Could not load live_deals.json (${r.status}).</div>`;return}allDeals=await r.json();console.log("Loaded",allDeals.length,"deals");if(!Array.isArray(allDeals))allDeals=[];populateSourceFilter();populateLaneFilter();applyFilters(true)}catch(e){console.error("Error loading deals:",e);document.getElementById("dealList").innerHTML=`<div class="empty">Error loading deals. Check console for details.</div>`}}
-document.getElementById("sourceFilter").addEventListener("change",()=>{sourceFilter=document.getElementById("sourceFilter").value;applyFilters(true);updateFilterIndicator();closeMenu()});
-document.getElementById("laneFilter").addEventListener("change",()=>{laneFilter=document.getElementById("laneFilter").value;applyFilters(true);updateFilterIndicator();closeMenu()});
-document.getElementById("searchInput").addEventListener("input",()=>applyFilters(true));
-initQuickFilters();initPager();initShuffle();initMenu();init();
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+
+<section class="hero">
+
+<div class="heroRow">
+
+<div class="brand">
+  <div class="logo">💿</div>
+
+  <div>
+    <h1>KornDog Deal Hunter</h1>
+    <div class="sub">
+      Vinyl buying intelligence • Korndog Records
+    </div>
+  </div>
+</div>
+
+<div class="live">
+  <span class="dot"></span>
+  LIVE DATA
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+  <div id="totalStat" class="statValue">0</div>
+  <div class="statLabel">Live Records</div>
+</div>
+
+<div class="stat">
+  <div id="signalStat" class="statValue">0</div>
+  <div class="statLabel">Buy Signals</div>
+</div>
+
+<div class="stat">
+  <div id="strongStat" class="statValue">0</div>
+  <div class="statLabel">Strong Finds</div>
+</div>
+
+<div class="stat">
+  <div id="watchStat" class="statValue">0</div>
+  <div class="statLabel">Watch</div>
+</div>
+
+<div class="stat">
+  <div id="sourceStat" class="statValue">0</div>
+  <div class="statLabel">Sources</div>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="toolbar">
+
+<input
+  id="search"
+  class="control search"
+  placeholder="Search artist, album, version, store…"
+>
+
+<select id="source" class="control">
+  <option value="">All stores</option>
+</select>
+
+<select id="quality" class="control">
+  <option value="">All quality</option>
+  <option value="buy">BUY / POST THIS</option>
+  <option value="strong">Strong find</option>
+  <option value="watch">Watch</option>
+  <option value="catalog">Catalog</option>
+</select>
+
+<select id="price" class="control">
+  <option value="">Any price</option>
+  <option value="under20">Under $20</option>
+  <option value="under30">Under $30</option>
+  <option value="under40">Under $40</option>
+  <option value="40plus">$40+</option>
+</select>
+
+<select id="sort" class="control">
+  <option value="score">Highest score</option>
+  <option value="buyer">Buyer Brain score</option>
+  <option value="low">Lowest price</option>
+  <option value="high">Highest price</option>
+  <option value="artist">Artist A-Z</option>
+</select>
+
+</div>
+
+
+<div class="tabs">
+
+<button class="tab active" data-view="all">
+  ALL RECORDS
+</button>
+
+<button class="tab" data-view="signals">
+  BUY SIGNALS
+</button>
+
+<button class="tab" data-view="buy">
+  90+ BUY
+</button>
+
+<button class="tab" data-view="strong">
+  75+ STRONG
+</button>
+
+<button class="tab" data-view="watch">
+  55+ WATCH
+</button>
+
+</div>
+
+
+<div class="status">
+  <span id="resultCount">Loading…</span>
+  <span id="updated"></span>
+</div>
+
+<div id="grid" class="grid"></div>
+
+<div class="footer">
+  VINYL THERAPY NEVER DIES • KORNDOG RECORDS
+</div>
+
+</div>
+
+
+<script>
+let liveDeals = []
+let buySignals = []
+let view = "all"
+
+const $ = id => document.getElementById(id)
+
+function safeUrl(value){
+  try{
+    const u = new URL(value)
+
+    if(
+      u.protocol === "https:" ||
+      u.protocol === "http:"
+    ){
+      return u.href
+    }
+  }catch(e){}
+
+  return ""
+}
+
+function esc(value){
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;")
+}
+
+function number(value){
+  const n = Number(value)
+  return Number.isFinite(n) ? n : 0
+}
+
+function scoreOf(d){
+  return number(
+    d.stage2_score ??
+    d.score ??
+    0
+  )
+}
+
+function buyerScoreOf(d){
+  return number(d.buyer_score ?? d.buy_score ?? 0)
+}
+
+function qualityOf(d){
+  const explicit = String(
+    d.quality ||
+    d.deal_quality ||
+    ""
+  ).toLowerCase()
+
+  if(explicit === "catalog") return "catalog"
+
+  const score = scoreOf(d)
+
+  if(score >= 90) return "buy"
+  if(score >= 75) return "strong"
+  if(score >= 55) return "watch"
+
+  return explicit || "catalog"
+}
+
+function qualityLabel(q){
+  if(q === "buy") return "BUY / POST THIS"
+  if(q === "strong") return "STRONG FIND"
+  if(q === "watch") return "WATCH"
+  return "CATALOG"
+}
+
+function priceText(d){
+  const p = number(d.price)
+
+  if(p > 0){
+    return `$${p.toFixed(2)}`
+  }
+
+  return "Browse"
+}
+
+function signals(d){
+  const raw = Array.isArray(d.signals)
+    ? d.signals
+    : []
+
+  return raw.slice(0,7)
+}
+
+function discogsText(d){
+  const mint = number(d.discogs_mint_price)
+  const low = number(d.discogs_lowest)
+
+  const parts = []
+
+  if(mint > 0){
+    parts.push(`Discogs Mint $${mint.toFixed(2)}`)
+  }
+
+  if(low > 0){
+    parts.push(`Low $${low.toFixed(2)}`)
+  }
+
+  return parts.join("<br>")
+}
+
+function card(d){
+  const link = safeUrl(d.link)
+  const image = safeUrl(d.image)
+
+  const artist = esc(d.artist || "Unknown Artist")
+  const title = esc(d.title || d.raw_title || "Untitled")
+  const source = esc(d.source || "Unknown")
+  const version = esc(d.version || "")
+  const q = qualityOf(d)
+  const score = scoreOf(d)
+  const buyerScore = buyerScoreOf(d)
+
+  const tags = signals(d)
+    .map(x => `<span class="tag">${esc(x)}</span>`)
+    .join("")
+
+  const brain = esc(
+    d.why_buy ||
+    d.store_fit ||
+    ""
+  )
+
+  const lane = esc(
+    d.inventory_lane ||
+    ""
+  )
+
+  const cover = image
+    ? `<img class="cover" src="${image}" loading="lazy" alt="${artist} ${title}">`
+    : `<div class="coverFallback">💿</div>`
+
+  const titleMarkup = link
+    ? `
+      <a
+        class="titleLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="title">${title}</div>
+      </a>
+    `
+    : `<div class="title">${title}</div>`
+
+  const coverMarkup = link
+    ? `
+      <a
+        class="coverLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open ${source}"
+      >
+        ${cover}
+        <div class="quality ${q}">
+          ${qualityLabel(q)}
+        </div>
+        <div class="score">${score}</div>
+      </a>
+    `
+    : `
+      <div class="coverLink">
+        ${cover}
+        <div class="quality ${q}">
+          ${qualityLabel(q)}
+        </div>
+        <div class="score">${score}</div>
+      </div>
+    `
+
+  const buyButton = link
+    ? `
+      <a
+        class="buy"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🛒 VIEW / BUY AT ${source.toUpperCase()}
+      </a>
+    `
+    : `
+      <span class="buy disabled">
+        LINK UNAVAILABLE
+      </span>
+    `
+
+  const storeButton = link
+    ? `
+      <a
+        class="storeLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open listing"
+      >
+        ↗
+      </a>
+    `
+    : ""
+
+  return `
+    <article class="card">
+
+      ${coverMarkup}
+
+      <div class="body">
+
+        <div class="artist">${artist}</div>
+
+        ${titleMarkup}
+
+        <div class="version">
+          ${version}
+        </div>
+
+        <div class="tags">
+          ${tags}
+        </div>
+
+        <div class="moneyRow">
+
+          <div class="price ${number(d.price) <= 0 ? "browse" : ""}">
+            ${priceText(d)}
+          </div>
+
+          <div class="market">
+            ${discogsText(d)}
+            ${buyerScore > 0
+              ? `<br>Buyer Brain ${buyerScore}`
+              : ""}
+          </div>
+
+        </div>
+
+        ${
+          lane || brain
+          ? `
+          <div class="brain">
+            ${lane ? `<strong>${lane}</strong>` : ""}
+            ${
+              lane && brain
+              ? "<br>"
+              : ""
+            }
+            ${brain}
+          </div>
+          `
+          : ""
+        }
+
+        <div class="actions">
+
+          ${buyButton}
+
+          ${storeButton}
+
+        </div>
+
+      </div>
+
+    </article>
+  `
+}
+
+function populateSources(){
+  const sources = [
+    ...new Set(
+      liveDeals
+        .map(x => x.source)
+        .filter(Boolean)
+    )
+  ].sort((a,b) => a.localeCompare(b))
+
+  $("source").innerHTML =
+    `<option value="">All stores</option>` +
+    sources
+      .map(
+        s =>
+          `<option value="${esc(s)}">${esc(s)}</option>`
+      )
+      .join("")
+}
+
+function filtered(){
+  let data = view === "signals"
+    ? [...buySignals]
+    : [...liveDeals]
+
+  const search = $("search").value
+    .trim()
+    .toLowerCase()
+
+  const source = $("source").value
+  const quality = $("quality").value
+  const price = $("price").value
+
+  data = data.filter(d => {
+
+    const q = qualityOf(d)
+    const score = scoreOf(d)
+    const p = number(d.price)
+
+    if(view === "buy" && score < 90){
+      return false
+    }
+
+    if(view === "strong" && score < 75){
+      return false
+    }
+
+    if(view === "watch" && score < 55){
+      return false
+    }
+
+    if(source && d.source !== source){
+      return false
+    }
+
+    if(quality && q !== quality){
+      return false
+    }
+
+    if(price === "under20" && !(p > 0 && p < 20)){
+      return false
+    }
+
+    if(price === "under30" && !(p > 0 && p < 30)){
+      return false
+    }
+
+    if(price === "under40" && !(p > 0 && p < 40)){
+      return false
+    }
+
+    if(price === "40plus" && p < 40){
+      return false
+    }
+
+    if(search){
+      const haystack = [
+        d.artist,
+        d.title,
+        d.raw_title,
+        d.source,
+        d.version,
+        ...(Array.isArray(d.signals) ? d.signals : [])
+      ]
+        .join(" ")
+        .toLowerCase()
+
+      if(!haystack.includes(search)){
+        return false
+      }
+    }
+
+    return true
+  })
+
+  const sort = $("sort").value
+
+  if(sort === "score"){
+    data.sort(
+      (a,b) => scoreOf(b) - scoreOf(a)
+    )
+  }
+
+  if(sort === "buyer"){
+    data.sort(
+      (a,b) => buyerScoreOf(b) - buyerScoreOf(a)
+    )
+  }
+
+  if(sort === "low"){
+    data.sort((a,b) => {
+      const pa = number(a.price) || 999999
+      const pb = number(b.price) || 999999
+      return pa - pb
+    })
+  }
+
+  if(sort === "high"){
+    data.sort(
+      (a,b) => number(b.price) - number(a.price)
+    )
+  }
+
+  if(sort === "artist"){
+    data.sort(
+      (a,b) =>
+        String(a.artist || "")
+          .localeCompare(String(b.artist || ""))
+    )
+  }
+
+  return data
+}
+
+function render(){
+  const data = filtered()
+
+  $("resultCount").textContent =
+    `${data.toLocaleString()} records shown`
+
+  if(!data.length){
+    $("grid").innerHTML = `
+      <div class="empty">
+        Nothing matched those filters.
+      </div>
+    `
+    return
+  }
+
+  $("grid").innerHTML =
+    data.map(card).join("")
+}
+
+function updateStats(){
+  $("totalStat").textContent =
+    liveDeals.length.toLocaleString()
+
+  $("signalStat").textContent =
+    buySignals.length.toLocaleString()
+
+  $("strongStat").textContent =
+    liveDeals.filter(
+      d => scoreOf(d) >= 75
+    ).length.toLocaleString()
+
+  $("watchStat").textContent =
+    liveDeals.filter(
+      d =>
+        scoreOf(d) >= 55 &&
+        scoreOf(d) < 75
+    ).length.toLocaleString()
+
+  $("sourceStat").textContent =
+    new Set(
+      liveDeals
+        .map(d => d.source)
+        .filter(Boolean)
+    ).size
+}
+
+async function load(){
+  try{
+    const [liveRes,buyRes] = await Promise.all([
+      fetch(
+        `live_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `buy_signals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      )
+    ])
+
+    if(!liveRes.ok){
+      throw new Error(
+        `live_deals.json ${liveRes.status}`
+      )
+    }
+
+    liveDeals = await liveRes.json()
+
+    if(buyRes.ok){
+      buySignals = await buyRes.json()
+    }
+
+    populateSources()
+    updateStats()
+
+    $("updated").textContent =
+      `Loaded ${new Date().toLocaleTimeString()}`
+
+    render()
+
+  }catch(err){
+    console.error(err)
+
+    $("resultCount").textContent =
+      "Failed to load Deal Hunter data"
+
+    $("grid").innerHTML = `
+      <div class="empty">
+        Data load failed.<br><br>
+        ${esc(err.message)}
+      </div>
+    `
+  }
+}
+
+[
+  "search",
+  "source",
+  "quality",
+  "price",
+  "sort"
+].forEach(id => {
+  $(id).addEventListener(
+    id === "search" ? "input" : "change",
+    render
+  )
+})
+
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".tab")
+      .forEach(x => x.classList.remove("active"))
+
+    btn.classList.add("active")
+
+    view = btn.dataset.view
+
+    render()
+  })
+})
+
+load()
 </script>
+
 </body>
 </html>

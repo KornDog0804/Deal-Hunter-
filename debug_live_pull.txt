@@ -1,10 +1,11 @@
+[Artists] Loaded 131 trusted artists
 
 ==================================================
 Scraping: Rollin Records (shopify_store)
 ==================================================
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 234
+Rollin Records: kept 242
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
@@ -14,28 +15,28 @@ Scraping: Rollin Preorders (shopify_store)
   ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Preorders: 250 products via Shopify JSON
-Rollin Preorders: kept 234
+Rollin Preorders: kept 242
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 216
+Sound of Vinyl: kept 240
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 106
+uDiscover Music: kept 138
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 83
+Fearless Records: kept 88
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -45,14 +46,14 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 83
+Fearless Vinyl: kept 88
 
 ==================================================
 Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 76
+Rise Records: kept 88
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -62,28 +63,28 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 76
+Rise All: kept 88
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 168
+Brooklyn Vegan: kept 174
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 92
+Revolver: kept 98
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 145
+Newbury Comics: kept 209
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -93,56 +94,56 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 145
+Newbury Preorders: kept 209
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 93
+Craft Recordings: kept 96
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 137
+MNRK Heavy: kept 144
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 89
+Equal Vision: kept 107
 
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 181 products
 Rhino: 181 products via Shopify JSON
-Rhino: kept 86
+Rhino: kept 87
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 124
+Interscope Records: kept 134
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
 ==================================================
   ✓ https://sharptonerecords.co/products.json?limit=250 -> 250 products
 SharpTone Records: 250 products via Shopify JSON
-SharpTone Records: kept 92
+SharpTone Records: kept 103
 
 ==================================================
 Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 137
+Rock Metal Fan Nation: kept 147
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -152,21 +153,21 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 137
+RMFN All: kept 147
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
 ==================================================
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 64
+Sumerian Records: kept 75
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
   ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
 Solid State Records: 167 products via Shopify JSON
-Solid State Records: kept 56
+Solid State Records: kept 58
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -176,52 +177,52 @@ Scraping: Solid State Vinyl (shopify_store)
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://solidstaterecords.store/products.json?limit=250 -> 167 products
 Solid State Vinyl: 167 products via Shopify JSON
-Solid State Vinyl: kept 56
+Solid State Vinyl: kept 58
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
 Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 80
+Pure Noise Records: kept 89
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
 ==================================================
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
-Hopeless Records: kept 55
+Hopeless Records: kept 67
 
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
 ==================================================
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://hopelessrecords.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://hopelessrecords.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://hopelessrecords.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
 Hopeless Shopify: 0 products via Shopify JSON
 Hopeless Shopify: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
-Hopeless Shopify: HTML source failed | <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://hopelessrecords.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
+Hopeless Shopify: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
 
 ==================================================
 Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 72
+Pirates Press Records: kept 96
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -252,10 +253,7 @@ Scraping: Spinefarm Records (merchnow_store)
 ==================================================
   ✓ https://spinefarm.merchnow.com/products.json?limit=250 -> 250 products
 Spinefarm Records: 250 products via Shopify JSON
-Spinefarm Records: kept 0
-Spinefarm Records: Merchnow JSON empty, trying HTML fallback
-Spinefarm Records: found 0 HTML links
-Spinefarm Records: kept 0
+Spinefarm Records: kept 87
 
 ==================================================
 Scraping: InVogue Records (merchnow_store)
@@ -284,70 +282,77 @@ InVogue Records: HTML source failed | HTTP Error 404: Not Found
 ==================================================
 Scraping: Thriller Records (shopify_store)
 ==================================================
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://thrillervinyl.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://thrillervinyl.shopifyapps.com/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://thrillervinyl.shopifyapps.com/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
 Thriller Records: 0 products via Shopify JSON
 Thriller Records: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno -2] Name or service not known>
-Thriller Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://thrillervinyl.shopifyapps.com/products.json | <urlopen error [Errno 7] No address associated with hostname>
+Thriller Records: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
 
 ==================================================
 Scraping: UNFD (shopify_store)
 ==================================================
-  -> retry 1/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://unfdmusic.shop/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://unfdmusic.shop/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://unfdmusic.shop/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://unfdmusic.shop/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
-  -> retry 1/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
-  ✗ https://unfdmusic.shop/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://unfdmusic.shop/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/collections/all/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://unfdmusic.shop/collections/all/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/collections/vinyl/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://unfdmusic.shop/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/collections/music/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://unfdmusic.shop/collections/music/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 1/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/collections/records/products.json?limit=250 | <urlopen error [Errno 7] No address associated with hostname>
+  ✗ https://unfdmusic.shop/collections/records/products.json?limit=250 -> <urlopen error [Errno 7] No address associated with hostname>
 UNFD: 0 products via Shopify JSON
 UNFD: Shopify JSON empty, trying HTML fallback
-  -> retry 1/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
-  -> retry 2/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno -2] Name or service not known>
-UNFD: HTML source failed | <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://unfdmusic.shop/products.json | <urlopen error [Errno 7] No address associated with hostname>
+UNFD: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
 
 ==================================================
 Scraping: Merchbar (html_store)
 ==================================================
-Merchbar: unknown source_type "html_store" - skipping
+  -> retry 1/2 for https://www.merchbar.com/rock-vinyl/new-vinyl-records | HTTP Error 429: Too Many Requests
+  -> retry 2/2 for https://www.merchbar.com/rock-vinyl/new-vinyl-records | HTTP Error 429: Too Many Requests
+Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 
 ==================================================
 Scraping: Hot Topic (html_store)
 ==================================================
-Hot Topic: unknown source_type "html_store" - skipping
+Hot Topic: found 42 HTML links
+Hot Topic: kept 16
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-Deep Discount: unknown source_type "html_store" - skipping
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
 ==================================================
-Millions of Records: unknown source_type "html_store" - skipping
+  -> retry 1/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno 7] No address associated with hostname>
+  -> retry 2/2 for https://www.millionsofonlinerecords.com | <urlopen error [Errno 7] No address associated with hostname>
+Millions of Records: HTML source failed | <urlopen error [Errno 7] No address associated with hostname>
 
 ==================================================
 Scraping: IndieMerchstore (shopify_store)
@@ -392,43 +397,29 @@ Walmart: browse pages were blocked, adding hard catalog portal fallback
 Walmart: kept 1
 
 ==================================================
-Scraping: Amazon (amazon_catalog_source)
-==================================================
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 0 candidate vinyl items
-Amazon: found 41 candidate vinyl items
-Amazon: found 36 candidate vinyl items
-Amazon: kept 13
-
-==================================================
 Scraping: Target (target_catalog_source)
 ==================================================
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
-
-==================================================
-Scraping: Popsike (popsike_source)
-==================================================
-Popsike: unknown source_type "popsike_source" - skipping
+Amazon: exposing 1 affiliate vinyl catalog portal
+[FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
+[Stage2] 2585 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 6185 entries
-[Discogs] Enriching 2908 vinyl records with Mint pricing...
+[Discogs] Enriching 2585 vinyl records with Mint pricing...
 [Discogs] Cache saved (6185 entries)
 [Discogs] Enrichment complete!
 
@@ -441,441 +432,89 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285843 bytes from https://upcomingvinyl.com/this-week
-[UpcomingVinyl] Preview: <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-
-        <meta charset="utf-8">
-
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Upcoming Vinyl Releases This Week</title>
-
-<meta name="description
-[UpcomingVinyl] Found 314 h2 tags, 343 li tags
-[UpcomingVinyl] FOUND: A Certain RatioForce Majeure —  (Mute)
-[UpcomingVinyl] FOUND: A Certain RatioThe Joy of Sextet Curacao —  (Mute)
-[UpcomingVinyl] FOUND: Acda en De MunnikAEDM (Translucent Blue) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Adagietto — Smooth & Relaxing ClassicalAdagietto - Smooth & Relaxing Classical (Warner Classics)
-[UpcomingVinyl] FOUND: Ady JohnsonTell the Worry Dolls —  (Little Robin Records)
-[UpcomingVinyl] FOUND: AirMoon Safari —  (Rhino / Parlophone)
-[UpcomingVinyl] FOUND: AirbourneAirbourne —  (Spinefarm)
-[UpcomingVinyl] FOUND: Akira MiyazawaYamame —  (King Japan)
-[UpcomingVinyl] FOUND: Alabama ShakesI Must Be Dreaming (Sky Blue) —  (Island)
-[UpcomingVinyl] FOUND: Ale NuñezBlue Room —  (Cellar Live)
-[UpcomingVinyl] FOUND: Alex WarrenWILDCHILD —  (Atlantic)
-[UpcomingVinyl] FOUND: Alex WarrenWILDCHILD (Amazon Exclusive) —  (Atlantic)
-[UpcomingVinyl] FOUND: Alicia BlueCountry Desire —  (A Blue Lion)
-[UpcomingVinyl] FOUND: Alicia WittBetween Heaven and Earth —  (Alicia Witt Music)
-[UpcomingVinyl] FOUND: Allah-LasSirenas —  (Mexican Summer)
-[UpcomingVinyl] FOUND: Anderson PaakK-Pops: The Album (Pink) —  (Universal UK)
-[UpcomingVinyl] FOUND: Annie HallFuture Sports —  (Synaptic Cliffs)
-[UpcomingVinyl] FOUND: ApocryphalFacing The End (Sunburst) —  (Circle Music)
-[UpcomingVinyl] FOUND: Asher WhiteLove Aggregates —  (Joyful Noise Records)
-[UpcomingVinyl] FOUND: AtheistPiece of Time (Transparent orange) —  (Nuclear Blast)
-[UpcomingVinyl] FOUND: AtheistUnquestionable Presence (Olive green) —  (Nuclear Blast)
-[UpcomingVinyl] FOUND: Avengers: Endgame & O.S.T.Avengers: Endgame Original Soundtrack —  (Universal Japan)
-[UpcomingVinyl] FOUND: Beach BunnyJuly —  (Alternate Side)
-[UpcomingVinyl] FOUND: Beach BunnyThe Early Days: Animalism, Pool Party, Crybaby —  (Alternate Side)
-[UpcomingVinyl] FOUND: Bear Bones & Lay Low & Laslo UmbreitTales From The Source —  (Discrepant)
-[UpcomingVinyl] FOUND: BeartoothPure Ecstasy —  (Fearless Records)
-[UpcomingVinyl] FOUND: BeartoothPure Ecstasy (Amazon Exclusive, Algae Color) —  (Fearless Records)
-[UpcomingVinyl] FOUND: Before the DawnDeathstar Rising (Orange Brown Marble) —  (Reaper Entertainment)
-[UpcomingVinyl] FOUND: Before the DawnRise Of The Phoenix (Red Smoke) —  (Reaper Entertainment)
-[UpcomingVinyl] FOUND: Berliner Philharmoniker/Herbert von KarajanWagner: Die Walkure The Original Source Series —  (Deutsche Grammophon)
-[UpcomingVinyl] FOUND: BesvarjelsenTill Glomskan AD Oblivionem (Blue) —  (Magnetic Eye)
-[UpcomingVinyl] FOUND: BesvarjelsenTill Glomskan AD Oblivionem (Purple/Black) —  (Magnetic Eye)
-[UpcomingVinyl] FOUND: Big TruckMidday At The Middleway —  (Marshall Amplification Plc)
-[UpcomingVinyl] FOUND: Bikini KillReject All American —  (Bikini Kill Records)
-[UpcomingVinyl] FOUND: Bikini KillReject All American —  (Bikini Kill Records)
-[UpcomingVinyl] FOUND: Bill CantosMusic Of A&M —  (Sleepy Night Records)
-[UpcomingVinyl] FOUND: Bill Evans TrioAT Shelly's Manne-Hole —  (Analogue Prod.)
-[UpcomingVinyl] FOUND: Billy StringsSo Much For Goodbyes —  (Reprise)
-[UpcomingVinyl] FOUND: Bitchin BajasIsle Peaks —  (Drag City)
-[UpcomingVinyl] FOUND: Blanck MassCrime 101 Original Soundtrack —  (Invada)
-[UpcomingVinyl] FOUND: Blind YeoThe Lemoine Point —  (Bongo Joe Records)
-[UpcomingVinyl] FOUND: Blood WhiteFrom Hell (White) —  (Metalville)
-[UpcomingVinyl] FOUND: Bob Marley & The WailersRoots, Rock, Reggae: Live at the Hammersmith Odeon —  (Tuff Gong/Island)
-[UpcomingVinyl] FOUND: Buckshot LeFonqueMusic Evolution (Pink) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Cadaver EyesRoad Extends —  (Orthodox)
-[UpcomingVinyl] FOUND: Caetano VelosoTransa —  (Transoceanica)
-[UpcomingVinyl] FOUND: Cameron PaxtonDome Keeper Original Soundtrack —  (Black Screen Records)
-[UpcomingVinyl] FOUND: CandlemassDactylis Glomerate 2026 Pearl Arctic —  (Peaceville)
-[UpcomingVinyl] FOUND: Cannibal CorpseBleeding (Picture) —  (Back On Black)
-[UpcomingVinyl] FOUND: Cannibal CorpseKill (Picture) —  (Back On Black)
-[UpcomingVinyl] FOUND: Cannibal CorpseLive Cannibalism (Uk Exclusive Clear) —  (Back On Black)
-[UpcomingVinyl] FOUND: CapletonHeights of Fire —  (Diggers Factory)
-[UpcomingVinyl] FOUND: Catch Your BreathNot Broken Enough —  (Invogue Records)
-[UpcomingVinyl] FOUND: Charlie & the TropicalesNew Orleans '26 —  (Well Kept Secret)
-[UpcomingVinyl] FOUND: Chris Liebing & Luke SlaterDouble Split Terence Fixmer Remixes —  (Clr)
-[UpcomingVinyl] FOUND: Christian SandsChristmas Stories; Selections (Evergreen) —  (Mack Avenue Records)
-[UpcomingVinyl] FOUND: Cities AvivEven Colder Spring —  (Black Truffle)
-[UpcomingVinyl] FOUND: Club Warme DekenCiapa —  (Warme Deken Records)
-[UpcomingVinyl] FOUND: Cocktail SlippersJoyride —  (Wicked Cool Records)
-[UpcomingVinyl] FOUND: Cold Diamond & MinkORgan-Ized —  (Timmion Records)
-[UpcomingVinyl] FOUND: CombichristThe Venom in the Mouth of God —  (Out Of Line)
-[UpcomingVinyl] FOUND: CombichristThe Venom in the Mouth of God —  (Out Of Line)
-[UpcomingVinyl] FOUND: CzarfaceCzarface Meets Frankie Pulitzer —  (Czarface Silver Age)
-[UpcomingVinyl] FOUND: DahiBlack Boy Alternative (Clear White) —  (Alter Music)
-[UpcomingVinyl] FOUND: DahiBlack Boy Alternative (White) —  (Alter Music)
-[UpcomingVinyl] FOUND: Daniel DonatoRyman to Robert's —  (Retrace Music)
-[UpcomingVinyl] FOUND: Danielle NicoleFireflies —  (Forty Below)
-[UpcomingVinyl] FOUND: Dc the DonRebirth (Blue Marbled) —  (Rostrum Records)
-[UpcomingVinyl] FOUND: Dead KosmonautRetrospectre —  (Edged Circle Prod.)
-[UpcomingVinyl] FOUND: Delilah HollidayFat Cat —  (One Little Independent Records)
-[UpcomingVinyl] FOUND: Delilah HollidayFat Cat —  (One Little Independent Records)
-[UpcomingVinyl] FOUND: Demob HappyGrown Ups Are Talking —  (Universal UK)
-[UpcomingVinyl] FOUND: Die KreuzenDie Kreuzen (Yellow) —  (Touch & Go Records)
-[UpcomingVinyl] FOUND: Die KreuzenOctober File (Clear/Red/Black) —  (Touch & Go Records)
-[UpcomingVinyl] FOUND: Dillon LockeLocke — Side Dishes (Full Plate)
-[UpcomingVinyl] FOUND: Dimmu BorgirEnthrone Darkness Triumphant —  (Nuclear Blast Archiv)
-[UpcomingVinyl] FOUND: Dinosaur Jr.There Near —  (Jagjaguwar)
-[UpcomingVinyl] FOUND: Dinosaur Jr.There Near (Clear/Pink) —  (Jagjaguwar)
-[UpcomingVinyl] FOUND: Dos SantosEs Amor —  (Otherly Love Records LLC)
-[UpcomingVinyl] FOUND: Dylan BradyNeedle Guy —  (Atlantic)
-[UpcomingVinyl] FOUND: Elegant WeaponsEvolution (Red) —  (Exciter Records)
-[UpcomingVinyl] FOUND: Elephant TreeElephant Tree —  (Magnetic Eye)
-[UpcomingVinyl] FOUND: Elias Stemeseder & Thomas MorganIo Pur Respiro —  (Squama)
-[UpcomingVinyl] FOUND: Elis Regina & Tom JobimElis & Tom —  (Transoceanica)
-[UpcomingVinyl] FOUND: EllurAt Home In My Mind —  (Dance to the Radio)
-[UpcomingVinyl] FOUND: Elvin JonesDear John C. (Verve Acoustic Sounds Series) —  (Impulse)
-[UpcomingVinyl] FOUND: Engelbert HumperdinckFaithfully —  (Cleopatra Records)
-[UpcomingVinyl] FOUND: Engelbert HumperdinckFaithfully —  (Cleopatra Records)
-[UpcomingVinyl] FOUND: Engelbert HumperdinckFaithfully —  (Cleopatra Records)
-[UpcomingVinyl] FOUND: EverlastEmbers To Ashes —  (MARTYR, INC.)
-[UpcomingVinyl] FOUND: Faun FablesThe Transit Rider —  (Drag City)
-[UpcomingVinyl] FOUND: FenElemental Part One: Mourning Earth —  (Prophecy)
-[UpcomingVinyl] FOUND: FenElemental Part One: Mourning Earth (Green) —  (Prophecy)
-[UpcomingVinyl] FOUND: Fletchr FletchrOn The Island We Call Home —  (Polydor Import)
-[UpcomingVinyl] FOUND: Flotsam and JetsamRats In The Temple —  (Napalm Records)
-[UpcomingVinyl] FOUND: ForteresseRecits Patriotiques (Metallic Blue) —  (Eisenwald)
-[UpcomingVinyl] FOUND: Fox the FoxPrecious Little Diamond (Crystal Clear) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Freddie HubbardRed Clay —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: FruitionSomething More —  (Bloodshot Records)
-[UpcomingVinyl] FOUND: Fsk (Freiwillige Selbstkontrolle)Ca C'est Le Blues —  (A-Musik)
-[UpcomingVinyl] FOUND: GadeaIn The Beginning —  (Modern Obscure Music)
-[UpcomingVinyl] FOUND: Gerry BeckleyMerciful —  (Blue Elan)
-[UpcomingVinyl] FOUND: Girls AloudTangled Up (Purple) —  (Universal UK)
-[UpcomingVinyl] FOUND: Glenn MillerCarnegie Hall Concert (Silver & Red) —  (Vinyl Passion)
-[UpcomingVinyl] FOUND: GravewormEngraved In Black —  (Mystic Production (SOM))
-[UpcomingVinyl] FOUND: Hakushi HasegawaHonest Feeling Album (Clear/White Smoke) —  (Brainfeeder)
-[UpcomingVinyl] FOUND: Hakushi HasegawaHonest Feeling Album (Clear/White Smoke) —  (Brainfeeder)
-[UpcomingVinyl] FOUND: Harald BjörkSchwarm Remixes —  (Kranglan Broadcast)
-[UpcomingVinyl] FOUND: Harry Gregson-Williams/John PowellShrek Score (Picture) —  (Varese Sarabande)
-[UpcomingVinyl] FOUND: Helicopter LeavesSabrina (Coke Bottle Clear) —  (Noyes Records)
-[UpcomingVinyl] FOUND: HewYour Version (Tri-Color) —  (Tiny Engines)
-[UpcomingVinyl] FOUND: Horse FeathersWords Are Dead —  (Kill Rock Stars)
-[UpcomingVinyl] FOUND: HTRKWork Work, Work (15th Anniversary) —  (Ghostly Int'l)
-[UpcomingVinyl] FOUND: Idris MuhammadPower Of Soul (White) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: IgorrrAmen —  (Metal Blade)
-[UpcomingVinyl] FOUND: Il Giardino ArmonicoHaydn 2032, Vol. 16 (The Surprise) —  (Alpha)
-[UpcomingVinyl] FOUND: In This MomentWitch (Blue) —  (Better Noise Music)
-[UpcomingVinyl] FOUND: IndicationForever Yours —  (Daze)
-[UpcomingVinyl] FOUND: InterpolThis Mirror Weighs a Ton —  (Partisan Records)
-[UpcomingVinyl] FOUND: InterpolThis Mirror Weighs a Ton (Edicion Espanola) —  (Partisan Records)
-[UpcomingVinyl] FOUND: IskandrSacraal —  (Eisenwald)
-[UpcomingVinyl] FOUND: Israel VibrationIV —  (Diggers Factory)
-[UpcomingVinyl] FOUND: J*DaveyThe Beauty in Distortion/ The Land of the Lost —  (Tiger's Eye)
-[UpcomingVinyl] FOUND: James PrimateRain World: The Watcher Original Soundtrack —  (Black Screen Records)
-[UpcomingVinyl] FOUND: JaydonMe My Songs & I (Blue) —  (Mega/Gamma.)
-[UpcomingVinyl] FOUND: Jim JamesWowed Out (Clear Pink) —  (Ato Records)
-[UpcomingVinyl] FOUND: Jj CaleNumber Ten (Turquoise) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Joan Jett & The BlackheartsI Love Rock 'N Roll (45Th Anniversary Edition) —  (Blackheart Records)
-[UpcomingVinyl] FOUND: JodeciDiary of a Mad Band —  (MCA Records Ltd)
-[UpcomingVinyl] FOUND: Joe HolmesJoe Holmes —  (Org Music)
-[UpcomingVinyl] FOUND: John Carroll KirbyPIano Works 2016-2026 —  (Stones Throw)
-[UpcomingVinyl] FOUND: John WatersIt's a Punk Rock Christmas —  (Sub Pop)
-[UpcomingVinyl] FOUND: John WatersIt's in the Book —  (Sub Pop)
-[UpcomingVinyl] FOUND: Johnny HartmanThe Voice That Is! (Verve Acoustic Sounds Series) —  (Impulse)
-[UpcomingVinyl] FOUND: Johnny Hates JazzSoul Believer —  (Revolver)
-[UpcomingVinyl] FOUND: Jonathan BreeDon't Call It Love —  (Lil Chief Records)
-[UpcomingVinyl] FOUND: Jonathan KasparThe Reason Why —  (Crosstown Rebels)
-[UpcomingVinyl] FOUND: Jonathan PersonneRepertoire —  (Bonsound)
-[UpcomingVinyl] FOUND: Josh GilliganSideways —  (Congrats Records)
-[UpcomingVinyl] FOUND: Juan HansenUltrasonido —  (Ultrasonido)
-[UpcomingVinyl] FOUND: Kam FranklinLand Of The Neon Sun —  (Homegirl Island Records)
-[UpcomingVinyl] FOUND: KamelotDark Asylum —  (Napalm Records)
-[UpcomingVinyl] FOUND: KashaiofDays —  (Orthodox)
-[UpcomingVinyl] FOUND: Keith LoweBetween Memory and Promise —  (Loosegroove Records)
-[UpcomingVinyl] FOUND: Kenneth GrahamIn This House —  (Seven Villas)
-[UpcomingVinyl] FOUND: Kevin BurtThis Trip —  (Sono Recording Group)
-[UpcomingVinyl] FOUND: Kid DramaMachines & Other Things —  (Metalheadz)
-[UpcomingVinyl] FOUND: Kid MilliLove$ick (Love$Ick Version) —  (Sony Korea)
-[UpcomingVinyl] FOUND: Kilbey KennedyThings We Did On Earth —  (Easy Action)
-[UpcomingVinyl] FOUND: Kim WildeAnother Step (Picture) —  (Demon Records)
-[UpcomingVinyl] FOUND: Kim WildeAnother Step (Pink) —  (Demon Records)
-[UpcomingVinyl] FOUND: KisschasyTerrors Of Comfort —  (Unified Music Group)
-[UpcomingVinyl] FOUND: Kitchen Knife ConspiracyHandicapitated 25th Anniversary —  (Deko Music)
-[UpcomingVinyl] FOUND: Klaus NomiKlaus Nomi —  (Omnivore Recordings)
-[UpcomingVinyl] FOUND: Klaus NomiSimple Man —  (Omnivore Recordings)
-[UpcomingVinyl] FOUND: KornThe Nothing —  (Atlantic Catalog Group)
-[UpcomingVinyl] FOUND: La PriestInto the Sky (Clear) —  (Domino)
-[UpcomingVinyl] FOUND: Laaz RockitAnnihilation Principle —  (Massacre Records)
-[UpcomingVinyl] FOUND: Laaz RockitKnow Your Enemy —  (Massacre Records)
-[UpcomingVinyl] FOUND: LambchopPunching The Clown —  (City Slang)
-[UpcomingVinyl] FOUND: Lara Somogyia Time Patterned —  (Mercury Kx)
-[UpcomingVinyl] FOUND: Lauren AlainaStages —  (Big Loud/Mercury Records)
-[UpcomingVinyl] FOUND: Le Pietre Dei GigantiPastorale —  (Code 7 UK)
-[UpcomingVinyl] FOUND: Le RenDon't Be Funny Without Me — Apple (Royal Mountain Rec.)
-[UpcomingVinyl] FOUND: Lion's ShareDark Hours —  (Metalville)
-[UpcomingVinyl] FOUND: Little Big TownIt's A Dying Art —  (Capitol Nashville)
-[UpcomingVinyl] FOUND: Loren Connors & David GrubbsSomewhere In The Wind —  (Room40)
-[UpcomingVinyl] FOUND: LuciusWildewoman (Ducky Yellow) —  (Mom & Pop Music)
-[UpcomingVinyl] FOUND: LusineA Certain Distance —  (Ghostly Int'l)
-[UpcomingVinyl] FOUND: LusineSensorimotor (10th Anniversary, White) —  (Ghostly Int'l)
-[UpcomingVinyl] FOUND: Maceo PlexMonster EP —  (Rekids)
-[UpcomingVinyl] FOUND: MacsealSuper Enthusiast —  (Counter Intuitive Records)
-[UpcomingVinyl] FOUND: Magi MerlinPower House — Graphite Eco Mix (Bonsound)
-[UpcomingVinyl] FOUND: MagnumOn A Storyteller's Night —  (Revolver Records)
-[UpcomingVinyl] FOUND: Mama's BrokeReunion —  (Free Dirt Records)
-[UpcomingVinyl] FOUND: Manilla RoadDeluge —  (High Roller Import)
-[UpcomingVinyl] FOUND: MarciMask Lady and Late Night Girl —  (Arbutus Records)
-[UpcomingVinyl] FOUND: Marco BeltramiScream Score (30th Anniversary, "Woodsboro Bloodbath" Red) —  (Varese Sarabande)
-[UpcomingVinyl] FOUND: Maria Duenas/Gustavo Dudamel/Simon Bolivar SymphonyHomage to Heifetz —  (Deutsche Grammophon)
-[UpcomingVinyl] FOUND: Mark HummelRoad Dog —  (Rockinitis Records)
-[UpcomingVinyl] FOUND: MartyriumMalevolent —  (Apostasy Records Imp)
-[UpcomingVinyl] FOUND: MaskLord Of The Rings: The Fellowship Of The Ring; Soundtrack. (Green Moss) —  (Vinyl Passion)
-[UpcomingVinyl] FOUND: MastodonMarrow Deep —  (Loma Vista Recordings)
-[UpcomingVinyl] FOUND: MephistofelesViolent Theatre —  (Heavy Psych Sounds)
-[UpcomingVinyl] FOUND: Merzbow & Pedro VianBardo Thodol —  (Modern Obscure Music)
-[UpcomingVinyl] FOUND: MeshuggahCatch Thirtythree 2026 Remastered —  (Reigning Phoenix Music America, LLC)
-[UpcomingVinyl] FOUND: MeshuggahDestroy Erase Improve 2026 Remastered —  (Reigning Phoenix Music America, LLC)
-[UpcomingVinyl] FOUND: Michael JacksonThe Definitive Collection —  (Motown Records)
-[UpcomingVinyl] FOUND: Mike DThank You (Clear) —  (Capitol)
-[UpcomingVinyl] FOUND: Milton Nascimento & Lo BorgesClub Da Esquina —  (Transoceanica)
-[UpcomingVinyl] FOUND: Mob RulesStories From The Verdant Vale (Cerulean Maelstrom) —  (Roar Rock Of Angels)
-[UpcomingVinyl] FOUND: MoleculeA:R (White) —  (Diggers Factory)
-[UpcomingVinyl] FOUND: Monument of MisanthropyWashington State Charm —  (Listenable Records)
-[UpcomingVinyl] FOUND: MothicaSomewhere In Between (Transparent Light Blue) —  (Sharptone Records)
-[UpcomingVinyl] FOUND: Mountain Grass UnitAppalachian Smoke —  (Dualtone Music Group)
-[UpcomingVinyl] FOUND: Muca & Roberto MenescalMuca Roberto Menescal Beleza —  (Secret Warehouse of)
-[UpcomingVinyl] FOUND: NechazzHabibi Funk 036: Pieces of a Dream —  (Habibi Funk)
-[UpcomingVinyl] FOUND: New Bomb TurksNightmare Scenario (Crystal Clear) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Night LovellMY BLOOD AS THE INK —  (G*59 Records)
-[UpcomingVinyl] FOUND: Night RangerBest Of —  (Frontiers New Recordings Physical Only)
-[UpcomingVinyl] FOUND: Nino Antonellini/Marino ZuccheriKayn: Cybernetics III; Nono: Contrappunto dialettico alla mente Avantgarde Series —  (Deutsche Grammophon)
-[UpcomingVinyl] FOUND: Nuns of the TundraNuns Of The Tundra (Blue) —  (Universal UK)
-[UpcomingVinyl] FOUND: Nurse with WoundBackside —  (Rotorelief)
-[UpcomingVinyl] FOUND: Nurse with WoundHuffin' Rag Blues —  (Rotorelief)
-[UpcomingVinyl] FOUND: Nurse with WoundHuffin' Rag Blues —  (Rotorelief)
-[UpcomingVinyl] FOUND: ODFThe Rhythm Grooves EP —  (Shall Not Fade)
-[UpcomingVinyl] FOUND: OK GoOh No —  (Universal Music Group)
-[UpcomingVinyl] FOUND: Oliver-Smith IncomparablesStomp Your Stuff —  (Turtle Bay Records)
-[UpcomingVinyl] FOUND: OlsvangerHoney Tangerine —  (Oath)
-[UpcomingVinyl] FOUND: OpethPale Communion —  (Atlantic Catalog Group)
-[UpcomingVinyl] FOUND: Oscar PetersonWorld Tour —  (Mack Avenue Records)
-[UpcomingVinyl] FOUND: OseesCara Maluco —  (Deathgod Corp)
-[UpcomingVinyl] FOUND: PageantAstra EP —  (Stasis Recordings)
-[UpcomingVinyl] FOUND: Patrik JanssonDifferent Shades Of Blue —  (Sneaky Foot Records)
-[UpcomingVinyl] FOUND: Pattern-Seeking AnimalsGrimalkin —  (Giant Electric Pea)
-[UpcomingVinyl] FOUND: PdqbZEta-Kognition —  (Synaptic Cliffs)
-[UpcomingVinyl] FOUND: Peso Pluma & Tito Double PDinastia (Deluxe) —  (Dinastía Laija)
-[UpcomingVinyl] FOUND: Peso Pluma & Tito Double PDINASTÍA (Deluxe) —  (Dinastía Laija)
-[UpcomingVinyl] FOUND: Petruta KupperBondage Games Part 11 —  (Bondage Music)
-[UpcomingVinyl] FOUND: PhantomNot Midnight Yet (Red) —  (High Roller Records)
-[UpcomingVinyl] FOUND: Piotr MusialFrostpunk 2 Original Soundtrack —  (Black Screen Records)
-[UpcomingVinyl] FOUND: Post MaloneAugust 26 —  (Big Loud/Mercury Records)
-[UpcomingVinyl] FOUND: Primal ScreamVanishing Point —  (Sony UK)
-[UpcomingVinyl] FOUND: PrimordialLive In New York City —  (Eisenwald)
-[UpcomingVinyl] FOUND: PrimordialLive In New York City — Ashen Bronze (Eisenwald)
-[UpcomingVinyl] FOUND: PrinceTimeless —  (Legacy Recordings)
-[UpcomingVinyl] FOUND: ProstituteAttempted Martyr (Gold) —  (Mute)
-[UpcomingVinyl] FOUND: PulpLive! —  (Rough Trade US)
-[UpcomingVinyl] FOUND: Rene Et GastonVallee De L'Armes (Orange) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Ritchie Blackmore & RainbowLive In Nurnberg 1976: Nurnberg Messezentrum Halle 28.9.1976 —  (Demon / Edsel)
-[UpcomingVinyl] FOUND: Rod WaveDon't Look Down —  (Alamo)
-[UpcomingVinyl] FOUND: Rod WaveDon’t Look Down —  (Alamo)
-[UpcomingVinyl] FOUND: Ruby DiceTake Me Back —  (Gitcha Records)
-[UpcomingVinyl] FOUND: Rue De GarderiesLive At Per:sona —  (Femacosme)
-[UpcomingVinyl] FOUND: Russian CirclesNine —  (Sargent House)
-[UpcomingVinyl] FOUND: Ruthie FosterJust Say Yes —  (Sun Records)
-[UpcomingVinyl] FOUND: Sam F & TWOFLOWFuck Like This —  (Mutant)
-[UpcomingVinyl] FOUND: Sara BareillesGood Grief —  (Epic Records)
-[UpcomingVinyl] FOUND: Sarah DavachiThe Will of Tongues —  (Late Music)
-[UpcomingVinyl] FOUND: Saul WilliamsLeap Life —  (Big Dada Records)
-[UpcomingVinyl] FOUND: SepulturaBeneath the Remains —  (Atlantic Catalog Group)
-[UpcomingVinyl] FOUND: Sera CahooneI'Ve Missed You All These Years —  (Sub Pop)
-[UpcomingVinyl] FOUND: Sha-BoomAnother Nail in the Coffin —  (Silver Lining Music)
-[UpcomingVinyl] FOUND: Shak JacksonRoutes —  (Hooj Choons)
-[UpcomingVinyl] FOUND: SighScenario IV: Dread Dreams (Orange Marble) —  (Peaceville Import)
-[UpcomingVinyl] FOUND: Sister KayaLovin' You Japanese Version Lovin' You —  (Jet Set)
-[UpcomingVinyl] FOUND: SolaceFading Failing Ruin —  (Magnetic Eye)
-[UpcomingVinyl] FOUND: Son VoltSound Signal Serenades —  (Transmit Sound)
-[UpcomingVinyl] FOUND: Sonya BelousovaOne Piece: Into the Grand Line Original Netflix Series Soundtrack (Amazon Exclusive) —  (Diggers Factory)
-[UpcomingVinyl] FOUND: Soul AsylumMPLS Unplugged —  (Blue Elan)
-[UpcomingVinyl] FOUND: Soul ReviversHolding It Down —  (Acid Jazz)
-[UpcomingVinyl] FOUND: SpeedslutCimbrian Rites —  (Listenable Records)
-[UpcomingVinyl] FOUND: SpiceLet There Be Spice —  (Sonic Wax Records)
-[UpcomingVinyl] FOUND: Squid PisserThroat Slave (Irradiated Pink) —  (Skin Graft Records)
-[UpcomingVinyl] FOUND: Starter CarAfterlight —  (Tapete Records)
-[UpcomingVinyl] FOUND: Static AbyssThe Dying Hunt —  (Peaceville)
-[UpcomingVinyl] FOUND: Status Quo28th October 1976 Live (Yellow) —  (Demon / Edsel)
-[UpcomingVinyl] FOUND: Status Quo29th October 1976 Live (Purple) —  (Demon / Edsel)
-[UpcomingVinyl] FOUND: Steve Rothery Steve HackettThe Roaring Waves —  (Inside Out Music)
-[UpcomingVinyl] FOUND: Stevie Nicks & Chris IsaakHeart Shaped World —  (Mobile Fidelity)
-[UpcomingVinyl] FOUND: SuidakraThe Arcanum —  (Mystic Production (SOM))
-[UpcomingVinyl] FOUND: SulidaEtiwe —  (Sauajazz)
-[UpcomingVinyl] FOUND: Sullivan FortnerLeave That in There —  (Artwork Records)
-[UpcomingVinyl] FOUND: Sunny MurrayHommage to Africa —  (Byg)
-[UpcomingVinyl] FOUND: T-SpoonGreatest Hits (Black & White Marble) —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Temple of DreadDreadspawn Dominion —  (Testimony Records)
-[UpcomingVinyl] FOUND: Temple of DreadDreadspawn Dominion —  (Testimony Records)
-[UpcomingVinyl] FOUND: Ten Years AfterCricklewood Green —  (Chrysalis)
-[UpcomingVinyl] FOUND: The AlmightyTribal (Gold) —  (Gemini Records)
-[UpcomingVinyl] FOUND: The AnimerosQUe Barbaro (Eco-Mix Orange) —  (Easy Eye Sound)
-[UpcomingVinyl] FOUND: The JayhawksSanctuary Park —  (Sham)
-[UpcomingVinyl] FOUND: The Linda LindasGotta Get Out (Purple Eco Mix) —  (Warner Records)
-[UpcomingVinyl] FOUND: The MuffsLive At Fort Apache —  (Omnivore Recordings)
-[UpcomingVinyl] FOUND: The Pineapple ThiefYour Wilderness (10th Anniversary, Clear) —  (Kscope)
-[UpcomingVinyl] FOUND: The Scratch Orchestra/Cornelius CardewCardew: The Great Learning (Avantgarde Series) —  (Deutsche Grammophon)
-[UpcomingVinyl] FOUND: The Surf RidersTen Tons of Wet —  (Sonic Wax Records)
-[UpcomingVinyl] FOUND: The Velvet UndergroundThe Velvet Underground & Nico — Japanese (Universal Japan)
-[UpcomingVinyl] FOUND: The WarningEverything's Falling Feather —  (Lava/Republic Records)
-[UpcomingVinyl] FOUND: Theo LawrenceÀ La Mode —  (Reprise)
-[UpcomingVinyl] FOUND: Thomas NewmanIn The Blink Of An Eye —  (Mutant)
-[UpcomingVinyl] FOUND: ThornhillBodies Definitive (White & Blue Galaxy) —  (Unfd)
-[UpcomingVinyl] FOUND: TOGENASHITOGEARITogeari —  (Universal Japan)
-[UpcomingVinyl] FOUND: TOGENASHITOGEARITogenashi —  (Universal Japan)
-[UpcomingVinyl] FOUND: Tokyo BladeHoist The Colours High —  (Dissonance)
-[UpcomingVinyl] FOUND: TomocomoPrism Of Echoes —  (Cozzmic Sonic Record)
-[UpcomingVinyl] FOUND: Tour-MaubourgParadis Artificiels —  (Pont Neuf Records)
-[UpcomingVinyl] FOUND: ToyahRevelations: B-Sides & Rarities (Smokey Grey) —  (Cherry Red)
-[UpcomingVinyl] FOUND: TrulyTwilight Curtains —  (Bang Records)
-[UpcomingVinyl] FOUND: Two RunnerPorchlight (Bone) —  (Gar Hole Records)
-[UpcomingVinyl] FOUND: Ty SegallChrome —  (Drag City)
-[UpcomingVinyl] FOUND: Tyrannosaurus RexElectric Warrior — Japanese (Universal Japan)
-[UpcomingVinyl] FOUND: UadaDevoid Of Light —  (Eisenwald)
-[UpcomingVinyl] FOUND: UadaDevoid Of Light (10th Anniversary, Tan & Smoke) —  (Eisenwald)
-[UpcomingVinyl] FOUND: UadaInterwoven (Black Smoke) —  (Eisenwald)
-[UpcomingVinyl] FOUND: UadaInterwoven (Elder Earth Red & Brown) —  (Eisenwald)
-[UpcomingVinyl] FOUND: UadaInterwoven (Wolf Blood) —  (Eisenwald)
-[UpcomingVinyl] FOUND: UnderoathDefine the Great Line —  (Many Hats Dist)
-[UpcomingVinyl] FOUND: Untitled with DrumsMade Flesh —  (Season Of Mist)
-[UpcomingVinyl] FOUND: Ute Wassermannchimeric —  (Thin Wrist)
-[UpcomingVinyl] FOUND: Vanilla IceNow & Forever —  (Bfd)
-[UpcomingVinyl] FOUND: Various80s Rock Gems From Germany Vol. 2 —  (Golden Core Records Zyx)
-[UpcomingVinyl] FOUND: Various ArtistsAntone's 50th Presents: Chicago Bound (Honoring Muddy, Cliff And Blue) —  (Blues Till 2 Rec)
-[UpcomingVinyl] FOUND: Various ArtistsDisciples Of The Unreal II —  (Ohm Resistance)
-[UpcomingVinyl] FOUND: Various ArtistsDisco Collected ('Disco Ball Silver') —  (Music On Vinyl)
-[UpcomingVinyl] FOUND: Velocity Girl1989-1992 (Transparent Orange) —  (Slumberland Records)
-[UpcomingVinyl] FOUND: WarsawWarsaw (Crystal Clear & Blue) —  (Vinyl Passion)
-[UpcomingVinyl] FOUND: Waylon Jennings, Willie Nelson, Jessi Colter, Tompall GlaserWANTED! The Outlaws (50th Anniversary) —  (Legacy Recordings)
-[UpcomingVinyl] FOUND: WickedGo Rebel —  (Magick Rite Records)
-[UpcomingVinyl] FOUND: Willie NelsonStardust —  (Legacy Recordings)
-[UpcomingVinyl] FOUND: Wine LipsTv Dinner —  (Stomp Records)
-[UpcomingVinyl] FOUND: Yeonjun (txt)No Labels (Clear) —  (BIGHIT/Universal Records/Republic)
-[UpcomingVinyl] FOUND: Younger BrotherMutually Assured Distraction —  (Twisted Records Ltd)
-[UpcomingVinyl] FOUND: Yuji OhnoThe Inugami Family —  (Jet Set)
-[UpcomingVinyl] FOUND: 牛尾憲輔Chainsaw Man The Movie: Reze Arc Original Soundtrack (Summer's End) —  (Milan)
-[UpcomingVinyl] li>h2 approach found 314 entries
-[UpcomingVinyl] Got 592753 bytes from https://upcomingvinyl.com/overview
-[UpcomingVinyl] Preview: <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-
-        <meta charset="utf-8">
-
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Upcoming Vinyl Releases Overview</title>
-
-<meta name="description"
-[UpcomingVinyl] Found 4 h2 tags, 4067 li tags
-[UpcomingVinyl] li>h2 approach found 0 entries
-[UpcomingVinyl] Trying direct h2 fallback...
-[UpcomingVinyl] h2 text: Formats
-[UpcomingVinyl] h2 text: Styles / Genres
-[UpcomingVinyl] h2 text: Artists
-[UpcomingVinyl] h2 text: Labels
-[UpcomingVinyl] Total matches: 306
-[UpcomingVinyl] 306 whitelist matches saved to upcoming_releases.json
-[BuySignals] 2896 buy signals saved to buy_signals.json
+[UpcomingVinyl] Got 285867 bytes
+[UpcomingVinyl] Found 314 raw record URLs
+[UpcomingVinyl] MATCH: Korn | The Nothing
+[UpcomingVinyl] MATCH: Michael Jackson | The Definitive Collection
+[UpcomingVinyl] MATCH: The Warning | Everything S Falling Feather
+[UpcomingVinyl] MATCH: Thornhill | Bodies Definitive White Blue Galaxy
+[UpcomingVinyl] Total Korndog matches: 4
+[UpcomingVinyl] 4 whitelist matches saved to upcoming_releases.json
+[BuySignals] 144 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 234 deals
-  Rollin Preorders: 234 deals
-  Sound of Vinyl: 216 deals
-  uDiscover Music: 106 deals
-  Fearless Records: 83 deals
-  Fearless Vinyl: 83 deals
-  Rise Records: 76 deals
-  Rise All: 76 deals
-  Brooklyn Vegan: 168 deals
-  Revolver: 92 deals
-  Newbury Comics: 145 deals
-  Newbury Preorders: 145 deals
-  Craft Recordings: 93 deals
-  MNRK Heavy: 137 deals
-  Equal Vision: 89 deals
-  Rhino: 86 deals
-  Interscope Records: 124 deals
-  SharpTone Records: 92 deals
-  Rock Metal Fan Nation: 137 deals
-  RMFN All: 137 deals
-  Sumerian Records: 64 deals
-  Solid State Records: 56 deals
-  Solid State Vinyl: 56 deals
-  Pure Noise Records: 80 deals
-  Hopeless Records: 55 deals
-  Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 72 deals
+  Rollin Records: 242 deals
+  Rollin Preorders: 242 deals
+  Sound of Vinyl: 240 deals
+  uDiscover Music: 138 deals
+  Fearless Records: 88 deals
+  Fearless Vinyl: 88 deals
+  Rise Records: 88 deals
+  Rise All: 88 deals
+  Brooklyn Vegan: 174 deals
+  Revolver: 98 deals
+  Newbury Comics: 209 deals
+  Newbury Preorders: 209 deals
+  Craft Recordings: 96 deals
+  MNRK Heavy: 144 deals
+  Equal Vision: 107 deals
+  Rhino: 87 deals
+  Interscope Records: 134 deals
+  SharpTone Records: 103 deals
+  Rock Metal Fan Nation: 147 deals
+  RMFN All: 147 deals
+  Sumerian Records: 75 deals
+  Solid State Records: 58 deals
+  Solid State Vinyl: 58 deals
+  Pure Noise Records: 89 deals
+  Hopeless Records: 67 deals
+  Hopeless Shopify: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  Pirates Press Records: 96 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
-  Spinefarm Records: 0 deals
+  Spinefarm Records: 87 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
-  Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
-  UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Merchbar: SKIPPED (unknown type: html_store)
-  Hot Topic: SKIPPED (unknown type: html_store)
-  Deep Discount: SKIPPED (unknown type: html_store)
-  Millions of Records: SKIPPED (unknown type: html_store)
+  Thriller Records: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  UNFD: FAILED: <urlopen error [Errno 7] No address associated with hostname>
+  Merchbar: FAILED: HTTP Error 429: Too Many Requests
+  Hot Topic: 16 deals
+  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Millions of Records: FAILED: <urlopen error [Errno 7] No address associated with hostname>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
   Walmart: 1 deals | pages: 9 | robot walls: 9
-  Amazon: 13 items | pages: 7 | robot walls: 0
   Target: 1 items | pages: 2 | robot walls: 0 | api: no
-  Popsike: SKIPPED (unknown type: popsike_source)
+  Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
-Amazon: 13
-Brooklyn Vegan: 168
-Craft Recordings: 93
-Equal Vision: 89
-Fearless Records: 83
-Fearless Vinyl: 83
-Hopeless Records: 55
-Interscope Records: 122
-MNRK Heavy: 136
-Newbury Comics: 145
-Newbury Preorders: 145
-Pirates Press Records: 52
-Pure Noise Records: 80
-r/VinylReleases: 46
-Revolver: 92
-Rhino: 86
-Rise All: 76
-Rise Records: 76
-RMFN All: 136
-Rock Metal Fan Nation: 136
-Rollin Preorders: 233
-Rollin Records: 233
-SharpTone Records: 91
-Solid State Records: 52
-Solid State Vinyl: 52
-Sound of Vinyl: 213
-Sumerian Records: 62
+Amazon: 1
+Brooklyn Vegan: 174
+Craft Recordings: 96
+Equal Vision: 107
+Fearless Records: 88
+Hopeless Records: 67
+Hot Topic: 16
+Interscope Records: 134
+MNRK Heavy: 144
+Newbury Comics: 209
+Pirates Press Records: 96
+Pure Noise Records: 89
+r/VinylReleases: 47
+Revolver: 98
+Rhino: 87
+Rise Records: 88
+Rock Metal Fan Nation: 147
+Rollin Records: 242
+SharpTone Records: 103
+Solid State Records: 58
+Sound of Vinyl: 240
+Spinefarm Records: 87
+Sumerian Records: 74
 Target: 1
-uDiscover Music: 104
+uDiscover Music: 138
 Walmart: 1

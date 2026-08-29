@@ -589,8 +589,28 @@ def is_banned(text):
 
 
 def contains_bad_product_terms(text):
-    t = (text or "").lower()
-    return any(term in t for term in BAD_PRODUCT_TERMS)
+    """
+    Match whole product terms instead of arbitrary substrings.
+    """
+    t = clean(text or "").lower()
+
+    for term in BAD_PRODUCT_TERMS:
+        term = clean(term).lower()
+
+        if not term:
+            continue
+
+        pattern = (
+            r"(?<![a-z0-9])"
+            + re.escape(term).replace(r"\ ", r"\s+")
+            + r"(?![a-z0-9])"
+        )
+
+        if re.search(pattern, t, re.I):
+            return True
+
+    return False
+
 
 
 def is_sold_out(text):
@@ -612,6 +632,7 @@ def artist_allowed(artist, title=""):
     if any(b in hay for b in blocked if b):
         return False
     return True
+
 
 
 def keyword_hits(text):
@@ -651,8 +672,22 @@ def looks_like_real_vinyl(text):
     ])
 
 
-def looks_like_amazon_link(url):
-    return "amazon.com" in url.lower()
+def looks_like_amazon_link(link):
+    """
+    Reject accidental Amazon links found while scraping another retailer.
+    """
+    try:
+        host = urllib.parse.urlparse(link or "").netloc.lower()
+    except Exception:
+        return False
+
+    return (
+        host == "amazon.com"
+        or host.endswith(".amazon.com")
+        or host == "amzn.to"
+        or host.endswith(".amzn.to")
+    )
+
 
 
 def clean_store_title(title):
@@ -694,6 +729,7 @@ def clean_store_title(title):
     return re.sub(r"\s+", " ", text).strip(" -")
 
 
+
 def parse_from_slug(link):
     slug = link.rstrip("/").split("/")[-1]
     slug = clean(slug.replace("-", " ")).lower()
@@ -706,6 +742,7 @@ def parse_from_slug(link):
     return re.sub(r"\s+", " ", slug).strip()
 
 
+
 def split_artist_album_from_title(title):
     title = clean_store_title(title)
     parts = [p.strip() for p in title.split(" - ") if p.strip()]
@@ -714,30 +751,329 @@ def split_artist_album_from_title(title):
     return "", title
 
 
+
+STORE_VENDOR_NAMES = {
+    "mnrk heavy",
+    "interscope records",
+    "sumerian records",
+    "trust records",
+    "fearless records",
+    "rise records",
+    "sharptone records",
+    "pure noise records",
+    "hopeless records",
+    "craft recordings",
+    "equal vision",
+    "rhino",
+    "solid state records",
+    "rock metal fan nation",
+    "brooklyn vegan",
+    "revolver",
+    "newbury comics",
+    "sound of vinyl",
+    "udiscover music",
+    "rollin records",
+    "pirates press records",
+    "indiemerchstore",
+    "thriller records",
+    "unfd",
+}
+
+
+def load_known_artists():
+    artists = set()
+
+    # Main Korndog artist intelligence file.
+    artists_file = BASE / "artists.json"
+
+    if artists_file.exists():
+        try:
+            data = json.loads(artists_file.read_text(encoding="utf-8"))
+
+            if isinstance(data, dict):
+                for values in data.values():
+                    if isinstance(values, list):
+                        for artist in values:
+                            artist = clean(artist)
+
+                            if artist:
+                                artists.add(artist)
+
+            elif isinstance(data, list):
+                for artist in data:
+                    artist = clean(artist)
+
+                    if artist:
+                        artists.add(artist)
+
+        except Exception as e:
+            log(f"[Artists] Failed to load artists.json: {e}")
+
+    # Legacy whitelist still contains many verified identities.
+    whitelist_file = BASE / "artist_whitelist.json"
+
+    if whitelist_file.exists():
+        try:
+            data = json.loads(
+                whitelist_file.read_text(encoding="utf-8")
+            )
+
+            for artist in data.get("allowed_artists", []):
+                artist = clean(artist)
+
+                if artist:
+                    artists.add(artist)
+
+        except Exception as e:
+            log(f"[Artists] Failed to load artist_whitelist.json: {e}")
+
+    # Never allow store / label names to become artists.
+    cleaned = set()
+
+    for artist in artists:
+        low = artist.lower().strip()
+
+        if low in STORE_VENDOR_NAMES:
+            continue
+
+        if low in {
+            "unknown artist",
+            "amazon",
+            "walmart",
+            "target",
+        }:
+            continue
+
+        if len(artist) < 2:
+            continue
+
+        cleaned.add(artist)
+
+    log(f"[Artists] Loaded {len(cleaned)} trusted artists")
+
+    return cleaned
+
+
+
+KNOWN_ARTISTS = load_known_artists()
+
+# Verified artists needed by stores such as Hot Topic that expose
+# artist + album as one fused product title.
+KNOWN_ARTISTS.update({
+    "My Chemical Romance",
+    "Motionless In White",
+    "Evanescence",
+    "The Warning",
+    "Widespread Panic",
+    "KATSEYE",
+    "Adéla",
+})
+
+# Final verified identity corrections.
+KNOWN_ARTISTS.discard("Murder by Death")
+KNOWN_ARTISTS.add("Dave Grusin")
+KNOWN_ARTISTS.add("The Devil Wears Prada")
+
+
+def match_known_artist_prefix(title):
+    value = clean(title)
+    low = value.lower()
+
+    for artist in sorted(KNOWN_ARTISTS, key=len, reverse=True):
+        artist_low = artist.lower()
+
+        if low == artist_low:
+            return artist
+
+        if low.startswith(artist_low + " "):
+            return artist
+
+        if low.startswith(artist_low + ":"):
+            return artist
+
+        if low.startswith(artist_low + " -"):
+            return artist
+
+    return ""
+
+
+def match_known_artist_in_description(text):
+    """
+    Recover an artist from product-local description text only when
+    the wording strongly identifies that artist.
+    """
+    value = clean(re.sub(r"<[^>]+>", " ", text or ""))
+    low = value.lower()
+
+    if not low:
+        return ""
+
+    for artist in sorted(KNOWN_ARTISTS, key=len, reverse=True):
+        artist = clean(artist)
+
+        if len(artist) < 3:
+            continue
+
+        a = artist.lower()
+        escaped = re.escape(a)
+
+        strong_patterns = [
+            r"^" + escaped + r"(?:['’]s|\b)",
+            r"\b" + escaped + r"['’]s\s+(?:album|record|release|debut|sophomore)",
+            r"\b(?:band|artist)\s+" + escaped + r"\b",
+            r"\bfrom\s+(?:the\s+band\s+)?" + escaped + r"\b",
+            r"\brecord\s+from\s+" + escaped + r"\b",
+            r"\balbum\s+by\s+" + escaped + r"\b",
+        ]
+
+        if any(re.search(pattern, low, re.I) for pattern in strong_patterns):
+            return artist
+
+    return ""
+
+
+def strip_vinyl_suffix(title):
+    text = clean(title)
+
+    patterns = [
+        r"\s+Hot Topic Exclusive\s*$",
+        r"\s+(?:Triple|Double|Single)\s+Vinyl\s+LP\s*$",
+        r"\s+Vinyl\s+EP\s*$",
+        r"\s+Vinyl\s+LP\s*$",
+        r"\s+Vinyl\s*$",
+        r"\s+2LP\s*$",
+        r"\s+LP\s*$",
+    ]
+
+    changed = True
+
+    while changed:
+        changed = False
+
+        for pattern in patterns:
+            newer = re.sub(pattern, "", text, flags=re.I).strip()
+
+            if newer != text:
+                text = newer
+                changed = True
+
+    return text
+
+
+def clean_album_identity(title):
+    text = strip_vinyl_suffix(title)
+    text = clean(text)
+
+    # Example after artist-prefix recovery:
+    # 'SPIT' LP (Leopard Print Vinyl)
+    quoted = re.match(
+        r"""^['’‘"](.+?)['’‘"]\s+(?:LP|2LP)(?:\s+.*)?$""",
+        text,
+        re.I,
+    )
+
+    if quoted:
+        return clean(quoted.group(1))
+
+    # Remove simple wrapping quotes.
+    text = re.sub(
+        r"""^['’‘"](.+?)['’‘"]$""",
+        r"\1",
+        text,
+    )
+
+    return clean(text).strip(" '\"’‘")
+
+
+def vendor_is_artist_candidate(vendor, source_name=""):
+    vendor = clean(vendor)
+    low = vendor.lower()
+
+    if not vendor:
+        return False
+
+    if low in STORE_VENDOR_NAMES:
+        return False
+
+    if low == clean(source_name).lower():
+        return False
+
+    if low in {
+        "vinyl",
+        "music",
+        "records",
+        "record label",
+        "merchandise",
+        "merch",
+    }:
+        return False
+
+    return True
+
 def infer_artist_title(raw_title, link, vendor="", source_name=""):
     title = clean_store_title(raw_title)
+
+    # Retailers sometimes prepend merchandising text before the artist.
+    # Example: ** PRE-ORDER 10/23 ** Amy Winehouse
+    title = re.sub(
+        r"^\s*\*{0,3}\s*PRE[- ]?ORDER"
+        r"(?:\s+\d{1,2}/\d{1,2})?"
+        r"\s*\*{0,3}\s*",
+        "",
+        title,
+        flags=re.I,
+    ).strip()
     slug = parse_from_slug(link)
     vendor = clean(vendor)
+    source_lower = clean(source_name).lower()
 
     for pattern_row in SLUG_PATTERNS:
         try:
             pattern, artist, album = pattern_row
+
             if re.search(pattern, slug, re.I):
                 return artist, album
+
         except Exception:
             pass
 
+    # Label-store style:
+    # KITTIE 'SPIT' LP
+    # DOGMA 'DOGMA' LP
+    quoted = re.match(
+        r"^\\s*(.+?)\\s+['\\\"]([^'\\\"]+)['\\\"](?:\\s+.*)?$",
+        title,
+        re.I,
+    )
+
+    if quoted:
+        artist = clean(quoted.group(1))
+        album = clean(quoted.group(2))
+
+        if artist and album:
+            return artist, album
+
     split_artist, split_album = split_artist_album_from_title(title)
+
     if split_artist and split_album:
         return split_artist, split_album
 
-    if vendor and vendor.lower() not in {"vinyl", "music", "records"} and len(title) > 2:
+    # Try longest known artist prefix.
+    known_artist = match_known_artist_prefix(title)
+
+    if known_artist:
+        album = title[len(known_artist):].strip(" :-")
+        album = clean_album_identity(album)
+
+        if album:
+            return known_artist, album
+
+    # Only trust vendor when it is not the store / record label.
+    if vendor_is_artist_candidate(vendor, source_name):
         return vendor, title
 
-    if len(slug.split()) >= 3:
-        return "Unknown Artist", slug.title()
-
     return "Unknown Artist", title
+
 
 
 def detect_format(title="", product_type="", page_text=""):
@@ -767,6 +1103,7 @@ def detect_format(title="", product_type="", page_text=""):
     if "cd" in blob or "compact disc" in blob:
         return "cd"
     return "other"
+
 
 
 def extract_links(html_text, base, source_type="shopify_store"):
@@ -869,6 +1206,7 @@ def build_version_parts(text_blob, title_lower="", link_lower=""):
         if token in link_lower and token not in version_parts:
             version_parts.append(token)
     return keywords, version_parts
+
 
 
 def fetch_shopify_products(source_url):
@@ -980,6 +1318,26 @@ def build_shopify_deals(source):
             body_html = p.get("body_html", "") or ""
             variant_title = clean(valid_variant.get("title", "") or "")
 
+            # Some label stores use the label itself as Shopify vendor.
+            # Recover the real artist from strong product-description wording.
+            if (
+                artist == "Unknown Artist"
+                or clean(artist).lower() in STORE_VENDOR_NAMES
+            ):
+                description_artist = match_known_artist_in_description(body_html)
+
+                if description_artist:
+                    artist = description_artist
+
+                    prefix_artist = match_known_artist_prefix(title)
+
+                    if prefix_artist:
+                        album = clean_album_identity(
+                            title[len(prefix_artist):].strip(" :-")
+                        )
+                    else:
+                        album = clean_album_identity(title)
+
             if is_sold_out(f"{title} {body_html} {variant_title}"):
                 continue
 
@@ -988,7 +1346,7 @@ def build_shopify_deals(source):
                 continue
 
             keywords, version_parts = build_version_parts(
-                f"{title} {link} {variant_title} {body_html} {tags_text}",
+                f"{title} {link} {variant_title}",
                 title_lower=title_lower,
                 link_lower=link.lower()
             )
@@ -1019,6 +1377,7 @@ def build_shopify_deals(source):
     SOURCE_STATUS[source["name"]] = f"{kept} deals"
     log(f'{source["name"]}: kept {kept}')
     return deals
+
 
 
 def source_specific_links(page_html, source):
@@ -1096,10 +1455,26 @@ def build_html_deals(source):
 
                 if looks_like_amazon_link(link):
                     continue
-                if is_sold_out(page):
-                    continue
 
                 raw_title = extract_title(page)
+
+                # Hot Topic pages contain availability language for store
+                # pickup and other widgets. Only use strong structured
+                # out-of-stock evidence there.
+                if "hot topic" in source_name:
+                    page_lower = page.lower()
+
+                    hot_topic_out = (
+                        'data-isoutofstock="true"' in page_lower
+                        or '"availability":"https://schema.org/outofstock"' in page_lower
+                        or '"availability": "https://schema.org/outofstock"' in page_lower
+                        or "schema.org/outofstock" in page_lower
+                    )
+
+                    if hot_topic_out:
+                        continue
+                elif is_sold_out(page):
+                    continue
                 if should_skip(raw_title, link):
                     continue
 
@@ -1125,7 +1500,7 @@ def build_html_deals(source):
                 image = extract_image(page, link)
 
                 keywords, version_parts = build_version_parts(
-                    f"{raw_title} {link} {page[:3000]}",
+                    f"{raw_title} {link}",
                     title_lower=raw_title.lower(),
                     link_lower=link.lower()
                 )
@@ -1162,6 +1537,7 @@ def build_html_deals(source):
     return deals
 
 
+
 def build_unfd(source):
     deals = build_shopify_deals({
         "name": source["name"],
@@ -1176,10 +1552,12 @@ def build_unfd(source):
     return build_html_deals(source)
 
 
+
 def build_millions(source):
     deals = build_html_deals(source)
     SOURCE_STATUS[source["name"]] = f"{len(deals)} deals"
     return deals
+
 
 
 def build_deepdiscount(source):
@@ -1284,7 +1662,7 @@ def build_deepdiscount(source):
 
             image = extract_image(product_html, link)
             keywords, version_parts = build_version_parts(
-                f"{raw_title} {link} {product_html[:3000]}",
+                f"{raw_title} {link}",
                 title_lower=raw_title.lower(),
                 link_lower=link.lower()
             )
@@ -1313,6 +1691,7 @@ def build_deepdiscount(source):
     return deduped
 
 
+
 def walmart_robot_wall(page_html):
     t = (page_html or "").lower()
     return any(marker in t for marker in [
@@ -1325,10 +1704,12 @@ def walmart_robot_wall(page_html):
     ])
 
 
+
 def clean_walmart_title(text):
     text = clean(text)
     text = re.sub(r"\s+\$[\d\.,]+.*$", "", text).strip()
     return text
+
 
 
 def extract_walmart_candidates_from_json_blob(blob_text):
@@ -1342,7 +1723,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     )
     for name, canonical, price in pattern_objects:
         title = clean_walmart_title(name)
-        if not title or not looks_like_real_vinyl(title):
+        if not title or not looks_like_real_walmart_vinyl(title):
             continue
         results.append({
             "title": title,
@@ -1359,7 +1740,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     )
     for name, item_id in pattern_objects_2:
         title = clean_walmart_title(name)
-        if not title or not looks_like_real_vinyl(title):
+        if not title or not looks_like_real_walmart_vinyl(title):
             continue
         results.append({
             "title": title,
@@ -1379,7 +1760,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
     for pat in fallback_patterns:
         for match in re.findall(pat, blob_text, re.I):
             title = clean_walmart_title(match)
-            if not title or not looks_like_real_vinyl(title):
+            if not title or not looks_like_real_walmart_vinyl(title):
                 continue
             results.append({
                 "title": title,
@@ -1389,6 +1770,7 @@ def extract_walmart_candidates_from_json_blob(blob_text):
             })
 
     return results
+
 
 
 def build_walmart_catalog(source):
@@ -1472,53 +1854,45 @@ def build_walmart_catalog(source):
     return deduped
 
 
+
 def derive_amazon_only(deals):
-    derived = []
-    seen = set()
+    amazon_link = (
+        f"https://www.amazon.com/s?"
+        f"k={urllib.parse.quote_plus('vinyl records')}"
+        f"&tag={AMAZON_TAG}"
+    )
 
-    for item in deals:
-        artist = clean(item.get("artist", ""))
-        title = clean(item.get("title", ""))
-        source = clean(item.get("source", ""))
+    derived = [{
+        "artist": "Amazon",
+        "title": "Amazon Vinyl Records Catalog",
+        "raw_title": "Amazon Vinyl Records Catalog",
+        "price": 0.0,
+        "source": "Amazon",
+        "source_type": "affiliate_catalog_portal",
+        "link": amazon_link,
+        "image": "",
+        "keywords": ["vinyl", "catalog"],
+        "deal_quality": "catalog",
+        "quality": "catalog",
+        "demand": "broad",
+        "format": "vinyl",
+        "version": "catalog",
+        "availability_text": "Browse Amazon vinyl records",
+        "page_text_snippet": (
+            "Amazon vinyl catalog portal using the "
+            "Korndog Records Amazon Associates tag."
+        ),
+        "score": 0,
+        "signals": ["catalog"],
+    }]
 
-        if source.lower() == "amazon":
-            continue
+    SOURCE_STATUS["Amazon"] = "1 catalog portal"
 
-        if not title or looks_like_garbage(title):
-            continue
-        if contains_bad_product_terms(f"{artist} {title}"):
-            continue
+    log("Amazon: exposing 1 affiliate vinyl catalog portal")
 
-        query = f"{artist} {title} vinyl lp record".strip()
-        key = f"{artist.lower()}::{title.lower()}"
-
-        if key in seen:
-            continue
-        seen.add(key)
-
-        amazon_link = f"https://www.amazon.com/s?k={urllib.parse.quote_plus(query)}&tag={AMAZON_TAG}"
-        base_price = normalize_price(item.get("price", 0))
-
-        derived.append({
-            "artist": artist or "Unknown Artist",
-            "title": title,
-            "raw_title": f"{artist} - {title}".strip(" -"),
-            "price": base_price if base_price > 0 else 0.0,
-            "source": "Amazon",
-            "source_type": "affiliate_search_source",
-            "link": amazon_link,
-            "image": item.get("image", ""),
-            "keywords": item.get("keywords", []),
-            "deal_quality": "catalog",
-            "demand": "broad",
-            "format": "vinyl",
-            "version": item.get("version", "standard"),
-            "availability_text": "",
-            "page_text_snippet": "Amazon affiliate search result derived from live catalog match.",
-        })
-
-    SOURCE_STATUS["Amazon"] = f"{len(derived)} derived deals"
     return derived
+
+
 
 
 def dedupe_source_items(items):
@@ -1549,8 +1923,10 @@ def dedupe_source_items(items):
     return list(seen.values())
 
 
+
 def scrape_source(source):
     stype = source.get("source_type", "")
+    name = source.get("name", "Unknown")
 
     if stype == "deepdiscount_store":
         return build_deepdiscount(source)
@@ -1559,7 +1935,10 @@ def scrape_source(source):
         return build_walmart_catalog(source)
 
     if stype == "amazon_catalog_source":
-        return build_amazon_catalog(source)
+        # Amazon is intentionally converted to a single portal
+        # by derive_amazon_only().
+        SOURCE_STATUS[name] = "1 catalog portal after main scrape"
+        return []
 
     if stype == "target_catalog_source":
         return build_target_catalog(source)
@@ -1570,51 +1949,219 @@ def scrape_source(source):
     if stype == "millions_store":
         return build_millions(source)
 
-    if stype == "merchbar_store":
-        return build_html_deals(source)
-
-    if stype == "hottopic_store":
+    if stype in {
+        "merchbar_store",
+        "hottopic_store",
+        "html_store",
+        "catalog_store",
+    }:
         return build_html_deals(source)
 
     if stype == "amazon_affiliate_source":
-        SOURCE_STATUS[source["name"]] = "Derived after main scrape"
+        SOURCE_STATUS[name] = "1 catalog portal after main scrape"
+        return []
+
+    if stype == "popsike_source":
+        SOURCE_STATUS[name] = "enrichment-only source"
         return []
 
     if stype == "merchnow_store":
         deals = build_shopify_deals(source)
+
         if not deals:
-            log(f'{source["name"]}: Merchnow JSON empty, trying HTML fallback')
+            log(
+                f"{name}: Merchnow JSON empty, "
+                "trying HTML fallback"
+            )
+
             deals = build_html_deals(source)
+
         return deals
 
     if stype == "shopify_store":
         deals = build_shopify_deals(source)
+
         if not deals:
-            log(f'{source["name"]}: Shopify JSON empty, trying HTML fallback')
+            log(
+                f"{name}: Shopify JSON empty, "
+                "trying HTML fallback"
+            )
+
             deals = build_html_deals(source)
+
         return deals
 
-    if stype == "catalog_store":
-        return build_html_deals(source)
+    log(f'{name}: unknown source_type "{stype}" - skipping')
 
-    log(f'{source["name"]}: unknown source_type "{stype}" - skipping')
-    SOURCE_STATUS[source["name"]] = f'SKIPPED (unknown type: {stype})'
+    SOURCE_STATUS[name] = (
+        f'SKIPPED (unknown type: {stype})'
+    )
+
     return []
 
 
+
+def normalize_identity_text(value):
+    text = clean(value or "").lower()
+    text = re.sub(r"\b(vinyl|records?|lp|2lp|1lp)\b", " ", text, flags=re.I)
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+def normalized_product_url(link):
+    """
+    Produce a stable product identity URL while dropping query strings
+    and fragments. The same Shopify product appearing through two source
+    lanes then collapses safely.
+    """
+    try:
+        parsed = urllib.parse.urlparse(link or "")
+        host = parsed.netloc.lower().replace("www.", "")
+        path = parsed.path.rstrip("/").lower()
+        return f"{host}{path}"
+    except Exception:
+        return (link or "").lower().strip()
+def release_key_for(deal):
+    artist = normalize_identity_text(deal.get("artist", ""))
+    title = normalize_identity_text(deal.get("title", ""))
+
+    if not artist:
+        artist = "unknown"
+
+    if not title:
+        title = normalize_identity_text(deal.get("raw_title", ""))
+
+    return f"{artist}::{title}"
+def score_deal(deal):
+    """
+    KornDog Deal Hunter catalog score.
+
+    This is deliberately conservative. A high score means the listing has
+    meaningful buying signals, not merely that it exists.
+    """
+    score = 30
+    signals = []
+
+    blob = " ".join([
+        str(deal.get("raw_title", "") or ""),
+        str(deal.get("title", "") or ""),
+        str(deal.get("version", "") or ""),
+        " ".join(deal.get("keywords", []) or []),
+        str(deal.get("availability_text", "") or ""),
+    ]).lower()
+
+    price = normalize_price(deal.get("price", 0))
+
+    boosts = [
+        ("exclusive", 20, "exclusive"),
+        ("limited", 14, "limited"),
+        ("pre-order", 15, "preorder"),
+        ("preorder", 15, "preorder"),
+        ("splatter", 8, "splatter"),
+        ("marble", 7, "marble"),
+        ("zoetrope", 12, "zoetrope"),
+        ("picture disc", 7, "picture-disc"),
+        ("anniversary", 8, "anniversary"),
+        ("deluxe", 6, "deluxe"),
+        ("colored vinyl", 5, "colored-vinyl"),
+        ("colour vinyl", 5, "colored-vinyl"),
+        ("translucent", 5, "colored-vinyl"),
+        ("clear vinyl", 5, "colored-vinyl"),
+    ]
+
+    seen_signals = set()
+
+    for needle, points, signal in boosts:
+        if needle in blob and signal not in seen_signals:
+            score += points
+            signals.append(signal)
+            seen_signals.add(signal)
+
+    if "2lp" in blob or "double vinyl" in blob or "double lp" in blob:
+        score += 4
+        signals.append("2lp")
+
+    # Useful retail-price bands. Do not pretend price alone proves a deal.
+    if 0 < price <= 20:
+        score += 12
+        signals.append("under-$20")
+    elif price <= 25 and price > 0:
+        score += 8
+        signals.append("under-$25")
+    elif price <= 30 and price > 0:
+        score += 4
+        signals.append("under-$30")
+
+    if deal.get("version") == "catalog":
+        score = 0
+        signals = ["catalog-portal"]
+
+    return min(score, 100), list(dict.fromkeys(signals))
+def enrich_deals(deals):
+    enriched = []
+
+    for deal in deals:
+        row = dict(deal)
+        row["release_key"] = release_key_for(row)
+
+        score, signals = score_deal(row)
+        row["score"] = score
+        row["signals"] = signals
+
+        if score >= 90:
+            row["deal_quality"] = "buy"
+        elif score >= 75:
+            row["deal_quality"] = "strong"
+        elif score >= 55:
+            row["deal_quality"] = "watch"
+        elif row.get("version") != "catalog":
+            row["deal_quality"] = "catalog"
+
+        enriched.append(row)
+
+    return enriched
+
 def dedupe_deals(deals):
-    seen = {}
+    """
+    Collapse the exact same retailer product when it was discovered through
+    multiple lanes such as a store root plus its vinyl collection.
+
+    Different retailer links and genuinely different variants remain intact.
+    """
+    seen_urls = {}
+    fallback_seen = {}
+
     for d in deals:
-        key = f'{(d.get("artist", "") or "").lower().strip()}::{(d.get("title", "") or "").lower().strip()}::{(d.get("source", "") or "").lower().strip()}'
-        if key not in seen:
-            seen[key] = d
-        else:
-            current = seen[key]
-            if normalize_price(d.get("price", 0)) > 0 and (
-                normalize_price(current.get("price", 0)) <= 0 or normalize_price(d.get("price", 0)) < normalize_price(current.get("price", 0))
-            ):
-                seen[key] = d
-    return list(seen.values())
+        link_key = normalized_product_url(d.get("link", ""))
+
+        # Catalog portals remain independent.
+        if d.get("version") == "catalog":
+            portal_key = f"portal::{d.get('source', '').lower()}"
+            if portal_key not in fallback_seen:
+                fallback_seen[portal_key] = d
+            continue
+
+        if link_key and "/" in link_key:
+            if link_key not in seen_urls:
+                seen_urls[link_key] = d
+            else:
+                current = seen_urls[link_key]
+                new_price = normalize_price(d.get("price", 0))
+                old_price = normalize_price(current.get("price", 0))
+
+                if new_price > 0 and (old_price <= 0 or new_price < old_price):
+                    seen_urls[link_key] = d
+            continue
+
+        key = (
+            f'{normalize_identity_text(d.get("artist", ""))}::'
+            f'{normalize_identity_text(d.get("title", ""))}::'
+            f'{(d.get("source", "") or "").lower().strip()}'
+        )
+
+        if key not in fallback_seen:
+            fallback_seen[key] = d
+
+    return list(seen_urls.values()) + list(fallback_seen.values())
+
 
 
 def build():
@@ -1622,114 +2169,318 @@ def build():
     real_source_deals = []
 
     for source in SOURCES:
-        if source["source_type"] == "amazon_affiliate_source":
+        stype = source.get("source_type", "")
+
+        if stype in {
+            "amazon_affiliate_source",
+            "amazon_catalog_source",
+            "popsike_source",
+        }:
             continue
 
         log(f"\n{'=' * 50}")
-        log(f"Scraping: {source['name']} ({source['source_type']})")
+        log(
+            f"Scraping: {source['name']} "
+            f"({source['source_type']})"
+        )
         log(f"{'=' * 50}")
 
         pulled = scrape_source(source)
+
         deals.extend(pulled)
         real_source_deals.extend(pulled)
 
-    return dedupe_deals(deals)
+    # Exactly one Amazon portal.
+    deals.extend(
+        derive_amazon_only(real_source_deals)
+    )
+
+    # Exact product dedupe.
+    deals = dedupe_deals(deals)
+
+    # Stage 2 intelligence:
+    # release key, signals, score and quality.
+    deals = enrich_deals(deals)
+
+    # --------------------------------------------------------
+    # FINAL PRODUCT / IDENTITY SANITIZER
+    # --------------------------------------------------------
+    cleaned_deals = []
+
+    for deal in deals:
+        raw = clean(
+            deal.get("raw_title")
+            or deal.get("title")
+            or ""
+        )
+
+        source = clean(
+            deal.get("source", "")
+        )
+
+        blob = raw.lower()
+
+        # Hard merchandise firewall.
+        non_record_terms = {
+            "slip mat",
+            "slipmat",
+            "turntable mat",
+            "record cleaning mat",
+        }
+
+        if any(
+            term in blob
+            for term in non_record_terms
+        ):
+            log(
+                f"[FinalFilter] merchandise rejected: "
+                f"{source} | {raw}"
+            )
+            continue
+
+        # Repair The Devil Wears Prada listings where stores
+        # expose the artist and album as one giant product title.
+        if (
+            "the devil wears prada" in blob
+            and "dear love" in blob
+        ):
+            deal["artist"] = "The Devil Wears Prada"
+            deal["title"] = "Dear Love: A Beautiful Discord"
+
+        # Craft's Murder by Death release is Dave Grusin's
+        # soundtrack, not the band Murder by Death.
+        if (
+            source.lower() == "craft recordings"
+            and "murder by death" in blob
+        ):
+            deal["artist"] = "Dave Grusin"
+            deal["title"] = "Murder by Death"
+
+        cleaned_deals.append(deal)
+
+    # Refresh release keys and Stage 2 scoring after repairs.
+    deals = enrich_deals(cleaned_deals)
+
+    log(
+        f"[Stage2] {len(deals)} normalized "
+        "vinyl listings"
+    )
+
+    return deals
+
+
 
 
 # ── UPCOMING VINYL SCRAPER ─────────────────────────────────────────────────────
 
 def fetch_upcoming_vinyl():
-    """Scrape upcomingvinyl.com for releases this week, filter by artist whitelist."""
+    import html as _html
     import re as _re
+    import urllib.parse as _urlparse
+
+    page_url = "https://upcomingvinyl.com/this-week"
+
     try:
-        from bs4 import BeautifulSoup
-    except ImportError:
-        log("[UpcomingVinyl] BeautifulSoup not available, skipping")
+        html_text = fetch(
+            page_url,
+            retries=2,
+            delay=3,
+        )
+    except Exception as e:
+        log(
+            f"[UpcomingVinyl] Fetch failed: {e}"
+        )
         return []
 
+    if not html_text:
+        log("[UpcomingVinyl] Empty response")
+        return []
+
+    log(
+        f"[UpcomingVinyl] Got "
+        f"{len(html_text)} bytes"
+    )
+
+    def artist_slug(value):
+        value = str(value or "").lower()
+
+        value = _re.sub(
+            r"[^a-z0-9]+",
+            "-",
+            value,
+        )
+
+        return value.strip("-")
+
+    artist_map = []
+
+    ambiguous_single_word_artists = {
+        "joe",
+    }
+
+    for artist in KNOWN_ARTISTS:
+        slug = artist_slug(artist)
+
+        if len(slug) < 2:
+            continue
+
+        # Avoid prefix collisions such as:
+        # Joe -> Joe Holmes
+        if slug in ambiguous_single_word_artists:
+            continue
+
+        artist_map.append(
+            (slug, artist)
+        )
+
+    artist_map.sort(
+        key=lambda x: len(x[0]),
+        reverse=True,
+    )
+
+    # Match /record/... links regardless of whether they
+    # are absolute or relative.
+    hrefs = _re.findall(
+        r'href\s*=\s*["\\\']([^"\\\']*/record/[^"\\\'?#]+)["\\\']',
+        html_text,
+        flags=_re.I,
+    )
+
+    # Some frameworks embed route strings in JSON/script data.
+    hrefs.extend(
+        _re.findall(
+            r'["\\\'](/record/[A-Za-z0-9%._~+\-]+)["\\\']',
+            html_text,
+            flags=_re.I,
+        )
+    )
+
+    log(
+        f"[UpcomingVinyl] Found "
+        f"{len(hrefs)} raw record URLs"
+    )
+
     upcoming = []
-    urls = [
-        "https://upcomingvinyl.com/this-week",
-        "https://upcomingvinyl.com/overview",
-    ]
-
-    for url in urls:
-        try:
-            html_text = fetch(url, retries=2, delay=3)
-        except Exception as e:
-            log(f"[UpcomingVinyl] Failed to fetch {url}: {e}")
-            continue
-        if not html_text:
-            log(f"[UpcomingVinyl] Empty response for {url}")
-            continue
-
-        log(f"[UpcomingVinyl] Got {len(html_text)} bytes from {url}")
-        log(f"[UpcomingVinyl] Preview: {html_text[:300].strip()}")
-
-        try:
-            soup = BeautifulSoup(html_text, "html.parser")
-
-            all_h2 = soup.find_all("h2")
-            all_li = soup.find_all("li")
-            log(f"[UpcomingVinyl] Found {len(all_h2)} h2 tags, {len(all_li)} li tags")
-
-            found_via_li = 0
-            for li in soup.select("li"):
-                h2 = li.find("h2")
-                if not h2:
-                    continue
-                found_via_li += 1
-                raw_title = h2.get_text(strip=True)
-                label_link = li.find("a", href=lambda h: h and "/label/" in h)
-                label = label_link.get_text(strip=True) if label_link else ""
-
-                if " - " in raw_title:
-                    parts = raw_title.split(" - ", 1)
-                    artist = parts[0].strip()
-                    title = parts[1].strip()
-                else:
-                    artist = raw_title
-                    title = ""
-
-                title_clean = _re.sub(r'\[.*?\]', '', title).strip()
-                artist_clean = _re.sub(r'\[.*?\]', '', artist).strip()
-
-                if not artist_clean:
-                    continue
-
-                upcoming.append({
-                    "artist": artist_clean,
-                    "title": title_clean,
-                    "label": label,
-                    "source_url": url,
-                    "type": "upcoming_release",
-                })
-                log(f"[UpcomingVinyl] FOUND: {artist_clean} — {title_clean} ({label})")
-
-            log(f"[UpcomingVinyl] li>h2 approach found {found_via_li} entries")
-
-            if found_via_li == 0:
-                log("[UpcomingVinyl] Trying direct h2 fallback...")
-                for h2 in all_h2:
-                    raw_title = h2.get_text(strip=True)
-                    if not raw_title or len(raw_title) < 3:
-                        continue
-                    log(f"[UpcomingVinyl] h2 text: {raw_title[:80]}")
-
-        except Exception as e:
-            log(f"[UpcomingVinyl] Parse error for {url}: {e}")
-            continue
-
     seen = set()
-    deduped = []
-    for item in upcoming:
-        key = f"{item['artist'].lower()}|{item['title'].lower()}"
-        if key not in seen:
-            seen.add(key)
-            deduped.append(item)
 
-    log(f"[UpcomingVinyl] Total matches: {len(deduped)}")
-    return deduped
+    for href in hrefs:
+        href = _html.unescape(
+            href.strip()
+        )
+
+        absolute = _urlparse.urljoin(
+            page_url,
+            href,
+        )
+
+        parsed = _urlparse.urlparse(
+            absolute
+        )
+
+        if "/record/" not in parsed.path:
+            continue
+
+        slug = parsed.path.split(
+            "/record/",
+            1,
+        )[-1].strip("/")
+
+        slug = _urlparse.unquote(
+            slug
+        ).lower()
+
+        if not slug:
+            continue
+
+        matched_artist = None
+        matched_slug = None
+
+        for a_slug, artist in artist_map:
+            if (
+                slug == a_slug
+                or slug.startswith(
+                    a_slug + "-"
+                )
+            ):
+                matched_artist = artist
+                matched_slug = a_slug
+                break
+
+        if not matched_artist:
+            continue
+
+        remainder = slug[
+            len(matched_slug):
+        ].strip("-")
+
+        # UpcomingVinyl occasionally appends internal numeric IDs.
+        remainder = _re.sub(
+            r"-\d{7,}$",
+            "",
+            remainder,
+        )
+
+        title = remainder.replace(
+            "-",
+            " ",
+        ).strip()
+
+        if title:
+            title = " ".join(
+                word.upper()
+                if word.lower()
+                in {"lp", "ep", "rsd"}
+                else word.capitalize()
+                for word in title.split()
+            )
+        else:
+            title = matched_artist
+
+        key = (
+            matched_artist.lower(),
+            slug,
+        )
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+
+        upcoming.append({
+            "artist": matched_artist,
+            "title": title,
+            "label": "",
+            "source": "Upcoming Vinyl",
+            "source_url": absolute,
+            "link": absolute,
+            "type": "upcoming_release",
+        })
+
+        log(
+            f"[UpcomingVinyl] MATCH: "
+            f"{matched_artist} | {title}"
+        )
+
+    upcoming.sort(
+        key=lambda x: (
+            x.get(
+                "artist",
+                "",
+            ).lower(),
+            x.get(
+                "title",
+                "",
+            ).lower(),
+        )
+    )
+
+    log(
+        f"[UpcomingVinyl] Total Korndog "
+        f"matches: {len(upcoming)}"
+    )
+
+    return upcoming
+
 
 
 # ── r/VINYLRELEASES SCRAPER ───────────────────────────────────────────────────
@@ -2058,45 +2809,187 @@ if __name__ == "__main__":
         json.dump(upcoming, f, indent=2, ensure_ascii=False)
     log(f"[UpcomingVinyl] {len(upcoming)} whitelist matches saved to upcoming_releases.json")
 
-    buy_signals = []
-    for deal in data:
-        artist = deal.get("artist", "")
-        title = deal.get("title", "")
-        price = deal.get("price", 0)
-        source = deal.get("source", "")
-        link = deal.get("link", "")
-        image = deal.get("image", "")
-        
-        # NEW: Include Discogs data
-        discogs_mint = deal.get("discogs_mint_price", 0)
-        discogs_lowest = deal.get("discogs_lowest", 0)
-        discogs_num = deal.get("discogs_num_for_sale", 0)
+    # ========================================================
+    # REAL BUY SIGNAL GATE
+    #
+    # Stage 2 decides whether the product is interesting
+    # enough to enter the buying shortlist.
+    #
+    # Buyer Brain then contributes store economics and lane.
+    # ========================================================
 
+    buy_signals = []
+
+    for deal in data:
+        artist = clean(deal.get("artist", ""))
+        title = clean(deal.get("title", ""))
+
+        try:
+            price = float(deal.get("price", 0) or 0)
+        except Exception:
+            price = 0.0
+
+        try:
+            stage2_score = int(
+                deal.get("score", 0) or 0
+            )
+        except Exception:
+            stage2_score = 0
+
+        try:
+            buyer_score = int(
+                deal.get("buy_score", 0) or 0
+            )
+        except Exception:
+            buyer_score = 0
+
+        quality = (
+            deal.get("quality")
+            or deal.get("deal_quality")
+            or "catalog"
+        )
+
+        # Portals belong in live_deals, never buy signals.
+        if deal.get("source_type") in {
+            "affiliate_catalog_portal",
+            "catalog_portal",
+        }:
+            continue
+
+        # No fake buy signals with no actual price.
+        if price <= 0:
+            continue
+
+        # Artist sanity.
         if not artist_allowed(artist, title):
             continue
-        if price <= 0:
+
+        if artist.lower() in STORE_VENDOR_NAMES:
+            continue
+
+        # Stage 2 is the admission gate.
+        if stage2_score < 55:
             continue
 
         buy_signals.append({
             "artist": artist,
             "title": title,
+            "raw_title": deal.get(
+                "raw_title",
+                title,
+            ),
             "price": price,
-            "source": source,
-            "link": link,
-            "image": image,
-            "score": deal.get("final_score", 0),
-            "lane": deal.get("final_lane", "PASS"),
-            # NEW: Discogs fields
-            "discogs_mint_price": discogs_mint,
-            "discogs_lowest": discogs_lowest,
-            "discogs_num_for_sale": discogs_num,
+            "source": deal.get("source", ""),
+            "source_type": deal.get(
+                "source_type",
+                "",
+            ),
+            "link": deal.get("link", ""),
+            "image": deal.get("image", ""),
+
+            # Stage 2 intelligence.
+            "score": stage2_score,
+            "stage2_score": stage2_score,
+            "quality": quality,
+            "signals": deal.get(
+                "signals",
+                [],
+            ),
+            "release_key": deal.get(
+                "release_key",
+                "",
+            ),
+            "version": deal.get(
+                "version",
+                "standard",
+            ),
+            "format": deal.get(
+                "format",
+                "vinyl",
+            ),
+
+            # Buyer Brain intelligence.
+            "buyer_score": buyer_score,
+            "inventory_lane": deal.get(
+                "inventory_lane",
+                "",
+            ),
+            "customer_lanes": deal.get(
+                "customer_lanes",
+                [],
+            ),
+            "decision": (
+                deal.get("decision")
+                or deal.get("buy_decision")
+                or ""
+            ),
+            "recommended_qty": deal.get(
+                "recommended_qty",
+                deal.get("qty", 0),
+            ),
+            "sale_price": deal.get(
+                "sale_price",
+                deal.get(
+                    "estimated_sale_price",
+                    0,
+                ),
+            ),
+            "margin_dollars": deal.get(
+                "margin_dollars",
+                0,
+            ),
+            "store_fit": deal.get(
+                "store_fit",
+                "",
+            ),
+            "why_buy": deal.get(
+                "why_buy",
+                "",
+            ),
+            "shelf_placement": deal.get(
+                "shelf_placement",
+                "",
+            ),
+
+            # Discogs intelligence.
+            "discogs_mint_price": deal.get(
+                "discogs_mint_price",
+                0,
+            ),
+            "discogs_lowest": deal.get(
+                "discogs_lowest",
+                0,
+            ),
+            "discogs_num_for_sale": deal.get(
+                "discogs_num_for_sale",
+                0,
+            ),
         })
 
-    buy_signals.sort(key=lambda x: x.get("score", 0), reverse=True)
+    buy_signals.sort(
+        key=lambda x: (
+            x.get("score", 0),
+            x.get("buyer_score", 0),
+        ),
+        reverse=True,
+    )
 
-    with open(BASE / "buy_signals.json", "w", encoding="utf-8") as f:
-        json.dump(buy_signals, f, indent=2, ensure_ascii=False)
-    log(f"[BuySignals] {len(buy_signals)} buy signals saved to buy_signals.json")
+    with open(
+        BASE / "buy_signals.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(
+            buy_signals,
+            f,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+    log(
+        f"[BuySignals] {len(buy_signals)} "
+        "qualified signals saved"
+    )
 
     log("\n" + "=" * 50)
     log("SOURCE STATUS SUMMARY")
