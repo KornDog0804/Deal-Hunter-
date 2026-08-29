@@ -665,6 +665,10 @@ h1{
   55+ WATCH
 </button>
 
+<button class="tab" data-view="mini">
+  🔬 MINI VINYL
+</button>
+
 </div>
 
 
@@ -685,6 +689,7 @@ h1{
 <script>
 let liveDeals = []
 let buySignals = []
+let miniDeals = []
 let view = "all"
 
 const $ = id => document.getElementById(id)
@@ -955,10 +960,175 @@ function card(d){
   `
 }
 
+
+function miniCard(d){
+  const link = safeUrl(d.link)
+  const image = safeUrl(d.image)
+
+  const system = esc(
+    d.mini_system ||
+    d.artist ||
+    "Mini Vinyl"
+  )
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Mini Vinyl"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown"
+  )
+
+  const productType = esc(
+    d.product_type ||
+    "Mini vinyl collectible"
+  )
+
+  const availability = esc(
+    d.availability_text ||
+    ""
+  )
+
+  const cover = image
+    ? `
+      <img
+        class="cover"
+        src="${image}"
+        loading="lazy"
+        alt="${system} ${title}"
+      >
+    `
+    : `
+      <div class="coverFallback">
+        🔬💿
+      </div>
+    `
+
+  const coverMarkup = link
+    ? `
+      <a
+        class="coverLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Browse ${source}"
+      >
+        ${cover}
+
+        <div class="quality catalog">
+          MINI VINYL
+        </div>
+      </a>
+    `
+    : `
+      <div class="coverLink">
+        ${cover}
+
+        <div class="quality catalog">
+          MINI VINYL
+        </div>
+      </div>
+    `
+
+  const titleMarkup = link
+    ? `
+      <a
+        class="titleLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="title">
+          ${title}
+        </div>
+      </a>
+    `
+    : `
+      <div class="title">
+        ${title}
+      </div>
+    `
+
+  const buyButton = link
+    ? `
+      <a
+        class="buy"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🛒 VIEW / BUY AT ${source.toUpperCase()}
+      </a>
+    `
+    : `
+      <span class="buy disabled">
+        LINK UNAVAILABLE
+      </span>
+    `
+
+  return `
+    <article class="card">
+
+      ${coverMarkup}
+
+      <div class="body">
+
+        <div class="artist">
+          ${system}
+        </div>
+
+        ${titleMarkup}
+
+        <div class="version">
+          ${productType}
+        </div>
+
+        <div class="tags">
+          <span class="tag">
+            ${source}
+          </span>
+
+          <span class="tag">
+            NO SCORE • SHOW EVERYTHING
+          </span>
+        </div>
+
+        <div class="moneyRow">
+          <div>
+            <div class="price">
+              ${number(d.price) > 0
+                ? `$${number(d.price).toFixed(2)}`
+                : "Browse"}
+            </div>
+
+            <div class="source">
+              ${availability}
+            </div>
+          </div>
+        </div>
+
+        ${buyButton}
+
+      </div>
+
+    </article>
+  `
+}
+
 function populateSources(){
+  const sourceData =
+    view === "mini"
+      ? miniDeals
+      : view === "signals"
+        ? buySignals
+        : liveDeals
+
   const sources = [
     ...new Set(
-      liveDeals
+      sourceData
         .map(x => x.source)
         .filter(Boolean)
     )
@@ -975,9 +1145,12 @@ function populateSources(){
 }
 
 function filtered(){
-  let data = view === "signals"
-    ? [...buySignals]
-    : [...liveDeals]
+  let data =
+    view === "mini"
+      ? [...miniDeals]
+      : view === "signals"
+        ? [...buySignals]
+        : [...liveDeals]
 
   const search = $("search").value
     .trim()
@@ -1009,7 +1182,11 @@ function filtered(){
       return false
     }
 
-    if(quality && q !== quality){
+    if(
+      view !== "mini" &&
+      quality &&
+      q !== quality
+    ){
       return false
     }
 
@@ -1036,6 +1213,8 @@ function filtered(){
         d.raw_title,
         d.source,
         d.version,
+        d.mini_system,
+        d.product_type,
         ...(Array.isArray(d.signals) ? d.signals : [])
       ]
         .join(" ")
@@ -1104,7 +1283,13 @@ function render(){
   }
 
   $("grid").innerHTML =
-    data.map(card).join("")
+    data
+      .map(
+        view === "mini"
+          ? miniCard
+          : card
+      )
+      .join("")
 }
 
 function updateStats(){
@@ -1136,13 +1321,17 @@ function updateStats(){
 
 async function load(){
   try{
-    const [liveRes,buyRes] = await Promise.all([
+    const [liveRes,buyRes,miniRes] = await Promise.all([
       fetch(
         `live_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
       ),
       fetch(
         `buy_signals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `mini_vinyl_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
       )
     ])
@@ -1157,6 +1346,10 @@ async function load(){
 
     if(buyRes.ok){
       buySignals = await buyRes.json()
+    }
+
+    if(miniRes.ok){
+      miniDeals = await miniRes.json()
     }
 
     populateSources()
@@ -1206,6 +1399,8 @@ document.querySelectorAll(".tab").forEach(btn => {
 
     view = btn.dataset.view
 
+    $("source").value = ""
+    populateSources()
     render()
   })
 })
