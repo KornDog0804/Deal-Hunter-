@@ -1092,7 +1092,7 @@ function render(){
   const data = filtered()
 
   $("resultCount").textContent =
-    `${data.toLocaleString()} records shown`
+    `${data.length.toLocaleString()} records shown`
 
   if(!data.length){
     $("grid").innerHTML = `
