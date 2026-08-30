@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6432 entries
+[Discogs] Loaded cache with 6437 entries
 [Discogs] Enriching 2587 vinyl records with Mint pricing...
-[Discogs] Cache saved (6432 entries)
+[Discogs] Cache saved (6437 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285711 bytes
+[UpcomingVinyl] Got 285843 bytes
 [UpcomingVinyl] Found 314 raw record URLs
 [UpcomingVinyl] MATCH: Korn | The Nothing
 [UpcomingVinyl] MATCH: Michael Jackson | The Definitive Collection
@@ -504,7 +504,7 @@ MNRK Heavy: 144
 Newbury Comics: 209
 Pirates Press Records: 96
 Pure Noise Records: 89
-r/VinylReleases: 46
+r/VinylReleases: 45
 Revolver: 99
 Rhino: 87
 Rise Records: 88
