@@ -70266,5 +70266,65 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|f1 the album movie soundtrack hot topic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "scott weiland|october 23 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7082,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "carly pearce|honest woman": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.76,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Milly Tabak & The Miltones",
+    "discogs_title": "Honest Woman",
+    "discogs_release_id": 15789206,
+    "discogs_url": "https://www.discogs.com/release/15789206-Milly-Tabak-The-Miltones-Honest-Woman",
+    "discogs_mint_price": 17.26,
+    "discogs_lowest": 17.26,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 25,
+    "discogs_want": 0
+  },
+  "soul revivers|holding it down": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Soul Revivers Featuring Ash Walker",
+    "discogs_title": "Holding It Down",
+    "discogs_release_id": 31366435,
+    "discogs_url": "https://www.discogs.com/release/31366435-Soul-Revivers-Featuring-Ash-Walker-Holding-It-Down",
+    "discogs_mint_price": 19.98,
+    "discogs_lowest": 19.98,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 39,
+    "discogs_want": 14
+  },
+  "hans zimmer|bad world": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7903,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "A.C. DJ* & Bike DJ*",
+    "discogs_title": "Bad World",
+    "discogs_release_id": 120219,
+    "discogs_url": "https://www.discogs.com/release/120219-AC-DJ-Bike-DJ-Bad-World",
+    "discogs_mint_price": 24.34,
+    "discogs_lowest": 24.34,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 415,
+    "discogs_want": 208
   }
 }
