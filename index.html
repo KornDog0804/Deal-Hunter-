@@ -2018,8 +2018,12 @@ async function load(){
     }
 
     if(collectibleRes.ok){
-      collectibleDeals =
-        await collectibleRes.json()
+      collectibleDeals = await collectibleRes.json()
+
+      // FILTER SOLD OUT COLLECTIBLES
+      collectibleDeals = collectibleDeals.filter(
+        item => !item.sold_out
+      )
     }
 
     populateSources()
