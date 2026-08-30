@@ -70326,5 +70326,69 @@
     "discogs_num_for_sale": 2,
     "discogs_have": 415,
     "discogs_want": 208
+  },
+  "demi lovato|frequency 7": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Demi Lovato",
+    "discogs_title": "Frequency",
+    "discogs_release_id": 37104504,
+    "discogs_url": "https://www.discogs.com/release/37104504-Demi-Lovato-Frequency",
+    "discogs_mint_price": 11.99,
+    "discogs_lowest": 11.99,
+    "discogs_num_for_sale": 40,
+    "discogs_have": 614,
+    "discogs_want": 42
+  },
+  "wavves x say antyyhing|cherry soda milky white and orange 12 variant w signed print": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|poison greatest hits walmart vital": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|debbie gibson winterlicious d luxe": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sabrina carpenter|short n sweet 2 year anniversary pressing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sarah kinsley|september": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.82,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Earth, Wind & Fire",
+    "discogs_title": "September",
+    "discogs_release_id": 299308,
+    "discogs_url": "https://www.discogs.com/release/299308-Earth-Wind-Fire-September",
+    "discogs_mint_price": 3.2,
+    "discogs_lowest": 3.2,
+    "discogs_num_for_sale": 66,
+    "discogs_have": 2004,
+    "discogs_want": 449
   }
 }
