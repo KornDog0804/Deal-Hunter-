@@ -70390,5 +70390,79 @@
     "discogs_num_for_sale": 66,
     "discogs_have": 2004,
     "discogs_want": 449
+  },
+  "the beatles|let it be picture disc": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Beatles",
+    "discogs_title": "Let It Be",
+    "discogs_release_id": 20596561,
+    "discogs_url": "https://www.discogs.com/release/20596561-The-Beatles-Let-It-Be",
+    "discogs_mint_price": 22.99,
+    "discogs_lowest": 22.99,
+    "discogs_num_for_sale": 64,
+    "discogs_have": 2401,
+    "discogs_want": 401
+  },
+  "the beatles|sgt pepper s lonely hearts club band 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Beatles",
+    "discogs_title": "Sgt. Pepper's Lonely Hearts Club Band",
+    "discogs_release_id": 9269315,
+    "discogs_url": "https://www.discogs.com/release/9269315-The-Beatles-Sgt-Peppers-Lonely-Hearts-Club-Band",
+    "discogs_mint_price": 34.7,
+    "discogs_lowest": 34.7,
+    "discogs_num_for_sale": 20,
+    "discogs_have": 10998,
+    "discogs_want": 2082
+  },
+  "the beatles|a hard day s night 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Beatles",
+    "discogs_title": "A Hard Day's Night",
+    "discogs_release_id": 4036879,
+    "discogs_url": "https://www.discogs.com/release/4036879-The-Beatles-A-Hard-Days-Night",
+    "discogs_mint_price": 18.26,
+    "discogs_lowest": 18.26,
+    "discogs_num_for_sale": 149,
+    "discogs_have": 7913,
+    "discogs_want": 883
+  },
+  "home brew|last week": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Home-Brew*",
+    "discogs_title": "Last Week",
+    "discogs_release_id": 37497450,
+    "discogs_url": "https://www.discogs.com/release/37497450-Home-Brew-Last-Week",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 16,
+    "discogs_want": 26
+  },
+  "unknown artist|vv rks rainbow kitten surprise": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "canelle|cinna baby blue signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
