@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 138
+uDiscover Music: kept 139
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 86
+Rise Records: kept 85
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,14 +63,14 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 86
+Rise All: kept 85
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 177
+Brooklyn Vegan: kept 179
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -108,7 +108,7 @@ Scraping: MNRK Heavy (shopify_store)
 ==================================================
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 145
+MNRK Heavy: kept 142
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 134
+Interscope Records: kept 132
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -222,7 +222,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 96
+Pirates Press Records: kept 97
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -343,8 +343,8 @@ Hot Topic: kept 16
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2554 normalized vinyl listings
+[Stage2] 2552 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6474 entries
-[Discogs] Enriching 2554 vinyl records with Mint pricing...
-[Discogs] Cache saved (6474 entries)
+[Discogs] Loaded cache with 6506 entries
+[Discogs] Enriching 2552 vinyl records with Mint pricing...
+[Discogs] Cache saved (6506 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 381276 bytes
+[UpcomingVinyl] Got 381144 bytes
 [UpcomingVinyl] Found 424 raw record URLs
 [UpcomingVinyl] MATCH: Earth, Wind & Fire | Spirit
 [UpcomingVinyl] MATCH: Evanescence | Sanctuary
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The All-American Rejects | Move Along White
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 145 qualified signals saved
+[BuySignals] 147 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -457,20 +457,20 @@ SOURCE STATUS SUMMARY
   Rollin Records: 242 deals
   Rollin Preorders: 242 deals
   Sound of Vinyl: 239 deals
-  uDiscover Music: 138 deals
+  uDiscover Music: 139 deals
   Fearless Records: 88 deals
   Fearless Vinyl: 88 deals
-  Rise Records: 86 deals
-  Rise All: 86 deals
-  Brooklyn Vegan: 177 deals
+  Rise Records: 85 deals
+  Rise All: 85 deals
+  Brooklyn Vegan: 179 deals
   Revolver: 55 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
   Craft Recordings: 96 deals
-  MNRK Heavy: 145 deals
+  MNRK Heavy: 142 deals
   Equal Vision: 107 deals
   Rhino: 87 deals
-  Interscope Records: 134 deals
+  Interscope Records: 132 deals
   SharpTone Records: 103 deals
   Rock Metal Fan Nation: 158 deals
   RMFN All: 158 deals
@@ -480,7 +480,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 89 deals
   Hopeless Records: 67 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 96 deals
+  Pirates Press Records: 97 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 87 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -497,21 +497,21 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 177
+Brooklyn Vegan: 179
 Craft Recordings: 96
 Equal Vision: 107
 Fearless Records: 88
 Hopeless Records: 67
 Hot Topic: 16
-Interscope Records: 134
-MNRK Heavy: 145
+Interscope Records: 132
+MNRK Heavy: 142
 Newbury Comics: 209
-Pirates Press Records: 96
+Pirates Press Records: 97
 Pure Noise Records: 89
-r/VinylReleases: 46
+r/VinylReleases: 44
 Revolver: 55
 Rhino: 87
-Rise Records: 86
+Rise Records: 85
 Rock Metal Fan Nation: 158
 Rollin Records: 242
 SharpTone Records: 103
@@ -520,5 +520,5 @@ Sound of Vinyl: 239
 Spinefarm Records: 87
 Sumerian Records: 74
 Target: 1
-uDiscover Music: 138
+uDiscover Music: 139
 Walmart: 1
