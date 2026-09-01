@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 85
+Rise Records: kept 86
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,21 +63,21 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 85
+Rise All: kept 86
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 179
+Brooklyn Vegan: kept 180
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 55
+Revolver: kept 56
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -101,7 +101,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 96
+Craft Recordings: kept 97
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -120,8 +120,8 @@ Equal Vision: kept 107
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 181 products
-Rhino: 181 products via Shopify JSON
+  ✓ https://store.rhino.com/products.json?limit=250 -> 183 products
+Rhino: 183 products via Shopify JSON
 Rhino: kept 87
 
 ==================================================
@@ -165,9 +165,9 @@ Sumerian Records: kept 75
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 166 products
-Solid State Records: 166 products via Shopify JSON
-Solid State Records: kept 58
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 163 products
+Solid State Records: 163 products via Shopify JSON
+Solid State Records: kept 55
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 166 products
-Solid State Vinyl: 166 products via Shopify JSON
-Solid State Vinyl: kept 58
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 163 products
+Solid State Vinyl: 163 products via Shopify JSON
+Solid State Vinyl: kept 55
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -344,7 +344,7 @@ Hot Topic: kept 16
 Scraping: Deep Discount (html_store)
 ==================================================
   -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2552 normalized vinyl listings
+[Stage2] 2553 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 6506 entries
-[Discogs] Enriching 2552 vinyl records with Mint pricing...
+[Discogs] Enriching 2553 vinyl records with Mint pricing...
 [Discogs] Cache saved (6506 entries)
 [Discogs] Enrichment complete!
 
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 381144 bytes
+[UpcomingVinyl] Got 381750 bytes
 [UpcomingVinyl] Found 424 raw record URLs
 [UpcomingVinyl] MATCH: Earth, Wind & Fire | Spirit
 [UpcomingVinyl] MATCH: Evanescence | Sanctuary
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The All-American Rejects | Move Along White
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 147 qualified signals saved
+[BuySignals] 152 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -460,13 +460,13 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 139 deals
   Fearless Records: 88 deals
   Fearless Vinyl: 88 deals
-  Rise Records: 85 deals
-  Rise All: 85 deals
-  Brooklyn Vegan: 179 deals
-  Revolver: 55 deals
+  Rise Records: 86 deals
+  Rise All: 86 deals
+  Brooklyn Vegan: 180 deals
+  Revolver: 56 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
-  Craft Recordings: 96 deals
+  Craft Recordings: 97 deals
   MNRK Heavy: 142 deals
   Equal Vision: 107 deals
   Rhino: 87 deals
@@ -475,8 +475,8 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 158 deals
   RMFN All: 158 deals
   Sumerian Records: 75 deals
-  Solid State Records: 58 deals
-  Solid State Vinyl: 58 deals
+  Solid State Records: 55 deals
+  Solid State Vinyl: 55 deals
   Pure Noise Records: 89 deals
   Hopeless Records: 67 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -497,8 +497,8 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 179
-Craft Recordings: 96
+Brooklyn Vegan: 180
+Craft Recordings: 97
 Equal Vision: 107
 Fearless Records: 88
 Hopeless Records: 67
@@ -508,14 +508,14 @@ MNRK Heavy: 142
 Newbury Comics: 209
 Pirates Press Records: 97
 Pure Noise Records: 89
-r/VinylReleases: 44
-Revolver: 55
+r/VinylReleases: 43
+Revolver: 56
 Rhino: 87
-Rise Records: 85
+Rise Records: 86
 Rock Metal Fan Nation: 158
 Rollin Records: 242
 SharpTone Records: 103
-Solid State Records: 58
+Solid State Records: 55
 Sound of Vinyl: 239
 Spinefarm Records: 87
 Sumerian Records: 74
