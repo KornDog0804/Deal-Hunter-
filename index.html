@@ -827,6 +827,10 @@ h1{
   🧸 COLLECTIBLES
 </button>
 
+<button class="tab" data-view="olivia">
+  🎄 OLIVIA
+</button>
+
 </div>
 
 
@@ -853,6 +857,7 @@ let liveDeals = []
 let buySignals = []
 let miniDeals = []
 let collectibleDeals = []
+let oliviaDeals = []
 let view = "all"
 
 let currentPage = 1
@@ -1291,6 +1296,8 @@ function populateSources(){
     data = miniDeals
   }else if(view === "collectibles"){
     data = collectibleDeals
+  }else if(view === "olivia"){
+    data = oliviaDeals
   }else if(view === "signals"){
     data = buySignals
   }else{
@@ -1552,15 +1559,241 @@ function collectibleCard(d){
 }
 
 
+function oliviaCard(d){
+  const url = safeUrl(d.link || "")
+  const image = safeUrl(d.image || "")
+
+  const price = number(d.price)
+  const oldPrice = number(
+    d.compare_at ??
+    d.compare_at_price ??
+    0
+  )
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Olivia Find"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown retailer"
+  )
+
+  const type = esc(
+    d.product_type ||
+    d.category ||
+    "COLLECTIBLE"
+  )
+
+  const franchise = esc(
+    d.franchise ||
+    ""
+  )
+
+  const tags = Array.isArray(
+    d.olivia_tags
+  )
+    ? d.olivia_tags
+    : []
+
+  const badges = [
+    "🎄 OLIVIA HIT"
+  ]
+
+  if(type === "VINYL"){
+    badges.push("💿 VINYL")
+  }
+
+  if(
+    tags.includes("DELTARUNE") ||
+    tags.includes("UNDERTALE") ||
+    tags.includes("POKEMON") ||
+    tags.includes("FIVE NIGHTS AT FREDDY'S")
+  ){
+    badges.push("🎮 GAMING")
+  }
+
+  if(tags.includes("HATSUNE MIKU")){
+    badges.push("🩵 MIKU / VOCALOID")
+  }
+
+  if(tags.includes("THE LIVING TOMBSTONE")){
+    badges.push("🪦 LIVING TOMBSTONE")
+  }
+
+  if(tags.includes("MITSKI")){
+    badges.push("🎵 MITSKI")
+  }
+
+  if(d.amazing_deal){
+    badges.push("🚨 AMAZING")
+  }else if(d.deal){
+    badges.push("🔥 DEAL")
+  }
+
+  if(d.clearance){
+    badges.push("🔥 CLEARANCE")
+  }else if(d.sale){
+    badges.push("🏷️ SALE")
+  }
+
+  if(d.chase){
+    badges.push("🎯 CHASE")
+  }
+
+  if(d.exclusive){
+    badges.push("✨ EXCLUSIVE")
+  }
+
+  if(d.preorder){
+    badges.push("⏳ PREORDER")
+  }
+
+  const badgeHtml = `
+    <div class="collectible-badges">
+      ${badges.map(
+        badge => `
+          <span class="collectible-badge">
+            ${esc(badge)}
+          </span>
+        `
+      ).join("")}
+    </div>
+  `
+
+  const art = image
+    ? `
+      <img
+        src="${esc(image)}"
+        alt="${title}"
+        loading="lazy"
+      >
+    `
+    : `
+      <div class="fallback-art">
+        🎄🎁
+      </div>
+    `
+
+  const artHtml = url
+    ? `
+      <a
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${art}
+      </a>
+    `
+    : art
+
+  let priceHtml = "<strong>Browse</strong>"
+
+  if(price > 0){
+    priceHtml = `
+      <strong>$${price.toFixed(2)}</strong>
+      ${
+        oldPrice > price
+          ? `
+            <span class="collectible-price-old">
+              $${oldPrice.toFixed(2)}
+            </span>
+          `
+          : ""
+      }
+    `
+  }
+
+  const availability = esc(
+    d.availability_text ||
+    "Available"
+  )
+
+  return `
+    <article class="card">
+
+      <div class="art">
+        ${artHtml}
+      </div>
+
+      <div class="card-body">
+
+        <div class="eyebrow">
+          🎄 ${type}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="title-link"
+              >
+                <h3>${title}</h3>
+              </a>
+            `
+            : `<h3>${title}</h3>`
+        }
+
+        ${badgeHtml}
+
+        <div class="meta">
+
+          <span>${source}</span>
+
+          ${
+            franchise
+              ? `<span>${franchise}</span>`
+              : ""
+          }
+
+        </div>
+
+        <div class="price">
+          ${priceHtml}
+        </div>
+
+        <div class="availability">
+          ${availability}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                class="buy"
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW / BUY AT ${source.toUpperCase()}
+              </a>
+            `
+            : ""
+        }
+
+      </div>
+
+    </article>
+  `
+}
+
+
 function filtered(){
   let data =
     view === "mini"
       ? [...miniDeals]
       : view === "collectibles"
         ? [...collectibleDeals]
-        : view === "signals"
-          ? [...buySignals]
-          : [...liveDeals]
+        : view === "olivia"
+          ? [...oliviaDeals]
+          : view === "signals"
+            ? [...buySignals]
+            : [...liveDeals]
 
   const search = $("search").value
     .trim()
@@ -1595,6 +1828,7 @@ function filtered(){
     if(
       view !== "mini" &&
       view !== "collectibles" &&
+      view !== "olivia" &&
       quality &&
       q !== quality
     ){
@@ -1630,6 +1864,8 @@ function filtered(){
         d.franchise,
         d.character,
         d.availability_text,
+        d.olivia_hit ? "olivia christmas gift" : "",
+        ...(Array.isArray(d.olivia_tags) ? d.olivia_tags : []),
         d.exclusive ? "exclusive" : "",
         d.chase ? "chase" : "",
         d.preorder ? "preorder pre-order" : "",
@@ -1916,7 +2152,9 @@ function render(){
           ? "mini collectibles"
           : view === "collectibles"
             ? "collectibles"
-            : "records"
+            : view === "olivia"
+              ? "Olivia finds"
+              : "records"
       }`
   }else{
     $("resultCount").textContent =
@@ -1947,7 +2185,9 @@ function render(){
           ? miniCard
           : view === "collectibles"
             ? collectibleCard
-            : card
+            : view === "olivia"
+              ? oliviaCard
+              : card
       )
       .join("")
 }
@@ -1982,7 +2222,7 @@ function updateStats(){
 
 async function load(){
   try{
-    const [liveRes,buyRes,miniRes,collectibleRes] = await Promise.all([
+    const [liveRes,buyRes,miniRes,collectibleRes,oliviaRes] = await Promise.all([
       fetch(
         `live_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
@@ -1997,6 +2237,10 @@ async function load(){
       ),
       fetch(
         `collectibles_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `olivia_deals.json?t=${Date.now()}`,
         {cache:"no-store"}
       )
     ])
@@ -2022,6 +2266,15 @@ async function load(){
 
       // FILTER SOLD OUT COLLECTIBLES
       collectibleDeals = collectibleDeals.filter(
+        item => !item.sold_out
+      )
+    }
+
+    if(oliviaRes.ok){
+      oliviaDeals = await oliviaRes.json()
+
+      // OLIVIA LANE ONLY SURFACES CURRENTLY AVAILABLE ITEMS
+      oliviaDeals = oliviaDeals.filter(
         item => !item.sold_out
       )
     }
