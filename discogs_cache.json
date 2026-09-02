@@ -71062,5 +71062,287 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "frank sinatra|sinatra at the sands 60th anniversary 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kublai khan|nomad ultra and oxblood": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|do or die picture this 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3979,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "think indie|sleep sleep s holy mountain": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|scott weiland scott weiland live": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7385,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|jimi hendrix magic boy the jimi hendrix experience live at berkeley 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "secretly distro|yeah yeah yeahs hidden in pieces live 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|doro fear no evil 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "joe henderson quintet|at the lighthouse if you re not part of the solution you re part of the problem": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Joe Henderson Quintet",
+    "discogs_title": "At The Lighthouse \"If You're Not Part Of The Solution, You're Part Of The Problem\"",
+    "discogs_release_id": 22463683,
+    "discogs_url": "https://www.discogs.com/release/22463683-Joe-Henderson-Quintet-At-The-Lighthouse-If-Youre-Not-Part-Of-The-Solution-Youre-Part-Of-The-Problem",
+    "discogs_mint_price": 136.29,
+    "discogs_lowest": 136.29,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 137,
+    "discogs_want": 263
+  },
+  "darkest hour|suffer divine after the flames": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the who|by numbers": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Who",
+    "discogs_title": "By Numbers",
+    "discogs_release_id": 35552647,
+    "discogs_url": "https://www.discogs.com/release/35552647-The-Who-By-Numbers",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 1,
+    "discogs_want": 2
+  },
+  "power pill fist|kongmanivong": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Power Pill Fist",
+    "discogs_title": "Kongmanivong",
+    "discogs_release_id": 37864674,
+    "discogs_url": "https://www.discogs.com/release/37864674-Power-Pill-Fist-Kongmanivong",
+    "discogs_mint_price": 25.0,
+    "discogs_lowest": 25.0,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 25,
+    "discogs_want": 1
+  },
+  "the warning|everything s falling autographed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "trippie redd|nda record": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5817,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "johnny blue skies and the dark clouds|zoetrope": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8014,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "King Of The Mountains",
+    "discogs_title": "Zoetrope",
+    "discogs_release_id": 5594267,
+    "discogs_url": "https://www.discogs.com/release/5594267-King-Of-The-Mountains-Zoetrope",
+    "discogs_mint_price": 5.99,
+    "discogs_lowest": 5.99,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 57,
+    "discogs_want": 16
+  },
+  "miley cyrus|bass persuades au link": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "let your hair down|s t": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8222,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Electric President",
+    "discogs_title": "S/T",
+    "discogs_release_id": 713845,
+    "discogs_url": "https://www.discogs.com/release/713845-Electric-President-ST",
+    "discogs_mint_price": 135.14,
+    "discogs_lowest": 135.14,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 333,
+    "discogs_want": 339
+  },
+  "aaron frazer|paint the picture back into the world 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2329,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "miley|bass persuades": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|miley cyrus bass persuades": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chillhop essentials fall 2026|125 copies": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3459,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "miley cyrus|bass persuades": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "john carpenter|lost themes ii 10th anniversary expanded edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the hotelier goodness 10th anniversary edition 2x 200 500 left": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "yeah yeah yeahs|bullseye": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7985,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Charli Adams",
+    "discogs_title": "Bullseye",
+    "discogs_release_id": 19667344,
+    "discogs_url": "https://www.discogs.com/release/19667344-Charli-Adams-Bullseye",
+    "discogs_mint_price": 23.74,
+    "discogs_lowest": 23.74,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 160,
+    "discogs_want": 34
+  },
+  "brian setzer orchestra|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|wasia project nocturne oddwax": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "fil eisler|outer banks seasons 1 4": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1886,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
