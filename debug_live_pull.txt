@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 142
+uDiscover Music: kept 146
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -70,14 +70,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 183
+Brooklyn Vegan: kept 182
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 61
+Revolver: kept 63
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -101,7 +101,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 97
+Craft Recordings: kept 95
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -115,7 +115,7 @@ Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 107
+Equal Vision: kept 105
 
 ==================================================
 Scraping: Rhino (shopify_store)
@@ -338,13 +338,13 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 16
+Hot Topic: kept 15
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
   -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -432,13 +432,13 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 50 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 381276 bytes
-[UpcomingVinyl] Found 424 raw record URLs
+[UpcomingVinyl] Got 386145 bytes
+[UpcomingVinyl] Found 430 raw record URLs
 [UpcomingVinyl] MATCH: Earth, Wind & Fire | Spirit
 [UpcomingVinyl] MATCH: Evanescence | Sanctuary
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
@@ -457,18 +457,18 @@ SOURCE STATUS SUMMARY
   Rollin Records: 242 deals
   Rollin Preorders: 242 deals
   Sound of Vinyl: 239 deals
-  uDiscover Music: 142 deals
+  uDiscover Music: 146 deals
   Fearless Records: 88 deals
   Fearless Vinyl: 88 deals
   Rise Records: 86 deals
   Rise All: 86 deals
-  Brooklyn Vegan: 183 deals
-  Revolver: 61 deals
+  Brooklyn Vegan: 182 deals
+  Revolver: 63 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
-  Craft Recordings: 97 deals
+  Craft Recordings: 95 deals
   MNRK Heavy: 141 deals
-  Equal Vision: 107 deals
+  Equal Vision: 105 deals
   Rhino: 87 deals
   Interscope Records: 134 deals
   SharpTone Records: 103 deals
@@ -487,7 +487,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 16 deals
+  Hot Topic: 15 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -497,19 +497,19 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 183
-Craft Recordings: 97
-Equal Vision: 107
+Brooklyn Vegan: 182
+Craft Recordings: 95
+Equal Vision: 105
 Fearless Records: 88
 Hopeless Records: 67
-Hot Topic: 16
+Hot Topic: 15
 Interscope Records: 134
 MNRK Heavy: 141
 Newbury Comics: 209
 Pirates Press Records: 97
 Pure Noise Records: 89
-r/VinylReleases: 46
-Revolver: 61
+r/VinylReleases: 50
+Revolver: 63
 Rhino: 87
 Rise Records: 86
 Rock Metal Fan Nation: 158
@@ -520,5 +520,5 @@ Sound of Vinyl: 239
 Spinefarm Records: 87
 Sumerian Records: 74
 Target: 1
-uDiscover Music: 142
+uDiscover Music: 146
 Walmart: 1
