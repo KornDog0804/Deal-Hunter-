@@ -7,6 +7,7 @@ import re
 import unicodedata
 import urllib.request
 import urllib.parse
+import urllib.error
 
 BASE = Path(__file__).resolve().parent
 
@@ -59,6 +60,23 @@ INTERESTS = {
         "five nights at freddy's",
         "fnaf",
         "freddy fazbear",
+    ],
+    "MONSTER HIGH": [
+        "monster high",
+        "draculaura",
+        "frankie stein",
+        "clawdeen wolf",
+        "cleo de nile",
+        "lagoona blue",
+        "spectra vondergeist",
+        "skullector",
+    ],
+    "KPOP DEMON HUNTERS": [
+        "kpop demon hunters",
+        "k-pop demon hunters",
+        "huntr/x",
+        "huntrx",
+        "saja boys",
     ],
 }
 
@@ -183,6 +201,50 @@ def product_type_for(text, fallback="COLLECTIBLE"):
     if has("coaster") or has("coasters"):
         return "ACCESSORY"
 
+    if (
+        has("doll")
+        or has("dolls")
+        or has("fashion doll")
+        or has("collector doll")
+    ):
+        return "DOLL"
+
+    if (
+        has("blind box")
+        or has("blind bag")
+        or has("mystery box")
+        or has("mystery bag")
+        or has("mystery figure")
+    ):
+        return "BLIND BOX"
+
+    if (
+        has("backpack")
+        or has("purse")
+        or has("tote")
+        or has("tote bag")
+        or has("crossbody")
+        or has("wallet")
+        or has("bag")
+    ):
+        return "BAG"
+
+    if (
+        has("desk mat")
+        or has("deskmat")
+        or has("mouse pad")
+        or has("mousepad")
+    ):
+        return "DESK MAT"
+
+    if (
+        has("water bottle")
+        or has("tumbler")
+        or has("cup")
+        or has("mug")
+    ):
+        return "DRINKWARE"
+
     if has("poster") or has("posters"):
         return "POSTER"
 
@@ -217,6 +279,35 @@ def product_type_for(text, fallback="COLLECTIBLE"):
 
     if has("magnet") or has("magnets"):
         return "MAGNET"
+
+    if (
+        has("slipper")
+        or has("slippers")
+        or has("shoe")
+        or has("shoes")
+        or has("sneaker")
+        or has("sneakers")
+        or has("boot")
+        or has("boots")
+    ):
+        return "FOOTWEAR"
+
+    if (
+        has("blanket")
+        or has("throw blanket")
+        or has("pillow")
+        or has("pillowcase")
+    ):
+        return "ROOM DECOR"
+
+    if (
+        has("lamp")
+        or has("light")
+        or has("night light")
+        or has("neon sign")
+        or has("wall art")
+    ):
+        return "ROOM DECOR"
 
     if (
         has("shirt")
@@ -269,7 +360,29 @@ def product_type_for(text, fallback="COLLECTIBLE"):
         "POSTERS": "POSTER",
         "LAPEL PINS": "PIN",
         "MUSIC": "MUSIC",
-        "HOME & OFFICE": "HOME & OFFICE",
+        "PRINTFUL": "APPAREL",
+        "APLIIQ": "APPAREL",
+        "BAGS": "BAG",
+        "ACCESSORIES": "ACCESSORY",
+        "NENDOROID": "FIGURE",
+        "MODEL KIT": "FIGURE",
+        "OTHER MERCHANDISE": "COLLECTIBLE",
+        "DIGITAL MEMBERSHIP": "DIGITAL GIFT",
+        "HOME & OFFICE": "ROOM DECOR",
+
+        # Retailer taxonomy is not always a useful product type.
+        "FNAF": "COLLECTIBLE",
+        "FNAF MOVIE": "COLLECTIBLE",
+        "ORIGINAL": "COLLECTIBLE",
+        "AVATAR: THE LAST AIRBENDER": "COLLECTIBLE",
+        "ADVENTURE TIME": "COLLECTIBLE",
+        "SPONGEBOB SQUAREPANTS": "COLLECTIBLE",
+        "HATSUNE MIKU": "COLLECTIBLE",
+        "MONSTER HIGH": "COLLECTIBLE",
+        "UNDERTALE": "COLLECTIBLE",
+        "DELTARUNE": "COLLECTIBLE",
+        "POKEMON": "COLLECTIBLE",
+        "POKÉMON": "COLLECTIBLE",
     }
 
     cleaned_fallback = clean(fallback or "COLLECTIBLE").upper()
@@ -408,6 +521,137 @@ def normalize_existing(row, origin):
     }
 
 
+
+def verify_shopify_product(row):
+    """
+    Recheck a Shopify /products/<handle> URL against its live .js
+    endpoint.
+
+    Returns:
+      True  = currently has an available variant
+      False = confirmed unavailable / removed
+      None  = not a Shopify-style product URL or could not verify
+    """
+
+    link = str(
+        row.get("link", "")
+        or ""
+    ).strip()
+
+    if not link:
+        return None
+
+    try:
+        parsed = urllib.parse.urlparse(link)
+    except Exception:
+        return None
+
+    parts = [
+        part
+        for part in parsed.path.split("/")
+        if part
+    ]
+
+    if "products" not in parts:
+        return None
+
+    try:
+        index = parts.index("products")
+        handle = parts[index + 1]
+    except Exception:
+        return None
+
+    if not handle:
+        return None
+
+    safe_handle = urllib.parse.quote(
+        handle,
+        safe="-_~",
+    )
+
+    live_url = (
+        f"{parsed.scheme}://{parsed.netloc}"
+        f"/products/{safe_handle}.js"
+    )
+
+    try:
+        product = fetch_json(live_url)
+
+        variants = (
+            product.get("variants", [])
+            or []
+        )
+
+        if not variants:
+            return False
+
+        return any(
+            bool(v.get("available", False))
+            for v in variants
+        )
+
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return False
+
+        print(
+            "  availability check failed:",
+            live_url,
+            "| HTTP",
+            exc.code,
+        )
+
+        return None
+
+    except Exception as exc:
+        print(
+            "  availability check failed:",
+            live_url,
+            "|",
+            exc,
+        )
+
+        return None
+
+
+def keep_existing_row(row, origin):
+    """
+    Apply strict availability rules to inherited Deal Hunter rows.
+    """
+
+    if row.get("sold_out"):
+        return False
+
+    verified = verify_shopify_product(row)
+
+    if verified is False:
+        print(
+            "  ❌ LIVE SOLD OUT:",
+            row.get("source"),
+            "|",
+            row.get("title")
+            or row.get("raw_title"),
+        )
+        return False
+
+    # Shopify product URLs are live-verified when possible.
+    if verified is True:
+        return True
+
+    # Existing collectibles already carry inventory state from
+    # their own generator. Keep those unless explicitly sold out.
+    if origin == "collectibles_deals":
+        return True
+
+    # Mini Vinyl contains direct product/catalog data.
+    if origin == "mini_vinyl_deals":
+        return True
+
+    # Non-Shopify vinyl currently has no universal inventory API.
+    # Keep it for now unless its own dataset says sold out.
+    return True
+
+
 def shopify_products(url):
     try:
         data = fetch_json(url)
@@ -418,6 +662,363 @@ def shopify_products(url):
             f"{url} | {exc}"
         )
         return []
+
+
+
+def shopify_collection_rows(
+    source,
+    base_url,
+    endpoints,
+    forced_interest=None,
+):
+    """
+    Generic available-only Shopify collection harvester.
+    """
+
+    print(
+        f"\n===== {source.upper()} ====="
+    )
+
+    products_by_handle = {}
+
+    for endpoint in endpoints:
+
+        # Shopify collection JSON is capped per page.
+        # Walk pages until a page returns fewer than 250.
+        page = 1
+
+        while True:
+
+            separator = (
+                "&"
+                if "?" in endpoint
+                else "?"
+            )
+
+            page_endpoint = (
+                endpoint
+                + separator
+                + f"page={page}"
+            )
+
+            url = (
+                base_url.rstrip("/")
+                + "/"
+                + page_endpoint.lstrip("/")
+            )
+
+            chunk = shopify_products(url)
+
+            print(
+                f"  {url} -> "
+                f"{len(chunk)} products"
+            )
+
+            if not chunk:
+                break
+
+            for product in chunk:
+                handle = str(
+                    product.get("handle", "")
+                    or ""
+                )
+
+                if handle:
+                    products_by_handle[
+                        handle
+                    ] = product
+
+            if len(chunk) < 250:
+                break
+
+            page += 1
+
+            # Safety valve against a broken endpoint looping forever.
+            if page > 20:
+                print(
+                    "  ⚠️ Shopify pagination safety stop"
+                )
+                break
+
+    rows = []
+
+    for handle, product in products_by_handle.items():
+
+        title = clean(
+            product.get("title", "")
+        )
+
+        if not title:
+            continue
+
+        body = clean(
+            product.get("body_html", "")
+        )
+
+        tags = product.get(
+            "tags",
+            [],
+        )
+
+        if isinstance(tags, list):
+            tags = " ".join(
+                str(x)
+                for x in tags
+            )
+
+        product_type = clean(
+            product.get(
+                "product_type",
+                "",
+            )
+        )
+
+        blob = " ".join([
+            title,
+            body,
+            str(tags),
+            product_type,
+        ])
+
+        hits = (
+            [forced_interest]
+            if forced_interest
+            else matches(blob)
+        )
+
+        if not hits:
+            continue
+
+        variants = (
+            product.get("variants", [])
+            or []
+        )
+
+        available_variants = [
+            variant
+            for variant in variants
+            if variant.get(
+                "available",
+                False,
+            )
+        ]
+
+        if not available_variants:
+            continue
+
+        # Prefer the cheapest currently available variant.
+        available_variants.sort(
+            key=lambda variant: (
+                price(
+                    variant.get(
+                        "price",
+                        0,
+                    )
+                )
+                or 999999
+            )
+        )
+
+        variant = available_variants[0]
+
+        current_price = price(
+            variant.get(
+                "price",
+                0,
+            )
+        )
+
+        compare_at = price(
+            variant.get(
+                "compare_at_price",
+                0,
+            )
+        )
+
+        images = (
+            product.get("images", [])
+            or []
+        )
+
+        image = ""
+
+        if images:
+            image = str(
+                images[0].get("src", "")
+                or ""
+            )
+
+        low = normalized(blob)
+
+        ptype = product_type_for(
+            " ".join([
+                title,
+                product_type,
+            ]),
+            fallback=(
+                product_type.upper()
+                or "COLLECTIBLE"
+            ),
+        )
+
+        discount_pct = 0
+
+        if (
+            compare_at > current_price > 0
+        ):
+            discount_pct = round(
+                (
+                    (
+                        compare_at
+                        - current_price
+                    )
+                    / compare_at
+                )
+                * 100,
+                1,
+            )
+
+        deal = bool(
+            discount_pct >= 15
+        )
+
+        amazing = bool(
+            discount_pct >= 30
+        )
+
+        rows.append({
+            "category": "OLIVIA",
+            "title": title,
+            "raw_title": title,
+            "artist": "",
+            "source": source,
+            "source_type": "olivia_direct",
+            "product_type": ptype,
+            "franchise": hits[0],
+            "character": "",
+            "price": current_price,
+            "compare_at": compare_at,
+            "discount_pct": discount_pct,
+            "image": image,
+            "link": (
+                base_url.rstrip("/")
+                + "/products/"
+                + handle
+            ),
+            "availability_text": (
+                f"Available from {source}"
+            ),
+            "exclusive": (
+                "exclusive" in low
+            ),
+            "chase": (
+                "chase" in low
+            ),
+            "preorder": (
+                "preorder" in low
+                or "pre-order" in low
+                or "pre order" in low
+            ),
+            "sale": (
+                compare_at
+                > current_price
+                > 0
+            ),
+            "clearance": (
+                "clearance" in low
+            ),
+            "deal": deal,
+            "amazing_deal": amazing,
+            "sold_out": False,
+            "olivia_hit": True,
+            "olivia_tags": hits,
+            "origin_dataset": (
+                source.lower()
+                .replace(" ", "_")
+            ),
+        })
+
+    print(
+        f"{source} AVAILABLE HITS:",
+        len(rows),
+    )
+
+    return rows
+
+
+def good_smile_miku_rows():
+    return shopify_collection_rows(
+        source="Good Smile US",
+        base_url="https://www.goodsmileus.com",
+        endpoints=[
+            (
+                "collections/hatsune-miku/"
+                "products.json?limit=250"
+            ),
+            (
+                "collections/hatsune-miku-1/"
+                "products.json?limit=250"
+            ),
+        ],
+        forced_interest="HATSUNE MIKU",
+    )
+
+
+def mattel_monster_high_rows():
+    return shopify_collection_rows(
+        source="Mattel Creations",
+        base_url="https://creations.mattel.com",
+        endpoints=[
+            (
+                "collections/monster-high/"
+                "products.json?limit=250"
+            ),
+        ],
+        forced_interest="MONSTER HIGH",
+    )
+
+
+def mattel_kpop_rows():
+    return shopify_collection_rows(
+        source="Mattel Creations",
+        base_url="https://creations.mattel.com",
+        endpoints=[
+            (
+                "collections/kpop-demon-hunters/"
+                "products.json?limit=250"
+            ),
+        ],
+        forced_interest="KPOP DEMON HUNTERS",
+    )
+
+
+
+def youtooz_fnaf_rows():
+    return shopify_collection_rows(
+        source="Youtooz",
+        base_url="https://youtooz.com",
+        endpoints=[
+            (
+                "collections/fnaf/"
+                "products.json?limit=250"
+            ),
+        ],
+        forced_interest="FIVE NIGHTS AT FREDDY'S",
+    )
+
+
+def youtooz_miku_rows():
+    return shopify_collection_rows(
+        source="Youtooz",
+        base_url="https://youtooz.com",
+        endpoints=[
+            (
+                "collections/hatsune-miku/"
+                "products.json?limit=250"
+            ),
+        ],
+        forced_interest="HATSUNE MIKU",
+    )
 
 
 def fangamer_rows():
@@ -890,24 +1491,46 @@ def main():
     existing_hits = 0
 
     for item in live:
+
+        # First determine whether this product is even relevant
+        # to Olivia. Do not hammer thousands of unrelated URLs.
         row = normalize_existing(
             item,
             "live_deals",
         )
 
-        if row:
-            rows.append(row)
-            existing_hits += 1
+        if not row:
+            continue
+
+        # Only matched Olivia candidates receive a live
+        # availability check.
+        if not keep_existing_row(
+            row,
+            "live_deals",
+        ):
+            continue
+
+        rows.append(row)
+        existing_hits += 1
 
     for item in collectibles:
+
         row = normalize_existing(
             item,
             "collectibles_deals",
         )
 
-        if row:
-            rows.append(row)
-            existing_hits += 1
+        if not row:
+            continue
+
+        if not keep_existing_row(
+            row,
+            "collectibles_deals",
+        ):
+            continue
+
+        rows.append(row)
+        existing_hits += 1
 
     for item in minis:
         row = normalize_existing(
@@ -930,6 +1553,26 @@ def main():
 
     rows.extend(
         living_tombstone_rows()
+    )
+
+    rows.extend(
+        good_smile_miku_rows()
+    )
+
+    rows.extend(
+        mattel_monster_high_rows()
+    )
+
+    rows.extend(
+        mattel_kpop_rows()
+    )
+
+    rows.extend(
+        youtooz_fnaf_rows()
+    )
+
+    rows.extend(
+        youtooz_miku_rows()
     )
 
     rows = dedupe(rows)
@@ -968,9 +1611,70 @@ def main():
             ),
         )
 
+    # First establish quality/price ordering.
     rows.sort(
         key=sort_key
     )
+
+    # Then interleave fandoms so 100+ UNDERTALE products
+    # do not monopolize the first several pages.
+    buckets = {}
+
+    for row in rows:
+        franchise = clean(
+            row.get("franchise", "")
+            or "OTHER"
+        )
+
+        buckets.setdefault(
+            franchise,
+            [],
+        ).append(row)
+
+    preferred_order = [
+        "HATSUNE MIKU",
+        "MONSTER HIGH",
+        "FIVE NIGHTS AT FREDDY'S",
+        "POKEMON",
+        "KPOP DEMON HUNTERS",
+        "THE LIVING TOMBSTONE",
+        "MITSKI",
+        "DELTARUNE",
+        "UNDERTALE",
+    ]
+
+    bucket_order = [
+        key
+        for key in preferred_order
+        if key in buckets
+    ]
+
+    bucket_order.extend(
+        sorted(
+            key
+            for key in buckets
+            if key not in bucket_order
+        )
+    )
+
+    diversified = []
+
+    while any(
+        buckets.get(key)
+        for key in bucket_order
+    ):
+        for key in bucket_order:
+            bucket = buckets.get(
+                key,
+                [],
+            )
+
+            if bucket:
+                diversified.append(
+                    bucket.pop(0)
+                )
+
+    rows = diversified
 
     out = (
         BASE
