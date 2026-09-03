@@ -77,7 +77,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 68
+Revolver: kept 69
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -120,9 +120,9 @@ Equal Vision: kept 105
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 186 products
-Rhino: 186 products via Shopify JSON
-Rhino: kept 87
+  ✓ https://store.rhino.com/products.json?limit=250 -> 187 products
+Rhino: 187 products via Shopify JSON
+Rhino: kept 88
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 170
+Rock Metal Fan Nation: kept 176
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 170
+RMFN All: kept 176
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -165,8 +165,8 @@ Sumerian Records: kept 75
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 160 products
-Solid State Records: 160 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
+Solid State Records: 158 products via Shopify JSON
 Solid State Records: kept 52
 
 ==================================================
@@ -175,8 +175,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 160 products
-Solid State Vinyl: 160 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
+Solid State Vinyl: 158 products via Shopify JSON
 Solid State Vinyl: kept 52
 
 ==================================================
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2582 normalized vinyl listings
+[Stage2] 2590 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6534 entries
-[Discogs] Enriching 2582 vinyl records with Mint pricing...
-[Discogs] Cache saved (6534 entries)
+[Discogs] Loaded cache with 6599 entries
+[Discogs] Enriching 2590 vinyl records with Mint pricing...
+[Discogs] Cache saved (6599 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,7 +432,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 50 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -463,17 +463,17 @@ SOURCE STATUS SUMMARY
   Rise Records: 86 deals
   Rise All: 86 deals
   Brooklyn Vegan: 184 deals
-  Revolver: 68 deals
+  Revolver: 69 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
   Craft Recordings: 95 deals
   MNRK Heavy: 141 deals
   Equal Vision: 105 deals
-  Rhino: 87 deals
+  Rhino: 88 deals
   Interscope Records: 134 deals
   SharpTone Records: 103 deals
-  Rock Metal Fan Nation: 170 deals
-  RMFN All: 170 deals
+  Rock Metal Fan Nation: 176 deals
+  RMFN All: 176 deals
   Sumerian Records: 75 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
@@ -508,11 +508,11 @@ MNRK Heavy: 141
 Newbury Comics: 209
 Pirates Press Records: 97
 Pure Noise Records: 88
-r/VinylReleases: 50
-Revolver: 68
-Rhino: 87
+r/VinylReleases: 49
+Revolver: 69
+Rhino: 88
 Rise Records: 86
-Rock Metal Fan Nation: 170
+Rock Metal Fan Nation: 176
 Rollin Records: 242
 SharpTone Records: 103
 Solid State Records: 52
