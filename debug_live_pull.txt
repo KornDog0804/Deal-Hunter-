@@ -182,9 +182,9 @@ Solid State Vinyl: kept 52
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
-  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 250 products
-Pure Noise Records: 250 products via Shopify JSON
-Pure Noise Records: kept 90
+  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 242 products
+Pure Noise Records: 242 products via Shopify JSON
+Pure Noise Records: kept 87
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -343,7 +343,7 @@ Hot Topic: kept 16
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
   -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
 Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2602 normalized vinyl listings
+[Stage2] 2599 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 6733 entries
-[Discogs] Enriching 2602 vinyl records with Mint pricing...
+[Discogs] Enriching 2599 vinyl records with Mint pricing...
 [Discogs] Cache saved (6733 entries)
 [Discogs] Enrichment complete!
 
@@ -448,7 +448,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The All-American Rejects | Move Along White
 [UpcomingVinyl] Total Korndog matches: 7
 [UpcomingVinyl] 7 whitelist matches saved to upcoming_releases.json
-[BuySignals] 152 qualified signals saved
+[BuySignals] 153 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -476,7 +476,7 @@ SOURCE STATUS SUMMARY
   Sumerian Records: 79 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
-  Pure Noise Records: 90 deals
+  Pure Noise Records: 87 deals
   Hopeless Records: 68 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 96 deals
@@ -506,7 +506,7 @@ Interscope Records: 136
 MNRK Heavy: 139
 Newbury Comics: 209
 Pirates Press Records: 96
-Pure Noise Records: 90
+Pure Noise Records: 87
 r/VinylReleases: 45
 Revolver: 77
 Rhino: 85
