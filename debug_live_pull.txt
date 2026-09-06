@@ -343,8 +343,8 @@ Hot Topic: kept 16
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 334739 bytes
+[UpcomingVinyl] Got 335189 bytes
 [UpcomingVinyl] Found 369 raw record URLs
 [UpcomingVinyl] MATCH: Earth, Wind & Fire | Spirit
 [UpcomingVinyl] MATCH: Evanescence | Sanctuary
