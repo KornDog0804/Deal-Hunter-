@@ -73515,5 +73515,169 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "aec|scott weiland scott weiland live": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bad omens|bad omens": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bad Omens (2)",
+    "discogs_title": "Bad Omens",
+    "discogs_release_id": 36728044,
+    "discogs_url": "https://www.discogs.com/release/36728044-Bad-Omens-Bad-Omens",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 46,
+    "discogs_want": 16
+  },
+  "cecil taylor unit|live at the kimo theater albuquerque 1979 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nala sinephro|space 1 8": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Nala Sinephro",
+    "discogs_title": "Space 1.8",
+    "discogs_release_id": 20067715,
+    "discogs_url": "https://www.discogs.com/release/20067715-Nala-Sinephro-Space-18",
+    "discogs_mint_price": 29.75,
+    "discogs_lowest": 29.75,
+    "discogs_num_for_sale": 18,
+    "discogs_have": 4256,
+    "discogs_want": 2376
+  },
+  "unknown artist|stephen king s pet sematary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7213,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the matches|decomposer": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Matches",
+    "discogs_title": "Decomposer",
+    "discogs_release_id": 9108933,
+    "discogs_url": "https://www.discogs.com/release/9108933-The-Matches-Decomposer",
+    "discogs_mint_price": 595.0,
+    "discogs_lowest": 595.0,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 233,
+    "discogs_want": 367
+  },
+  "david gilmour|blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7139,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "gretta ray|au nz only": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.417,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tears for fears|blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7495,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|ladrones arriba la l": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|habibi funk 035 beirut city pop": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "natalie imbruglia|algorithm": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Natalie Imbruglia",
+    "discogs_title": "Algorithm",
+    "discogs_release_id": 38343990,
+    "discogs_url": "https://www.discogs.com/release/38343990-Natalie-Imbruglia-Algorithm",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 6,
+    "discogs_want": 0
+  },
+  "unknown artist|bad omens 10th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bad omens|self titled": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7456,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "westside cowboy|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|bad omens 10th anniversary sumerian usa": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
