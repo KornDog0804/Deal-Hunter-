@@ -73679,5 +73679,55 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|beabadoobee pylon hot topic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|ghosts jamie t blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dolly parton|the very best of dolly parton 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dolly Parton",
+    "discogs_title": "The Very Best Of Dolly Parton",
+    "discogs_release_id": 15530368,
+    "discogs_url": "https://www.discogs.com/release/15530368-Dolly-Parton-The-Very-Best-Of-Dolly-Parton",
+    "discogs_mint_price": 39.89,
+    "discogs_lowest": 39.89,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 1224,
+    "discogs_want": 195
+  },
+  "richard groove holmes|six million dollar man ace records 25 09 2026": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "fila brazillia|black market gardening standard black yellow ltd x250": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
