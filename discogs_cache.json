@@ -73729,5 +73729,73 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|sylvan esso ow angel of death purple variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ethan french|ideas of the day vol 1": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4425,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the darkness|red and yellow ltd ed 140g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2394,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "as cities burn|brain matters": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4698,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nothing but thieves|stray dogs": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.777,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Thomas Dybdahl",
+    "discogs_title": "Stray Dogs",
+    "discogs_release_id": 6997790,
+    "discogs_url": "https://www.discogs.com/release/6997790-Thomas-Dybdahl-Stray-Dogs",
+    "discogs_mint_price": 32.38,
+    "discogs_lowest": 32.38,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 303,
+    "discogs_want": 71
+  },
+  "lalo schifrin|september 30 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jamie t|blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7129,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
