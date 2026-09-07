@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6749 entries
+[Discogs] Loaded cache with 6754 entries
 [Discogs] Enriching 2599 vinyl records with Mint pricing...
-[Discogs] Cache saved (6749 entries)
+[Discogs] Cache saved (6754 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,17 +437,13 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 334715 bytes
-[UpcomingVinyl] Found 369 raw record URLs
-[UpcomingVinyl] MATCH: Earth, Wind & Fire | Spirit
-[UpcomingVinyl] MATCH: Evanescence | Sanctuary
-[UpcomingVinyl] MATCH: My Chemical Romance | The Black Parade
-[UpcomingVinyl] MATCH: Nirvana | Incesticide
-[UpcomingVinyl] MATCH: Sleeping With Sirens | Let S Cheers To This Eco Mi
-[UpcomingVinyl] MATCH: Sleeping With Sirens | With Ears To See And Eyes To Hear Eco Mi
-[UpcomingVinyl] MATCH: The All-American Rejects | Move Along White
-[UpcomingVinyl] Total Korndog matches: 7
-[UpcomingVinyl] 7 whitelist matches saved to upcoming_releases.json
+[UpcomingVinyl] Got 301721 bytes
+[UpcomingVinyl] Found 334 raw record URLs
+[UpcomingVinyl] MATCH: blink-182 | Buddha
+[UpcomingVinyl] MATCH: Michael Jackson | Bad
+[UpcomingVinyl] MATCH: Ozzy Osbourne | Under Cover
+[UpcomingVinyl] Total Korndog matches: 3
+[UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
 [BuySignals] 152 qualified signals saved
 
 ==================================================
@@ -507,7 +503,7 @@ MNRK Heavy: 139
 Newbury Comics: 209
 Pirates Press Records: 96
 Pure Noise Records: 87
-r/VinylReleases: 47
+r/VinylReleases: 48
 Revolver: 77
 Rhino: 85
 Rise Records: 85
