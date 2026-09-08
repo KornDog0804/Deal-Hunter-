@@ -73797,5 +73797,100 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|great jobs by gyrofield": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|restock tove lo with signed art card": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "maddie zahm|everything all the time traffic light": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2775,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|raye joy 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.404,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "raye|7": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7964,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Madness",
+    "discogs_title": "7",
+    "discogs_release_id": 384117,
+    "discogs_url": "https://www.discogs.com/release/384117-Madness-7",
+    "discogs_mint_price": 0.99,
+    "discogs_lowest": 0.99,
+    "discogs_num_for_sale": 92,
+    "discogs_have": 5096,
+    "discogs_want": 407
+  },
+  "unknown artist|ricky warwick fire and vengeance personalised signed yellow w r ltd 50": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "walt disco|walt disco": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5143,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|john densmore and chuck d do pe no country for old men": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|satchvai the sea of emotion": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|stephen egerton new solo record": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3344,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
