@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 176
+Rock Metal Fan Nation: kept 178
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 176
+RMFN All: kept 178
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -343,8 +343,8 @@ Hot Topic: kept 16
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2601 normalized vinyl listings
+[Stage2] 2603 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 6771 entries
-[Discogs] Enriching 2601 vinyl records with Mint pricing...
+[Discogs] Enriching 2603 vinyl records with Mint pricing...
 [Discogs] Cache saved (6771 entries)
 [Discogs] Enrichment complete!
 
@@ -432,19 +432,19 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285159 bytes
+[UpcomingVinyl] Got 285445 bytes
 [UpcomingVinyl] Found 334 raw record URLs
 [UpcomingVinyl] MATCH: blink-182 | Buddha
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
 [UpcomingVinyl] MATCH: Ozzy Osbourne | Under Cover
 [UpcomingVinyl] Total Korndog matches: 3
 [UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 147 qualified signals saved
+[BuySignals] 148 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -467,8 +467,8 @@ SOURCE STATUS SUMMARY
   Rhino: 85 deals
   Interscope Records: 136 deals
   SharpTone Records: 103 deals
-  Rock Metal Fan Nation: 176 deals
-  RMFN All: 176 deals
+  Rock Metal Fan Nation: 178 deals
+  RMFN All: 178 deals
   Sumerian Records: 79 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
@@ -503,11 +503,11 @@ MNRK Heavy: 140
 Newbury Comics: 209
 Pirates Press Records: 96
 Pure Noise Records: 87
-r/VinylReleases: 48
+r/VinylReleases: 49
 Revolver: 78
 Rhino: 85
 Rise Records: 85
-Rock Metal Fan Nation: 176
+Rock Metal Fan Nation: 178
 Rollin Records: 243
 SharpTone Records: 103
 Solid State Records: 52
