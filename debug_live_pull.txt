@@ -228,7 +228,7 @@ Pirates Press Records: kept 100
 Scraping: Smartpunk Records (shopify_store)
 ==================================================
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://smartpunkmerchandise.myshopify.com/products.json?limit=250 -> HTTP Error 404: Not Found
   -> retry 1/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://smartpunkmerchandise.myshopify.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
@@ -338,13 +338,13 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 14
+Hot Topic: kept 15
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2615 normalized vinyl listings
+[Stage2] 2616 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 6995 entries
-[Discogs] Enriching 2615 vinyl records with Mint pricing...
-[Discogs] Cache saved (6995 entries)
+[Discogs] Loaded cache with 7009 entries
+[Discogs] Enriching 2616 vinyl records with Mint pricing...
+[Discogs] Cache saved (7009 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,14 +437,14 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285709 bytes
+[UpcomingVinyl] Got 285685 bytes
 [UpcomingVinyl] Found 334 raw record URLs
 [UpcomingVinyl] MATCH: blink-182 | Buddha
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
 [UpcomingVinyl] MATCH: Ozzy Osbourne | Under Cover
 [UpcomingVinyl] Total Korndog matches: 3
 [UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 144 qualified signals saved
+[BuySignals] 143 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -482,7 +482,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 14 deals
+  Hot Topic: 15 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -497,13 +497,13 @@ Craft Recordings: 94
 Equal Vision: 105
 Fearless Records: 88
 Hopeless Records: 68
-Hot Topic: 14
+Hot Topic: 15
 Interscope Records: 136
 MNRK Heavy: 140
 Newbury Comics: 209
 Pirates Press Records: 100
 Pure Noise Records: 87
-r/VinylReleases: 44
+r/VinylReleases: 45
 Revolver: 108
 Rhino: 85
 Rise Records: 92
