@@ -76248,5 +76248,141 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "aec|corrosion of conformity live volume 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6502,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|cannibal corpse wretched spawn": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5244,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|cannibal corpse violence unimagined": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6967,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "secretly distro|son lux out into": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2288,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|dan shay young": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|vv center of the sun psycho from texas kitty coen": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|sierra ferrell pair of dice trying to love you la vie en rose 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|sierra ferrell pair of dice 7 picture disc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sam barber|signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rome streetz|noise kandy 3": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Rome Streetz",
+    "discogs_title": "Noise Kandy 3",
+    "discogs_release_id": 38335884,
+    "discogs_url": "https://www.discogs.com/release/38335884-Rome-Streetz-Noise-Kandy-3",
+    "discogs_mint_price": 15.47,
+    "discogs_lowest": 15.47,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 23,
+    "discogs_want": 9
+  },
+  "fat pat and the wreckshop family|throwed in da game record": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "gracie abrams|the secret of us dark pomegranate": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "alan jackson|the last show": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7714,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sadistics",
+    "discogs_title": "The Last Show",
+    "discogs_release_id": 4542062,
+    "discogs_url": "https://www.discogs.com/release/4542062-Sadistics-The-Last-Show",
+    "discogs_mint_price": 4.99,
+    "discogs_lowest": 4.99,
+    "discogs_num_for_sale": 19,
+    "discogs_have": 102,
+    "discogs_want": 48
+  },
+  "unknown artist|pearl jam ten live black 11 27": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6813,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
