@@ -22,14 +22,14 @@ Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 238
+Sound of Vinyl: kept 239
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 144
+uDiscover Music: kept 139
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -253,7 +253,7 @@ Scraping: Spinefarm Records (merchnow_store)
 ==================================================
   ✓ https://spinefarm.merchnow.com/products.json?limit=250 -> 250 products
 Spinefarm Records: 250 products via Shopify JSON
-Spinefarm Records: kept 87
+Spinefarm Records: kept 88
 
 ==================================================
 Scraping: InVogue Records (merchnow_store)
@@ -343,7 +343,7 @@ Hot Topic: kept 15
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
   -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
 Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
@@ -399,28 +399,28 @@ Walmart: kept 1
 ==================================================
 Scraping: Target (target_catalog_source)
 ==================================================
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 403: Forbidden
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2618 normalized vinyl listings
+[Stage2] 2615 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7009 entries
-[Discogs] Enriching 2618 vinyl records with Mint pricing...
-[Discogs] Cache saved (7009 entries)
+[Discogs] Loaded cache with 7024 entries
+[Discogs] Enriching 2615 vinyl records with Mint pricing...
+[Discogs] Cache saved (7024 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,22 +437,27 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 285685 bytes
-[UpcomingVinyl] Found 334 raw record URLs
-[UpcomingVinyl] MATCH: blink-182 | Buddha
+[UpcomingVinyl] Got 450542 bytes
+[UpcomingVinyl] Found 536 raw record URLs
+[UpcomingVinyl] MATCH: I Prevail | Nature
+[UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition
+[UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition 20 Year Anniversary Amazon Exclusive Tiger S Eye 2lp
+[UpcomingVinyl] MATCH: Earth, Wind & Fire | Greatest Hits Amazon Exclusive Edition
+[UpcomingVinyl] MATCH: If Not For Me | Everything You Wanted Metallic Silver Marble
+[UpcomingVinyl] MATCH: If Not For Me | Everything You Wanted Dusk Smush
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
-[UpcomingVinyl] MATCH: Ozzy Osbourne | Under Cover
-[UpcomingVinyl] Total Korndog matches: 3
-[UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 144 qualified signals saved
+[UpcomingVinyl] MATCH: Rush | Fly By Night
+[UpcomingVinyl] Total Korndog matches: 8
+[UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
+[BuySignals] 141 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 238 deals
   Rollin Preorders: 238 deals
-  Sound of Vinyl: 238 deals
-  uDiscover Music: 144 deals
+  Sound of Vinyl: 239 deals
+  uDiscover Music: 139 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
   Rise Records: 92 deals
@@ -477,7 +482,7 @@ SOURCE STATUS SUMMARY
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 100 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
-  Spinefarm Records: 87 deals
+  Spinefarm Records: 88 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -511,9 +516,9 @@ Rock Metal Fan Nation: 149
 Rollin Records: 238
 SharpTone Records: 103
 Solid State Records: 52
-Sound of Vinyl: 238
-Spinefarm Records: 87
+Sound of Vinyl: 239
+Spinefarm Records: 88
 Sumerian Records: 78
 Target: 1
-uDiscover Music: 144
+uDiscover Music: 139
 Walmart: 1

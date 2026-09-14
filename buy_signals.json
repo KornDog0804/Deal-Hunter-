@@ -2520,43 +2520,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "The Who",
-    "title": "Live at the Oval 1971 (Limited Edition Splatter) 2LP",
-    "raw_title": "Live at the Oval 1971 (Limited Edition Splatter) 2LP",
-    "price": 26.59,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/the-who-live-at-the-oval-1971-limited-edition-splatter-colored-2lp",
-    "image": "https://cdn.shopify.com/s/files/1/1010/4753/3937/files/Music_0000_The-Who_Live-at-the-Oval-1971_Color-Vinyl_ProductShot.png?v=1782166159",
-    "score": 60,
-    "stage2_score": 60,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "splatter",
-      "2lp",
-      "under-$30"
-    ],
-    "release_key": "the who::live at the oval 1971 limited edition splatter",
-    "version": "colored limited splatter 2lp",
-    "format": "vinyl",
-    "buyer_score": 100,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Kaonashi",
     "title": "Why Did You Do It? \"Broken Window\" • Clear W/ Black Splatter • Limited to 250",
     "raw_title": "Why Did You Do It? \"Broken Window\" • Clear W/ Black Splatter • Limited to 250",
@@ -3675,6 +3638,42 @@
     "store_fit": "High Traffic",
     "why_buy": "Bread & Butter, strong dollar margin, steady mover, collector appeal, buy now",
     "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "The Who",
+    "title": "Live at the Oval 1971 (Limited Edition Splatter) 2LP",
+    "raw_title": "Live at the Oval 1971 (Limited Edition Splatter) 2LP",
+    "price": 37.99,
+    "source": "Sound of Vinyl",
+    "source_type": "shopify_store",
+    "link": "https://thesoundofvinyl.us/products/the-who-live-at-the-oval-1971-limited-edition-splatter-colored-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/1010/4753/3937/files/Music_0000_The-Who_Live-at-the-Oval-1971_Color-Vinyl_ProductShot.png?v=1782166159",
+    "score": 56,
+    "stage2_score": 56,
+    "quality": "watch",
+    "signals": [
+      "limited",
+      "splatter",
+      "2lp"
+    ],
+    "release_key": "the who::live at the oval 1971 limited edition splatter",
+    "version": "colored limited splatter 2lp",
+    "format": "vinyl",
+    "buyer_score": 100,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Collector"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Front Table",
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
@@ -4801,78 +4800,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Sum 41",
-    "title": "All Killer No Filler",
-    "raw_title": "All Killer No Filler (Limited Edition Blue & Black) 1LP",
-    "price": 19.58,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/sum-41-all-killer-no-filler-limited-edition-lp",
-    "image": "https://cdn.shopify.com/s/files/1/1010/4753/3937/files/all-killer-no-filler-lp.png?v=1782257904",
-    "score": 56,
-    "stage2_score": 56,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "under-$20"
-    ],
-    "release_key": "sum 41::all killer no filler",
-    "version": "limited 1lp",
-    "format": "vinyl",
-    "buyer_score": 80,
-    "inventory_lane": "Bread & Butter",
-    "customer_lanes": [
-      "Collector",
-      "Gift Buyer"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "High Traffic",
-    "why_buy": "Bread & Butter, solid margin, collector appeal, buy now",
-    "shelf_placement": "Main Floor",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "No Doubt",
-    "title": "Tragic Kingdom Limited Edition Picture Disc",
-    "raw_title": "Tragic Kingdom Limited Edition Picture Disc",
-    "price": 25.18,
-    "source": "Sound of Vinyl",
-    "source_type": "shopify_store",
-    "link": "https://thesoundofvinyl.us/products/tragic-kingdom-limited-edition-picture-disc",
-    "image": "https://cdn.shopify.com/s/files/1/1010/4753/3937/files/nd-tk-picturedisc.png?v=1786548184",
-    "score": 55,
-    "stage2_score": 55,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "picture-disc",
-      "under-$30"
-    ],
-    "release_key": "no doubt::tragic kingdom limited edition picture disc",
-    "version": "limited picture disc",
-    "format": "vinyl",
-    "buyer_score": 100,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Chris Cornell",
     "title": "Carry On (Limited Edition) 2LP Picture Disc",
     "raw_title": "Carry On (Limited Edition) 2LP Picture Disc",
@@ -4897,42 +4824,6 @@
     "customer_lanes": [
       "Collector",
       "Gift Buyer"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
-    "artist": "No Doubt",
-    "title": "Tragic Kingdom Limited Edition Picture Disc",
-    "raw_title": "Tragic Kingdom Limited Edition Picture Disc",
-    "price": 25.18,
-    "source": "uDiscover Music",
-    "source_type": "shopify_store",
-    "link": "https://shop.udiscovermusic.com/products/tragic-kingdom-limited-edition-picture-disc",
-    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/products/nd-tk-picturedisc.png?v=1651533538",
-    "score": 55,
-    "stage2_score": 55,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "picture-disc",
-      "under-$30"
-    ],
-    "release_key": "no doubt::tragic kingdom limited edition picture disc",
-    "version": "limited picture disc",
-    "format": "vinyl",
-    "buyer_score": 100,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
     ],
     "decision": "BUY NOW",
     "recommended_qty": 0,
