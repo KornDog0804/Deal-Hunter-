@@ -76750,5 +76750,155 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "grayscale|adornment tigers eye": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "circa survive|touch amor x circa survive split yellow orange marble 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|mark lanegan and isobell campbell hawk": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|mark lanegan and isobell campbell sunday at devil dirt": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "blind melon|blind melon": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Blind Melon",
+    "discogs_title": "Blind Melon",
+    "discogs_release_id": 2082861,
+    "discogs_url": "https://www.discogs.com/release/2082861-Blind-Melon-Blind-Melon",
+    "discogs_mint_price": 229.85,
+    "discogs_lowest": 229.85,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 575,
+    "discogs_want": 1443
+  },
+  "land of talk|lasts": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7226,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "marc anthony|todo a su tiempo 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Marc Anthony",
+    "discogs_title": "Todo A Su Tiempo",
+    "discogs_release_id": 4478075,
+    "discogs_url": "https://www.discogs.com/release/4478075-Marc-Anthony-Todo-A-Su-Tiempo",
+    "discogs_mint_price": 69.99,
+    "discogs_lowest": 69.99,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 75,
+    "discogs_want": 135
+  },
+  "unknown artist|vv bass persuades miley cyrus": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the womack sisters|signed signature series": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3503,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dry kill logic|purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7576,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dry kill logic|black and gold": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7785,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Working Week",
+    "discogs_title": "Black & Gold",
+    "discogs_release_id": 1338026,
+    "discogs_url": "https://www.discogs.com/release/1338026-Working-Week-Black-Gold",
+    "discogs_mint_price": 2.69,
+    "discogs_lowest": 2.69,
+    "discogs_num_for_sale": 52,
+    "discogs_have": 382,
+    "discogs_want": 25
+  },
+  "gus dapperton|4 dear life includes signed insert hand numbered 1000": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dale crover|get yer ba ba s out 12 ep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.277,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "obits|live at cake shop": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4074,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nat king cole|after midnight the complete sessions 11 13": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3895,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
