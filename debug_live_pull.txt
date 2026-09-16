@@ -22,14 +22,14 @@ Scraping: Sound of Vinyl (shopify_store)
 ==================================================
   ✓ https://thesoundofvinyl.us/products.json?limit=250 -> 250 products
 Sound of Vinyl: 250 products via Shopify JSON
-Sound of Vinyl: kept 238
+Sound of Vinyl: kept 239
 
 ==================================================
 Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 136
+uDiscover Music: kept 138
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 93
+Rise Records: kept 94
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,7 +63,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 93
+Rise All: kept 94
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 14
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -405,8 +405,8 @@ Scraping: Target (target_catalog_source)
 Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
@@ -415,14 +415,14 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
 [FinalFilter] merchandise rejected: Pure Noise Records | Losing What We Love Black Slip Mat
 [FinalFilter] merchandise rejected: Pure Noise Records | House & Trance Slip Mat
-[Stage2] 2662 normalized vinyl listings
+[Stage2] 2666 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7091 entries
-[Discogs] Enriching 2662 vinyl records with Mint pricing...
-[Discogs] Cache saved (7091 entries)
+[Discogs] Loaded cache with 7126 entries
+[Discogs] Enriching 2666 vinyl records with Mint pricing...
+[Discogs] Cache saved (7126 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -434,13 +434,13 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 50 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 450650 bytes
-[UpcomingVinyl] Found 536 raw record URLs
+[UpcomingVinyl] Got 455720 bytes
+[UpcomingVinyl] Found 542 raw record URLs
 [UpcomingVinyl] MATCH: I Prevail | Nature
 [UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition
 [UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition 20 Year Anniversary Amazon Exclusive Tiger S Eye 2lp
@@ -458,12 +458,12 @@ SOURCE STATUS SUMMARY
 ==================================================
   Rollin Records: 238 deals
   Rollin Preorders: 238 deals
-  Sound of Vinyl: 238 deals
-  uDiscover Music: 136 deals
+  Sound of Vinyl: 239 deals
+  uDiscover Music: 138 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
-  Rise Records: 93 deals
-  Rise All: 93 deals
+  Rise Records: 94 deals
+  Rise All: 94 deals
   Brooklyn Vegan: 206 deals
   Revolver: 136 deals
   Newbury Comics: 209 deals
@@ -490,7 +490,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 14 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -510,17 +510,17 @@ MNRK Heavy: 140
 Newbury Comics: 209
 Pirates Press Records: 100
 Pure Noise Records: 87
-r/VinylReleases: 47
+r/VinylReleases: 46
 Revolver: 136
 Rhino: 86
-Rise Records: 93
+Rise Records: 94
 Rock Metal Fan Nation: 160
 Rollin Records: 238
 SharpTone Records: 103
 Solid State Records: 52
-Sound of Vinyl: 238
+Sound of Vinyl: 239
 Spinefarm Records: 88
 Sumerian Records: 78
 Target: 1
-uDiscover Music: 136
+uDiscover Music: 138
 Walmart: 1
