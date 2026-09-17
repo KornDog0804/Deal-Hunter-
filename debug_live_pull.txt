@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 94
+Rise Records: kept 93
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,7 +63,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 94
+Rise All: kept 93
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -136,7 +136,7 @@ Scraping: SharpTone Records (shopify_store)
 ==================================================
   ✓ https://sharptonerecords.co/products.json?limit=250 -> 250 products
 SharpTone Records: 250 products via Shopify JSON
-SharpTone Records: kept 103
+SharpTone Records: kept 101
 
 ==================================================
 Scraping: Rock Metal Fan Nation (shopify_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2677 normalized vinyl listings
+[Stage2] 2674 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7126 entries
-[Discogs] Enriching 2677 vinyl records with Mint pricing...
-[Discogs] Cache saved (7126 entries)
+[Discogs] Loaded cache with 7175 entries
+[Discogs] Enriching 2674 vinyl records with Mint pricing...
+[Discogs] Cache saved (7175 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 455564 bytes
+[UpcomingVinyl] Got 455696 bytes
 [UpcomingVinyl] Found 542 raw record URLs
 [UpcomingVinyl] MATCH: I Prevail | Nature
 [UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Rush | Fly By Night
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 149 qualified signals saved
+[BuySignals] 151 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -460,8 +460,8 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 142 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
-  Rise Records: 94 deals
-  Rise All: 94 deals
+  Rise Records: 93 deals
+  Rise All: 93 deals
   Brooklyn Vegan: 212 deals
   Revolver: 139 deals
   Newbury Comics: 209 deals
@@ -471,7 +471,7 @@ SOURCE STATUS SUMMARY
   Equal Vision: 105 deals
   Rhino: 86 deals
   Interscope Records: 137 deals
-  SharpTone Records: 103 deals
+  SharpTone Records: 101 deals
   Rock Metal Fan Nation: 160 deals
   RMFN All: 160 deals
   Sumerian Records: 79 deals
@@ -508,13 +508,13 @@ MNRK Heavy: 140
 Newbury Comics: 209
 Pirates Press Records: 100
 Pure Noise Records: 87
-r/VinylReleases: 46
+r/VinylReleases: 48
 Revolver: 139
 Rhino: 86
-Rise Records: 94
+Rise Records: 93
 Rock Metal Fan Nation: 160
 Rollin Records: 238
-SharpTone Records: 103
+SharpTone Records: 101
 Solid State Records: 52
 Sound of Vinyl: 240
 Spinefarm Records: 88
