@@ -338,7 +338,7 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 13
+Hot Topic: kept 14
 
 ==================================================
 Scraping: Deep Discount (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2668 normalized vinyl listings
+[Stage2] 2669 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7207 entries
-[Discogs] Enriching 2668 vinyl records with Mint pricing...
-[Discogs] Cache saved (7207 entries)
+[Discogs] Loaded cache with 7272 entries
+[Discogs] Enriching 2669 vinyl records with Mint pricing...
+[Discogs] Cache saved (7272 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 390788 bytes
+[UpcomingVinyl] Got 390680 bytes
 [UpcomingVinyl] Found 461 raw record URLs
 [UpcomingVinyl] MATCH: I Prevail | Nature
 [UpcomingVinyl] MATCH: Bob Seger | Face The Promise Expanded Edition
@@ -486,7 +486,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 13 deals
+  Hot Topic: 14 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -501,7 +501,7 @@ Craft Recordings: 93
 Equal Vision: 106
 Fearless Records: 89
 Hopeless Records: 65
-Hot Topic: 13
+Hot Topic: 14
 Interscope Records: 138
 MNRK Heavy: 139
 Newbury Comics: 210
