@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 89
+Fearless Records: kept 88
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,7 +46,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 89
+Fearless Vinyl: kept 88
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -405,7 +405,7 @@ Scraping: Target (target_catalog_source)
 Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=0&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+  -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
 Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2672 normalized vinyl listings
+[Stage2] 2671 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 7286 entries
-[Discogs] Enriching 2672 vinyl records with Mint pricing...
+[Discogs] Enriching 2671 vinyl records with Mint pricing...
 [Discogs] Cache saved (7286 entries)
 [Discogs] Enrichment complete!
 
@@ -432,7 +432,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -457,8 +457,8 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 238 deals
   Sound of Vinyl: 239 deals
   uDiscover Music: 140 deals
-  Fearless Records: 89 deals
-  Fearless Vinyl: 89 deals
+  Fearless Records: 88 deals
+  Fearless Vinyl: 88 deals
   Rise Records: 93 deals
   Rise All: 93 deals
   Brooklyn Vegan: 209 deals
@@ -499,7 +499,7 @@ Amazon: 1
 Brooklyn Vegan: 209
 Craft Recordings: 93
 Equal Vision: 106
-Fearless Records: 89
+Fearless Records: 88
 Hopeless Records: 65
 Hot Topic: 16
 Interscope Records: 138
@@ -507,7 +507,7 @@ MNRK Heavy: 139
 Newbury Comics: 211
 Pirates Press Records: 100
 Pure Noise Records: 87
-r/VinylReleases: 46
+r/VinylReleases: 47
 Revolver: 140
 Rhino: 87
 Rise Records: 93
