@@ -79211,5 +79211,141 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "massive attack|mezzanine": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Massive Attack",
+    "discogs_title": "Mezzanine",
+    "discogs_release_id": 4958265,
+    "discogs_url": "https://www.discogs.com/release/4958265-Massive-Attack-Mezzanine",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 283,
+    "discogs_want": 1073
+  },
+  "unknown artist|vv the girl of your dreams ashe": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|brian tyler dutton ranch season 1 mov brown": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|olivia newton john physical 45th anniversary 7 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|robbie williams and miss monique beauty in us 12 neon green": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "wolfmother|wolfmother": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Wolfmother",
+    "discogs_title": "Wolfmother",
+    "discogs_release_id": 34570699,
+    "discogs_url": "https://www.discogs.com/release/34570699-Wolfmother-Wolfmother",
+    "discogs_mint_price": 54.98,
+    "discogs_lowest": 54.98,
+    "discogs_num_for_sale": 22,
+    "discogs_have": 1151,
+    "discogs_want": 262
+  },
+  "or|music for empty stadiums": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1764,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "leroi conroy|a tiger s tale": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4038,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "anthrax|cursum perficio tsl color red 2 signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|marvel s wolverine": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5639,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "n8noface|tomorrow s world": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4548,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kiss|november 6 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "john williams|harry potter and the sorcerer s stone": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4799,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "playboy charli xcx fall 2026 magazine|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
