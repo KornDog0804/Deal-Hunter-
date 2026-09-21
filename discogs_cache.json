@@ -79465,5 +79465,124 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "warner|warren zeiders no brakes": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|macy gray on how life is": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "vamonos|180g black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4715,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|signed charli xcx music fashion film": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "monterey|it always passes over me": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "monterey.",
+    "discogs_title": "it always passes over me...",
+    "discogs_release_id": 38472252,
+    "discogs_url": "https://www.discogs.com/release/38472252-monterey-it-always-passes-over-me",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 2,
+    "discogs_want": 0
+  },
+  "miley|pop up": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.808,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Yelle",
+    "discogs_title": "Pop Up",
+    "discogs_release_id": 1483394,
+    "discogs_url": "https://www.discogs.com/release/1483394-Yelle-Pop-Up",
+    "discogs_mint_price": 0.18,
+    "discogs_lowest": 0.18,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 253,
+    "discogs_want": 449
+  },
+  "john farnham|whispering jack 40th anniversary": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "John Farnham",
+    "discogs_title": "Whispering Jack",
+    "discogs_release_id": 38458470,
+    "discogs_url": "https://www.discogs.com/release/38458470-John-Farnham-Whispering-Jack",
+    "discogs_mint_price": 45.92,
+    "discogs_lowest": 45.92,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 33,
+    "discogs_want": 5
+  },
+  "teeks|lovers comet": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7678,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Muckrakes",
+    "discogs_title": "Comet",
+    "discogs_release_id": 32236617,
+    "discogs_url": "https://www.discogs.com/release/32236617-The-Muckrakes-Comet",
+    "discogs_mint_price": 14.34,
+    "discogs_lowest": 14.34,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 3,
+    "discogs_want": 0
+  },
+  "para toda vida|blood red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7382,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "babe haven|nuisance": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7511,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "a wall|7 loverboy 5 year anniversary edition new unreleased track": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
