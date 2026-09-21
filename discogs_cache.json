@@ -79347,5 +79347,123 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "sony|kings of leon aha shake heartbreak 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7385,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lukas graham|good times": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Lukas Graham",
+    "discogs_title": "Good Times",
+    "discogs_release_id": 38360718,
+    "discogs_url": "https://www.discogs.com/release/38360718-Lukas-Graham-Good-Times",
+    "discogs_mint_price": 26.62,
+    "discogs_lowest": 26.62,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 7,
+    "discogs_want": 1
+  },
+  "unknown artist|the amity affliction house of cards hot topic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7009,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|haute and freddy vv big disgrace": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|zombeast s t 20th anniversary blood soaked": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|iron lung": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "calla|de facto": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7292,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "swimming pools and movie stars|modern architecture": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7673,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Danny McDonald",
+    "discogs_title": "Modern Architecture",
+    "discogs_release_id": 14944322,
+    "discogs_url": "https://www.discogs.com/release/14944322-Danny-McDonald-Modern-Architecture",
+    "discogs_mint_price": 10.2,
+    "discogs_lowest": 10.2,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 16,
+    "discogs_want": 4
+  },
+  "the snuts|joy in short moments": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1046,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bun b|trill copper black edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pimp c|pimpalation bordeaux gold edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "us3|snap crackle and bop": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.68,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
