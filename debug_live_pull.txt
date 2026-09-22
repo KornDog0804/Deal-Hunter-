@@ -345,7 +345,7 @@ Scraping: Deep Discount (html_store)
 ==================================================
   -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
   -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7309 entries
+[Discogs] Loaded cache with 7323 entries
 [Discogs] Enriching 2668 vinyl records with Mint pricing...
-[Discogs] Cache saved (7309 entries)
+[Discogs] Cache saved (7323 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 421578 bytes
+[UpcomingVinyl] Got 421584 bytes
 [UpcomingVinyl] Found 503 raw record URLs
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
@@ -490,7 +490,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 16 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
