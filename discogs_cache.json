@@ -79584,5 +79584,146 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "universal|willie nelson songbird 20th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|him deep shadows and brilliant highlights 25th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|sticks and stones": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7689,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dave Grusin, Don Grusin",
+    "discogs_title": "Sticks And Stones",
+    "discogs_release_id": 2259103,
+    "discogs_url": "https://www.discogs.com/release/2259103-Dave-Grusin-Don-Grusin-Sticks-And-Stones",
+    "discogs_mint_price": 1.99,
+    "discogs_lowest": 1.99,
+    "discogs_num_for_sale": 57,
+    "discogs_have": 501,
+    "discogs_want": 51
+  },
+  "mr big|november 27 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3385,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pimp c|pimpalation record": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|pork explosion": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.448,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "vv exclusive frost children|spiral": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7737,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Robert Nickson",
+    "discogs_title": "Spiral",
+    "discogs_release_id": 233880,
+    "discogs_url": "https://www.discogs.com/release/233880-Robert-Nickson-Spiral",
+    "discogs_mint_price": 84.99,
+    "discogs_lowest": 84.99,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 605,
+    "discogs_want": 558
+  },
+  "worldpeace dmt|the velvet underground and rowan": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|atlantic records x bad world": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2455,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "trettman|stadt aus gold": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7024,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "back in the sky|88 ultra": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7204,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "brent faiyaz|a m paradox": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Brent Faiyaz",
+    "discogs_title": "A.M. Paradox",
+    "discogs_release_id": 13305593,
+    "discogs_url": "https://www.discogs.com/release/13305593-Brent-Faiyaz-AM-Paradox",
+    "discogs_mint_price": 184.99,
+    "discogs_lowest": 184.99,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 785,
+    "discogs_want": 1194
+  },
+  "unknown artist|alkaline trio rise against split": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "black veil brides|vindicate park ave signed glow in the dark": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
