@@ -70,14 +70,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 211
+Brooklyn Vegan: kept 217
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 149
+Revolver: kept 158
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -92,6 +92,8 @@ Scraping: Newbury Preorders (shopify_store)
   -> retry 1/2 for https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.newburycomics.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
+  -> retry 2/2 for https://www.newburycomics.com/products.json?limit=250 | HTTP Error 503: Service Unavailable
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
 Newbury Preorders: kept 208
@@ -101,12 +103,11 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 91
+Craft Recordings: kept 89
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
 ==================================================
-  -> retry 1/2 for https://mnrkheavy.com/products.json?limit=250 | HTTP Error 500: Internal Server Error
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
 MNRK Heavy: kept 139
@@ -130,7 +131,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 138
+Interscope Records: kept 143
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -144,7 +145,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 160
+Rock Metal Fan Nation: kept 161
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -154,7 +155,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 160
+RMFN All: kept 161
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -338,15 +339,15 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 ==================================================
 Scraping: Hot Topic (html_store)
 ==================================================
-Hot Topic: found 38 HTML links
-Hot Topic: kept 12
+Hot Topic: found 42 HTML links
+Hot Topic: kept 14
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -414,14 +415,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2671 normalized vinyl listings
+[Stage2] 2692 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7353 entries
-[Discogs] Enriching 2671 vinyl records with Mint pricing...
-[Discogs] Cache saved (7353 entries)
+[Discogs] Loaded cache with 7373 entries
+[Discogs] Enriching 2692 vinyl records with Mint pricing...
+[Discogs] Cache saved (7373 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -438,7 +439,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 425458 bytes
+[UpcomingVinyl] Got 425326 bytes
 [UpcomingVinyl] Found 508 raw record URLs
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
@@ -465,18 +466,18 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 87 deals
   Rise Records: 91 deals
   Rise All: 91 deals
-  Brooklyn Vegan: 211 deals
-  Revolver: 149 deals
+  Brooklyn Vegan: 217 deals
+  Revolver: 158 deals
   Newbury Comics: 208 deals
   Newbury Preorders: 208 deals
-  Craft Recordings: 91 deals
+  Craft Recordings: 89 deals
   MNRK Heavy: 139 deals
   Equal Vision: 108 deals
   Rhino: 87 deals
-  Interscope Records: 138 deals
+  Interscope Records: 143 deals
   SharpTone Records: 101 deals
-  Rock Metal Fan Nation: 160 deals
-  RMFN All: 160 deals
+  Rock Metal Fan Nation: 161 deals
+  RMFN All: 161 deals
   Sumerian Records: 79 deals
   Solid State Records: 52 deals
   Solid State Vinyl: 52 deals
@@ -490,8 +491,8 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 12 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Hot Topic: 14 deals
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -500,22 +501,22 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 211
-Craft Recordings: 91
+Brooklyn Vegan: 217
+Craft Recordings: 89
 Equal Vision: 108
 Fearless Records: 87
 Hopeless Records: 65
-Hot Topic: 12
-Interscope Records: 138
+Hot Topic: 14
+Interscope Records: 143
 MNRK Heavy: 139
 Newbury Comics: 208
 Pirates Press Records: 100
 Pure Noise Records: 86
-r/VinylReleases: 47
-Revolver: 149
+r/VinylReleases: 45
+Revolver: 158
 Rhino: 87
 Rise Records: 91
-Rock Metal Fan Nation: 160
+Rock Metal Fan Nation: 161
 Rollin Records: 238
 SharpTone Records: 101
 Solid State Records: 52
