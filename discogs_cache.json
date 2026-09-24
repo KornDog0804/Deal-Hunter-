@@ -80755,5 +80755,265 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "evanescence fallen lp exclusive|limited to 500 lapis lazuli": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3067,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "universal|silverstein discovering the waterfront": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7856,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Silverstein",
+    "discogs_title": "Discovering The Waterfront",
+    "discogs_release_id": 28278346,
+    "discogs_url": "https://www.discogs.com/release/28278346-Silverstein-Discovering-The-Waterfront",
+    "discogs_mint_price": 38.74,
+    "discogs_lowest": 38.74,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 1223,
+    "discogs_want": 197
+  },
+  "my chemical romance|the black parade 20th anniversary edition 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7197,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sebadoh|harmacy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sebadoh",
+    "discogs_title": "Harmacy",
+    "discogs_release_id": 12319228,
+    "discogs_url": "https://www.discogs.com/release/12319228-Sebadoh-Harmacy",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 3,
+    "discogs_want": 93
+  },
+  "liminal|hyper normal": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.416,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|borderlands 4": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7496,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "motorhead|november 6 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7323,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the open door": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7908,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Unknown Artist",
+    "discogs_title": "Open The Door",
+    "discogs_release_id": 3484126,
+    "discogs_url": "https://www.discogs.com/release/3484126-Unknown-Artist-Open-The-Door",
+    "discogs_mint_price": 3.87,
+    "discogs_lowest": 3.87,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 25,
+    "discogs_want": 19
+  },
+  "unpeople|we are unpeople": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "morphine|cocoon": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.84,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Moonbeam",
+    "discogs_title": "Cocoon",
+    "discogs_release_id": 1160767,
+    "discogs_url": "https://www.discogs.com/release/1160767-Moonbeam-Cocoon",
+    "discogs_mint_price": 19.37,
+    "discogs_lowest": 19.37,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 172,
+    "discogs_want": 102
+  },
+  "michael kiwanuka|fudge dinked edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "michael kiwanuka|fudge": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7139,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the goonies|original motion picture score": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.742,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|bullet for my valentine social apocalypse first pressing hand numbered": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dove ellis|double war child records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "delerium|exaudire": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sugababes|blue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7091,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "overgrown|waiting room and chlorine": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "evanescence|the open door": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Evanescence",
+    "discogs_title": "The Open Door",
+    "discogs_release_id": 10381957,
+    "discogs_url": "https://www.discogs.com/release/10381957-Evanescence-The-Open-Door",
+    "discogs_mint_price": 39.99,
+    "discogs_lowest": 39.99,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 1011,
+    "discogs_want": 507
+  },
+  "furii|pyromancy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8222,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Fyre (3)",
+    "discogs_title": "Pyromancy",
+    "discogs_release_id": 5567245,
+    "discogs_url": "https://www.discogs.com/release/5567245-Fyre-Pyromancy",
+    "discogs_mint_price": 10.0,
+    "discogs_lowest": 10.0,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 53,
+    "discogs_want": 39
+  },
+  "thrice|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the cramps bad music for bad people": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "michael jackson|this is it": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Michael Jackson",
+    "discogs_title": "This Is It",
+    "discogs_release_id": 15866743,
+    "discogs_url": "https://www.discogs.com/release/15866743-Michael-Jackson-This-Is-It",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 5,
+    "discogs_want": 51
+  },
+  "rex orange county|dream fatigue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3725,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "king diamond|october 23 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
