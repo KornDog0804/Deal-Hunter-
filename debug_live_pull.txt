@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 135
+uDiscover Music: kept 138
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -70,14 +70,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 211
+Brooklyn Vegan: kept 209
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 169
+Revolver: kept 172
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 141
+Interscope Records: kept 142
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -222,7 +222,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 100
+Pirates Press Records: kept 98
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 15
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2676 normalized vinyl listings
+[Stage2] 2679 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7443 entries
-[Discogs] Enriching 2676 vinyl records with Mint pricing...
-[Discogs] Cache saved (7443 entries)
+[Discogs] Loaded cache with 7471 entries
+[Discogs] Enriching 2679 vinyl records with Mint pricing...
+[Discogs] Cache saved (7471 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,8 +437,8 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 425482 bytes
-[UpcomingVinyl] Found 508 raw record URLs
+[UpcomingVinyl] Got 361594 bytes
+[UpcomingVinyl] Found 427 raw record URLs
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
 [UpcomingVinyl] MATCH: Boundaries | Burying Brightness
@@ -446,12 +446,10 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Korn | Korn Iii Remember Who You Are
 [UpcomingVinyl] MATCH: Korn | The Path Of Totality
 [UpcomingVinyl] MATCH: Linkin Park | Unshatter Film Soundtrack Live In Sao Paulo Citrus Color Eco Mix
-[UpcomingVinyl] MATCH: Michael Jackson | Bad
 [UpcomingVinyl] MATCH: Pierce The Veil | Misadventures Picture
-[UpcomingVinyl] MATCH: Rush | Fly By Night
-[UpcomingVinyl] Total Korndog matches: 10
-[UpcomingVinyl] 10 whitelist matches saved to upcoming_releases.json
-[BuySignals] 152 qualified signals saved
+[UpcomingVinyl] Total Korndog matches: 8
+[UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
+[BuySignals] 151 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -459,20 +457,20 @@ SOURCE STATUS SUMMARY
   Rollin Records: 238 deals
   Rollin Preorders: 238 deals
   Sound of Vinyl: 239 deals
-  uDiscover Music: 135 deals
+  uDiscover Music: 138 deals
   Fearless Records: 84 deals
   Fearless Vinyl: 84 deals
   Rise Records: 91 deals
   Rise All: 91 deals
-  Brooklyn Vegan: 211 deals
-  Revolver: 169 deals
+  Brooklyn Vegan: 209 deals
+  Revolver: 172 deals
   Newbury Comics: 208 deals
   Newbury Preorders: 208 deals
   Craft Recordings: 86 deals
   MNRK Heavy: 139 deals
   Equal Vision: 108 deals
   Rhino: 87 deals
-  Interscope Records: 141 deals
+  Interscope Records: 142 deals
   SharpTone Records: 101 deals
   Rock Metal Fan Nation: 153 deals
   RMFN All: 153 deals
@@ -482,7 +480,7 @@ SOURCE STATUS SUMMARY
   Pure Noise Records: 85 deals
   Hopeless Records: 65 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 100 deals
+  Pirates Press Records: 98 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 88 deals
   InVogue Records: FAILED: HTTP Error 404: Not Found
@@ -490,7 +488,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 15 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -499,19 +497,19 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 211
+Brooklyn Vegan: 209
 Craft Recordings: 86
 Equal Vision: 108
 Fearless Records: 84
 Hopeless Records: 65
 Hot Topic: 15
-Interscope Records: 141
+Interscope Records: 142
 MNRK Heavy: 139
 Newbury Comics: 208
-Pirates Press Records: 100
+Pirates Press Records: 98
 Pure Noise Records: 85
-r/VinylReleases: 45
-Revolver: 169
+r/VinylReleases: 49
+Revolver: 172
 Rhino: 87
 Rise Records: 91
 Rock Metal Fan Nation: 153
@@ -522,5 +520,5 @@ Sound of Vinyl: 239
 Spinefarm Records: 88
 Sumerian Records: 78
 Target: 1
-uDiscover Music: 135
+uDiscover Music: 138
 Walmart: 1
