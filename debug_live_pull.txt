@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7501 entries
+[Discogs] Loaded cache with 7572 entries
 [Discogs] Enriching 2685 vinyl records with Mint pricing...
-[Discogs] Cache saved (7501 entries)
+[Discogs] Cache saved (7572 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 361548 bytes
+[UpcomingVinyl] Got 361632 bytes
 [UpcomingVinyl] Found 427 raw record URLs
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
 [UpcomingVinyl] MATCH: Alice In Chains | Unplugged
@@ -508,7 +508,7 @@ MNRK Heavy: 139
 Newbury Comics: 208
 Pirates Press Records: 98
 Pure Noise Records: 86
-r/VinylReleases: 47
+r/VinylReleases: 48
 Revolver: 177
 Rhino: 87
 Rise Records: 91
