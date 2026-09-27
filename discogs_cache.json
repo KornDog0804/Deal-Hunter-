@@ -82371,5 +82371,192 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|vv for you selena gomez": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the savoy recordings 3x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3785,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "manafest|sleep walker awake": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2823,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|pure ecstacy deluxe watermelon signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|pure ecstacy signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|miranda lambert crisco snakeskin picture disc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cowgirl clue|rodeo star": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Cowgirl Clue",
+    "discogs_title": "Rodeo Star",
+    "discogs_release_id": 29915035,
+    "discogs_url": "https://www.discogs.com/release/29915035-Cowgirl-Clue-Rodeo-Star",
+    "discogs_mint_price": 100.0,
+    "discogs_lowest": 100.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 241,
+    "discogs_want": 151
+  },
+  "cowgirl clue|total freedom": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Cowgirl Clue",
+    "discogs_title": "Total Freedom",
+    "discogs_release_id": 35514511,
+    "discogs_url": "https://www.discogs.com/release/35514511-Cowgirl-Clue-Total-Freedom",
+    "discogs_mint_price": 100.0,
+    "discogs_lowest": 100.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 78,
+    "discogs_want": 73
+  },
+  "unknown artist|ninajirachi i love my computer japan edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "it dies today|sirens": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8031,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dizzee Rascal",
+    "discogs_title": "Sirens",
+    "discogs_release_id": 977055,
+    "discogs_url": "https://www.discogs.com/release/977055-Dizzee-Rascal-Sirens",
+    "discogs_mint_price": 3.56,
+    "discogs_lowest": 3.56,
+    "discogs_num_for_sale": 30,
+    "discogs_have": 671,
+    "discogs_want": 129
+  },
+  "unknown artist|violent femmes add it up 1981 1993 canary yellow": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|joan osborne relish reimagined": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sandra|the long play": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sandra",
+    "discogs_title": "The Long Play",
+    "discogs_release_id": 8392760,
+    "discogs_url": "https://www.discogs.com/release/8392760-Sandra-The-Long-Play",
+    "discogs_mint_price": 0.44,
+    "discogs_lowest": 0.44,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 15,
+    "discogs_want": 147
+  },
+  "tamia|tamia more korean represses": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "oliver tree|cowboy tears": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Oliver Tree",
+    "discogs_title": "Cowboy Tears",
+    "discogs_release_id": 26093038,
+    "discogs_url": "https://www.discogs.com/release/26093038-Oliver-Tree-Cowboy-Tears",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 42,
+    "discogs_want": 22
+  },
+  "trespassers william|having 2x translucent gold with": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bad suns|neon coral white mist": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1691,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|deady hunka junk on sale romanusrecords com": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
