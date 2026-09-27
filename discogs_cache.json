@@ -82558,5 +82558,14 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|paradis recto verso 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
