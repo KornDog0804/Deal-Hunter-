@@ -82567,5 +82567,60 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "bad brains are you ready the first studio recording inner ear|march 1979 transparent yellow": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3616,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nessa barrett|autographed": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7792,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tony Bennett",
+    "discogs_title": "Autographed Edition Of Hits",
+    "discogs_release_id": 1892233,
+    "discogs_url": "https://www.discogs.com/release/1892233-Tony-Bennett-Autographed-Edition-Of-Hits",
+    "discogs_mint_price": 0.23,
+    "discogs_lowest": 0.23,
+    "discogs_num_for_sale": 105,
+    "discogs_have": 729,
+    "discogs_want": 18
+  },
+  "euphoriphilia blissed suzy shee|vv": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7653,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Julith Krishun",
+    "discogs_title": "VV",
+    "discogs_release_id": 5067468,
+    "discogs_url": "https://www.discogs.com/release/5067468-Julith-Krishun-VV",
+    "discogs_mint_price": 6.46,
+    "discogs_lowest": 6.46,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 74,
+    "discogs_want": 5
+  },
+  "pepper|no shame 20th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "remo drive|park ave signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.372,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
