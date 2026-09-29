@@ -70,14 +70,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 210
+Brooklyn Vegan: kept 213
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 178
+Revolver: kept 179
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -165,9 +165,9 @@ Sumerian Records: kept 79
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
-Solid State Records: 158 products via Shopify JSON
-Solid State Records: kept 52
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
+Solid State Records: 173 products via Shopify JSON
+Solid State Records: kept 61
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 158 products
-Solid State Vinyl: 158 products via Shopify JSON
-Solid State Vinyl: kept 52
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
+Solid State Vinyl: 173 products via Shopify JSON
+Solid State Vinyl: kept 61
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -338,7 +338,7 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 14
+Hot Topic: kept 19
 
 ==================================================
 Scraping: Deep Discount (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2685 normalized vinyl listings
+[Stage2] 2703 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7596 entries
-[Discogs] Enriching 2685 vinyl records with Mint pricing...
-[Discogs] Cache saved (7596 entries)
+[Discogs] Loaded cache with 7617 entries
+[Discogs] Enriching 2703 vinyl records with Mint pricing...
+[Discogs] Cache saved (7617 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 50 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 402048 bytes
+[UpcomingVinyl] Got 401773 bytes
 [UpcomingVinyl] Found 479 raw record URLs
 [UpcomingVinyl] MATCH: Chris Brown | Chris Brown
 [UpcomingVinyl] MATCH: Ghost | Opus Eponymous
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Rush | The Spirit Of Radio Greatest Hits 1974 1987
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 152 qualified signals saved
+[BuySignals] 151 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -462,8 +462,8 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 84 deals
   Rise Records: 90 deals
   Rise All: 90 deals
-  Brooklyn Vegan: 210 deals
-  Revolver: 178 deals
+  Brooklyn Vegan: 213 deals
+  Revolver: 179 deals
   Newbury Comics: 208 deals
   Newbury Preorders: 208 deals
   Craft Recordings: 86 deals
@@ -475,8 +475,8 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 153 deals
   RMFN All: 153 deals
   Sumerian Records: 79 deals
-  Solid State Records: 52 deals
-  Solid State Vinyl: 52 deals
+  Solid State Records: 61 deals
+  Solid State Vinyl: 61 deals
   Pure Noise Records: 86 deals
   Hopeless Records: 65 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -487,7 +487,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 14 deals
+  Hot Topic: 19 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -497,25 +497,25 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 210
+Brooklyn Vegan: 213
 Craft Recordings: 86
 Equal Vision: 107
 Fearless Records: 84
 Hopeless Records: 65
-Hot Topic: 14
+Hot Topic: 19
 Interscope Records: 142
 MNRK Heavy: 139
 Newbury Comics: 208
 Pirates Press Records: 97
 Pure Noise Records: 86
-r/VinylReleases: 49
-Revolver: 178
+r/VinylReleases: 45
+Revolver: 179
 Rhino: 87
 Rise Records: 90
 Rock Metal Fan Nation: 153
 Rollin Records: 237
 SharpTone Records: 104
-Solid State Records: 52
+Solid State Records: 61
 Sound of Vinyl: 239
 Spinefarm Records: 88
 Sumerian Records: 78
