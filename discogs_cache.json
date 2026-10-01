@@ -83957,5 +83957,424 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "the smashing pumpkins|mellon collie and the infinite sadness 4": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Smashing Pumpkins",
+    "discogs_title": "Mellon Collie And The Infinite Sadness",
+    "discogs_release_id": 4082874,
+    "discogs_url": "https://www.discogs.com/release/4082874-The-Smashing-Pumpkins-Mellon-Collie-And-The-Infinite-Sadness",
+    "discogs_mint_price": 77.13,
+    "discogs_lowest": 77.13,
+    "discogs_num_for_sale": 65,
+    "discogs_have": 17218,
+    "discogs_want": 9169
+  },
+  "guns n roses|use your illusion 4": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9642,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Guns N' Roses",
+    "discogs_title": "Use Your Illusion I",
+    "discogs_release_id": 3286068,
+    "discogs_url": "https://www.discogs.com/release/3286068-Guns-N-Roses-Use-Your-Illusion-I",
+    "discogs_mint_price": 44.06,
+    "discogs_lowest": 44.06,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 783,
+    "discogs_want": 638
+  },
+  "john lennon|lennon 9 box": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "John Lennon",
+    "discogs_title": "Lennon",
+    "discogs_release_id": 7091357,
+    "discogs_url": "https://www.discogs.com/release/7091357-John-Lennon-Lennon",
+    "discogs_mint_price": 127.33,
+    "discogs_lowest": 127.33,
+    "discogs_num_for_sale": 44,
+    "discogs_have": 2072,
+    "discogs_want": 366
+  },
+  "redeye|emma ruth rundle marked for death": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6838,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|emma ruth rundle on dark horses": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6838,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|russian circles blood year": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6866,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|russian circles guidance 10th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|sisters of mercy floodland": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|through the looking glass 180g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7077,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|a kiss in the dreamhouse 180g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7077,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|tinderbox 180g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7077,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the scream 180g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7077,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|all souls": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7621,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Siouxsie And The Banshees*",
+    "discogs_title": "All Souls",
+    "discogs_release_id": 24885590,
+    "discogs_url": "https://www.discogs.com/release/24885590-Siouxsie-And-The-Banshees-All-Souls",
+    "discogs_mint_price": 17.05,
+    "discogs_lowest": 17.05,
+    "discogs_num_for_sale": 104,
+    "discogs_have": 2162,
+    "discogs_want": 136
+  },
+  "unknown artist|prick": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.76,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Something For Kate",
+    "discogs_title": "Prick",
+    "discogs_release_id": 2869367,
+    "discogs_url": "https://www.discogs.com/release/2869367-Something-For-Kate-Prick",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 34,
+    "discogs_want": 39
+  },
+  "unknown artist|songs you know by heart parrot red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5139,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|guns n roses greatest hits black and red": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7733,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Guns N' Roses",
+    "discogs_title": "Greatest Hits",
+    "discogs_release_id": 32510958,
+    "discogs_url": "https://www.discogs.com/release/32510958-Guns-N-Roses-Greatest-Hits-",
+    "discogs_mint_price": 51.12,
+    "discogs_lowest": 51.12,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 1142,
+    "discogs_want": 152
+  },
+  "unknown artist|multitude 1": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6866,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|long after dark turquoise translucent 180g": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|on the road to findout blue 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7024,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|hits are for squares gold nugget 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6768,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|details": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Unknown Artist",
+    "discogs_title": "Details On Operation Pageworth Sales Plan",
+    "discogs_release_id": 26715539,
+    "discogs_url": "https://www.discogs.com/release/26715539-Unknown-Artist-Details-On-Operation-Pageworth-Sales-Plan",
+    "discogs_mint_price": 35.0,
+    "discogs_lowest": 35.0,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 1,
+    "discogs_want": 0
+  },
+  "unknown artist|weezer weezer": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kgb 7|ad la official store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3634,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sabrina carpenter|man s best friend": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sabrina Carpenter",
+    "discogs_title": "Man's Best Friend",
+    "discogs_release_id": 34817141,
+    "discogs_url": "https://www.discogs.com/release/34817141-Sabrina-Carpenter-Mans-Best-Friend",
+    "discogs_mint_price": 19.99,
+    "discogs_lowest": 19.99,
+    "discogs_num_for_sale": 29,
+    "discogs_have": 7489,
+    "discogs_want": 1184
+  },
+  "magdalena bay|imaginal disk anniversary box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jeffrey joe jensen|new coke new coke goner records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|reba for my broken heart": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6967,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "after 20 years a repress of air traffic|fractured life": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Air Traffic",
+    "discogs_title": "Fractured Life",
+    "discogs_release_id": 3004588,
+    "discogs_url": "https://www.discogs.com/release/3004588-Air-Traffic-Fractured-Life",
+    "discogs_mint_price": 250.0,
+    "discogs_lowest": 250.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 81,
+    "discogs_want": 280
+  },
+  "sinister|mobbin 4 life 2x": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ari balouzian phoebe bridgers|primetime original motion picture soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "my chemical romance|the black parade laser etched hologram": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|parachutes 10 year anniversary signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bobby weir|blue mountain": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9644,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bob Weir",
+    "discogs_title": "Blue Mountain",
+    "discogs_release_id": 9144326,
+    "discogs_url": "https://www.discogs.com/release/9144326-Bob-Weir-Blue-Mountain",
+    "discogs_mint_price": 80.0,
+    "discogs_lowest": 80.0,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 1723,
+    "discogs_want": 295
+  },
+  "unknown artist|holly humberstone cruel world so it ends": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the tony rice unit manzanita wax mage limited of 25": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6856,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ari balouzian and phoebe bridgers|blue bendy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3082,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "practical magic|music from the motion picture": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2904,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "talking heads|fear of music rough trade rough trade": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4357,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "u2|third man records yellow": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4718,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|skycamefalling to forever embrace the sun": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6485,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|jazz dreams by fine purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3672,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
