@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 84
+Fearless Records: kept 83
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,7 +46,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 84
+Fearless Vinyl: kept 83
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -77,7 +77,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 156
+Revolver: kept 157
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 144
+Interscope Records: kept 145
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -338,14 +338,14 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 19
+Hot Topic: kept 18
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7762 entries
+[Discogs] Loaded cache with 7779 entries
 [Discogs] Enriching 2664 vinyl records with Mint pricing...
-[Discogs] Cache saved (7762 entries)
+[Discogs] Cache saved (7779 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 44 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 406836 bytes
+[UpcomingVinyl] Got 406350 bytes
 [UpcomingVinyl] Found 483 raw record URLs
 [UpcomingVinyl] MATCH: Chris Brown | Chris Brown
 [UpcomingVinyl] MATCH: Ghost | Opus Eponymous
@@ -458,19 +458,19 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 237 deals
   Sound of Vinyl: 239 deals
   uDiscover Music: 136 deals
-  Fearless Records: 84 deals
-  Fearless Vinyl: 84 deals
+  Fearless Records: 83 deals
+  Fearless Vinyl: 83 deals
   Rise Records: 91 deals
   Rise All: 91 deals
   Brooklyn Vegan: 201 deals
-  Revolver: 156 deals
+  Revolver: 157 deals
   Newbury Comics: 208 deals
   Newbury Preorders: 208 deals
   Craft Recordings: 85 deals
   MNRK Heavy: 139 deals
   Equal Vision: 104 deals
   Rhino: 86 deals
-  Interscope Records: 144 deals
+  Interscope Records: 145 deals
   SharpTone Records: 104 deals
   Rock Metal Fan Nation: 153 deals
   RMFN All: 153 deals
@@ -487,8 +487,8 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 19 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Hot Topic: 18 deals
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -500,16 +500,16 @@ Amazon: 1
 Brooklyn Vegan: 201
 Craft Recordings: 85
 Equal Vision: 104
-Fearless Records: 84
+Fearless Records: 83
 Hopeless Records: 65
-Hot Topic: 19
-Interscope Records: 144
+Hot Topic: 18
+Interscope Records: 145
 MNRK Heavy: 139
 Newbury Comics: 208
 Pirates Press Records: 97
 Pure Noise Records: 86
-r/VinylReleases: 46
-Revolver: 156
+r/VinylReleases: 42
+Revolver: 157
 Rhino: 86
 Rise Records: 91
 Rock Metal Fan Nation: 153
