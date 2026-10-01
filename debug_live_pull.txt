@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 90
+Rise Records: kept 91
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,7 +63,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 90
+Rise All: kept 91
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -77,14 +77,14 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 155
+Revolver: kept 156
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 207
+Newbury Comics: kept 208
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -94,7 +94,7 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 207
+Newbury Preorders: kept 208
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -120,8 +120,8 @@ Equal Vision: kept 104
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 186 products
-Rhino: 186 products via Shopify JSON
+  ✓ https://store.rhino.com/products.json?limit=250 -> 187 products
+Rhino: 187 products via Shopify JSON
 Rhino: kept 86
 
 ==================================================
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 145
+Interscope Records: kept 144
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 19
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2662 normalized vinyl listings
+[Stage2] 2664 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7721 entries
-[Discogs] Enriching 2662 vinyl records with Mint pricing...
-[Discogs] Cache saved (7721 entries)
+[Discogs] Loaded cache with 7762 entries
+[Discogs] Enriching 2664 vinyl records with Mint pricing...
+[Discogs] Cache saved (7762 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 405324 bytes
+[UpcomingVinyl] Got 406836 bytes
 [UpcomingVinyl] Found 483 raw record URLs
 [UpcomingVinyl] MATCH: Chris Brown | Chris Brown
 [UpcomingVinyl] MATCH: Ghost | Opus Eponymous
@@ -460,17 +460,17 @@ SOURCE STATUS SUMMARY
   uDiscover Music: 136 deals
   Fearless Records: 84 deals
   Fearless Vinyl: 84 deals
-  Rise Records: 90 deals
-  Rise All: 90 deals
+  Rise Records: 91 deals
+  Rise All: 91 deals
   Brooklyn Vegan: 201 deals
-  Revolver: 155 deals
-  Newbury Comics: 207 deals
-  Newbury Preorders: 207 deals
+  Revolver: 156 deals
+  Newbury Comics: 208 deals
+  Newbury Preorders: 208 deals
   Craft Recordings: 85 deals
   MNRK Heavy: 139 deals
   Equal Vision: 104 deals
   Rhino: 86 deals
-  Interscope Records: 145 deals
+  Interscope Records: 144 deals
   SharpTone Records: 104 deals
   Rock Metal Fan Nation: 153 deals
   RMFN All: 153 deals
@@ -488,7 +488,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 19 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -503,15 +503,15 @@ Equal Vision: 104
 Fearless Records: 84
 Hopeless Records: 65
 Hot Topic: 19
-Interscope Records: 145
+Interscope Records: 144
 MNRK Heavy: 139
-Newbury Comics: 207
+Newbury Comics: 208
 Pirates Press Records: 97
 Pure Noise Records: 86
-r/VinylReleases: 47
-Revolver: 155
+r/VinylReleases: 46
+Revolver: 156
 Rhino: 86
-Rise Records: 90
+Rise Records: 91
 Rock Metal Fan Nation: 153
 Rollin Records: 237
 SharpTone Records: 104
