@@ -165,9 +165,9 @@ Sumerian Records: kept 82
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Records: 173 products via Shopify JSON
-Solid State Records: kept 61
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Records: 172 products via Shopify JSON
+Solid State Records: kept 60
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Vinyl: 173 products via Shopify JSON
-Solid State Vinyl: kept 61
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Vinyl: 172 products via Shopify JSON
+Solid State Vinyl: kept 60
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2685 normalized vinyl listings
+[Stage2] 2684 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7841 entries
-[Discogs] Enriching 2685 vinyl records with Mint pricing...
-[Discogs] Cache saved (7841 entries)
+[Discogs] Loaded cache with 7896 entries
+[Discogs] Enriching 2684 vinyl records with Mint pricing...
+[Discogs] Cache saved (7896 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 346671 bytes
+[UpcomingVinyl] Got 346827 bytes
 [UpcomingVinyl] Found 408 raw record URLs
 [UpcomingVinyl] MATCH: Chris Brown | Chris Brown
 [UpcomingVinyl] MATCH: Ghost | Opus Eponymous
@@ -473,8 +473,8 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 153 deals
   RMFN All: 153 deals
   Sumerian Records: 82 deals
-  Solid State Records: 61 deals
-  Solid State Vinyl: 61 deals
+  Solid State Records: 60 deals
+  Solid State Vinyl: 60 deals
   Pure Noise Records: 86 deals
   Hopeless Records: 66 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -506,14 +506,14 @@ MNRK Heavy: 139
 Newbury Comics: 209
 Pirates Press Records: 98
 Pure Noise Records: 86
-r/VinylReleases: 46
+r/VinylReleases: 45
 Revolver: 158
 Rhino: 87
 Rise Records: 91
 Rock Metal Fan Nation: 153
 Rollin Records: 238
 SharpTone Records: 104
-Solid State Records: 61
+Solid State Records: 60
 Sound of Vinyl: 239
 Spinefarm Records: 88
 Sumerian Records: 81
