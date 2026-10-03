@@ -85832,5 +85832,87 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|phoebe bridgers lost weekend 2 hand signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the be good tanyas|blue horse": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Be Good Tanyas",
+    "discogs_title": "Blue Horse",
+    "discogs_release_id": 3217271,
+    "discogs_url": "https://www.discogs.com/release/3217271-The-Be-Good-Tanyas-Blue-Horse",
+    "discogs_mint_price": 493.42,
+    "discogs_lowest": 493.42,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 191,
+    "discogs_want": 502
+  },
+  "um jennifer|um comma jennifer question mark blood red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "brothers|cola bottle 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5069,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the black keys magic potion": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6942,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|the winx club soundtrack first time on": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the connells|darker days": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Connells",
+    "discogs_title": "Darker Days",
+    "discogs_release_id": 24130148,
+    "discogs_url": "https://www.discogs.com/release/24130148-The-Connells-Darker-Days",
+    "discogs_mint_price": 18.99,
+    "discogs_lowest": 18.99,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 19,
+    "discogs_want": 14
+  },
+  "unknown artist|20th anniversary pressing of self titled from smartpunk": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
