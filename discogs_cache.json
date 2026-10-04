@@ -85914,5 +85914,143 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "nirvana|bleach": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Nirvana",
+    "discogs_title": "Bleach",
+    "discogs_release_id": 4281417,
+    "discogs_url": "https://www.discogs.com/release/4281417-Nirvana-Bleach",
+    "discogs_mint_price": 79.99,
+    "discogs_lowest": 79.99,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 541,
+    "discogs_want": 947
+  },
+  "unknown artist|black sheep non fiction": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7024,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "roxette|pearls of passion": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Roxette",
+    "discogs_title": "Pearls Of Passion",
+    "discogs_release_id": 1342382,
+    "discogs_url": "https://www.discogs.com/release/1342382-Roxette-Pearls-Of-Passion",
+    "discogs_mint_price": 6.89,
+    "discogs_lowest": 6.89,
+    "discogs_num_for_sale": 30,
+    "discogs_have": 2199,
+    "discogs_want": 442
+  },
+  "morten harket|human grace": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.758,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "jamie t|ghosts": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7929,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Hania Rani",
+    "discogs_title": "Ghosts",
+    "discogs_release_id": 28522951,
+    "discogs_url": "https://www.discogs.com/release/28522951-Hania-Rani-Ghosts",
+    "discogs_mint_price": 31.46,
+    "discogs_lowest": 31.46,
+    "discogs_num_for_sale": 49,
+    "discogs_have": 1245,
+    "discogs_want": 229
+  },
+  "pageninetynine|document 8": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Pageninetynine*",
+    "discogs_title": "Document #8",
+    "discogs_release_id": 3628505,
+    "discogs_url": "https://www.discogs.com/release/3628505-Pageninetynine-Document-8",
+    "discogs_mint_price": 69.69,
+    "discogs_lowest": 69.69,
+    "discogs_num_for_sale": 8,
+    "discogs_have": 391,
+    "discogs_want": 507
+  },
+  "pouya|signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.744,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "taylor swift|the life of a showgirl the shiny bug edition us": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|lil peep s estate announces 4 region s for hellboy s 10th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "richard thompson|you me us": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7824,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Zeros",
+    "discogs_title": "You, Me, Us",
+    "discogs_release_id": 1916053,
+    "discogs_url": "https://www.discogs.com/release/1916053-The-Zeros-You-Me-Us",
+    "discogs_mint_price": 5.0,
+    "discogs_lowest": 5.0,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 127,
+    "discogs_want": 33
+  },
+  "yeule|serotonin ii": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Yeule",
+    "discogs_title": "Serotonin II",
+    "discogs_release_id": 15167847,
+    "discogs_url": "https://www.discogs.com/release/15167847-Yeule-Serotonin-II",
+    "discogs_mint_price": 15.0,
+    "discogs_lowest": 15.0,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 1197,
+    "discogs_want": 380
+  },
+  "unknown artist|john coltrane with the red garland trio craft ojc october 9th 2026": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
