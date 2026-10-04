@@ -9723,5 +9723,30 @@
     "amazing_deal": false,
     "availability_text": "Brad's Toys • available",
     "collectible": true
+  },
+  {
+    "category": "FUNKO",
+    "title": "POP! Strawberry Shortcake #133 LEMON MERINGUE & FRAPPE Scented",
+    "raw_title": "POP! Strawberry Shortcake #133 LEMON MERINGUE & FRAPPE Scented",
+    "source": "Brad's Toys",
+    "source_type": "collectible_product",
+    "product_type": "Vaulted Pop",
+    "franchise": "",
+    "character": "",
+    "price": 34.99,
+    "compare_at_price": 0,
+    "discount_pct": 0,
+    "image": "",
+    "link": "https://www.bradstoys.com/products/lemonmeringueandfrappestrawberryshortcakefunkopop",
+    "exclusive": false,
+    "chase": false,
+    "preorder": false,
+    "sold_out": true,
+    "clearance": false,
+    "sale": true,
+    "deal": false,
+    "amazing_deal": false,
+    "availability_text": "Sold Out",
+    "collectible": true
   }
 ]

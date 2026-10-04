@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7904 entries
+[Discogs] Loaded cache with 7916 entries
 [Discogs] Enriching 2685 vinyl records with Mint pricing...
-[Discogs] Cache saved (7904 entries)
+[Discogs] Cache saved (7916 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 347253 bytes
+[UpcomingVinyl] Got 346827 bytes
 [UpcomingVinyl] Found 408 raw record URLs
 [UpcomingVinyl] MATCH: Chris Brown | Chris Brown
 [UpcomingVinyl] MATCH: Ghost | Opus Eponymous
