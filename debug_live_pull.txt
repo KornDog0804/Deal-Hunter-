@@ -122,7 +122,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 187 products
 Rhino: 187 products via Shopify JSON
-Rhino: kept 87
+Rhino: kept 86
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2685 normalized vinyl listings
+[Stage2] 2684 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 7916 entries
-[Discogs] Enriching 2685 vinyl records with Mint pricing...
-[Discogs] Cache saved (7916 entries)
+[Discogs] Loaded cache with 7933 entries
+[Discogs] Enriching 2684 vinyl records with Mint pricing...
+[Discogs] Cache saved (7933 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,14 +437,14 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 346803 bytes
-[UpcomingVinyl] Found 408 raw record URLs
-[UpcomingVinyl] MATCH: Chris Brown | Chris Brown
-[UpcomingVinyl] MATCH: Ghost | Opus Eponymous
-[UpcomingVinyl] MATCH: Ghost | Dubs Oblique
-[UpcomingVinyl] MATCH: New Found Glory | Sticks And Stones
-[UpcomingVinyl] MATCH: Red Hot Chili Peppers | Stadium Arcadium 20th Anniversary Canary Yellow Apple
-[UpcomingVinyl] MATCH: Rush | The Spirit Of Radio Greatest Hits 1974 1987
+[UpcomingVinyl] Got 389817 bytes
+[UpcomingVinyl] Found 460 raw record URLs
+[UpcomingVinyl] MATCH: Foreigner | Records Greatest Hits
+[UpcomingVinyl] MATCH: Judas Priest | Sad Wings Of Destiny Original 1976 Masters
+[UpcomingVinyl] MATCH: Michael Jackson | Bad
+[UpcomingVinyl] MATCH: Of Virtue | Death Of The Altar Limited Gold
+[UpcomingVinyl] MATCH: Of Virtue | Death Of The Altar Limited Neon Pink Purple Splatter
+[UpcomingVinyl] MATCH: Rush | Fly By Night
 [UpcomingVinyl] Total Korndog matches: 6
 [UpcomingVinyl] 6 whitelist matches saved to upcoming_releases.json
 [BuySignals] 155 qualified signals saved
@@ -467,7 +467,7 @@ SOURCE STATUS SUMMARY
   Craft Recordings: 85 deals
   MNRK Heavy: 139 deals
   Equal Vision: 104 deals
-  Rhino: 87 deals
+  Rhino: 86 deals
   Interscope Records: 145 deals
   SharpTone Records: 104 deals
   Rock Metal Fan Nation: 153 deals
@@ -508,7 +508,7 @@ Pirates Press Records: 98
 Pure Noise Records: 86
 r/VinylReleases: 48
 Revolver: 158
-Rhino: 87
+Rhino: 86
 Rise Records: 91
 Rock Metal Fan Nation: 153
 Rollin Records: 238
