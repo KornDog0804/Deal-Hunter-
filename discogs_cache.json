@@ -86402,5 +86402,136 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "warner|muse drones 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|twenty one pilots clancy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7091,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|eve 6 eve 6": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|the afghan whigs congregation 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|the black keys brothers 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "warner|the black keys magic potion 20th anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sony|the clash the world according to the clash": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5932,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ahmad jamal|live in paris 1971 2 november 6 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3146,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|rachel chinouriri i think i spoke too soon 300": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lucky daye|aloud": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6942,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|truth or consequence amyl and the sniffers": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5203,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "wor t girl in america wor t man in america|inver e 2 disc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3317,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "slayyyter|head white and blue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6249,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "slayyyter|fireworks": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7811,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Shackleton",
+    "discogs_title": "Fireworks",
+    "discogs_release_id": 2713924,
+    "discogs_url": "https://www.discogs.com/release/2713924-Shackleton-Fireworks",
+    "discogs_mint_price": 9.86,
+    "discogs_lowest": 9.86,
+    "discogs_num_for_sale": 28,
+    "discogs_have": 842,
+    "discogs_want": 397
   }
 }
