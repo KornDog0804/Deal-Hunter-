@@ -87071,5 +87071,337 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "universal|suicidal tendencies join the army": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "brother s keeper|you can t kill me": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7832,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Brutal Disorder",
+    "discogs_title": "You Can't Kill Me",
+    "discogs_release_id": 759803,
+    "discogs_url": "https://www.discogs.com/release/759803-Brutal-Disorder-You-Cant-Kill-Me",
+    "discogs_mint_price": 2.81,
+    "discogs_lowest": 2.81,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 55,
+    "discogs_want": 10
+  },
+  "duffy|rockferry deluxe edition 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "soup activists|where the rubbish goes": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "carter faith|cherry valley": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Carter Faith",
+    "discogs_title": "Cherry Valley",
+    "discogs_release_id": 35293309,
+    "discogs_url": "https://www.discogs.com/release/35293309-Carter-Faith-Cherry-Valley",
+    "discogs_mint_price": 47.03,
+    "discogs_lowest": 47.03,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 175,
+    "discogs_want": 23
+  },
+  "hood|november 13 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7109,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "psychic ills|inner journey out": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Psychic Ills",
+    "discogs_title": "Inner Journey Out",
+    "discogs_release_id": 8605170,
+    "discogs_url": "https://www.discogs.com/release/8605170-Psychic-Ills-Inner-Journey-Out",
+    "discogs_mint_price": 65.0,
+    "discogs_lowest": 65.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 385,
+    "discogs_want": 192
+  },
+  "andrew mcmahon|strings attached vol ii ep 3000": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "star moles|highway to hell secretly society record club ash": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "thundercat|distracted": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Thundercat",
+    "discogs_title": "Distracted",
+    "discogs_release_id": 36964353,
+    "discogs_url": "https://www.discogs.com/release/36964353-Thundercat-Distracted",
+    "discogs_mint_price": 39.31,
+    "discogs_lowest": 39.31,
+    "discogs_num_for_sale": 11,
+    "discogs_have": 224,
+    "discogs_want": 63
+  },
+  "unknown artist|yuka mizuhara moon dust 12 from rush hour": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "duffy|signed deluxe store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.262,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "duffy|signed deluxe 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "elton john|rock of the westies sea blue and electric blue 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "felix laband|dark days exit 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "motion city soundtrack|my dinosaur life 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "wolves in the throne room|primordial arcana gold nugget 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "shakey graves|and the war came 10 year anniversary edition 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "various artists|sweet inspiration guilty reggae pleasures 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|essential artist collection 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dusty springfield|you don t have to say you love me white 23 oct 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "boris michio kurihara|rainbow": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.966,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Boris (3) With Michio Kurihara",
+    "discogs_title": "Rainbow",
+    "discogs_release_id": 997037,
+    "discogs_url": "https://www.discogs.com/release/997037-Boris-3-With-Michio-Kurihara-Rainbow",
+    "discogs_mint_price": 144.1,
+    "discogs_lowest": 144.1,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 212,
+    "discogs_want": 502
+  },
+  "rsd uk|black friday s": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ad la prima|polydor store uk": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3634,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "down|marbled 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "shawn mendes|mtv unplugged": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Shawn Mendes",
+    "discogs_title": "MTV Unplugged",
+    "discogs_release_id": 11679311,
+    "discogs_url": "https://www.discogs.com/release/11679311-Shawn-Mendes-MTV-Unplugged",
+    "discogs_mint_price": 222.84,
+    "discogs_lowest": 222.84,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 284,
+    "discogs_want": 475
+  },
+  "cloonee|are you still you": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6328,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "isabella lovestory|amor hardcore restock": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "parkway drive|live at the sydney opera house 3xpaperbark": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|parkway drive live at the sydney opera house 3xcrystal": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "parkway drive|home live at the sydney opera house 3": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6195,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "slayer|reign in blood": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Slayer",
+    "discogs_title": "Reign In Blood",
+    "discogs_release_id": 9110056,
+    "discogs_url": "https://www.discogs.com/release/9110056-Slayer-Reign-In-Blood",
+    "discogs_mint_price": 542.17,
+    "discogs_lowest": 542.17,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 29,
+    "discogs_want": 508
+  },
+  "david archuleta|warm me up gatefold": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4089,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
