@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 145
+uDiscover Music: kept 144
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -70,7 +70,7 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 203
+Brooklyn Vegan: kept 201
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -101,7 +101,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 89
+Craft Recordings: kept 94
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -338,7 +338,7 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 15
+Hot Topic: kept 16
 
 ==================================================
 Scraping: Deep Discount (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2670 normalized vinyl listings
+[Stage2] 2673 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8050 entries
-[Discogs] Enriching 2670 vinyl records with Mint pricing...
-[Discogs] Cache saved (8050 entries)
+[Discogs] Loaded cache with 8078 entries
+[Discogs] Enriching 2673 vinyl records with Mint pricing...
+[Discogs] Cache saved (8078 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 398932 bytes
+[UpcomingVinyl] Got 399448 bytes
 [UpcomingVinyl] Found 471 raw record URLs
 [UpcomingVinyl] MATCH: Foreigner | Records Greatest Hits
 [UpcomingVinyl] MATCH: Judas Priest | Sad Wings Of Destiny Original 1976 Masters
@@ -447,7 +447,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Rush | Fly By Night
 [UpcomingVinyl] Total Korndog matches: 6
 [UpcomingVinyl] 6 whitelist matches saved to upcoming_releases.json
-[BuySignals] 153 qualified signals saved
+[BuySignals] 156 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -455,16 +455,16 @@ SOURCE STATUS SUMMARY
   Rollin Records: 238 deals
   Rollin Preorders: 238 deals
   Sound of Vinyl: 239 deals
-  uDiscover Music: 145 deals
+  uDiscover Music: 144 deals
   Fearless Records: 83 deals
   Fearless Vinyl: 83 deals
   Rise Records: 91 deals
   Rise All: 91 deals
-  Brooklyn Vegan: 203 deals
+  Brooklyn Vegan: 201 deals
   Revolver: 160 deals
   Newbury Comics: 209 deals
   Newbury Preorders: 209 deals
-  Craft Recordings: 89 deals
+  Craft Recordings: 94 deals
   MNRK Heavy: 138 deals
   Equal Vision: 104 deals
   Rhino: 87 deals
@@ -485,7 +485,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 15 deals
+  Hot Topic: 16 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -495,18 +495,18 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 203
-Craft Recordings: 89
+Brooklyn Vegan: 201
+Craft Recordings: 94
 Equal Vision: 104
 Fearless Records: 83
 Hopeless Records: 66
-Hot Topic: 15
+Hot Topic: 16
 Interscope Records: 130
 MNRK Heavy: 138
 Newbury Comics: 209
 Pirates Press Records: 97
 Pure Noise Records: 86
-r/VinylReleases: 45
+r/VinylReleases: 44
 Revolver: 160
 Rhino: 87
 Rise Records: 91
@@ -518,5 +518,5 @@ Sound of Vinyl: 239
 Spinefarm Records: 88
 Sumerian Records: 83
 Target: 1
-uDiscover Music: 145
+uDiscover Music: 144
 Walmart: 1
