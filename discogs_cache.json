@@ -88091,5 +88091,133 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "bill conti|rocky 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Bill Conti",
+    "discogs_title": "Rocky (Original Motion Picture Score)",
+    "discogs_release_id": 976685,
+    "discogs_url": "https://www.discogs.com/release/976685-Bill-Conti-Rocky-Original-Motion-Picture-Score",
+    "discogs_mint_price": 2.0,
+    "discogs_lowest": 2.0,
+    "discogs_num_for_sale": 45,
+    "discogs_have": 6262,
+    "discogs_want": 575
+  },
+  "death s dynamic shroud|heavy black heart black 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5741,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|signed in gatefold sunn o sunn o": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.384,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nofx|the war on errorism": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "NOFX",
+    "discogs_title": "The War On Errorism",
+    "discogs_release_id": 33163437,
+    "discogs_url": "https://www.discogs.com/release/33163437-NOFX-The-War-On-Errorism",
+    "discogs_mint_price": 337.08,
+    "discogs_lowest": 337.08,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 23,
+    "discogs_want": 50
+  },
+  "dance hall crashers|purr": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Dance Hall Crashers",
+    "discogs_title": "Purr",
+    "discogs_release_id": 4608113,
+    "discogs_url": "https://www.discogs.com/release/4608113-Dance-Hall-Crashers-Purr",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 0,
+    "discogs_want": 61
+  },
+  "unknown artist|produziert von dj desue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2851,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madra salach|gorta signed art card irish clay edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "parannoul|poclanos": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6665,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "anthony willis|wuthering heights white and red marbled": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madra salach|gorta rough trade iridescent edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "templars|effossus 1993 1999": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9744,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Templars",
+    "discogs_title": "Effossus: 1993-1999",
+    "discogs_release_id": 38628393,
+    "discogs_url": "https://www.discogs.com/release/38628393-The-Templars-Effossus-1993-1999",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 5,
+    "discogs_want": 17
+  },
+  "unknown artist|mercurial world by magdalena bay 5 year anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
