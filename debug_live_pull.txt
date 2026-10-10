@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8228 entries
+[Discogs] Loaded cache with 8231 entries
 [Discogs] Enriching 2670 vinyl records with Mint pricing...
-[Discogs] Cache saved (8228 entries)
+[Discogs] Cache saved (8231 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 385178 bytes
+[UpcomingVinyl] Got 384662 bytes
 [UpcomingVinyl] Found 453 raw record URLs
 [UpcomingVinyl] MATCH: Foreigner | Records Greatest Hits
 [UpcomingVinyl] MATCH: Judas Priest | Sad Wings Of Destiny Original 1976 Masters
