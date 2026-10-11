@@ -89417,5 +89417,55 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|the academy is almost there hot topic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rochelle jordan|through the wall remixes disc 3": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kitty coen|conversations with the moon signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ramones|ramones blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4907,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "femtanyl|man bites dog black green sunburst": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Femtanyl",
+    "discogs_title": "Man Bites Dog",
+    "discogs_release_id": 37042239,
+    "discogs_url": "https://www.discogs.com/release/37042239-Femtanyl-Man-Bites-Dog",
+    "discogs_mint_price": 191.01,
+    "discogs_lowest": 191.01,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 87,
+    "discogs_want": 62
   }
 }
