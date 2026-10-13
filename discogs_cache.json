@@ -89607,5 +89607,78 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "redeye|sikth death of a dead day mmxxvi 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "air|the virgin suicides redux": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "AIR",
+    "discogs_title": "The Virgin Suicides Redux",
+    "discogs_release_id": 35187295,
+    "discogs_url": "https://www.discogs.com/release/35187295-AIR-The-Virgin-Suicides-Redux",
+    "discogs_mint_price": 20.33,
+    "discogs_lowest": 20.33,
+    "discogs_num_for_sale": 123,
+    "discogs_have": 3570,
+    "discogs_want": 441
+  },
+  "unwanted superheroes|you don t need this as bad as i do": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3144,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "2pac|the don killuminati the 7 day theory hellstar edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "vince gill|pocket full of gold": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Vince Gill",
+    "discogs_title": "Pocket Full Of Gold",
+    "discogs_release_id": 11686356,
+    "discogs_url": "https://www.discogs.com/release/11686356-Vince-Gill-Pocket-Full-Of-Gold-",
+    "discogs_mint_price": 2.95,
+    "discogs_lowest": 2.95,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 8,
+    "discogs_want": 5
+  },
+  "flwrchyld|insydeout": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chillhop timezones france|300 copies": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3396,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
