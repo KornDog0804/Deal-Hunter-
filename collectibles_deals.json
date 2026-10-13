@@ -2366,12 +2366,12 @@
     "exclusive": true,
     "chase": false,
     "preorder": false,
-    "sold_out": false,
+    "sold_out": true,
     "clearance": false,
     "sale": true,
     "deal": false,
     "amazing_deal": false,
-    "availability_text": "Brad's Toys • available",
+    "availability_text": "Sold Out",
     "collectible": true
   },
   {
@@ -8616,12 +8616,12 @@
     "exclusive": false,
     "chase": true,
     "preorder": false,
-    "sold_out": false,
+    "sold_out": true,
     "clearance": false,
     "sale": true,
     "deal": false,
     "amazing_deal": false,
-    "availability_text": "Brad's Toys • available",
+    "availability_text": "Sold Out",
     "collectible": true
   },
   {
