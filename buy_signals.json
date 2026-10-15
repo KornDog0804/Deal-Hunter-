@@ -3173,42 +3173,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "The Flatliners",
-    "title": "Cold World • Light Blue/Dark Blue Starburst w/ White Splatter • Limited to 250",
-    "raw_title": "Cold World • Light Blue/Dark Blue Starburst w/ White Splatter • Limited to 250",
-    "price": 25.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/flatcldwlb-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/90f171f91a31410788948adeb81f05af.jpg?v=1771334703",
-    "score": 60,
-    "stage2_score": 60,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "splatter",
-      "under-$25"
-    ],
-    "release_key": "the flatliners::cold world light blue dark blue starburst w white splatter limited to 250",
-    "version": "limited splatter",
-    "format": "vinyl",
-    "buyer_score": 100,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "I Am The Avalanche",
     "title": "The Horror Show • Black w/ Grey Splatter • Limited to 250",
     "raw_title": "The Horror Show • Black w/ Grey Splatter • Limited to 250",
@@ -5523,7 +5487,7 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "The Number Twelve Looks Like You",
+    "artist": "NM12",
     "title": "Howls From The Holographic Heart • Green w/ White Splatter & Black Segment • Limited to 250",
     "raw_title": "Howls From The Holographic Heart • Green w/ White Splatter & Black Segment • Limited to 250",
     "price": 30.0,
@@ -5539,7 +5503,7 @@
       "splatter",
       "under-$30"
     ],
-    "release_key": "the number twelve looks like you::howls from the holographic heart green w white splatter black segment limited to 250",
+    "release_key": "nm12::howls from the holographic heart green w white splatter black segment limited to 250",
     "version": "limited splatter",
     "format": "vinyl",
     "buyer_score": 98,
