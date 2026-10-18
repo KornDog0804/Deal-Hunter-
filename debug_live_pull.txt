@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8474 entries
+[Discogs] Loaded cache with 8489 entries
 [Discogs] Enriching 2660 vinyl records with Mint pricing...
-[Discogs] Cache saved (8474 entries)
+[Discogs] Cache saved (8489 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -448,7 +448,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Tears For Fears | The Seeds Of Love Blue Marble
 [UpcomingVinyl] Total Korndog matches: 7
 [UpcomingVinyl] 7 whitelist matches saved to upcoming_releases.json
-[BuySignals] 161 qualified signals saved
+[BuySignals] 162 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -507,7 +507,7 @@ MNRK Heavy: 138
 Newbury Comics: 209
 Pirates Press Records: 97
 Pure Noise Records: 85
-r/VinylReleases: 45
+r/VinylReleases: 44
 Revolver: 153
 Rhino: 82
 Rise Records: 95
