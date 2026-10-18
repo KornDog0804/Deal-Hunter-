@@ -165,9 +165,9 @@ Sumerian Records: kept 84
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 171 products
-Solid State Records: 171 products via Shopify JSON
-Solid State Records: kept 60
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 170 products
+Solid State Records: 170 products via Shopify JSON
+Solid State Records: kept 59
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 171 products
-Solid State Vinyl: 171 products via Shopify JSON
-Solid State Vinyl: kept 60
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 170 products
+Solid State Vinyl: 170 products via Shopify JSON
+Solid State Vinyl: kept 59
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -406,20 +406,20 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2660 normalized vinyl listings
+[Stage2] 2659 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 8489 entries
-[Discogs] Enriching 2660 vinyl records with Mint pricing...
+[Discogs] Enriching 2659 vinyl records with Mint pricing...
 [Discogs] Cache saved (8489 entries)
 [Discogs] Enrichment complete!
 
@@ -474,8 +474,8 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 147 deals
   RMFN All: 147 deals
   Sumerian Records: 84 deals
-  Solid State Records: 60 deals
-  Solid State Vinyl: 60 deals
+  Solid State Records: 59 deals
+  Solid State Vinyl: 59 deals
   Pure Noise Records: 85 deals
   Hopeless Records: 66 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -514,7 +514,7 @@ Rise Records: 95
 Rock Metal Fan Nation: 147
 Rollin Records: 242
 SharpTone Records: 107
-Solid State Records: 60
+Solid State Records: 59
 Sound of Vinyl: 234
 Spinefarm Records: 88
 Sumerian Records: 83
