@@ -92229,5 +92229,147 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "signed porch light|handpicked new and used": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed die spitz|handpicked new and used": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "michael kiwanuka|fudge br": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.39,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|celine dion live paris picture disc sony canada store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "czarface|meets frankie pulitzer record": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "tate mcrae|the one day": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tate McRae",
+    "discogs_title": "The One Day LP",
+    "discogs_release_id": 23610011,
+    "discogs_url": "https://www.discogs.com/release/23610011-Tate-McRae-The-One-Day-LP",
+    "discogs_mint_price": 99.8,
+    "discogs_lowest": 99.8,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 307,
+    "discogs_want": 364
+  },
+  "peter murphy|laying on new waves the 2000s collection signed art print": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nico|chelsea girl": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Nico (3)",
+    "discogs_title": "Chelsea Girl",
+    "discogs_release_id": 4910673,
+    "discogs_url": "https://www.discogs.com/release/4910673-Nico-Chelsea-Girl",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 125,
+    "discogs_want": 907
+  },
+  "the simpsons|main title theme": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7673,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Jet Harris",
+    "discogs_title": "Main Title Theme (From The Man With The Golden Arm)",
+    "discogs_release_id": 763476,
+    "discogs_url": "https://www.discogs.com/release/763476-Jet-Harris-Main-Title-Theme-From-The-Man-With-The-Golden-Arm",
+    "discogs_mint_price": 0.64,
+    "discogs_lowest": 0.64,
+    "discogs_num_for_sale": 53,
+    "discogs_have": 394,
+    "discogs_want": 22
+  },
+  "violent femmes|self titled album": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "helene fischer|whitelabel limited to 300 signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "billy bragg and wilco|mermaid avenue": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Billy Bragg & Wilco",
+    "discogs_title": "Mermaid Avenue",
+    "discogs_release_id": 810370,
+    "discogs_url": "https://www.discogs.com/release/810370-Billy-Bragg-Wilco-Mermaid-Avenue",
+    "discogs_mint_price": 228.2,
+    "discogs_lowest": 228.2,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 1426,
+    "discogs_want": 1712
+  },
+  "fleet foxes|shore": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Fleet Foxes",
+    "discogs_title": "Shore",
+    "discogs_release_id": 17367403,
+    "discogs_url": "https://www.discogs.com/release/17367403-Fleet-Foxes-Shore",
+    "discogs_mint_price": 40.0,
+    "discogs_lowest": 40.0,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 573,
+    "discogs_want": 250
   }
 }
