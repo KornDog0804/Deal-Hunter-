@@ -338,14 +338,14 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 16
+Hot Topic: kept 15
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2661 normalized vinyl listings
+[Stage2] 2660 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8508 entries
-[Discogs] Enriching 2661 vinyl records with Mint pricing...
-[Discogs] Cache saved (8508 entries)
+[Discogs] Loaded cache with 8522 entries
+[Discogs] Enriching 2660 vinyl records with Mint pricing...
+[Discogs] Cache saved (8522 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,13 +432,13 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 50 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 394064 bytes
-[UpcomingVinyl] Found 466 raw record URLs
+[UpcomingVinyl] Got 405205 bytes
+[UpcomingVinyl] Found 480 raw record URLs
 [UpcomingVinyl] MATCH: AC/DC | Beyond The Band The Ultimate Side Project Collection
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
 [UpcomingVinyl] MATCH: My Chemical Romance | The Black Parade Concrete Grey
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Who | My Generation 60th Anniversary Nad Red
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 160 qualified signals saved
+[BuySignals] 163 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -487,8 +487,8 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 16 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Hot Topic: 15 deals
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -502,13 +502,13 @@ Craft Recordings: 90
 Equal Vision: 101
 Fearless Records: 93
 Hopeless Records: 66
-Hot Topic: 16
+Hot Topic: 15
 Interscope Records: 132
 MNRK Heavy: 138
 Newbury Comics: 208
 Pirates Press Records: 97
 Pure Noise Records: 85
-r/VinylReleases: 46
+r/VinylReleases: 47
 Revolver: 150
 Rhino: 87
 Rise Records: 95
