@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 93
+Fearless Records: kept 87
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,7 +46,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 93
+Fearless Vinyl: kept 87
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -77,7 +77,7 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 150
+Revolver: kept 147
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 148
+Rock Metal Fan Nation: kept 160
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 148
+RMFN All: kept 160
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -222,7 +222,7 @@ Scraping: Pirates Press Records (shopify_store)
 ==================================================
   ✓ https://shop.piratespressrecords.com/products.json?limit=250 -> 250 products
 Pirates Press Records: 250 products via Shopify JSON
-Pirates Press Records: kept 97
+Pirates Press Records: kept 96
 
 ==================================================
 Scraping: Smartpunk Records (shopify_store)
@@ -258,26 +258,26 @@ Spinefarm Records: kept 88
 ==================================================
 Scraping: InVogue Records (merchnow_store)
 ==================================================
-  -> retry 1/2 for https://invoguerecords.merchnow.com/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://invoguerecords.merchnow.com/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 -> HTTP Error 404: Not Found
-  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 | HTTP Error 404: Not Found
-  ✗ https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 -> HTTP Error 404: Not Found
+  -> retry 1/2 for https://invoguerecords.merchnow.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://invoguerecords.merchnow.com/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://invoguerecords.merchnow.com/collections/all/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://invoguerecords.merchnow.com/collections/vinyl/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://invoguerecords.merchnow.com/collections/music/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
+  -> retry 1/2 for https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 | <urlopen error [Errno -2] Name or service not known>
+  ✗ https://invoguerecords.merchnow.com/collections/records/products.json?limit=250 -> <urlopen error [Errno -2] Name or service not known>
 InVogue Records: 0 products via Shopify JSON
 InVogue Records: Merchnow JSON empty, trying HTML fallback
-  -> retry 1/2 for https://invoguerecords.merchnow.com/products.json | HTTP Error 404: Not Found
-  -> retry 2/2 for https://invoguerecords.merchnow.com/products.json | HTTP Error 404: Not Found
-InVogue Records: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://invoguerecords.merchnow.com/products.json | <urlopen error [Errno -2] Name or service not known>
+  -> retry 2/2 for https://invoguerecords.merchnow.com/products.json | <urlopen error [Errno -2] Name or service not known>
+InVogue Records: HTML source failed | <urlopen error [Errno -2] Name or service not known>
 
 ==================================================
 Scraping: Thriller Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 15
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2660 normalized vinyl listings
+[Stage2] 2662 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8522 entries
-[Discogs] Enriching 2660 vinyl records with Mint pricing...
-[Discogs] Cache saved (8522 entries)
+[Discogs] Loaded cache with 8525 entries
+[Discogs] Enriching 2662 vinyl records with Mint pricing...
+[Discogs] Cache saved (8525 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 50 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 405205 bytes
+[UpcomingVinyl] Got 405337 bytes
 [UpcomingVinyl] Found 480 raw record URLs
 [UpcomingVinyl] MATCH: AC/DC | Beyond The Band The Ultimate Side Project Collection
 [UpcomingVinyl] MATCH: Michael Jackson | Bad
@@ -449,7 +449,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Who | My Generation 60th Anniversary Nad Red
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 163 qualified signals saved
+[BuySignals] 170 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -458,12 +458,12 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 242 deals
   Sound of Vinyl: 234 deals
   uDiscover Music: 151 deals
-  Fearless Records: 93 deals
-  Fearless Vinyl: 93 deals
+  Fearless Records: 87 deals
+  Fearless Vinyl: 87 deals
   Rise Records: 95 deals
   Rise All: 95 deals
   Brooklyn Vegan: 188 deals
-  Revolver: 150 deals
+  Revolver: 147 deals
   Newbury Comics: 208 deals
   Newbury Preorders: 208 deals
   Craft Recordings: 90 deals
@@ -472,23 +472,23 @@ SOURCE STATUS SUMMARY
   Rhino: 87 deals
   Interscope Records: 132 deals
   SharpTone Records: 107 deals
-  Rock Metal Fan Nation: 148 deals
-  RMFN All: 148 deals
+  Rock Metal Fan Nation: 160 deals
+  RMFN All: 160 deals
   Sumerian Records: 84 deals
   Solid State Records: 59 deals
   Solid State Vinyl: 59 deals
   Pure Noise Records: 85 deals
   Hopeless Records: 66 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
-  Pirates Press Records: 97 deals
+  Pirates Press Records: 96 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
   Spinefarm Records: 88 deals
-  InVogue Records: FAILED: HTTP Error 404: Not Found
+  InVogue Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 15 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -500,19 +500,19 @@ Amazon: 1
 Brooklyn Vegan: 188
 Craft Recordings: 90
 Equal Vision: 101
-Fearless Records: 93
+Fearless Records: 87
 Hopeless Records: 66
 Hot Topic: 15
 Interscope Records: 132
 MNRK Heavy: 138
 Newbury Comics: 208
-Pirates Press Records: 97
+Pirates Press Records: 96
 Pure Noise Records: 85
-r/VinylReleases: 47
-Revolver: 150
+r/VinylReleases: 46
+Revolver: 147
 Rhino: 87
 Rise Records: 95
-Rock Metal Fan Nation: 148
+Rock Metal Fan Nation: 160
 Rollin Records: 242
 SharpTone Records: 107
 Solid State Records: 59
