@@ -92601,5 +92601,42 @@
     "discogs_num_for_sale": 4,
     "discogs_have": 61,
     "discogs_want": 44
+  },
+  "my chemical romance|three cheers for sweet revenge deluxe edition": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "My Chemical Romance",
+    "discogs_title": "Three Cheers For Sweet Revenge",
+    "discogs_release_id": 34190176,
+    "discogs_url": "https://www.discogs.com/release/34190176-My-Chemical-Romance-Three-Cheers-For-Sweet-Revenge",
+    "discogs_mint_price": 66.29,
+    "discogs_lowest": 66.29,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 2567,
+    "discogs_want": 517
+  },
+  "unknown artist|something good by claire rousay and zander raymond": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "high vis|no sense no feeling": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "High Vis",
+    "discogs_title": "No Sense No Feeling",
+    "discogs_release_id": 21751504,
+    "discogs_url": "https://www.discogs.com/release/21751504-High-Vis-No-Sense-No-Feeling",
+    "discogs_mint_price": 120.0,
+    "discogs_lowest": 120.0,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 139,
+    "discogs_want": 210
   }
 }
