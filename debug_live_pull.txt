@@ -5,7 +5,7 @@ Scraping: Rollin Records (shopify_store)
 ==================================================
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Records: 250 products via Shopify JSON
-Rollin Records: kept 242
+Rollin Records: kept 237
 
 ==================================================
 Scraping: Rollin Preorders (shopify_store)
@@ -15,7 +15,7 @@ Scraping: Rollin Preorders (shopify_store)
   ✗ https://rollinrecs.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rollinrecs.com/products.json?limit=250 -> 250 products
 Rollin Preorders: 250 products via Shopify JSON
-Rollin Preorders: kept 242
+Rollin Preorders: kept 237
 
 ==================================================
 Scraping: Sound of Vinyl (shopify_store)
@@ -77,14 +77,14 @@ Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 158
+Revolver: kept 159
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 208
+Newbury Comics: kept 207
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -94,7 +94,7 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 208
+Newbury Preorders: kept 207
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 132
+Interscope Records: kept 131
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 161
+Rock Metal Fan Nation: kept 168
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 161
+RMFN All: kept 168
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -165,8 +165,8 @@ Sumerian Records: kept 84
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 170 products
-Solid State Records: 170 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Records: 172 products via Shopify JSON
 Solid State Records: kept 59
 
 ==================================================
@@ -175,8 +175,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 170 products
-Solid State Vinyl: 170 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Vinyl: 172 products via Shopify JSON
 Solid State Vinyl: kept 59
 
 ==================================================
@@ -253,7 +253,7 @@ Scraping: Spinefarm Records (merchnow_store)
 ==================================================
   ✓ https://spinefarm.merchnow.com/products.json?limit=250 -> 250 products
 Spinefarm Records: 250 products via Shopify JSON
-Spinefarm Records: kept 88
+Spinefarm Records: kept 89
 
 ==================================================
 Scraping: InVogue Records (merchnow_store)
@@ -338,7 +338,7 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 14
+Hot Topic: kept 9
 
 ==================================================
 Scraping: Deep Discount (html_store)
@@ -406,21 +406,21 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2668 normalized vinyl listings
+[Stage2] 2665 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8584 entries
-[Discogs] Enriching 2668 vinyl records with Mint pricing...
-[Discogs] Cache saved (8584 entries)
+[Discogs] Loaded cache with 8596 entries
+[Discogs] Enriching 2665 vinyl records with Mint pricing...
+[Discogs] Cache saved (8596 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,7 +432,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -449,13 +449,13 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Who | My Generation 60th Anniversary Nad Red
 [UpcomingVinyl] Total Korndog matches: 8
 [UpcomingVinyl] 8 whitelist matches saved to upcoming_releases.json
-[BuySignals] 176 qualified signals saved
+[BuySignals] 184 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
 ==================================================
-  Rollin Records: 242 deals
-  Rollin Preorders: 242 deals
+  Rollin Records: 237 deals
+  Rollin Preorders: 237 deals
   Sound of Vinyl: 234 deals
   uDiscover Music: 150 deals
   Fearless Records: 87 deals
@@ -463,17 +463,17 @@ SOURCE STATUS SUMMARY
   Rise Records: 94 deals
   Rise All: 94 deals
   Brooklyn Vegan: 184 deals
-  Revolver: 158 deals
-  Newbury Comics: 208 deals
-  Newbury Preorders: 208 deals
+  Revolver: 159 deals
+  Newbury Comics: 207 deals
+  Newbury Preorders: 207 deals
   Craft Recordings: 90 deals
   MNRK Heavy: 138 deals
   Equal Vision: 102 deals
   Rhino: 88 deals
-  Interscope Records: 132 deals
+  Interscope Records: 131 deals
   SharpTone Records: 107 deals
-  Rock Metal Fan Nation: 161 deals
-  RMFN All: 161 deals
+  Rock Metal Fan Nation: 168 deals
+  RMFN All: 168 deals
   Sumerian Records: 84 deals
   Solid State Records: 59 deals
   Solid State Vinyl: 59 deals
@@ -482,12 +482,12 @@ SOURCE STATUS SUMMARY
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 96 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
-  Spinefarm Records: 88 deals
+  Spinefarm Records: 89 deals
   InVogue Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 14 deals
+  Hot Topic: 9 deals
   Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -502,22 +502,22 @@ Craft Recordings: 90
 Equal Vision: 102
 Fearless Records: 87
 Hopeless Records: 66
-Hot Topic: 14
-Interscope Records: 132
+Hot Topic: 9
+Interscope Records: 131
 MNRK Heavy: 138
-Newbury Comics: 208
+Newbury Comics: 207
 Pirates Press Records: 96
 Pure Noise Records: 84
 r/VinylReleases: 43
-Revolver: 158
+Revolver: 159
 Rhino: 88
 Rise Records: 94
-Rock Metal Fan Nation: 161
-Rollin Records: 242
+Rock Metal Fan Nation: 168
+Rollin Records: 237
 SharpTone Records: 107
 Solid State Records: 59
 Sound of Vinyl: 234
-Spinefarm Records: 88
+Spinefarm Records: 89
 Sumerian Records: 83
 Target: 1
 uDiscover Music: 150
