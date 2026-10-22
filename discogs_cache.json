@@ -93244,5 +93244,133 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "the cranberries|wake up and smell the coffee 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Cranberries",
+    "discogs_title": "Wake Up And Smell The Coffee",
+    "discogs_release_id": 26829374,
+    "discogs_url": "https://www.discogs.com/release/26829374-The-Cranberries-Wake-Up-And-Smell-The-Coffee",
+    "discogs_mint_price": 30.49,
+    "discogs_lowest": 30.49,
+    "discogs_num_for_sale": 73,
+    "discogs_have": 3846,
+    "discogs_want": 492
+  },
+  "helena deland|eternity shrugs": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sophia stel sophia stel|2nd edition edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7394,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the cranberries|wake up and smell the coffee": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Cranberries",
+    "discogs_title": "Wake Up And Smell The Coffee",
+    "discogs_release_id": 26829374,
+    "discogs_url": "https://www.discogs.com/release/26829374-The-Cranberries-Wake-Up-And-Smell-The-Coffee",
+    "discogs_mint_price": 30.49,
+    "discogs_lowest": 30.49,
+    "discogs_num_for_sale": 73,
+    "discogs_have": 3846,
+    "discogs_want": 492
+  },
+  "unknown artist|the elder scrolls iv oblivion": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7046,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|kacey musgraves middle of nowhere vol 2 tex mex tapes": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "kacey musgraves|classic black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6141,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|madras ow 500": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2167,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hayley williams|ego death at a bachelorette party open to non members": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|celebration translucent blue": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5226,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "yerai cort s|popular": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.76,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Taja Sevelle",
+    "discogs_title": "Popular",
+    "discogs_release_id": 890293,
+    "discogs_url": "https://www.discogs.com/release/890293-Taja-Sevelle-Popular",
+    "discogs_mint_price": 0.79,
+    "discogs_lowest": 0.79,
+    "discogs_num_for_sale": 64,
+    "discogs_have": 199,
+    "discogs_want": 41
+  },
+  "ramones|greatest hits": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Ramones",
+    "discogs_title": "Greatest Hits",
+    "discogs_release_id": 4565856,
+    "discogs_url": "https://www.discogs.com/release/4565856-Ramones-Greatest-Hits",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 45,
+    "discogs_want": 39
   }
 }
