@@ -43,7 +43,7 @@
     "artist": "MY CHEMICAL ROMANCE",
     "title": "THE BLACK PARADE (Indie Exclusive, 20th Anniversary Deluxe Edition, Double Baby Pink Vinyl) (2LP) [PREORDER]",
     "raw_title": "MY CHEMICAL ROMANCE - THE BLACK PARADE (Indie Exclusive, 20th Anniversary Deluxe Edition, Double Baby Pink Vinyl) (2LP) [PREORDER]",
-    "price": 41.98,
+    "price": 40.98,
     "source": "Rock Metal Fan Nation",
     "source_type": "shopify_store",
     "link": "https://rmfnvinyl.com/products/my-chemical-romance-the-black-parade-20th-anniversary-deluxe-edition-double-baby-pink-vinyl-2lp-preorder",
@@ -1085,6 +1085,42 @@
     "store_fit": "Attention Grabber",
     "why_buy": "Trend / Hype, strong dollar margin, steady mover, collector appeal, fresh release energy, buy now",
     "shelf_placement": "Front Table",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "HOLE",
+    "title": "LIVE THROUGH THIS (Indie Exclusive Limited Edition, 180 Gram Pop Bottle Clear Vinyl)",
+    "raw_title": "HOLE - LIVE THROUGH THIS (Indie Exclusive Limited Edition, 180 Gram Pop Bottle Clear Vinyl)",
+    "price": 32.98,
+    "source": "Rock Metal Fan Nation",
+    "source_type": "shopify_store",
+    "link": "https://rmfnvinyl.com/products/hole-live-through-this-indie-exclusive-limited-edition-180-gram-pop-bottle-clear-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/hole_live_through_this_indie_exclusive_limited_edition_180_gram_pop_bottle_clear_vinyl.jpg?v=1792763091",
+    "score": 69,
+    "stage2_score": 69,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "limited",
+      "colored-vinyl"
+    ],
+    "release_key": "hole::live through this indie exclusive limited edition 180 gram pop bottle clear",
+    "version": "exclusive limited clear",
+    "format": "vinyl",
+    "buyer_score": 93,
+    "inventory_lane": "Bread & Butter",
+    "customer_lanes": [
+      "Collector"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "High Traffic",
+    "why_buy": "Bread & Butter, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Main Floor",
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
@@ -2319,6 +2355,41 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "HOLE",
+    "title": "CELEBRITY SKIN (Indie Exclusive Limited Edition, Stolen Water Blue Vinyl)",
+    "raw_title": "HOLE - CELEBRITY SKIN (Indie Exclusive Limited Edition, Stolen Water Blue Vinyl)",
+    "price": 32.98,
+    "source": "Rock Metal Fan Nation",
+    "source_type": "shopify_store",
+    "link": "https://rmfnvinyl.com/products/hole-celebrity-skin-indie-exclusive-limited-edition-stolen-water-blue-vinyl",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/hole_celebrity_skin_indie_exclusive_limited_edition_stolen_water_blue_vinyl.jpg?v=1792763358",
+    "score": 64,
+    "stage2_score": 64,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "limited"
+    ],
+    "release_key": "hole::celebrity skin indie exclusive limited edition stolen water blue",
+    "version": "exclusive limited",
+    "format": "vinyl",
+    "buyer_score": 93,
+    "inventory_lane": "Bread & Butter",
+    "customer_lanes": [
+      "Collector"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "High Traffic",
+    "why_buy": "Bread & Butter, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "SUECO ‘PARTY'S OVER' LP (Exclusive",
     "title": "Limited to 200, Copper Black Ice Vinyl)",
     "raw_title": "SUECO ‘PARTY'S OVER' LP (Exclusive - Limited to 200, Copper Black Ice Vinyl)",
@@ -3155,6 +3226,43 @@
     "inventory_lane": "Trend / Hype",
     "customer_lanes": [
       "Collector"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Front Table",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "TONY IOMMI",
+    "title": "FROM THE DARK (Indie Exclusive, Double 45RPM Red & Black Marble Vinyl) (2LP)",
+    "raw_title": "TONY IOMMI - FROM THE DARK (Indie Exclusive, Double 45RPM Red & Black Marble Vinyl) (2LP)",
+    "price": 41.98,
+    "source": "Rock Metal Fan Nation",
+    "source_type": "shopify_store",
+    "link": "https://rmfnvinyl.com/products/tony-iommi-from-the-dark-indie-exclusive-double-45rpm-red-black-marble-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/tony_iommi_from_the_dark_indie_exclusive_red_and_black_marble_vinyl_2lp.webp?v=1792762360",
+    "score": 61,
+    "stage2_score": 61,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "marble",
+      "2lp"
+    ],
+    "release_key": "tony iommi::from the dark indie exclusive double 45rpm red black marble",
+    "version": "exclusive 2lp marble",
+    "format": "vinyl",
+    "buyer_score": 95,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Collector",
+      "Gift Buyer"
     ],
     "decision": "BUY NOW",
     "recommended_qty": 0,
