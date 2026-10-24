@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 179
+Rock Metal Fan Nation: kept 178
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 179
+RMFN All: kept 178
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 9
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2682 normalized vinyl listings
+[Stage2] 2681 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 8702 entries
-[Discogs] Enriching 2682 vinyl records with Mint pricing...
+[Discogs] Enriching 2681 vinyl records with Mint pricing...
 [Discogs] Cache saved (8702 entries)
 [Discogs] Enrichment complete!
 
@@ -432,7 +432,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 49 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -448,7 +448,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Who | My Generation 60th Anniversary Nad Red
 [UpcomingVinyl] Total Korndog matches: 7
 [UpcomingVinyl] 7 whitelist matches saved to upcoming_releases.json
-[BuySignals] 200 qualified signals saved
+[BuySignals] 199 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -471,8 +471,8 @@ SOURCE STATUS SUMMARY
   Rhino: 88 deals
   Interscope Records: 124 deals
   SharpTone Records: 107 deals
-  Rock Metal Fan Nation: 179 deals
-  RMFN All: 179 deals
+  Rock Metal Fan Nation: 178 deals
+  RMFN All: 178 deals
   Sumerian Records: 84 deals
   Solid State Records: 58 deals
   Solid State Vinyl: 58 deals
@@ -487,7 +487,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 9 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -507,11 +507,11 @@ MNRK Heavy: 137
 Newbury Comics: 207
 Pirates Press Records: 96
 Pure Noise Records: 84
-r/VinylReleases: 43
+r/VinylReleases: 44
 Revolver: 169
 Rhino: 88
 Rise Records: 94
-Rock Metal Fan Nation: 179
+Rock Metal Fan Nation: 178
 Rollin Records: 243
 SharpTone Records: 107
 Solid State Records: 58
