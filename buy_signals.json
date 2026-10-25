@@ -1892,6 +1892,44 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "My Chemical Romance",
+    "title": "Three Cheers For Sweet Revenge Deluxe Edition (White With Red Splatter)",
+    "raw_title": "My Chemical Romance Three Cheers For Sweet Revenge Deluxe Edition (White With Red Splatter) Double Vinyl LP Hot Topic Exclusive",
+    "price": 36.98,
+    "source": "Hot Topic",
+    "source_type": "html_store",
+    "link": "https://www.hottopic.com/product/my-chemical-romance-three-cheers-for-sweet-revenge-deluxe-edition-white-with-red-splatter-double-vinyl-lp-hot-topic-exclusive/34586854.html",
+    "image": "https://cdn.media.amplience.net/s/hottopic/34586853_hi?h=630",
+    "score": 68,
+    "stage2_score": 68,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "splatter",
+      "deluxe",
+      "2lp"
+    ],
+    "release_key": "my chemical romance::three cheers for sweet revenge deluxe edition white with red splatter",
+    "version": "exclusive deluxe splatter",
+    "format": "vinyl",
+    "buyer_score": 82,
+    "inventory_lane": "Bread & Butter",
+    "customer_lanes": [
+      "Collector",
+      "Gift Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "High Traffic",
+    "why_buy": "Bread & Butter, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "THE KILLERS",
     "title": "SAM'S TOWN (20th Anniversary, Limited Edition 180 Gram Red Smoke Vinyl) [PREORDER]",
     "raw_title": "THE KILLERS - SAM'S TOWN (20th Anniversary, Limited Edition 180 Gram Red Smoke Vinyl) [PREORDER]",
@@ -4798,7 +4836,7 @@
     "artist": "RORY",
     "title": "BLOODLETTING (Indie Exclusive, Blood Rush Colored Vinyl)",
     "raw_title": "RORY - BLOODLETTING (Indie Exclusive, Blood Rush Colored Vinyl)",
-    "price": 27.98,
+    "price": 25.98,
     "source": "Rock Metal Fan Nation",
     "source_type": "shopify_store",
     "link": "https://rmfnvinyl.com/products/rory-bloodletting-indie-exclusive-blood-rush-colored-vinyl",
