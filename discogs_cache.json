@@ -94576,5 +94576,137 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "senses fail|follow your bliss the best of senses fail": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Senses Fail",
+    "discogs_title": "Follow Your Bliss: The Best Of Senses Fail",
+    "discogs_release_id": 24834713,
+    "discogs_url": "https://www.discogs.com/release/24834713-Senses-Fail-Follow-Your-Bliss-The-Best-Of-Senses-Fail",
+    "discogs_mint_price": 29.88,
+    "discogs_lowest": 29.88,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 212,
+    "discogs_want": 20
+  },
+  "senses fail|the fire": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Senses Fail",
+    "discogs_title": "The Fire",
+    "discogs_release_id": 24824948,
+    "discogs_url": "https://www.discogs.com/release/24824948-Senses-Fail-The-Fire",
+    "discogs_mint_price": 9.3,
+    "discogs_lowest": 9.3,
+    "discogs_num_for_sale": 27,
+    "discogs_have": 539,
+    "discogs_want": 30
+  },
+  "ms rachel|eco blue signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5542,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|vv the innocents weyes blood": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rites of spring lp|autographed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7037,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "adela|prima bad world": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.401,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "asthelifeleavesyoureyes|you left a sinner covered in the blood": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the girl of your dreams|signed blue and white ed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.352,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "inji|superlame yellow": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "INJI",
+    "discogs_title": "Superlame",
+    "discogs_release_id": 36594424,
+    "discogs_url": "https://www.discogs.com/release/36594424-INJI-Superlame",
+    "discogs_mint_price": 111.24,
+    "discogs_lowest": 111.24,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 113,
+    "discogs_want": 59
+  },
+  "chelsea grin|suffer in heaven suffer in hell": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.671,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "poppy|hand signed salt n peppa negative spaces variant": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "inside|seven inches to wall drug": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lisa|sawadika voice note from lisa": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
