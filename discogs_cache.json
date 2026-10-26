@@ -94708,5 +94708,46 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "u2|blood records": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.72,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|b b king and eric clapton riding with the king 180g grey lemon marble double": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "saybia|the second you sleep": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Saybia",
+    "discogs_title": "The Second You Sleep",
+    "discogs_release_id": 3026307,
+    "discogs_url": "https://www.discogs.com/release/3026307-Saybia-The-Second-You-Sleep",
+    "discogs_mint_price": 1151.69,
+    "discogs_lowest": 1151.69,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 107,
+    "discogs_want": 301
+  },
+  "unknown artist|rolo tomassi s 2018 time will die and love will bury it in glitter glass": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
