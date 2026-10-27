@@ -95170,5 +95170,143 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "unknown artist|bodhiria": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7382,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "nirvana|mtv unplugged in new york": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Nirvana",
+    "discogs_title": "MTV Unplugged In New York",
+    "discogs_release_id": 19138477,
+    "discogs_url": "https://www.discogs.com/release/19138477-Nirvana-MTV-Unplugged-In-New-York",
+    "discogs_mint_price": 42.22,
+    "discogs_lowest": 42.22,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 633,
+    "discogs_want": 736
+  },
+  "white lion|pride": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "White Lion",
+    "discogs_title": "Pride",
+    "discogs_release_id": 9361880,
+    "discogs_url": "https://www.discogs.com/release/9361880-White-Lion-Pride",
+    "discogs_mint_price": 29.88,
+    "discogs_lowest": 29.88,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 1213,
+    "discogs_want": 218
+  },
+  "earth wind and fire|gratitude": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Earth, Wind & Fire",
+    "discogs_title": "Gratitude",
+    "discogs_release_id": 14883325,
+    "discogs_url": "https://www.discogs.com/release/14883325-Earth-Wind-Fire-Gratitude",
+    "discogs_mint_price": 87.88,
+    "discogs_lowest": 87.88,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 17,
+    "discogs_want": 89
+  },
+  "steve vai|inviolate": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Steve Vai",
+    "discogs_title": "Inviolate",
+    "discogs_release_id": 22532378,
+    "discogs_url": "https://www.discogs.com/release/22532378-Steve-Vai-Inviolate",
+    "discogs_mint_price": 334.83,
+    "discogs_lowest": 334.83,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 19,
+    "discogs_want": 22
+  },
+  "living colour|time s up": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Living Colour",
+    "discogs_title": "Time's Up",
+    "discogs_release_id": 2131830,
+    "discogs_url": "https://www.discogs.com/release/2131830-Living-Colour-Times-Up",
+    "discogs_mint_price": 17.33,
+    "discogs_lowest": 17.33,
+    "discogs_num_for_sale": 42,
+    "discogs_have": 1639,
+    "discogs_want": 364
+  },
+  "unknown artist|vv moveys slow pu cheap double zoetrope now": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "disembodied tyrant syntesia|the poetic edda ep 10": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9337,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Disembodied Tyrant, Synestia (3)",
+    "discogs_title": "The Poetic Edda",
+    "discogs_release_id": 33059742,
+    "discogs_url": "https://www.discogs.com/release/33059742-Disembodied-Tyrant-Synestia-The-Poetic-Edda",
+    "discogs_mint_price": 99.0,
+    "discogs_lowest": 99.0,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 556,
+    "discogs_want": 178
+  },
+  "crowquill|slept with cannula": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dead man s bones|lost in the night 12": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bridge dog|auto fictons milky cream with japanese obi strip": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "toby keith|clancy s tavern": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2866,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
