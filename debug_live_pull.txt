@@ -70,14 +70,14 @@ Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 181
+Brooklyn Vegan: kept 180
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 159
+Revolver: kept 158
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2662 normalized vinyl listings
+[Stage2] 2660 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8817 entries
-[Discogs] Enriching 2662 vinyl records with Mint pricing...
-[Discogs] Cache saved (8817 entries)
+[Discogs] Loaded cache with 8839 entries
+[Discogs] Enriching 2660 vinyl records with Mint pricing...
+[Discogs] Cache saved (8839 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,13 +432,13 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 48 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 463948 bytes
-[UpcomingVinyl] Found 533 raw record URLs
+[UpcomingVinyl] Got 450517 bytes
+[UpcomingVinyl] Found 516 raw record URLs
 [UpcomingVinyl] MATCH: Atreyu | A Death Grip On Yesterday
 [UpcomingVinyl] MATCH: Bun B | Trill
 [UpcomingVinyl] MATCH: Dayseeker | Creature In The Black Night Marble
@@ -450,11 +450,10 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Mariah Carey | Glitter 25th Anniversary Midnight Purple
 [UpcomingVinyl] MATCH: Michael Jackson | Thriller Limited Edition Red Black Marble
 [UpcomingVinyl] MATCH: My Chemical Romance | The Black Parade 20th Anniversary Concrete Grey
-[UpcomingVinyl] MATCH: Rush | A Farewell To Kings
 [UpcomingVinyl] MATCH: The Isley Brothers | Santana Lotus Black
 [UpcomingVinyl] MATCH: The Who | The Who By Numbers Deluxe
-[UpcomingVinyl] Total Korndog matches: 14
-[UpcomingVinyl] 14 whitelist matches saved to upcoming_releases.json
+[UpcomingVinyl] Total Korndog matches: 13
+[UpcomingVinyl] 13 whitelist matches saved to upcoming_releases.json
 [BuySignals] 190 qualified signals saved
 
 ==================================================
@@ -468,8 +467,8 @@ SOURCE STATUS SUMMARY
   Fearless Vinyl: 89 deals
   Rise Records: 90 deals
   Rise All: 90 deals
-  Brooklyn Vegan: 181 deals
-  Revolver: 159 deals
+  Brooklyn Vegan: 180 deals
+  Revolver: 158 deals
   Newbury Comics: 206 deals
   Newbury Preorders: 206 deals
   Craft Recordings: 90 deals
@@ -503,7 +502,7 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 181
+Brooklyn Vegan: 180
 Craft Recordings: 90
 Equal Vision: 102
 Fearless Records: 89
@@ -514,8 +513,8 @@ MNRK Heavy: 137
 Newbury Comics: 206
 Pirates Press Records: 95
 Pure Noise Records: 85
-r/VinylReleases: 43
-Revolver: 159
+r/VinylReleases: 42
+Revolver: 158
 Rhino: 85
 Rise Records: 90
 Rock Metal Fan Nation: 179
