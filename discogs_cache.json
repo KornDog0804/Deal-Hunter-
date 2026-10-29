@@ -95791,5 +95791,243 @@
     "discogs_num_for_sale": 167,
     "discogs_have": 2371,
     "discogs_want": 239
+  },
+  "iron maiden|killers 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Iron Maiden",
+    "discogs_title": "Killers",
+    "discogs_release_id": 6175777,
+    "discogs_url": "https://www.discogs.com/release/6175777-Iron-Maiden-Killers",
+    "discogs_mint_price": 20.0,
+    "discogs_lowest": 20.0,
+    "discogs_num_for_sale": 120,
+    "discogs_have": 12570,
+    "discogs_want": 854
+  },
+  "iron maiden|powerslave 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Iron Maiden",
+    "discogs_title": "Powerslave",
+    "discogs_release_id": 6228397,
+    "discogs_url": "https://www.discogs.com/release/6228397-Iron-Maiden-Powerslave",
+    "discogs_mint_price": 22.22,
+    "discogs_lowest": 22.22,
+    "discogs_num_for_sale": 83,
+    "discogs_have": 18210,
+    "discogs_want": 1431
+  },
+  "iron maiden|piece of mind 1": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Iron Maiden",
+    "discogs_title": "Piece Of Mind",
+    "discogs_release_id": 6226812,
+    "discogs_url": "https://www.discogs.com/release/6226812-Iron-Maiden-Piece-Of-Mind",
+    "discogs_mint_price": 17.67,
+    "discogs_lowest": 17.67,
+    "discogs_num_for_sale": 81,
+    "discogs_have": 15278,
+    "discogs_want": 1051
+  },
+  "redeye|panda bear pb bad live 25 at power station 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "redeye|tindersticks dog roses": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the flaming lips|at war with the mystics": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Flaming Lips",
+    "discogs_title": "At War With The Mystics",
+    "discogs_release_id": 3688941,
+    "discogs_url": "https://www.discogs.com/release/3688941-The-Flaming-Lips-At-War-With-The-Mystics",
+    "discogs_mint_price": 74.51,
+    "discogs_lowest": 74.51,
+    "discogs_num_for_sale": 15,
+    "discogs_have": 1389,
+    "discogs_want": 830
+  },
+  "the doors|when you re strange": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6271,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "from a distance|bone w black and red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5425,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "marillion|less is more": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Marillion",
+    "discogs_title": "Less Is More",
+    "discogs_release_id": 14876195,
+    "discogs_url": "https://www.discogs.com/release/14876195-Marillion-Less-Is-More",
+    "discogs_mint_price": 66.67,
+    "discogs_lowest": 66.67,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 776,
+    "discogs_want": 89
+  },
+  "unknown artist|vv kool faith loosies ii they are gutting a body of water": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "amira elfeky|it was onlv a dream": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "robin carolan|nosferatu": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Robin Carolan",
+    "discogs_title": "Nosferatu (Original Motion Picture Soundtrack)",
+    "discogs_release_id": 32327790,
+    "discogs_url": "https://www.discogs.com/release/32327790-Robin-Carolan-Nosferatu-Original-Motion-Picture-Soundtrack",
+    "discogs_mint_price": 49.99,
+    "discogs_lowest": 49.99,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 321,
+    "discogs_want": 213
+  },
+  "hollow coves|discography": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.808,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Tower Of Rome",
+    "discogs_title": "Discography",
+    "discogs_release_id": 14577968,
+    "discogs_url": "https://www.discogs.com/release/14577968-Tower-Of-Rome-Discography",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 60,
+    "discogs_want": 296
+  },
+  "brothers osborne|watertown signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed kim deal live at barbican london double gatefold lp|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "snoh aalegra|legendary love": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "snoh alegra|limited to 500": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6737,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "fucked up|year of the rooster 13 nov 2026": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|barbed wire sandwich 06 nov 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "boldy james and real bad man|strobelight": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7993,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "MYNC Project & Danny Rampling",
+    "discogs_title": "Strobelight",
+    "discogs_release_id": 1026619,
+    "discogs_url": "https://www.discogs.com/release/1026619-MYNC-Project-Danny-Rampling-Strobelight",
+    "discogs_mint_price": 1.25,
+    "discogs_lowest": 1.25,
+    "discogs_num_for_sale": 37,
+    "discogs_have": 116,
+    "discogs_want": 19
+  },
+  "unknown artist|snoh aalegra legendary love 180g coke bottle": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "deante hitchcock|colored 2x w numbered obi ltd 300": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
