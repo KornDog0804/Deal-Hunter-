@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 156
+uDiscover Music: kept 158
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 90
+Rise Records: kept 91
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,14 +63,14 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 90
+Rise All: kept 91
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 181
+Brooklyn Vegan: kept 179
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -338,14 +338,14 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 8
+Hot Topic: kept 13
 
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2655 normalized vinyl listings
+[Stage2] 2661 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8854 entries
-[Discogs] Enriching 2655 vinyl records with Mint pricing...
-[Discogs] Cache saved (8854 entries)
+[Discogs] Loaded cache with 8885 entries
+[Discogs] Enriching 2661 vinyl records with Mint pricing...
+[Discogs] Cache saved (8885 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,13 +432,13 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 48 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 450839 bytes
-[UpcomingVinyl] Found 516 raw record URLs
+[UpcomingVinyl] Got 448074 bytes
+[UpcomingVinyl] Found 513 raw record URLs
 [UpcomingVinyl] MATCH: Atreyu | A Death Grip On Yesterday
 [UpcomingVinyl] MATCH: Bun B | Trill
 [UpcomingVinyl] MATCH: Dayseeker | Creature In The Black Night Marble
@@ -454,7 +454,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Who | The Who By Numbers Deluxe
 [UpcomingVinyl] Total Korndog matches: 13
 [UpcomingVinyl] 13 whitelist matches saved to upcoming_releases.json
-[BuySignals] 187 qualified signals saved
+[BuySignals] 190 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -462,12 +462,12 @@ SOURCE STATUS SUMMARY
   Rollin Records: 243 deals
   Rollin Preorders: 243 deals
   Sound of Vinyl: 234 deals
-  uDiscover Music: 156 deals
+  uDiscover Music: 158 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
-  Rise Records: 90 deals
-  Rise All: 90 deals
-  Brooklyn Vegan: 181 deals
+  Rise Records: 91 deals
+  Rise All: 91 deals
+  Brooklyn Vegan: 179 deals
   Revolver: 158 deals
   Newbury Comics: 206 deals
   Newbury Preorders: 206 deals
@@ -492,8 +492,8 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 8 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Hot Topic: 13 deals
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -502,21 +502,21 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 181
+Brooklyn Vegan: 179
 Craft Recordings: 90
 Equal Vision: 102
 Fearless Records: 89
 Hopeless Records: 66
-Hot Topic: 8
+Hot Topic: 13
 Interscope Records: 124
 MNRK Heavy: 121
 Newbury Comics: 206
 Pirates Press Records: 95
 Pure Noise Records: 85
-r/VinylReleases: 44
+r/VinylReleases: 43
 Revolver: 158
 Rhino: 85
-Rise Records: 90
+Rise Records: 91
 Rock Metal Fan Nation: 178
 Rollin Records: 243
 SharpTone Records: 107
@@ -525,5 +525,5 @@ Sound of Vinyl: 234
 Spinefarm Records: 89
 Sumerian Records: 83
 Target: 1
-uDiscover Music: 156
+uDiscover Music: 158
 Walmart: 1
