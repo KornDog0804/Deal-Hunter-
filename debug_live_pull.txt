@@ -343,9 +343,9 @@ Hot Topic: kept 12
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 8885 entries
+[Discogs] Loaded cache with 8969 entries
 [Discogs] Enriching 2673 vinyl records with Mint pricing...
-[Discogs] Cache saved (8885 entries)
+[Discogs] Cache saved (8969 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 448536 bytes
+[UpcomingVinyl] Got 448074 bytes
 [UpcomingVinyl] Found 513 raw record URLs
 [UpcomingVinyl] MATCH: Atreyu | A Death Grip On Yesterday
 [UpcomingVinyl] MATCH: Bun B | Trill
@@ -493,7 +493,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 12 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -513,7 +513,7 @@ MNRK Heavy: 121
 Newbury Comics: 206
 Pirates Press Records: 95
 Pure Noise Records: 85
-r/VinylReleases: 42
+r/VinylReleases: 44
 Revolver: 158
 Rhino: 91
 Rise Records: 91
