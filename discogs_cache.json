@@ -97523,5 +97523,37 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "ashanti|braveheart": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Ashanti",
+    "discogs_title": "Braveheart",
+    "discogs_release_id": 23755826,
+    "discogs_url": "https://www.discogs.com/release/23755826-Ashanti-Braveheart",
+    "discogs_mint_price": 14.89,
+    "discogs_lowest": 14.89,
+    "discogs_num_for_sale": 20,
+    "discogs_have": 156,
+    "discogs_want": 69
+  },
+  "unknown artist|vv stage girl eli": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|by 100 now available": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4711,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
