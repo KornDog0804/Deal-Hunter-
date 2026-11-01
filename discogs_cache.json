@@ -97555,5 +97555,42 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "the cats|s t": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7733,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "E-S-T",
+    "discogs_title": "Projet E-S-T",
+    "discogs_release_id": 520522,
+    "discogs_url": "https://www.discogs.com/release/520522-E-S-T-Projet-E-S-T",
+    "discogs_mint_price": 3.37,
+    "discogs_lowest": 3.37,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 260,
+    "discogs_want": 62
+  },
+  "3 doors down|greatest hits white": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8111,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "3 Doors Down",
+    "discogs_title": "The Greatest Hits",
+    "discogs_release_id": 32342391,
+    "discogs_url": "https://www.discogs.com/release/32342391-3-Doors-Down-The-Greatest-Hits",
+    "discogs_mint_price": 26.99,
+    "discogs_lowest": 26.99,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 300,
+    "discogs_want": 51
+  },
+  "unknown artist|it isn t perfect but it might be 10 single": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
