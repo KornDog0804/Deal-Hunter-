@@ -108,14 +108,14 @@ Scraping: MNRK Heavy (shopify_store)
 ==================================================
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 121
+MNRK Heavy: kept 125
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 103
+Equal Vision: kept 101
 
 ==================================================
 Scraping: Rhino (shopify_store)
@@ -165,9 +165,9 @@ Sumerian Records: kept 84
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 178 products
-Solid State Records: 178 products via Shopify JSON
-Solid State Records: kept 64
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 177 products
+Solid State Records: 177 products via Shopify JSON
+Solid State Records: kept 63
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 178 products
-Solid State Vinyl: 178 products via Shopify JSON
-Solid State Vinyl: kept 64
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 177 products
+Solid State Vinyl: 177 products via Shopify JSON
+Solid State Vinyl: kept 63
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -406,20 +406,20 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2598 normalized vinyl listings
+[Stage2] 2599 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 8987 entries
-[Discogs] Enriching 2598 vinyl records with Mint pricing...
+[Discogs] Enriching 2599 vinyl records with Mint pricing...
 [Discogs] Cache saved (8987 entries)
 [Discogs] Enrichment complete!
 
@@ -432,19 +432,19 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 45 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 431361 bytes
-[UpcomingVinyl] Found 487 raw record URLs
+[UpcomingVinyl] Got 447068 bytes
+[UpcomingVinyl] Found 506 raw record URLs
 [UpcomingVinyl] MATCH: Dave Grusin | The Goonies Score
 [UpcomingVinyl] MATCH: Evanescence | The Open Door 20th Anniversary
 [UpcomingVinyl] MATCH: Rush | A Farewell To Kings
 [UpcomingVinyl] Total Korndog matches: 3
 [UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 185 qualified signals saved
+[BuySignals] 190 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -462,16 +462,16 @@ SOURCE STATUS SUMMARY
   Newbury Comics: 206 deals
   Newbury Preorders: 206 deals
   Craft Recordings: 90 deals
-  MNRK Heavy: 121 deals
-  Equal Vision: 103 deals
+  MNRK Heavy: 125 deals
+  Equal Vision: 101 deals
   Rhino: 91 deals
   Interscope Records: 127 deals
   SharpTone Records: 107 deals
   Rock Metal Fan Nation: 178 deals
   RMFN All: 178 deals
   Sumerian Records: 84 deals
-  Solid State Records: 64 deals
-  Solid State Vinyl: 64 deals
+  Solid State Records: 63 deals
+  Solid State Vinyl: 63 deals
   Pure Noise Records: 85 deals
   Hopeless Records: 66 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -494,23 +494,23 @@ SOURCE STATUS SUMMARY
 Amazon: 1
 Brooklyn Vegan: 167
 Craft Recordings: 90
-Equal Vision: 103
+Equal Vision: 101
 Fearless Records: 89
 Hopeless Records: 66
 Hot Topic: 12
 Interscope Records: 127
-MNRK Heavy: 121
+MNRK Heavy: 125
 Newbury Comics: 206
 Pirates Press Records: 100
 Pure Noise Records: 85
-r/VinylReleases: 42
+r/VinylReleases: 43
 Revolver: 148
 Rhino: 91
 Rise Records: 90
 Rock Metal Fan Nation: 178
 Rollin Records: 244
 SharpTone Records: 107
-Solid State Records: 64
+Solid State Records: 63
 Sound of Vinyl: 234
 Spinefarm Records: 89
 Sumerian Records: 83
