@@ -98890,5 +98890,193 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "alien ant farm|truant": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Alien Ant Farm",
+    "discogs_title": "TruANT",
+    "discogs_release_id": 33006489,
+    "discogs_url": "https://www.discogs.com/release/33006489-Alien-Ant-Farm-TruANT",
+    "discogs_mint_price": 19.09,
+    "discogs_lowest": 19.09,
+    "discogs_num_for_sale": 24,
+    "discogs_have": 321,
+    "discogs_want": 79
+  },
+  "anarbor|anarbor free your mind neon purple": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "christina aguilera|november 20 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6748,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "super djata band de bamako|authentique 80": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Super Djata Band De Bamako*",
+    "discogs_title": "Authentique 80",
+    "discogs_release_id": 6886818,
+    "discogs_url": "https://www.discogs.com/release/6886818-Super-Djata-Band-De-Bamako-Authentique-80",
+    "discogs_mint_price": 162.16,
+    "discogs_lowest": 162.16,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 63,
+    "discogs_want": 335
+  },
+  "gone with the wind|gold": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7511,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "fontaines dc|dopamine chamber spotify fans first": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "la roux|old flames": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8629,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Various",
+    "discogs_title": "Old Flames",
+    "discogs_release_id": 9374048,
+    "discogs_url": "https://www.discogs.com/release/9374048-Various-Old-Flames",
+    "discogs_mint_price": 1.01,
+    "discogs_lowest": 1.01,
+    "discogs_num_for_sale": 18,
+    "discogs_have": 59,
+    "discogs_want": 4
+  },
+  "malcolm todd|": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "missing_title",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|thee headcoatees ev rybody s gonna be happy 20 nov 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|children of the sect 20 nov 26": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the derek trucks band|already free translucent red coloured numbered double": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "thy slaughter|us": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7867,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Brother Ali",
+    "discogs_title": "Us",
+    "discogs_release_id": 14977741,
+    "discogs_url": "https://www.discogs.com/release/14977741-Brother-Ali-Us",
+    "discogs_mint_price": 25.0,
+    "discogs_lowest": 25.0,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 885,
+    "discogs_want": 150
+  },
+  "anarbor|free your mind": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Anarbor",
+    "discogs_title": "Free Your Mind",
+    "discogs_release_id": 9410854,
+    "discogs_url": "https://www.discogs.com/release/9410854-Anarbor-Free-Your-Mind",
+    "discogs_mint_price": 112.36,
+    "discogs_lowest": 112.36,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 217,
+    "discogs_want": 173
+  },
+  "unknown artist|pc music vol 1 and vol 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7263,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "gfoty|gfotybucks personal computer market": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sabaton|legends": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sabaton",
+    "discogs_title": "Legends",
+    "discogs_release_id": 35561923,
+    "discogs_url": "https://www.discogs.com/release/35561923-Sabaton-Legends",
+    "discogs_mint_price": 111.24,
+    "discogs_lowest": 111.24,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 31,
+    "discogs_want": 8
+  },
+  "the weeknd|the highlights": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Weeknd",
+    "discogs_title": "The Highlights",
+    "discogs_release_id": 20690743,
+    "discogs_url": "https://www.discogs.com/release/20690743-The-Weeknd-The-Highlights",
+    "discogs_mint_price": 33.0,
+    "discogs_lowest": 33.0,
+    "discogs_num_for_sale": 31,
+    "discogs_have": 4039,
+    "discogs_want": 393
   }
 }
