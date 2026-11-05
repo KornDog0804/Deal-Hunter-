@@ -99416,5 +99416,224 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "abba|little things": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "ABBA",
+    "discogs_title": "Little Things",
+    "discogs_release_id": 32432127,
+    "discogs_url": "https://www.discogs.com/release/32432127-ABBA-Little-Things",
+    "discogs_mint_price": 24.16,
+    "discogs_lowest": 24.16,
+    "discogs_num_for_sale": 13,
+    "discogs_have": 336,
+    "discogs_want": 37
+  },
+  "abba|happy new year": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "ABBA",
+    "discogs_title": "Happy New Year",
+    "discogs_release_id": 2139390,
+    "discogs_url": "https://www.discogs.com/release/2139390-ABBA-Happy-New-Year",
+    "discogs_mint_price": 27.53,
+    "discogs_lowest": 27.53,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 92,
+    "discogs_want": 79
+  },
+  "unknown artist|star s revenge ii by star s revenge": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3021,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the interrupters|battle scars": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8357,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Chemical Brothers",
+    "discogs_title": "Battle Scars (Beyond The Wizards Sleeve Remix)",
+    "discogs_release_id": 1166456,
+    "discogs_url": "https://www.discogs.com/release/1166456-The-Chemical-Brothers-Battle-Scars-Beyond-The-Wizards-Sleeve-Remix",
+    "discogs_mint_price": 5.62,
+    "discogs_lowest": 5.62,
+    "discogs_num_for_sale": 10,
+    "discogs_have": 223,
+    "discogs_want": 146
+  },
+  "unknown artist|the interrupters battle scars": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ryan adams|signed edition tri": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4123,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|heelmatic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "chavez|ride the fader 30th anniversary coming march 12": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "throwing muses|february 5 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3984,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "marteria|zgidz endbox": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|abba happy new year white": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|abba little things red": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3712,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|britney spears britney": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7399,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "derek trucks band|already free limited to 1000 mov": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.92,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Derek Trucks Band",
+    "discogs_title": "Already Free",
+    "discogs_release_id": 15771135,
+    "discogs_url": "https://www.discogs.com/release/15771135-The-Derek-Trucks-Band-Already-Free",
+    "discogs_mint_price": 66.22,
+    "discogs_lowest": 66.22,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 265,
+    "discogs_want": 105
+  },
+  "883 max pezzali max forever vol 2|double numbered red signed cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4609,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "arid|little things of venom": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Arid",
+    "discogs_title": "Little Things Of Venom",
+    "discogs_release_id": 12040568,
+    "discogs_url": "https://www.discogs.com/release/12040568-Arid-Little-Things-Of-Venom",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 193,
+    "discogs_want": 97
+  },
+  "g unit|beg for mercy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "G-Unit",
+    "discogs_title": "Beg For Mercy",
+    "discogs_release_id": 229590,
+    "discogs_url": "https://www.discogs.com/release/229590-G-Unit-Beg-For-Mercy",
+    "discogs_mint_price": 80.0,
+    "discogs_lowest": 80.0,
+    "discogs_num_for_sale": 17,
+    "discogs_have": 1338,
+    "discogs_want": 1189
+  },
+  "cage the elephant|dying in reverse dragon s den signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cage the elephant|dying in reverse show signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cage the elephant|dying in reverse graphite signed insert": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "forrest frank|the jesus generation": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.683,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
