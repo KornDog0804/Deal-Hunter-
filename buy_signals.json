@@ -153,43 +153,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "THE PRETTY RECKLESS 'WITCHES BURN & SPELL ON YOU' 12\" (Exclusive",
-    "title": "Limited to 300, Translucent Orange Vinyl)",
-    "raw_title": "THE PRETTY RECKLESS 'WITCHES BURN & SPELL ON YOU' 12\" (Exclusive - Limited to 300, Translucent Orange Vinyl)",
-    "price": 22.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/the-pretty-reckless-witches-burn-spell-on-you-12-exclusive-limited-to-300-translucent-orange-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/TPR-Bat-Mockup-In-Jacket-Final-Front_T08-Orange_a00cd1fb-fd14-47ef-a94c-20e398af08d0.png?v=1792014220",
-    "score": 77,
-    "stage2_score": 77,
-    "quality": "strong",
-    "signals": [
-      "exclusive",
-      "limited",
-      "colored-vinyl",
-      "under-$25"
-    ],
-    "release_key": "the pretty reckless witches burn spell on you 12 exclusive::limited to 300 translucent orange",
-    "version": "exclusive limited translucent",
-    "format": "vinyl",
-    "buyer_score": 88,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "THE DILLINGER ESCAPE PLAN ‘DISSOCIATION' 10TH ANNIVERSARY 2LP (Exclusive",
     "title": "Limited to 500 Each)",
     "raw_title": "THE DILLINGER ESCAPE PLAN ‘DISSOCIATION' 10TH ANNIVERSARY 2LP (Exclusive - Limited to 500 Each)",
@@ -5038,6 +5001,43 @@
     "store_fit": "High Traffic",
     "why_buy": "Bread & Butter, strong dollar margin, steady mover, collector appeal, buy now",
     "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "KINGS OF LEON",
+    "title": "O MY BELOVED (Indie Exclusive, Double 45RPM 'Thicker Than Water' Red & Blue Vinyl) (2LP)",
+    "raw_title": "KINGS OF LEON - O MY BELOVED (Indie Exclusive, Double 45RPM 'Thicker Than Water' Red & Blue Vinyl) (2LP)",
+    "price": 29.98,
+    "source": "Rock Metal Fan Nation",
+    "source_type": "shopify_store",
+    "link": "https://rmfnvinyl.com/products/kings-of-leon-o-my-beloved-indie-exclusive-double-45rpm-thicker-than-water-red-blue-vinyl-2lp",
+    "image": "https://cdn.shopify.com/s/files/1/0775/5300/8863/files/kings_of_leon_o_my_beloved_indie_exclusive_double_thicker_than_water_red_and_blue_vinyl.jpg?v=1793897690",
+    "score": 58,
+    "stage2_score": 58,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "2lp",
+      "under-$30"
+    ],
+    "release_key": "kings of leon::o my beloved indie exclusive double 45rpm thicker than water red blue",
+    "version": "exclusive 2lp",
+    "format": "vinyl",
+    "buyer_score": 95,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Collector",
+      "Gift Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Front Table",
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
