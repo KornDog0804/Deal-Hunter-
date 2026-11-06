@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 104
+uDiscover Music: kept 109
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -101,7 +101,7 @@ Scraping: Craft Recordings (shopify_store)
 ==================================================
   ✓ https://craftrecordings.com/products.json?limit=250 -> 250 products
 Craft Recordings: 250 products via Shopify JSON
-Craft Recordings: kept 90
+Craft Recordings: kept 89
 
 ==================================================
 Scraping: MNRK Heavy (shopify_store)
@@ -165,8 +165,8 @@ Sumerian Records: kept 85
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 176 products
-Solid State Records: 176 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 175 products
+Solid State Records: 175 products via Shopify JSON
 Solid State Records: kept 63
 
 ==================================================
@@ -175,8 +175,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 176 products
-Solid State Vinyl: 176 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 175 products
+Solid State Vinyl: 175 products via Shopify JSON
 Solid State Vinyl: kept 63
 
 ==================================================
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2550 normalized vinyl listings
+[Stage2] 2554 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9137 entries
-[Discogs] Enriching 2550 vinyl records with Mint pricing...
-[Discogs] Cache saved (9137 entries)
+[Discogs] Loaded cache with 9158 entries
+[Discogs] Enriching 2554 vinyl records with Mint pricing...
+[Discogs] Cache saved (9158 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 49 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 454911 bytes
+[UpcomingVinyl] Got 455349 bytes
 [UpcomingVinyl] Found 516 raw record URLs
 [UpcomingVinyl] MATCH: Dave Grusin | The Goonies Score
 [UpcomingVinyl] MATCH: Evanescence | The Open Door 20th Anniversary
@@ -452,7 +452,7 @@ SOURCE STATUS SUMMARY
   Rollin Records: 244 deals
   Rollin Preorders: 244 deals
   Sound of Vinyl: 233 deals
-  uDiscover Music: 104 deals
+  uDiscover Music: 109 deals
   Fearless Records: 89 deals
   Fearless Vinyl: 89 deals
   Rise Records: 90 deals
@@ -461,7 +461,7 @@ SOURCE STATUS SUMMARY
   Revolver: 115 deals
   Newbury Comics: 206 deals
   Newbury Preorders: 206 deals
-  Craft Recordings: 90 deals
+  Craft Recordings: 89 deals
   MNRK Heavy: 125 deals
   Equal Vision: 99 deals
   Rhino: 92 deals
@@ -493,7 +493,7 @@ SOURCE STATUS SUMMARY
 ----- SOURCE SUMMARY -----
 Amazon: 1
 Brooklyn Vegan: 132
-Craft Recordings: 90
+Craft Recordings: 89
 Equal Vision: 99
 Fearless Records: 89
 Hopeless Records: 67
@@ -503,7 +503,7 @@ MNRK Heavy: 125
 Newbury Comics: 206
 Pirates Press Records: 103
 Pure Noise Records: 86
-r/VinylReleases: 49
+r/VinylReleases: 47
 Revolver: 115
 Rhino: 92
 Rise Records: 90
@@ -515,5 +515,5 @@ Sound of Vinyl: 233
 Spinefarm Records: 89
 Sumerian Records: 84
 Target: 1
-uDiscover Music: 104
+uDiscover Music: 109
 Walmart: 1
