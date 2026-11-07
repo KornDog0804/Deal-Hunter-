@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 177
+Rock Metal Fan Nation: kept 179
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 177
+RMFN All: kept 179
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -165,8 +165,8 @@ Sumerian Records: kept 85
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 174 products
-Solid State Records: 174 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
+Solid State Records: 173 products via Shopify JSON
 Solid State Records: kept 62
 
 ==================================================
@@ -175,8 +175,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 174 products
-Solid State Vinyl: 174 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
+Solid State Vinyl: 173 products via Shopify JSON
 Solid State Vinyl: kept 62
 
 ==================================================
@@ -345,7 +345,7 @@ Scraping: Deep Discount (html_store)
 ==================================================
   -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
   -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -406,21 +406,21 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2538 normalized vinyl listings
+[Stage2] 2540 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9183 entries
-[Discogs] Enriching 2538 vinyl records with Mint pricing...
-[Discogs] Cache saved (9183 entries)
+[Discogs] Loaded cache with 9260 entries
+[Discogs] Enriching 2540 vinyl records with Mint pricing...
+[Discogs] Cache saved (9260 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,14 +437,14 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 446265 bytes
+[UpcomingVinyl] Got 446859 bytes
 [UpcomingVinyl] Found 506 raw record URLs
 [UpcomingVinyl] MATCH: Dave Grusin | The Goonies Score
 [UpcomingVinyl] MATCH: Evanescence | The Open Door 20th Anniversary
 [UpcomingVinyl] MATCH: Rush | A Farewell To Kings
 [UpcomingVinyl] Total Korndog matches: 3
 [UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 173 qualified signals saved
+[BuySignals] 175 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -467,8 +467,8 @@ SOURCE STATUS SUMMARY
   Rhino: 90 deals
   Interscope Records: 125 deals
   SharpTone Records: 107 deals
-  Rock Metal Fan Nation: 177 deals
-  RMFN All: 177 deals
+  Rock Metal Fan Nation: 179 deals
+  RMFN All: 179 deals
   Sumerian Records: 85 deals
   Solid State Records: 62 deals
   Solid State Vinyl: 62 deals
@@ -483,7 +483,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 5 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -507,7 +507,7 @@ r/VinylReleases: 48
 Revolver: 119
 Rhino: 90
 Rise Records: 90
-Rock Metal Fan Nation: 177
+Rock Metal Fan Nation: 179
 Rollin Records: 234
 SharpTone Records: 107
 Solid State Records: 62
