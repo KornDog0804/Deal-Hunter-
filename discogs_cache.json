@@ -100813,5 +100813,101 @@
     "discogs_num_for_sale": 5,
     "discogs_have": 333,
     "discogs_want": 343
+  },
+  "olivia rodrigo|expectations 7 single": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.92,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Olivia Rodrigo Feat. Chappell Roan",
+    "discogs_title": "Expectations",
+    "discogs_release_id": 38737665,
+    "discogs_url": "https://www.discogs.com/release/38737665-Olivia-Rodrigo-Feat-Chappell-Roan-Expectations",
+    "discogs_mint_price": 18.67,
+    "discogs_lowest": 18.67,
+    "discogs_num_for_sale": 33,
+    "discogs_have": 1733,
+    "discogs_want": 197
+  },
+  "laurel|crying on the tennis court": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "laurel|crying on the tennis court oxblood": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "disciple|scars remain xx 2x double gatefold": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "little people|mickey mouse operation": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Little People",
+    "discogs_title": "Mickey Mouse Operation",
+    "discogs_release_id": 19713340,
+    "discogs_url": "https://www.discogs.com/release/19713340-Little-People-Mickey-Mouse-Operation",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 39,
+    "discogs_want": 180
+  },
+  "daughter not to disappear|lavender eco": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.624,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|gravity falls soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6512,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "holywatr|deo gratias": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Holywatr",
+    "discogs_title": "Deo Gratias",
+    "discogs_release_id": 38690799,
+    "discogs_url": "https://www.discogs.com/release/38690799-Holywatr-Deo-Gratias",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 14,
+    "discogs_want": 7
+  },
+  "jungle jack|la revanche des cafards": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
