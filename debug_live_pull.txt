@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 97
+Fearless Records: kept 96
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,7 +46,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 97
+Fearless Vinyl: kept 96
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -165,9 +165,9 @@ Sumerian Records: kept 85
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Records: 173 products via Shopify JSON
-Solid State Records: kept 62
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Records: 172 products via Shopify JSON
+Solid State Records: kept 61
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,9 +175,9 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Vinyl: 173 products via Shopify JSON
-Solid State Vinyl: kept 62
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
+Solid State Vinyl: 172 products via Shopify JSON
+Solid State Vinyl: kept 61
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
@@ -344,8 +344,8 @@ Hot Topic: kept 4
 Scraping: Deep Discount (html_store)
 ==================================================
   -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2539 normalized vinyl listings
+[Stage2] 2537 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 9273 entries
-[Discogs] Enriching 2539 vinyl records with Mint pricing...
+[Discogs] Enriching 2537 vinyl records with Mint pricing...
 [Discogs] Cache saved (9273 entries)
 [Discogs] Enrichment complete!
 
@@ -437,14 +437,14 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 446421 bytes
+[UpcomingVinyl] Got 446859 bytes
 [UpcomingVinyl] Found 506 raw record URLs
 [UpcomingVinyl] MATCH: Dave Grusin | The Goonies Score
 [UpcomingVinyl] MATCH: Evanescence | The Open Door 20th Anniversary
 [UpcomingVinyl] MATCH: Rush | A Farewell To Kings
 [UpcomingVinyl] Total Korndog matches: 3
 [UpcomingVinyl] 3 whitelist matches saved to upcoming_releases.json
-[BuySignals] 174 qualified signals saved
+[BuySignals] 173 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -453,8 +453,8 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 234 deals
   Sound of Vinyl: 233 deals
   uDiscover Music: 112 deals
-  Fearless Records: 97 deals
-  Fearless Vinyl: 97 deals
+  Fearless Records: 96 deals
+  Fearless Vinyl: 96 deals
   Rise Records: 90 deals
   Rise All: 90 deals
   Brooklyn Vegan: 133 deals
@@ -470,8 +470,8 @@ SOURCE STATUS SUMMARY
   Rock Metal Fan Nation: 179 deals
   RMFN All: 179 deals
   Sumerian Records: 85 deals
-  Solid State Records: 62 deals
-  Solid State Vinyl: 62 deals
+  Solid State Records: 61 deals
+  Solid State Vinyl: 61 deals
   Pure Noise Records: 86 deals
   Hopeless Records: 67 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
@@ -483,7 +483,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 4 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -495,7 +495,7 @@ Amazon: 1
 Brooklyn Vegan: 133
 Craft Recordings: 91
 Equal Vision: 99
-Fearless Records: 97
+Fearless Records: 96
 Hopeless Records: 67
 Hot Topic: 4
 Interscope Records: 125
@@ -510,7 +510,7 @@ Rise Records: 90
 Rock Metal Fan Nation: 179
 Rollin Records: 234
 SharpTone Records: 107
-Solid State Records: 62
+Solid State Records: 61
 Sound of Vinyl: 233
 Spinefarm Records: 89
 Sumerian Records: 84
