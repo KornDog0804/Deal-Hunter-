@@ -101004,5 +101004,132 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "pepper adams|pepper adam plays": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pusha t|my name is my name 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Pusha T",
+    "discogs_title": "My Name Is My Name",
+    "discogs_release_id": 30727595,
+    "discogs_url": "https://www.discogs.com/release/30727595-Pusha-T-My-Name-Is-My-Name",
+    "discogs_mint_price": 75.0,
+    "discogs_lowest": 75.0,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 588,
+    "discogs_want": 719
+  },
+  "blue note tone poet series|2027 lineup": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|an evening with silk sonic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7333,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|confessions ii 2 orchid edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madonna|confessions ii 2 edition": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Madonna",
+    "discogs_title": "Confessions II",
+    "discogs_release_id": 37782150,
+    "discogs_url": "https://www.discogs.com/release/37782150-Madonna-Confessions-II",
+    "discogs_mint_price": 38.89,
+    "discogs_lowest": 38.89,
+    "discogs_num_for_sale": 134,
+    "discogs_have": 3869,
+    "discogs_want": 319
+  },
+  "madonna|4 box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.641,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "squid|crowds": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7176,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "madvillain|madvillainy 45 box set": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7123,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|disco elysium 3x soundtrack": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|abra princess 10 year anniversary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "suicidal tendencies|november 20 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.673,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|interscope com teases singles day 2026 drop the sundays misfits and more": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
