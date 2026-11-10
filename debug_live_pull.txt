@@ -165,8 +165,8 @@ Sumerian Records: kept 85
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
-Solid State Records: 172 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 171 products
+Solid State Records: 171 products via Shopify JSON
 Solid State Records: kept 61
 
 ==================================================
@@ -175,8 +175,8 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 172 products
-Solid State Vinyl: 172 products via Shopify JSON
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 171 products
+Solid State Vinyl: 171 products via Shopify JSON
 Solid State Vinyl: kept 61
 
 ==================================================
@@ -418,9 +418,9 @@ Amazon: exposing 1 affiliate vinyl catalog portal
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9279 entries
+[Discogs] Loaded cache with 9292 entries
 [Discogs] Enriching 2538 vinyl records with Mint pricing...
-[Discogs] Cache saved (9279 entries)
+[Discogs] Cache saved (9292 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 420480 bytes
+[UpcomingVinyl] Got 420456 bytes
 [UpcomingVinyl] Found 479 raw record URLs
 [UpcomingVinyl] MATCH: blink-182 | Blink Yellow Orange
 [UpcomingVinyl] MATCH: Eagles | Of Death Metal Peace Love Death Metal
@@ -446,7 +446,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Widespread Panic | Live From Austin Tx
 [UpcomingVinyl] Total Korndog matches: 5
 [UpcomingVinyl] 5 whitelist matches saved to upcoming_releases.json
-[BuySignals] 173 qualified signals saved
+[BuySignals] 174 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
