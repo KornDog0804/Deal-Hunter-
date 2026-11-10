@@ -101131,5 +101131,69 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "nova charisma|metropolitan pacific blue and white starburst limited to 250": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "amon tobin|december 11 release": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.717,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "cavetown|running with scissors": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Cavetown",
+    "discogs_title": "Running With Scissors",
+    "discogs_release_id": 36240403,
+    "discogs_url": "https://www.discogs.com/release/36240403-Cavetown-Running-With-Scissors",
+    "discogs_mint_price": 12.0,
+    "discogs_lowest": 12.0,
+    "discogs_num_for_sale": 31,
+    "discogs_have": 70,
+    "discogs_want": 9
+  },
+  "unknown artist|vv get mean boy harsher": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "devo|freedom of choice": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Devo",
+    "discogs_title": "Freedom Of Choice",
+    "discogs_release_id": 1312506,
+    "discogs_url": "https://www.discogs.com/release/1312506-Devo-Freedom-Of-Choice",
+    "discogs_mint_price": 1.01,
+    "discogs_lowest": 1.01,
+    "discogs_num_for_sale": 20,
+    "discogs_have": 749,
+    "discogs_want": 424
+  },
+  "unknown artist|vv she s the best troye sivan": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
