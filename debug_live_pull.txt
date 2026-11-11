@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 114
+uDiscover Music: kept 116
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 90
+Rise Records: kept 89
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,14 +63,14 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 90
+Rise All: kept 89
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 133
+Brooklyn Vegan: kept 135
 
 ==================================================
 Scraping: Revolver (shopify_store)
@@ -122,7 +122,7 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 189 products
 Rhino: 189 products via Shopify JSON
-Rhino: kept 90
+Rhino: kept 89
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -160,7 +160,7 @@ Scraping: Sumerian Records (shopify_store)
 ==================================================
   ✓ https://sumerianrecords.com/products.json?limit=250 -> 250 products
 Sumerian Records: 250 products via Shopify JSON
-Sumerian Records: kept 85
+Sumerian Records: kept 86
 
 ==================================================
 Scraping: Solid State Records (shopify_store)
@@ -184,7 +184,7 @@ Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 241 products
 Pure Noise Records: 241 products via Shopify JSON
-Pure Noise Records: kept 86
+Pure Noise Records: kept 85
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2538 normalized vinyl listings
+[Stage2] 2540 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9292 entries
-[Discogs] Enriching 2538 vinyl records with Mint pricing...
-[Discogs] Cache saved (9292 entries)
+[Discogs] Loaded cache with 9298 entries
+[Discogs] Enriching 2540 vinyl records with Mint pricing...
+[Discogs] Cache saved (9298 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -437,7 +437,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 420456 bytes
+[UpcomingVinyl] Got 420480 bytes
 [UpcomingVinyl] Found 479 raw record URLs
 [UpcomingVinyl] MATCH: blink-182 | Blink Yellow Orange
 [UpcomingVinyl] MATCH: Eagles | Of Death Metal Peace Love Death Metal
@@ -446,7 +446,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Widespread Panic | Live From Austin Tx
 [UpcomingVinyl] Total Korndog matches: 5
 [UpcomingVinyl] 5 whitelist matches saved to upcoming_releases.json
-[BuySignals] 174 qualified signals saved
+[BuySignals] 178 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -454,27 +454,27 @@ SOURCE STATUS SUMMARY
   Rollin Records: 234 deals
   Rollin Preorders: 234 deals
   Sound of Vinyl: 233 deals
-  uDiscover Music: 114 deals
+  uDiscover Music: 116 deals
   Fearless Records: 96 deals
   Fearless Vinyl: 96 deals
-  Rise Records: 90 deals
-  Rise All: 90 deals
-  Brooklyn Vegan: 133 deals
+  Rise Records: 89 deals
+  Rise All: 89 deals
+  Brooklyn Vegan: 135 deals
   Revolver: 118 deals
   Newbury Comics: 206 deals
   Newbury Preorders: 206 deals
   Craft Recordings: 91 deals
   MNRK Heavy: 125 deals
   Equal Vision: 99 deals
-  Rhino: 90 deals
+  Rhino: 89 deals
   Interscope Records: 125 deals
   SharpTone Records: 107 deals
   Rock Metal Fan Nation: 179 deals
   RMFN All: 179 deals
-  Sumerian Records: 85 deals
+  Sumerian Records: 86 deals
   Solid State Records: 61 deals
   Solid State Vinyl: 61 deals
-  Pure Noise Records: 86 deals
+  Pure Noise Records: 85 deals
   Hopeless Records: 67 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 104 deals
@@ -494,7 +494,7 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 133
+Brooklyn Vegan: 135
 Craft Recordings: 91
 Equal Vision: 99
 Fearless Records: 96
@@ -504,18 +504,18 @@ Interscope Records: 125
 MNRK Heavy: 125
 Newbury Comics: 206
 Pirates Press Records: 104
-Pure Noise Records: 86
-r/VinylReleases: 47
+Pure Noise Records: 85
+r/VinylReleases: 45
 Revolver: 118
-Rhino: 90
-Rise Records: 90
+Rhino: 89
+Rise Records: 89
 Rock Metal Fan Nation: 179
 Rollin Records: 234
 SharpTone Records: 107
 Solid State Records: 61
 Sound of Vinyl: 233
 Spinefarm Records: 89
-Sumerian Records: 84
+Sumerian Records: 85
 Target: 1
-uDiscover Music: 114
+uDiscover Music: 116
 Walmart: 1
