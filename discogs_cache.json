@@ -102279,5 +102279,152 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "erra erra 5th anniversary lp exclusive|limited to 500 blue and gray smash": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1819,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "pirouette|red": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7714,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "King Crimson",
+    "discogs_title": "Red",
+    "discogs_release_id": 4703409,
+    "discogs_url": "https://www.discogs.com/release/4703409-King-Crimson-Red",
+    "discogs_mint_price": 24.4,
+    "discogs_lowest": 24.4,
+    "discogs_num_for_sale": 50,
+    "discogs_have": 5555,
+    "discogs_want": 1031
+  },
+  "sabrina carpenter|fruitcake": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Sabrina Carpenter",
+    "discogs_title": "Fruitcake",
+    "discogs_release_id": 32495520,
+    "discogs_url": "https://www.discogs.com/release/32495520-Sabrina-Carpenter-Fruitcake",
+    "discogs_mint_price": 22.0,
+    "discogs_lowest": 22.0,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 3298,
+    "discogs_want": 268
+  },
+  "unknown artist|panchiko chimera vertigo drop today": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "eminem|limited": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Eminem",
+    "discogs_title": "Limited Edition Album Acapella",
+    "discogs_release_id": 875916,
+    "discogs_url": "https://www.discogs.com/release/875916-Eminem-Limited-Edition-Album-Acapella",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 39,
+    "discogs_want": 82
+  },
+  "scooter|mind the gap": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8222,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "London Tube",
+    "discogs_title": "Mind The Gap",
+    "discogs_release_id": 671037,
+    "discogs_url": "https://www.discogs.com/release/671037-London-Tube-Mind-The-Gap",
+    "discogs_mint_price": 11.11,
+    "discogs_lowest": 11.11,
+    "discogs_num_for_sale": 5,
+    "discogs_have": 86,
+    "discogs_want": 101
+  },
+  "eminem|infinite ep": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7811,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Robbenspierre",
+    "discogs_title": "Infinite EP",
+    "discogs_release_id": 13921646,
+    "discogs_url": "https://www.discogs.com/release/13921646-Robbenspierre-Infinite-EP",
+    "discogs_mint_price": 13.33,
+    "discogs_lowest": 13.33,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 150,
+    "discogs_want": 372
+  },
+  "unknown artist|bloodhound gang one fierce beer coaster": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6918,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "bloodhound gang|one fierce beer coaster liquid filled 1": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "snk neo sound orchestra|the king of fighters 96 97 and 99 2x s": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "blank and jones|dom": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7382,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the avalanches|we will always love you": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Avalanches",
+    "discogs_title": "We Will Always Love You",
+    "discogs_release_id": 16421544,
+    "discogs_url": "https://www.discogs.com/release/16421544-The-Avalanches-We-Will-Always-Love-You",
+    "discogs_mint_price": 36.56,
+    "discogs_lowest": 36.56,
+    "discogs_num_for_sale": 25,
+    "discogs_have": 1984,
+    "discogs_want": 534
+  },
+  "thin lizzy|jailbreak numbered 180gram": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
