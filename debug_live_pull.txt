@@ -120,16 +120,16 @@ Equal Vision: kept 99
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 189 products
-Rhino: 189 products via Shopify JSON
-Rhino: kept 89
+  ✓ https://store.rhino.com/products.json?limit=250 -> 215 products
+Rhino: 215 products via Shopify JSON
+Rhino: kept 99
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 127
+Interscope Records: kept 133
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 4
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
   -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2541 normalized vinyl listings
+[Stage2] 2557 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9346 entries
-[Discogs] Enriching 2541 vinyl records with Mint pricing...
-[Discogs] Cache saved (9346 entries)
+[Discogs] Loaded cache with 9374 entries
+[Discogs] Enriching 2557 vinyl records with Mint pricing...
+[Discogs] Cache saved (9374 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,7 +432,7 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 47 deals after filtering
+[r/VinylReleases] 46 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
@@ -446,7 +446,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Widespread Panic | Live From Austin Tx
 [UpcomingVinyl] Total Korndog matches: 5
 [UpcomingVinyl] 5 whitelist matches saved to upcoming_releases.json
-[BuySignals] 179 qualified signals saved
+[BuySignals] 181 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -466,8 +466,8 @@ SOURCE STATUS SUMMARY
   Craft Recordings: 91 deals
   MNRK Heavy: 125 deals
   Equal Vision: 99 deals
-  Rhino: 89 deals
-  Interscope Records: 127 deals
+  Rhino: 99 deals
+  Interscope Records: 133 deals
   SharpTone Records: 107 deals
   Rock Metal Fan Nation: 179 deals
   RMFN All: 179 deals
@@ -485,7 +485,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 4 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -500,14 +500,14 @@ Equal Vision: 99
 Fearless Records: 96
 Hopeless Records: 67
 Hot Topic: 4
-Interscope Records: 127
+Interscope Records: 133
 MNRK Heavy: 125
 Newbury Comics: 206
 Pirates Press Records: 104
 Pure Noise Records: 85
-r/VinylReleases: 45
+r/VinylReleases: 38
 Revolver: 116
-Rhino: 89
+Rhino: 99
 Rise Records: 89
 Rock Metal Fan Nation: 179
 Rollin Records: 234
