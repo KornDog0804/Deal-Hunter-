@@ -101964,5 +101964,320 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "common|like water for chocolate 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Common",
+    "discogs_title": "Like Water For Chocolate",
+    "discogs_release_id": 187055,
+    "discogs_url": "https://www.discogs.com/release/187055-Common-Like-Water-For-Chocolate",
+    "discogs_mint_price": 62.57,
+    "discogs_lowest": 62.57,
+    "discogs_num_for_sale": 42,
+    "discogs_have": 2898,
+    "discogs_want": 2831
+  },
+  "the cure|pornography": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Cure",
+    "discogs_title": "Pornography",
+    "discogs_release_id": 1610908,
+    "discogs_url": "https://www.discogs.com/release/1610908-The-Cure-Pornography",
+    "discogs_mint_price": 18.0,
+    "discogs_lowest": 18.0,
+    "discogs_num_for_sale": 41,
+    "discogs_have": 1311,
+    "discogs_want": 677
+  },
+  "alanis morissette|the demos 1994 1998": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Alanis Morissette",
+    "discogs_title": "The Demos: 1994 - 1998",
+    "discogs_release_id": 8395738,
+    "discogs_url": "https://www.discogs.com/release/8395738-Alanis-Morissette-The-Demos-1994-1998",
+    "discogs_mint_price": 27.78,
+    "discogs_lowest": 27.78,
+    "discogs_num_for_sale": 30,
+    "discogs_have": 1991,
+    "discogs_want": 297
+  },
+  "expectations|la behavior translucent blue 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.233,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|vacancy 2 test pressing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7204,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|reckoning test pressing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|give the drummer some ivc edition test pressing": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|songbird test pressing": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7603,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Oasis (2)",
+    "discogs_title": "Songbird",
+    "discogs_release_id": 8313965,
+    "discogs_url": "https://www.discogs.com/release/8313965-Oasis-Songbird",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 8,
+    "discogs_want": 90
+  },
+  "the killers|sawdust": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Killers",
+    "discogs_title": "Sawdust",
+    "discogs_release_id": 11273901,
+    "discogs_url": "https://www.discogs.com/release/11273901-The-Killers-Sawdust",
+    "discogs_mint_price": 24.99,
+    "discogs_lowest": 24.99,
+    "discogs_num_for_sale": 14,
+    "discogs_have": 1414,
+    "discogs_want": 257
+  },
+  "gojira|magma": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Gojira (2)",
+    "discogs_title": "Magma",
+    "discogs_release_id": 39000809,
+    "discogs_url": "https://www.discogs.com/release/39000809-Gojira-Magma",
+    "discogs_mint_price": 30.99,
+    "discogs_lowest": 30.99,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 4,
+    "discogs_want": 4
+  },
+  "nick jonas|limited run alternate cover": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4653,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "wednesday|rat saw god": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Wednesday (10)",
+    "discogs_title": "Rat Saw God",
+    "discogs_release_id": 29230402,
+    "discogs_url": "https://www.discogs.com/release/29230402-Wednesday-Rat-Saw-God",
+    "discogs_mint_price": 29.61,
+    "discogs_lowest": 29.61,
+    "discogs_num_for_sale": 2,
+    "discogs_have": 101,
+    "discogs_want": 61
+  },
+  "pre order the lawrence arms|2026 remaster": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6955,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "lilith s demise|death becomes her": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7683,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Alan Silvestri",
+    "discogs_title": "Death Becomes Her (Original Motion Picture Soundtrack)",
+    "discogs_release_id": 28988332,
+    "discogs_url": "https://www.discogs.com/release/28988332-Alan-Silvestri-Death-Becomes-Her-Original-Motion-Picture-Soundtrack",
+    "discogs_mint_price": 25.0,
+    "discogs_lowest": 25.0,
+    "discogs_num_for_sale": 29,
+    "discogs_have": 622,
+    "discogs_want": 114
+  },
+  "the click|down and dirty hhv green edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|down and dirty 300": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4874,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|graffiti record s 1nd1e day 26 is live": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ado|monstruo 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.74,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "ryl0|5t4rp0w3r": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "final few blood records various artists|grand theft auto vi the album": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2419,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "gang of youths|compa ero": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7252,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|last chance nessa barrett pretty poision": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "eminem|3am kill you": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5376,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "selena|bidi bidi bom bom 4 tiny": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "sienna spiro|capitol store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5501,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dj shadow|preemptive strike 2 standard edition": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "dj shadow|preemptive strike 2 special edition": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "DJ Shadow",
+    "discogs_title": "Preemptive Strike",
+    "discogs_release_id": 83670,
+    "discogs_url": "https://www.discogs.com/release/83670-DJ-Shadow-Preemptive-Strike",
+    "discogs_mint_price": 6.66,
+    "discogs_lowest": 6.66,
+    "discogs_num_for_sale": 53,
+    "discogs_have": 7413,
+    "discogs_want": 2194
+  },
+  "brooke combe|signed": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.728,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the click|down n dirty record 100": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3224,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "conan gray|heather etched blue 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
