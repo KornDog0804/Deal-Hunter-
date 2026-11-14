@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 95
+Fearless Records: kept 82
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,14 +46,14 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 95
+Fearless Vinyl: kept 82
 
 ==================================================
 Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 89
+Rise Records: kept 90
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,7 +63,7 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 89
+Rise All: kept 90
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
@@ -129,7 +129,7 @@ Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 132
+Interscope Records: kept 130
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -165,9 +165,9 @@ Sumerian Records: kept 86
 ==================================================
 Scraping: Solid State Records (shopify_store)
 ==================================================
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Records: 173 products via Shopify JSON
-Solid State Records: kept 61
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 174 products
+Solid State Records: 174 products via Shopify JSON
+Solid State Records: kept 62
 
 ==================================================
 Scraping: Solid State Vinyl (shopify_store)
@@ -175,16 +175,16 @@ Scraping: Solid State Vinyl (shopify_store)
   -> retry 1/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   -> retry 2/2 for https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 | HTTP Error 404: Not Found
   ✗ https://solidstaterecords.store/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
-  ✓ https://solidstaterecords.store/products.json?limit=250 -> 173 products
-Solid State Vinyl: 173 products via Shopify JSON
-Solid State Vinyl: kept 61
+  ✓ https://solidstaterecords.store/products.json?limit=250 -> 174 products
+Solid State Vinyl: 174 products via Shopify JSON
+Solid State Vinyl: kept 62
 
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
-  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 241 products
-Pure Noise Records: 241 products via Shopify JSON
-Pure Noise Records: kept 85
+  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 249 products
+Pure Noise Records: 249 products via Shopify JSON
+Pure Noise Records: kept 88
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 4
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2553 normalized vinyl listings
+[Stage2] 2543 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9435 entries
-[Discogs] Enriching 2553 vinyl records with Mint pricing...
-[Discogs] Cache saved (9435 entries)
+[Discogs] Loaded cache with 9463 entries
+[Discogs] Enriching 2543 vinyl records with Mint pricing...
+[Discogs] Cache saved (9463 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -432,12 +432,12 @@ SCRAPING r/VINYLRELEASES
 [r/VinylReleases] Fetched RSS from https://www.reddit.com/r/VinylReleases/new/.rss?limit=50
 ==================================================
 [r/VinylReleases] Parsed 50 posts from RSS
-[r/VinylReleases] 46 deals after filtering
+[r/VinylReleases] 47 deals after filtering
 
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 389148 bytes
+[UpcomingVinyl] Got 389304 bytes
 [UpcomingVinyl] Found 441 raw record URLs
 [UpcomingVinyl] MATCH: blink-182 | Blink Yellow Orange
 [UpcomingVinyl] MATCH: Eagles | Of Death Metal Peace Love Death Metal
@@ -446,7 +446,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: Widespread Panic | Live From Austin Tx
 [UpcomingVinyl] Total Korndog matches: 5
 [UpcomingVinyl] 5 whitelist matches saved to upcoming_releases.json
-[BuySignals] 182 qualified signals saved
+[BuySignals] 185 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -455,10 +455,10 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 234 deals
   Sound of Vinyl: 233 deals
   uDiscover Music: 120 deals
-  Fearless Records: 95 deals
-  Fearless Vinyl: 95 deals
-  Rise Records: 89 deals
-  Rise All: 89 deals
+  Fearless Records: 82 deals
+  Fearless Vinyl: 82 deals
+  Rise Records: 90 deals
+  Rise All: 90 deals
   Brooklyn Vegan: 133 deals
   Revolver: 112 deals
   Newbury Comics: 205 deals
@@ -467,14 +467,14 @@ SOURCE STATUS SUMMARY
   MNRK Heavy: 125 deals
   Equal Vision: 98 deals
   Rhino: 95 deals
-  Interscope Records: 132 deals
+  Interscope Records: 130 deals
   SharpTone Records: 112 deals
   Rock Metal Fan Nation: 180 deals
   RMFN All: 180 deals
   Sumerian Records: 86 deals
-  Solid State Records: 61 deals
-  Solid State Vinyl: 61 deals
-  Pure Noise Records: 85 deals
+  Solid State Records: 62 deals
+  Solid State Vinyl: 62 deals
+  Pure Noise Records: 88 deals
   Hopeless Records: 67 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 104 deals
@@ -485,7 +485,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 4 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -497,22 +497,22 @@ Amazon: 1
 Brooklyn Vegan: 133
 Craft Recordings: 92
 Equal Vision: 98
-Fearless Records: 95
+Fearless Records: 82
 Hopeless Records: 67
 Hot Topic: 4
-Interscope Records: 132
+Interscope Records: 130
 MNRK Heavy: 125
 Newbury Comics: 205
 Pirates Press Records: 104
-Pure Noise Records: 85
-r/VinylReleases: 41
+Pure Noise Records: 88
+r/VinylReleases: 43
 Revolver: 112
 Rhino: 95
-Rise Records: 89
+Rise Records: 90
 Rock Metal Fan Nation: 180
 Rollin Records: 234
 SharpTone Records: 112
-Solid State Records: 61
+Solid State Records: 62
 Sound of Vinyl: 233
 Spinefarm Records: 89
 Sumerian Records: 85
