@@ -103211,5 +103211,87 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "kate vogele|age of alchemy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.5083,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "vinyl|chrissy high voltage chrissy chlapecka official store": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "magdalene|american heroine": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6256,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "signed phoebe bridgers|lost weekend 2x 3hive record lounge": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "phoebe bridgers|lost weekend signed": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Phoebe Bridgers",
+    "discogs_title": "Lost Weekend",
+    "discogs_release_id": 38093415,
+    "discogs_url": "https://www.discogs.com/release/38093415-Phoebe-Bridgers-Lost-Weekend",
+    "discogs_mint_price": 28.95,
+    "discogs_lowest": 28.95,
+    "discogs_num_for_sale": 294,
+    "discogs_have": 7627,
+    "discogs_want": 485
+  },
+  "h blockx|time to move": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "H-Blockx",
+    "discogs_title": "Time To Move",
+    "discogs_release_id": 14373923,
+    "discogs_url": "https://www.discogs.com/release/14373923-H-Blockx-Time-To-Move",
+    "discogs_mint_price": 72.22,
+    "discogs_lowest": 72.22,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 510,
+    "discogs_want": 125
+  },
+  "look outside your window|restock": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3823,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "maroon 5|singles collection": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7553,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
