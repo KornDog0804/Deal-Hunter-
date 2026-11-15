@@ -36,7 +36,7 @@ Scraping: Fearless Records (shopify_store)
 ==================================================
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Records: 250 products via Shopify JSON
-Fearless Records: kept 82
+Fearless Records: kept 81
 
 ==================================================
 Scraping: Fearless Vinyl (shopify_store)
@@ -46,7 +46,7 @@ Scraping: Fearless Vinyl (shopify_store)
   ✗ https://store.fearlessrecords.com/collections/vinyl/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://store.fearlessrecords.com/products.json?limit=250 -> 250 products
 Fearless Vinyl: 250 products via Shopify JSON
-Fearless Vinyl: kept 82
+Fearless Vinyl: kept 81
 
 ==================================================
 Scraping: Rise Records (shopify_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 14
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2551 normalized vinyl listings
+[Stage2] 2550 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9504 entries
-[Discogs] Enriching 2551 vinyl records with Mint pricing...
-[Discogs] Cache saved (9504 entries)
+[Discogs] Loaded cache with 9508 entries
+[Discogs] Enriching 2550 vinyl records with Mint pricing...
+[Discogs] Cache saved (9508 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -455,8 +455,8 @@ SOURCE STATUS SUMMARY
   Rollin Preorders: 234 deals
   Sound of Vinyl: 233 deals
   uDiscover Music: 120 deals
-  Fearless Records: 82 deals
-  Fearless Vinyl: 82 deals
+  Fearless Records: 81 deals
+  Fearless Vinyl: 81 deals
   Rise Records: 90 deals
   Rise All: 90 deals
   Brooklyn Vegan: 132 deals
@@ -485,7 +485,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 14 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -497,7 +497,7 @@ Amazon: 1
 Brooklyn Vegan: 132
 Craft Recordings: 92
 Equal Vision: 98
-Fearless Records: 82
+Fearless Records: 81
 Hopeless Records: 67
 Hot Topic: 14
 Interscope Records: 130
@@ -505,7 +505,7 @@ MNRK Heavy: 125
 Newbury Comics: 205
 Pirates Press Records: 104
 Pure Noise Records: 88
-r/VinylReleases: 46
+r/VinylReleases: 47
 Revolver: 111
 Rhino: 95
 Rise Records: 90
