@@ -103334,5 +103334,46 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "skagos|stricken": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7227,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "skagos|anarchic": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7056,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|nefelejcs by b se": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2345,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "the linda lindas|gotta get out": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "The Linda Lindas",
+    "discogs_title": "Gotta Get Out",
+    "discogs_release_id": 38304243,
+    "discogs_url": "https://www.discogs.com/release/38304243-The-Linda-Lindas-Gotta-Get-Out",
+    "discogs_mint_price": 26.26,
+    "discogs_lowest": 26.26,
+    "discogs_num_for_sale": 22,
+    "discogs_have": 139,
+    "discogs_want": 13
   }
 }
