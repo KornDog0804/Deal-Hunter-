@@ -103293,5 +103293,46 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "olivia rodrigo|guts hot topic": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Olivia Rodrigo",
+    "discogs_title": "Guts",
+    "discogs_release_id": 28206793,
+    "discogs_url": "https://www.discogs.com/release/28206793-Olivia-Rodrigo-Guts",
+    "discogs_mint_price": 45.0,
+    "discogs_lowest": 45.0,
+    "discogs_num_for_sale": 6,
+    "discogs_have": 639,
+    "discogs_want": 522
+  },
+  "unknown artist|kwn with all due respect and all pride aside": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rufus du sol|innerbloom xi": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "glaive|polesden lacey": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
