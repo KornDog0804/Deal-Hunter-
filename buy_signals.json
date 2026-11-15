@@ -1894,42 +1894,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "DIAMANTE 'SUPERNOVA' LP (Exclusive",
-    "title": "Limited to 100, Remnant Vinyl)",
-    "raw_title": "DIAMANTE 'SUPERNOVA' LP (Exclusive - Limited to 100, Remnant Vinyl)",
-    "price": 29.99,
-    "source": "Revolver",
-    "source_type": "shopify_store",
-    "link": "https://shop.revolvermag.com/products/diamante-supernova-lp-exclusive-limited-to-100-remnant-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0280/0484/3614/files/4172-REVOLVER.png?v=1792434472",
-    "score": 68,
-    "stage2_score": 68,
-    "quality": "watch",
-    "signals": [
-      "exclusive",
-      "limited",
-      "under-$30"
-    ],
-    "release_key": "diamante supernova exclusive::limited to 100 remnant",
-    "version": "exclusive limited",
-    "format": "vinyl",
-    "buyer_score": 95,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "MOVEMENTS",
     "title": "HAPPIER NOW (Limited Edition Indie Exclusive, Tangerine / Apple Red Vinyl)",
     "raw_title": "MOVEMENTS - HAPPIER NOW (Limited Edition Indie Exclusive, Tangerine / Apple Red Vinyl)",
@@ -5480,6 +5444,44 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Olivia Rodrigo",
+    "title": "Guts Vinyl LP Hot Topic Exclusive",
+    "raw_title": "Olivia Rodrigo - Guts Vinyl LP Hot Topic Exclusive",
+    "price": 23.03,
+    "source": "Hot Topic",
+    "source_type": "html_store",
+    "link": "https://www.hottopic.com/product/olivia-rodrigo---guts-vinyl-lp-hot-topic-exclusive/30802399.html",
+    "image": "https://cdn.media.amplience.net/s/hottopic/30810695_hi?h=630",
+    "score": 58,
+    "stage2_score": 58,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "under-$25"
+    ],
+    "release_key": "olivia rodrigo::guts hot topic exclusive",
+    "version": "exclusive",
+    "format": "vinyl",
+    "buyer_score": 81,
+    "inventory_lane": "Bread & Butter",
+    "customer_lanes": [
+      "Casual Nostalgia Buyer",
+      "Collector",
+      "Gift Buyer",
+      "Pop / Indie Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "High Traffic",
+    "why_buy": "Bread & Butter, strong dollar margin, steady mover, collector appeal, buy now",
+    "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "Pierce The Veil",
     "title": "Selfish Machines Exclusive LP (Marble)",
     "raw_title": "Selfish Machines Exclusive LP (Marble)",
@@ -6424,7 +6426,7 @@
     "artist": "A PERFECT CIRCLE",
     "title": "EAT THE ELEPHANT (Limited Edition, Double White / Red / Blue Splatter Vinyl) (2LP)",
     "raw_title": "A PERFECT CIRCLE - EAT THE ELEPHANT (Limited Edition, Double White / Red / Blue Splatter Vinyl) (2LP)",
-    "price": 44.98,
+    "price": 42.98,
     "source": "Rock Metal Fan Nation",
     "source_type": "shopify_store",
     "link": "https://rmfnvinyl.com/products/a-perfect-circle-eat-the-elephant-limited-edition-double-white-red-blue-splatter-vinyl-2lp",
