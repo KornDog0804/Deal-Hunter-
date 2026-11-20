@@ -43,7 +43,7 @@ jobs:
 
       - name: Run unit tests first
         run: |
-          python -m pip install pytest
+          python -m pip install pytest requests beautifulsoup4
           python -m pytest -q
 
       - name: Restore previous validation progress
@@ -87,4 +87,8 @@ jobs:
 
       - name: Prove no tracked repo file was modified
         if: always()
-        run: git diff --exit-code && echo "repo untouched"
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+            echo "Tracked files changed:"; git status --short --untracked-files=no; git diff --stat | tail -20; exit 1
+          fi
+          echo "repo untouched"
