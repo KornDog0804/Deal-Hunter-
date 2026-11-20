@@ -350,6 +350,25 @@ def _label_agrees(deal_label, cand_labels):
     return False
 
 
+_CREDIT_JOIN = ("and", "with", "feat", "featuring", "vs", "plus", "x")
+
+
+def artist_similarity(deal_artist, cand_artist):
+    """Name similarity that also accepts credit variants: 'Bob Marley' vs 'Bob Marley & The Wailers'
+    (the shorter name must be a whole-word prefix followed by a join word) and Discogs
+    disambiguation numbers ('Archers (3)'). A bare prefix like 'Black' vs 'Black Sabbath' is NOT accepted."""
+    clean = lambda v: re.sub(r"\s*\(\d+\)\s*$", "", str(v or "")).strip()
+    a, b = clean(deal_artist), clean(cand_artist)
+    base = similarity(a, b)
+    na, nb = norm_text(a), norm_text(b)
+    short, long_ = (na, nb) if len(na) <= len(nb) else (nb, na)
+    if short and long_.startswith(short + " "):
+        rest = long_[len(short) + 1:].split(" ", 1)[0]
+        if rest in _CREDIT_JOIN:
+            base = max(base, 0.9)
+    return base
+
+
 def evaluate_candidate(ident, cand):
     """Score one candidate. Returns dict with `vetoes`, `positives`, `score`."""
     c = _candidate_fields(cand)
@@ -358,7 +377,7 @@ def evaluate_candidate(ident, cand):
     # Best of: edition-stripped title, or the title with only parentheticals removed.
     title_sim = max(similarity(ident.get("title"), c["title"]),
                     similarity(ident.get("title_plain") or "", c["title"]))
-    artist_sim = similarity(ident.get("artist"), c["artist"])
+    artist_sim = artist_similarity(ident.get("artist"), c["artist"])
 
     catno_hit = False
     if ident.get("catno"):

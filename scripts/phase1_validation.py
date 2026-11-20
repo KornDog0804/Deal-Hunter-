@@ -22,7 +22,7 @@ import landed_cost as lc
 API = "https://api.discogs.com"
 UA = "KornDogDealHunterValidation/1.0 +https://korndogrecords.com"
 MIN_INTERVAL = 1.1          # authenticated limit is 60/min -> stay under it
-SCHEMA = 2
+SCHEMA = 3
 
 
 class StopRun(Exception):
@@ -145,7 +145,8 @@ def validate(work, state, limiter, deadline, limit=None, save=None, clock=time.m
             res = dm.search_and_match(w["ident"], lambda p: limiter.get("/database/search", p))
             rec = {"schema": SCHEMA, "at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                    "status": res["status"], "confidence": res["confidence"],
-                   "reasons": res["reasons"][:4], "release_id": res["release_id"],
+                   "reasons": res["reasons"][:4],
+                   "rejected": [str(x)[:140] for x in (res.get("rejected") or [])[:2]], "release_id": res["release_id"],
                    "tied_ids": res["tied_ids"][:5],
                    **{k: res.get(k) for k in ("matched_artist", "matched_title", "matched_label",
                                               "matched_catno", "matched_country", "matched_year")}}
@@ -176,7 +177,7 @@ def build_results(deals, state, cfg):
             if rec:
                 row.update(status=rec["status"], confidence=rec["confidence"],
                            release_id=rec.get("release_id"), reasons=rec.get("reasons", []),
-                           matched_title=rec.get("matched_title"), matched_label=rec.get("matched_label"),
+                           matched_title=rec.get("matched_title"), rejected=rec.get("rejected", []), matched_label=rec.get("matched_label"),
                            matched_year=rec.get("matched_year"), matched_country=rec.get("matched_country"),
                            verified=rec["status"] in dm.DECISION_GRADE_STATUSES)
                 est = rec.get("resale_estimate") or 0
@@ -238,7 +239,8 @@ def diagnostics(rows, per_status=6):
         if len(samples.setdefault(st, [])) < per_status:
             samples[st].append("%s - %s | %s" % (r.get("artist"), r.get("title"),
                                "; ".join(r.get("reasons", [])[:2]) +
-                               ((" -> " + str(r.get("matched_title"))) if r.get("matched_title") else "")))
+                               ((" -> " + str(r.get("matched_title"))) if r.get("matched_title") else "") +
+                               ((" | rej: " + " / ".join(r["rejected"])) if r.get("rejected") else "")))
     return {"reason_counts": {k: dict(v.most_common(6)) for k, v in reasons.items()}, "samples": samples}
 
 
@@ -350,7 +352,7 @@ def main(argv=None):
     for st, lst in diag["samples"].items():
         print("--", st)
         for x in lst:
-            print("  ", x[:150])
+            print("  ", x[:260])
     if stop in ("auth_failed_401", "auth_failed_403"):
         return 3
     return 0

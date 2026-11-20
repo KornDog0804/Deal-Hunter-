@@ -185,3 +185,11 @@ def test_fuzzy_q_fallback_still_requires_artist_and_strict_validation():
     res = dm.evaluate_candidates(ident, [{"id": 1, "title": "Someone Else - Licensed to Ill", "year": "1986",
                                           "country": "US", "format": ["Vinyl", "LP"]}])
     assert res["status"] in ("none", "ambiguous")
+
+
+def test_artist_credit_variants_accepted_but_bare_prefix_rejected():
+    assert dm.artist_similarity("Bob Marley", "Bob Marley & The Wailers") >= 0.9
+    assert dm.artist_similarity("Bob Marley & The Wailers", "Bob Marley") >= 0.9
+    assert dm.artist_similarity("Archers", "Archers (3)") >= 0.99
+    assert dm.artist_similarity("Black", "Black Sabbath") < 0.8
+    assert dm.artist_similarity("Prince", "Princess") < 0.9
