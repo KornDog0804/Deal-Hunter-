@@ -1,8 +1,9 @@
 name: Phase 1 Discogs Validation (isolated, read-only)
 
-# Manual only. No schedule, no push, no deploy. Writes nothing to the repo:
-# results go to validation_out/ and are uploaded as an artifact. Progress is kept in the
-# Actions cache so a later run RESUMES where this one stopped.
+# No schedule, no deploy, never touches main. Repo files are never modified (checked below).
+# Results go to validation_out/, are uploaded as an artifact, and are ALSO force-pushed to ONE
+# dedicated results branch (phase1-validation-results) so they can be loaded into the preview.
+# Progress is kept in the Actions cache so a later run RESUMES where this one stopped.
 on:
   # Starts a small first test (20 pressings) whenever THIS file changes on the branch. Needed because
   # a manual "Run workflow" button only appears for workflows that exist on the default branch.
@@ -19,7 +20,7 @@ on:
         default: ""
 
 permissions:
-  contents: read
+  contents: write   # used ONLY by the last step, which pushes to phase1-validation-results
 
 concurrency:
   group: phase1-validation
@@ -100,3 +101,21 @@ jobs:
 # rerun 1795166062
 # rerun 1795166199
 # rerun 1795166586
+
+      - name: Publish results to the isolated results branch (never main)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          [ -f validation_out/validation_summary.json ] || { echo "no results to publish"; exit 0; }
+          BR=phase1-validation-results
+          D=$(mktemp -d)
+          cp validation_out/*.json "$D"/ && rm -f "$D/state.json"
+          cd "$D"
+          git init -q -b "$BR"
+          git config user.name "validation-bot"; git config user.email "validation-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Phase 1 validation results (run ${{ github.run_id }})"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "$BR"
+          echo "published to branch $BR"
