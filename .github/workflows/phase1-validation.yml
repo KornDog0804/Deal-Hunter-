@@ -32,6 +32,7 @@ jobs:
     timeout-minutes: 345
     env:
       DEAL_HUNTER_DISABLE_NOTIFY: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
       - uses: actions/checkout@v4
         with:
