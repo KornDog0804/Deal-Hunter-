@@ -809,6 +809,9 @@ h1{
   <option value="low">Lowest price</option>
   <option value="high">Highest price</option>
   <option value="artist">Artist A-Z</option>
+  <option value="net">Highest net profit</option>
+  <option value="roi">Highest ROI</option>
+  <option value="invest">Lowest investment</option>
 </select>
 
 </div>
@@ -819,7 +822,7 @@ h1{
 <div class="pvFilters" id="pvFilters">
   <label>Min net $<input id="fNet" type="number" step="1" inputmode="decimal" placeholder="5"></label>
   <label>Min ROI %<input id="fRoi" type="number" step="1" inputmode="decimal" placeholder="25"></label>
-  <label>Max price $<input id="fMaxP" type="number" step="1" inputmode="decimal" placeholder="any"></label>
+  <label>Max purchase budget $<input id="fMaxP" type="number" step="1" inputmode="decimal" placeholder="any"></label>
   <label>Match<select id="fMatch"><option value="">Any</option><option value="verified">Verified (exact/strong)</option><option value="likely">Unverified: Lowest Asking Price Estimate</option><option value="title_only">Title only (unverified)</option><option value="ambiguous">Ambiguous</option><option value="none">Unmatched</option><option value="not_validated">Not validated</option></select></label>
   <label>Load results<input id="fFile" type="file" accept=".json" multiple></label>
 </div>
@@ -921,7 +924,7 @@ function renderSummary(){
   const s = VSUM, v = s.verified_only || {}, t = s.thresholds || {}
   const c = (n,l) => `<div><b>${Number(n||0).toLocaleString()}</b>${l}</div>`
   el.innerHTML = `<b>${s.sample?"SAMPLE RUN: "+s.unique_pressings_total+" pressings, new matcher. All other listings are not validated yet.":"Live Discogs validation"}</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
-  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"unverified w/ Lowest Asking Price Est.")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c((s.likely_tier||{}).thin_market,"thin market (&lt;3 copies for sale)")}${c((s.likely_tier||{}).both_excluding_suspect,"…minus thin/suspect")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
+  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"unverified w/ Lowest Asking Price Est.")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c((s.likely_tier||{}).thin_market,"thin market (&lt;3 copies for sale)")}${c((s.likely_tier||{}).both_excluding_suspect,"…minus thin/suspect")}${c(s.incomplete_cost_rows,"valuations with incomplete costs")}${c(s.verified_manual_check,"verified: check by hand")}${c(s.recommendation_eligible,"recommendation-eligible")}${c(s.recommendation_eligible_meeting_thresholds,"eligible + meet both")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
 }
 document.addEventListener("DOMContentLoaded", ()=>{
   ["fNet","fRoi","fMaxP","fMatch"].forEach(id => document.getElementById(id).addEventListener("input", ()=>{ currentPage = 1; render() }))
@@ -952,11 +955,13 @@ function pvBlock(d){
     const pass = net!==undefined && net>=5 && v.roi>=25
     let h2 = `<span class="pill ${ok?"ok":lk?"warn":"dim"}">${ok?"Verified":lk?"Likely":esc(v.status.replace("_"," "))} ${Math.round((v.confidence||0)*100)}%</span><span class="pill dim">Prod: ${esc(prod)}</span>`
     if(prod==="BUY NOW") h2 += ok ? `<span class="pill ${pass?"ok":"bad"}">${pass?"BUY NOW holds":"Preview: WATCH"}</span>` : `<span class="pill bad">Preview: ${lk&&pass?"BUY LIGHT":"WATCH"}</span>`
+    if(v.manual_check && v.manual_check.length) h2 += `<br><span class="pill warn">⚑ verify by hand: ${v.manual_check.map(esc).join("; ")}</span>`
+    if(ok) h2 += `<br><span class="pill ${v.recommendation_eligible?"ok":"dim"}">${v.recommendation_eligible?"eligible for a buy recommendation (auto-buy is off)":"not eligible for recommendation"}</span>`
     if(v.thin_market) h2 += `<br><span class="pill bad">⚠ thin market: only ${v.market_depth} cop${v.market_depth==1?"y":"ies"} for sale, one ask is not a market price</span>`
     const idu = v.identifiers_used || {}, idk = Object.keys(idu)
     h2 += `<br><small>IDs from store: ${idk.length ? idk.map(k=>esc(k)+" "+esc(String(idu[k]))).join(", ") : "none"}${idu.sku&&!idu.catno?" (SKU is a store code, not a catalog number)":""}</small>`
     if(v.suspect) h2 += `<br><span class="pill bad">⚠ ROI over 300%: probably a wrong match, check by hand</span>`
-    if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; ${lk?"Lowest Asking Price Estimate":"resale est."} $${v.resale.toFixed(2)} <small>(${lk?"cheapest current Discogs ask across possible pressings, not a guaranteed resale value"+(v.floor_wide?", prices vary widely":""):"Discogs price guide NM"+(v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):"")}${v.market_depth!=null?", "+v.market_depth+" for sale":""})</small><br>Net ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(missing costs counted as $0: "+(v.missing||[]).join(", ")+")"}</small>${v.cost_certainty?`<br><small>Known: customer shipping, postage, packaging, Discogs 9%, PayPal 3.49%+$0.49. Estimated: resale price. Missing: ${(v.cost_certainty.missing||[]).length?v.cost_certainty.missing.join(", "):"none"}</small>`:""}${lk?"<br><small>Pressing unverified: cannot be BUY NOW</small>":""}`
+    if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; ${lk?"Lowest Asking Price Estimate":"resale est."} $${v.resale.toFixed(2)} <small>(${lk?"cheapest current Discogs ask across possible pressings, not a guaranteed resale value"+(v.floor_wide?", prices vary widely":""):"Discogs price guide NM"+(v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):"")}${v.market_depth!=null?", "+v.market_depth+" for sale":""})</small><br>${esc(v.net_label||"Net")} ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(missing costs counted as $0: "+(v.missing||[]).join(", ")+")"}</small>${v.cost_certainty?`<br><small>Known: customer shipping, postage, packaging, Discogs 9%, PayPal 3.49%+$0.49. Estimated: resale price. Missing: ${(v.cost_certainty.missing||[]).length?v.cost_certainty.missing.join(", "):"none"}</small>`:""}${lk?"<br><small>Pressing unverified: cannot be BUY NOW</small>":""}`
     else h2 += `<br><small>${ok?"No resale estimate":"No usable Discogs price: no valuation shown"}</small>`
     return `<div class="pv">${h2}</div>`
   }
@@ -986,7 +991,7 @@ function healthPanel(){
   const feeHtml = F ? `<div class="pv"><b>Fees (verified ${esc(F.verified.checked)})</b><br>Discogs: <b>${F.marketplace_fee_pct}%</b> on item + shipping (Discogs help center).<br>PayPal Checkout: <b>${F.payment_fee_pct}% + $${F.payment_fee_flat_usd}</b>, verified on PayPal's official US merchant-fee page (updated May 19, 2026). Standard cards are 2.99% + $0.49 and Pay Later 4.99% + $0.49, so ${F.payment_fee_pct}% is the conservative default. International surcharges are not modelled.</div>` : ""
   const covHtml = COV ? coveragePanel() : `<div class="pv"><b>Identifier coverage</b><br><small>Not loaded yet: run the sample workflow and load identifier_coverage.json.</small></div>`
   const cmpHtml = CMP ? `<div class="pv"><b>Sample: old vs new matching</b> (${CMP.sample_size} listings)<br>Verified before: <b>${CMP.old_verified}</b> &rarr; now: <b>${CMP.new_verified}</b><br><small>${Object.entries(CMP.transitions).slice(0,12).map(([k,n])=>esc(k)+": "+n).join("<br>")}</small></div>` : ""
-  const shipHtml = PV.inbound ? `<div class="pv"><b>Inbound shipping per provider</b><br><small>${Object.entries(PV.inbound.providers).filter(([n,x])=>x.flat_usd!=null||x.free_over_usd!=null).length} of ${Object.keys(PV.inbound.providers).length} providers configured; the rest count as $0 and are flagged as missing. Edit cost_config.json: flat_usd, per_additional_usd, free_over_usd.</small></div>` : ""
+  const shipHtml = PV.inbound ? `<div class="pv"><b>Inbound shipping by provider</b> <small>(official store pages, checked ${esc(Object.values(PV.inbound.providers).map(x=>x.verified_on).filter(Boolean).sort().pop()||"never")}; unconfirmed values stay unset and are flagged as missing costs)</small>` + Object.entries(PV.inbound.providers).map(([n,x])=>`<br>${esc(n)}: ${x.status==="threshold_confirmed"||x.status==="rates_confirmed" ? `<b>${x.flat_usd!=null?"$"+x.flat_usd+" flat":"rate not published"}${x.free_over_usd!=null?", free over $"+x.free_over_usd:""}</b> <a href="${esc(x.source_url)}" target="_blank" rel="noopener">source</a> <small>${esc(x.verified_on)}</small>` : x.status==="not_published" ? `<small>store publishes no rate or threshold (checked ${esc(x.verified_on)})</small>` : `<small>not verified yet</small>`}`).join("") + `</div>` : ""
   const ordHtml = VORD.length ? `<div class="pv"><b>Best 3-record order per provider</b> <small>(likely/floor prices, suspect rows excluded)</small>` + VORD.slice().sort((a,b)=>b.net_profit_usd-a.net_profit_usd).slice(0,12).map(o=>`<br>${esc(o.source)}: ${o.records} rec &middot; net $${o.net_profit_usd.toFixed(2)} &middot; ROI ${o.roi_percent}% <small>(singles would total $${o.sum_of_single_nets_usd.toFixed(2)})</small>`).join("") + `</div>` : ""
   return `${feeHtml}${shipHtml}${covHtml}${cmpHtml}${ordHtml}<div class="hpanel"><div class="pv"><b>Providers: ${ok} of ${p.length} returned listings</b> (from last production run log)<br>
    <small>"failed/empty" = no listings attributed to that source name; some retry then fall back to a shared feed. Not a live re-check.</small><br><br>
@@ -2070,7 +2075,11 @@ function filtered(){
     )
   }
 
-  if(view === "verified" || view === "unverified") data.sort((a,b) => (((vrow(b)||{}).net) ?? -1e9) - (((vrow(a)||{}).net) ?? -1e9))
+  const _n = d => ((vrow(d)||{}).net) ?? -1e9, _r = d => ((vrow(d)||{}).roi) ?? -1e9, _i = d => ((vrow(d)||{}).landed) ?? (number(d.price) > 0 ? number(d.price) : 1e9)
+  if(sort === "net") data.sort((a,b) => _n(b) - _n(a))
+  else if(sort === "roi") data.sort((a,b) => _r(b) - _r(a))
+  else if(sort === "invest") data.sort((a,b) => _i(a) - _i(b))
+  else if(view === "verified" || view === "unverified") data.sort((a,b) => _n(b) - _n(a))
   return data
 }
 

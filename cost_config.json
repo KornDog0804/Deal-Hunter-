@@ -109,212 +109,380 @@
       "Rollin Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://rollinrecs.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Rollin Preorders": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://rollinrecs.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Sound of Vinyl": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 75.0,
+        "status": "threshold_confirmed",
+        "source_url": "https://thesoundofvinyl.us/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Site banner 'Free Shipping on $75+' on the shipping policy page. Rates not published (calculated at checkout). Terms/exclusions are on a linked page I could not read."
       },
       "uDiscover Music": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 75.0,
+        "status": "threshold_confirmed",
+        "source_url": "https://shop.udiscovermusic.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Site banner 'Free Shipping on $75+'. Rates not published. Terms on a linked page not read."
       },
       "Fearless Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://store.fearlessrecords.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset. A pre-order item holds the whole order; place a separate order for in-stock items."
       },
       "Fearless Vinyl": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://store.fearlessrecords.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset. A pre-order item holds the whole order; place a separate order for in-stock items."
       },
       "Rise Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://riserecords.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Rise All": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://riserecords.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Brooklyn Vegan": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://shop.brooklynvegan.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Revolver": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://shop.revolvermag.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Newbury Comics": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 100.0,
+        "status": "threshold_confirmed",
+        "source_url": "https://www.newburycomics.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Banner: free standard shipping on domestic orders over $100. Rates not published. An out-of-stock/pre-order item can hold the whole order."
       },
       "Newbury Preorders": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 100.0,
+        "status": "threshold_confirmed",
+        "source_url": "https://www.newburycomics.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Banner: free standard shipping on domestic orders over $100. Rates not published. An out-of-stock/pre-order item can hold the whole order."
       },
       "Craft Recordings": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "MNRK Heavy": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://mnrkheavy.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset. A pre-order item holds the whole order; place a separate order for in-stock items."
       },
       "Equal Vision": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://equalvision.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Rhino": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Interscope Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 100.0,
+        "status": "threshold_confirmed",
+        "source_url": "https://interscope.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Banner: free standard US shipping on orders $100+. Rates not published."
       },
       "SharpTone Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://sharptonerecords.co/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset. A pre-order item holds the whole order; place a separate order for in-stock items."
       },
       "Rock Metal Fan Nation": {
-        "flat_usd": null,
+        "flat_usd": 7.99,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 60.0,
+        "status": "rates_confirmed",
+        "source_url": "https://rmfnvinyl.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "USPS Media Mail $7.99 flat (3-7 business days); USPS Priority $12.99 flat; free US shipping over $60 before tax. Combined-order rule not stated."
       },
       "RMFN All": {
-        "flat_usd": null,
+        "flat_usd": 7.99,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": 60.0,
+        "status": "rates_confirmed",
+        "source_url": "https://rmfnvinyl.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "USPS Media Mail $7.99 flat (3-7 business days); USPS Priority $12.99 flat; free US shipping over $60 before tax. Combined-order rule not stated."
       },
       "Sumerian Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "not_published",
+        "source_url": "https://sumerianrecords.com/policies/shipping-policy",
+        "verified_on": "2026-11-20",
+        "notes": "Policy page read: no US rates or free-shipping threshold published (calculated at checkout). Left unset."
       },
       "Solid State Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Solid State Vinyl": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Pure Noise Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Hopeless Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Hopeless Shopify": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Pirates Press Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Smartpunk Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Spinefarm Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "InVogue Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Thriller Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "UNFD": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Merchbar": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Marketplace / catalogue or enrichment-only source: shipping varies by seller, set per purchase. Left unset."
       },
       "Hot Topic": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Deep Discount": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Millions of Records": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "IndieMerchstore": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "IndieMerchstore Preorders": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Not verified yet (page blocked or not fetched). Left unset: counted as missing, never guessed."
       },
       "Walmart": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Marketplace / catalogue or enrichment-only source: shipping varies by seller, set per purchase. Left unset."
       },
       "Amazon": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Marketplace / catalogue or enrichment-only source: shipping varies by seller, set per purchase. Left unset."
       },
       "Target": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Marketplace / catalogue or enrichment-only source: shipping varies by seller, set per purchase. Left unset."
       },
       "Popsike": {
         "flat_usd": null,
         "per_additional_usd": 0.0,
-        "free_over_usd": null
+        "free_over_usd": null,
+        "status": "unchecked",
+        "source_url": null,
+        "verified_on": null,
+        "notes": "Marketplace / catalogue or enrichment-only source: shipping varies by seller, set per purchase. Left unset."
       }
     }
   }

@@ -52,3 +52,19 @@ def test_cost_certainty_lists_missing():
 
 def test_shipped_config_lists_all_42_providers():
     assert len(CFG["inbound_shipping"]["providers"]) == 42
+
+
+def test_every_provider_has_a_verification_status_and_no_guessed_values():
+    for name, rule in CFG["inbound_shipping"]["providers"].items():
+        assert rule["status"] in ("threshold_confirmed", "rates_confirmed", "not_published", "unchecked"), name
+        if rule["status"] in ("threshold_confirmed", "rates_confirmed"):
+            assert rule["source_url"] and rule["verified_on"], name
+        if rule["status"] in ("not_published", "unchecked"):
+            assert rule["flat_usd"] is None and rule["free_over_usd"] is None, name
+
+
+def test_rmfn_confirmed_rate_and_threshold_applied():
+    c = copy.deepcopy(CFG); c["profiles"]["domestic_us"]["sales_tax_pct"] = 0.0
+    under = lc.estimate_net_profit(30.0, 80.0, cfg=c, provider="Rock Metal Fan Nation")
+    over = lc.estimate_net_profit(65.0, 120.0, cfg=c, provider="Rock Metal Fan Nation")
+    assert under["cost_components"]["shipping_usd"] == 7.99 and over["cost_components"]["shipping_usd"] == 0.0
