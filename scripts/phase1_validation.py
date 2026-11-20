@@ -24,6 +24,7 @@ API = "https://api.discogs.com"
 UA = "KornDogDealHunterValidation/1.0 +https://korndogrecords.com"
 MIN_INTERVAL = 1.1          # authenticated limit is 60/min -> stay under it
 SCHEMA = 4
+SUSPECT_ROI = 300.0   # ROI above this is far more likely a wrong match than a real deal: flag for manual check
 
 
 class StopRun(Exception):
@@ -218,6 +219,7 @@ def build_results(deals, state, cfg):
                     low = rec.get("lowest_price") or 0
                     row.update(resale=est, lowest_ask=low, landed=r["landed_cost_usd"],
                                net=r["net_profit_usd"], roi=r["roi_percent"],
+                               suspect=r["roi_percent"] > SUSPECT_ROI,
                                inputs_complete=r["inputs_complete"], missing=r["missing_inputs"])
                     if low > 0:
                         row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, "USD", cfg, "domestic_us")["net_profit_usd"]
@@ -254,7 +256,9 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "thresholds": {"min_net_usd": min_net, "min_roi_percent": min_roi},
         "verified_only": thresholds(verified),
         "likely_tier": dict(thresholds(likely), count=len(likely),
-                            wide_spread=sum(1 for r in likely if r.get("floor_wide"))),
+                            wide_spread=sum(1 for r in likely if r.get("floor_wide")),
+                            suspect_roi_over_300=sum(1 for r in likely if r.get("suspect")),
+                            both_excluding_suspect=sum(1 for r in likely if r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi and not r.get("suspect"))),
         "prod_buy_now": sum(1 for r in rows if r["prod_decision"] == "BUY NOW"),
         "prod_buy_now_verified_and_profitable": sum(
             1 for r in verified if r["prod_decision"] == "BUY NOW" and r.get("net", -1) >= min_net and r.get("roi", -1) >= min_roi),
@@ -279,18 +283,20 @@ def diagnostics(rows, per_status=6):
 
 
 def combined_orders(rows, cfg, max_records=3):
-    """Per provider: best basket of up to `max_records` VERIFIED records sold as one order."""
+    """Per provider: best basket of up to `max_records` records sold as ONE order.
+    Uses verified records and Likely-tier (floor) records; suspect (ROI > 300%) rows are excluded."""
     by = {}
     for r in rows:
-        if r.get("verified") and "net" in r and r["resale"] > r["price"]:
+        if r.get("tier") in ("verified", "likely") and "net" in r and not r.get("suspect") and r["resale"] > r["price"]:
             by.setdefault(r["source"], []).append(r)
     out = []
     for src, rs in sorted(by.items()):
         rs.sort(key=lambda r: r["resale"] - r["price"], reverse=True)
         basket = rs[:max_records]
         o = lc.estimate_order_profit([{"price": r["price"], "resale": r["resale"]} for r in basket], cfg)
-        out.append({"source": src, "links": [r["link"] for r in basket], **o,
-                    "sum_of_single_nets_usd": round(sum(r["net"] for r in basket), 2)})
+        out.append({"source": src, "links": [r["link"] for r in basket],
+                    "basis": "verified" if all(r["tier"] == "verified" for r in basket) else "likely_floor",
+                    **o, "sum_of_single_nets_usd": round(sum(r["net"] for r in basket), 2)})
     return out
 
 

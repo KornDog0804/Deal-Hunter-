@@ -33,6 +33,7 @@ function pvBlock(d){
     const pass = net!==undefined && net>=5 && v.roi>=25
     let h2 = `<span class="pill ${ok?"ok":lk?"warn":"dim"}">${ok?"Verified":lk?"Likely":esc(v.status.replace("_"," "))} ${Math.round((v.confidence||0)*100)}%</span><span class="pill dim">Prod: ${esc(prod)}</span>`
     if(prod==="BUY NOW") h2 += ok ? `<span class="pill ${pass?"ok":"bad"}">${pass?"BUY NOW holds":"Preview: WATCH"}</span>` : `<span class="pill bad">Preview: ${lk&&pass?"BUY LIGHT":"WATCH"}</span>`
+    if(v.suspect) h2 += `<br><span class="pill bad">⚠ ROI over 300%: probably a wrong match, check by hand</span>`
     if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; ${lk?"floor":"resale est."} $${v.resale.toFixed(2)} <small>(${lk?"lowest ask across possible pressings"+(v.floor_wide?", prices vary widely":""):"Discogs asking"+(v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):"")})</small><br>Net ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(inbound shipping/tax unset)"}</small>${lk?"<br><small>Pressing unverified: cannot be BUY NOW</small>":""}`
     else h2 += `<br><small>${ok?"No resale estimate":"No usable Discogs price: no valuation shown"}</small>`
     return `<div class="pv">${h2}</div>`
@@ -54,7 +55,9 @@ function healthPanel(){
   const rows = p.map(x=>`<div class="hrow"><div><div class="n">${esc(x.name)}</div>${x.errors.map(e=>`<div class="e">${esc(e)}</div>`).join("")}</div>
     <div><span class="pill ${x.status==="ok"?"ok":"bad"}" style="padding:2px 8px;border-radius:99px;font-size:11px;background:${x.status==="ok"?"#12391f":"#43181b"};color:${x.status==="ok"?"#7be3a0":"#ff8d94"}">${x.status==="ok"?x.listings+" listings":x.status}</span></div></div>`).join("")
   const bn = Object.values(PV.overlay).filter(o=>o.p==="BUY NOW")
-  return `<div class="hpanel"><div class="pv"><b>Providers: ${ok} of ${p.length} returned listings</b> (from last production run log)<br>
+  const feeHtml = FEE ? `<div class="pv"><b>Fee check</b> (${esc((FEE.checked_at||"").slice(0,10))}): Discogs help center says <b>9%</b> selling fee on item <b>and</b> shipping (config: ${FEE.config.marketplace_fee_pct}%, ${FEE.config.fee_base}). PayPal fee page could not be read (blocked), so ${FEE.config.payment_fee_pct}% + $${FEE.config.payment_fee_flat_usd} is <b>unverified</b>.</div>` : ""
+  const ordHtml = VORD.length ? `<div class="pv"><b>Best 3-record order per provider</b> <small>(likely/floor prices, suspect rows excluded)</small>` + VORD.slice().sort((a,b)=>b.net_profit_usd-a.net_profit_usd).slice(0,12).map(o=>`<br>${esc(o.source)}: ${o.records} rec &middot; net $${o.net_profit_usd.toFixed(2)} &middot; ROI ${o.roi_percent}% <small>(singles would total $${o.sum_of_single_nets_usd.toFixed(2)})</small>`).join("") + `</div>` : ""
+  return `${feeHtml}${ordHtml}<div class="hpanel"><div class="pv"><b>Providers: ${ok} of ${p.length} returned listings</b> (from last production run log)<br>
    <small>"failed/empty" = no listings attributed to that source name; some retry then fall back to a shared feed. Not a live re-check.</small><br><br>
    <b>BUY NOW gate:</b> ${bn.filter(o=>o.g).length} of ${bn.length} production BUY NOWs pass (gate ${PV.gate_on?"enforced":"report-only in production config"}). Most are assumed-markup recommendations with no Discogs valuation or complete cost inputs.</div>${rows}</div>`
 }
@@ -79,7 +82,7 @@ rep('''          <div class="market">
         ${pvBlock(d)}
 ''')
 rep("function render(){\n  const data = filtered()", "function render(){\n  if(view===\"health\"){ $(\"resultCount\").textContent=\"Provider health\"; $(\"paginationTop\").innerHTML=\"\"; $(\"paginationBottom\").innerHTML=\"\"; $(\"grid\").innerHTML=healthPanel(); return }\n  const data = filtered()")
-rep("    populateSources()\n    updateStats()", "    try{ const pr = await fetch(`preview_data.json?t=${Date.now()}`); if(pr.ok) PV = await pr.json() }catch(e){ console.error(e) }\n    populateSources()\n    updateStats()")
+rep("    populateSources()\n    updateStats()", "    try{ const pr = await fetch(`preview_data.json?t=${Date.now()}`); if(pr.ok) PV = await pr.json() }catch(e){ console.error(e) }\n    try{ const [a,b,c,f] = await Promise.all(['validation_results.json','validation_summary.json','combined_orders.json','fee_verification.json'].map(u=>fetch(u))); if(a.ok&&b.ok){ (await a.json()).forEach(r=>{ if(r.link) VAL[r.link]=r }); VSUM = await b.json() } if(c.ok) VORD = await c.json(); if(f.ok) FEE = await f.json() }catch(e){ console.error(e) }\n    renderSummary()\n    populateSources()\n    updateStats()")
 
 # ---- validated results: summary panel, filters, per-card validated values ----
 rep('<div class="tabs">', """<div class="pvBanner" id="pvSummary"></div>
@@ -99,7 +102,7 @@ rep("</style>", """
 .pvGrid div{background:rgba(255,255,255,.06);border-radius:10px;padding:8px}.pvGrid b{display:block;font-size:20px;color:#fff}
 </style>""")
 rep("let PV = {providers:[],overlay:{},gate_on:false}", """let PV = {providers:[],overlay:{},gate_on:false}
-let VAL = {}, VSUM = null, VORD = []
+let VAL = {}, VSUM = null, VORD = [], FEE = null
 function vrow(d){ return VAL[d.link] }
 function pvVals(d){
   const v = vrow(d), o = PV.overlay[d.link] || {}
@@ -127,7 +130,7 @@ function renderSummary(){
   const s = VSUM, v = s.verified_only || {}, t = s.thresholds || {}
   const c = (n,l) => `<div><b>${Number(n||0).toLocaleString()}</b>${l}</div>`
   el.innerHTML = `<b>Live Discogs validation</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
-  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"likely (floor est.)")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
+  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"likely (floor est.)")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c((s.likely_tier||{}).both_excluding_suspect,"…minus suspect (ROI>300%)")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
 }
 document.addEventListener("DOMContentLoaded", ()=>{
   ["fNet","fRoi","fMaxP","fMatch"].forEach(id => document.getElementById(id).addEventListener("input", ()=>{ currentPage = 1; render() }))
@@ -148,6 +151,9 @@ rep("    const q = qualityOf(d)\n    const score = scoreOf(d)", "    if(!pvPass(
 
 rep("<title>KornDog Deal Hunter</title>", "<title>KornDog Deal Hunter (PREVIEW)</title>")
 open("preview/index.html", "w").write(s)
+import os, glob
+for f in glob.glob(os.path.join(os.environ.get("VALIDATION_DIR", "/nonexistent"), "*.json")):
+    if os.path.basename(f) != "state.json": shutil.copy(f, "preview/" + os.path.basename(f))
 for f in ["live_deals.json","buy_signals.json","mini_vinyl_deals.json","collectibles_deals.json","olivia_deals.json","style.css"]:
     shutil.copy(f, "preview/"+f)
 print("ok")
