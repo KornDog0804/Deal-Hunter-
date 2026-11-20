@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T17:24:38+00:00",
+ "generated_at": "2026-11-20T18:15:50+00:00",
  "complete": true,
  "stop_reason": null,
  "unique_pressings_total": 2447,
@@ -19,31 +19,31 @@
  },
  "verified_only": {
   "valued": 241,
-  "net_ge_min": 80,
-  "roi_ge_min": 71,
-  "both": 71
+  "net_ge_min": 73,
+  "roi_ge_min": 63,
+  "both": 63
  },
  "likely_tier": {
   "valued": 780,
-  "net_ge_min": 126,
-  "roi_ge_min": 113,
-  "both": 113,
+  "net_ge_min": 119,
+  "roi_ge_min": 105,
+  "both": 105,
   "count": 780,
   "wide_spread": 315,
   "suspect_roi_over_300": 11,
   "thin_market": 136,
-  "both_excluding_suspect": 39
+  "both_excluding_suspect": 35
  },
  "verified_thin_market": 26,
- "verified_both_excluding_review": 53,
+ "verified_both_excluding_review": 46,
  "market_depth_unknown": 3,
- "incomplete_cost_rows": 1021,
+ "incomplete_cost_rows": 888,
  "verified_manual_check": 22,
  "recommendation_eligible": 196,
- "recommendation_eligible_meeting_thresholds": 48,
+ "recommendation_eligible_meeting_thresholds": 42,
  "prod_buy_now": 1554,
- "prod_buy_now_verified_and_profitable": 54,
+ "prod_buy_now_verified_and_profitable": 48,
  "looked_up_this_run": 2447,
  "api_calls_this_run": 9950,
- "recomputed_with_config_at": "2026-11-20T17:24:38+00:00"
+ "recomputed_with_config_at": "2026-11-20T18:15:50+00:00"
 }

@@ -15,12 +15,13 @@
         "mode": "per_item",
         "amount_usd": null
       },
-      "sales_tax_pct": null,
+      "sales_tax_pct": 6.0,
       "import_duty_pct": 0.0,
       "import_tax_pct": 0.0,
       "brokerage_flat_usd": 0.0,
       "purchase_fee_pct": 0.0,
-      "purchase_fee_flat_usd": 0.0
+      "purchase_fee_flat_usd": 0.0,
+      "_tax_note": "6% Kentucky sales tax on taxable domestic inventory purchases (set 2026-11-20 by owner). No resale exemption and no active LLC assumed."
     },
     "international": {
       "shipping": {
