@@ -1,0 +1,2394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#130d18">
+
+<title>KornDog Deal Hunter (PREVIEW)</title>
+
+<style>
+:root{
+  --bg:#0b0910;
+  --panel:#15101b;
+  --panel2:#1d1526;
+  --purple:#a855f7;
+  --purple2:#7c3aed;
+  --green:#72ff72;
+  --green2:#35d96f;
+  --text:#f8f5ff;
+  --muted:#a89caf;
+  --line:#33253f;
+  --danger:#ff5b79;
+  --gold:#ffd166;
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  background:var(--bg)
+}
+
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 8% -5%,#32194b 0,transparent 31rem),
+    radial-gradient(circle at 96% 10%,#10351f 0,transparent 25rem),
+    var(--bg);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a{
+  color:inherit
+}
+
+button,
+select,
+input{
+  font:inherit
+}
+
+.shell{
+  max-width:1500px;
+  margin:auto;
+  padding:20px
+}
+
+.hero{
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(168,85,247,.16),
+      rgba(114,255,114,.07)
+    ),
+    rgba(13,10,17,.93);
+  box-shadow:0 18px 80px #0008;
+}
+
+.heroRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap
+}
+
+.brand{
+  display:flex;
+  gap:15px;
+  align-items:center
+}
+
+.logo{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:
+    linear-gradient(
+      145deg,
+      var(--purple2),
+      #29123d
+    );
+  border:1px solid #bd7cff;
+  font-size:29px;
+  box-shadow:0 0 28px #8b5cf644
+}
+
+h1{
+  margin:0;
+  font-size:clamp(25px,4vw,42px);
+  letter-spacing:-1.5px
+}
+
+.sub{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.live{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:9px 13px;
+  border:1px solid #285c38;
+  background:#102219;
+  color:#a8ffbd;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green)
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(120px,1fr));
+  gap:10px;
+  margin-top:20px
+}
+
+.stat{
+  background:#0f0c13cc;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px
+}
+
+.statValue{
+  font-size:25px;
+  font-weight:900
+}
+
+.statLabel{
+  color:var(--muted);
+  margin-top:3px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em
+}
+
+.toolbar{
+  margin:18px 0;
+  display:grid;
+  grid-template-columns:minmax(220px,2fr) repeat(4,minmax(130px,1fr));
+  gap:10px
+}
+
+.control{
+  width:100%;
+  border:1px solid var(--line);
+  background:#121017;
+  color:var(--text);
+  border-radius:13px;
+  padding:12px 13px;
+  outline:none
+}
+
+.control:focus{
+  border-color:var(--purple);
+  box-shadow:0 0 0 3px #a855f71f
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px
+}
+
+.tab{
+  border:1px solid var(--line);
+  background:#121017;
+  color:#cabfd1;
+  padding:9px 13px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:12px
+}
+
+.tab.active{
+  background:var(--purple2);
+  border-color:#a875ff;
+  color:white
+}
+
+.status{
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:13px;
+  margin:12px 2px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fill,minmax(300px,1fr));
+  gap:15px
+}
+
+.card{
+  min-width:0;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.018),
+      transparent
+    ),
+    var(--panel);
+  box-shadow:0 12px 35px #0005;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#765391;
+  box-shadow:0 18px 50px #0008
+}
+
+.coverLink{
+  position:relative;
+  display:block;
+  aspect-ratio:1.55/1;
+  background:#09070c;
+  overflow:hidden
+}
+
+.cover{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .25s ease
+}
+
+.coverLink:hover .cover{
+  transform:scale(1.035)
+}
+
+.coverFallback{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle,#32213c,#120c18);
+  font-size:48px
+}
+
+.score{
+  position:absolute;
+  top:11px;
+  right:11px;
+  min-width:47px;
+  height:47px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:#0a0710e8;
+  border:1px solid #7d5b94;
+  font-weight:950;
+  font-size:16px;
+  backdrop-filter:blur(8px)
+}
+
+.quality{
+  position:absolute;
+  top:11px;
+  left:11px;
+  padding:7px 10px;
+  border-radius:10px;
+  background:#08060bdc;
+  border:1px solid var(--line);
+  font-weight:900;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+
+.quality.buy{
+  color:#0d170f;
+  background:var(--green);
+  border-color:var(--green)
+}
+
+.quality.strong{
+  color:#170e00;
+  background:var(--gold);
+  border-color:var(--gold)
+}
+
+.quality.watch{
+  color:white;
+  background:var(--purple2);
+  border-color:#a774ff
+}
+
+.quality.catalog{
+  color:#d9ccdf
+}
+
+.body{
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  flex:1
+}
+
+.artist{
+  color:#c4b4ce;
+  font-size:12px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+
+.titleLink{
+  text-decoration:none
+}
+
+.title{
+  margin:5px 0 9px;
+  font-size:18px;
+  line-height:1.22;
+  font-weight:950;
+  letter-spacing:-.35px
+}
+
+.titleLink:hover .title{
+  color:#d5b3ff
+}
+
+.version{
+  color:#cdbeda;
+  font-size:12px;
+  min-height:17px
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px
+}
+
+.tag{
+  border:1px solid #3d3049;
+  border-radius:999px;
+  padding:5px 7px;
+  background:#100d14;
+  color:#bdb0c5;
+  font-size:10px;
+  font-weight:800
+}
+
+.moneyRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:10px;
+  margin-top:15px
+}
+
+.price{
+  font-size:25px;
+  font-weight:950;
+  color:white
+}
+
+.price.browse{
+  font-size:18px;
+  color:#cdbeda
+}
+
+.market{
+  text-align:right;
+  font-size:11px;
+  line-height:1.5;
+  color:var(--muted)
+}
+
+.brain{
+  margin-top:12px;
+  padding:10px;
+  border-radius:12px;
+  background:#100c15;
+  border:1px solid #2c2134;
+  color:#baafc1;
+  font-size:11px;
+  line-height:1.45
+}
+
+.actions{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  margin-top:auto;
+  padding-top:14px
+}
+
+.buy{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  text-decoration:none;
+  background:
+    linear-gradient(
+      135deg,
+      var(--green2),
+      #67ff86
+    );
+  color:#071108;
+  border-radius:12px;
+  padding:12px;
+  font-weight:950;
+  border:1px solid #82ff98
+}
+
+.buy:hover{
+  filter:brightness(1.08)
+}
+
+.buy.disabled{
+  pointer-events:none;
+  opacity:.35
+}
+
+.storeLink,
+.copy{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--line);
+  background:#201628;
+  color:#e8dded;
+  border-radius:12px;
+  padding:11px;
+  cursor:pointer;
+  text-decoration:none;
+  min-width:45px
+}
+
+.storeLink:hover,
+.copy:hover{
+  border-color:#765391
+}
+
+.empty{
+  border:1px dashed #493854;
+  padding:50px 20px;
+  border-radius:20px;
+  text-align:center;
+  color:var(--muted);
+  grid-column:1/-1
+}
+
+.footer{
+  margin:30px 0 10px;
+  text-align:center;
+  color:#716777;
+  font-size:11px
+}
+
+@media(max-width:900px){
+  .stats{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .toolbar{
+    grid-template-columns:1fr 1fr
+  }
+
+  .toolbar .search{
+    grid-column:1/-1
+  }
+}
+
+@media(max-width:560px){
+  .shell{
+    padding:12px
+  }
+
+  .hero{
+    padding:17px;
+    border-radius:19px
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr
+  }
+
+  .toolbar{
+    grid-template-columns:1fr
+  }
+
+  .toolbar .search{
+    grid-column:auto
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+}
+
+.pagination-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:18px 0;
+  padding:12px;
+}
+
+.pagination-pages{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+}
+
+.page-btn{
+  min-width:42px;
+  height:42px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:10px;
+  background:rgba(255,255,255,.05);
+  color:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.page-btn:hover{
+  border-color:#74ff72;
+  background:rgba(116,255,114,.10);
+}
+
+.page-btn.active{
+  background:#74ff72;
+  color:#111;
+  border-color:#74ff72;
+}
+
+.page-btn:disabled{
+  opacity:.28;
+  cursor:not-allowed;
+}
+
+.page-dots{
+  padding:0 4px;
+  opacity:.55;
+  font-weight:900;
+}
+
+.page-info{
+  width:100%;
+  text-align:center;
+  opacity:.7;
+  font-size:.88rem;
+}
+
+.page-size-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:.85rem;
+  font-weight:800;
+  opacity:.9;
+}
+
+.page-size-wrap select{
+  min-width:74px;
+}
+
+
+.collectible-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:8px 0;
+}
+
+.collectible-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 8px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.collectible-price-old{
+  opacity:.55;
+  text-decoration:line-through;
+  margin-left:6px;
+  font-size:.82em;
+}
+
+.collectible-discount{
+  font-size:.82rem;
+  font-weight:900;
+  margin-top:4px;
+}
+
+.collectible-sold{
+  opacity:.68;
+}
+
+
+
+/* Keep retailer artwork from creating skyscraper cards */
+.card .art{
+  width:100%;
+  aspect-ratio:1 / 1;
+  min-height:0;
+  max-height:none;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+}
+
+.card .art > a{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card .art img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+
+.card .fallback-art{
+  width:100%;
+  height:100%;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:4rem;
+}
+
+
+.pvBanner{background:#2a1a00;border:1px solid #f5a623;color:#ffd99a;padding:10px 14px;border-radius:12px;margin:10px 0;font-size:13px;line-height:1.45}
+.pvBanner b{color:#fff}
+.pv{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);font-size:12px;line-height:1.5}
+.pv .pill{display:inline-block;padding:2px 8px;border-radius:99px;font-weight:700;font-size:11px;margin-right:4px}
+.pv .ok{background:#12391f;color:#7be3a0}.pv .warn{background:#3d2e08;color:#ffd166}.pv .bad{background:#43181b;color:#ff8d94}.pv .dim{background:#2b2f3a;color:#aab}
+.pv small{opacity:.75}
+.hpanel{grid-column:1/-1}
+.hrow{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+.hrow .n{font-weight:600}.hrow .e{font-size:11px;opacity:.7;word-break:break-all}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+<div class="pvBanner" id="pvBanner"><b>PREVIEW &middot; branch phase1-valuation-accuracy.</b> Real inventory snapshot, not production. Match status, net profit and BUY NOW gate shown are computed offline; live Discogs was not reachable, so Discogs figures are <b>legacy cache, unvalidated</b>.</div>
+
+<section class="hero">
+
+<div class="heroRow">
+
+<div class="brand">
+  <div class="logo">💿</div>
+
+  <div>
+    <h1>KornDog Deal Hunter</h1>
+    <div class="sub">
+      Vinyl buying intelligence • Korndog Records
+    </div>
+  </div>
+</div>
+
+<div class="live">
+  <span class="dot"></span>
+  LIVE DATA
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+  <div id="totalStat" class="statValue">0</div>
+  <div class="statLabel">Live Records</div>
+</div>
+
+<div class="stat">
+  <div id="signalStat" class="statValue">0</div>
+  <div class="statLabel">Buy Signals</div>
+</div>
+
+<div class="stat">
+  <div id="strongStat" class="statValue">0</div>
+  <div class="statLabel">Strong Finds</div>
+</div>
+
+<div class="stat">
+  <div id="watchStat" class="statValue">0</div>
+  <div class="statLabel">Watch</div>
+</div>
+
+<div class="stat">
+  <div id="sourceStat" class="statValue">0</div>
+  <div class="statLabel">Sources</div>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="toolbar">
+
+<input
+  id="search"
+  class="control search"
+  placeholder="Search artist, album, version, store…"
+>
+
+<select id="source" class="control">
+  <option value="">All stores</option>
+</select>
+
+<select id="quality" class="control">
+  <option value="">All quality</option>
+  <option value="buy">BUY / POST THIS</option>
+  <option value="strong">Strong find</option>
+  <option value="watch">Watch</option>
+  <option value="catalog">Catalog</option>
+</select>
+
+<select id="price" class="control">
+  <option value="">Any price</option>
+  <option value="under20">Under $20</option>
+  <option value="under30">Under $30</option>
+  <option value="under40">Under $40</option>
+  <option value="40plus">$40+</option>
+</select>
+
+<select id="sort" class="control">
+  <option value="score">Highest score</option>
+  <option value="buyer">Buyer Brain score</option>
+  <option value="low">Lowest price</option>
+  <option value="high">Highest price</option>
+  <option value="artist">Artist A-Z</option>
+</select>
+
+</div>
+
+
+<div class="tabs">
+
+<button class="tab active" data-view="all">
+  ALL RECORDS
+</button>
+
+<button class="tab" data-view="signals">
+  BUY SIGNALS
+</button>
+
+<button class="tab" data-view="buy">
+  90+ BUY
+</button>
+
+<button class="tab" data-view="strong">
+  75+ STRONG
+</button>
+
+<button class="tab" data-view="watch">
+  55+ WATCH
+</button>
+
+<button class="tab" data-view="mini">
+  🔬 MINI VINYL
+</button>
+
+<button class="tab" data-view="collectibles">
+  🧸 COLLECTIBLES
+</button>
+
+<button class="tab" data-view="health">
+  🩺 HEALTH
+</button>
+
+<button class="tab" data-view="olivia">
+  🎄 OLIVIA
+</button>
+
+</div>
+
+
+<div class="status">
+  <span id="resultCount">Loading…</span>
+  <span id="updated"></span>
+</div>
+
+<div id="paginationTop"></div>
+
+<div id="grid" class="grid"></div>
+
+<div id="paginationBottom"></div>
+
+<div class="footer">
+  VINYL THERAPY NEVER DIES • KORNDOG RECORDS
+</div>
+
+</div>
+
+
+<script>
+let liveDeals = []
+let PV = {providers:[],overlay:{},gate_on:false}
+
+function pvBlock(d){
+  const o = PV.overlay[d.link]
+  if(!o) return ""
+  const prod = o.p
+  const after = (prod==="BUY NOW" && !o.g) ? "WATCH" : prod
+  let h = `<span class="pill ${prod==="BUY NOW"&&!o.g?"warn":"dim"}">Prod: ${esc(prod)}</span>`
+  if(prod==="BUY NOW") h += `<span class="pill ${o.g?"ok":"bad"}">${o.g?"BUY NOW holds":"Preview: "+after}</span>`
+  h += `<span class="pill dim">Match: ${o.legacy?"legacy cache (unvalidated)":"not checked"}</span>`
+  if(o.b && o.b.length) h += `<br><small>Blockers: ${o.b.map(esc).join(", ")}</small>`
+  if(o.net!==undefined){
+    h += `<br>Landed $${o.lc.toFixed(2)} &middot; resale est. $${o.rs.toFixed(2)} <small>(Discogs asking, estimate)</small><br>`+
+         `Net ${o.net>=0?"+":""}$${o.net.toFixed(2)} &middot; ROI ${o.roi}% <small>${o.inc?"":"(cost inputs incomplete: "+o.miss+" unset)"}</small>`
+  }else{
+    h += `<br><small>Net profit/ROI: needs a Discogs valuation</small>`
+  }
+  return `<div class="pv">${h}</div>`
+}
+function healthPanel(){
+  const p = PV.providers, ok = p.filter(x=>x.status==="ok").length
+  const rows = p.map(x=>`<div class="hrow"><div><div class="n">${esc(x.name)}</div>${x.errors.map(e=>`<div class="e">${esc(e)}</div>`).join("")}</div>
+    <div><span class="pill ${x.status==="ok"?"ok":"bad"}" style="padding:2px 8px;border-radius:99px;font-size:11px;background:${x.status==="ok"?"#12391f":"#43181b"};color:${x.status==="ok"?"#7be3a0":"#ff8d94"}">${x.status==="ok"?x.listings+" listings":x.status}</span></div></div>`).join("")
+  const bn = Object.values(PV.overlay).filter(o=>o.p==="BUY NOW")
+  return `<div class="hpanel"><div class="pv"><b>Providers: ${ok} of ${p.length} returned listings</b> (from last production run log)<br>
+   <small>"failed/empty" = no listings attributed to that source name; some retry then fall back to a shared feed. Not a live re-check.</small><br><br>
+   <b>BUY NOW gate:</b> ${bn.filter(o=>o.g).length} of ${bn.length} production BUY NOWs pass (gate ${PV.gate_on?"enforced":"report-only in production config"}). Most are assumed-markup recommendations with no Discogs valuation or complete cost inputs.</div>${rows}</div>`
+}
+
+let buySignals = []
+let miniDeals = []
+let collectibleDeals = []
+let oliviaDeals = []
+let view = "all"
+
+let currentPage = 1
+let pageSize = 48
+
+const $ = id => document.getElementById(id)
+
+function safeUrl(value){
+  try{
+    const u = new URL(value)
+
+    if(
+      u.protocol === "https:" ||
+      u.protocol === "http:"
+    ){
+      return u.href
+    }
+  }catch(e){}
+
+  return ""
+}
+
+function esc(value){
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;")
+}
+
+function number(value){
+  const n = Number(value)
+  return Number.isFinite(n) ? n : 0
+}
+
+function scoreOf(d){
+  return number(
+    d.stage2_score ??
+    d.score ??
+    0
+  )
+}
+
+function buyerScoreOf(d){
+  return number(d.buyer_score ?? d.buy_score ?? 0)
+}
+
+function qualityOf(d){
+  const explicit = String(
+    d.quality ||
+    d.deal_quality ||
+    ""
+  ).toLowerCase()
+
+  if(explicit === "catalog") return "catalog"
+
+  const score = scoreOf(d)
+
+  if(score >= 90) return "buy"
+  if(score >= 75) return "strong"
+  if(score >= 55) return "watch"
+
+  return explicit || "catalog"
+}
+
+function qualityLabel(q){
+  if(q === "buy") return "BUY / POST THIS"
+  if(q === "strong") return "STRONG FIND"
+  if(q === "watch") return "WATCH"
+  return "CATALOG"
+}
+
+function priceText(d){
+  const p = number(d.price)
+
+  if(p > 0){
+    return `$${p.toFixed(2)}`
+  }
+
+  return "Browse"
+}
+
+function signals(d){
+  const raw = Array.isArray(d.signals)
+    ? d.signals
+    : []
+
+  return raw.slice(0,7)
+}
+
+function discogsText(d){
+  const mint = number(d.discogs_mint_price)
+  const low = number(d.discogs_lowest)
+
+  const parts = []
+
+  if(mint > 0){
+    parts.push(`Discogs est. $${mint.toFixed(2)}`)
+  }
+
+  if(low > 0){
+    parts.push(`Low ask $${low.toFixed(2)}`)
+  }
+
+  if(d.discogs_match_status === "title_only"){
+    parts.push("pressing unverified")
+  }
+
+  return parts.join("<br>")
+}
+
+function card(d){
+  const link = safeUrl(d.link)
+  const image = safeUrl(d.image)
+
+  const artist = esc(d.artist || "Unknown Artist")
+  const title = esc(d.title || d.raw_title || "Untitled")
+  const source = esc(d.source || "Unknown")
+  const version = esc(d.version || "")
+  const q = qualityOf(d)
+  const score = scoreOf(d)
+  const buyerScore = buyerScoreOf(d)
+
+  const tags = signals(d)
+    .map(x => `<span class="tag">${esc(x)}</span>`)
+    .join("")
+
+  const brain = esc(
+    d.why_buy ||
+    d.store_fit ||
+    ""
+  )
+
+  const lane = esc(
+    d.inventory_lane ||
+    ""
+  )
+
+  const cover = image
+    ? `<img class="cover" src="${image}" loading="lazy" alt="${artist} ${title}">`
+    : `<div class="coverFallback">💿</div>`
+
+  const titleMarkup = link
+    ? `
+      <a
+        class="titleLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="title">${title}</div>
+      </a>
+    `
+    : `<div class="title">${title}</div>`
+
+  const coverMarkup = link
+    ? `
+      <a
+        class="coverLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open ${source}"
+      >
+        ${cover}
+        <div class="quality ${q}">
+          ${qualityLabel(q)}
+        </div>
+        <div class="score">${score}</div>
+      </a>
+    `
+    : `
+      <div class="coverLink">
+        ${cover}
+        <div class="quality ${q}">
+          ${qualityLabel(q)}
+        </div>
+        <div class="score">${score}</div>
+      </div>
+    `
+
+  const buyButton = link
+    ? `
+      <a
+        class="buy"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🛒 VIEW / BUY AT ${source.toUpperCase()}
+      </a>
+    `
+    : `
+      <span class="buy disabled">
+        LINK UNAVAILABLE
+      </span>
+    `
+
+  const storeButton = link
+    ? `
+      <a
+        class="storeLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open listing"
+      >
+        ↗
+      </a>
+    `
+    : ""
+
+  return `
+    <article class="card">
+
+      ${coverMarkup}
+
+      <div class="body">
+
+        <div class="artist">${artist}</div>
+
+        ${titleMarkup}
+
+        <div class="version">
+          ${version}
+        </div>
+
+        <div class="tags">
+          ${tags}
+        </div>
+
+        <div class="moneyRow">
+
+          <div class="price ${number(d.price) <= 0 ? "browse" : ""}">
+            ${priceText(d)}
+          </div>
+
+          <div class="market">
+            ${discogsText(d)}
+            ${buyerScore > 0
+              ? `<br>Buyer Brain ${buyerScore}`
+              : ""}
+          </div>
+
+        </div>
+        ${pvBlock(d)}
+
+        ${
+          lane || brain
+          ? `
+          <div class="brain">
+            ${lane ? `<strong>${lane}</strong>` : ""}
+            ${
+              lane && brain
+              ? "<br>"
+              : ""
+            }
+            ${brain}
+          </div>
+          `
+          : ""
+        }
+
+        <div class="actions">
+
+          ${buyButton}
+
+          ${storeButton}
+
+        </div>
+
+      </div>
+
+    </article>
+  `
+}
+
+
+function miniCard(d){
+  const link = safeUrl(d.link)
+  const image = safeUrl(d.image)
+
+  const system = esc(
+    d.mini_system ||
+    d.artist ||
+    "Mini Vinyl"
+  )
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Mini Vinyl"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown"
+  )
+
+  const productType = esc(
+    d.product_type ||
+    "Mini vinyl collectible"
+  )
+
+  const availability = esc(
+    d.availability_text ||
+    ""
+  )
+
+  const cover = image
+    ? `
+      <img
+        class="cover"
+        src="${image}"
+        loading="lazy"
+        alt="${system} ${title}"
+      >
+    `
+    : `
+      <div class="coverFallback">
+        🔬💿
+      </div>
+    `
+
+  const coverMarkup = link
+    ? `
+      <a
+        class="coverLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Browse ${source}"
+      >
+        ${cover}
+
+        <div class="quality catalog">
+          MINI VINYL
+        </div>
+      </a>
+    `
+    : `
+      <div class="coverLink">
+        ${cover}
+
+        <div class="quality catalog">
+          MINI VINYL
+        </div>
+      </div>
+    `
+
+  const titleMarkup = link
+    ? `
+      <a
+        class="titleLink"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="title">
+          ${title}
+        </div>
+      </a>
+    `
+    : `
+      <div class="title">
+        ${title}
+      </div>
+    `
+
+  const buyButton = link
+    ? `
+      <a
+        class="buy"
+        href="${link}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🛒 VIEW / BUY AT ${source.toUpperCase()}
+      </a>
+    `
+    : `
+      <span class="buy disabled">
+        LINK UNAVAILABLE
+      </span>
+    `
+
+  return `
+    <article class="card">
+
+      ${coverMarkup}
+
+      <div class="body">
+
+        <div class="artist">
+          ${system}
+        </div>
+
+        ${titleMarkup}
+
+        <div class="version">
+          ${productType}
+        </div>
+
+        <div class="tags">
+          <span class="tag">
+            ${source}
+          </span>
+
+          <span class="tag">
+            NO SCORE • SHOW EVERYTHING
+          </span>
+        </div>
+
+        <div class="moneyRow">
+          <div>
+            <div class="price">
+              ${number(d.price) > 0
+                ? `$${number(d.price).toFixed(2)}`
+                : "Browse"}
+            </div>
+
+            <div class="source">
+              ${availability}
+            </div>
+          </div>
+        </div>
+
+        ${buyButton}
+
+      </div>
+
+    </article>
+  `
+}
+
+function populateSources(){
+  let data
+
+  if(view === "mini"){
+    data = miniDeals
+  }else if(view === "collectibles"){
+    data = collectibleDeals
+  }else if(view === "olivia"){
+    data = oliviaDeals
+  }else if(view === "signals"){
+    data = buySignals
+  }else{
+    data = liveDeals
+  }
+
+  const current = $("source").value
+
+  const sources = [
+    ...new Set(
+      data
+        .map(d => d.source)
+        .filter(Boolean)
+    )
+  ].sort(
+    (a,b) =>
+      String(a).localeCompare(String(b))
+  )
+
+  $("source").innerHTML = `
+    <option value="">
+      All Sources
+    </option>
+
+    ${
+      sources
+        .map(
+          source => `
+            <option
+              value="${esc(source)}"
+            >
+              ${esc(source)}
+            </option>
+          `
+        )
+        .join("")
+    }
+  `
+
+  if(sources.includes(current)){
+    $("source").value = current
+  }else{
+    $("source").value = ""
+  }
+}
+
+
+
+function collectibleCard(d){
+  const url = safeUrl(d.link || "")
+  const image = safeUrl(d.image || "")
+
+  const price = number(d.price)
+  const oldPrice = number(d.compare_at_price)
+  const discount = number(d.discount_pct)
+
+  const badges = []
+
+  if(d.amazing_deal){
+    badges.push("🚨 AMAZING")
+  }else if(d.deal){
+    badges.push("🔥 DEAL")
+  }
+
+  if(d.clearance){
+    badges.push("🔥 CLEARANCE")
+  }else if(d.sale){
+    badges.push("🏷️ SALE")
+  }
+
+  if(d.chase){
+    badges.push("🎯 CHASE")
+  }
+
+  if(d.exclusive){
+    badges.push("✨ EXCLUSIVE")
+  }
+
+  if(d.preorder){
+    badges.push("⏳ PREORDER")
+  }
+
+  if(d.sold_out){
+    badges.push("🚫 SOLD OUT")
+  }
+
+  const badgeHtml = badges.length
+    ? `
+      <div class="collectible-badges">
+        ${badges.map(
+          badge => `
+            <span class="collectible-badge">
+              ${esc(badge)}
+            </span>
+          `
+        ).join("")}
+      </div>
+    `
+    : ""
+
+  const art = image
+    ? `
+      <img
+        src="${esc(image)}"
+        alt="${esc(d.title || "Collectible")}"
+        loading="lazy"
+      >
+    `
+    : `
+      <div class="fallback-art">
+        👹📦
+      </div>
+    `
+
+  const artHtml = url
+    ? `
+      <a
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${art}
+      </a>
+    `
+    : art
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Collectible"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown retailer"
+  )
+
+  const type = esc(
+    d.product_type ||
+    d.category ||
+    "COLLECTIBLE"
+  )
+
+  const franchise = esc(d.franchise || "")
+  const character = esc(d.character || "")
+
+  let priceHtml = "<strong>Browse</strong>"
+
+  if(price > 0){
+    priceHtml = `
+      <strong>$${price.toFixed(2)}</strong>
+      ${
+        oldPrice > price
+          ? `
+            <span class="collectible-price-old">
+              $${oldPrice.toFixed(2)}
+            </span>
+          `
+          : ""
+      }
+    `
+  }
+
+  const availability = esc(
+    d.availability_text ||
+    (
+      d.sold_out
+        ? "Sold Out"
+        : "Browse current listing"
+    )
+  )
+
+  return `
+    <article class="card ${
+      d.sold_out
+        ? "collectible-sold"
+        : ""
+    }">
+
+      <div class="art">
+        ${artHtml}
+      </div>
+
+      <div class="card-body">
+
+        <div class="eyebrow">
+          🧸 ${type}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="title-link"
+              >
+                <h3>${title}</h3>
+              </a>
+            `
+            : `<h3>${title}</h3>`
+        }
+
+        ${badgeHtml}
+
+        <div class="meta">
+          <span>${source}</span>
+
+          ${
+            franchise
+              ? `<span>${franchise}</span>`
+              : ""
+          }
+
+          ${
+            character
+              ? `<span>${character}</span>`
+              : ""
+          }
+        </div>
+
+        <div class="price">
+          ${priceHtml}
+        </div>
+
+        ${
+          discount > 0
+            ? `
+              <div class="collectible-discount">
+                ${discount.toFixed(0)}% OFF
+              </div>
+            `
+            : ""
+        }
+
+        <div class="availability">
+          ${availability}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                class="buy"
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW / BUY AT ${source.toUpperCase()}
+              </a>
+            `
+            : ""
+        }
+
+      </div>
+    </article>
+  `
+}
+
+
+function oliviaCard(d){
+  const url = safeUrl(d.link || "")
+  const image = safeUrl(d.image || "")
+
+  const price = number(d.price)
+  const oldPrice = number(
+    d.compare_at ??
+    d.compare_at_price ??
+    0
+  )
+
+  const title = esc(
+    d.title ||
+    d.raw_title ||
+    "Olivia Find"
+  )
+
+  const source = esc(
+    d.source ||
+    "Unknown retailer"
+  )
+
+  const type = esc(
+    d.product_type ||
+    d.category ||
+    "COLLECTIBLE"
+  )
+
+  const franchise = esc(
+    d.franchise ||
+    ""
+  )
+
+  const tags = Array.isArray(
+    d.olivia_tags
+  )
+    ? d.olivia_tags
+    : []
+
+  const badges = [
+    "🎄 OLIVIA HIT"
+  ]
+
+  if(type === "VINYL"){
+    badges.push("💿 VINYL")
+  }
+
+  if(
+    tags.includes("DELTARUNE") ||
+    tags.includes("UNDERTALE") ||
+    tags.includes("POKEMON") ||
+    tags.includes("FIVE NIGHTS AT FREDDY'S")
+  ){
+    badges.push("🎮 GAMING")
+  }
+
+  if(tags.includes("HATSUNE MIKU")){
+    badges.push("🩵 MIKU / VOCALOID")
+  }
+
+  if(tags.includes("THE LIVING TOMBSTONE")){
+    badges.push("🪦 LIVING TOMBSTONE")
+  }
+
+  if(tags.includes("MITSKI")){
+    badges.push("🎵 MITSKI")
+  }
+
+  if(d.amazing_deal){
+    badges.push("🚨 AMAZING")
+  }else if(d.deal){
+    badges.push("🔥 DEAL")
+  }
+
+  if(d.clearance){
+    badges.push("🔥 CLEARANCE")
+  }else if(d.sale){
+    badges.push("🏷️ SALE")
+  }
+
+  if(d.chase){
+    badges.push("🎯 CHASE")
+  }
+
+  if(d.exclusive){
+    badges.push("✨ EXCLUSIVE")
+  }
+
+  if(d.preorder){
+    badges.push("⏳ PREORDER")
+  }
+
+  const badgeHtml = `
+    <div class="collectible-badges">
+      ${badges.map(
+        badge => `
+          <span class="collectible-badge">
+            ${esc(badge)}
+          </span>
+        `
+      ).join("")}
+    </div>
+  `
+
+  const art = image
+    ? `
+      <img
+        src="${esc(image)}"
+        alt="${title}"
+        loading="lazy"
+      >
+    `
+    : `
+      <div class="fallback-art">
+        🎄🎁
+      </div>
+    `
+
+  const artHtml = url
+    ? `
+      <a
+        href="${esc(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${art}
+      </a>
+    `
+    : art
+
+  let priceHtml = "<strong>Browse</strong>"
+
+  if(price > 0){
+    priceHtml = `
+      <strong>$${price.toFixed(2)}</strong>
+      ${
+        oldPrice > price
+          ? `
+            <span class="collectible-price-old">
+              $${oldPrice.toFixed(2)}
+            </span>
+          `
+          : ""
+      }
+    `
+  }
+
+  const availability = esc(
+    d.availability_text ||
+    "Available"
+  )
+
+  return `
+    <article class="card">
+
+      <div class="art">
+        ${artHtml}
+      </div>
+
+      <div class="card-body">
+
+        <div class="eyebrow">
+          🎄 ${type}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="title-link"
+              >
+                <h3>${title}</h3>
+              </a>
+            `
+            : `<h3>${title}</h3>`
+        }
+
+        ${badgeHtml}
+
+        <div class="meta">
+
+          <span>${source}</span>
+
+          ${
+            franchise
+              ? `<span>${franchise}</span>`
+              : ""
+          }
+
+        </div>
+
+        <div class="price">
+          ${priceHtml}
+        </div>
+
+        <div class="availability">
+          ${availability}
+        </div>
+
+        ${
+          url
+            ? `
+              <a
+                class="buy"
+                href="${esc(url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW / BUY AT ${source.toUpperCase()}
+              </a>
+            `
+            : ""
+        }
+
+      </div>
+
+    </article>
+  `
+}
+
+
+function filtered(){
+  let data =
+    view === "mini"
+      ? [...miniDeals]
+      : view === "collectibles"
+        ? [...collectibleDeals]
+        : view === "olivia"
+          ? [...oliviaDeals]
+          : view === "signals"
+            ? [...buySignals]
+            : [...liveDeals]
+
+  const search = $("search").value
+    .trim()
+    .toLowerCase()
+
+  const source = $("source").value
+  const quality = $("quality").value
+  const price = $("price").value
+
+  data = data.filter(d => {
+
+    const q = qualityOf(d)
+    const score = scoreOf(d)
+    const p = number(d.price)
+
+    if(view === "buy" && score < 90){
+      return false
+    }
+
+    if(view === "strong" && score < 75){
+      return false
+    }
+
+    if(view === "watch" && score < 55){
+      return false
+    }
+
+    if(source && d.source !== source){
+      return false
+    }
+
+    if(
+      view !== "mini" &&
+      view !== "collectibles" &&
+      view !== "olivia" &&
+      quality &&
+      q !== quality
+    ){
+      return false
+    }
+
+    if(price === "under20" && !(p > 0 && p < 20)){
+      return false
+    }
+
+    if(price === "under30" && !(p > 0 && p < 30)){
+      return false
+    }
+
+    if(price === "under40" && !(p > 0 && p < 40)){
+      return false
+    }
+
+    if(price === "40plus" && p < 40){
+      return false
+    }
+
+    if(search){
+      const haystack = [
+        d.artist,
+        d.title,
+        d.raw_title,
+        d.source,
+        d.version,
+        d.mini_system,
+        d.product_type,
+        d.category,
+        d.franchise,
+        d.character,
+        d.availability_text,
+        d.olivia_hit ? "olivia christmas gift" : "",
+        ...(Array.isArray(d.olivia_tags) ? d.olivia_tags : []),
+        d.exclusive ? "exclusive" : "",
+        d.chase ? "chase" : "",
+        d.preorder ? "preorder pre-order" : "",
+        d.sale ? "sale" : "",
+        d.clearance ? "clearance" : "",
+        d.deal ? "deal" : "",
+        d.amazing_deal ? "amazing deal" : "",
+        d.sold_out ? "sold out" : "available in stock",
+        ...(Array.isArray(d.signals) ? d.signals : [])
+      ]
+        .join(" ")
+        .toLowerCase()
+
+      if(!haystack.includes(search)){
+        return false
+      }
+    }
+
+    return true
+  })
+
+  const sort = $("sort").value
+
+  if(sort === "score"){
+    data.sort(
+      (a,b) => scoreOf(b) - scoreOf(a)
+    )
+  }
+
+  if(sort === "buyer"){
+    data.sort(
+      (a,b) => buyerScoreOf(b) - buyerScoreOf(a)
+    )
+  }
+
+  if(sort === "low"){
+    data.sort((a,b) => {
+      const pa = number(a.price) || 999999
+      const pb = number(b.price) || 999999
+      return pa - pb
+    })
+  }
+
+  if(sort === "high"){
+    data.sort(
+      (a,b) => number(b.price) - number(a.price)
+    )
+  }
+
+  if(sort === "artist"){
+    data.sort(
+      (a,b) =>
+        String(a.artist || "")
+          .localeCompare(String(b.artist || ""))
+    )
+  }
+
+  return data
+}
+
+
+function pageNumbers(current,total){
+  if(total <= 7){
+    return Array.from(
+      {length:total},
+      (_,i) => i + 1
+    )
+  }
+
+  const pages = new Set([
+    1,
+    total,
+    current,
+    current - 1,
+    current + 1
+  ])
+
+  if(current <= 4){
+    pages.add(2)
+    pages.add(3)
+    pages.add(4)
+    pages.add(5)
+  }
+
+  if(current >= total - 3){
+    pages.add(total - 1)
+    pages.add(total - 2)
+    pages.add(total - 3)
+    pages.add(total - 4)
+  }
+
+  return [...pages]
+    .filter(x => x >= 1 && x <= total)
+    .sort((a,b) => a - b)
+}
+
+
+function paginationMarkup(totalItems,totalPages){
+  if(!totalItems){
+    return ""
+  }
+
+  const pages = pageNumbers(
+    currentPage,
+    totalPages
+  )
+
+  let buttons = ""
+
+  let previous = 0
+
+  for(const page of pages){
+
+    if(previous && page - previous > 1){
+      buttons += `
+        <span class="page-dots">…</span>
+      `
+    }
+
+    buttons += `
+      <button
+        class="page-btn ${
+          page === currentPage
+            ? "active"
+            : ""
+        }"
+        onclick="goPage(${page})"
+        aria-label="Page ${page}"
+      >
+        ${page}
+      </button>
+    `
+
+    previous = page
+  }
+
+  return `
+    <div class="pagination-wrap">
+
+      <button
+        class="page-btn"
+        onclick="goPage(${currentPage - 1})"
+        ${currentPage <= 1 ? "disabled" : ""}
+      >
+        ← PREV
+      </button>
+
+      <div class="pagination-pages">
+        ${buttons}
+      </div>
+
+      <button
+        class="page-btn"
+        onclick="goPage(${currentPage + 1})"
+        ${
+          currentPage >= totalPages
+            ? "disabled"
+            : ""
+        }
+      >
+        NEXT →
+      </button>
+
+      <div class="page-size-wrap">
+        SHOW
+
+        <select
+          onchange="changePageSize(this.value)"
+          aria-label="Items per page"
+        >
+          <option
+            value="24"
+            ${pageSize === 24 ? "selected" : ""}
+          >
+            24
+          </option>
+
+          <option
+            value="48"
+            ${pageSize === 48 ? "selected" : ""}
+          >
+            48
+          </option>
+
+          <option
+            value="96"
+            ${pageSize === 96 ? "selected" : ""}
+          >
+            96
+          </option>
+        </select>
+
+        PER PAGE
+      </div>
+
+      <div class="page-info">
+        Page ${currentPage.toLocaleString()}
+        of ${totalPages.toLocaleString()}
+      </div>
+
+    </div>
+  `
+}
+
+
+function goPage(page){
+  const data = filtered()
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(data.length / pageSize)
+  )
+
+  currentPage = Math.max(
+    1,
+    Math.min(
+      Number(page) || 1,
+      totalPages
+    )
+  )
+
+  render()
+
+  const top =
+    document.getElementById("paginationTop")
+
+  if(top){
+    top.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    })
+  }
+}
+
+
+function changePageSize(value){
+  pageSize = Number(value) || 48
+  currentPage = 1
+  render()
+}
+
+
+function render(){
+  if(view==="health"){ $("resultCount").textContent="Provider health"; $("paginationTop").innerHTML=""; $("paginationBottom").innerHTML=""; $("grid").innerHTML=healthPanel(); return }
+  const data = filtered()
+
+  const totalItems = data.length
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(totalItems / pageSize)
+  )
+
+  if(currentPage > totalPages){
+    currentPage = totalPages
+  }
+
+  if(currentPage < 1){
+    currentPage = 1
+  }
+
+  const startIndex =
+    (currentPage - 1) * pageSize
+
+  const endIndex = Math.min(
+    startIndex + pageSize,
+    totalItems
+  )
+
+  const pageData = data.slice(
+    startIndex,
+    endIndex
+  )
+
+  if(totalItems){
+    $("resultCount").textContent =
+      `Showing ${
+        (startIndex + 1).toLocaleString()
+      }–${
+        endIndex.toLocaleString()
+      } of ${
+        totalItems.toLocaleString()
+      } ${
+        view === "mini"
+          ? "mini collectibles"
+          : view === "collectibles"
+            ? "collectibles"
+            : view === "olivia"
+              ? "Olivia finds"
+              : "records"
+      }`
+  }else{
+    $("resultCount").textContent =
+      "0 items shown"
+  }
+
+  const nav = paginationMarkup(
+    totalItems,
+    totalPages
+  )
+
+  $("paginationTop").innerHTML = nav
+  $("paginationBottom").innerHTML = nav
+
+  if(!pageData.length){
+    $("grid").innerHTML = `
+      <div class="empty">
+        Nothing matched those filters.
+      </div>
+    `
+    return
+  }
+
+  $("grid").innerHTML =
+    pageData
+      .map(
+        view === "mini"
+          ? miniCard
+          : view === "collectibles"
+            ? collectibleCard
+            : view === "olivia"
+              ? oliviaCard
+              : card
+      )
+      .join("")
+}
+
+
+function updateStats(){
+  $("totalStat").textContent =
+    liveDeals.length.toLocaleString()
+
+  $("signalStat").textContent =
+    buySignals.length.toLocaleString()
+
+  $("strongStat").textContent =
+    liveDeals.filter(
+      d => scoreOf(d) >= 75
+    ).length.toLocaleString()
+
+  $("watchStat").textContent =
+    liveDeals.filter(
+      d =>
+        scoreOf(d) >= 55 &&
+        scoreOf(d) < 75
+    ).length.toLocaleString()
+
+  $("sourceStat").textContent =
+    new Set(
+      liveDeals
+        .map(d => d.source)
+        .filter(Boolean)
+    ).size
+}
+
+async function load(){
+  try{
+    const [liveRes,buyRes,miniRes,collectibleRes,oliviaRes] = await Promise.all([
+      fetch(
+        `live_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `buy_signals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `mini_vinyl_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `collectibles_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      ),
+      fetch(
+        `olivia_deals.json?t=${Date.now()}`,
+        {cache:"no-store"}
+      )
+    ])
+
+    if(!liveRes.ok){
+      throw new Error(
+        `live_deals.json ${liveRes.status}`
+      )
+    }
+
+    liveDeals = await liveRes.json()
+
+    if(buyRes.ok){
+      buySignals = await buyRes.json()
+    }
+
+    if(miniRes.ok){
+      miniDeals = await miniRes.json()
+    }
+
+    if(collectibleRes.ok){
+      collectibleDeals = await collectibleRes.json()
+
+      // FILTER SOLD OUT COLLECTIBLES
+      collectibleDeals = collectibleDeals.filter(
+        item => !item.sold_out
+      )
+    }
+
+    if(oliviaRes.ok){
+      oliviaDeals = await oliviaRes.json()
+
+      // OLIVIA LANE ONLY SURFACES CURRENTLY AVAILABLE ITEMS
+      oliviaDeals = oliviaDeals.filter(
+        item => !item.sold_out
+      )
+    }
+
+    try{ const pr = await fetch(`preview_data.json?t=${Date.now()}`); if(pr.ok) PV = await pr.json() }catch(e){ console.error(e) }
+    populateSources()
+    updateStats()
+
+    $("updated").textContent =
+      `Loaded ${new Date().toLocaleTimeString()}`
+
+    render()
+
+  }catch(err){
+    console.error(err)
+
+    $("resultCount").textContent =
+      "Failed to load Deal Hunter data"
+
+    $("grid").innerHTML = `
+      <div class="empty">
+        Data load failed.<br><br>
+        ${esc(err.message)}
+      </div>
+    `
+  }
+}
+
+[
+  "search",
+  "source",
+  "quality",
+  "price",
+  "sort"
+].forEach(id => {
+  $(id).addEventListener(
+    id === "search" ? "input" : "change",
+    () => {
+      currentPage = 1
+      render()
+    }
+  )
+})
+
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    document
+      .querySelectorAll(".tab")
+      .forEach(x => x.classList.remove("active"))
+
+    btn.classList.add("active")
+
+    view = btn.dataset.view
+    currentPage = 1
+
+    $("source").value = ""
+    populateSources()
+    render()
+  })
+})
+
+load()
+</script>
+
+</body>
+</html>
