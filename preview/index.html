@@ -707,6 +707,12 @@ h1{
 .hpanel{grid-column:1/-1}
 .hrow{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
 .hrow .n{font-weight:600}.hrow .e{font-size:11px;opacity:.7;word-break:break-all}
+
+.pvFilters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.pvFilters label{font-size:11px;opacity:.85;display:flex;flex-direction:column;gap:3px}
+.pvFilters input,.pvFilters select{padding:9px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:inherit;font-size:14px}
+.pvGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
+.pvGrid div{background:rgba(255,255,255,.06);border-radius:10px;padding:8px}.pvGrid b{display:block;font-size:20px;color:#fff}
 </style>
 </head>
 
@@ -808,6 +814,14 @@ h1{
 </div>
 
 
+<div class="pvBanner" id="pvSummary"></div>
+<div class="pvFilters" id="pvFilters">
+  <label>Min net $<input id="fNet" type="number" step="1" inputmode="decimal" placeholder="5"></label>
+  <label>Min ROI %<input id="fRoi" type="number" step="1" inputmode="decimal" placeholder="25"></label>
+  <label>Max price $<input id="fMaxP" type="number" step="1" inputmode="decimal" placeholder="any"></label>
+  <label>Match<select id="fMatch"><option value="">Any</option><option value="verified">Verified (exact/strong)</option><option value="title_only">Title only (unverified)</option><option value="ambiguous">Ambiguous</option><option value="none">Unmatched</option><option value="not_validated">Not validated</option></select></label>
+  <label>Load results<input id="fFile" type="file" accept=".json" multiple></label>
+</div>
 <div class="tabs">
 
 <button class="tab active" data-view="all">
@@ -870,12 +884,65 @@ h1{
 <script>
 let liveDeals = []
 let PV = {providers:[],overlay:{},gate_on:false}
+let VAL = {}, VSUM = null, VORD = []
+function vrow(d){ return VAL[d.link] }
+function pvVals(d){
+  const v = vrow(d), o = PV.overlay[d.link] || {}
+  if(v) return {match: v.status, verified: !!v.verified, net: v.net, roi: v.roi, src: "validated"}
+  if(VSUM) return {match: "not_validated", verified:false, net: undefined, roi: undefined, src: "none"}
+  return {match: o.legacy ? "legacy" : "not_validated", verified:false, net: o.net, roi: o.roi, src: "legacy"}
+}
+function pvPass(d){
+  const x = pvVals(d), n = id => { const t = document.getElementById(id).value; return t === "" ? null : Number(t) }
+  const net = n("fNet"), roi = n("fRoi"), maxp = n("fMaxP"), m = document.getElementById("fMatch").value
+  if(net !== null && !(x.net !== undefined && x.net >= net)) return false
+  if(roi !== null && !(x.roi !== undefined && x.roi >= roi)) return false
+  if(maxp !== null && !(number(d.price) > 0 && number(d.price) <= maxp)) return false
+  if(m === "verified" && !x.verified) return false
+  if(m && m !== "verified" && x.match !== m) return false
+  return true
+}
+function renderSummary(){
+  const el = document.getElementById("pvSummary")
+  if(!VSUM){
+    el.innerHTML = "<b>Validation not run yet.</b> No live Discogs results are loaded, so the numbers on cards are legacy-cache estimates (unvalidated). Run the GitHub workflow, then load <b>validation_results.json</b> and <b>validation_summary.json</b> with “Load results” below."
+    return
+  }
+  const s = VSUM, v = s.verified_only || {}, t = s.thresholds || {}
+  const c = (n,l) => `<div><b>${Number(n||0).toLocaleString()}</b>${l}</div>`
+  el.innerHTML = `<b>Live Discogs validation</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
+  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
+}
+document.addEventListener("DOMContentLoaded", ()=>{
+  ["fNet","fRoi","fMaxP","fMatch"].forEach(id => document.getElementById(id).addEventListener("input", ()=>{ currentPage = 1; render() }))
+  document.getElementById("fFile").addEventListener("change", async e => {
+    for(const f of e.target.files){
+      try{
+        const j = JSON.parse(await f.text())
+        if(Array.isArray(j) && j.length && j[0].records !== undefined) VORD = j
+        else if(Array.isArray(j)) { VAL = {}; j.forEach(r => { if(r.link) VAL[r.link] = r }) }
+        else if(j.listings_total !== undefined) VSUM = j
+      }catch(err){ console.error(err) }
+    }
+    renderSummary(); currentPage = 1; render()
+  })
+})
+
 
 function pvBlock(d){
   const o = PV.overlay[d.link]
   if(!o) return ""
   const prod = o.p
   const after = (prod==="BUY NOW" && !o.g) ? "WATCH" : prod
+  const v = vrow(d)
+  if(v){
+    const ok = v.verified, net = v.net
+    let h2 = `<span class="pill ${ok?"ok":"warn"}">${esc(v.status.replace("_"," "))} ${Math.round((v.confidence||0)*100)}%</span><span class="pill dim">Prod: ${esc(prod)}</span>`
+    if(prod==="BUY NOW") h2 += `<span class="pill ${ok&&net>=5&&v.roi>=25?"ok":"bad"}">${ok&&net>=5&&v.roi>=25?"BUY NOW holds":"Preview: WATCH"}</span>`
+    if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; resale est. $${v.resale.toFixed(2)} <small>(Discogs asking${v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):""})</small><br>Net ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(inbound shipping/tax unset)"}</small>`
+    else h2 += `<br><small>${ok?"No resale estimate":"Not a verified pressing: no valuation shown"}</small>`
+    return `<div class="pv">${h2}</div>`
+  }
   let h = `<span class="pill ${prod==="BUY NOW"&&!o.g?"warn":"dim"}">Prod: ${esc(prod)}</span>`
   if(prod==="BUY NOW") h += `<span class="pill ${o.g?"ok":"bad"}">${o.g?"BUY NOW holds":"Preview: "+after}</span>`
   h += `<span class="pill dim">Match: ${o.legacy?"legacy cache (unvalidated)":"not checked"}</span>`
@@ -1854,6 +1921,7 @@ function filtered(){
 
   data = data.filter(d => {
 
+    if(!pvPass(d)) return false
     const q = qualityOf(d)
     const score = scoreOf(d)
     const p = number(d.price)
