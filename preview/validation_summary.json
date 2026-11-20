@@ -1,1 +1,49 @@
-{"generated_at":"2026-11-20T13:56:30+00:00","complete":true,"stop_reason":null,"unique_pressings_total":200,"unique_pressings_done":200,"listings_total":211,"listings_scanned":211,"verified_pressing_matches":23,"exact":21,"strong":2,"title_only_unverified":16,"ambiguous":46,"unmatched":126,"with_resale_estimate":80,"thresholds":{"min_net_usd":5.0,"min_roi_percent":25.0},"verified_only":{"valued":22,"net_ge_min":8,"roi_ge_min":8,"both":8},"likely_tier":{"valued":58,"net_ge_min":8,"roi_ge_min":8,"both":8,"count":58,"wide_spread":21,"suspect_roi_over_300":1,"thin_market":8,"both_excluding_suspect":3},"verified_thin_market":2,"verified_both_excluding_review":5,"market_depth_unknown":0,"prod_buy_now":136,"prod_buy_now_verified_and_profitable":6,"sample":true,"looked_up_this_run":200,"api_calls_this_run":783}
+{
+ "generated_at": "2026-11-20T17:24:38+00:00",
+ "complete": true,
+ "stop_reason": null,
+ "unique_pressings_total": 2447,
+ "unique_pressings_done": 2447,
+ "listings_total": 2569,
+ "listings_scanned": 2568,
+ "verified_pressing_matches": 255,
+ "exact": 239,
+ "strong": 16,
+ "title_only_unverified": 139,
+ "ambiguous": 704,
+ "unmatched": 1470,
+ "with_resale_estimate": 1021,
+ "thresholds": {
+  "min_net_usd": 5.0,
+  "min_roi_percent": 25.0
+ },
+ "verified_only": {
+  "valued": 241,
+  "net_ge_min": 80,
+  "roi_ge_min": 71,
+  "both": 71
+ },
+ "likely_tier": {
+  "valued": 780,
+  "net_ge_min": 126,
+  "roi_ge_min": 113,
+  "both": 113,
+  "count": 780,
+  "wide_spread": 315,
+  "suspect_roi_over_300": 11,
+  "thin_market": 136,
+  "both_excluding_suspect": 39
+ },
+ "verified_thin_market": 26,
+ "verified_both_excluding_review": 53,
+ "market_depth_unknown": 3,
+ "incomplete_cost_rows": 1021,
+ "verified_manual_check": 22,
+ "recommendation_eligible": 196,
+ "recommendation_eligible_meeting_thresholds": 48,
+ "prod_buy_now": 1554,
+ "prod_buy_now_verified_and_profitable": 54,
+ "looked_up_this_run": 2447,
+ "api_calls_this_run": 9950,
+ "recomputed_with_config_at": "2026-11-20T17:24:38+00:00"
+}
