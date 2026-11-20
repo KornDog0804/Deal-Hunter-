@@ -18,11 +18,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import discogs_matcher as dm
 import landed_cost as lc
+import likely_tier as lt
 
 API = "https://api.discogs.com"
 UA = "KornDogDealHunterValidation/1.0 +https://korndogrecords.com"
 MIN_INTERVAL = 1.1          # authenticated limit is 60/min -> stay under it
-SCHEMA = 3
+SCHEMA = 4
 
 
 class StopRun(Exception):
@@ -113,6 +114,29 @@ def fetch_stats(limiter, release_id):
     return out
 
 
+def fetch_lowest_ask(limiter, release_id):
+    st = limiter.get("/marketplace/stats/%s" % release_id, {"curr_abbr": "USD"}) or {}
+    low = st.get("lowest_price")
+    if isinstance(low, dict):
+        low = low.get("value")
+    return round(float(low), 2) if low else None
+
+
+def add_likely_floor(limiter, res, rec):
+    """Option B: value unverified-but-found albums at the lowest ask across plausible pressings."""
+    if res["status"] == "ambiguous":
+        ids = [i for i in (res.get("tied_ids") or [])][: lt.MAX_TIED_LOOKUPS]
+        asks = {i: fetch_lowest_ask(limiter, i) for i in ids}
+    elif res["status"] == "title_only" and res.get("release_id"):
+        asks = {res["release_id"]: rec.get("lowest_price")}
+    else:
+        return
+    f = lt.floor_estimate(asks)
+    if f:
+        rec.update(tier="likely", floor_estimate=f["floor"], floor_spread=f["spread"],
+                   floor_wide=f["wide"], floor_ids=f["ids"])
+
+
 def unique_work(deals, min_price=0.01):
     """One work item per distinct pressing identity, highest-priority first."""
     work = {}
@@ -152,6 +176,7 @@ def validate(work, state, limiter, deadline, limit=None, save=None, clock=time.m
                                               "matched_catno", "matched_country", "matched_year")}}
             if res["status"] in dm.VALUABLE_STATUSES and res["release_id"]:
                 rec.update(fetch_stats(limiter, res["release_id"]))
+            add_likely_floor(limiter, res, rec)
         except StopRun as e:
             return n, e.reason
         done[w["key"]] = rec
@@ -181,6 +206,13 @@ def build_results(deals, state, cfg):
                            matched_year=rec.get("matched_year"), matched_country=rec.get("matched_country"),
                            verified=rec["status"] in dm.DECISION_GRADE_STATUSES)
                 est = rec.get("resale_estimate") or 0
+                if not row["verified"]:                       # Likely tier: floor price only
+                    est = rec.get("floor_estimate") or 0
+                    row["tier"] = "likely" if est > 0 else "unverified"
+                    if est > 0:
+                        row.update(floor_wide=rec.get("floor_wide"), floor_spread=rec.get("floor_spread"))
+                else:
+                    row["tier"] = "verified"
                 if est > 0:
                     r = lc.estimate_net_profit(price, est, "USD", cfg, "domestic_us")
                     low = rec.get("lowest_price") or 0
@@ -205,6 +237,7 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         return {"valued": len(n), "net_ge_min": len(a), "roi_ge_min": len(b),
                 "both": sum(1 for r in a if r["roi"] >= min_roi)}
     verified = [r for r in scanned if r.get("verified")]
+    likely = [r for r in scanned if r.get("tier") == "likely"]
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "complete": len([k for k, v in state["records"].items() if v.get("schema") == SCHEMA]) >= work_total,
@@ -220,7 +253,8 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "with_resale_estimate": sum(1 for r in scanned if "net" in r),
         "thresholds": {"min_net_usd": min_net, "min_roi_percent": min_roi},
         "verified_only": thresholds(verified),
-        "including_unverified_title_only": thresholds([r for r in scanned if r["status"] in dm.VALUABLE_STATUSES]),
+        "likely_tier": dict(thresholds(likely), count=len(likely),
+                            wide_spread=sum(1 for r in likely if r.get("floor_wide"))),
         "prod_buy_now": sum(1 for r in rows if r["prod_decision"] == "BUY NOW"),
         "prod_buy_now_verified_and_profitable": sum(
             1 for r in verified if r["prod_decision"] == "BUY NOW" and r.get("net", -1) >= min_net and r.get("roi", -1) >= min_roi),

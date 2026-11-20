@@ -51,7 +51,9 @@ def test_results_use_fresh_values_only_and_thresholds():
     pv.validate(work, state, FakeLimiter(), 1e18, clock=lambda: 0)
     rows = pv.build_results(DEALS, state, cfg)
     r1 = rows[0]
-    assert r1["resale"] == 40.0 and r1["lowest_ask"] == 30.0 and "net" in r1
+    # unverified pressing -> Likely tier -> FLOOR (lowest ask 30), never the 40 NM suggestion
+    assert r1["status"] in ("title_only", "ambiguous") and r1["tier"] == "likely"
+    assert r1["resale"] == 30.0 and "net" in r1
     assert rows[1]["status"] in ("none", "not_validated")
     s = pv.summarize(rows, state, len(work), cfg, None)
     assert s["listings_total"] == 3 and s["complete"] is True

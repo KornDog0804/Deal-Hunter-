@@ -819,7 +819,7 @@ h1{
   <label>Min net $<input id="fNet" type="number" step="1" inputmode="decimal" placeholder="5"></label>
   <label>Min ROI %<input id="fRoi" type="number" step="1" inputmode="decimal" placeholder="25"></label>
   <label>Max price $<input id="fMaxP" type="number" step="1" inputmode="decimal" placeholder="any"></label>
-  <label>Match<select id="fMatch"><option value="">Any</option><option value="verified">Verified (exact/strong)</option><option value="title_only">Title only (unverified)</option><option value="ambiguous">Ambiguous</option><option value="none">Unmatched</option><option value="not_validated">Not validated</option></select></label>
+  <label>Match<select id="fMatch"><option value="">Any</option><option value="verified">Verified (exact/strong)</option><option value="likely">Likely (floor estimate)</option><option value="title_only">Title only (unverified)</option><option value="ambiguous">Ambiguous</option><option value="none">Unmatched</option><option value="not_validated">Not validated</option></select></label>
   <label>Load results<input id="fFile" type="file" accept=".json" multiple></label>
 </div>
 <div class="tabs">
@@ -888,7 +888,7 @@ let VAL = {}, VSUM = null, VORD = []
 function vrow(d){ return VAL[d.link] }
 function pvVals(d){
   const v = vrow(d), o = PV.overlay[d.link] || {}
-  if(v) return {match: v.status, verified: !!v.verified, net: v.net, roi: v.roi, src: "validated"}
+  if(v) return {match: v.status, verified: !!v.verified, likely: v.tier==="likely", net: v.net, roi: v.roi, src: "validated"}
   if(VSUM) return {match: "not_validated", verified:false, net: undefined, roi: undefined, src: "none"}
   return {match: o.legacy ? "legacy" : "not_validated", verified:false, net: o.net, roi: o.roi, src: "legacy"}
 }
@@ -899,7 +899,8 @@ function pvPass(d){
   if(roi !== null && !(x.roi !== undefined && x.roi >= roi)) return false
   if(maxp !== null && !(number(d.price) > 0 && number(d.price) <= maxp)) return false
   if(m === "verified" && !x.verified) return false
-  if(m && m !== "verified" && x.match !== m) return false
+  if(m === "likely" && !x.likely) return false
+  if(m && m !== "verified" && m !== "likely" && x.match !== m) return false
   return true
 }
 function renderSummary(){
@@ -911,7 +912,7 @@ function renderSummary(){
   const s = VSUM, v = s.verified_only || {}, t = s.thresholds || {}
   const c = (n,l) => `<div><b>${Number(n||0).toLocaleString()}</b>${l}</div>`
   el.innerHTML = `<b>Live Discogs validation</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
-  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
+  <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"likely (floor est.)")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
 }
 document.addEventListener("DOMContentLoaded", ()=>{
   ["fNet","fRoi","fMaxP","fMatch"].forEach(id => document.getElementById(id).addEventListener("input", ()=>{ currentPage = 1; render() }))
@@ -936,11 +937,12 @@ function pvBlock(d){
   const after = (prod==="BUY NOW" && !o.g) ? "WATCH" : prod
   const v = vrow(d)
   if(v){
-    const ok = v.verified, net = v.net
-    let h2 = `<span class="pill ${ok?"ok":"warn"}">${esc(v.status.replace("_"," "))} ${Math.round((v.confidence||0)*100)}%</span><span class="pill dim">Prod: ${esc(prod)}</span>`
-    if(prod==="BUY NOW") h2 += `<span class="pill ${ok&&net>=5&&v.roi>=25?"ok":"bad"}">${ok&&net>=5&&v.roi>=25?"BUY NOW holds":"Preview: WATCH"}</span>`
-    if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; resale est. $${v.resale.toFixed(2)} <small>(Discogs asking${v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):""})</small><br>Net ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(inbound shipping/tax unset)"}</small>`
-    else h2 += `<br><small>${ok?"No resale estimate":"Not a verified pressing: no valuation shown"}</small>`
+    const ok = v.verified, net = v.net, lk = v.tier==="likely"
+    const pass = net!==undefined && net>=5 && v.roi>=25
+    let h2 = `<span class="pill ${ok?"ok":lk?"warn":"dim"}">${ok?"Verified":lk?"Likely":esc(v.status.replace("_"," "))} ${Math.round((v.confidence||0)*100)}%</span><span class="pill dim">Prod: ${esc(prod)}</span>`
+    if(prod==="BUY NOW") h2 += ok ? `<span class="pill ${pass?"ok":"bad"}">${pass?"BUY NOW holds":"Preview: WATCH"}</span>` : `<span class="pill bad">Preview: ${lk&&pass?"BUY LIGHT":"WATCH"}</span>`
+    if(net!==undefined) h2 += `<br>Landed $${v.landed.toFixed(2)} &middot; ${lk?"floor":"resale est."} $${v.resale.toFixed(2)} <small>(${lk?"lowest ask across possible pressings"+(v.floor_wide?", prices vary widely":""):"Discogs asking"+(v.lowest_ask?", low ask $"+v.lowest_ask.toFixed(2):"")})</small><br>Net ${net>=0?"+":""}$${net.toFixed(2)} &middot; ROI ${v.roi}% <small>${v.inputs_complete?"":"(inbound shipping/tax unset)"}</small>${lk?"<br><small>Pressing unverified: cannot be BUY NOW</small>":""}`
+    else h2 += `<br><small>${ok?"No resale estimate":"No usable Discogs price: no valuation shown"}</small>`
     return `<div class="pv">${h2}</div>`
   }
   let h = `<span class="pill ${prod==="BUY NOW"&&!o.g?"warn":"dim"}">Prod: ${esc(prod)}</span>`

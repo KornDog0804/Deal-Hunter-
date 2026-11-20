@@ -26,6 +26,7 @@ from datetime import datetime, timedelta
 
 import discogs_matcher as dm
 import landed_cost as lc
+import likely_tier as lt
 import decision_gate as dg
 
 BASE = Path(__file__).resolve().parent
@@ -35,7 +36,7 @@ CACHE_FILE = BASE / "price_cache.json"
 CACHE_TTL_DAYS = 7
 # v1 cache entries came from the old matcher (which could accept results[0]).
 # They are never reused; they are simply looked up again under strict matching.
-CACHE_SCHEMA = 4
+CACHE_SCHEMA = 5
 DEALS_FILE = BASE / "live_deals.json"
 
 # Only look up deals the Brain scored highly
@@ -230,7 +231,24 @@ def discogs_price_stats(release_id):
     return stats
 
 
-def lookup_deal(deal, cache, http_get=None):
+def discogs_lowest_ask(release_id):
+    """Lowest current Discogs asking price (USD) for one release, or None."""
+    try:
+        url = f"{'https://api.discogs.com'}/marketplace/stats/{release_id}?curr_abbr=USD&token={DISCOGS_TOKEN}"
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8", "ignore"))
+        low = data.get("lowest_price")
+        low = low.get("value") if isinstance(low, dict) else low
+        return round(float(low), 2) if low else None
+    except Exception as e:
+        log(f"[Discogs] Lowest-ask error for release {release_id}: {e}")
+        return None
+    finally:
+        time.sleep(1.1)  # rate limit
+
+
+def lookup_deal(deal, cache, http_get=None, ask_fetcher=None):
     """
     Look up the market price for a deal under strict release matching.
     Returns the cache entry. Ambiguous / unmatched listings are cached as
@@ -268,6 +286,21 @@ def lookup_deal(deal, cache, http_get=None):
                           "matched_catno", "matched_country", "matched_year"):
                 entry[field] = result.get(field)
 
+    # Likely tier (Option B): pressing not verified -> value at the FLOOR, never the optimistic price.
+    if result["status"] == "ambiguous" and result["tied_ids"]:
+        fetch = ask_fetcher or discogs_lowest_ask
+        asks = {rid: fetch(rid) for rid in result["tied_ids"][: lt.MAX_TIED_LOOKUPS]}
+        f = lt.floor_estimate(asks)
+        if f:
+            entry.update(found=True, tier="likely", suggested_sell_price=f["floor"], lowest_price=f["floor"],
+                         floor_spread=f["spread"], floor_wide=f["wide"], floor_ids=f["ids"])
+    elif result["status"] == "title_only" and entry.get("found"):
+        low = entry.get("lowest_price") or 0
+        if low > 0:
+            entry.update(tier="likely", suggested_sell_price=low)
+        else:
+            entry["found"] = False
+
     cache[key] = entry
     return entry
 
@@ -303,6 +336,10 @@ def _apply_valuation(deal, entry, cfg):
     deal["valuation_verified_sold"] = False
     deal["valuation_basis"] = "discogs_asking_price"
     deal["valuation_label"] = ESTIMATE_LABEL
+    if status not in dm.DECISION_GRADE_STATUSES:
+        deal["valuation_tier"] = "likely"
+        deal["valuation_label"] = lt.LIKELY_LABEL
+        deal["valuation_floor_wide_spread"] = bool(entry.get("floor_wide"))
 
     # Override Brain's markup-based sale price with the (estimated) market price
     deal["suggested_sale_price"] = sell_price
