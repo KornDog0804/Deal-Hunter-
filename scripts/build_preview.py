@@ -36,9 +36,10 @@ for i, d in enumerate(deals):
     price = d.get("price")
     if e and e.get("found"): o["legacy"] = True
     if price and sp > 0:
-        r = landed_cost.estimate_net_profit(price, sp, "USD", cfg, "domestic_us")
+        r = landed_cost.estimate_net_profit(price, sp, "USD", cfg, "domestic_us", provider=d.get("source"))
         o.update(lc=r["landed_cost_usd"], rs=sp, net=r["net_profit_usd"], roi=r["roi_percent"], inc=r["inputs_complete"], miss=len(r["missing_inputs"])); n_net += 1
     ov[d.get("link") or str(i)] = o
-json.dump({"providers": prov, "overlay": ov, "gate_on": cfg["decision_safety"]["enforce_buy_now_gate"]}, open("preview/preview_data.json", "w"), separators=(",", ":"))
+json.dump({"providers": prov, "overlay": ov, "gate_on": cfg["decision_safety"]["enforce_buy_now_gate"],
+           "fees": dict(cfg["resale"]["channels"]["discogs"]), "inbound": cfg.get("inbound_shipping")}, open("preview/preview_data.json", "w"), separators=(",", ":"))
 bn = sum(1 for o in ov.values() if o["p"] == "BUY NOW"); gp = sum(1 for o in ov.values() if o["p"] == "BUY NOW" and o["g"])
 print(len(prov), "providers;", sum(p["status"] == "ok" for p in prov), "ok;", n_net, "with net;", "BUY NOW", bn, "gate-pass", gp)
