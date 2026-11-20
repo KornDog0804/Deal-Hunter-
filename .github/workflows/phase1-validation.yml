@@ -4,6 +4,11 @@ name: Phase 1 Discogs Validation (isolated, read-only)
 # results go to validation_out/ and are uploaded as an artifact. Progress is kept in the
 # Actions cache so a later run RESUMES where this one stopped.
 on:
+  # Starts a small first test (20 pressings) whenever THIS file changes on the branch. Needed because
+  # a manual "Run workflow" button only appears for workflows that exist on the default branch.
+  push:
+    branches: [phase1-valuation-accuracy]
+    paths: [".github/workflows/phase1-validation.yml"]
   workflow_dispatch:
     inputs:
       max_minutes:
@@ -52,8 +57,9 @@ jobs:
         env:
           DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
         run: |
-          ARGS="--out validation_out --max-minutes ${{ inputs.max_minutes }}"
-          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          ARGS="--out validation_out --max-minutes ${{ inputs.max_minutes || '300' }}"
+          LIMIT="${{ github.event_name == 'push' && '20' || inputs.limit }}"
+          if [ -n "$LIMIT" ]; then ARGS="$ARGS --limit $LIMIT"; fi
           python scripts/phase1_validation.py $ARGS
 
       - name: Save progress for the next run
