@@ -26,6 +26,8 @@ MATCH STATUSES
 import hashlib
 import re
 import unicodedata
+
+import product_identifiers as pid
 from difflib import SequenceMatcher
 
 EXACT = "exact"
@@ -198,10 +200,15 @@ def extract_identifiers(deal):
     """
     blob = " ".join(str(deal.get(k) or "") for k in ("raw_title", "title", "page_text_snippet"))
 
-    catno = _first(deal, "catalog_number", "catno", "cat_no", "catalogue_number")
+    structured = deal.get("identifiers") if isinstance(deal.get("identifiers"), dict) else {}
+    mined = pid.mine_text(blob)          # labelled text only: "UPC:", "Label:", "Release Date:", "Cat. No:"
+
+    catno = _first(deal, "catalog_number", "catno", "cat_no", "catalogue_number") or structured.get("catno") or mined.get("catno")
     if not catno:
         m = _CATNO_PATTERN.search(blob)
         catno = m.group(1).strip() if m else ""
+    barcode = pid.normalize_barcode(_first(deal, "barcode", "upc", "ean", "gtin")) or structured.get("barcode") or mined.get("barcode") or ""
+    sku = str(structured.get("sku") or "").strip()
 
     country = _first(deal, "country", "pressing_country")
     if not country:
@@ -225,9 +232,11 @@ def extract_identifiers(deal):
         "title": title_core(deal.get("title") or ""),
         "title_plain": title_plain(deal.get("title") or ""),
         "catno": str(catno or "").strip(),
-        "label": str(_first(deal, "label", "record_label") or "").strip(),
+        "label": str(_first(deal, "label", "record_label") or structured.get("label") or mined.get("label") or "").strip(),
+        "barcode": barcode,
+        "sku": sku,
         "country": normalize_country(country),
-        "year": _to_int_year(_first(deal, "year", "release_year")),
+        "year": _to_int_year(_first(deal, "year", "release_year")) or structured.get("year") or mined.get("year"),
         "format": fmt,
         "qty": qty,
         "variants": variants,
@@ -237,6 +246,10 @@ def extract_identifiers(deal):
 def pressing_suffix(ident):
     """'cat=253P379|cty=japan|yr=1982' - empty when the listing gave no pressing identifiers."""
     extras = []
+    if ident.get("barcode"):
+        extras.append("bc=" + ident["barcode"])
+    if ident.get("sku"):
+        extras.append("sku=" + normalize_catno(ident["sku"]))
     if ident.get("catno"):
         extras.append("cat=" + normalize_catno(ident["catno"]))
     if ident.get("label"):
@@ -264,6 +277,10 @@ def build_search_params(ident):
     if ident.get("format") in ("", "vinyl"):
         base["format"] = "Vinyl"
     queries = []
+    if ident.get("barcode"):
+        queries.append(dict(base, barcode=ident["barcode"]))
+    if ident.get("sku") and ident.get("artist"):
+        queries.append(dict(base, catno=ident["sku"], artist=ident["artist"]))
     if ident.get("catno"):
         q = dict(base, catno=ident["catno"])
         if ident.get("artist"):
@@ -310,6 +327,8 @@ def _candidate_fields(cand):
         "title": title,
         "labels": [str(l) for l in labels],
         "catnos": catnos,
+        "barcodes": [b for b in (pid.normalize_barcode(x) for x in (cand.get("barcode") or [])
+                                 if isinstance(cand.get("barcode"), list)) if b],
         "country": normalize_country(cand.get("country")),
         "year": _to_int_year(cand.get("year")),
         "formats": [str(f) for f in formats],
@@ -375,9 +394,22 @@ def evaluate_candidate(ident, cand):
     vetoes, positives = [], []
 
     # Best of: edition-stripped title, or the title with only parentheticals removed.
-    title_sim = max(similarity(ident.get("title"), c["title"]),
-                    similarity(ident.get("title_plain") or "", c["title"]))
+    # Discogs titles often carry edition text in parentheses ("Guts (Spilled)"): compare on the title
+    # with that text removed too. The edition text itself is NOT thrown away: it is compared with the
+    # listing's edition words below (variant_bonus / edition_conflict) so pressings can still be told apart.
+    cand_titles = {c["title"], clean_query_title(c["title"]), title_core(c["title"])}
+    title_sim = max(similarity(a, b) for a in (ident.get("title"), ident.get("title_plain") or "")
+                    for b in cand_titles if b)
     artist_sim = artist_similarity(ident.get("artist"), c["artist"])
+
+    barcode_hit = bool(ident.get("barcode") and ident["barcode"] in c["barcodes"])
+    sku_hit = False
+    if ident.get("sku") and c["catnos"]:
+        sku_hit = catno_matches(ident["sku"], c["catnos"], c["labels"] + [ident.get("label", "")])
+    if barcode_hit:
+        positives.append("barcode_match")
+    elif ident.get("barcode") and c["barcodes"]:
+        vetoes.append("barcode_mismatch")
 
     catno_hit = False
     if ident.get("catno"):
@@ -385,27 +417,32 @@ def evaluate_candidate(ident, cand):
             catno_hit = catno_matches(ident["catno"], c["catnos"], c["labels"] + [ident.get("label", "")])
             (positives if catno_hit else vetoes).append("catno_match" if catno_hit else "catno_mismatch")
 
-    min_title = MIN_TITLE_SIM_WITH_CATNO if catno_hit else MIN_TITLE_SIM
-    min_artist = MIN_ARTIST_SIM_WITH_CATNO if catno_hit else MIN_ARTIST_SIM
+    if sku_hit:
+        positives.append("sku_catno_match")
+    strong_id = catno_hit or barcode_hit
+    min_title = MIN_TITLE_SIM_WITH_CATNO if strong_id else MIN_TITLE_SIM
+    min_artist = MIN_ARTIST_SIM_WITH_CATNO if strong_id else MIN_ARTIST_SIM
     if title_sim < min_title:
         vetoes.append("title_mismatch(%.2f)" % title_sim)
     if artist_sim < min_artist:
         vetoes.append("artist_mismatch(%.2f)" % artist_sim)
 
     label_pos = year_pos = country_pos = 0
-    if ident.get("country") and c["country"]:
+    if barcode_hit:
+        vetoes[:] = [v for v in vetoes if not v.startswith(("catno_mismatch",))]
+    if ident.get("country") and c["country"] and not barcode_hit:
         if ident["country"] == c["country"]:
             country_pos = 1
             positives.append("country_match")
         else:
             vetoes.append("country_mismatch(%s!=%s)" % (ident["country"], c["country"]))
-    if ident.get("year") and c["year"]:
+    if ident.get("year") and c["year"] and not barcode_hit:
         if ident["year"] == c["year"]:
             year_pos = 1
             positives.append("year_match")
         else:
             vetoes.append("year_mismatch(%s!=%s)" % (ident["year"], c["year"]))
-    if ident.get("label") and c["labels"]:
+    if ident.get("label") and c["labels"] and not barcode_hit:
         if _label_agrees(ident["label"], c["labels"]):
             label_pos = 1
             positives.append("label_match")
@@ -419,7 +456,7 @@ def evaluate_candidate(ident, cand):
     elif ident["format"] in ("cd", "cassette") and c["formats"]:
         if ident["format"] not in fmt_lower:
             vetoes.append("format_mismatch")
-    if ident.get("qty") and c["qty"] and ident["qty"] != c["qty"]:
+    if ident.get("qty") and c["qty"] and ident["qty"] != c["qty"] and not barcode_hit:
         vetoes.append("disc_count_mismatch(%s!=%s)" % (ident["qty"], c["qty"]))
 
     cand_text = norm_text(fmt_lower + " " + c["title"])
@@ -427,11 +464,16 @@ def evaluate_candidate(ident, cand):
     overlap = sum(1 for v in wanted if re.search(r"\b" + re.escape(v) + r"\b", cand_text))
     variant_bonus = 0.05 * (overlap / len(wanted)) if wanted else 0.0
 
-    score = (0.35 * title_sim + 0.20 * artist_sim + (0.30 if catno_hit else 0.0)
+    # edition words on one side but a contradicting one on the other (e.g. listing "Deluxe", Discogs "(Standard)")
+    paren = " ".join(re.findall(r"\(([^)]*)\)", c["title"])).lower()
+    edition_penalty = 0.03 if (("deluxe" in paren) != ("deluxe" in " ".join(wanted).lower() + " " + norm_text(ident.get("title_plain", "")))
+                               and "deluxe" in (paren + " ".join(wanted))) else 0.0
+    score = (0.35 * title_sim + 0.20 * artist_sim + (0.30 if catno_hit else 0.0) + (0.30 if barcode_hit else 0.0)
+             - edition_penalty
              + 0.05 * label_pos + 0.05 * year_pos + 0.05 * country_pos + variant_bonus)
     return {"id": c["id"], "score": round(score, 4), "vetoes": vetoes, "positives": positives,
             "title_sim": round(title_sim, 3), "artist_sim": round(artist_sim, 3),
-            "fields": c, "catno_hit": catno_hit}
+            "fields": c, "catno_hit": catno_hit, "barcode_hit": barcode_hit, "sku_hit": sku_hit}
 
 
 def _result(status, confidence=0.0, chosen=None, reasons=None, rejected=None, tied=None):
@@ -474,7 +516,7 @@ def evaluate_candidates(ident, candidates):
     top = accepted[0]
     if len(accepted) > 1 and (top["score"] - accepted[1]["score"]) < MIN_SCORE_MARGIN:
         # Prefer an exact catalog-number hit over a non-hit before declaring a tie.
-        exact_hits = [e for e in accepted if e["catno_hit"]]
+        exact_hits = [e for e in accepted if e["catno_hit"] or e["barcode_hit"]]
         if len(exact_hits) == 1:
             top = exact_hits[0]
         else:
@@ -482,10 +524,13 @@ def evaluate_candidates(ident, candidates):
             return _result(AMBIGUOUS, 0.0, reasons=["multiple_releases_too_close"],
                            rejected=rejected[:10], tied=tied[:10])
 
-    corroborating = [p for p in top["positives"] if p != "catno_match"]
-    if top["catno_hit"]:
+    corroborating = [p for p in top["positives"] if p not in ("catno_match", "barcode_match", "sku_catno_match")]
+    if top["catno_hit"] or top["barcode_hit"]:
         conf = max(0.90, min(1.0, top["score"]))
         return _result(EXACT, conf, top, top["positives"], rejected[:10])
+    if top["sku_hit"] and top["title_sim"] >= MIN_TITLE_SIM and top["artist_sim"] >= MIN_ARTIST_SIM:
+        # a SKU is only a hint that it is the catalogue number; matching Discogs' catno earns "strong", not "exact"
+        return _result(STRONG, min(STRONG_CONFIDENCE_CAP, max(0.70, top["score"])), top, top["positives"], rejected[:10])
     if len(corroborating) >= 2:
         conf = min(STRONG_CONFIDENCE_CAP, max(0.70, top["score"]))
         return _result(STRONG, conf, top, top["positives"], rejected[:10])
