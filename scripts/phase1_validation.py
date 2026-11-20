@@ -203,6 +203,20 @@ def validate(work, state, limiter, deadline, limit=None, save=None, clock=time.m
     return n, None
 
 
+def manual_check_reasons(row, rec):
+    """Verified matches that must still be confirmed by hand before anyone trusts them."""
+    why = []
+    if str(row.get("artist") or "").strip().lower() in ("", "unknown artist"):
+        why.append("listing has no artist")
+    got = set(rec.get("reasons") or [])
+    if row.get("status") == "strong" and not (got & {"barcode_match", "catno_match"}) \
+            and not (row.get("identifiers_used") or {}).get("barcode"):
+        why.append("matched on label/year only, no barcode or catalog number")
+    if "barcode_shared_resolved" in got:
+        why.append("barcode shared by several releases, resolved by other evidence")
+    return why
+
+
 def build_results(deals, state, cfg, min_depth=None):
     """Join validated records back onto deals; compute net profit / ROI per deal."""
     rows = []
@@ -250,8 +264,16 @@ def build_results(deals, state, cfg, min_depth=None):
                                cost_certainty=r.get("cost_certainty"),
                                inputs_complete=r["inputs_complete"], missing=r["missing_inputs"])
                     row["needs_review"] = bool(row["suspect"] or thin)
+                    row["cost_status"] = "complete" if r["inputs_complete"] else "incomplete"
+                    row["net_label"] = ("Estimated net" if r["inputs_complete"]
+                                        else "Estimated net, INCOMPLETE costs (not confirmed profit)")
                     if low > 0:
                         row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, "USD", cfg, "domestic_us", provider=d.get("source"))["net_profit_usd"]
+        if row.get("verified"):
+            row["manual_check"] = manual_check_reasons(row, rec)
+        row["recommendation_eligible"] = bool(
+            row.get("verified") and "net" in row and not row.get("needs_review") and not row.get("manual_check")
+            and not row.get("depth_unknown"))
         rows.append(row)
     return rows
 
@@ -292,6 +314,11 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "verified_thin_market": sum(1 for r in verified if r.get("thin_market")),
         "verified_both_excluding_review": sum(1 for r in verified if r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi and not r.get("needs_review")),
         "market_depth_unknown": sum(1 for r in scanned if r.get("depth_unknown")),
+        "incomplete_cost_rows": sum(1 for r in scanned if r.get("cost_status") == "incomplete"),
+        "verified_manual_check": sum(1 for r in verified if r.get("manual_check")),
+        "recommendation_eligible": sum(1 for r in scanned if r.get("recommendation_eligible")),
+        "recommendation_eligible_meeting_thresholds": sum(
+            1 for r in scanned if r.get("recommendation_eligible") and r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi),
         "prod_buy_now": sum(1 for r in rows if r["prod_decision"] == "BUY NOW"),
         "prod_buy_now_verified_and_profitable": sum(
             1 for r in verified if r["prod_decision"] == "BUY NOW" and r.get("net", -1) >= min_net and r.get("roi", -1) >= min_roi),

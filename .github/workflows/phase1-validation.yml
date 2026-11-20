@@ -2,7 +2,7 @@ name: Phase 1 Discogs Validation (isolated, read-only)
 
 # No schedule, no deploy, never touches main. Repo files are never modified (checked below).
 # Results go to validation_out/, are uploaded as an artifact, and are ALSO force-pushed to ONE
-# dedicated results branch (phase1-validation-results) so they can be loaded into the preview.
+# dedicated results branch (phase1-full-results; the older phase1-validation-results branch is kept untouched) so they can be loaded into the preview.
 # Progress is kept in the Actions cache so a later run RESUMES where this one stopped.
 on:
   # Starts a small first test (20 pressings) whenever THIS file changes on the branch. Needed because
@@ -55,6 +55,17 @@ jobs:
           key: phase1-validation-state-none
           restore-keys: phase1-validation-state-
 
+      - name: Fetch previous (old matcher) results as the old-vs-new baseline
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p validation_out
+          git fetch -q "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" phase1-validation-results:refs/remotes/origin/baseline || true
+          git show refs/remotes/origin/baseline:validation_results.json > validation_out/baseline_results.json || echo "[]" > validation_out/baseline_results.json
+
+      - name: Probe providers for identifiers (UPC/EAN/SKU/JSON-LD)
+        run: python scripts/provider_probe.py --out validation_out || echo "probe failed (continuing without identifiers)"
+
       - name: Validate against live Discogs (strict matcher, no legacy caches)
         env:
           DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
@@ -65,6 +76,7 @@ jobs:
           # a push whose commit message contains [full] runs the whole set (resumable) instead of 20
           if [[ "$COMMIT_MSG" == *"[full]"* ]]; then LIMIT=""; fi
           if [ -n "$LIMIT" ]; then ARGS="$ARGS --limit $LIMIT"; fi
+          ARGS="$ARGS --identifiers validation_out/identifiers_by_link.json"
           python scripts/phase1_validation.py $ARGS
 
       - name: Save progress for the next run
@@ -109,9 +121,9 @@ jobs:
         run: |
           set -e
           [ -f validation_out/validation_summary.json ] || { echo "no results to publish"; exit 0; }
-          BR=phase1-validation-results
+          BR=phase1-full-results
           D=$(mktemp -d)
-          cp validation_out/*.json "$D"/ && rm -f "$D/state.json"
+          cp validation_out/*.json "$D"/ && rm -f "$D/state.json" "$D/baseline_results.json" "$D/identifiers_by_link.json"
           cd "$D"
           git init -q -b "$BR"
           git config user.name "validation-bot"; git config user.email "validation-bot@users.noreply.github.com"

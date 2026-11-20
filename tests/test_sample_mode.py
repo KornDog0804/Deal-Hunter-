@@ -67,3 +67,31 @@ def test_thin_market_flagged_and_excluded_from_review_free_count():
     row = pv.build_results(deals, state, cfg)[0]
     assert row["thin_market"] is True and row["needs_review"] is True
     assert row["valuation_label"] == "Lowest Asking Price Estimate"
+
+
+def _row(status, artist, reasons, depth=10, ids=None, price=20.0, resale=60.0):
+    import landed_cost as lc
+    from discogs_matcher import extract_identifiers, identity_key
+    cfg = lc.load_config()
+    d = {"link": "L", "source": "Rhino", "price": price, "artist": artist, "title": "T"}
+    state = {"records": {identity_key(extract_identifiers(d)): {
+        "status": status, "confidence": 0.9, "release_id": 1, "reasons": reasons, "resale_estimate": resale,
+        "num_for_sale": depth}}}
+    return pv.build_results([d], state, cfg)[0]
+
+
+def test_unknown_shipping_is_labelled_incomplete_not_confirmed():
+    row = _row("exact", "Korn", ["barcode_match"])
+    assert row["cost_status"] == "incomplete" and "INCOMPLETE" in row["net_label"]
+
+
+def test_unknown_artist_and_label_only_strong_need_manual_check():
+    assert _row("strong", "Unknown Artist", ["barcode_match"])["manual_check"]
+    assert _row("strong", "Sleep Token", ["year_match", "label_match"])["manual_check"]
+    assert not _row("exact", "Korn", ["barcode_match"])["manual_check"]
+
+
+def test_thin_or_manual_rows_are_not_recommendation_eligible():
+    assert _row("exact", "Korn", ["barcode_match"])["recommendation_eligible"] is True
+    assert _row("exact", "Korn", ["barcode_match"], depth=1)["recommendation_eligible"] is False
+    assert _row("strong", "Unknown Artist", ["barcode_match"])["recommendation_eligible"] is False
