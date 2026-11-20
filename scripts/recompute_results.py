@@ -18,7 +18,9 @@ def recompute_rows(rows, cfg, min_depth=None):
     for r in rows:
         if "resale" not in r:
             continue
-        x = lc.estimate_net_profit(r["price"], r["resale"], "USD", cfg, "domestic_us", provider=r.get("source"))
+        prof = r.get("cost_profile") or "domestic_us"
+        x = lc.estimate_net_profit(r["price"], r["resale"], r.get("currency") or "USD", cfg, prof,
+                                   provider=r.get("source") if prof == "domestic_us" else None)
         depth = r.get("market_depth")
         thin = depth is not None and depth < min_depth
         r.update(landed=x["landed_cost_usd"], net=x["net_profit_usd"], roi=x["roi_percent"],

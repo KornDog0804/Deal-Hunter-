@@ -212,6 +212,9 @@ def manual_check_reasons(row, rec):
     if row.get("status") == "strong" and not (got & {"barcode_match", "catno_match"}) \
             and not (row.get("identifiers_used") or {}).get("barcode"):
         why.append("matched on label/year only, no barcode or catalog number")
+    cond = str(row.get("condition") or "").strip().lower()
+    if cond and cond not in ("new", "sealed", "mint", "m", "nm", "near mint"):
+        why.append("used/graded copy (%s): Discogs estimate assumes near-mint" % cond)
     if "barcode_shared_resolved" in got:
         why.append("barcode shared by several releases, resolved by other evidence")
     return why
@@ -228,7 +231,11 @@ def build_results(deals, state, cfg, min_depth=None):
         except (TypeError, ValueError):
             price = 0.0
         ident_now = dm.extract_identifiers(d)
+        cur = str(d.get("currency") or "USD").upper()
+        cost_profile = d.get("cost_profile") or "domestic_us"
+        sku_provider = None if cost_profile != "domestic_us" else d.get("source")   # store shipping tables are US-domestic only
         row = {"link": d.get("link"), "source": d.get("source"), "price": price,
+               "currency": cur, "cost_profile": cost_profile, "condition": d.get("condition"),
                "artist": d.get("artist"), "title": d.get("title"), "raw_title": d.get("raw_title"),
                "_key": dm.identity_key(ident_now),
                "identifiers_used": {k: ident_now.get(k) for k in ("barcode", "sku", "catno", "label", "year") if ident_now.get(k)},
@@ -250,7 +257,7 @@ def build_results(deals, state, cfg, min_depth=None):
                 else:
                     row["tier"] = "verified"
                 if est > 0:
-                    r = lc.estimate_net_profit(price, est, "USD", cfg, "domestic_us", provider=d.get("source"))
+                    r = lc.estimate_net_profit(price, est, cur, cfg, cost_profile, provider=sku_provider)
                     low = rec.get("lowest_price") or 0
                     depth = rec.get("num_for_sale") if row["tier"] == "verified" else rec.get("floor_depth")
                     thin = depth is not None and depth < min_depth
@@ -268,7 +275,7 @@ def build_results(deals, state, cfg, min_depth=None):
                     row["net_label"] = ("Estimated net" if r["inputs_complete"]
                                         else "Estimated net, INCOMPLETE costs (not confirmed profit)")
                     if low > 0:
-                        row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, "USD", cfg, "domestic_us", provider=d.get("source"))["net_profit_usd"]
+                        row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, cur, cfg, cost_profile, provider=sku_provider)["net_profit_usd"]
         if row.get("verified"):
             row["manual_check"] = manual_check_reasons(row, rec)
         row["recommendation_eligible"] = bool(
