@@ -120,9 +120,9 @@ Equal Vision: kept 100
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 228 products
-Rhino: 228 products via Shopify JSON
-Rhino: kept 113
+  ✓ https://store.rhino.com/products.json?limit=250 -> 240 products
+Rhino: 240 products via Shopify JSON
+Rhino: kept 126
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2556 normalized vinyl listings
+[Stage2] 2569 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9574 entries
-[Discogs] Enriching 2556 vinyl records with Mint pricing...
-[Discogs] Cache saved (9574 entries)
+[Discogs] Loaded cache with 9584 entries
+[Discogs] Enriching 2569 vinyl records with Mint pricing...
+[Discogs] Cache saved (9584 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -440,7 +440,7 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 451662 bytes
+[UpcomingVinyl] Got 452268 bytes
 [UpcomingVinyl] Found 512 raw record URLs
 [UpcomingVinyl] MATCH: Dayseeker | Sleeptalk
 [UpcomingVinyl] MATCH: Linkin Park | Living Things Red Smoke
@@ -473,7 +473,7 @@ SOURCE STATUS SUMMARY
   Craft Recordings: 98 deals
   MNRK Heavy: 126 deals
   Equal Vision: 100 deals
-  Rhino: 113 deals
+  Rhino: 126 deals
   Interscope Records: 126 deals
   SharpTone Records: 112 deals
   Rock Metal Fan Nation: 178 deals
@@ -513,7 +513,7 @@ Newbury Comics: 204
 Pirates Press Records: 103
 Pure Noise Records: 90
 Revolver: 102
-Rhino: 113
+Rhino: 126
 Rise Records: 90
 Rock Metal Fan Nation: 178
 Rollin Records: 234
