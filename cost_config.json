@@ -63,8 +63,8 @@
       }
     },
     "buyer_paid_shipping_usd": null,
-    "outbound_shipping_usd": null,
-    "packaging_usd": null
+    "outbound_shipping_usd": 7.00,
+    "packaging_usd": 1.50
   },
   "decision": {
     "min_net_profit_usd": 5.0,
