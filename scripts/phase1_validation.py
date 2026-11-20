@@ -169,12 +169,15 @@ def build_results(deals, state, cfg):
         except (TypeError, ValueError):
             price = 0.0
         row = {"link": d.get("link"), "source": d.get("source"), "price": price,
+               "artist": d.get("artist"), "title": d.get("title"),
                "prod_decision": d.get("decision"), "status": "not_validated"}
         if price > 0 and d.get("artist") and d.get("title"):
             rec = state["records"].get(dm.identity_key(dm.extract_identifiers(d)))
             if rec:
                 row.update(status=rec["status"], confidence=rec["confidence"],
                            release_id=rec.get("release_id"), reasons=rec.get("reasons", []),
+                           matched_title=rec.get("matched_title"), matched_label=rec.get("matched_label"),
+                           matched_year=rec.get("matched_year"), matched_country=rec.get("matched_country"),
                            verified=rec["status"] in dm.DECISION_GRADE_STATUSES)
                 est = rec.get("resale_estimate") or 0
                 if est > 0:
@@ -221,6 +224,22 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "prod_buy_now_verified_and_profitable": sum(
             1 for r in verified if r["prod_decision"] == "BUY NOW" and r.get("net", -1) >= min_net and r.get("roi", -1) >= min_roi),
     }
+
+
+def diagnostics(rows, per_status=6):
+    """Why listings did not verify: reason counts + a few readable samples per status."""
+    from collections import Counter
+    reasons, samples = {}, {}
+    for r in rows:
+        st = r["status"]
+        if st in ("not_validated", "exact", "strong"):
+            continue
+        reasons.setdefault(st, Counter())[(r.get("reasons") or ["-"])[0]] += 1
+        if len(samples.setdefault(st, [])) < per_status:
+            samples[st].append("%s - %s | %s" % (r.get("artist"), r.get("title"),
+                               "; ".join(r.get("reasons", [])[:2]) +
+                               ((" -> " + str(r.get("matched_title"))) if r.get("matched_title") else "")))
+    return {"reason_counts": {k: dict(v.most_common(6)) for k, v in reasons.items()}, "samples": samples}
 
 
 def combined_orders(rows, cfg, max_records=3):
@@ -322,7 +341,16 @@ def main(argv=None):
     atomic_write(out / "combined_orders.json", combined_orders(rows, cfg))
     if not a.skip_fee_check:
         atomic_write(out / "fee_verification.json", verify_fees(cfg))
+    diag = diagnostics(rows)
+    atomic_write(out / "diagnostics.json", diag)
     print(json.dumps(summ, indent=1))
+    print("\n=== WHY NOT VERIFIED ===")
+    for st, c in diag["reason_counts"].items():
+        print(st, c)
+    for st, lst in diag["samples"].items():
+        print("--", st)
+        for x in lst:
+            print("  ", x[:150])
     if stop in ("auth_failed_401", "auth_failed_403"):
         return 3
     return 0
