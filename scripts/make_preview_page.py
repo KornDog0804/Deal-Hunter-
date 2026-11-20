@@ -142,7 +142,7 @@ function renderSummary(){
   }
   const s = VSUM, v = s.verified_only || {}, t = s.thresholds || {}
   const c = (n,l) => `<div><b>${Number(n||0).toLocaleString()}</b>${l}</div>`
-  el.innerHTML = `<b>Live Discogs validation</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
+  el.innerHTML = `<b>${s.sample?"SAMPLE RUN: "+s.unique_pressings_total+" pressings, new matcher. All other listings are not validated yet.":"Live Discogs validation"}</b> ${s.complete?"(complete)":"(partial: "+s.unique_pressings_done+" of "+s.unique_pressings_total+" pressings)"} &middot; ${esc((s.generated_at||"").slice(0,16))}<br><small>Resale = Discogs asking-price estimate, not sold prices. Profit/ROI below count VERIFIED matches only.</small>
   <div class="pvGrid">${c(s.listings_scanned,"records scanned")}${c(s.verified_pressing_matches,"verified pressing matches")}${c(s.with_resale_estimate,"with resale estimate")}${c(s.title_only_unverified,"title-only (unverified)")}${c(s.ambiguous,"ambiguous")}${c(s.unmatched,"unmatched")}${c(v.net_ge_min,"net ≥ $"+t.min_net_usd)}${c(v.roi_ge_min,"ROI ≥ "+t.min_roi_percent+"%")}${c(v.both,"meet both")}${c((s.likely_tier||{}).count,"unverified w/ Lowest Asking Price Est.")}${c((s.likely_tier||{}).net_ge_min,"likely: net ≥ $"+t.min_net_usd)}${c((s.likely_tier||{}).both,"likely: meet both")}${c((s.likely_tier||{}).thin_market,"thin market (&lt;3 copies for sale)")}${c((s.likely_tier||{}).both_excluding_suspect,"…minus thin/suspect")}${c(s.prod_buy_now_verified_and_profitable,"prod BUY NOW that qualify")}</div>`
 }
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -170,7 +170,7 @@ rep("<title>KornDog Deal Hunter</title>", "<title>KornDog Deal Hunter (PREVIEW)<
 open("preview/index.html", "w").write(s)
 import os, glob
 for f in glob.glob(os.path.join(os.environ.get("VALIDATION_DIR", "/nonexistent"), "*.json")):
-    if os.path.basename(f) != "state.json": shutil.copy(f, "preview/" + os.path.basename(f))
+    if os.path.basename(f) not in ("state.json","identifiers_by_link.json","baseline_results.json"): shutil.copy(f, "preview/" + os.path.basename(f))
 for f in ["live_deals.json","buy_signals.json","mini_vinyl_deals.json","collectibles_deals.json","olivia_deals.json","style.css"]:
     shutil.copy(f, "preview/"+f)
 print("ok")

@@ -176,6 +176,23 @@ _PATTERN_WORDS = {"splatter", "marble", "marbled", "swirl", "galaxy", "picture",
 _ANNIV = re.compile(r"\b(\d{1,3})(?:st|nd|rd|th)?\s*[- ]?anniv", re.I)
 
 
+_ROMAN = {"ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10}
+
+
+def sequel_numbers(title):
+    """Sequel / volume numbers in a title ('Tha Carter II' -> {2}, 'Vol. 3' -> {3}); years, LP counts and
+    1-digit disc counts followed by 'lp' are ignored."""
+    t = norm_text(title)
+    t = re.sub(r"\b\d+\s*-?\s*(?:lp|cd|disc|inch|in)\b", " ", t)
+    nums = set()
+    for w in re.findall(r"[a-z0-9]+", t):
+        if w in _ROMAN:
+            nums.add(_ROMAN[w])
+        elif w.isdigit() and 2 <= int(w) <= 20:
+            nums.add(int(w))
+    return nums
+
+
 def edition_text(raw_title, artist="", title_core_text=""):
     """The edition-describing part of a listing title: everything except the artist and the core album title."""
     t = norm_text(raw_title)
@@ -469,6 +486,10 @@ def evaluate_candidate(ident, cand):
     min_artist = MIN_ARTIST_SIM_WITH_CATNO if strong_id else MIN_ARTIST_SIM
     if title_sim < min_title:
         vetoes.append("title_mismatch(%.2f)" % title_sim)
+    # 'Tha Carter II' vs 'Tha Carter III' are near-identical strings but different albums.
+    ln, cn = sequel_numbers(ident.get("title") or ""), sequel_numbers(c["title"])
+    if ln and cn and ln != cn:
+        vetoes.append("sequel_number_mismatch(%s!=%s)" % (sorted(ln), sorted(cn)))
     if artist_sim < min_artist:
         vetoes.append("artist_mismatch(%.2f)" % artist_sim)
 
@@ -594,6 +615,9 @@ def evaluate_candidates(ident, candidates):
                            rejected=rejected[:10], tied=tied[:10])
 
     corroborating = [p for p in top["positives"] if p not in ("catno_match", "barcode_match", "sku_catno_match")]
+    if top["barcode_hit"] and norm_text(ident.get("artist") or "") in ("", "unknown artist"):
+        # the listing gave no artist, so the barcode+title cannot be cross-checked against one: strong, not exact
+        return _result(STRONG, min(STRONG_CONFIDENCE_CAP, top["score"]), top, top["positives"] + ["artist_unknown"], rejected[:10])
     if top["catno_hit"] or top["barcode_hit"]:
         conf = max(0.90, min(1.0, top["score"]))
         return _result(EXACT, conf, top, top["positives"], rejected[:10])

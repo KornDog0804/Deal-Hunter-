@@ -88,3 +88,20 @@ def test_missing_edition_word_is_not_a_conflict():
 def test_album_title_color_word_does_not_conflict():
     t = dm.edition_text("Metallica - The Black Album (2LP)", "Metallica", dm.title_core("The Black Album"))
     assert "black" not in t
+
+
+def test_sequel_number_mismatch_is_vetoed():
+    c = with_bc(cand(30, "Lil Wayne - Tha Carter III", 2008, "US", "Cash Money", "X"))
+    res = dm.evaluate_candidates(ident(artist="Lil Wayne", title="Tha Carter II"), [c])
+    assert res["status"] == dm.NONE and any("sequel_number" in "".join(r["why"]) for r in res["rejected"])
+
+
+def test_roman_and_arabic_volume_equivalent():
+    assert dm.sequel_numbers("Moodsville Volume 4") == dm.sequel_numbers("Moodsville, Vol. IV") == {4}
+    assert dm.sequel_numbers("Fear Of Music 2LP") == set()
+
+
+def test_unknown_artist_barcode_is_strong_not_exact():
+    c = with_bc(cand(31, "Opium - Project X", 2026, "Worldwide", "Interscope", "B1"), BC)
+    res = dm.evaluate_candidates(ident(artist="Unknown Artist", title="Project X", barcode=BC), [c])
+    assert res["status"] in (dm.STRONG, dm.NONE) and res["status"] != dm.EXACT
