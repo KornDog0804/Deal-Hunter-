@@ -1,0 +1,41 @@
+{
+  "_README": "Editable inputs for landed_cost.py. A value of null means 'not set': it is treated as 0 in the math AND listed under missing_inputs so no result looks more certain than it is. Values marked in 'assumed' are placeholders I did not verify - check them against your real PayPal/Discogs/CBP numbers.",
+  "use_net_for_decisions": false,
+  "fx": {
+    "rates_to_usd": {"USD": 1.0, "JPY": null},
+    "buffer_pct": 0.0,
+    "_note": "Set JPY to USD per 1 yen (for example 0.0065). buffer_pct widens the cost to cover rate drift and your card/PayPal conversion spread."
+  },
+  "profiles": {
+    "domestic_us": {
+      "shipping": {"mode": "per_item", "amount_usd": null},
+      "sales_tax_pct": null,
+      "import_duty_pct": 0.0,
+      "import_tax_pct": 0.0,
+      "brokerage_flat_usd": 0.0,
+      "purchase_fee_pct": 0.0,
+      "purchase_fee_flat_usd": 0.0
+    },
+    "international": {
+      "shipping": {"mode": "per_order_allocated", "order_shipping_usd": null, "order_total_usd": null, "item_count": null, "allocation": "by_price"},
+      "sales_tax_pct": 0.0,
+      "import_duty_pct": null,
+      "import_tax_pct": null,
+      "brokerage_flat_usd": null,
+      "purchase_fee_pct": null,
+      "purchase_fee_flat_usd": null
+    }
+  },
+  "resale": {
+    "marketplace_fee_pct": 9.0,
+    "payment_fee_pct": 2.9,
+    "payment_fee_flat_usd": 0.30,
+    "outbound_shipping_usd": null,
+    "packaging_usd": null,
+    "assumed": ["marketplace_fee_pct", "payment_fee_pct", "payment_fee_flat_usd"]
+  },
+  "decision": {
+    "min_net_profit_usd": 5.0,
+    "min_roi_percent": 25.0
+  }
+}

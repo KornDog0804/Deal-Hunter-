@@ -498,6 +498,7 @@ BAD_PRODUCT_TERMS = [
 
 DEBUG = []
 SOURCE_STATUS = {}
+FAILED_SOURCES = []
 
 # Optional legacy files. If absent, no problem.
 ARTIST_CONFIG = {}
@@ -2164,6 +2165,28 @@ def dedupe_deals(deals):
 
 
 
+def write_source_health(per_source_counts):
+    """Per-source outcome for the last run (source_health.json) so failures are visible."""
+    rows = []
+    for source in SOURCES:
+        name = source.get("name", "Unknown")
+        status = SOURCE_STATUS.get(name, "ok")
+        rows.append({
+            "name": name,
+            "source_type": source.get("source_type", ""),
+            "deals": per_source_counts.get(name, 0),
+            "status": status,
+            "failed": str(status).startswith("FAILED"),
+        })
+    payload = {"sources": rows, "failed_sources": list(FAILED_SOURCES),
+               "total_sources": len(rows)}
+    try:
+        with open(BASE / "source_health.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        log(f"[SourceHealth] could not write source_health.json: {e}")
+
+
 def build():
     deals = []
     real_source_deals = []
@@ -2185,7 +2208,20 @@ def build():
         )
         log(f"{'=' * 50}")
 
-        pulled = scrape_source(source)
+        # ERROR ISOLATION: one broken provider must never end the scan.
+        # Any exception is recorded and the loop moves on to the next source.
+        try:
+            pulled = scrape_source(source)
+        except Exception as e:
+            import traceback
+            log(f"[SourceError] {source['name']} FAILED: {type(e).__name__}: {e}")
+            log(traceback.format_exc())
+            SOURCE_STATUS[source["name"]] = f"FAILED: {type(e).__name__}: {e}"
+            FAILED_SOURCES.append(source["name"])
+            continue
+
+        if not pulled and not str(SOURCE_STATUS.get(source["name"], "")).startswith(("FAILED", "SKIPPED")):
+            SOURCE_STATUS.setdefault(source["name"], "0 deals returned")
 
         deals.extend(pulled)
         real_source_deals.extend(pulled)
@@ -2747,8 +2783,24 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
+def _real_deal_count(deals):
+    """Deals that are real priced listings (not catalog portals)."""
+    return sum(1 for d in deals if d.get("version") != "catalog" and normalize_price(d.get("price", 0)) > 0)
+
+
 if __name__ == "__main__":
     data = build()
+
+    # SAFETY NET: if every provider failed/returned nothing, do NOT overwrite the
+    # last good live_deals.json with an empty list. Record why, then exit non-zero.
+    if _real_deal_count(data) == 0:
+        log("[ABORT] No real listings from any source - keeping the previous live_deals.json.")
+        log(f"[ABORT] Failed sources: {FAILED_SOURCES}")
+        write_source_health({})
+        with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
+            f.write("\n".join(DEBUG))
+        raise SystemExit(1)
+
     data = apply_buyer_brain(data)
     
     log("\n" + "=" * 50)
@@ -2964,6 +3016,12 @@ if __name__ == "__main__":
                 "discogs_num_for_sale",
                 0,
             ),
+            # Valuation honesty + match provenance (Phase 1).
+            "discogs_found": deal.get("discogs_found", False),
+            "discogs_match_status": deal.get("discogs_match_status", ""),
+            "discogs_match_confidence": deal.get("discogs_match_confidence", 0),
+            "valuation_is_estimate": deal.get("valuation_is_estimate", False),
+            "valuation_label": deal.get("valuation_label", ""),
         })
 
     buy_signals.sort(
@@ -3005,6 +3063,10 @@ if __name__ == "__main__":
     log("----- SOURCE SUMMARY -----")
     for src, count in sorted(source_summary.items(), key=lambda x: x[0].lower()):
         log(f"{src}: {count}")
+
+    write_source_health(source_summary)
+    if FAILED_SOURCES:
+        log(f"[SourceError] {len(FAILED_SOURCES)} source(s) failed but the run completed: {FAILED_SOURCES}")
 
     with open(BASE / "debug_live_pull.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(DEBUG))

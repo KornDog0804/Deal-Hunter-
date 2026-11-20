@@ -33,10 +33,22 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           python3 live_pull.py
+
+      # Separate steps: a failure in one pull no longer skips the others.
+      - name: Collectibles pull
+        continue-on-error: true
+        run: |
+          cd $GITHUB_WORKSPACE
           python3 collectibles_pull.py
+
+      - name: Olivia pull
+        continue-on-error: true
+        run: |
+          cd $GITHUB_WORKSPACE
           python3 olivia_pull.py
 
       - name: Commit & push results
+        if: always()
         run: |
           git config user.name "Deal Hunter Bot"
           git config user.email "deal-hunter@github.local"

@@ -956,11 +956,15 @@ function discogsText(d){
   const parts = []
 
   if(mint > 0){
-    parts.push(`Discogs Mint $${mint.toFixed(2)}`)
+    parts.push(`Discogs est. $${mint.toFixed(2)}`)
   }
 
   if(low > 0){
-    parts.push(`Low $${low.toFixed(2)}`)
+    parts.push(`Low ask $${low.toFixed(2)}`)
+  }
+
+  if(d.discogs_match_status === "title_only"){
+    parts.push("pressing unverified")
   }
 
   return parts.join("<br>")

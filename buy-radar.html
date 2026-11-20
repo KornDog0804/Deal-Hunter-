@@ -567,7 +567,10 @@
                     const discogsLowest = safeNumber(deal.discogs_lowest, 0);
                     const discogsForSale = safeNumber(deal.discogs_num_for_sale, 0);
                     const discogsUrl = deal.discogs_url || `https://www.discogs.com/search/?q=${encodeURIComponent(deal.artist + ' ' + deal.title)}&type=release`;
-                    discogsPart = `<div class="discogs-section"><strong>💿 Discogs Market</strong><div class="discogs-price">$${discogsLowest.toFixed(2)} lowest</div><div class="discogs-for-sale">${discogsForSale} listings for sale</div><a href="${escapeHtml(discogsUrl)}" target="_blank" rel="noopener noreferrer" class="discogs-link">Verify on Discogs →</a></div>`;
+                    const matchStatus = deal.discogs_match_status || '';
+                    const unverified = matchStatus === 'title_only';
+                    const matchLine = matchStatus ? `<div class="discogs-for-sale">Match: ${escapeHtml(matchStatus.replace('_', ' '))}${unverified ? ' — pressing NOT verified' : ''}</div>` : '';
+                    discogsPart = `<div class="discogs-section"><strong>💿 Discogs Market (estimate)</strong><div class="discogs-price">$${discogsLowest.toFixed(2)} lowest ask</div><div class="discogs-for-sale">${discogsForSale} listings for sale · asking prices, not sold prices</div>${matchLine}<a href="${escapeHtml(discogsUrl)}" target="_blank" rel="noopener noreferrer" class="discogs-link">Verify on Discogs →</a></div>`;
                 }
                 
                 const buyNoteText = `${artist} - ${title}\nPrice: ${getPriceText(deal)}\nSell At: ${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}\nMargin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}\nDecision: ${decision}\nSource: ${sourceName}\nLink: ${buyLink || 'No link found'}`;
@@ -580,7 +583,7 @@
                     </div>
                     <div class="card-price">
                         <div class="price-row"><span>Buy Price:</span><strong>${getPriceText(deal)}</strong></div>
-                        <div class="price-row"><span>Sell At:</span><strong>${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}</strong></div>
+                        <div class="price-row"><span>Sell At (est.):</span><strong>${salePrice > 0 ? '$' + salePrice.toFixed(2) : 'Check comps'}</strong></div>
                         <div class="margin-row">💰 Margin: ${marginD > 0 ? '$' + marginD.toFixed(2) : 'Unknown'}</div>
                     </div>
                     ${discogsPart}

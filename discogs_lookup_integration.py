@@ -70,32 +70,32 @@ def get_discogs_marketplace_url(release_id: int, title: str) -> str:
 
 def search_discogs(artist: str, title: str) -> Optional[Dict]:
     """
-    Search Discogs API for a record.
-    Returns the top result or None if not found.
+    Strict search (Phase 1). Previously returned data['results'][0], i.e. whatever
+    Discogs ranked first. Now only an exact/strong/title_only match is returned;
+    ambiguous or unmatched -> None.
     """
     if not DISCOGS_TOKEN:
         return None
-    
-    try:
-        query = f"{artist} {title}"
-        url = f"{DISCOGS_API_BASE}/database/search"
-        params = {
-            'q': query,
-            'type': 'release',
-            'token': DISCOGS_TOKEN,
-            'per_page': 5
-        }
-        
-        resp = requests.get(url, params=params, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        
-        if data.get('results'):
-            return data['results'][0]
+
+    import discogs_matcher as dm
+
+    def http_get(params):
+        try:
+            resp = requests.get(f"{DISCOGS_API_BASE}/database/search",
+                                params=dict(params, token=DISCOGS_TOKEN), timeout=10)
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:
+            print(f"Discogs search error: {e}")
+            return None
+
+    ident = dm.extract_identifiers({"artist": artist, "title": title})
+    res = dm.search_and_match(ident, http_get)
+    if res["status"] not in dm.VALUABLE_STATUSES or not res["release_id"]:
         return None
-    except Exception as e:
-        print(f"Discogs search error: {e}")
-        return None
+    return {"id": res["release_id"], "uri": res["uri"],
+            "title": res["matched_title"],
+            "artists_sort": res["matched_artist"], "match_status": res["status"]}
 
 def enrich_with_discogs(deal: Dict, cache: Optional[Dict] = None) -> Dict:
     """

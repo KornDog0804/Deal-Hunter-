@@ -7,6 +7,8 @@ import requests
 from difflib import SequenceMatcher
 from typing import Optional, Dict, Tuple
 
+import discogs_matcher as dm
+
 DISCOGS_API_BASE = "https://api.discogs.com"
 DISCOGS_TOKEN = os.getenv("DISCOGS_TOKEN")
 
@@ -37,6 +39,13 @@ BAD_TITLE_JUNK = [
     "red vinyl", "blue vinyl", "green vinyl", "yellow vinyl",
     "white vinyl", "black vinyl", "purple vinyl", "orange vinyl",
 ]
+
+# Cache entries written before strict matching (no "matcher_schema") are not trusted:
+# they may hold an unrelated or wrong-pressing release. They are re-looked-up, but only
+# up to a per-run budget so a big stale cache cannot stall the scheduled job.
+MATCHER_SCHEMA = 2
+STALE_RELOOKUP_BUDGET = int(os.getenv("DISCOGS_RELOOKUP_BUDGET", "800"))
+_stale_relookups = 0
 
 def set_discogs_token(token: str):
     global DISCOGS_TOKEN
@@ -176,55 +185,41 @@ def validate_discogs_match(source_artist: str, source_title: str, discogs_result
         "artist_score": artist_score,
     }
 
-def search_discogs(artist: str, title: str) -> Optional[Dict]:
+def search_discogs(artist: str, title: str, deal: Optional[Dict] = None) -> Optional[Dict]:
+    """
+    Strict release search. Returns None when nothing was searchable, otherwise a
+    result dict carrying `_validation`. `is_valid` is True only for an exact,
+    strong or title_only match; ambiguous / unmatched listings are NEVER resolved
+    by picking a first or "best fuzzy" result.
+    """
     artist = str(artist or "").strip()
     title = str(title or "").strip()
-
     if not title:
         return None
 
-    queries = []
+    ident = dm.extract_identifiers(deal or {"artist": artist, "title": title})
+    ident["artist"] = artist or ident["artist"]
+    ident["title"] = dm.title_core(title) or ident["title"]
 
-    if artist:
-        queries.append({"artist": artist, "release_title": title})
-        queries.append({"q": f"{artist} {title}"})
-
-    queries.append({"q": title})
-
-    best = None
-
-    for query_params in queries:
-        params = {
-            **query_params,
-            "type": "release",
-            "format": "Vinyl",
-            "per_page": 10,
-        }
-
-        data = discogs_get("/database/search", params)
-        results = data.get("results", []) if data else []
-
-        for item in results:
-            validation = validate_discogs_match(artist, title, item)
-
-            scored_item = {
-                "confidence": validation["confidence"],
-                "item": item,
-                "validation": validation,
-            }
-
-            if best is None or scored_item["confidence"] > best["confidence"]:
-                best = scored_item
-
-        if best and best["confidence"] >= 0.86:
-            break
-
-    if not best:
-        return None
-
-    item = best["item"]
-    item["_validation"] = best["validation"]
-    return item
+    res = dm.search_and_match(ident, lambda params: discogs_get("/database/search", dict(params)))
+    valid = res["status"] in dm.VALUABLE_STATUSES and bool(res["release_id"])
+    return {
+        "id": res["release_id"],
+        "uri": res["uri"],
+        "title": "%s - %s" % (res["matched_artist"], res["matched_title"]),
+        "_validation": {
+            "is_valid": valid,
+            "confidence": res["confidence"],
+            "reason": res["status"] if not valid else "matched",
+            "match_status": res["status"],
+            "match_reasons": res["reasons"],
+            "discogs_artist": res["matched_artist"],
+            "discogs_title": res["matched_title"],
+            "title_score": None,
+            "artist_score": None,
+        },
+        "_ident": ident,
+    }
 
 def get_release_stats(release_id: int) -> Dict:
     release = discogs_get(f"/releases/{release_id}") or {}
@@ -241,69 +236,75 @@ def get_release_stats(release_id: int) -> Dict:
     mint_price = lowest_price or 0
 
     return {
-        "discogs_mint_price": mint_price,
+        "discogs_mint_price": mint_price,      # legacy key: this is the lowest ASKING price
         "discogs_lowest": lowest_price,
         "discogs_num_for_sale": num_for_sale,
         "discogs_have": have,
         "discogs_want": want,
+        "valuation_is_estimate": True,
+        "valuation_verified_sold": False,
+        "valuation_basis": "discogs_asking_price",
+        "valuation_label": "Estimate - Discogs asking prices, not verified sold prices",
     }
 
 def enrich_with_discogs(deal: Dict, cache: Optional[Dict] = None) -> Dict:
+    global _stale_relookups
     cache = cache if cache is not None else {}
 
     artist, title = get_discogs_search_parts(deal)
+    ident = dm.extract_identifiers(deal)
 
     cache_key = f"{clean_text(artist)}|{clean_text(title)}"
+    suffix = dm.pressing_suffix(ident)
+    if suffix:
+        cache_key += "|" + suffix
 
-    if cache_key in cache:
-        deal.update(cache[cache_key])
+    cached = cache.get(cache_key)
+    if cached is not None:
+        if cached.get("matcher_schema") == MATCHER_SCHEMA:
+            deal.update(cached)
+            return deal
+        # Stale (pre-strict-matching) entry: never trust it.
+        if _stale_relookups >= STALE_RELOOKUP_BUDGET:
+            deal.update({
+                "discogs_found": False,
+                "discogs_match_status": dm.NONE,
+                "discogs_match_confidence": 0.0,
+                "discogs_match_reason": "stale_cache_pending_refresh",
+                "discogs_url": "",
+                "discogs_mint_price": 0,
+                "discogs_lowest": 0,
+                "discogs_num_for_sale": 0,
+            })
+            return deal
+        _stale_relookups += 1
+
+    def _store(enriched):
+        enriched["matcher_schema"] = MATCHER_SCHEMA
+        deal.update(enriched)
+        cache[cache_key] = enriched
         return deal
 
     if not title:
-        enriched = {
-            "discogs_found": False,
-            "discogs_match_confidence": 0.0,
-            "discogs_match_reason": "missing_title",
-            "discogs_url": "",
-            "discogs_mint_price": 0,
-            "discogs_lowest": 0,
+        return _store({
+            "discogs_found": False, "discogs_match_status": dm.NONE,
+            "discogs_match_confidence": 0.0, "discogs_match_reason": "missing_title",
+            "discogs_url": "", "discogs_mint_price": 0, "discogs_lowest": 0,
             "discogs_num_for_sale": 0,
-        }
-        deal.update(enriched)
-        cache[cache_key] = enriched
-        return deal
+        })
 
-    result = search_discogs(artist, title)
+    result = search_discogs(artist, title, deal)
+    validation = (result or {}).get("_validation") or {}
 
-    if not result:
-        enriched = {
+    if not result or not validation.get("is_valid"):
+        return _store({
             "discogs_found": False,
-            "discogs_match_confidence": 0.0,
-            "discogs_match_reason": "not_found",
-            "discogs_url": "",
-            "discogs_mint_price": 0,
-            "discogs_lowest": 0,
+            "discogs_match_status": validation.get("match_status", dm.NONE),
+            "discogs_match_confidence": validation.get("confidence", 0.0),
+            "discogs_match_reason": validation.get("reason", "not_found"),
+            "discogs_url": "", "discogs_mint_price": 0, "discogs_lowest": 0,
             "discogs_num_for_sale": 0,
-        }
-        deal.update(enriched)
-        cache[cache_key] = enriched
-        return deal
-
-    validation = result.get("_validation") or validate_discogs_match(artist, title, result)
-
-    if not validation["is_valid"]:
-        enriched = {
-            "discogs_found": False,
-            "discogs_match_confidence": validation["confidence"],
-            "discogs_match_reason": validation["reason"],
-            "discogs_url": "",
-            "discogs_mint_price": 0,
-            "discogs_lowest": 0,
-            "discogs_num_for_sale": 0,
-        }
-        deal.update(enriched)
-        cache[cache_key] = enriched
-        return deal
+        })
 
     release_id = result.get("id")
     stats = get_release_stats(release_id) if release_id else {}
@@ -312,20 +313,18 @@ def enrich_with_discogs(deal: Dict, cache: Optional[Dict] = None) -> Dict:
     if discogs_url and discogs_url.startswith("/"):
         discogs_url = f"https://www.discogs.com{discogs_url}"
 
-    enriched = {
+    return _store({
         "discogs_found": True,
+        "discogs_match_status": validation["match_status"],
         "discogs_match_confidence": validation["confidence"],
         "discogs_match_reason": "matched",
+        "discogs_match_reasons": validation["match_reasons"],
         "discogs_artist": validation.get("discogs_artist", ""),
         "discogs_title": validation.get("discogs_title", ""),
         "discogs_release_id": release_id,
         "discogs_url": discogs_url,
         **stats,
-    }
-
-    deal.update(enriched)
-    cache[cache_key] = enriched
-    return deal
+    })
 
 if __name__ == "__main__":
     set_discogs_token(os.getenv("DISCOGS_TOKEN") or "YOUR_TOKEN_HERE")

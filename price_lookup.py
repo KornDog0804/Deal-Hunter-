@@ -24,16 +24,26 @@ import urllib.error
 from pathlib import Path
 from datetime import datetime, timedelta
 
+import discogs_matcher as dm
+import landed_cost as lc
+
 BASE = Path(__file__).resolve().parent
 
 DISCOGS_TOKEN = os.environ.get("DISCOGS_TOKEN", "")
 CACHE_FILE = BASE / "price_cache.json"
 CACHE_TTL_DAYS = 7
+# v1 cache entries came from the old matcher (which could accept results[0]).
+# They are never reused; they are simply looked up again under strict matching.
+CACHE_SCHEMA = 2
 DEALS_FILE = BASE / "live_deals.json"
 
 # Only look up deals the Brain scored highly
 MIN_SCORE_FOR_LOOKUP = 45  # WATCH and above
-MAX_LOOKUPS_PER_RUN = 350  # safety cap (~6 min at 1/sec)
+MAX_LOOKUPS_PER_RUN = 350  # safety cap
+# Strict matching can need a second search per listing, and the workflow times out at
+# 30 minutes. Stop cleanly before that; unprocessed deals are picked up on the next run
+# (their cache entries are still stale, so they sort to the front again).
+MAX_RUNTIME_SECONDS = int(os.environ.get("PRICE_LOOKUP_MAX_SECONDS", str(25 * 60)))
 
 USER_AGENT = "KornDogDealHunter/1.0 +https://korndogrecords.com"
 
@@ -59,18 +69,26 @@ def save_cache(cache):
         json.dump(cache, f, indent=2, ensure_ascii=False)
 
 
-def cache_key(artist, title):
-    """Normalize artist+title into a stable cache key."""
+def cache_key(artist, title, ident=None):
+    """
+    Normalize artist+title into a stable cache key. When the listing carries
+    pressing identifiers (catalog number, label, country, year) they are part of
+    the key, so a Japan pressing never shares a slot with a US pressing.
+    """
     def norm(s):
         s = (s or "").lower().strip()
         s = re.sub(r'[^a-z0-9\s]', '', s)
         s = re.sub(r'\s+', ' ', s).strip()
         return s
-    return f"{norm(artist)}::{norm(title)}"
+    key = f"{norm(artist)}::{norm(title)}"
+    suffix = dm.pressing_suffix(ident) if ident else ""
+    return key + ("::" + suffix if suffix else "")
 
 
 def is_cache_fresh(entry):
-    """Check if a cache entry is still within TTL."""
+    """Fresh = written by the strict matcher (schema) and inside the TTL."""
+    if entry.get("schema") != CACHE_SCHEMA:
+        return False
     ts = entry.get("cached_at", "")
     if not ts:
         return False
@@ -81,29 +99,10 @@ def is_cache_fresh(entry):
         return False
 
 
-def discogs_search(artist, title):
-    """
-    Search Discogs for a release and return the best match's release_id.
-    Uses the /database/search endpoint.
-    """
-    query = f"{artist} {title}".strip()
-    if not query or query.lower() in ("unknown artist", "unknown title"):
-        return None
-
-    # Clean up query — remove common noise
-    query = re.sub(r'\b(vinyl|lp|2lp|1lp|record|exclusive|limited|colored|splatter)\b', '', query, flags=re.I)
-    query = re.sub(r'\s+', ' ', query).strip()
-
-    params = urllib.parse.urlencode({
-        "q": query,
-        "type": "release",
-        "format": "Vinyl",
-        "per_page": 5,
-        "token": DISCOGS_TOKEN,
-    })
-
-    url = f"https://api.discogs.com/database/search?{params}"
-
+def discogs_http_get(params):
+    """One /database/search call (injected into the matcher). Returns dict or None."""
+    query = urllib.parse.urlencode(dict(params, token=DISCOGS_TOKEN))
+    url = f"https://api.discogs.com/database/search?{query}"
     try:
         req = urllib.request.Request(url, headers={
             "User-Agent": USER_AGENT,
@@ -111,36 +110,34 @@ def discogs_search(artist, title):
         })
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read().decode("utf-8", "ignore"))
-
-        results = data.get("results", [])
-        if not results:
-            return None
-
-        # Try to find the best match
-        artist_lower = (artist or "").lower().strip()
-        title_lower = (title or "").lower().strip()
-
-        for result in results:
-            r_title = (result.get("title", "") or "").lower()
-            # Discogs format: "Artist - Title"
-            if artist_lower and artist_lower in r_title:
-                return result.get("id")
-            if title_lower and title_lower in r_title:
-                return result.get("id")
-
-        # Fallback: return first result
-        return results[0].get("id")
-
+        time.sleep(1.1)  # rate limit
+        return data
     except urllib.error.HTTPError as e:
         if e.code == 429:
-            log(f"[Discogs] Rate limited, sleeping 5s...")
+            log("[Discogs] Rate limited, sleeping 5s...")
             time.sleep(5)
         else:
-            log(f"[Discogs] Search HTTP {e.code} for '{query}'")
+            log(f"[Discogs] Search HTTP {e.code}")
         return None
     except Exception as e:
-        log(f"[Discogs] Search error for '{query}': {e}")
+        log(f"[Discogs] Search error: {e}")
         return None
+
+
+def match_deal(deal, http_get=None):
+    """Strictly match a listing to ONE Discogs release. Returns (ident, result)."""
+    ident = dm.extract_identifiers(deal)
+    return ident, dm.search_and_match(ident, http_get or discogs_http_get)
+
+
+def discogs_search(artist, title):
+    """
+    Back-compat helper: release id, or None. Unlike the old version this NEVER
+    returns an unrelated first result; ambiguous or unmatched -> None.
+    """
+    ident = dm.extract_identifiers({"artist": artist, "title": title})
+    result = dm.search_and_match(ident, discogs_http_get)
+    return result["release_id"] if result["status"] in dm.VALUABLE_STATUSES else None
 
 
 def discogs_price_stats(release_id):
@@ -232,61 +229,133 @@ def discogs_price_stats(release_id):
     return stats
 
 
-def lookup_deal(deal, cache):
+def lookup_deal(deal, cache, http_get=None):
     """
-    Look up real market price for a deal. Returns updated cache entry or None.
+    Look up the market price for a deal under strict release matching.
+    Returns the cache entry. Ambiguous / unmatched listings are cached as
+    not-found WITH the reason, so we neither retry daily nor guess.
     """
     artist = (deal.get("artist", "") or "").strip()
     title = (deal.get("title", "") or "").strip()
-    key = cache_key(artist, title)
+    ident = dm.extract_identifiers(deal)
+    key = cache_key(artist, title, ident)
 
-    # Check cache first
     if key in cache and is_cache_fresh(cache[key]):
         return cache[key]
 
-    # Search Discogs
-    release_id = discogs_search(artist, title)
-    time.sleep(1.1)  # Rate limit
-
-    if not release_id:
-        # Cache the miss so we don't re-query
-        cache[key] = {
-            "artist": artist,
-            "title": title,
-            "found": False,
-            "cached_at": datetime.now().isoformat(),
-        }
-        return cache[key]
-
-    # Get price stats
-    stats = discogs_price_stats(release_id)
-    time.sleep(1.1)  # Rate limit
+    result = dm.search_and_match(ident, http_get or discogs_http_get)
 
     entry = {
         "artist": artist,
         "title": title,
-        "found": True,
+        "found": False,
+        "schema": CACHE_SCHEMA,
         "cached_at": datetime.now().isoformat(),
+        "match_status": result["status"],
+        "match_confidence": result["confidence"],
+        "match_reasons": result["reasons"],
+        "tied_ids": result["tied_ids"],
     }
 
-    if stats:
-        entry.update(stats)
-    else:
-        entry["found"] = False
+    if result["status"] in dm.VALUABLE_STATUSES and result["release_id"]:
+        stats = discogs_price_stats(result["release_id"])
+        time.sleep(1.1)  # Rate limit
+        if stats:
+            entry["found"] = True
+            entry.update(stats)
+            for field in ("matched_artist", "matched_title", "matched_label",
+                          "matched_catno", "matched_country", "matched_year"):
+                entry[field] = result.get(field)
 
     cache[key] = entry
     return entry
 
 
-def enrich_deals_with_prices(deals, cache):
+ESTIMATE_LABEL = "Estimate - Discogs asking prices, not verified sold prices"
+
+
+def _apply_valuation(deal, entry, cfg):
+    """Write one matched valuation onto a deal (all labelled as an estimate)."""
+    cost = deal.get("price", 0) or 0
+    sell_price = entry.get("suggested_sell_price", 0)
+    status = entry.get("match_status", dm.NONE)
+
+    deal["discogs_sell_price"] = sell_price
+    deal["discogs_lowest"] = entry.get("lowest_price", 0)
+    deal["discogs_price_nm"] = entry.get("price_nm", 0)
+    deal["discogs_price_mint"] = entry.get("price_mint", 0)
+    deal["discogs_price_vgplus"] = entry.get("price_vgplus", 0)
+    deal["discogs_num_for_sale"] = entry.get("num_for_sale", 0)
+    deal["discogs_url"] = entry.get("discogs_url", "")
+    deal["discogs_found"] = True
+    deal["discogs_release_id"] = entry.get("release_id")
+
+    # Match provenance + honest labelling of what the number is.
+    deal["discogs_match_status"] = status
+    deal["discogs_match_confidence"] = entry.get("match_confidence", 0.0)
+    deal["discogs_match_reasons"] = entry.get("match_reasons", [])
+    deal["discogs_matched_title"] = entry.get("matched_title", "")
+    deal["discogs_matched_catno"] = entry.get("matched_catno", "")
+    deal["discogs_matched_country"] = entry.get("matched_country", "")
+    deal["discogs_matched_year"] = entry.get("matched_year")
+    deal["valuation_is_estimate"] = True
+    deal["valuation_verified_sold"] = False
+    deal["valuation_basis"] = "discogs_asking_price"
+    deal["valuation_label"] = ESTIMATE_LABEL
+
+    # Override Brain's markup-based sale price with the (estimated) market price
+    deal["suggested_sale_price"] = sell_price
+
+    if cost > 0:
+        real_margin = round(sell_price - cost, 2)
+        real_margin_pct = round((real_margin / cost) * 100, 2)
+        deal["expected_margin_dollars"] = real_margin
+        deal["expected_margin_percent"] = real_margin_pct
+
+        # Same ladder as before ...
+        if real_margin >= 8:
+            deal["decision"] = "BUY NOW"
+        elif real_margin >= 4:
+            deal["decision"] = "BUY LIGHT"
+        elif real_margin >= 0:
+            deal["decision"] = "WATCH"
+        else:
+            deal["decision"] = "PASS"
+            deal["why_buy"] = f"Negative margin (${real_margin:.2f}) based on Discogs estimate"
+
+        # ... but an unverified pressing can never earn BUY NOW.
+        if status not in dm.DECISION_GRADE_STATUSES and deal["decision"] == "BUY NOW":
+            deal["decision"] = "BUY LIGHT"
+            deal["decision_note"] = "Capped at BUY LIGHT: Discogs pressing not verified (title-only match)."
+
+        # Landed cost / net profit (additive fields; decisions use them only if enabled).
+        calc = lc.estimate_net_profit(cost, sell_price, "USD", cfg, "domestic_us")
+        deal["landed_cost_usd"] = calc["landed_cost_usd"]
+        deal["net_profit_usd"] = calc["net_profit_usd"]
+        deal["roi_percent"] = calc["roi_percent"]
+        deal["cost_inputs_complete"] = calc["inputs_complete"]
+        deal["cost_missing_inputs"] = calc["missing_inputs"]
+        deal["cost_assumed_inputs"] = calc["assumed_inputs"]
+
+        if cfg.get("use_net_for_decisions") and deal["decision"] in ("BUY NOW", "BUY LIGHT"):
+            if not lc.passes_net_thresholds(calc, cfg):
+                deal["decision"] = "WATCH"
+                deal["decision_note"] = "Net profit/ROI below configured thresholds."
+
+
+def enrich_deals_with_prices(deals, cache, http_get=None, cfg=None):
     """
-    Enrich deals with real Discogs market prices.
+    Enrich deals with Discogs market ESTIMATES under strict release matching.
     Only processes deals above MIN_SCORE_FOR_LOOKUP.
     """
+    cfg = cfg if cfg is not None else lc.load_config()
+    started = time.time()
     lookups_done = 0
     enriched = 0
     skipped_cached = 0
     skipped_low_score = 0
+    unmatched = 0
+    ambiguous = 0
 
     # Sort by buy_score descending so best deals get looked up first
     scored_deals = sorted(
@@ -306,61 +375,45 @@ def enrich_deals_with_prices(deals, cache):
             log(f"[PriceLookup] Hit max lookups cap ({MAX_LOOKUPS_PER_RUN}), stopping")
             break
 
+        if time.time() - started > MAX_RUNTIME_SECONDS:
+            log(f"[PriceLookup] Hit runtime budget ({MAX_RUNTIME_SECONDS}s), stopping cleanly")
+            break
+
         artist = (deal.get("artist", "") or "").strip()
         title = (deal.get("title", "") or "").strip()
-        key = cache_key(artist, title)
+        key = cache_key(artist, title, dm.extract_identifiers(deal))
 
-        # Use cache if fresh
-        if key in cache and is_cache_fresh(cache[key]):
-            entry = cache[key]
-            skipped_cached += 1
+        try:
+            if key in cache and is_cache_fresh(cache[key]):
+                entry = cache[key]
+                skipped_cached += 1
+            else:
+                entry = lookup_deal(deal, cache, http_get)
+                lookups_done += 1
+                if lookups_done % 25 == 0:
+                    log(f"[PriceLookup] Progress: {lookups_done} lookups done...")
+        except Exception as e:  # one bad listing must not stop the run
+            log(f"[PriceLookup] lookup failed for '{artist} - {title}': {e}")
+            continue
+
+        status = (entry or {}).get("match_status", dm.NONE)
+        if entry and entry.get("found") and entry.get("suggested_sell_price", 0) > 0:
+            _apply_valuation(deals[idx], entry, cfg)
+            enriched += 1
         else:
-            entry = lookup_deal(deal, cache)
-            lookups_done += 1
-            if lookups_done % 25 == 0:
-                log(f"[PriceLookup] Progress: {lookups_done} lookups done...")
-
-        # Apply real prices to the deal
-        if entry and entry.get("found"):
-            sell_price = entry.get("suggested_sell_price", 0)
-            cost = deal.get("price", 0) or 0
-
-            if sell_price > 0:
-                deals[idx]["discogs_sell_price"] = sell_price
-                deals[idx]["discogs_lowest"] = entry.get("lowest_price", 0)
-                deals[idx]["discogs_price_nm"] = entry.get("price_nm", 0)
-                deals[idx]["discogs_price_mint"] = entry.get("price_mint", 0)
-                deals[idx]["discogs_price_vgplus"] = entry.get("price_vgplus", 0)
-                deals[idx]["discogs_num_for_sale"] = entry.get("num_for_sale", 0)
-                deals[idx]["discogs_url"] = entry.get("discogs_url", "")
-
-                # Override Brain's fake sale price with real market data
-                deals[idx]["suggested_sale_price"] = sell_price
-
-                if cost > 0:
-                    real_margin = round(sell_price - cost, 2)
-                    real_margin_pct = round((real_margin / cost) * 100, 2) if cost > 0 else 0
-                    deals[idx]["expected_margin_dollars"] = real_margin
-                    deals[idx]["expected_margin_percent"] = real_margin_pct
-
-                    # Upgrade/downgrade decision based on real margin
-                    if real_margin >= 8:
-                        deals[idx]["decision"] = "BUY NOW"
-                    elif real_margin >= 4:
-                        deals[idx]["decision"] = "BUY LIGHT"
-                    elif real_margin >= 0:
-                        deals[idx]["decision"] = "WATCH"
-                    else:
-                        deals[idx]["decision"] = "PASS"
-                        deals[idx]["why_buy"] = f"Negative margin (${real_margin:.2f}) based on Discogs data"
-
-                enriched += 1
+            deals[idx]["discogs_match_status"] = status
+            if status == dm.AMBIGUOUS:
+                ambiguous += 1
+            else:
+                unmatched += 1
 
     log(f"\n[PriceLookup] Summary:")
     log(f"  Lookups performed: {lookups_done}")
     log(f"  Cache hits: {skipped_cached}")
     log(f"  Skipped (low score): {skipped_low_score}")
-    log(f"  Deals enriched with real prices: {enriched}")
+    log(f"  Deals enriched with estimated prices: {enriched}")
+    log(f"  Ambiguous (no valuation applied): {ambiguous}")
+    log(f"  Unmatched (no valuation applied): {unmatched}")
 
     return deals
 
