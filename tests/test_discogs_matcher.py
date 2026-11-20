@@ -102,7 +102,8 @@ def test_strong_needs_two_corroborating_identifiers():
 
 def test_search_params_never_title_only():
     for params in dm.build_search_params(JP_IDENT):
-        assert params.get("artist") and ("release_title" in params or "catno" in params)
+        has_artist = params.get("artist") or ident_artist_in_q(params)
+        assert has_artist and ("release_title" in params or "catno" in params or "q" in params)
     assert dm.build_search_params({"artist": "", "title": "X"}) == []
 
 
@@ -159,3 +160,28 @@ def test_different_artist_same_title_is_rejected():
     ident = dm.extract_identifiers({"artist": "2hollis", "title": "Pirouette (Red Vinyl)"})
     c = cand(33, "Model/Actriz - Pirouette", 2025, "US", "Domino", "D1")
     assert dm.evaluate_candidates(ident, [c])["status"] == dm.NONE
+
+
+def ident_artist_in_q(params):
+    return JP_IDENT["artist"].lower() in str(params.get("q", "")).lower()
+
+
+def test_query_titles_strip_lp_counts_quotes_and_colours():
+    deal = {"artist": "Bob Marley & The Wailers", "title": "Rastaman Vibration (50th Anniversary Green Swirl) 1LP",
+            "format": "vinyl"}
+    ident = dm.extract_identifiers(deal)
+    titles = [p.get("release_title") for p in dm.build_search_params(ident) if "release_title" in p]
+    assert titles and all("1LP" not in t for t in titles)
+    deal2 = {"artist": "Archers", "title": '"I Was Here, I Can Prove It" Neon Coral Vinyl', "format": "vinyl"}
+    t2 = [p.get("release_title") for p in dm.build_search_params(dm.extract_identifiers(deal2)) if "release_title" in p]
+    assert all('"' not in t and not t.endswith("Vinyl") for t in t2) and len(set(t2)) == 2
+
+
+def test_fuzzy_q_fallback_still_requires_artist_and_strict_validation():
+    ident = dm.extract_identifiers({"artist": "Beastie Boys", "title": "Licensed to Ill (40th Anniversary) 2LP", "format": "vinyl"})
+    qs = [p for p in dm.build_search_params(ident) if "q" in p]
+    assert qs and "beastie boys" in qs[0]["q"].lower()
+    # a wrong-artist candidate returned by the fuzzy search must still be rejected
+    res = dm.evaluate_candidates(ident, [{"id": 1, "title": "Someone Else - Licensed to Ill", "year": "1986",
+                                          "country": "US", "format": ["Vinyl", "LP"]}])
+    assert res["status"] in ("none", "ambiguous")

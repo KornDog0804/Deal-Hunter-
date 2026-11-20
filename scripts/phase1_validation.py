@@ -22,7 +22,7 @@ import landed_cost as lc
 API = "https://api.discogs.com"
 UA = "KornDogDealHunterValidation/1.0 +https://korndogrecords.com"
 MIN_INTERVAL = 1.1          # authenticated limit is 60/min -> stay under it
-SCHEMA = 1
+SCHEMA = 2
 
 
 class StopRun(Exception):
@@ -209,7 +209,7 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "complete": len([k for k, v in state["records"].items() if v.get("schema") == SCHEMA]) >= work_total,
         "stop_reason": stop_reason,
         "unique_pressings_total": work_total,
-        "unique_pressings_done": len(state["records"]),
+        "unique_pressings_done": len([1 for v in state["records"].values() if v.get("schema") == SCHEMA]),
         "listings_total": len(rows),
         "listings_scanned": len(scanned),
         "verified_pressing_matches": len(verified),

@@ -130,19 +130,33 @@ _EDITION_WORDS = {
     "red", "blue", "green", "yellow", "orange", "purple", "pink", "white", "black", "clear",
     "translucent", "splatter", "marble", "marbled", "gold", "silver", "smoke", "galaxy",
     "picture", "disc", "reissue", "remastered", "deluxe", "anniversary", "180g", "indie",
+    "neon", "coral", "swirl", "zoetrope", "turquoise", "grey", "gray", "copper", "ice", "amber",
+    "teal", "aqua", "lime", "mint", "tan", "cream", "bone", "violet", "magenta", "opaque",
 }
 
 
-def title_plain(title):
-    """Parentheticals removed, edition words kept ('Floral Green' stays 'Floral Green')."""
+_LP_COUNT = re.compile(r"\b\d\s*-?\s*(?:lp|disc|cd)s?\b", re.I)
+
+
+def clean_query_title(title):
+    """Search-safe title: no parentheticals, no '2LP' counts, no quote marks, no trailing 'Vinyl'/'LP'."""
     text = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", str(title or ""))
-    return re.sub(r"\s+", " ", text).strip()
+    text = _LP_COUNT.sub(" ", text).replace('"', " ").replace("\u201c", " ").replace("\u201d", " ")
+    text = re.sub(r"\s+", " ", text).strip(" -,:/")
+    words = text.split(" ") if text else []
+    while len(words) > 1 and words[-1].lower().strip(".,") in ("vinyl", "lp", "record", "records"):
+        words.pop()
+    return " ".join(words).strip()
+
+
+def title_plain(title):
+    """Parentheticals/LP counts removed, edition words kept ('Floral Green' stays 'Floral Green')."""
+    return clean_query_title(title)
 
 
 def title_core(title):
     """Drop edition noise so '(Splatter Vinyl) 2LP' / 'Colored Vinyl' do not hurt title similarity."""
-    text = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", str(title or ""))
-    text = re.sub(r"\s+", " ", text).strip()
+    text = clean_query_title(title)
     words = text.split(" ") if text else []
     while len(words) > 1 and re.sub(r"[^a-z0-9]", "", words[-1].lower()) in _EDITION_WORDS:
         words.pop()
@@ -256,11 +270,16 @@ def build_search_params(ident):
             q["artist"] = ident["artist"]
         queries.append(q)
     if ident.get("artist") and ident.get("title"):
-        q = dict(base, artist=ident["artist"], release_title=ident["title"])
-        for key in ("label", "country", "year"):
-            if ident.get(key):
-                q[key] = ident[key]
-        queries.append(q)
+        plain = ident.get("title_plain") or ident["title"]
+        for t in dict.fromkeys([plain, ident["title"]]):      # full cleaned title first, then edition-trimmed
+            q = dict(base, artist=ident["artist"], release_title=t)
+            for key in ("label", "country", "year"):
+                if ident.get(key):
+                    q[key] = ident[key]
+            queries.append(q)
+        # last resort: fuzzy artist+title text search. Still needs the artist, and every
+        # candidate is validated by the strict matcher afterwards.
+        queries.append(dict(base, q="%s %s" % (ident["artist"], plain)))
     return queries
 
 
@@ -456,7 +475,7 @@ def evaluate_candidates(ident, candidates):
     return _result(TITLE_ONLY, conf, top, reasons, rejected[:10])
 
 
-def search_and_match(ident, http_get, max_queries=2):
+def search_and_match(ident, http_get, max_queries=3):
     """
     Query Discogs via the injected `http_get(params) -> dict | None`, pool the
     candidates and evaluate them. Stops early on an exact/strong match.

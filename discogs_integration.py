@@ -43,7 +43,7 @@ BAD_TITLE_JUNK = [
 # Cache entries written before strict matching (no "matcher_schema") are not trusted:
 # they may hold an unrelated or wrong-pressing release. They are re-looked-up, but only
 # up to a per-run budget so a big stale cache cannot stall the scheduled job.
-MATCHER_SCHEMA = 2
+MATCHER_SCHEMA = 3
 STALE_RELOOKUP_BUDGET = int(os.getenv("DISCOGS_RELOOKUP_BUDGET", "800"))
 _stale_relookups = 0
 

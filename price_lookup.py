@@ -35,7 +35,7 @@ CACHE_FILE = BASE / "price_cache.json"
 CACHE_TTL_DAYS = 7
 # v1 cache entries came from the old matcher (which could accept results[0]).
 # They are never reused; they are simply looked up again under strict matching.
-CACHE_SCHEMA = 2
+CACHE_SCHEMA = 3
 DEALS_FILE = BASE / "live_deals.json"
 
 # Only look up deals the Brain scored highly
