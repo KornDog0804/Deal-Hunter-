@@ -104343,5 +104343,147 @@
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
+  },
+  "hey there delilah|opaque violet 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3649,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "hey there delilah|opaque blue 7": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7399,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "marilyn manson heaven upside down lp exclusive|limited to 500 bleach": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6739,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "156 silence people watching lp exclusive|limited to 200 aqua canary": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "aec|beabadoobee bananas for cats": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "long way home|green": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "John B, Mental Power",
+    "discogs_title": "Green",
+    "discogs_release_id": 146127,
+    "discogs_url": "https://www.discogs.com/release/146127-John-B-Mental-Power-Green",
+    "discogs_mint_price": 15.79,
+    "discogs_lowest": 15.79,
+    "discogs_num_for_sale": 12,
+    "discogs_have": 521,
+    "discogs_want": 374
+  },
+  "unknown artist|radioactive": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.808,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Downtown Science",
+    "discogs_title": "Radioactive",
+    "discogs_release_id": 116330,
+    "discogs_url": "https://www.discogs.com/release/116330-Downtown-Science-Radioactive",
+    "discogs_mint_price": 0.99,
+    "discogs_lowest": 0.99,
+    "discogs_num_for_sale": 66,
+    "discogs_have": 388,
+    "discogs_want": 82
+  },
+  "kingdom of giants|passenger sea blue galaxy": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.1938,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "rammstein|live in mexico city": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Rammstein",
+    "discogs_title": "Live In Mexico City",
+    "discogs_release_id": 39097218,
+    "discogs_url": "https://www.discogs.com/release/39097218-Rammstein-Live-In-Mexico-City",
+    "discogs_mint_price": 95.0,
+    "discogs_lowest": 95.0,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 24,
+    "discogs_want": 5
+  },
+  "trivium|crown in the grave": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Trivium",
+    "discogs_title": "Crown in the Grave",
+    "discogs_release_id": 39095112,
+    "discogs_url": "https://www.discogs.com/release/39095112-Trivium-Crown-in-the-Grave",
+    "discogs_mint_price": 43.41,
+    "discogs_lowest": 43.41,
+    "discogs_num_for_sale": 3,
+    "discogs_have": 22,
+    "discogs_want": 3
+  },
+  "stone sour|audio secrecy": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Stone Sour",
+    "discogs_title": "Audio Secrecy",
+    "discogs_release_id": 33656646,
+    "discogs_url": "https://www.discogs.com/release/33656646-Stone-Sour-Audio-Secrecy",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 15,
+    "discogs_want": 12
+  },
+  "oh sleeper|back to the wild into the deep": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4152,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "oh sleeper|back to the wild venom": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3517,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
