@@ -26,6 +26,7 @@ from datetime import datetime, timedelta
 
 import discogs_matcher as dm
 import landed_cost as lc
+import decision_gate as dg
 
 BASE = Path(__file__).resolve().parent
 
@@ -406,6 +407,13 @@ def enrich_deals_with_prices(deals, cache, http_get=None, cfg=None):
                 ambiguous += 1
             else:
                 unmatched += 1
+
+    # BUY NOW safety gate over every deal (report-only unless enforced in cost_config.json).
+    for deal in deals:
+        try:
+            dg.apply_gate(deal, cfg)
+        except Exception as e:
+            log(f"[Gate] failed for '{deal.get('title', '')}': {e}")
 
     log(f"\n[PriceLookup] Summary:")
     log(f"  Lookups performed: {lookups_done}")

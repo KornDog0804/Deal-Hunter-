@@ -40,5 +40,5 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Discogs cache - $(date -u +'%Y-%m-%d %H:%M:%S UTC')" && git push origin main)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Discogs cache - $(date -u +'%Y-%m-%d %H:%M:%S UTC')" && git push origin HEAD:${{ github.ref_name }})
         continue-on-error: true

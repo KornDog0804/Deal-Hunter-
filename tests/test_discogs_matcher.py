@@ -134,3 +134,28 @@ def test_search_and_match_uses_injected_http_and_stops_early():
     res = dm.search_and_match(JP_IDENT, fake)
     assert res["status"] == dm.EXACT and len(calls) == 1
     assert dm.search_and_match({"artist": "", "title": ""}, fake)["status"] == dm.NONE
+
+
+def test_edition_words_stripped_only_from_title_end():
+    assert dm.title_core("Mob Rules Colored Vinyl") == "Mob Rules"
+    assert dm.title_core("Blond White Cover") == "Blond"
+    assert dm.title_core("Red") == "Red" and dm.title_core("Red Colored Vinyl") == "Red"
+
+
+def test_title_that_really_ends_in_a_color_word_still_matches():
+    ident = dm.extract_identifiers({"artist": "Title Fight", "title": "Floral Green"})
+    c = cand(31, "Title Fight - Floral Green", 2012, "US", "Side One Dummy", "SOD1")
+    assert dm.evaluate_candidates(ident, [c])["release_id"] == 31
+
+
+def test_colored_vinyl_retail_title_matches_plain_discogs_title():
+    ident = dm.extract_identifiers({"artist": "Black Sabbath", "title": "Mob Rules Colored Vinyl"})
+    c = cand(32, "Black Sabbath - Mob Rules", 1981, "US", "Warner", "W1")
+    assert dm.evaluate_candidates(ident, [c])["status"] == dm.TITLE_ONLY
+
+
+def test_different_artist_same_title_is_rejected():
+    # Real case from the old cache: 2hollis "Pirouette" was matched to Model/Actriz "Pirouette".
+    ident = dm.extract_identifiers({"artist": "2hollis", "title": "Pirouette (Red Vinyl)"})
+    c = cand(33, "Model/Actriz - Pirouette", 2025, "US", "Domino", "D1")
+    assert dm.evaluate_candidates(ident, [c])["status"] == dm.NONE

@@ -1,14 +1,20 @@
 {
-  "_README": "Editable inputs for landed_cost.py. A value of null means 'not set': it is treated as 0 in the math AND listed under missing_inputs so no result looks more certain than it is. Values marked in 'assumed' are placeholders I did not verify - check them against your real PayPal/Discogs/CBP numbers.",
+  "_README": "Editable inputs for landed_cost.py. null = not set: counted as 0 in the math AND listed in missing_inputs. Set DEAL_HUNTER_COST_CONFIG=/path/to/file.json to run with a different config (isolated test mode) without touching this one.",
   "use_net_for_decisions": false,
   "fx": {
-    "rates_to_usd": {"USD": 1.0, "JPY": null},
+    "rates_to_usd": {
+      "USD": 1.0,
+      "JPY": null
+    },
     "buffer_pct": 0.0,
     "_note": "Set JPY to USD per 1 yen (for example 0.0065). buffer_pct widens the cost to cover rate drift and your card/PayPal conversion spread."
   },
   "profiles": {
     "domestic_us": {
-      "shipping": {"mode": "per_item", "amount_usd": null},
+      "shipping": {
+        "mode": "per_item",
+        "amount_usd": null
+      },
       "sales_tax_pct": null,
       "import_duty_pct": 0.0,
       "import_tax_pct": 0.0,
@@ -17,7 +23,13 @@
       "purchase_fee_flat_usd": 0.0
     },
     "international": {
-      "shipping": {"mode": "per_order_allocated", "order_shipping_usd": null, "order_total_usd": null, "item_count": null, "allocation": "by_price"},
+      "shipping": {
+        "mode": "per_order_allocated",
+        "order_shipping_usd": null,
+        "order_total_usd": null,
+        "item_count": null,
+        "allocation": "by_price"
+      },
       "sales_tax_pct": 0.0,
       "import_duty_pct": null,
       "import_tax_pct": null,
@@ -27,15 +39,45 @@
     }
   },
   "resale": {
-    "marketplace_fee_pct": 9.0,
-    "payment_fee_pct": 2.9,
-    "payment_fee_flat_usd": 0.30,
+    "channel": "discogs",
+    "channels": {
+      "discogs": {
+        "marketplace_fee_pct": 9.0,
+        "marketplace_fee_min_usd": 0.1,
+        "marketplace_fee_max_usd": 150.0,
+        "fee_base": "item_plus_shipping",
+        "payment_fee_pct": 3.49,
+        "payment_fee_flat_usd": 0.49,
+        "assumed": [
+          "marketplace_fee_pct",
+          "fee_base"
+        ],
+        "_notes": "Payment rate: PayPal US standard commercial rate per paypal.com/us/business/paypal-business-fees (page dated Oct 1 2026). Discogs fee: Discogs' own fees page says 8%, but its PayPal FAQ and third-party sources say 9%, and the base (item vs item+shipping) is not stated on the official fees page. Marketplace fee and processing are SEPARATE charges; each is applied once. Confirm 9% and the base in your Discogs seller dashboard."
+      },
+      "own_site": {
+        "marketplace_fee_pct": 0.0,
+        "fee_base": "item_plus_shipping",
+        "payment_fee_pct": 3.49,
+        "payment_fee_flat_usd": 0.49,
+        "assumed": []
+      }
+    },
+    "buyer_paid_shipping_usd": null,
     "outbound_shipping_usd": null,
-    "packaging_usd": null,
-    "assumed": ["marketplace_fee_pct", "payment_fee_pct", "payment_fee_flat_usd"]
+    "packaging_usd": null
   },
   "decision": {
     "min_net_profit_usd": 5.0,
     "min_roi_percent": 25.0
+  },
+  "decision_safety": {
+    "enforce_buy_now_gate": false,
+    "required_match_statuses": [
+      "exact",
+      "strong"
+    ],
+    "require_complete_cost_inputs": true,
+    "block_stale_inventory": true,
+    "_notes": "Report-only by default: every deal gets buy_now_blockers / buy_now_gate_pass but decisions change only when enforce_buy_now_gate is true."
   }
 }

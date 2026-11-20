@@ -121,11 +121,32 @@ def split_discogs_title(full_title):
     return "", text.strip()
 
 
-def title_core(title):
-    """Drop edition noise so '(Splatter Vinyl) 2LP' does not hurt title similarity."""
+# Edition words retailers append to a title ("Mob Rules Colored Vinyl", "Blond White Cover").
+# They are stripped ONLY from the END of the title and never the first token, so an album
+# actually called "Red" or "Blue" survives.
+_EDITION_WORDS = {
+    "vinyl", "lp", "2lp", "3lp", "record", "records", "colored", "coloured", "color", "colour",
+    "alt", "alternate", "alternative", "cover", "edition", "exclusive", "limited", "variant",
+    "red", "blue", "green", "yellow", "orange", "purple", "pink", "white", "black", "clear",
+    "translucent", "splatter", "marble", "marbled", "gold", "silver", "smoke", "galaxy",
+    "picture", "disc", "reissue", "remastered", "deluxe", "anniversary", "180g", "indie",
+}
+
+
+def title_plain(title):
+    """Parentheticals removed, edition words kept ('Floral Green' stays 'Floral Green')."""
     text = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", str(title or ""))
-    text = re.sub(r"\b(\d\s?x\s?)?(\d?lp|vinyl|record|records|lp)\b", " ", text, flags=re.I)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def title_core(title):
+    """Drop edition noise so '(Splatter Vinyl) 2LP' / 'Colored Vinyl' do not hurt title similarity."""
+    text = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", str(title or ""))
+    text = re.sub(r"\s+", " ", text).strip()
+    words = text.split(" ") if text else []
+    while len(words) > 1 and re.sub(r"[^a-z0-9]", "", words[-1].lower()) in _EDITION_WORDS:
+        words.pop()
+    return " ".join(words).strip()
 
 
 # --------------------------------------------------------------------------
@@ -188,6 +209,7 @@ def extract_identifiers(deal):
     return {
         "artist": raw_artist,
         "title": title_core(deal.get("title") or ""),
+        "title_plain": title_plain(deal.get("title") or ""),
         "catno": str(catno or "").strip(),
         "label": str(_first(deal, "label", "record_label") or "").strip(),
         "country": normalize_country(country),
@@ -314,7 +336,9 @@ def evaluate_candidate(ident, cand):
     c = _candidate_fields(cand)
     vetoes, positives = [], []
 
-    title_sim = similarity(ident.get("title"), c["title"])
+    # Best of: edition-stripped title, or the title with only parentheticals removed.
+    title_sim = max(similarity(ident.get("title"), c["title"]),
+                    similarity(ident.get("title_plain") or "", c["title"]))
     artist_sim = similarity(ident.get("artist"), c["artist"])
 
     catno_hit = False

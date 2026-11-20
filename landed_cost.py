@@ -10,13 +10,15 @@ refuse a BUY NOW when the numbers are not trustworthy.
 """
 
 import json
+import os
 from pathlib import Path
 
 CONFIG_PATH = Path(__file__).resolve().parent / "cost_config.json"
 
 
 def load_config(path=None):
-    p = Path(path) if path else CONFIG_PATH
+    """Load config. DEAL_HUNTER_COST_CONFIG selects an alternate file (isolated test mode)."""
+    p = Path(path or os.environ.get("DEAL_HUNTER_COST_CONFIG") or CONFIG_PATH)
     try:
         return json.loads(p.read_text(encoding="utf-8"))
     except Exception:
@@ -109,23 +111,53 @@ def compute_landed_cost(price, currency="USD", cfg=None, profile="domestic_us", 
     }
 
 
-def compute_resale_costs(resale_price, cfg=None):
+def _resale_settings(cfg, channel=None):
+    """Channel block merged over any flat legacy keys in cfg['resale']."""
+    r = dict(cfg.get("resale") or {})
+    chan = channel or r.get("channel")
+    merged = {k: v for k, v in r.items() if k not in ("channels", "channel")}
+    merged.update(((r.get("channels") or {}).get(chan)) or {})
+    return merged
+
+
+def compute_resale_costs(resale_price, cfg=None, channel=None):
+    """
+    Fees on the sale. Each charge is applied exactly once:
+      * marketplace fee: % of (item [+ buyer-paid shipping]) with min/max, once
+      * payment processing: % of the total paid (item + buyer-paid shipping) + a flat
+        per-ORDER fee, once. It is a separate charge from the marketplace fee.
+      * buyer-paid shipping is revenue (credited in estimate_net_profit); outbound
+        postage and packaging are costs, each counted once.
+    """
     cfg = cfg if cfg is not None else load_config()
-    r = cfg.get("resale") or {}
+    r = _resale_settings(cfg, channel)
     missing = []
     price = _num(resale_price) or 0.0
-    fees = (price * _use(r.get("marketplace_fee_pct"), "resale.marketplace_fee_pct", missing) / 100.0
-            + price * _use(r.get("payment_fee_pct"), "resale.payment_fee_pct", missing) / 100.0
-            + _use(r.get("payment_fee_flat_usd"), "resale.payment_fee_flat_usd", missing))
+
+    if "buyer_paid_shipping_usd" in r:
+        buyer_ship = _use(r.get("buyer_paid_shipping_usd"), "resale.buyer_paid_shipping_usd", missing)
+    else:
+        buyer_ship = 0.0
+    total_paid = price + buyer_ship
+
+    fee_base = total_paid if r.get("fee_base", "item") == "item_plus_shipping" else price
+    mkt = fee_base * _use(r.get("marketplace_fee_pct"), "resale.marketplace_fee_pct", missing) / 100.0
+    if mkt > 0:
+        lo, hi = _num(r.get("marketplace_fee_min_usd")), _num(r.get("marketplace_fee_max_usd"))
+        mkt = min(max(mkt, lo if lo is not None else mkt), hi if hi is not None else mkt)
+    pay = (total_paid * _use(r.get("payment_fee_pct"), "resale.payment_fee_pct", missing) / 100.0
+           + _use(r.get("payment_fee_flat_usd"), "resale.payment_fee_flat_usd", missing))
     outbound = (_use(r.get("outbound_shipping_usd"), "resale.outbound_shipping_usd", missing)
                 + _use(r.get("packaging_usd"), "resale.packaging_usd", missing))
-    assumed = [a for a in (r.get("assumed") or []) if _num(r.get(a)) is not None]
-    return {"resale_fees_usd": round(fees, 2), "outbound_costs_usd": round(outbound, 2),
+    assumed = [a for a in (r.get("assumed") or []) if r.get(a) is not None]
+    return {"resale_fees_usd": round(mkt + pay, 2), "marketplace_fee_usd": round(mkt, 2),
+            "payment_fee_usd": round(pay, 2), "buyer_paid_shipping_usd": round(buyer_ship, 2),
+            "outbound_costs_usd": round(outbound, 2),
             "missing_inputs": sorted(set(missing)), "assumed_inputs": assumed}
 
 
 def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
-                        profile="domestic_us", overrides=None):
+                        profile="domestic_us", overrides=None, channel=None):
     """
     Full picture for one purchase.
 
@@ -134,10 +166,11 @@ def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
     """
     cfg = cfg if cfg is not None else load_config()
     landed = compute_landed_cost(price, currency, cfg, profile, overrides)
-    resale = compute_resale_costs(resale_estimate, cfg)
+    resale = compute_resale_costs(resale_estimate, cfg, channel)
     est = _num(resale_estimate) or 0.0
 
-    net = est - resale["resale_fees_usd"] - resale["outbound_costs_usd"] - landed["landed_cost_usd"]
+    net = (est + resale["buyer_paid_shipping_usd"] - resale["resale_fees_usd"]
+           - resale["outbound_costs_usd"] - landed["landed_cost_usd"])
     roi = (net / landed["landed_cost_usd"] * 100.0) if landed["landed_cost_usd"] > 0 else 0.0
     missing = sorted(set(landed["missing_inputs"] + resale["missing_inputs"]))
     return {
@@ -145,6 +178,9 @@ def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
         "cost_components": landed["components"],
         "resale_estimate_usd": round(est, 2),
         "resale_fees_usd": resale["resale_fees_usd"],
+        "marketplace_fee_usd": resale["marketplace_fee_usd"],
+        "payment_fee_usd": resale["payment_fee_usd"],
+        "buyer_paid_shipping_usd": resale["buyer_paid_shipping_usd"],
         "outbound_costs_usd": resale["outbound_costs_usd"],
         "net_profit_usd": round(net, 2),
         "roi_percent": round(roi, 1),

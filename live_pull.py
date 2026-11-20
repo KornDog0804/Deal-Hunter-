@@ -2731,6 +2731,10 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
     """
     NTFY_TOPIC = "korndog-deals"
 
+    if os.environ.get("DEAL_HUNTER_DISABLE_NOTIFY"):
+        log("[ntfy] disabled by DEAL_HUNTER_DISABLE_NOTIFY (validation/test run)")
+        return
+
     from datetime import datetime
 
     try:
@@ -2783,6 +2787,57 @@ def send_deal_hunter_notification(total_deals, reddit_deals=None, upcoming_count
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
+STALE_MAX_HOURS = int(os.environ.get("DEAL_HUNTER_STALE_MAX_HOURS", "72"))
+
+
+def carry_forward_stale_inventory(data, base=None, now=None):
+    """
+    A provider that FAILED (or silently returned nothing although it had inventory last
+    run) must not make its listings vanish. Its last successful deals are carried
+    forward, flagged stale_inventory, and dropped after STALE_MAX_HOURS so ghost
+    inventory cannot live forever. Stale deals can never pass the BUY NOW gate.
+    """
+    from datetime import datetime, timedelta, timezone
+    base = base or BASE
+    now = now or datetime.now(timezone.utc).replace(tzinfo=None)
+    path = Path(base) / "live_deals.json"
+    if not path.exists():
+        return data
+    try:
+        previous = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as e:
+        log(f"[Stale] cannot read previous live_deals.json: {e}")
+        return data
+
+    live_sources = {d.get("source") for d in data if d.get("version") != "catalog"}
+    broken = set(FAILED_SOURCES) | {
+        n for n, st in SOURCE_STATUS.items() if str(st).startswith(("0 products", "0 deals"))
+    }
+    names = {s["name"] for s in SOURCES}
+    carried, expired = 0, 0
+    for deal in previous if isinstance(previous, list) else []:
+        src = deal.get("source")
+        if src not in broken or src in live_sources or src not in names:
+            continue
+        since = deal.get("stale_since") or now.isoformat()
+        try:
+            age = now - datetime.fromisoformat(since)
+        except Exception:
+            age = timedelta(0)
+        if age > timedelta(hours=STALE_MAX_HOURS):
+            expired += 1
+            continue
+        kept = dict(deal)
+        kept["stale_inventory"] = True
+        kept["stale_since"] = since
+        data.append(kept)
+        carried += 1
+    if carried or expired:
+        log(f"[Stale] carried forward {carried} deals from failed/empty sources; "
+            f"dropped {expired} older than {STALE_MAX_HOURS}h")
+    return data
+
+
 def _real_deal_count(deals):
     """Deals that are real priced listings (not catalog portals)."""
     return sum(1 for d in deals if d.get("version") != "catalog" and normalize_price(d.get("price", 0)) > 0)
@@ -2801,6 +2856,7 @@ if __name__ == "__main__":
             f.write("\n".join(DEBUG))
         raise SystemExit(1)
 
+    data = carry_forward_stale_inventory(data)
     data = apply_buyer_brain(data)
     
     log("\n" + "=" * 50)
