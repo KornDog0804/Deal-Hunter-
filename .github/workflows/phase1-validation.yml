@@ -1,0 +1,84 @@
+name: Phase 1 Discogs Validation (isolated, read-only)
+
+# Manual only. No schedule, no push, no deploy. Writes nothing to the repo:
+# results go to validation_out/ and are uploaded as an artifact. Progress is kept in the
+# Actions cache so a later run RESUMES where this one stopped.
+on:
+  workflow_dispatch:
+    inputs:
+      max_minutes:
+        description: "Stop cleanly after this many minutes (resume by running again)"
+        default: "300"
+      limit:
+        description: "Max NEW pressings to look up this run (blank = no limit; try 20 first)"
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-validation
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    env:
+      DEAL_HUNTER_DISABLE_NOTIFY: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run unit tests first
+        run: |
+          python -m pip install pytest
+          python -m pytest -q
+
+      - name: Restore previous validation progress
+        uses: actions/cache/restore@v4
+        with:
+          path: validation_out/state.json
+          key: phase1-validation-state-none
+          restore-keys: phase1-validation-state-
+
+      - name: Validate against live Discogs (strict matcher, no legacy caches)
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: |
+          ARGS="--out validation_out --max-minutes ${{ inputs.max_minutes }}"
+          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          python scripts/phase1_validation.py $ARGS
+
+      - name: Save progress for the next run
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: validation_out/state.json
+          key: phase1-validation-state-${{ github.run_id }}
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-validation-results
+          path: validation_out/
+          retention-days: 30
+
+      - name: Show summary
+        if: always()
+        run: |
+          echo '### Phase 1 validation' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f validation_out/validation_summary.json ]; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"; cat validation_out/validation_summary.json >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Prove no tracked repo file was modified
+        if: always()
+        run: git diff --exit-code && echo "repo untouched"

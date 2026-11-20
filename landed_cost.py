@@ -120,21 +120,41 @@ def _resale_settings(cfg, channel=None):
     return merged
 
 
-def compute_resale_costs(resale_price, cfg=None, channel=None):
+def _tier(block, n, name, missing):
+    """Tiered per-order amount: base covers `included_records`, each extra record adds
+    `per_additional_record_usd`. A null base counts as 0 and is reported as missing;
+    a null per-additional only matters (and is reported) when n exceeds the included count."""
+    inc = int(_num(block.get("included_records")) or 1)
+    base = _use(block.get("base_usd"), "resale.%s.base_usd" % name, missing)
+    extra = max(0, n - inc)
+    add = 0.0
+    if extra:
+        add = extra * _use(block.get("per_additional_record_usd"),
+                           "resale.%s.per_additional_record_usd" % name, missing)
+    return base + add
+
+
+def compute_resale_costs(resale_price, cfg=None, channel=None, n_records=1):
     """
-    Fees on the sale. Each charge is applied exactly once:
-      * marketplace fee: % of (item [+ buyer-paid shipping]) with min/max, once
-      * payment processing: % of the total paid (item + buyer-paid shipping) + a flat
-        per-ORDER fee, once. It is a separate charge from the marketplace fee.
+    Fees on the sale of ONE ORDER of `n_records` records (default 1 = single record).
+    Each charge is applied exactly once:
+      * marketplace fee: % of (item [+ buyer-paid shipping]) with min/max, once per order
+      * payment processing: % of the total paid + a flat per-ORDER fee, once. Separate
+        charge from the marketplace fee.
       * buyer-paid shipping is revenue (credited in estimate_net_profit); outbound
-        postage and packaging are costs, each counted once.
+        postage and packaging are costs, each counted once, each independently configurable
+        (resale.postage / resale.packaging / resale.customer_shipping tier blocks; legacy
+        flat keys buyer_paid_shipping_usd / outbound_shipping_usd / packaging_usd still work).
     """
     cfg = cfg if cfg is not None else load_config()
     r = _resale_settings(cfg, channel)
     missing = []
     price = _num(resale_price) or 0.0
+    n = max(1, int(n_records or 1))
 
-    if "buyer_paid_shipping_usd" in r:
+    if isinstance(r.get("customer_shipping"), dict):
+        buyer_ship = _tier(r["customer_shipping"], n, "customer_shipping", missing)
+    elif "buyer_paid_shipping_usd" in r:
         buyer_ship = _use(r.get("buyer_paid_shipping_usd"), "resale.buyer_paid_shipping_usd", missing)
     else:
         buyer_ship = 0.0
@@ -147,13 +167,50 @@ def compute_resale_costs(resale_price, cfg=None, channel=None):
         mkt = min(max(mkt, lo if lo is not None else mkt), hi if hi is not None else mkt)
     pay = (total_paid * _use(r.get("payment_fee_pct"), "resale.payment_fee_pct", missing) / 100.0
            + _use(r.get("payment_fee_flat_usd"), "resale.payment_fee_flat_usd", missing))
-    outbound = (_use(r.get("outbound_shipping_usd"), "resale.outbound_shipping_usd", missing)
-                + _use(r.get("packaging_usd"), "resale.packaging_usd", missing))
+    if isinstance(r.get("postage"), dict):
+        postage = _tier(r["postage"], n, "postage", missing)
+    else:
+        postage = _use(r.get("outbound_shipping_usd"), "resale.outbound_shipping_usd", missing)
+    if isinstance(r.get("packaging"), dict):
+        packaging = _tier(r["packaging"], n, "packaging", missing)
+    else:
+        packaging = _use(r.get("packaging_usd"), "resale.packaging_usd", missing)
+    outbound = postage + packaging
     assumed = [a for a in (r.get("assumed") or []) if r.get(a) is not None]
     return {"resale_fees_usd": round(mkt + pay, 2), "marketplace_fee_usd": round(mkt, 2),
             "payment_fee_usd": round(pay, 2), "buyer_paid_shipping_usd": round(buyer_ship, 2),
+            "postage_usd": round(postage, 2), "packaging_usd": round(packaging, 2),
             "outbound_costs_usd": round(outbound, 2),
             "missing_inputs": sorted(set(missing)), "assumed_inputs": assumed}
+
+
+def estimate_order_profit(items, cfg=None, profile="domestic_us", channel=None):
+    """
+    Combined-order profitability: `items` = [{"price", "currency", "resale"}, ...]
+    bought in ONE purchase and sold in ONE order. Inbound shipping (profile
+    shipping.amount_usd) is charged once for the purchase; the sale side uses the tiered
+    customer shipping / postage / packaging for len(items) records.
+    """
+    cfg = cfg if cfg is not None else load_config()
+    n = len(items)
+    landed_total, missing, resale_total = 0.0, [], 0.0
+    for i, it in enumerate(items):
+        ov = None if i == 0 else {"shipping": {"mode": "per_item", "amount_usd": 0.0}}
+        lc = compute_landed_cost(it["price"], it.get("currency", "USD"), cfg, profile, ov)
+        landed_total += lc["landed_cost_usd"]
+        missing += lc["missing_inputs"]
+        resale_total += _num(it.get("resale")) or 0.0
+    rc = compute_resale_costs(resale_total, cfg, channel, n_records=n)
+    net = (resale_total + rc["buyer_paid_shipping_usd"] - rc["resale_fees_usd"]
+           - rc["outbound_costs_usd"] - landed_total)
+    missing = sorted(set(missing + rc["missing_inputs"]))
+    return {"records": n, "landed_cost_usd": round(landed_total, 2),
+            "resale_total_usd": round(resale_total, 2), **{k: rc[k] for k in (
+                "resale_fees_usd", "marketplace_fee_usd", "payment_fee_usd",
+                "buyer_paid_shipping_usd", "postage_usd", "packaging_usd", "outbound_costs_usd")},
+            "net_profit_usd": round(net, 2),
+            "roi_percent": round(net / landed_total * 100.0, 1) if landed_total > 0 else 0.0,
+            "missing_inputs": missing, "inputs_complete": not missing}
 
 
 def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,

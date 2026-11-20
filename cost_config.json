@@ -1,5 +1,5 @@
 {
-  "_README": "Editable inputs for landed_cost.py. null = not set: counted as 0 in the math AND listed in missing_inputs. Set DEAL_HUNTER_COST_CONFIG=/path/to/file.json to run with a different config (isolated test mode) without touching this one.",
+  "_README": "Editable inputs for landed_cost.py. null = not set: counted as 0 in the math AND listed in missing_inputs. Set DEAL_HUNTER_COST_CONFIG=/path/to/file.json to run with a different config (isolated test mode) without touching this one. Customer shipping, postage and packaging are independent blocks under resale.",
   "use_net_for_decisions": false,
   "fx": {
     "rates_to_usd": {
@@ -62,9 +62,24 @@
         "assumed": []
       }
     },
-    "buyer_paid_shipping_usd": 7.00,
-    "outbound_shipping_usd": 7.00,
-    "packaging_usd": 1.50
+    "customer_shipping": {
+      "included_records": 3,
+      "base_usd": 7.99,
+      "per_additional_record_usd": 0.5,
+      "_note": "What the BUYER pays you: $7.99 covers up to 3 records, +$0.50 per additional record."
+    },
+    "postage": {
+      "included_records": 3,
+      "base_usd": 7.0,
+      "per_additional_record_usd": null,
+      "_note": "YOUR actual postage (media mail ~2 lb). Per-additional is unset: only flagged when an order has more than 3 records."
+    },
+    "packaging": {
+      "included_records": 3,
+      "base_usd": 1.5,
+      "per_additional_record_usd": 0.0,
+      "_note": "Box + packing material per order (bought-box price)."
+    }
   },
   "decision": {
     "min_net_profit_usd": 5.0,
