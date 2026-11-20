@@ -1,0 +1,97 @@
+name: Phase 1 Sample Validation (isolated, read-only)
+
+# ~200-listing representative sample. Never touches main, never deploys, never modifies tracked files.
+# Steps: tests -> provider identifier probe -> sample validation vs live Discogs -> publish to the
+# separate branch phase1-sample-results (the full-run branch phase1-validation-results is left alone).
+on:
+  push:
+    branches: [phase1-valuation-accuracy]
+    paths: [".github/workflows/phase1-sample.yml"]
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: "Unique pressings in the sample"
+        default: "200"
+
+permissions:
+  contents: write   # used ONLY by the last step (push to phase1-sample-results)
+
+concurrency:
+  group: phase1-sample
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      DEAL_HUNTER_DISABLE_NOTIFY: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests
+        run: |
+          python -m pip install pytest requests beautifulsoup4
+          python -m pytest -q
+
+      - name: Fetch previous full-run results (baseline for old vs new)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p sample_out
+          git fetch -q "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" phase1-validation-results:refs/remotes/origin/baseline || true
+          git show refs/remotes/origin/baseline:validation_results.json > sample_out/baseline_results.json || echo "[]" > sample_out/baseline_results.json
+          ls -la sample_out
+
+      - name: Probe all providers for identifiers (UPC/EAN/SKU/JSON-LD)
+        run: python scripts/provider_probe.py --out sample_out || echo "probe failed (continuing without identifiers)"
+
+      - name: Sample validation against live Discogs
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: |
+          python scripts/phase1_validation.py --out sample_out --sample "${{ inputs.sample || '200' }}" \
+            --identifiers sample_out/identifiers_by_link.json --baseline sample_out/baseline_results.json \
+            --max-minutes 120 --skip-fee-check
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-sample-results
+          path: sample_out/
+          retention-days: 30
+
+      - name: Prove no tracked repo file was modified
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+            git status --short --untracked-files=no; exit 1
+          fi
+          echo "repo untouched"
+
+      - name: Publish results to the isolated sample-results branch (never main)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          [ -f sample_out/validation_summary.json ] || { echo "no results to publish"; exit 0; }
+          BR=phase1-sample-results
+          D=$(mktemp -d)
+          cp sample_out/*.json "$D"/ && rm -f "$D/state.json" "$D/baseline_results.json"
+          cd "$D"
+          git init -q -b "$BR"
+          git config user.name "validation-bot"; git config user.email "validation-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Phase 1 sample results (run ${{ github.run_id }})"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "$BR"
+          echo "published to branch $BR"

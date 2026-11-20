@@ -169,6 +169,48 @@ def title_core(title):
 # identifiers from a Deal Hunter listing
 # --------------------------------------------------------------------------
 
+_COLOR_WORDS = {"red", "blue", "green", "yellow", "orange", "purple", "pink", "white", "black", "clear",
+                "gold", "silver", "smoke", "grey", "gray", "brown", "cream", "violet", "aqua", "teal", "magenta"}
+_COLOR_SYNONYMS = {"gray": "grey", "transparent": "clear", "violet": "purple"}
+_PATTERN_WORDS = {"splatter", "marble", "marbled", "swirl", "galaxy", "picture", "pinwheel", "haze", "smoke", "split"}
+_ANNIV = re.compile(r"\b(\d{1,3})(?:st|nd|rd|th)?\s*[- ]?anniv", re.I)
+
+
+def edition_text(raw_title, artist="", title_core_text=""):
+    """The edition-describing part of a listing title: everything except the artist and the core album title."""
+    t = norm_text(raw_title)
+    for chunk in (norm_text(artist), norm_text(title_core_text)):
+        if chunk:
+            t = t.replace(chunk, " ", 1)
+    return t
+
+
+def _edition_features(text):
+    t = norm_text(text)
+    words = set(re.findall(r"[a-z]+", t))
+    colors = {_COLOR_SYNONYMS.get(w, w) for w in words if w in _COLOR_WORDS or w in _COLOR_SYNONYMS}
+    patterns = {w for w in words if w in _PATTERN_WORDS} - ({"smoke"} if "smoke" in colors else set())
+    anniv = {int(m) for m in _ANNIV.findall(t)}
+    return {"colors": colors, "patterns": patterns, "anniv": anniv,
+            "deluxe": "deluxe" in words, "standard": "standard" in words or "regular" in words}
+
+
+def edition_conflicts(listing_edition, candidate_edition):
+    """EXPLICIT contradictions only (both sides state a value for the same attribute and they disagree).
+    A missing edition word on one side is not a conflict - it is just missing evidence."""
+    a, b = _edition_features(listing_edition), _edition_features(candidate_edition)
+    out = []
+    if a["colors"] and b["colors"] and not (a["colors"] & b["colors"]):
+        out.append("color(%s!=%s)" % ("/".join(sorted(a["colors"])), "/".join(sorted(b["colors"]))))
+    if a["patterns"] and b["patterns"] and not (a["patterns"] & b["patterns"]):
+        out.append("pattern")
+    if a["anniv"] and b["anniv"] and not (a["anniv"] & b["anniv"]):
+        out.append("anniversary(%s!=%s)" % (sorted(a["anniv"]), sorted(b["anniv"])))
+    if (a["deluxe"] and b["standard"] and not b["deluxe"]) or (b["deluxe"] and a["standard"] and not a["deluxe"]):
+        out.append("deluxe_vs_standard")
+    return out
+
+
 _CATNO_PATTERN = re.compile(
     r"(?:cat(?:alog(?:ue)?)?\.?\s*(?:no\.?|number|#)|cat#)\s*[:#]?\s*"
     r"([A-Z0-9][A-Z0-9 ·・\-./]{2,24})",
@@ -240,6 +282,8 @@ def extract_identifiers(deal):
         "format": fmt,
         "qty": qty,
         "variants": variants,
+        "edition_text": edition_text(deal.get("raw_title") or deal.get("title") or "", raw_artist,
+                                     title_core(deal.get("title") or "")),
     }
 
 
@@ -333,6 +377,7 @@ def _candidate_fields(cand):
         "year": _to_int_year(cand.get("year")),
         "formats": [str(f) for f in formats],
         "qty": qty,
+        "edition": " ".join(re.findall(r"\(([^)]*)\)", title)) + " " + " ".join(str(f) for f in formats),
         "uri": cand.get("uri", ""),
         "raw": cand,
     }
@@ -428,21 +473,19 @@ def evaluate_candidate(ident, cand):
         vetoes.append("artist_mismatch(%.2f)" % artist_sim)
 
     label_pos = year_pos = country_pos = 0
-    if barcode_hit:
-        vetoes[:] = [v for v in vetoes if not v.startswith(("catno_mismatch",))]
-    if ident.get("country") and c["country"] and not barcode_hit:
+    if ident.get("country") and c["country"]:
         if ident["country"] == c["country"]:
             country_pos = 1
             positives.append("country_match")
         else:
             vetoes.append("country_mismatch(%s!=%s)" % (ident["country"], c["country"]))
-    if ident.get("year") and c["year"] and not barcode_hit:
+    if ident.get("year") and c["year"]:
         if ident["year"] == c["year"]:
             year_pos = 1
             positives.append("year_match")
         else:
             vetoes.append("year_mismatch(%s!=%s)" % (ident["year"], c["year"]))
-    if ident.get("label") and c["labels"] and not barcode_hit:
+    if ident.get("label") and c["labels"]:
         if _label_agrees(ident["label"], c["labels"]):
             label_pos = 1
             positives.append("label_match")
@@ -456,8 +499,21 @@ def evaluate_candidate(ident, cand):
     elif ident["format"] in ("cd", "cassette") and c["formats"]:
         if ident["format"] not in fmt_lower:
             vetoes.append("format_mismatch")
-    if ident.get("qty") and c["qty"] and ident["qty"] != c["qty"] and not barcode_hit:
+    if ident.get("qty") and c["qty"] and ident["qty"] != c["qty"]:
         vetoes.append("disc_count_mismatch(%s!=%s)" % (ident["qty"], c["qty"]))
+
+    # A barcode identifies the release, so the listing's own country/year/label/disc-count/catno guesses
+    # are demoted to "soft" mismatches: they do not veto, but they do count against it if the barcode is shared.
+    soft = []
+    if barcode_hit:
+        soft = [v for v in vetoes if v.startswith(("country_mismatch", "year_mismatch", "label_mismatch",
+                                                   "disc_count_mismatch", "catno_mismatch"))]
+        vetoes[:] = [v for v in vetoes if v not in soft]
+
+    # EXPLICIT edition contradictions (red vs blue, 20th vs 25th anniversary, deluxe vs standard) always disqualify.
+    conflicts = edition_conflicts(ident.get("edition_text", ""), c["edition"])
+    for cf in conflicts:
+        vetoes.append("edition_conflict:" + cf)
 
     cand_text = norm_text(fmt_lower + " " + c["title"])
     wanted = ident.get("variants") or []
@@ -473,7 +529,8 @@ def evaluate_candidate(ident, cand):
              + 0.05 * label_pos + 0.05 * year_pos + 0.05 * country_pos + variant_bonus)
     return {"id": c["id"], "score": round(score, 4), "vetoes": vetoes, "positives": positives,
             "title_sim": round(title_sim, 3), "artist_sim": round(artist_sim, 3),
-            "fields": c, "catno_hit": catno_hit, "barcode_hit": barcode_hit, "sku_hit": sku_hit}
+            "fields": c, "catno_hit": catno_hit, "barcode_hit": barcode_hit, "sku_hit": sku_hit,
+            "soft_mismatch": soft, "corroborated": bool(label_pos or year_pos or country_pos or catno_hit or overlap)}
 
 
 def _result(status, confidence=0.0, chosen=None, reasons=None, rejected=None, tied=None):
@@ -514,6 +571,18 @@ def evaluate_candidates(ident, candidates):
         return _result(NONE, 0.0, reasons=["no_candidate_passed_checks"], rejected=rejected[:10])
 
     top = accepted[0]
+
+    # SHARED BARCODE: several different Discogs releases carry the listing's barcode (reissues often share one).
+    # The barcode alone cannot say which pressing it is, so we need independent evidence for exactly one of them.
+    bc_hits = [e for e in accepted if e["barcode_hit"]]
+    if len(bc_hits) > 1:
+        proven = [e for e in bc_hits if e["corroborated"] and not e["soft_mismatch"]]
+        if len(proven) == 1:
+            top = proven[0]
+            top["positives"] = top["positives"] + ["barcode_shared_resolved"]
+            return _result(EXACT, max(0.90, min(0.95, top["score"])), top, top["positives"], rejected[:10])
+        return _result(AMBIGUOUS, 0.0, reasons=["barcode_shared_by_%d_releases" % len(bc_hits)],
+                       rejected=rejected[:10], tied=[e["id"] for e in bc_hits][:10])
     if len(accepted) > 1 and (top["score"] - accepted[1]["score"]) < MIN_SCORE_MARGIN:
         # Prefer an exact catalog-number hit over a non-hit before declaring a tie.
         exact_hits = [e for e in accepted if e["catno_hit"] or e["barcode_hit"]]

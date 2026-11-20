@@ -81,12 +81,44 @@ def allocate_shipping(item_price_usd, ship_cfg, missing):
     return quote * (item_price_usd / order_total)
 
 
-def compute_landed_cost(price, currency="USD", cfg=None, profile="domestic_us", overrides=None):
-    """Item price -> landed cost in USD, with a full component breakdown."""
+def inbound_shipping(cfg, provider, subtotal_usd, n_records=1):
+    """
+    What the STORE charges to ship one order to us.
+    Returns (amount_usd | None, basis) with basis in
+      "free_threshold"  order subtotal reached the store's free-shipping level -> 0.0
+      "provider"        the provider's own flat (+ per additional record) rate
+      "default"         the config-wide default rate
+      "unknown"         nothing configured -> amount None (caller flags it missing)
+    """
+    block = (cfg or {}).get("inbound_shipping") or {}
+    for basis, rule in (("provider", (block.get("providers") or {}).get(provider)), ("default", block.get("default"))):
+        if not isinstance(rule, dict):
+            continue
+        free_over = _num(rule.get("free_over_usd"))
+        if free_over is not None and subtotal_usd >= free_over:
+            return 0.0, "free_threshold"
+        flat = _num(rule.get("flat_usd"))
+        if flat is not None:
+            extra = _num(rule.get("per_additional_usd")) or 0.0
+            return round(flat + extra * max(0, int(n_records) - 1), 2), basis
+    return None, "unknown"
+
+
+def compute_landed_cost(price, currency="USD", cfg=None, profile="domestic_us", overrides=None,
+                        provider=None, order_subtotal_usd=None, n_records=1):
+    """Item price -> landed cost in USD, with a full component breakdown.
+    With `provider`, that store's configured inbound shipping / free-shipping threshold is used
+    (falling back to the profile's shipping when the store has nothing configured)."""
     cfg = cfg if cfg is not None else load_config()
     prof = dict((cfg.get("profiles") or {}).get(profile) or {})
     prof.update(overrides or {})
     missing = []
+    ship_basis = "profile"
+    if provider and not (overrides and "shipping" in overrides):
+        item_for_ship = to_usd(price, currency, cfg, [])
+        amt, ship_basis = inbound_shipping(cfg, provider, order_subtotal_usd if order_subtotal_usd is not None else item_for_ship, n_records)
+        if amt is not None:
+            prof["shipping"] = {"mode": "per_item", "amount_usd": amt}
 
     item_usd = to_usd(price, currency, cfg, missing)
     shipping = allocate_shipping(item_usd, prof.get("shipping"), missing)
@@ -108,6 +140,7 @@ def compute_landed_cost(price, currency="USD", cfg=None, profile="domestic_us", 
             "brokerage_usd": round(brokerage, 2),
         },
         "missing_inputs": sorted(set(missing)),
+        "inbound_shipping_basis": ship_basis,
     }
 
 
@@ -184,7 +217,7 @@ def compute_resale_costs(resale_price, cfg=None, channel=None, n_records=1):
             "missing_inputs": sorted(set(missing)), "assumed_inputs": assumed}
 
 
-def estimate_order_profit(items, cfg=None, profile="domestic_us", channel=None):
+def estimate_order_profit(items, cfg=None, profile="domestic_us", channel=None, provider=None):
     """
     Combined-order profitability: `items` = [{"price", "currency", "resale"}, ...]
     bought in ONE purchase and sold in ONE order. Inbound shipping (profile
@@ -194,11 +227,15 @@ def estimate_order_profit(items, cfg=None, profile="domestic_us", channel=None):
     cfg = cfg if cfg is not None else load_config()
     n = len(items)
     landed_total, missing, resale_total = 0.0, [], 0.0
+    subtotal = sum(to_usd(it["price"], it.get("currency", "USD"), cfg, []) for it in items)
     for i, it in enumerate(items):
         ov = None if i == 0 else {"shipping": {"mode": "per_item", "amount_usd": 0.0}}
-        lc = compute_landed_cost(it["price"], it.get("currency", "USD"), cfg, profile, ov)
+        lc = compute_landed_cost(it["price"], it.get("currency", "USD"), cfg, profile, ov,
+                                 provider=provider, order_subtotal_usd=subtotal, n_records=n)
         landed_total += lc["landed_cost_usd"]
         missing += lc["missing_inputs"]
+        if i == 0:
+            first_basis = lc.get("inbound_shipping_basis")
         resale_total += _num(it.get("resale")) or 0.0
     rc = compute_resale_costs(resale_total, cfg, channel, n_records=n)
     net = (resale_total + rc["buyer_paid_shipping_usd"] - rc["resale_fees_usd"]
@@ -210,11 +247,12 @@ def estimate_order_profit(items, cfg=None, profile="domestic_us", channel=None):
                 "buyer_paid_shipping_usd", "postage_usd", "packaging_usd", "outbound_costs_usd")},
             "net_profit_usd": round(net, 2),
             "roi_percent": round(net / landed_total * 100.0, 1) if landed_total > 0 else 0.0,
+            "inbound_shipping_basis": first_basis,
             "missing_inputs": missing, "inputs_complete": not missing}
 
 
 def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
-                        profile="domestic_us", overrides=None, channel=None):
+                        profile="domestic_us", overrides=None, channel=None, provider=None):
     """
     Full picture for one purchase.
 
@@ -222,7 +260,7 @@ def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
     sold price; the output carries that label so it travels with the number.
     """
     cfg = cfg if cfg is not None else load_config()
-    landed = compute_landed_cost(price, currency, cfg, profile, overrides)
+    landed = compute_landed_cost(price, currency, cfg, profile, overrides, provider=provider)
     resale = compute_resale_costs(resale_estimate, cfg, channel)
     est = _num(resale_estimate) or 0.0
 
@@ -243,6 +281,8 @@ def estimate_net_profit(price, resale_estimate, currency="USD", cfg=None,
         "roi_percent": round(roi, 1),
         "missing_inputs": missing,
         "assumed_inputs": resale["assumed_inputs"],
+        "inbound_shipping_basis": landed.get("inbound_shipping_basis"),
+        "cost_certainty": cost_certainty(missing, resale["assumed_inputs"]),
         "inputs_complete": not missing,
         "valuation_basis": "estimate: Discogs asking prices, not verified sold prices",
     }
@@ -254,3 +294,14 @@ def passes_net_thresholds(result, cfg=None):
     d = cfg.get("decision") or {}
     return (result["net_profit_usd"] >= (_num(d.get("min_net_profit_usd")) or 0.0)
             and result["roi_percent"] >= (_num(d.get("min_roi_percent")) or 0.0))
+
+
+def cost_certainty(missing_inputs, assumed_inputs=()):
+    """Sort every cost line into what is KNOWN, what is only an ESTIMATE, and what is MISSING (counted as $0)."""
+    return {
+        "known": ["purchase price (listing)", "customer shipping revenue (your rate)", "postage (your rate)",
+                  "packaging (your rate)", "Discogs fee 9% (verified)", "PayPal fee 3.49% + $0.49 (verified)"],
+        "estimated": ["resale price = Lowest Asking Price Estimate (not a sold price)"] +
+                     ["assumed: %s" % a for a in assumed_inputs],
+        "missing": sorted(missing_inputs),
+    }

@@ -23,7 +23,8 @@ import likely_tier as lt
 API = "https://api.discogs.com"
 UA = "KornDogDealHunterValidation/1.0 +https://korndogrecords.com"
 MIN_INTERVAL = 1.1          # authenticated limit is 60/min -> stay under it
-SCHEMA = 4
+SCHEMA = 5
+MIN_MARKET_DEPTH_DEFAULT = 3   # fewer Discogs listings than this = thin market: one ask is not a market price
 SUSPECT_ROI = 300.0   # ROI above this is far more likely a wrong match than a real deal: flag for manual check
 
 
@@ -123,19 +124,34 @@ def fetch_lowest_ask(limiter, release_id):
     return round(float(low), 2) if low else None
 
 
+def fetch_ask_depth(limiter, release_id):
+    """(lowest ask, number of copies for sale) for one release."""
+    st = limiter.get("/marketplace/stats/%s" % release_id, {"curr_abbr": "USD"}) or {}
+    low = st.get("lowest_price")
+    if isinstance(low, dict):
+        low = low.get("value")
+    return (round(float(low), 2) if low else None), st.get("num_for_sale")
+
+
 def add_likely_floor(limiter, res, rec):
-    """Option B: value unverified-but-found albums at the lowest ask across plausible pressings."""
+    """Option B: value unverified-but-found albums at the Lowest Asking Price Estimate across plausible pressings.
+    Also records how many copies are for sale on the release that sets that price (market depth)."""
+    depth = {}
     if res["status"] == "ambiguous":
         ids = [i for i in (res.get("tied_ids") or [])][: lt.MAX_TIED_LOOKUPS]
-        asks = {i: fetch_lowest_ask(limiter, i) for i in ids}
+        asks = {}
+        for i in ids:
+            asks[i], depth[i] = fetch_ask_depth(limiter, i)
     elif res["status"] == "title_only" and res.get("release_id"):
         asks = {res["release_id"]: rec.get("lowest_price")}
+        depth = {res["release_id"]: rec.get("num_for_sale")}
     else:
         return
     f = lt.floor_estimate(asks)
     if f:
+        floor_id = min((i for i, v in asks.items() if v and float(v) > 0), key=lambda i: float(asks[i]))
         rec.update(tier="likely", floor_estimate=f["floor"], floor_spread=f["spread"],
-                   floor_wide=f["wide"], floor_ids=f["ids"])
+                   floor_wide=f["wide"], floor_ids=f["ids"], floor_depth=depth.get(floor_id))
 
 
 def unique_work(deals, min_price=0.01):
@@ -187,16 +203,21 @@ def validate(work, state, limiter, deadline, limit=None, save=None, clock=time.m
     return n, None
 
 
-def build_results(deals, state, cfg):
+def build_results(deals, state, cfg, min_depth=None):
     """Join validated records back onto deals; compute net profit / ROI per deal."""
     rows = []
+    if min_depth is None:
+        min_depth = int((cfg.get("decision") or {}).get("min_market_depth") or MIN_MARKET_DEPTH_DEFAULT)
     for d in deals:
         try:
             price = float(d.get("price") or 0)
         except (TypeError, ValueError):
             price = 0.0
+        ident_now = dm.extract_identifiers(d)
         row = {"link": d.get("link"), "source": d.get("source"), "price": price,
-               "artist": d.get("artist"), "title": d.get("title"),
+               "artist": d.get("artist"), "title": d.get("title"), "raw_title": d.get("raw_title"),
+               "_key": dm.identity_key(ident_now),
+               "identifiers_used": {k: ident_now.get(k) for k in ("barcode", "sku", "catno", "label", "year") if ident_now.get(k)},
                "prod_decision": d.get("decision"), "status": "not_validated"}
         if price > 0 and d.get("artist") and d.get("title"):
             rec = state["records"].get(dm.identity_key(dm.extract_identifiers(d)))
@@ -215,14 +236,22 @@ def build_results(deals, state, cfg):
                 else:
                     row["tier"] = "verified"
                 if est > 0:
-                    r = lc.estimate_net_profit(price, est, "USD", cfg, "domestic_us")
+                    r = lc.estimate_net_profit(price, est, "USD", cfg, "domestic_us", provider=d.get("source"))
                     low = rec.get("lowest_price") or 0
+                    depth = rec.get("num_for_sale") if row["tier"] == "verified" else rec.get("floor_depth")
+                    thin = depth is not None and depth < min_depth
                     row.update(resale=est, lowest_ask=low, landed=r["landed_cost_usd"],
                                net=r["net_profit_usd"], roi=r["roi_percent"],
                                suspect=r["roi_percent"] > SUSPECT_ROI,
+                               market_depth=depth, thin_market=thin, depth_unknown=depth is None,
+                               valuation_label=("Lowest Asking Price Estimate" if row["tier"] == "likely"
+                                                else "Discogs price-guide estimate (NM)"),
+                               inbound_shipping_basis=r.get("inbound_shipping_basis"),
+                               cost_certainty=r.get("cost_certainty"),
                                inputs_complete=r["inputs_complete"], missing=r["missing_inputs"])
+                    row["needs_review"] = bool(row["suspect"] or thin)
                     if low > 0:
-                        row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, "USD", cfg, "domestic_us")["net_profit_usd"]
+                        row["net_at_lowest_ask"] = lc.estimate_net_profit(price, low, "USD", cfg, "domestic_us", provider=d.get("source"))["net_profit_usd"]
         rows.append(row)
     return rows
 
@@ -258,7 +287,11 @@ def summarize(rows, state, work_total, cfg, stop_reason):
         "likely_tier": dict(thresholds(likely), count=len(likely),
                             wide_spread=sum(1 for r in likely if r.get("floor_wide")),
                             suspect_roi_over_300=sum(1 for r in likely if r.get("suspect")),
-                            both_excluding_suspect=sum(1 for r in likely if r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi and not r.get("suspect"))),
+                            thin_market=sum(1 for r in likely if r.get("thin_market")),
+                            both_excluding_suspect=sum(1 for r in likely if r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi and not r.get("needs_review"))),
+        "verified_thin_market": sum(1 for r in verified if r.get("thin_market")),
+        "verified_both_excluding_review": sum(1 for r in verified if r.get("net", 0) >= min_net and r.get("roi", 0) >= min_roi and not r.get("needs_review")),
+        "market_depth_unknown": sum(1 for r in scanned if r.get("depth_unknown")),
         "prod_buy_now": sum(1 for r in rows if r["prod_decision"] == "BUY NOW"),
         "prod_buy_now_verified_and_profitable": sum(
             1 for r in verified if r["prod_decision"] == "BUY NOW" and r.get("net", -1) >= min_net and r.get("roi", -1) >= min_roi),
@@ -287,13 +320,13 @@ def combined_orders(rows, cfg, max_records=3):
     Uses verified records and Likely-tier (floor) records; suspect (ROI > 300%) rows are excluded."""
     by = {}
     for r in rows:
-        if r.get("tier") in ("verified", "likely") and "net" in r and not r.get("suspect") and r["resale"] > r["price"]:
+        if r.get("tier") in ("verified", "likely") and "net" in r and not r.get("needs_review") and r["resale"] > r["price"]:
             by.setdefault(r["source"], []).append(r)
     out = []
     for src, rs in sorted(by.items()):
         rs.sort(key=lambda r: r["resale"] - r["price"], reverse=True)
         basket = rs[:max_records]
-        o = lc.estimate_order_profit([{"price": r["price"], "resale": r["resale"]} for r in basket], cfg)
+        o = lc.estimate_order_profit([{"price": r["price"], "resale": r["resale"]} for r in basket], cfg, provider=src)
         out.append({"source": src, "links": [r["link"] for r in basket],
                     "basis": "verified" if all(r["tier"] == "verified" for r in basket) else "likely_floor",
                     **o, "sum_of_single_nets_usd": round(sum(r["net"] for r in basket), 2)})
@@ -342,6 +375,119 @@ def verify_fees(cfg, fetch=None):
     return report
 
 
+# --------------------------------------------------------------------------
+# representative sample + old-vs-new comparison
+# --------------------------------------------------------------------------
+
+STRATA_QUOTA = [("has_barcode", 30), ("paren_title", 40), ("variant_title", 40),
+                ("old_unmatched", 30), ("old_title_only", 20), ("old_ambiguous", 20)]
+
+
+def merge_identifiers(deals, by_link):
+    """Attach probe identifiers (barcode / SKU / labelled text) to listings by product link. Additive only."""
+    n = 0
+    for d in deals:
+        ids = (by_link or {}).get(d.get("link"))
+        if ids:
+            merged = dict(d.get("identifiers") or {})
+            for k, v in ids.items():
+                merged.setdefault(k, v)
+            d["identifiers"] = merged
+            n += 1
+    return n
+
+
+def select_sample(deals, baseline_rows, n=200, seed=7, min_per_provider=3):
+    """
+    Deterministic stratified sample of UNIQUE pressings (what the matcher actually looks up):
+    listings with barcodes, parenthetical edition titles, coloured/limited variants, and titles the old
+    run left unmatched / title-only / ambiguous, then topped up round-robin so every provider is present.
+    """
+    import random
+    rng = random.Random(seed)
+    old = {r.get("link"): r for r in (baseline_rows or [])}
+    cands = {}
+    for d in deals:
+        try:
+            if float(d.get("price") or 0) <= 0 or not d.get("artist") or not d.get("title"):
+                continue
+        except (TypeError, ValueError):
+            continue
+        ident = dm.extract_identifiers(d)
+        key = dm.identity_key(ident)
+        o = old.get(d.get("link")) or {}
+        tags = set()
+        if ident.get("barcode"):
+            tags.add("has_barcode")
+        if "(" in str(d.get("raw_title") or ""):
+            tags.add("paren_title")
+        if ident.get("variants"):
+            tags.add("variant_title")
+        st = o.get("status")
+        if st == "none":
+            tags.add("old_unmatched")
+        elif st == "title_only":
+            tags.add("old_title_only")
+        elif st == "ambiguous":
+            tags.add("old_ambiguous")
+        c = cands.setdefault(key, {"key": key, "ident": ident, "deal": d, "tags": set()})
+        c["tags"] |= tags
+    pool = sorted(cands.values(), key=lambda c: c["key"])
+    chosen, seen = [], set()
+
+    def take(c, why):
+        if c["key"] not in seen and len(chosen) < n:
+            seen.add(c["key"]); chosen.append(dict(c, why=why))
+
+    for tag, quota in STRATA_QUOTA:
+        group = [c for c in pool if tag in c["tags"] and c["key"] not in seen]
+        rng.shuffle(group)
+        for c in group[:quota]:
+            take(c, tag)
+    by_src = {}
+    for c in pool:
+        by_src.setdefault(c["deal"].get("source"), []).append(c)
+    for src in sorted(by_src, key=str):                       # every provider gets a minimum presence
+        have = sum(1 for c in chosen if c["deal"].get("source") == src)
+        rest = [c for c in by_src[src] if c["key"] not in seen]
+        rng.shuffle(rest)
+        for c in rest[:max(0, min_per_provider - have)]:
+            take(c, "provider_minimum")
+    rest = [c for c in pool if c["key"] not in seen]
+    rng.shuffle(rest)
+    for c in rest:                                             # fill any remainder at random
+        take(c, "random_fill")
+    return chosen
+
+
+def compare_old_new(sample, old_rows, new_rows):
+    """Old (previous full run) vs new (this run) for exactly the sampled listings, plus the pairs to audit by hand."""
+    from collections import Counter
+    old = {r.get("link"): r for r in (old_rows or [])}
+    new = {r.get("link"): r for r in new_rows}
+    keyset = {c["key"] for c in sample}
+    trans, pairs = Counter(), []
+    old_v = new_v = 0
+    for r in new_rows:
+        d_key = r.get("_key")
+        if d_key not in keyset:
+            continue
+        o = old.get(r["link"]) or {}
+        os_, ns = o.get("status", "not_in_old_run"), r["status"]
+        trans["%s -> %s" % (os_, ns)] += 1
+        old_v += 1 if os_ in dm.DECISION_GRADE_STATUSES else 0
+        new_v += 1 if ns in dm.DECISION_GRADE_STATUSES else 0
+        changed = (os_ != ns) or (o.get("release_id") != r.get("release_id"))
+        if ns in ("exact", "strong", "title_only") and (changed or ns != "title_only"):
+            pairs.append({"source": r["source"], "listing": "%s - %s" % (r["artist"], r["title"]), "raw_title": r.get("raw_title"),
+                          "link": r["link"], "new_status": ns, "new_match": r.get("matched_title"), "new_label": r.get("matched_label"),
+                          "new_year": r.get("matched_year"), "new_country": r.get("matched_country"), "new_release_id": r.get("release_id"),
+                          "reasons": r.get("reasons"), "old_status": os_, "old_release_id": o.get("release_id"),
+                          "identifiers": r.get("identifiers_used")})
+    return {"sample_size": len(sample), "old_verified": old_v, "new_verified": new_v,
+            "transitions": dict(trans.most_common()), "audit_pairs": pairs}
+
+
 def atomic_write(path, obj):
     tmp = str(path) + ".tmp"
     Path(tmp).write_text(json.dumps(obj, separators=(",", ":")))
@@ -355,6 +501,9 @@ def main(argv=None):
     ap.add_argument("--max-minutes", type=float, default=300)
     ap.add_argument("--limit", type=int, default=None, help="max NEW pressings to look up this run")
     ap.add_argument("--skip-fee-check", action="store_true")
+    ap.add_argument("--sample", type=int, default=None, help="validate a stratified sample of N unique pressings instead of everything")
+    ap.add_argument("--identifiers", default=None, help="identifiers_by_link.json from provider_probe.py")
+    ap.add_argument("--baseline", default=None, help="validation_results.json from the previous full run, for old-vs-new")
     a = ap.parse_args(argv)
 
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
@@ -364,7 +513,19 @@ def main(argv=None):
         return 2
     cfg = lc.load_config()
     deals = json.loads(Path(a.deals).read_text())
-    work = unique_work(deals)
+    deals = deals if isinstance(deals, list) else deals.get("deals", [])
+    if a.identifiers and Path(a.identifiers).exists():
+        print("identifiers merged into %d listings" % merge_identifiers(deals, json.loads(Path(a.identifiers).read_text())))
+    sample = None
+    if a.sample:
+        base = json.loads(Path(a.baseline).read_text()) if a.baseline and Path(a.baseline).exists() else []
+        sample = select_sample(deals, base, a.sample)
+        keep = {c["key"] for c in sample}
+        work = [w for w in unique_work(deals) if w["key"] in keep]
+        print("sample: %d unique pressings; strata: %s" % (len(work), {t: sum(1 for c in sample if c["why"] == t) for t, _ in STRATA_QUOTA}))
+    else:
+        base = []
+        work = unique_work(deals)
     sp = out / "state.json"
     state = json.loads(sp.read_text()) if sp.exists() else {"records": {}}
     state.setdefault("records", {})
@@ -376,6 +537,16 @@ def main(argv=None):
     save()
     rows = build_results(deals, state, cfg)
     summ = summarize(rows, state, len(work), cfg, stop)
+    if sample is not None:
+        keep = {c["key"] for c in sample}
+        rows = [r for r in rows if r.get("_key") in keep]
+        cmp_ = compare_old_new(sample, base, rows)
+        atomic_write(out / "sample_comparison.json", cmp_)
+        atomic_write(out / "sample_selection.json", [{"key": c["key"], "why": c["why"], "source": c["deal"].get("source"),
+                                                      "listing": "%s - %s" % (c["deal"].get("artist"), c["deal"].get("title"))} for c in sample])
+        print("OLD verified %d -> NEW verified %d on %d sampled listings" % (cmp_["old_verified"], cmp_["new_verified"], len(rows)))
+        summ = summarize(rows, state, len(work), cfg, stop)
+        summ["sample"] = True
     summ["looked_up_this_run"] = n
     summ["api_calls_this_run"] = limiter.calls
     atomic_write(out / "validation_results.json", rows)

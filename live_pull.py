@@ -9,6 +9,7 @@ import urllib.request
 import urllib.parse
 from urllib.parse import urljoin
 from pathlib import Path
+import product_identifiers
 try:
     from buyer_brain import apply_buyer_brain
 except Exception as e:
@@ -490,7 +491,7 @@ BAD_PRODUCT_TERMS = [
     "cd", "compact disc", "beanie", "hat", "jacket", "bundle", "book",
     "kindle", "blu-ray", "dvd", "toy", "figure", "funko",
     "digital", "digital album", "digital download", "mp3", "download",
-    "earbuds", "headphones", "airpods", "sticker", "patch", "pin",
+    "earbuds", "headphones", "airpods", "sticker", "patch", "pin", "coozie", "koozie", "keychain", "lanyard",
     "pullover", "crewneck", "long sleeve", "t-shirt", "shorts", "socks",
     "turntable", "record player", "cleaner", "cleaning kit",
     "speaker", "stylus", "needle", "receiver", "drawstring bag", "wall flag", "flag", "tote", "bag"
@@ -1251,6 +1252,17 @@ def fetch_shopify_products(source_url):
     return [], ""
 
 
+def _html_identifiers(page):
+    """JSON-LD gtin/sku/mpn plus labelled text from a product page. Never raises."""
+    try:
+        ids = product_identifiers.from_jsonld(page)
+        for k, v in product_identifiers.mine_text(clean(page)[:20000]).items():
+            ids.setdefault(k, v)
+        return ids
+    except Exception:
+        return {}
+
+
 def build_shopify_deals(source):
     deals = []
     products, endpoint_used = fetch_shopify_products(source["url"])
@@ -1369,6 +1381,8 @@ def build_shopify_deals(source):
                 "availability_text": variant_title,
                 "page_text_snippet": clean(body_html)[:1000],
                 "endpoint_used": endpoint_used,
+                # additive: structured identifiers (barcode / SKU / labelled text) for exact matching
+                "identifiers": product_identifiers.from_shopify(p, valid_variant, clean(body_html)),
             })
             kept += 1
 
@@ -1522,6 +1536,7 @@ def build_html_deals(source):
                     "version": " ".join(version_parts) if version_parts else "standard",
                     "availability_text": "",
                     "page_text_snippet": clean(page)[:1000],
+                    "identifiers": _html_identifiers(page),
                 })
                 kept += 1
 

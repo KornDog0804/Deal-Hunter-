@@ -48,11 +48,13 @@
         "fee_base": "item_plus_shipping",
         "payment_fee_pct": 3.49,
         "payment_fee_flat_usd": 0.49,
-        "assumed": [
-          "marketplace_fee_pct",
-          "fee_base"
-        ],
-        "_notes": "Payment rate: PayPal US standard commercial rate per paypal.com/us/business/paypal-business-fees (page dated Oct 1 2026). Discogs fee: Discogs' own fees page says 8%, but its PayPal FAQ and third-party sources say 9%, and the base (item vs item+shipping) is not stated on the official fees page. Marketplace fee and processing are SEPARATE charges; each is applied once. Confirm 9% and the base in your Discogs seller dashboard."
+        "assumed": [],
+        "_notes": "Both fees verified against official pages on 2026-11-20 (see 'verified'). Marketplace fee and processing are SEPARATE charges, each applied once per order. International sales and currency conversion are not modelled.",
+        "verified": {
+          "checked": "2026-11-20",
+          "paypal": "PayPal Checkout / Guest Checkout / Venmo 3.49% + fixed fee; US dollar fixed fee 0.49 USD (PayPal US merchant fee page, last updated May 19, 2026: https://www.paypal.com/webapps/mpp/merchant-fees ; fee PDF https://www.paypalobjects.com/marketing/ua/pdf/US/us-merchant-fees-09-feb-2026.pdf). Standard card payments are 2.99% + 0.49 and Pay Later 4.99% + 0.49, so 3.49% + 0.49 is the conservative default. International sales add a surcharge that is NOT modelled (domestic US only).",
+          "discogs": "9% marketplace fee on item + shipping, confirmed earlier from the Discogs help center seller-fee articles (see fee_verification.json). Confirm in your seller dashboard."
+        }
       },
       "own_site": {
         "marketplace_fee_pct": 0.0,
@@ -83,7 +85,8 @@
   },
   "decision": {
     "min_net_profit_usd": 5.0,
-    "min_roi_percent": 25.0
+    "min_roi_percent": 25.0,
+    "min_market_depth": 3
   },
   "decision_safety": {
     "enforce_buy_now_gate": false,
@@ -94,5 +97,225 @@
     "require_complete_cost_inputs": true,
     "block_stale_inventory": true,
     "_notes": "Report-only by default: every deal gets buy_now_blockers / buy_now_gate_pass but decisions change only when enforce_buy_now_gate is true."
+  },
+  "inbound_shipping": {
+    "_note": "What YOU pay a store to ship an order to you. null = unknown (counted as 0 and flagged missing_inputs). flat_usd = shipping for one order; per_additional_usd = extra per record beyond the first; free_over_usd = order subtotal at/above which shipping is free. One order from one store pays shipping ONCE, so combined orders can cross free_over_usd. Fill these in from each store's shipping policy; nothing here is guessed.",
+    "default": {
+      "flat_usd": null,
+      "per_additional_usd": 0.0,
+      "free_over_usd": null
+    },
+    "providers": {
+      "Rollin Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Rollin Preorders": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Sound of Vinyl": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "uDiscover Music": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Fearless Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Fearless Vinyl": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Rise Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Rise All": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Brooklyn Vegan": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Revolver": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Newbury Comics": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Newbury Preorders": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Craft Recordings": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "MNRK Heavy": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Equal Vision": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Rhino": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Interscope Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "SharpTone Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Rock Metal Fan Nation": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "RMFN All": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Sumerian Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Solid State Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Solid State Vinyl": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Pure Noise Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Hopeless Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Hopeless Shopify": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Pirates Press Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Smartpunk Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Spinefarm Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "InVogue Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Thriller Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "UNFD": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Merchbar": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Hot Topic": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Deep Discount": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Millions of Records": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "IndieMerchstore": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "IndieMerchstore Preorders": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Walmart": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Amazon": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Target": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      },
+      "Popsike": {
+        "flat_usd": null,
+        "per_additional_usd": 0.0,
+        "free_over_usd": null
+      }
+    }
   }
 }

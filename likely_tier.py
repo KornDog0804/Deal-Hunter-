@@ -3,11 +3,11 @@
 cannot be verified from a retail listing. Value it conservatively at the FLOOR: the lowest
 current asking price across the plausible pressings. Pure functions, no network.
 
-A floor is an estimate of what the cheapest comparable copy is listed for. It is not a sold
+The Lowest Asking Price Estimate is what the cheapest comparable copy is listed for. It is not a sold
 price and not a verified pressing, so a Likely deal can never earn BUY NOW.
 """
 
-LIKELY_LABEL = "Likely - pressing unverified; floor estimate (lowest Discogs ask)"
+LIKELY_LABEL = "Lowest Asking Price Estimate - pressing unverified (not a guaranteed resale value)"
 WIDE_SPREAD = 2.0          # priciest/cheapest ask ratio above which we flag "prices vary widely"
 MAX_TIED_LOOKUPS = 4       # cap extra API calls per ambiguous pressing
 
