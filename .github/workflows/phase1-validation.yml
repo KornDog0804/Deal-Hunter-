@@ -57,9 +57,12 @@ jobs:
       - name: Validate against live Discogs (strict matcher, no legacy caches)
         env:
           DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           ARGS="--out validation_out --max-minutes ${{ inputs.max_minutes || '300' }}"
           LIMIT="${{ github.event_name == 'push' && '20' || inputs.limit }}"
+          # a push whose commit message contains [full] runs the whole set (resumable) instead of 20
+          if [[ "$COMMIT_MSG" == *"[full]"* ]]; then LIMIT=""; fi
           if [ -n "$LIMIT" ]; then ARGS="$ARGS --limit $LIMIT"; fi
           python scripts/phase1_validation.py $ARGS
 
