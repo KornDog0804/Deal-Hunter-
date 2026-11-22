@@ -5285,6 +5285,44 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Olivia Rodrigo",
+    "title": "Guts Vinyl LP Hot Topic Exclusive",
+    "raw_title": "Olivia Rodrigo - Guts Vinyl LP Hot Topic Exclusive",
+    "price": 23.03,
+    "source": "Hot Topic",
+    "source_type": "html_store",
+    "link": "https://www.hottopic.com/product/olivia-rodrigo---guts-vinyl-lp-hot-topic-exclusive/30802399.html",
+    "image": "https://cdn.media.amplience.net/s/hottopic/30810695_hi?h=630",
+    "score": 58,
+    "stage2_score": 58,
+    "quality": "watch",
+    "signals": [
+      "exclusive",
+      "under-$25"
+    ],
+    "release_key": "olivia rodrigo::guts hot topic exclusive",
+    "version": "exclusive",
+    "format": "vinyl",
+    "buyer_score": 81,
+    "inventory_lane": "Bread & Butter",
+    "customer_lanes": [
+      "Casual Nostalgia Buyer",
+      "Collector",
+      "Gift Buyer",
+      "Pop / Indie Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "High Traffic",
+    "why_buy": "Bread & Butter, strong dollar margin, steady mover, collector appeal, buy now",
+    "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "Blueprints (5 Yr Anniversary Edition)",
     "title": "Turquoise/Grey Marble Vinyl",
     "raw_title": "Blueprints (5 Yr Anniversary Edition) - Turquoise/Grey Marble Vinyl",

@@ -440,11 +440,20 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-  -> retry 1/2 for https://upcomingvinyl.com/this-week | The read operation timed out
-  -> retry 2/2 for https://upcomingvinyl.com/this-week | The read operation timed out
-[UpcomingVinyl] Fetch failed: The read operation timed out
-[UpcomingVinyl] 0 whitelist matches saved to upcoming_releases.json
-[BuySignals] 188 qualified signals saved
+[UpcomingVinyl] Got 444044 bytes
+[UpcomingVinyl] Found 503 raw record URLs
+[UpcomingVinyl] MATCH: Dayseeker | Sleeptalk
+[UpcomingVinyl] MATCH: Linkin Park | Living Things Red Smoke
+[UpcomingVinyl] MATCH: Pimp C | Pimpalation 20th Anniversary
+[UpcomingVinyl] MATCH: System Of A Down | Toxicity
+[UpcomingVinyl] MATCH: System Of A Down | Toxicity
+[UpcomingVinyl] MATCH: Thrice | Major Minor 15th Anniversary Tri Color
+[UpcomingVinyl] MATCH: Thrice | The Alchemy Index Vols I Ii Fire Water Eco Mix
+[UpcomingVinyl] MATCH: Thrice | The Alchemy Index Vols Iii Iv Air Earth Eco Mix
+[UpcomingVinyl] MATCH: Thrice | To Be Everywhere Is To Be Nowhere Lenticular Cover
+[UpcomingVinyl] Total Korndog matches: 9
+[UpcomingVinyl] 9 whitelist matches saved to upcoming_releases.json
+[BuySignals] 189 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
