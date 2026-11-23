@@ -1012,43 +1012,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "DETHKLOK ‘ARMY OF THE DOOMSTAR' 2LP (Exclusive",
-    "title": "Limited to 300 each, Various Color Vinyl)",
-    "raw_title": "DETHKLOK ‘ARMY OF THE DOOMSTAR' 2LP (Exclusive - Limited to 300 each, Various Color Vinyl)",
-    "price": 49.99,
-    "source": "Brooklyn Vegan",
-    "source_type": "shopify_store",
-    "link": "https://shop.brooklynvegan.com/products/dethklok-army-of-the-doomstar-2lp-exclusive-only-300-made-each-various-color-vinyl",
-    "image": "https://cdn.shopify.com/s/files/1/0521/6023/3669/files/DK_Doomstar_Choose.png?v=1792768161",
-    "score": 68,
-    "stage2_score": 68,
-    "quality": "watch",
-    "signals": [
-      "exclusive",
-      "limited",
-      "2lp"
-    ],
-    "release_key": "dethklok army of the doomstar exclusive::limited to 300 each various color",
-    "version": "exclusive limited 2lp",
-    "format": "vinyl",
-    "buyer_score": 100,
-    "inventory_lane": "Bread & Butter",
-    "customer_lanes": [
-      "Collector",
-      "Gift Buyer"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "High Traffic",
-    "why_buy": "Bread & Butter, strong dollar margin, collector appeal, easy shelf appeal, buy now",
-    "shelf_placement": "Main Floor",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "FEAR FACTORY 'ROBOTICIST' 2LP (Exclusive",
     "title": "Limited to 300, Red \"Detonizer\" Vinyl)",
     "raw_title": "FEAR FACTORY 'ROBOTICIST' 2LP (Exclusive - Limited to 300, Red \"Detonizer\" Vinyl)",
@@ -5104,6 +5067,43 @@
     "discogs_num_for_sale": 0
   },
   {
+    "artist": "Bane",
+    "title": "Give Blood Deluxe Edition • Transparent Red W/ Black & White Splatter • Limited to 500",
+    "raw_title": "Give Blood Deluxe Edition • Transparent Red W/ Black & White Splatter • Limited to 500",
+    "price": 39.0,
+    "source": "Equal Vision",
+    "source_type": "shopify_store",
+    "link": "https://equalvision.com/products/bne0gbdxrb-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/products/900555e220c7466a9970b0dbbb843836.jpg?v=1687263312",
+    "score": 58,
+    "stage2_score": 58,
+    "quality": "watch",
+    "signals": [
+      "limited",
+      "splatter",
+      "deluxe"
+    ],
+    "release_key": "bane::give blood deluxe edition transparent red w black white splatter limited to 500",
+    "version": "limited deluxe splatter",
+    "format": "vinyl",
+    "buyer_score": 100,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Collector",
+      "Gift Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Front Table",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
     "artist": "The Cranberries",
     "title": "Wake Up And Smell The Coffee (25th Anniversary Limited Deluxe Edition) 3LP",
     "raw_title": "The Cranberries - Wake Up And Smell The Coffee (25th Anniversary Limited Deluxe Edition) 3LP",
@@ -5573,6 +5573,42 @@
     "store_fit": "High Traffic",
     "why_buy": "Bread & Butter, strong dollar margin, steady mover, collector appeal, buy now",
     "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Hole",
+    "title": "Celebrity Skin (Limited Edition Zoetrope) LP",
+    "raw_title": "Celebrity Skin (Limited Edition Zoetrope) LP",
+    "price": 35.98,
+    "source": "uDiscover Music",
+    "source_type": "shopify_store",
+    "link": "https://shop.udiscovermusic.com/products/hole-celebrity-skin-limited-edition-zoetrope-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0061/6484/0518/files/HOLECELEBRITYSKIN1LPZOETROPEPACKSHOT199957752688_1000x1000_0d7e55d1-8422-47eb-b350-7bb82cc8d12b.png?v=1784293255",
+    "score": 56,
+    "stage2_score": 56,
+    "quality": "watch",
+    "signals": [
+      "limited",
+      "zoetrope"
+    ],
+    "release_key": "hole::celebrity skin limited edition zoetrope",
+    "version": "limited zoetrope",
+    "format": "vinyl",
+    "buyer_score": 100,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Collector",
+      "Gift Buyer"
+    ],
+    "decision": "BUY NOW",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
+    "shelf_placement": "Front Table",
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0
@@ -6807,42 +6843,6 @@
     "discogs_num_for_sale": 0
   },
   {
-    "artist": "Quicksand",
-    "title": "Bring On The Psychics • Pink & Blue Marble LP • Limited to 500",
-    "raw_title": "Bring On The Psychics • Pink & Blue Marble LP • Limited to 500",
-    "price": 30.0,
-    "source": "Equal Vision",
-    "source_type": "shopify_store",
-    "link": "https://equalvision.com/products/qsndbotppb-lp",
-    "image": "https://cdn.shopify.com/s/files/1/0465/3940/7526/files/0fa0e00efe9f4c4bb4a8fe5b0893cbc1_1.jpg?v=1787683349",
-    "score": 55,
-    "stage2_score": 55,
-    "quality": "watch",
-    "signals": [
-      "limited",
-      "marble",
-      "under-$30"
-    ],
-    "release_key": "quicksand::bring on the psychics pink blue marble limited to 500",
-    "version": "limited marble",
-    "format": "vinyl",
-    "buyer_score": 95,
-    "inventory_lane": "Trend / Hype",
-    "customer_lanes": [
-      "Collector"
-    ],
-    "decision": "BUY NOW",
-    "recommended_qty": 0,
-    "sale_price": 0,
-    "margin_dollars": 0,
-    "store_fit": "Attention Grabber",
-    "why_buy": "Trend / Hype, strong dollar margin, collector appeal, buy now",
-    "shelf_placement": "Front Table",
-    "discogs_mint_price": 0,
-    "discogs_lowest": 0,
-    "discogs_num_for_sale": 0
-  },
-  {
     "artist": "Forbidden",
     "title": "Forbidden (Indie Exclusive Clear Vinyl)",
     "raw_title": "Forbidden - Forbidden (Indie Exclusive Clear Vinyl)",
@@ -6874,6 +6874,42 @@
     "store_fit": "High Traffic",
     "why_buy": "Bread & Butter, strong dollar margin, collector appeal, buy now",
     "shelf_placement": "Main Floor",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  {
+    "artist": "Heaven Let Them Die",
+    "title": "Wine Deluxe Marble LP",
+    "raw_title": "Heaven Let Them Die - Wine Deluxe Marble LP",
+    "price": 17.25,
+    "source": "Pure Noise Records",
+    "source_type": "merchnow_store",
+    "link": "https://purenoise.merchnow.com/products/counhltdwm-lp",
+    "image": "https://cdn.shopify.com/s/files/1/0411/2760/8485/files/671afc6b789741c9bd71c81867ea729e.jpg?v=1787669793",
+    "score": 55,
+    "stage2_score": 55,
+    "quality": "watch",
+    "signals": [
+      "marble",
+      "deluxe",
+      "under-$20"
+    ],
+    "release_key": "heaven let them die::wine deluxe marble",
+    "version": "deluxe marble",
+    "format": "vinyl",
+    "buyer_score": 65,
+    "inventory_lane": "Trend / Hype",
+    "customer_lanes": [
+      "Gift Buyer"
+    ],
+    "decision": "BUY LIGHT",
+    "recommended_qty": 0,
+    "sale_price": 0,
+    "margin_dollars": 0,
+    "store_fit": "Attention Grabber",
+    "why_buy": "Trend / Hype, solid margin, buy light",
+    "shelf_placement": "Front Table",
     "discogs_mint_price": 0,
     "discogs_lowest": 0,
     "discogs_num_for_sale": 0

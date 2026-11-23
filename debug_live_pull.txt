@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 119
+uDiscover Music: kept 121
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 90
+Rise Records: kept 89
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,21 +63,21 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 90
+Rise All: kept 89
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 116
+Brooklyn Vegan: kept 119
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 101
+Revolver: kept 105
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
@@ -115,21 +115,21 @@ Scraping: Equal Vision (shopify_store)
 ==================================================
   ✓ https://equalvision.com/products.json?limit=250 -> 250 products
 Equal Vision: 250 products via Shopify JSON
-Equal Vision: kept 101
+Equal Vision: kept 100
 
 ==================================================
 Scraping: Rhino (shopify_store)
 ==================================================
-  ✓ https://store.rhino.com/products.json?limit=250 -> 240 products
-Rhino: 240 products via Shopify JSON
-Rhino: kept 127
+  ✓ https://store.rhino.com/products.json?limit=250 -> 242 products
+Rhino: 242 products via Shopify JSON
+Rhino: kept 140
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 130
+Interscope Records: kept 132
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -182,16 +182,16 @@ Solid State Vinyl: kept 65
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
-  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 243 products
-Pure Noise Records: 243 products via Shopify JSON
-Pure Noise Records: kept 89
+  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 249 products
+Pure Noise Records: 249 products via Shopify JSON
+Pure Noise Records: kept 88
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
 ==================================================
   ✓ https://hopelessrecords.merchnow.com/products.json?limit=250 -> 250 products
 Hopeless Records: 250 products via Shopify JSON
-Hopeless Records: kept 68
+Hopeless Records: kept 69
 
 ==================================================
 Scraping: Hopeless Shopify (shopify_store)
@@ -343,8 +343,8 @@ Hot Topic: kept 12
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
 Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2565 normalized vinyl listings
+[Stage2] 2587 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9647 entries
-[Discogs] Enriching 2565 vinyl records with Mint pricing...
-[Discogs] Cache saved (9647 entries)
+[Discogs] Loaded cache with 9652 entries
+[Discogs] Enriching 2587 vinyl records with Mint pricing...
+[Discogs] Cache saved (9652 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -440,15 +440,12 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 297566 bytes
-[UpcomingVinyl] Found 336 raw record URLs
-[UpcomingVinyl] MATCH: Bleed From Within | Era
-[UpcomingVinyl] MATCH: Bleed From Within | Fracture
-[UpcomingVinyl] MATCH: Bleed From Within | Uprising
+[UpcomingVinyl] Got 344713 bytes
+[UpcomingVinyl] Found 395 raw record URLs
 [UpcomingVinyl] MATCH: The Doobie Brothers | Takin It To The Streets
-[UpcomingVinyl] Total Korndog matches: 4
-[UpcomingVinyl] 4 whitelist matches saved to upcoming_releases.json
-[BuySignals] 189 qualified signals saved
+[UpcomingVinyl] Total Korndog matches: 1
+[UpcomingVinyl] 1 whitelist matches saved to upcoming_releases.json
+[BuySignals] 190 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -456,28 +453,28 @@ SOURCE STATUS SUMMARY
   Rollin Records: 233 deals
   Rollin Preorders: 233 deals
   Sound of Vinyl: 232 deals
-  uDiscover Music: 119 deals
+  uDiscover Music: 121 deals
   Fearless Records: 84 deals
   Fearless Vinyl: 84 deals
-  Rise Records: 90 deals
-  Rise All: 90 deals
-  Brooklyn Vegan: 116 deals
-  Revolver: 101 deals
+  Rise Records: 89 deals
+  Rise All: 89 deals
+  Brooklyn Vegan: 119 deals
+  Revolver: 105 deals
   Newbury Comics: 204 deals
   Newbury Preorders: 204 deals
   Craft Recordings: 98 deals
   MNRK Heavy: 126 deals
-  Equal Vision: 101 deals
-  Rhino: 127 deals
-  Interscope Records: 130 deals
+  Equal Vision: 100 deals
+  Rhino: 140 deals
+  Interscope Records: 132 deals
   SharpTone Records: 113 deals
   Rock Metal Fan Nation: 177 deals
   RMFN All: 177 deals
   Sumerian Records: 86 deals
   Solid State Records: 65 deals
   Solid State Vinyl: 65 deals
-  Pure Noise Records: 89 deals
-  Hopeless Records: 68 deals
+  Pure Noise Records: 88 deals
+  Hopeless Records: 69 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 103 deals
   Smartpunk Records: FAILED: HTTP Error 404: Not Found
@@ -496,20 +493,20 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 116
+Brooklyn Vegan: 119
 Craft Recordings: 98
-Equal Vision: 101
+Equal Vision: 100
 Fearless Records: 84
-Hopeless Records: 68
+Hopeless Records: 69
 Hot Topic: 12
-Interscope Records: 130
+Interscope Records: 132
 MNRK Heavy: 126
 Newbury Comics: 204
 Pirates Press Records: 103
-Pure Noise Records: 89
-Revolver: 101
-Rhino: 127
-Rise Records: 90
+Pure Noise Records: 88
+Revolver: 105
+Rhino: 140
+Rise Records: 89
 Rock Metal Fan Nation: 177
 Rollin Records: 233
 SharpTone Records: 113
@@ -518,5 +515,5 @@ Sound of Vinyl: 232
 Spinefarm Records: 89
 Sumerian Records: 85
 Target: 1
-uDiscover Music: 119
+uDiscover Music: 121
 Walmart: 1
