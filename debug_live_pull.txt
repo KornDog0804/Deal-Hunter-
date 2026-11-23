@@ -182,9 +182,9 @@ Solid State Vinyl: kept 65
 ==================================================
 Scraping: Pure Noise Records (merchnow_store)
 ==================================================
-  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 249 products
-Pure Noise Records: 249 products via Shopify JSON
-Pure Noise Records: kept 90
+  ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 243 products
+Pure Noise Records: 243 products via Shopify JSON
+Pure Noise Records: kept 89
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 12
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 403: Forbidden
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 404: Not Found
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -413,14 +413,14 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2566 normalized vinyl listings
+[Stage2] 2565 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9646 entries
-[Discogs] Enriching 2566 vinyl records with Mint pricing...
-[Discogs] Cache saved (9646 entries)
+[Discogs] Loaded cache with 9647 entries
+[Discogs] Enriching 2565 vinyl records with Mint pricing...
+[Discogs] Cache saved (9647 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -440,19 +440,14 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 444650 bytes
-[UpcomingVinyl] Found 503 raw record URLs
-[UpcomingVinyl] MATCH: Dayseeker | Sleeptalk
-[UpcomingVinyl] MATCH: Linkin Park | Living Things Red Smoke
-[UpcomingVinyl] MATCH: Pimp C | Pimpalation 20th Anniversary
-[UpcomingVinyl] MATCH: System Of A Down | Toxicity
-[UpcomingVinyl] MATCH: System Of A Down | Toxicity
-[UpcomingVinyl] MATCH: Thrice | Major Minor 15th Anniversary Tri Color
-[UpcomingVinyl] MATCH: Thrice | The Alchemy Index Vols I Ii Fire Water Eco Mix
-[UpcomingVinyl] MATCH: Thrice | The Alchemy Index Vols Iii Iv Air Earth Eco Mix
-[UpcomingVinyl] MATCH: Thrice | To Be Everywhere Is To Be Nowhere Lenticular Cover
-[UpcomingVinyl] Total Korndog matches: 9
-[UpcomingVinyl] 9 whitelist matches saved to upcoming_releases.json
+[UpcomingVinyl] Got 297566 bytes
+[UpcomingVinyl] Found 336 raw record URLs
+[UpcomingVinyl] MATCH: Bleed From Within | Era
+[UpcomingVinyl] MATCH: Bleed From Within | Fracture
+[UpcomingVinyl] MATCH: Bleed From Within | Uprising
+[UpcomingVinyl] MATCH: The Doobie Brothers | Takin It To The Streets
+[UpcomingVinyl] Total Korndog matches: 4
+[UpcomingVinyl] 4 whitelist matches saved to upcoming_releases.json
 [BuySignals] 189 qualified signals saved
 
 ==================================================
@@ -481,7 +476,7 @@ SOURCE STATUS SUMMARY
   Sumerian Records: 86 deals
   Solid State Records: 65 deals
   Solid State Vinyl: 65 deals
-  Pure Noise Records: 90 deals
+  Pure Noise Records: 89 deals
   Hopeless Records: 68 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 103 deals
@@ -492,7 +487,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 12 deals
-  Deep Discount: FAILED: HTTP Error 403: Forbidden
+  Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -511,7 +506,7 @@ Interscope Records: 130
 MNRK Heavy: 126
 Newbury Comics: 204
 Pirates Press Records: 103
-Pure Noise Records: 90
+Pure Noise Records: 89
 Revolver: 101
 Rhino: 127
 Rise Records: 90
