@@ -105512,5 +105512,100 @@
     "discogs_num_for_sale": 2,
     "discogs_have": 380,
     "discogs_want": 413
+  },
+  "new found glory nothing gold can stay lp exclusive|limited to 300 transparent tan w black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.244,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "orchard|electric wizard witchcult today 2": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.7711,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Electric Wizard (2)",
+    "discogs_title": "Witchcult Today",
+    "discogs_release_id": 2485657,
+    "discogs_url": "https://www.discogs.com/release/2485657-Electric-Wizard-Witchcult-Today",
+    "discogs_mint_price": 122.1,
+    "discogs_lowest": 122.1,
+    "discogs_num_for_sale": 7,
+    "discogs_have": 1733,
+    "discogs_want": 653
+  },
+  "unknown artist|the antidote 18 x 12 unframed with custom envelope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|toxins in my bloodstream 18 x 12 unframed with custom envelope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|head full of poison 18 x 12 unframed with custom envelope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|heart full of doubt 18 x 12 framed with custom envelope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|unraveled 18 x 12 framed with custom envelope": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|carnaval de luz u2 x siriusxm deep ocean marble": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|carnaval de luz green marble": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6656,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "around the world and back 10th anniversary|rainbow road marble": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3449,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
   }
 }
