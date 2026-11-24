@@ -29,7 +29,7 @@ Scraping: uDiscover Music (shopify_store)
 ==================================================
   ✓ https://shop.udiscovermusic.com/products.json?limit=250 -> 250 products
 uDiscover Music: 250 products via Shopify JSON
-uDiscover Music: kept 121
+uDiscover Music: kept 119
 
 ==================================================
 Scraping: Fearless Records (shopify_store)
@@ -53,7 +53,7 @@ Scraping: Rise Records (shopify_store)
 ==================================================
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise Records: 250 products via Shopify JSON
-Rise Records: kept 89
+Rise Records: kept 91
 
 ==================================================
 Scraping: Rise All (shopify_store)
@@ -63,28 +63,28 @@ Scraping: Rise All (shopify_store)
   ✗ https://riserecords.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://riserecords.com/products.json?limit=250 -> 250 products
 Rise All: 250 products via Shopify JSON
-Rise All: kept 89
+Rise All: kept 91
 
 ==================================================
 Scraping: Brooklyn Vegan (shopify_store)
 ==================================================
   ✓ https://shop.brooklynvegan.com/products.json?limit=250 -> 250 products
 Brooklyn Vegan: 250 products via Shopify JSON
-Brooklyn Vegan: kept 119
+Brooklyn Vegan: kept 88
 
 ==================================================
 Scraping: Revolver (shopify_store)
 ==================================================
   ✓ https://shop.revolvermag.com/products.json?limit=250 -> 250 products
 Revolver: 250 products via Shopify JSON
-Revolver: kept 105
+Revolver: kept 83
 
 ==================================================
 Scraping: Newbury Comics (shopify_store)
 ==================================================
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Comics: 250 products via Shopify JSON
-Newbury Comics: kept 204
+Newbury Comics: kept 203
 
 ==================================================
 Scraping: Newbury Preorders (shopify_store)
@@ -94,7 +94,7 @@ Scraping: Newbury Preorders (shopify_store)
   ✗ https://www.newburycomics.com/collections/pre-orders/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://www.newburycomics.com/products.json?limit=250 -> 250 products
 Newbury Preorders: 250 products via Shopify JSON
-Newbury Preorders: kept 204
+Newbury Preorders: kept 203
 
 ==================================================
 Scraping: Craft Recordings (shopify_store)
@@ -122,14 +122,14 @@ Scraping: Rhino (shopify_store)
 ==================================================
   ✓ https://store.rhino.com/products.json?limit=250 -> 242 products
 Rhino: 242 products via Shopify JSON
-Rhino: kept 140
+Rhino: kept 141
 
 ==================================================
 Scraping: Interscope Records (shopify_store)
 ==================================================
   ✓ https://interscope.com/products.json?limit=250 -> 250 products
 Interscope Records: 250 products via Shopify JSON
-Interscope Records: kept 132
+Interscope Records: kept 138
 
 ==================================================
 Scraping: SharpTone Records (shopify_store)
@@ -184,7 +184,7 @@ Scraping: Pure Noise Records (merchnow_store)
 ==================================================
   ✓ https://purenoise.merchnow.com/products.json?limit=250 -> 249 products
 Pure Noise Records: 249 products via Shopify JSON
-Pure Noise Records: kept 88
+Pure Noise Records: kept 89
 
 ==================================================
 Scraping: Hopeless Records (merchnow_store)
@@ -343,9 +343,9 @@ Hot Topic: kept 12
 ==================================================
 Scraping: Deep Discount (html_store)
 ==================================================
-  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 404: Not Found
-Deep Discount: HTML source failed | HTTP Error 404: Not Found
+  -> retry 1/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+  -> retry 2/2 for https://www.deepdiscount.com/vinyl-records | HTTP Error 403: Forbidden
+Deep Discount: HTML source failed | HTTP Error 403: Forbidden
 
 ==================================================
 Scraping: Millions of Records (html_store)
@@ -406,21 +406,21 @@ Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v
   -> retry 1/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 2/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
   -> retry 3/3 for https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
-Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 435: Unknown Error
+Target: failed https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&keyword=vinyl+records&count=24&offset=24&pricing_store_id=911&visitor_id=deal_hunter | HTTP Error 400: Bad Request
 Target: found 0 candidate vinyl items
 Target: found 0 candidate vinyl items
 Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2587 normalized vinyl listings
+[Stage2] 2541 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
-[Discogs] Loaded cache with 9652 entries
-[Discogs] Enriching 2587 vinyl records with Mint pricing...
-[Discogs] Cache saved (9652 entries)
+[Discogs] Loaded cache with 9696 entries
+[Discogs] Enriching 2541 vinyl records with Mint pricing...
+[Discogs] Cache saved (9696 entries)
 [Discogs] Enrichment complete!
 
 ==================================================
@@ -445,7 +445,7 @@ SCRAPING UPCOMING VINYL RELEASES
 [UpcomingVinyl] MATCH: The Doobie Brothers | Takin It To The Streets
 [UpcomingVinyl] Total Korndog matches: 1
 [UpcomingVinyl] 1 whitelist matches saved to upcoming_releases.json
-[BuySignals] 190 qualified signals saved
+[BuySignals] 186 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -453,27 +453,27 @@ SOURCE STATUS SUMMARY
   Rollin Records: 233 deals
   Rollin Preorders: 233 deals
   Sound of Vinyl: 232 deals
-  uDiscover Music: 121 deals
+  uDiscover Music: 119 deals
   Fearless Records: 84 deals
   Fearless Vinyl: 84 deals
-  Rise Records: 89 deals
-  Rise All: 89 deals
-  Brooklyn Vegan: 119 deals
-  Revolver: 105 deals
-  Newbury Comics: 204 deals
-  Newbury Preorders: 204 deals
+  Rise Records: 91 deals
+  Rise All: 91 deals
+  Brooklyn Vegan: 88 deals
+  Revolver: 83 deals
+  Newbury Comics: 203 deals
+  Newbury Preorders: 203 deals
   Craft Recordings: 98 deals
   MNRK Heavy: 126 deals
   Equal Vision: 100 deals
-  Rhino: 140 deals
-  Interscope Records: 132 deals
+  Rhino: 141 deals
+  Interscope Records: 138 deals
   SharpTone Records: 113 deals
   Rock Metal Fan Nation: 177 deals
   RMFN All: 177 deals
   Sumerian Records: 86 deals
   Solid State Records: 65 deals
   Solid State Vinyl: 65 deals
-  Pure Noise Records: 88 deals
+  Pure Noise Records: 89 deals
   Hopeless Records: 69 deals
   Hopeless Shopify: FAILED: <urlopen error [Errno -2] Name or service not known>
   Pirates Press Records: 103 deals
@@ -484,7 +484,7 @@ SOURCE STATUS SUMMARY
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
   Hot Topic: 12 deals
-  Deep Discount: FAILED: HTTP Error 404: Not Found
+  Deep Discount: FAILED: HTTP Error 403: Forbidden
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
   IndieMerchstore Preorders: 0 deals
@@ -493,20 +493,20 @@ SOURCE STATUS SUMMARY
   Amazon: 1 catalog portal
 ----- SOURCE SUMMARY -----
 Amazon: 1
-Brooklyn Vegan: 119
+Brooklyn Vegan: 88
 Craft Recordings: 98
 Equal Vision: 100
 Fearless Records: 84
 Hopeless Records: 69
 Hot Topic: 12
-Interscope Records: 132
+Interscope Records: 138
 MNRK Heavy: 126
-Newbury Comics: 204
+Newbury Comics: 203
 Pirates Press Records: 103
-Pure Noise Records: 88
-Revolver: 105
-Rhino: 140
-Rise Records: 89
+Pure Noise Records: 89
+Revolver: 83
+Rhino: 141
+Rise Records: 91
 Rock Metal Fan Nation: 177
 Rollin Records: 233
 SharpTone Records: 113
@@ -515,5 +515,5 @@ Sound of Vinyl: 232
 Spinefarm Records: 89
 Sumerian Records: 85
 Target: 1
-uDiscover Music: 121
+uDiscover Music: 119
 Walmart: 1
