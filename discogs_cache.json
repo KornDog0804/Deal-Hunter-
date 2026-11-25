@@ -105896,5 +105896,142 @@
     "discogs_num_for_sale": 25,
     "discogs_have": 438,
     "discogs_want": 70
+  },
+  "violent nature|into hell": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7369,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "new found glory|nothing gold can stay": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "New Found Glory",
+    "discogs_title": "Nothing Gold Can Stay",
+    "discogs_release_id": 7308633,
+    "discogs_url": "https://www.discogs.com/release/7308633-New-Found-Glory-Nothing-Gold-Can-Stay",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0,
+    "discogs_have": 9,
+    "discogs_want": 136
+  },
+  "avenged sevenfold city of evil 2lp exclusive|limited to 500 purple orange w orange": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.3177,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "avenged sevenfold waking the fallen 2lp exclusive|limited to 500 white and black w white": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.4376,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "avenged sevenfold avenged sevenfold 2lp exclusive|limited to 500 white and silver w black": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.2933,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|chase this light": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7241,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|mondo": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Unknown Artist",
+    "discogs_title": "Musica Nel Mondo",
+    "discogs_release_id": 8295703,
+    "discogs_url": "https://www.discogs.com/release/8295703-Unknown-Artist-Musica-Nel-Mondo",
+    "discogs_mint_price": 76.42,
+    "discogs_lowest": 76.42,
+    "discogs_num_for_sale": 4,
+    "discogs_have": 8,
+    "discogs_want": 21
+  },
+  "unknown artist|cb4": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.8019,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Various",
+    "discogs_title": "CB4 (Original Motion Picture Soundtrack)",
+    "discogs_release_id": 184850,
+    "discogs_url": "https://www.discogs.com/release/184850-Various-CB4-Original-Motion-Picture-Soundtrack",
+    "discogs_mint_price": 20.36,
+    "discogs_lowest": 20.36,
+    "discogs_num_for_sale": 34,
+    "discogs_have": 667,
+    "discogs_want": 378
+  },
+  "unknown artist|black panther etched 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|tales from the punch bowl 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.0,
+    "discogs_match_reason": "not_found",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|antipop 2": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.6896,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "unknown artist|regatta de blanc": {
+    "discogs_found": false,
+    "discogs_match_confidence": 0.7475,
+    "discogs_match_reason": "low_confidence",
+    "discogs_url": "",
+    "discogs_mint_price": 0,
+    "discogs_lowest": 0,
+    "discogs_num_for_sale": 0
+  },
+  "meshuggah|catch thirtythree 20th anniversary": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Meshuggah",
+    "discogs_title": "Catch Thirtythree",
+    "discogs_release_id": 37103007,
+    "discogs_url": "https://www.discogs.com/release/37103007-Meshuggah-Catch-Thirtythree",
+    "discogs_mint_price": 50.0,
+    "discogs_lowest": 50.0,
+    "discogs_num_for_sale": 16,
+    "discogs_have": 799,
+    "discogs_want": 148
   }
 }
