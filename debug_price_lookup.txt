@@ -1,14 +1,12 @@
-[PriceLookup] Loaded 2570 deals
+[PriceLookup] Loaded 2566 deals
 [PriceLookup] Cache TTL: 7 days
 [PriceLookup] Min score for lookup: 45
-[PriceLookup] Eligible deals (score >= 45): 2567
-[PriceLookup] Cache entries: 9380
+[PriceLookup] Eligible deals (score >= 45): 2563
+[PriceLookup] Cache entries: 9442
 [PriceLookup] Progress: 25 lookups done...
-[Discogs] Stats error for release 36162364: HTTP Error 429: Too Many Requests
 [PriceLookup] Progress: 50 lookups done...
 [PriceLookup] Progress: 75 lookups done...
 [PriceLookup] Progress: 100 lookups done...
-[Discogs] Rate limited on price suggestions, sleeping 5s...
 [PriceLookup] Progress: 125 lookups done...
 [PriceLookup] Progress: 150 lookups done...
 [PriceLookup] Progress: 175 lookups done...
@@ -23,8 +21,8 @@
 
 [PriceLookup] Summary:
   Lookups performed: 350
-  Cache hits: 1479
+  Cache hits: 2147
   Skipped (low score): 0
-  Deals enriched with real prices: 807
+  Deals enriched with real prices: 1226
 [PriceLookup] Updated /home/runner/work/Deal-Hunter-/Deal-Hunter-/live_deals.json
-[PriceLookup] Cache saved (9442 entries)
+[PriceLookup] Cache saved (9474 entries)
