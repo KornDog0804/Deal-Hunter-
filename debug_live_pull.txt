@@ -108,7 +108,7 @@ Scraping: MNRK Heavy (shopify_store)
 ==================================================
   ✓ https://mnrkheavy.com/products.json?limit=250 -> 250 products
 MNRK Heavy: 250 products via Shopify JSON
-MNRK Heavy: kept 126
+MNRK Heavy: kept 127
 
 ==================================================
 Scraping: Equal Vision (shopify_store)
@@ -143,7 +143,7 @@ Scraping: Rock Metal Fan Nation (shopify_store)
 ==================================================
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 Rock Metal Fan Nation: 250 products via Shopify JSON
-Rock Metal Fan Nation: kept 182
+Rock Metal Fan Nation: kept 180
 
 ==================================================
 Scraping: RMFN All (shopify_store)
@@ -153,7 +153,7 @@ Scraping: RMFN All (shopify_store)
   ✗ https://rmfnvinyl.com/collections/all/products.json/products.json?limit=250 -> HTTP Error 404: Not Found
   ✓ https://rmfnvinyl.com/products.json?limit=250 -> 250 products
 RMFN All: 250 products via Shopify JSON
-RMFN All: kept 182
+RMFN All: kept 180
 
 ==================================================
 Scraping: Sumerian Records (shopify_store)
@@ -338,7 +338,7 @@ Merchbar: HTML source failed | HTTP Error 429: Too Many Requests
 Scraping: Hot Topic (html_store)
 ==================================================
 Hot Topic: found 42 HTML links
-Hot Topic: kept 13
+Hot Topic: kept 12
 
 ==================================================
 Scraping: Deep Discount (html_store)
@@ -413,13 +413,13 @@ Target: No vinyl products found, adding catalog portal fallback
 Target: kept 1
 Amazon: exposing 1 affiliate vinyl catalog portal
 [FinalFilter] merchandise rejected: Sumerian Records | Sumerian Records - Slip Mat
-[Stage2] 2568 normalized vinyl listings
+[Stage2] 2566 normalized vinyl listings
 
 ==================================================
 ENRICHING WITH DISCOGS MINT PRICING
 ==================================================
 [Discogs] Loaded cache with 9740 entries
-[Discogs] Enriching 2568 vinyl records with Mint pricing...
+[Discogs] Enriching 2566 vinyl records with Mint pricing...
 [Discogs] Cache saved (9740 entries)
 [Discogs] Enrichment complete!
 
@@ -440,12 +440,12 @@ SCRAPING r/VINYLRELEASES
 ==================================================
 SCRAPING UPCOMING VINYL RELEASES
 ==================================================
-[UpcomingVinyl] Got 346774 bytes
+[UpcomingVinyl] Got 346642 bytes
 [UpcomingVinyl] Found 398 raw record URLs
 [UpcomingVinyl] MATCH: The Doobie Brothers | Takin It To The Streets
 [UpcomingVinyl] Total Korndog matches: 1
 [UpcomingVinyl] 1 whitelist matches saved to upcoming_releases.json
-[BuySignals] 187 qualified signals saved
+[BuySignals] 185 qualified signals saved
 
 ==================================================
 SOURCE STATUS SUMMARY
@@ -463,13 +463,13 @@ SOURCE STATUS SUMMARY
   Newbury Comics: 203 deals
   Newbury Preorders: 203 deals
   Craft Recordings: 97 deals
-  MNRK Heavy: 126 deals
+  MNRK Heavy: 127 deals
   Equal Vision: 100 deals
   Rhino: 146 deals
   Interscope Records: 141 deals
   SharpTone Records: 113 deals
-  Rock Metal Fan Nation: 182 deals
-  RMFN All: 182 deals
+  Rock Metal Fan Nation: 180 deals
+  RMFN All: 180 deals
   Sumerian Records: 86 deals
   Solid State Records: 65 deals
   Solid State Vinyl: 65 deals
@@ -483,7 +483,7 @@ SOURCE STATUS SUMMARY
   Thriller Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   UNFD: FAILED: <urlopen error [Errno -2] Name or service not known>
   Merchbar: FAILED: HTTP Error 429: Too Many Requests
-  Hot Topic: 13 deals
+  Hot Topic: 12 deals
   Deep Discount: FAILED: HTTP Error 404: Not Found
   Millions of Records: FAILED: <urlopen error [Errno -2] Name or service not known>
   IndieMerchstore: 0 deals
@@ -498,16 +498,16 @@ Craft Recordings: 97
 Equal Vision: 100
 Fearless Records: 84
 Hopeless Records: 69
-Hot Topic: 13
+Hot Topic: 12
 Interscope Records: 141
-MNRK Heavy: 126
+MNRK Heavy: 127
 Newbury Comics: 203
 Pirates Press Records: 103
 Pure Noise Records: 88
 Revolver: 90
 Rhino: 146
 Rise Records: 91
-Rock Metal Fan Nation: 182
+Rock Metal Fan Nation: 180
 Rollin Records: 233
 SharpTone Records: 113
 Solid State Records: 65
