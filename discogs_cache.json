@@ -106033,5 +106033,61 @@
     "discogs_num_for_sale": 16,
     "discogs_have": 799,
     "discogs_want": 148
+  },
+  "judas priest|live in the usa 1984": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Judas Priest",
+    "discogs_title": "Judas Priest Live In The USA 1984",
+    "discogs_release_id": 37908987,
+    "discogs_url": "https://www.discogs.com/release/37908987-Judas-Priest-Judas-Priest-Live-In-The-USA-1984",
+    "discogs_mint_price": 27.21,
+    "discogs_lowest": 27.21,
+    "discogs_num_for_sale": 1,
+    "discogs_have": 29,
+    "discogs_want": 3
+  },
+  "cake|pressure": {
+    "discogs_found": true,
+    "discogs_match_confidence": 0.9456,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "Cake",
+    "discogs_title": "Pressure Chief",
+    "discogs_release_id": 30088206,
+    "discogs_url": "https://www.discogs.com/release/30088206-Cake-Pressure-Chief",
+    "discogs_mint_price": 22.0,
+    "discogs_lowest": 22.0,
+    "discogs_num_for_sale": 39,
+    "discogs_have": 1757,
+    "discogs_want": 158
+  },
+  "311|music": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "311",
+    "discogs_title": "Music",
+    "discogs_release_id": 28471783,
+    "discogs_url": "https://www.discogs.com/release/28471783-311-Music",
+    "discogs_mint_price": 24.0,
+    "discogs_lowest": 24.0,
+    "discogs_num_for_sale": 21,
+    "discogs_have": 554,
+    "discogs_want": 101
+  },
+  "devildriver|pray for villains": {
+    "discogs_found": true,
+    "discogs_match_confidence": 1.0,
+    "discogs_match_reason": "matched",
+    "discogs_artist": "DevilDriver",
+    "discogs_title": "Pray For Villains",
+    "discogs_release_id": 12607876,
+    "discogs_url": "https://www.discogs.com/release/12607876-DevilDriver-Pray-For-Villains",
+    "discogs_mint_price": 22.98,
+    "discogs_lowest": 22.98,
+    "discogs_num_for_sale": 9,
+    "discogs_have": 670,
+    "discogs_want": 122
   }
 }
