@@ -1,0 +1,81 @@
+Existing live vinyl: 2569
+Existing collectibles: 391
+Existing mini vinyl: 22
+  ❌ LIVE SOLD OUT: Rollin Records | Mitski - Retired From Sad, New Career in Business (Colored Vinyl)
+  ❌ LIVE SOLD OUT: Newbury Comics | KPop Demon Hunters (Soundtrack from the Netflix Film) - Saja Boys Edition LP (RSD 2026)
+  ❌ LIVE SOLD OUT: Newbury Comics | KPop Demon Hunters (Soundtrack from the Netflix Film) - HUNTR/X Edition LP (RSD 2026)
+  ❌ LIVE SOLD OUT: Brad's Toys | Funko Pop! Five Nights at Freddy's Set of 4 ENNARD, TOY FREDDY, TOY BONNIE, TOY CHICA (PRE-ORDER)
+
+Existing Olivia matches: 7
+
+===== FANGAMER =====
+  https://www.fangamer.com/collections/vinyl/products.json?limit=250 -> 54 products
+  https://www.fangamer.com/collections/undertale/products.json?limit=250 -> 134 products
+  https://www.fangamer.com/collections/deltarune/products.json?limit=250 -> 94 products
+Fangamer Olivia hits: 205
+
+===== THE LIVING TOMBSTONE =====
+  https://thelivingtombstone.com/collections/all/products.json?limit=250 -> 48 products
+Living Tombstone available products: 44
+
+===== GOOD SMILE US =====
+  https://www.goodsmileus.com/collections/hatsune-miku/products.json?limit=250&page=1 -> 158 products
+  https://www.goodsmileus.com/collections/hatsune-miku-1/products.json?limit=250&page=1 -> 142 products
+Good Smile US AVAILABLE HITS: 44
+
+===== MATTEL CREATIONS =====
+  https://creations.mattel.com/collections/monster-high/products.json?limit=250&page=1 -> 245 products
+Mattel Creations AVAILABLE HITS: 143
+
+===== MATTEL CREATIONS =====
+  https://creations.mattel.com/collections/kpop-demon-hunters/products.json?limit=250&page=1 -> 25 products
+Mattel Creations AVAILABLE HITS: 6
+
+===== YOUTOOZ =====
+  https://youtooz.com/collections/fnaf/products.json?limit=250&page=1 -> 250 products
+  https://youtooz.com/collections/fnaf/products.json?limit=250&page=2 -> 22 products
+Youtooz AVAILABLE HITS: 145
+
+===== YOUTOOZ =====
+  https://youtooz.com/collections/hatsune-miku/products.json?limit=250&page=1 -> 37 products
+Youtooz AVAILABLE HITS: 13
+
+===== MATTEL CREATIONS =====
+  https://creations.mattel.com/collections/pokemon/products.json?limit=250&page=1 -> 19 products
+Mattel Creations AVAILABLE HITS: 0
+
+===== POKEVAULT =====
+  Shopify fetch failed: https://pokevault.com/products.json?limit=250&page=1 | HTTP Error 404: Not Found
+  https://pokevault.com/products.json?limit=250&page=1 -> 0 products
+Pokevault AVAILABLE HITS: 0
+
+===== POKEMON TRAINER CARDS =====
+  Nemona: 4 priced prints
+  Drayton: 4 priced prints
+
+==================================================
+🎄 OLIVIA CHRISTMAS RADAR
+==================================================
+TOTAL AVAILABLE HITS: 615
+DELTARUNE: 93
+UNDERTALE: 121
+HATSUNE MIKU: 57
+THE LIVING TOMBSTONE: 44
+MITSKI: 1
+POKEMON: 9
+FIVE NIGHTS AT FREDDY'S: 148
+MONSTER HIGH: 143
+KPOP DEMON HUNTERS: 8
+
+BY SOURCE:
+  Fangamer: 205
+  Youtooz: 158
+  Mattel Creations: 149
+  Good Smile US: 44
+  The Living Tombstone: 44
+  TCGplayer (market price): 8
+  Brad's Toys: 6
+  Rollin Records: 1
+
+OUTPUT:
+/home/runner/work/Deal-Hunter-/Deal-Hunter-/olivia_deals.json
