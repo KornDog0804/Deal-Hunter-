@@ -39,3 +39,18 @@ def test_figure_sources_tag_pokemon_and_survive_missing_collections(monkeypatch)
     monkeypatch.setattr(op, "shopify_collection_rows", fake)
     assert op.pokemon_figure_rows() == []
     assert calls == [("Good Smile US", "POKEMON", 3), ("Youtooz", "POKEMON", 1)]
+
+
+def test_tcgdex_fallback_when_main_api_down():
+    def fake(url):
+        if "pokemontcg.io" in url:
+            raise OSError("502")
+        if url.endswith("cards?name=Nemona"):
+            return [{"id": "sv02-090", "name": "Nemona"}, {"id": "x", "name": "Nemona's Pikachu"}]
+        if url.endswith("cards?name=Drayton"):
+            return []
+        return {"name": "Nemona", "localId": "090", "rarity": "Illustration Rare", "image": "https://a/b",
+                "set": {"name": "Paldea Evolved", "cardCount": {"official": 93}},
+                "pricing": {"tcgplayer": {"holofoil": {"marketPrice": 4.5}}}}
+    rows = op.pokemon_trainer_card_rows(fake)
+    assert len(rows) == 1 and rows[0]["price"] == 4.5 and "090/93" in rows[0]["title"] and rows[0]["chase"]

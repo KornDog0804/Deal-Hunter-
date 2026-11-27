@@ -4,6 +4,7 @@ from pathlib import Path
 import html
 import json
 import re
+import time
 import unicodedata
 import urllib.request
 import urllib.parse
@@ -1462,6 +1463,56 @@ def pokemon_card_row(card, trainer):
     }
 
 
+def _retry(fetcher, url, tries=3):
+    last = None
+    for i in range(tries):
+        try:
+            return fetcher(url)
+        except Exception as exc:
+            last = exc
+            time.sleep(0 if fetcher is not fetch_json else 3 * (i + 1))
+    raise last
+
+
+TCGDEX = "https://api.tcgdex.net/v2/en/cards"
+
+
+def tcgdex_rows(trainer, fetcher=None):
+    """Fallback source (TCGdex): exact-name trainer cards with TCGplayer/Cardmarket pricing when present."""
+    fetcher = fetcher or fetch_json
+    rows = []
+    for brief in _retry(fetcher, "%s?name=%s" % (TCGDEX, urllib.parse.quote(trainer))) or []:
+        if normalized(brief.get("name", "")) != normalized(trainer):
+            continue
+        d = _retry(fetcher, "%s/%s" % (TCGDEX, urllib.parse.quote(str(brief.get("id")))))
+        pr = (d.get("pricing") or {}).get("tcgplayer") or {}
+        best = None
+        for variant, p in pr.items():
+            if isinstance(p, dict):
+                val = price(p.get("marketPrice") or p.get("midPrice"))
+                if val and (best is None or val < best[1]):
+                    best = (variant, val)
+        if not best:
+            continue
+        cset = d.get("set") or {}
+        num = "%s/%s" % (d.get("localId"), (cset.get("cardCount") or {}).get("official")) if (cset.get("cardCount") or {}).get("official") else str(d.get("localId"))
+        title = clean("%s - %s %s (%s, %s)" % (d.get("name"), cset.get("name"), num, d.get("rarity") or "card", best[0]))
+        q = urllib.parse.quote_plus("%s %s %s" % (d.get("name"), cset.get("name"), d.get("localId")))
+        img = (d.get("image") or "")
+        rows.append({
+            "category": "OLIVIA", "title": title, "raw_title": title, "artist": "",
+            "source": "TCGplayer (market price)", "source_type": "olivia_cards",
+            "product_type": "CARDS", "franchise": "POKEMON", "character": trainer.upper(),
+            "price": best[1], "compare_at": 0.0, "image": (img + "/low.png") if img and not img.endswith(".png") else img,
+            "link": "https://www.tcgplayer.com/search/pokemon/product?q=" + q,
+            "availability_text": "Market price - check listings on TCGplayer for exact copies",
+            "exclusive": False, "chase": "illustration" in (d.get("rarity") or "").lower(),
+            "preorder": False, "sale": False, "clearance": False, "deal": False, "amazing_deal": False,
+            "sold_out": False, "olivia_hit": True, "olivia_tags": ["POKEMON"], "origin_dataset": "tcgdex",
+        })
+    return rows
+
+
 def pokemon_trainer_card_rows(fetcher=None):
     """All Nemona / Drayton prints from the Pokemon TCG API. Fails soft: a bad response just yields no rows."""
     fetcher = fetcher or fetch_json
@@ -1470,9 +1521,15 @@ def pokemon_trainer_card_rows(fetcher=None):
     for trainer in ("Nemona", "Drayton"):
         try:
             q = urllib.parse.quote('name:"%s" supertype:Trainer' % trainer)
-            data = fetcher("%s?q=%s&pageSize=250" % (TCG_API, q))
+            data = _retry(fetcher, "%s?q=%s&pageSize=250" % (TCG_API, q))
         except Exception as exc:                 # network/format problems must never break the Olivia build
-            print("  %s: skipped (%s)" % (trainer, exc))
+            print("  %s: Pokemon TCG API down (%s); trying TCGdex" % (trainer, exc))
+            try:
+                got = tcgdex_rows(trainer, fetcher)
+                rows.extend(got)
+                print("  %s: %d priced prints (TCGdex)" % (trainer, len(got)))
+            except Exception as exc2:
+                print("  %s: skipped (%s)" % (trainer, exc2))
             continue
         got = 0
         for card in (data or {}).get("data", []):
