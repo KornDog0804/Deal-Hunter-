@@ -61,3 +61,4 @@ jobs:
           git add -A
           git commit -q -m "Olivia preview results (run ${{ github.run_id }})"
           git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "$BR"
+# rerun with Mattel Pokemon collection

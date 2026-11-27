@@ -1027,8 +1027,7 @@ def pokemon_figure_rows():
     exist just returns no products, so extra candidate handles are harmless."""
     rows = []
     for source, base, handles in (
-        ("Good Smile US", "https://www.goodsmileus.com", ("pokemon", "pokemon-1", "pokemon-nendoroid")),
-        ("Youtooz", "https://youtooz.com", ("pokemon",)),
+        ("Mattel Creations", "https://creations.mattel.com", ("pokemon",)),   # confirmed by the CI probe
     ):
         rows.extend(shopify_collection_rows(
             source=source, base_url=base,

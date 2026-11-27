@@ -38,7 +38,7 @@ def test_figure_sources_tag_pokemon_and_survive_missing_collections(monkeypatch)
         return []
     monkeypatch.setattr(op, "shopify_collection_rows", fake)
     assert op.pokemon_figure_rows() == []
-    assert calls == [("Good Smile US", "POKEMON", 3), ("Youtooz", "POKEMON", 1)]
+    assert calls == [("Mattel Creations", "POKEMON", 1)]
 
 
 def test_tcgdex_fallback_when_main_api_down():
