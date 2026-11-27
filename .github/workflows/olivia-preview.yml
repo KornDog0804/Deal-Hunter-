@@ -1,0 +1,61 @@
+name: Olivia list preview (isolated, never main)
+
+# Runs ONLY olivia_pull.py on this branch to test the Pokemon figure + Nemona/Drayton card sources.
+# Results go to the separate branch olivia-preview-results; no tracked file is committed or deployed.
+on:
+  push:
+    branches: [phase1-valuation-accuracy]
+    paths: [".github/workflows/olivia-preview.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # used ONLY by the last step (push to olivia-preview-results)
+
+jobs:
+  olivia:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: |
+          python -m pip install pytest requests beautifulsoup4
+          python -m pytest -q
+      - name: Build Olivia list
+        run: python olivia_pull.py 2>&1 | tee olivia_log.txt
+      - name: Pokemon summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, collections
+          d = json.load(open("olivia_deals.json"))
+          p = [x for x in d if x.get("franchise") == "POKEMON"]
+          print("total", len(d), "pokemon", len(p))
+          print(collections.Counter((x["source"], x["product_type"]) for x in p))
+          for x in p[:15]:
+              print(x["price"], x["title"][:80])
+          PY
+      - name: Publish to isolated branch (never main)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          [ -f olivia_deals.json ] || exit 0
+          BR=olivia-preview-results
+          D=$(mktemp -d)
+          cp olivia_deals.json olivia_log.txt "$D"/
+          cd "$D"
+          git init -q -b "$BR"
+          git config user.name "olivia-bot"; git config user.email "olivia-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Olivia preview results (run ${{ github.run_id }})"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "$BR"
