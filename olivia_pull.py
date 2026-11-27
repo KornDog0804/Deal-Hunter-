@@ -1034,6 +1034,14 @@ def pokemon_figure_rows():
             endpoints=["collections/%s/products.json?limit=250" % h for h in handles],
             forced_interest="POKEMON",
         ))
+    # Pokevault: Japan-based Pokemon merch shop. Whole catalogue, in-stock only; a non-Shopify site just yields nothing.
+    pv = shopify_collection_rows(
+        source="Pokevault", base_url="https://pokevault.com",
+        endpoints=["products.json?limit=250"], forced_interest="POKEMON",
+    )
+    for r in pv:
+        r["availability_text"] = "Ships from Japan - allow extra delivery time"
+    rows.extend(pv)
     return rows
 
 

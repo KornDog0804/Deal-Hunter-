@@ -3,7 +3,7 @@ Prints findings only; changes nothing. Run in CI (the sandbox cannot reach these
 import json, sys, urllib.request, urllib.parse
 
 H = {"User-Agent": "Mozilla/5.0 (Linux; Android 16) Chrome/124.0 Mobile Safari/537.36", "Accept": "application/json"}
-HOSTS = ["www.goodsmileus.com", "youtooz.com", "www.kidrobot.com", "www.toynk.com", "creations.mattel.com",
+HOSTS = ["pokevault.com", "www.pokevault.com", "www.goodsmileus.com", "youtooz.com", "www.kidrobot.com", "www.toynk.com", "creations.mattel.com",
          "www.fangamer.com", "shop.bandai.com", "us.jazwares.com", "www.thinkgeek.com", "www.hottopic.com",
          "www.funko.com", "www.entertainmentearth.com", "www.bigbadtoystore.com", "www.premiumbandai-usa.com",
          "www.nintendo.com", "www.pokemoncenter.com", "www.gamestop.com", "www.sideshow.com", "www.tokyootakumode.com",
