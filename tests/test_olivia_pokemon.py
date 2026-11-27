@@ -1,0 +1,31 @@
+import olivia_pull as op
+
+CARD = {"name": "Nemona", "number": "90", "rarity": "Special Illustration Rare",
+        "set": {"name": "Paldea Evolved", "printedTotal": 93},
+        "images": {"small": "http://x/i.png"},
+        "tcgplayer": {"url": "https://prices.pokemontcg.io/tcgplayer/x",
+                      "prices": {"holofoil": {"market": 12.5}, "normal": {"market": 3.0}}}}
+
+
+def test_trainer_needs_pokemon_context():
+    assert op.matches("Pokemon TCG Nemona Supporter") == ["POKEMON"]
+    assert op.matches("Drayton Manor theme park tickets") == []
+    assert op.matches("Pokémon card Drayton full art") == ["POKEMON"]
+
+
+def test_card_row_uses_cheapest_priced_variant_and_labels_market():
+    r = op.pokemon_card_row(CARD, "NEMONA")
+    assert r["price"] == 3.0 and r["product_type"] == "CARDS" and r["chase"] is True
+    assert "90/93" in r["title"] and "Market price" in r["availability_text"]
+
+
+def test_unpriced_or_linkless_cards_skipped():
+    assert op.pokemon_card_row({**CARD, "tcgplayer": {"url": "u", "prices": {}}}, "NEMONA") is None
+
+
+def test_fail_soft_and_exact_name_only():
+    def boom(url): raise OSError("blocked")
+    assert op.pokemon_trainer_card_rows(boom) == []
+    other = {**CARD, "name": "Nemona's Adventure"}
+    rows = op.pokemon_trainer_card_rows(lambda u: {"data": [CARD, other]})
+    assert len(rows) == 1 and rows[0]["character"] == "NEMONA"   # "Nemona's Adventure" and the Drayton query add nothing

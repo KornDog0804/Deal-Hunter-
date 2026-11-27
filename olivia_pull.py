@@ -168,6 +168,17 @@ def read_json(name):
         return []
 
 
+POKEMON_TRAINERS = ("nemona", "drayton")      # Olivia's favourite trainers; matched only with Pokemon context
+
+
+def trainer_hits(text):
+    """Trainer names count only when the text is clearly Pokemon (Drayton is also a town/surname)."""
+    hay = normalized(text)
+    if "pokemon" not in hay and "pokmon" not in hay:
+        return []
+    return [n for n in POKEMON_TRAINERS if re.search(r"(?<![a-z0-9])" + n + r"(?![a-z0-9])", hay)]
+
+
 def matches(text):
     hay = normalized(text)
     hits = []
@@ -177,6 +188,9 @@ def matches(text):
             if normalized(needle) in hay:
                 hits.append(label)
                 break
+
+    if trainer_hits(text) and "POKEMON" not in hits:
+        hits.append("POKEMON")
 
     return list(dict.fromkeys(hits))
 
@@ -1402,6 +1416,60 @@ def living_tombstone_rows():
     return rows
 
 
+TCG_API = "https://api.pokemontcg.io/v2/cards"
+
+
+def pokemon_card_row(card, trainer):
+    """One Pokemon TCG API card -> an Olivia row. Price is TCGplayer MARKET data, not a store listing."""
+    prices = ((card.get("tcgplayer") or {}).get("prices") or {})
+    best = None                                   # cheapest available print variant with a market price
+    for variant, p in prices.items():
+        val = price((p or {}).get("market") or (p or {}).get("mid"))
+        if val and (best is None or val < best[1]):
+            best = (variant, val)
+    link = (card.get("tcgplayer") or {}).get("url") or ""
+    if not best or not link:
+        return None
+    cset = card.get("set") or {}
+    number = "%s/%s" % (card.get("number"), cset.get("printedTotal")) if cset.get("printedTotal") else str(card.get("number"))
+    title = "%s - %s %s (%s, %s)" % (card.get("name"), cset.get("name"), number, card.get("rarity") or "card", best[0])
+    return {
+        "category": "OLIVIA", "title": clean(title), "raw_title": clean(title), "artist": "",
+        "source": "TCGplayer (market price)", "source_type": "olivia_cards",
+        "product_type": "CARDS", "franchise": "POKEMON", "character": trainer,
+        "price": best[1], "compare_at": 0.0,
+        "image": ((card.get("images") or {}).get("small") or ""), "link": link,
+        "availability_text": "Market price - check listings on TCGplayer for exact copies",
+        "exclusive": False, "chase": "special illustration" in (card.get("rarity") or "").lower(),
+        "preorder": False, "sale": False, "clearance": False, "deal": False, "amazing_deal": False,
+        "sold_out": False, "olivia_hit": True, "olivia_tags": ["POKEMON"], "origin_dataset": "pokemon_tcg_api",
+    }
+
+
+def pokemon_trainer_card_rows(fetcher=None):
+    """All Nemona / Drayton prints from the Pokemon TCG API. Fails soft: a bad response just yields no rows."""
+    fetcher = fetcher or fetch_json
+    rows = []
+    print("\n===== POKEMON TRAINER CARDS =====")
+    for trainer in ("Nemona", "Drayton"):
+        try:
+            q = urllib.parse.quote('name:"%s" supertype:Trainer' % trainer)
+            data = fetcher("%s?q=%s&pageSize=250" % (TCG_API, q))
+        except Exception as exc:                 # network/format problems must never break the Olivia build
+            print("  %s: skipped (%s)" % (trainer, exc))
+            continue
+        got = 0
+        for card in (data or {}).get("data", []):
+            if normalized(card.get("name", "")) != normalized(trainer):     # exact trainer, not "Nemona's Pikachu"
+                continue
+            row = pokemon_card_row(card, trainer.upper())
+            if row:
+                rows.append(row)
+                got += 1
+        print("  %s: %d priced prints" % (trainer, got))
+    return rows
+
+
 def dedupe(rows):
     seen = {}
     fallback = {}
@@ -1573,6 +1641,10 @@ def main():
 
     rows.extend(
         youtooz_miku_rows()
+    )
+
+    rows.extend(
+        pokemon_trainer_card_rows()
     )
 
     rows = dedupe(rows)
