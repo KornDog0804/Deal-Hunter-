@@ -1021,6 +1021,22 @@ def youtooz_fnaf_rows():
     )
 
 
+def pokemon_figure_rows():
+    """Pokemon figures/plush from Shopify stores that carry the license. A handle that does not
+    exist just returns no products, so extra candidate handles are harmless."""
+    rows = []
+    for source, base, handles in (
+        ("Good Smile US", "https://www.goodsmileus.com", ("pokemon", "pokemon-1", "pokemon-nendoroid")),
+        ("Youtooz", "https://youtooz.com", ("pokemon",)),
+    ):
+        rows.extend(shopify_collection_rows(
+            source=source, base_url=base,
+            endpoints=["collections/%s/products.json?limit=250" % h for h in handles],
+            forced_interest="POKEMON",
+        ))
+    return rows
+
+
 def youtooz_miku_rows():
     return shopify_collection_rows(
         source="Youtooz",
@@ -1641,6 +1657,10 @@ def main():
 
     rows.extend(
         youtooz_miku_rows()
+    )
+
+    rows.extend(
+        pokemon_figure_rows()
     )
 
     rows.extend(

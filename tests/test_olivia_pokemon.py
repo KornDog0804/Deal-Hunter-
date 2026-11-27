@@ -29,3 +29,13 @@ def test_fail_soft_and_exact_name_only():
     other = {**CARD, "name": "Nemona's Adventure"}
     rows = op.pokemon_trainer_card_rows(lambda u: {"data": [CARD, other]})
     assert len(rows) == 1 and rows[0]["character"] == "NEMONA"   # "Nemona's Adventure" and the Drayton query add nothing
+
+
+def test_figure_sources_tag_pokemon_and_survive_missing_collections(monkeypatch):
+    calls = []
+    def fake(**kw):
+        calls.append((kw["source"], kw["forced_interest"], len(kw["endpoints"])))
+        return []
+    monkeypatch.setattr(op, "shopify_collection_rows", fake)
+    assert op.pokemon_figure_rows() == []
+    assert calls == [("Good Smile US", "POKEMON", 3), ("Youtooz", "POKEMON", 1)]
